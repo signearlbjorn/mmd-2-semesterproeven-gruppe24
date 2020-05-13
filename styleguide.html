@@ -5,14 +5,196 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Styleguide - HOC </title>
     <link rel="stylesheet" type="text/css" href="CSS/Stylesheet2/stylesheet2.css">
+    <style>
+    /* switch knap med runde hjørner stil*/
+
+    .titler , .sektion1 , .sektion2 , .sektion3 {
+      margin-left: 25%;
+      margin-right: 25%;
+    }
+    .switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  /* switch knap med runde hjørner stil - slut*/
+
+  /* switch knap med runde hjørner funktion*/
+  input:checked + .slider {
+    background-color: #2196F3;
+  }
+
+  /* switch knap med runde hjørner funktion*/
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  /* switch knap med runde hjørner funktion - slut*/
+
+  /* switch knap med runde hjørner*/
+  .slider.round {
+    border-radius: 34px;
+  }
+
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  /* switch knap med runde hjørner - slut*/
+
+  /* opret ny rapport popup - stil */
+  .opretnyrapportpopup {
+    background-color: lightgrey;
+  }
+  /* opret ny rapport popup stil - slut */
+    </style>
 </head>
 
 <body>
+    <!-- Titel på styleguide -->
+<div class="titler">
+  <h1 id="styleguidetitel"> Styleguide til Re-design af rapport modul for app.trendlog.io </h1>
+  <h2 id="styleguideundertitel"> af gruppe 24 </h2>
+</div>
+  <!-- Titel på styleguide -->
 
+  <!-- struktur for løsning -->
+<div class="sektion1">
+  <h2 id="strukturtitel">Struktur for interaktiv løsning</h2>
+    <h3> Overview </h3>
+      <h3>Show</h3>
+      <h3>Editor</h3>
+</div>
+  <!-- struktur for løsning slut -->
 
+  <!-- kanpper og inputs + deres funktioner for overview-siden -->
+<div class="sektion2">
+    <h2 id="kanpper">Knapper og Inputs (+ deres funktion) for "overview-siden"</h2>
 
+      <!-- indsæt liste over alle knapper for overview siden og deres funktioner-->
 
+      <p>Dette er 'opret ny rapport' knappen, som sidder i højrehjørne på overview-siden</p>
+      <!-- opret ny rapport knap-->
+      <button class="nyrapportknap">Creat new report</button>
+      <!-- opret ny rapport knap - slut-->
 
+      <!-- opret ny rapport pop-up-->
+      <div class="opretnyrapportpopup">
+        <p>Name</p>
+        <input class="name">Name for new report</input>
+        <p>Location</p>
+        <input class="location">Lociation for report - overview or in a folder</input>
+        <br>
+        <button class="create">Create</button>
+      </div>
+      <!-- opret ny rapport pop-up - slut-->
+
+      <p>Dette er mappe/gruop knappen, som jeg ikke ved hvor sidder</p>
+      <!-- mappe/group funktion -->
+      ?
+      <!-- mappe/group funktion -->
+
+      <p>Dette er tandhjul knappen, som sidder ud for hver rapport på overview-siden</p>
+         <!-- tandhjul knap -->
+       <button class="tandhjul">Tandhul icon" med drop down menu funktion</button>
+         <!-- tandhjul knap - slut-->
+
+        <!-- tandhjul knap's drop-down liste-->
+        <ul>
+          <li>Edit</li>
+          <li>Show</li>
+          <li>Schedule (pop-up)</li>
+          <li>Share as..(pop-up)</li>
+          <li>Save as.. (pop-up)</li>
+          <li>Print (optional)</li>
+          <li>Delete (warning)</li>
+        </ul>
+        <!-- tandhjul knap's drop-down liste - slut -->
+
+        <!-- rund switch knap til view prwview/list -->
+    <p>Dette er switch kanppen, hvor man kan sætte overview-siden på enten preview eller list visning</p>
+    <label class="switch">
+      <input type="checkbox">
+      <span class="slider round"></span>
+    </label>
+      <!-- rund switch knap til view prwview/list - slut -->
+<br>
+    <p>Dette er filter knappen, hvor man kan filtrere visningen af raporter på "overview-siden"</p>
+      <!-- filter input -->
+    <input class="filterinput">Filter</input>
+      <!-- filter input - slut -->
+      <!-- filter liste? -->
+      <!--Filtrering af på baggrund af date range (via filter pop up)
+          Filtrering af på baggrund af result delivered i delivery switch (via filter pop up)
+          Filtrering af på baggrund af result not delivered i delivery switch (via filter pop up)
+          Filtrering af på baggrund af result not set i delivery switch (via filter pop up)
+          Filtrering af scheduled på baggrund schedule switch (via filter pop up)
+          Filtrering af unscheduled på baggrund schedule switch (via filter pop up)-->
+      <!-- filter liste? - slut -->
+<br>
+    <p>Dette er sort by knappen, hvor man kan sortere raporterne på "overview-siden" via. forskellige indstillinger</p>
+        <!-- sort by input -->
+      <input class="sortbyinput">Sort by</input>
+        <!-- sorter input - slut  -->
+<br>
+          <!-- sort by input dropdown-->
+          <ui>
+            <li> alfabetic order a-z on name (via sort drop down)</li>
+            <li> alfabetic order z-a on name (via sort drop down)</li>
+            <li> alfabetic order a-z on folder/group (via sort drop down)</li>
+            <li> alfabetic order z-a on folder/group (via sort drop down)</li>
+            <li> latest created (via sort drop down)</li>
+            <li> last creted (via sort drop down)</li>
+            <li> last changed (via sort drop down)</li>
+            <li> oldest id (via sort drop down)</li>
+            <li> newest id (via sort drop down)</li>
+          </ui>
+          <!-- sort by input dropdown - slut -->
+</div>
+  <!-- kanpper og inputs + deres funktioner for overview-siden - slut -->
+
+  <!-- kanpper og inputs + deres funktioner for show-siden -->
+<div class="sektion3">
+  <h2 id="kanpper">Knapper og Inputs (+ deres funktion) for "show-siden"</h2>
+
+  <!-- indhold -->
+  <p>indhold in coming</p>
+
+  <!-- kanpper og inputs + deres funktioner for show-siden - slut -->
+
+  <!-- kanpper og inputs + deres funktioner for editor-siden -->
+<div class="sektion4">
+  <h2 id="kanpper">Knapper og Inputs (+ deres funktion) for "editor-siden"</h2>
+
+  <!-- indhold -->
+  <p>indhold in coming</p>
+
+  <!-- kanpper og inputs + deres funktioner for editor-siden - slut -->
 
 </body>
 </html>
