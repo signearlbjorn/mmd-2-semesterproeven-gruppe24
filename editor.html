@@ -1,32 +1,28 @@
-<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styleguide - HOC </title>
-    <link rel="stylesheet" type="text/css" href="CSS/Stylesheet2/stylesheet2.css">
- </head>
- 
- <body>
- 
- 
- 
- </body>
- 
- </html>
-=======
-<!doctype html>
-<html>
-<head>
+<meta charset="utf-8">
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Editor</title>
-	<style> 
-		*{margin: 0; padding: 0;}
-		header, img, div, section, main {float:left; clear:both;}
-		li{float: left; margin-left: 10px;}
-	</style>
+<style> 
+	*{margin: 0; padding: 0;}
+	header, img, div, section, main {float:left; clear:both; display: block;}
+	li{float: left; margin-left: 10px;}
+</style>
+<script>
+	function showHideSection(sectionToBeShown){
+		var ids = ["editor-knap-section", "graphs", "text", "templates", "code"];
+		for(i = 0; i < ids.length; i++){
+			if(sectionToBeShown == ids[i]){
+				document.getElementById(ids[i]).classList.remove("hidden");
+			}
+			else {
+				document.getElementById(ids[i]).classList.add("hidden");
+			}
+		}
+	}
+</script>
 </head>
 <body>
 	<!--nav er kopieret fra trendog.io-->
@@ -66,29 +62,46 @@
 		<div class="report-preview" style="width: 48%; background-color: #AC9A9B;">
 		</div>
 		<div style="float: right; width: 48%; background-color: #C46768;">
-			<div id="graphs">graphs
+			<div id="graphs"><a>graphs</a>
+				<div style="width: 33%;">
+					<a href="#">
+					<div>
+						<div>
+							<img src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+						<div><p>Basic line</p></div>
+					</div>
+					</a>
+				</div>
+				<div style="width: 33%;">
+					<a href="#">
+					<div>
+						<div>
+							<img src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+						<div><p>Basic line</p></div>
+					</div>
+					</a>
+				</div>
+				<div style="width: 33%;">
+					<a href="#">
+					<div>
+						<div>
+							<img src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+						<div><p>Basic line</p></div>
+					</div>
+					</a>
+				</div>
 			</div>
-			<div id="text">text
+			<div id="text"><a>text</a>
 			</div>
-			<div id="templates">templates
+			<div id="templates"><a> templates</a>
 			</div>
-			<div id="code">code
+			<div id="code"><a>code</a>
 			</div>
 		</div>
 	</main>
-	<script>
-			function showHideSection(sectionToBeShown){
-				var ids = ["editor-knap-section", "graphs", "text", "templates", "code"];
-				for(i = 0; i < ids.length; i++){
-					if(sectionToBeShown == ids[i]){
-						document.getElementById(ids[i]).classList.remove("hidden");
-					}
-					else {
-						document.getElementById(ids[i]).classList.add("hidden");
-					}
-				}
-			}
-		</script>
 </body>
 </html>
->>>>>>> Stashed changes
+
