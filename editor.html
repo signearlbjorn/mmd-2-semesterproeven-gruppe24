@@ -11,16 +11,30 @@
 	li{float: left; margin-left: 10px;}
 	ul{list-style: none; float: left;}
 	.placeholderimgchart{ width: 99%; display: grid;}
-	.graph1{align-items: center;}
+	.graphname {text-align: center;}
+	.graph1 h3 {margin: 0 auto;}
+	.hidden{display: none;}
 </style>
+	<!--.hidden{display: none;}-->
+	<script>
+		function switchedit(editpageswitch){
+			var editpage = ["graphs", "text", "templates", "code"];
+			for(i = 0; i < editpage.length; i++){
+				if(editpageswitch == editpage[i]){
+					document.getElementById(editpage[i]).classList.remove("hidden");
+				}
+				else{
+					document.getElementById(editpage[i]).classList.add("hidden");
+				}
+			}
+		}
+	</script>
 </head>
 <body>
 	<!--nav er kopieret fra trendog.io-->
 	<nav style="background-color: #7C7C7C; float: left;  display:block; width: 100%;">
 		<div>
-			<a href="https://app.trendlog.io/"><img src="../lib/images/trendlog-io-white-thin.png" alt="trendlog.io" style="width: 130px;"></a>
-		</div>
-		<div>
+			<a href="https://app.trendlog.io/"><img src="assets/img/trendlog.io-logo-black.png" alt="trendlog.io" style="width: 130px;"></a>
 			<ul>
 				<li><a id="home" href="#" style="display: block;"><span class="glyphicon glyphicon-home"></span>home</a></li>
 				<li><a id="dashboards" href="#" style="display: block;">Trendboards</a></li>
@@ -48,85 +62,147 @@
 			<a>Close &amp; Save</a>
 		</div>
 	</header>
-	<main>
-		<div class="report-preview" style="width: 48%; background-color: #AC9A9B;">
+	<main style="width: 100%;">
+		<div class="report-preview" style="width: 49%%; background-color: #AC9A9B;">
 		</div>
 		<div style="float: right; width: 49%; background-color: #C46768;">
 			<div>
 				<ul>
-					<li>Graphs</li>
-					<li>Text</li>
-					<li>Templates</li>
-					<li>Code</li>
+					<li><a onclick="switchedit('graphs');" href="#" style="display: block;">Graphs</a></li>
+					<li><a onclick="switchedit('text');" href="#" style="display: block;">Text</a></li>
+					<li><a onclick="switchedit('templates');" href="#" style="display: block;">Templates</a></li>
+					<li><a onclick="switchedit('code');" href="#" style="display: block;">Code</a></li>
 				</ul>
 			</div> 
-			<div id="graphs" style="width: 100%; display: grid; grid-template-columns: auto auto auto;">
-				<div class="graph1" style="display: grid;">
+			<div id="graphs" class="">
+				<div style="width: 100%; display: grid; grid-template-columns: auto auto auto;">
+				<div class="graph1">
 					<a href="#">
 					<div>
 						<div>
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
 						</div>
-						<div><p>Basic 1</p></div>
+						<div class="graphname"><h3>Basic 1</h3></div>
 					</div>
 					</a>
 				</div>
-				<div class="graph1" style="display: grid;">
+				<div class="graph1">
 					<a href="#">
 					<div>
 						<div>
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
 						</div>
-						<div><p>Basic 2</p></div>
+						<div><h3>Basic 2</h3></div>
 					</div>
 					</a>
 				</div>
-				<div class="graph1" style="display: grid;">
+				<div class="graph1">
 					<a href="#">
 					<div>
 						<div>
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
 						</div>
-						<div><p>Basic 3</p></div>
+						<div><h3>Basic 3</h3></div>
 					</div>
 					</a>
 				</div>
-				<div class="graph1" style="display: grid;">
+				<div class="graph1">
 					<a href="#">
 					<div>
 						<div>
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
 						</div>
-						<div><p>Basic 4</p></div>
+						<div><h3>Basic 4</h3></div>
 					</div>
 					</a>
 				</div>
-				<div class="graph1" style="display: grid;">
+				<div class="graph1">
 					<a href="#">
 					<div>
 						<div>
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
 						</div>
-						<div><p>Basic 5</p></div>
+						<div><h3>Basic 5</h3></div>
 					</div>
 					</a>
 				</div>
-				<div class="graph1" style="display: grid;">
+				<div class="graph1">
 					<a href="#">
 					<div>
 						<div>
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
 						</div>
-						<div><p>Basic 6</p></div>
+						<div><h3>Basic 6</h3></div>
 					</div>
 					</a>
+				</div>
 				</div>
 			</div>
-			<div id="text"><a>text</a>
+			<div id="text" class="hidden">
+				<label for="font">Font</label>
+				<select id="fontselector">
+					<option>Serif</option>
+					<option>Arial</option>
+					<option>Sans-Serif</option>
+					<option>Tahoma</option>
+					<option>Verdana</option>
+					<option>Lucia Sans Unicode</option>
+				</select>
+				<label for="style">Style</label>
+				<select id="style">
+					<option>Normal paragraph</option>
+					<option>Title</option>
+					<option>Heading 1</option>
+					<option>Heading 2</option>
+					<option>Heading 3</option>
+					<option>Heading 4</option>
+				</select>
 			</div>
-			<div id="templates"><a> templates</a>
+			<div id="templates" class="hidden">
+				<div style="width: 100%; display: grid; grid-template-columns: auto auto;">
+				<div class="graph1">
+					<a href="#">
+					<div>
+						<div>
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+						<div class="graphname"><h3>Basic 1</h3></div>
+					</div>
+					</a>
+				</div>
+				<div class="graph1">
+					<a href="#">
+					<div>
+						<div>
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+						<div class="graphname"><h3>Basic 1</h3></div>
+					</div>
+					</a>
+				</div>
+				<div class="graph1">
+					<a href="#">
+					<div>
+						<div>
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+						<div class="graphname"><h3>Basic 1</h3></div>
+					</div>
+					</a>
+				</div>
+				<div class="graph1">
+					<a href="#">
+					<div>
+						<div>
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+						<div class="graphname"><h3>Basic 1</h3></div>
+					</div>
+					</a>
+				</div>
+				</div>
 			</div>
-			<div id="code"><a>code</a>
+			<div id="code" class="hidden"><a>code</a>
 			</div>
 		</div>
 	</main>
