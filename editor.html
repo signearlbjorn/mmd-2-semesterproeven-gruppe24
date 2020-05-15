@@ -13,19 +13,21 @@
 	.placeholderimgchart{ width: 99%; display: grid;}
 	.graphname {text-align: center;}
 	.graph1 h3 {margin: 0 auto;}
+	.hidden{display: none;}
 </style>
 	<!--.hidden{display: none;}-->
 	<script>
-		function showHideSection(sectionToBeShown){
-			var ids = ["graphs", "text", "templates", "code"];
-			for(i = 0; i < ids.length; i++){
-				if(sectionToBeShown == ids[i]){
-					document.getElementById(ids[i]).classList.remove("hidden");
+		function switchedit(editpageswitch){
+			var editpage = ["graphs", "text", "templates", "code"];
+			for(i = 0; i < editpage.length; i++){
+				if(editpageswitch == editpage[i]){
+					document.getElementById(editpage[i]).classList.remove("hidden");
 				}
-				else {
-					document.getElementById(ids[i]).classList.add("hidden");
+				else{
+					document.getElementById(editpage[i]).classList.add("hidden");
 				}
 			}
+		}
 	</script>
 </head>
 <body>
@@ -66,10 +68,10 @@
 		<div style="float: right; width: 49%; background-color: #C46768;">
 			<div>
 				<ul>
-					<li><a onclick="showHideSection('graphs');">Graphs</a></li>
-					<li><a onclick="showHideSection('text');">Text</a></li>
-					<li><a onclick="showHideSection('templates');">Templates</a></li>
-					<li><a onclick="showHideSection('code');">Code</a></li>
+					<li><a onclick="switchedit('graphs');" href="#" style="display: block;">Graphs</a></li>
+					<li><a onclick="switchedit('text');" href="#" style="display: block;">Text</a></li>
+					<li><a onclick="switchedit('templates');" href="#" style="display: block;">Templates</a></li>
+					<li><a onclick="switchedit('code');" href="#" style="display: block;">Code</a></li>
 				</ul>
 			</div> 
 			<div id="graphs" class="">
