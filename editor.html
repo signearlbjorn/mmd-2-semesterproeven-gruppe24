@@ -1,16 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styleguide - HOC </title>
-    <link rel="stylesheet" type="text/css" href="CSS/Stylesheet2/stylesheet2.css">
- </head>
- 
- <body>
- 
- 
- 
- </body>
- 
- </html>
+<meta charset="utf-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Editor</title>
+<style> 
+	*{margin: 0; padding: 0;}
+	header, img, div, section, main {float:left; clear:both; display: block;}
+	li{float: left; margin-left: 10px;}
+	ul{list-style: none; float: left;}
+	.placeholderimgchart{ width: 99%; display: grid;}
+	.graph1{align-items: center;}
+</style>
+</head>
+<body>
+	<!--nav er kopieret fra trendog.io-->
+	<nav style="background-color: #7C7C7C; float: left;  display:block; width: 100%;">
+		<div>
+			<a href="https://app.trendlog.io/"><img src="../lib/images/trendlog-io-white-thin.png" alt="trendlog.io" style="width: 130px;"></a>
+		</div>
+		<div>
+			<ul>
+				<li><a id="home" href="#" style="display: block;"><span class="glyphicon glyphicon-home"></span>home</a></li>
+				<li><a id="dashboards" href="#" style="display: block;">Trendboards</a></li>
+				<li><a id="reports" href="#" style="display: block;">Reports</a></li>
+				<li><a id="views" href="#" style="display: block;">Views</a></li>
+				<li><a id="feeds" href="#" style="display: block;">Feeds</a></li>
+				<li><a id="settings" href="#" style="display: block;">Settings</a></li>
+				<li><a id="shares" href="#" style="display: block;">Shares</a></li>
+			</ul>
+		</div>
+		<div style="float: right;">
+			<ul style="float: right;">
+				<li>maitenance</li>
+				<li>unfollow</li>
+				<li>alarms</li>
+				<li>channels</li>
+				<li>channelname</li>
+				<li>profil</li>
+			</ul>
+		</div>
+	</nav>
+	<header style="background-color: #BBBBBB; border-color: black; display: block; width: 100%;">
+		<h1>REPORT EDITOR</h1>
+		<div style="float: right;">
+			<a>Close &amp; Save</a>
+		</div>
+	</header>
+	<main>
+		<div class="report-preview" style="width: 48%; background-color: #AC9A9B;">
+		</div>
+		<div style="float: right; width: 49%; background-color: #C46768;">
+			<div>
+				<ul>
+					<li>Graphs</li>
+					<li>Text</li>
+					<li>Templates</li>
+					<li>Code</li>
+				</ul>
+			</div> 
+			<div id="graphs" style="width: 100%; display: grid; grid-template-columns: auto auto auto;">
+				<div class="graph1" style="display: grid;">
+					<a href="#">
+					<div>
+						<div>
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+						<div><p>Basic 1</p></div>
+					</div>
+					</a>
+				</div>
+				<div class="graph1" style="display: grid;">
+					<a href="#">
+					<div>
+						<div>
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+						<div><p>Basic 2</p></div>
+					</div>
+					</a>
+				</div>
+				<div class="graph1" style="display: grid;">
+					<a href="#">
+					<div>
+						<div>
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+						<div><p>Basic 3</p></div>
+					</div>
+					</a>
+				</div>
+				<div class="graph1" style="display: grid;">
+					<a href="#">
+					<div>
+						<div>
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+						<div><p>Basic 4</p></div>
+					</div>
+					</a>
+				</div>
+				<div class="graph1" style="display: grid;">
+					<a href="#">
+					<div>
+						<div>
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+						<div><p>Basic 5</p></div>
+					</div>
+					</a>
+				</div>
+				<div class="graph1" style="display: grid;">
+					<a href="#">
+					<div>
+						<div>
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+						<div><p>Basic 6</p></div>
+					</div>
+					</a>
+				</div>
+			</div>
+			<div id="text"><a>text</a>
+			</div>
+			<div id="templates"><a> templates</a>
+			</div>
+			<div id="code"><a>code</a>
+			</div>
+		</div>
+	</main>
+</body>
+</html>
+
