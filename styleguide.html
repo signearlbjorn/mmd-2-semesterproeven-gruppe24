@@ -7,11 +7,18 @@
     <link rel="stylesheet" type="text/css" href="CSS/Stylesheet2/stylesheet2.css">
     <style>
     /* switch knap med runde hjørner stil*/
+    .række1 {
+      background-color: pink;
+    }
 
-    .titler , .sektion1 , .sektion2 , .sektion3 {
+    .række2 {
+        background-color: yellow;
+    }
+    .titler , .sektion1 , .sektion2 , .sektion3 , .table {
       margin-left: 25%;
       margin-right: 25%;
     }
+
     .switch {
     position: relative;
     display: inline-block;
@@ -86,115 +93,279 @@
   <!-- struktur for løsning -->
 <div class="sektion1">
   <h2 id="strukturtitel">Struktur for interaktiv løsning</h2>
-    <h3> Overview </h3>
-      <h3>Show</h3>
-      <h3>Editor</h3>
+    <h3>Overview </h3>
+    <ul>
+      <li>Show</li>
+      <li>Editor</li>
+      <li>Folder overview</li>
+    </ui>
 </div>
   <!-- struktur for løsning slut -->
 
-  <!-- kanpper og inputs + deres funktioner for overview-siden -->
 <div class="sektion2">
-    <h2 id="kanpper">Knapper og Inputs (+ deres funktion) for "overview-siden"</h2>
+  <!-- molekyle tabeller for overview-siden -->
+  <h3>Molekyler på "overview"</h3>
+      <!-- Liste over molekyler -->
+      <ul>
+        <li>Tandhjul</li>
+        <li>Opret ny raport / create new report</li>
+        <li>Opret ny mappe / creaete new folder</li>
+        <li>Preview-switch-knap</li>
+        <li>Filter</li>
+        <li>Sort by</li>
+        <li>Søg</li>
+      </ul>
+        <!-- Liste over molekyler - slut -->
 
-      <!-- indsæt liste over alle knapper for overview siden og deres funktioner-->
+  <!-- molekyle tabel for 'Tandhjul'-->
+  <h4>Tandhjul</h4>
+    <!-- række 1 i tabel -->
+    <table class="overviewmolekyler">
+      <tr class="række1">
+        <th>Atomer</th>
+        <th>Molekyle</th>
+        <th>HTML</th>
+        <th>CSS</th>
+        <th>JavaScript</th>
+      </tr>
+    <tr>
+    <!-- række 2 i tabel -->
+    <tr class="række2">
+      <td><ul><li>Button tag</li><li>Img</li></ul></td>
+      <td><button title=”” > <img src=”” alt=””> </button></td>
+      <td> < button title=”” > < img src=”” alt=””> < /button> </td>
+      <td> CSS for 'tandhjul' </td>
+      <td> JavaScript for 'tandhjul' </td>
+    </tr>
+    </table>
+    <!-- række 2 i tabel - slut -->
+  <!-- molekyle tabel for 'Tandhjul' - slut -->
 
-      <p>Dette er 'opret ny rapport' knappen, som sidder i højrehjørne på overview-siden</p>
-      <!-- opret ny rapport knap-->
-      <button class="nyrapportknap">Creat new report</button>
-      <!-- opret ny rapport knap - slut-->
+  <!-- molekyle tabel for 'Opret ny rapport'-->
+  <h4>Opret ny rapport</h4>
+    <!-- række 1 i tabel -->
+    <table class="overviewmolekyler">
+      <tr class="række1">
+        <th>Atomer</th>
+        <th>Molekyle</th>
+        <th>HTML</th>
+        <th>CSS</th>
+        <th>JavaScript</th>
+      </tr>
+    <tr>
+    <!-- række 2 i tabel -->
+    <tr class="række2">
+      <td><ul><li>Button tag</li><li>Img</li></ul></td>
+      <td><button title=”” > <img src=”” alt=””> </button></td>
+      <td> < button title=”” > < img src=”” alt=””> < /button> </td>
+      <td> CSS for 'opret ny rapport' </td>
+      <td> JavaScript for 'opret ny rapport' </td>
+    </tr>
+    </table>
+    <!-- række 2 i tabel - slut -->
+<!-- molekyle tabel for 'Opret ny rapport' - slut-->
 
-      <!-- opret ny rapport pop-up-->
-      <div class="opretnyrapportpopup">
-        <p>Name</p>
-        <input class="name">Name for new report</input>
-        <p>Location</p>
-        <input class="location">Lociation for report - overview or in a folder</input>
-        <br>
-        <button class="create">Create</button>
-      </div>
-      <!-- opret ny rapport pop-up - slut-->
+<!-- molekyle tabel for 'Opret ny rapport'-->
+<h4>Opret ny mappe / Create new folder</h4>
+  <!-- række 1 i tabel -->
+  <table class="overviewmolekyler">
+    <tr class="række1">
+      <th>Atomer</th>
+      <th>Molekyle</th>
+      <th>HTML</th>
+      <th>CSS</th>
+      <th>JavaScript</th>
+    </tr>
+  <tr>
+  <!-- række 2 i tabel -->
+  <tr class="række2">
+    <td><ul><li>Button tag</li><li>Img</li></ul></td>
+    <td><button title=”” > <img src=”” alt=””> </button></td>
+    <td> < button title=”” > < img src=”” alt=””> < /button> </td>
+    <td> CSS for 'opret ny mappe / create new folder' </td>
+    <td> JavaScript for 'opret ny mappe / create new folder' </td>
+  </tr>
+  </table>
+  <!-- række 2 i tabel - slut -->
+<!-- molekyle tabel for 'Opret ny mappe / create new folder' - slut-->
 
-      <p>Dette er mappe/gruop knappen, som jeg ikke ved hvor sidder</p>
-      <!-- mappe/group funktion -->
-      ?
-      <!-- mappe/group funktion -->
-
-      <p>Dette er tandhjul knappen, som sidder ud for hver rapport på overview-siden</p>
-         <!-- tandhjul knap -->
-       <button class="tandhjul">Tandhul icon" med drop down menu funktion</button>
-         <!-- tandhjul knap - slut-->
-
-        <!-- tandhjul knap's drop-down liste-->
-        <ul>
-          <li>Edit</li>
-          <li>Show</li>
-          <li>Schedule (pop-up)</li>
-          <li>Share as..(pop-up)</li>
-          <li>Save as.. (pop-up)</li>
-          <li>Print (optional)</li>
-          <li>Delete (warning)</li>
-        </ul>
-        <!-- tandhjul knap's drop-down liste - slut -->
-
-        <!-- rund switch knap til view prwview/list -->
-    <p>Dette er switch kanppen, hvor man kan sætte overview-siden på enten preview eller list visning</p>
-    <label class="switch">
-      <input type="checkbox">
-      <span class="slider round"></span>
-    </label>
-      <!-- rund switch knap til view prwview/list - slut -->
+<!-- molekyle tabel for Overview-side 'preview switch knap' -->
+<h4>Overview-side 'preview switch knap'</h4>
+  <!-- række 1 i tabel -->
+  <table class="overviewmolekyler">
+    <tr class="række1">
+      <th>Atomer</th>
+      <th>Molekyle</th>
+      <th>HTML</th>
+      <th>CSS</th>
+      <th>JavaScript</th>
+    </tr>
+  <tr>
+  <!-- række 2 i tabel -->
+  <tr class="række2">
+    <td><ul><li>label tag</li><li>input</li><li>span</li></ul></td>
+    <td>
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round"></span>
+      </label>
+    </td>
+    <td>
+      < label class="switch">
+          < input type="checkbox">
+          < span class="slider round">< /span>
+      < /label> </td>
+    <td>
+      /* switch knap med runde hjørner stil */
+      .switch { <br>
+      position: relative; <br>
+      display: inline-block; <br>
+      width: 60px; <br>
+      height: 34px; <br>
+    }
 <br>
-    <p>Dette er filter knappen, hvor man kan filtrere visningen af raporter på "overview-siden"</p>
-      <!-- filter input -->
-    <input class="filterinput">Filter</input>
-      <!-- filter input - slut -->
-      <!-- filter liste? -->
-      <!--Filtrering af på baggrund af date range (via filter pop up)
-          Filtrering af på baggrund af result delivered i delivery switch (via filter pop up)
-          Filtrering af på baggrund af result not delivered i delivery switch (via filter pop up)
-          Filtrering af på baggrund af result not set i delivery switch (via filter pop up)
-          Filtrering af scheduled på baggrund schedule switch (via filter pop up)
-          Filtrering af unscheduled på baggrund schedule switch (via filter pop up)-->
-      <!-- filter liste? - slut -->
+    .slider { <br>
+      position: absolute; <br>
+      cursor: pointer; <br>
+      top: 0; <br>
+      left: 0; <br>
+      right: 0; <br>
+      bottom: 0; <br>
+      background-color: #ccc; <br>
+      -webkit-transition: .4s; <br>
+      transition: .4s; <br>
+    }
 <br>
-    <p>Dette er sort by knappen, hvor man kan sortere raporterne på "overview-siden" via. forskellige indstillinger</p>
-        <!-- sort by input -->
-      <input class="sortbyinput">Sort by</input>
-        <!-- sorter input - slut  -->
+    .slider:before { <br>
+      position: absolute; <br>
+      content: ""; <br>
+      height: 26px; <br>
+      width: 26px; <br>
+      left: 4px; <br>
+      bottom: 4px; <br>
+      background-color: white; <br>
+      -webkit-transition: .4s; <br>
+      transition: .4s; <br>
+    }<br>
 <br>
-          <!-- sort by input dropdown-->
-          <ui>
-            <li> alfabetic order a-z on name (via sort drop down)</li>
-            <li> alfabetic order z-a on name (via sort drop down)</li>
-            <li> alfabetic order a-z on folder/group (via sort drop down)</li>
-            <li> alfabetic order z-a on folder/group (via sort drop down)</li>
-            <li> latest created (via sort drop down)</li>
-            <li> last creted (via sort drop down)</li>
-            <li> last changed (via sort drop down)</li>
-            <li> oldest id (via sort drop down)</li>
-            <li> newest id (via sort drop down)</li>
-          </ui>
-          <!-- sort by input dropdown - slut -->
+    input:checked + .slider { <br>
+      background-color: #2196F3;<br>
+    } <br>
+<br>
+    .slider.round { <br>
+      border-radius: 34px; <br>
+    }
+<br>
+    .slider.round:before { <br>
+      border-radius: 50%; <br>
+    } <br>
+    /* switch knap med runde hjørner stil - slut */
+<br>
+<br>
+    /* switch knap med runde hjørner funktion */
+    input:checked + .slider:before { <br>
+      -webkit-transform: translateX(26px); <br>
+      -ms-transform: translateX(26px); <br>
+      transform: translateX(26px); <br>
+    }<br>
+    /* switch knap med runde hjørner funktion - slut */
+<br>
+    </td>
+    <td> JavaScript for 'preview switch knap' </td>
+  </tr>
+  </table>
+  <!-- række 2 i tabel - slut -->
+<!-- molekyle tabel for Overview-side 'preview switch knap' - slut-->
+
+<!-- molekyle tabel for 'Filter'-->
+<h4>Filter</h4>
+  <!-- række 1 i tabel -->
+  <table class="overviewmolekyler">
+    <tr class="række1">
+      <th>Atomer</th>
+      <th>Molekyle</th>
+      <th>HTML</th>
+      <th>CSS</th>
+      <th>JavaScript</th>
+    </tr>
+  <tr>
+  <!-- række 2 i tabel -->
+  <tr class="række2">
+    <td><ul><li>?</li><li>?</li></ul></td>
+    <td>indsæt molekyle</td>
+    <td> indsæt html kode - "læsbar/ikke aktiv kode" </td>
+    <td> indsæt css kode - "læsbar/ikke aktiv kode" </td>
+    <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
+  </tr>
+  </table>
+  <!-- række 2 i tabel - slut -->
+<!-- molekyle tabel for 'filter' - slut -->
+
+<!-- molekyle tabel for 'Sort by'-->
+<h4>Sort by</h4>
+  <!-- række 1 i tabel -->
+  <table class="overviewmolekyler">
+    <tr class="række1">
+      <th>Atomer</th>
+      <th>Molekyle</th>
+      <th>HTML</th>
+      <th>CSS</th>
+      <th>JavaScript</th>
+    </tr>
+  <tr>
+  <!-- række 2 i tabel -->
+  <tr class="række2">
+    <td><ul><li>?</li><li>?</li></ul></td>
+    <td>indsæt molekyle</td>
+    <td> indsæt html kode - "læsbar/ikke aktiv kode" </td>
+    <td> indsæt css kode - "læsbar/ikke aktiv kode" </td>
+    <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
+  </tr>
+  </table>
+  <!-- række 2 i tabel - slut -->
+<!-- molekyle tabel for 'sort by' - slut -->
+
+<!-- molekyle tabel for 'søg'-->
+<h4>Søg</h4>
+  <!-- række 1 i tabel -->
+  <table class="overviewmolekyler">
+    <tr class="række1">
+      <th>Atomer</th>
+      <th>Molekyle</th>
+      <th>HTML</th>
+      <th>CSS</th>
+      <th>JavaScript</th>
+    </tr>
+  <tr>
+  <!-- række 2 i tabel -->
+  <tr class="række2">
+    <td><ul><li>?</li><li>?</li></ul></td>
+    <td>indsæt molekyle</td>
+    <td> indsæt html kode - "læsbar/ikke aktiv kode" </td>
+    <td> indsæt css kode - "læsbar/ikke aktiv kode" </td>
+    <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
+  </tr>
+  </table>
+  <!-- række 2 i tabel - slut -->
+<!-- molekyle tabel for 'søg' - slut -->
 </div>
-  <!-- kanpper og inputs + deres funktioner for overview-siden - slut -->
 
-  <!-- kanpper og inputs + deres funktioner for show-siden -->
 <div class="sektion3">
-  <h2 id="kanpper">Knapper og Inputs (+ deres funktion) for "show-siden"</h2>
+  <!-- molekyle tabeller for overview-siden -->
+  <h3>Organismer på "overview"</h3>
+      <!-- Liste over molekyler -->
+      <ul>
+        <li>Tandhjul</li>
+        <li>Opret ny raport / create new report</li>
+        <li>Opret ny mappe / creaete new folder</li>
+        <li>Preview-switch-knap</li>
+        <li>Filter</li>
+        <li>Sort by</li>
+        <li>Søg</li>
+      </ul>
+        <!-- Liste over molekyler - slut -->
 
-  <!-- indhold -->
-  <p>indhold in coming</p>
-
-  <!-- kanpper og inputs + deres funktioner for show-siden - slut -->
-
-  <!-- kanpper og inputs + deres funktioner for editor-siden -->
-<div class="sektion4">
-  <h2 id="kanpper">Knapper og Inputs (+ deres funktion) for "editor-siden"</h2>
-
-  <!-- indhold -->
-  <p>indhold in coming</p>
-
-  <!-- kanpper og inputs + deres funktioner for editor-siden - slut -->
+  </div>
 
 </body>
 </html>
