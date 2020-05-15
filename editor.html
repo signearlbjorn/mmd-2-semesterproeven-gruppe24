@@ -15,6 +15,18 @@
 	.graph1 h3 {margin: 0 auto;}
 	.hidden{display: none;}
 </style>
+	<script>
+		function showHideSection(sectionToBeShown){
+			var ids = ["graphs", "text", "templates", "code"];
+			for(i = 0; i < ids.length; i++){
+				if(sectionToBeShown == ids[i]){
+					document.getElementById(ids[i]).classList.remove("hidden");
+				}
+				else {
+					document.getElementById(ids[i]).classList.add("hidden");
+				}
+			}
+	</script>
 </head>
 <body>
 	<!--nav er kopieret fra trendog.io-->
@@ -62,7 +74,8 @@
 					<li><a onclick="showHideSection('code');">Code</a></li>
 				</ul>
 			</div> 
-			<div id="graphs" class="" style="width: 100%; display: grid; grid-template-columns: auto auto auto;">
+			<div id="graphs" class="">
+				<div style="width: 100%; display: grid; grid-template-columns: auto auto auto;">
 				<div class="graph1">
 					<a href="#">
 					<div>
@@ -123,6 +136,7 @@
 					</div>
 					</a>
 				</div>
+				</div>
 			</div>
 			<div id="text" class="hidden">
 				<label for="font">Font</label>
@@ -144,7 +158,8 @@
 					<option>Heading 4</option>
 				</select>
 			</div>
-			<div id="templates" class="hidden" style="width: 100%; display: grid; grid-template-columns: auto auto;">
+			<div id="templates" class="hidden">
+				<div style="width: 100%; display: grid; grid-template-columns: auto auto;">
 				<div class="graph1">
 					<a href="#">
 					<div>
@@ -184,24 +199,13 @@
 						<div class="graphname"><h3>Basic 1</h3></div>
 					</div>
 					</a>
+				</div>
 				</div>
 			</div>
 			<div id="code" class="hidden"><a>code</a>
 			</div>
 		</div>
 	</main>
-	<script>
-		function showHideSection(sectionToBeShown){
-			var ids = ["graphs", "text", "templates", "code"];
-			for(i = 0; i < ids.length; i++){
-				if(sectionToBeShown == ids[i]){
-					document.getElementById(ids[i]).classList.remove("hidden");
-				}
-				else {
-					document.getElementById(ids[i]).classList.add("hidden");
-				}
-			}
-	</script>
 </body>
 </html>
 
