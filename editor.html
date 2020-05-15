@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,3 +15,80 @@
  </body>
  
  </html>
+=======
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Editor</title>
+	<style> 
+		*{margin: 0; padding: 0;}
+		header, img, div, section, main {float:left; clear:both;}
+		li{float: left; margin-left: 10px;}
+	</style>
+</head>
+<body>
+	<!--nav er kopieret fra trendog.io-->
+	<nav style="background-color: #7C7C7C; float: left;  display:block; width: 100%;">
+		<div>
+			<a href="https://app.trendlog.io/"><img src="../lib/images/trendlog-io-white-thin.png" alt="trendlog.io" style="width: 130px;"></a>
+		</div>
+		<div>
+			<ul style="list-style: none; float: left;">
+				<li><a id="home" href="#" style="display: block;"><span class="glyphicon glyphicon-home"></span>home</a></li>
+				<li><a id="dashboards" href="#" style="display: block;">Trendboards</a></li>
+				<li><a id="reports" href="#" style="display: block;">Reports</a></li>
+				<li><a id="views" href="#" style="display: block;">Views</a></li>
+				<li><a id="feeds" href="#" style="display: block;">Feeds</a></li>
+				<li><a id="settings" href="#" style="display: block;">Settings</a></li>
+				<li><a id="shares" href="#" style="display: block;">Shares</a></li>
+			</ul>
+		</div>
+		<div style="float: right;">
+			<ul style="list-style: none; float: right;">
+				<li>maitenance</li>
+				<li>unfollow</li>
+				<li>alarms</li>
+				<li>channels</li>
+				<li>channelname</li>
+				<li>profil</li>
+			</ul>
+		</div>
+	</nav>
+	<header style="background-color: #BBBBBB; border-color: black; display: block; width: 100%;">
+		<h1>REPORT EDITOR</h1>
+		<div style="float: right;">
+			<a>Close &amp; Save</a>
+		</div>
+	</header>
+	<main>
+		<div class="report-preview" style="width: 48%; background-color: #AC9A9B;">
+		</div>
+		<div style="float: right; width: 48%; background-color: #C46768;">
+			<div id="graphs">graphs
+			</div>
+			<div id="text">text
+			</div>
+			<div id="templates">templates
+			</div>
+			<div id="code">code
+			</div>
+		</div>
+	</main>
+	<script>
+			function showHideSection(sectionToBeShown){
+				var ids = ["editor-knap-section", "graphs", "text", "templates", "code"];
+				for(i = 0; i < ids.length; i++){
+					if(sectionToBeShown == ids[i]){
+						document.getElementById(ids[i]).classList.remove("hidden");
+					}
+					else {
+						document.getElementById(ids[i]).classList.add("hidden");
+					}
+				}
+			}
+		</script>
+</body>
+</html>
+>>>>>>> Stashed changes
