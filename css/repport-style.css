@@ -15,7 +15,7 @@ CSS er skrevet af:
 	font-family: "Arial", "Helvetica", "Helvetica Neue", "sans-serif";
 }
 header, img, div, section, main {
-	float:left; 
+	float:left;
 	display: block;
 }
 /* --- ATOMS --- */
@@ -40,14 +40,6 @@ img.icon{
 .brandidentity{
 	width: 130px;
 	padding: 0px 7.75px;
-}
-
-ul{
-	list-style: none; 
-	float: left;
-}
-li{
-	float: left; 
 }
 
 a{
