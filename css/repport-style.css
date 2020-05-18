@@ -52,7 +52,7 @@ nav{
 /* styling af tabeller - slut*/
 
 /* styling marginer for sektioner*/
-.titler , .sektion1 , .sektion2 , .sektion3 , .sektion4 , .sektion5 , .table {
+.titler , .sektion1 , .sektion2 , .sektion3 , .table {
   margin-left: 25%;
   margin-right: 25%;
 }
