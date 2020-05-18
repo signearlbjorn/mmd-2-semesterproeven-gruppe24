@@ -10,7 +10,11 @@ CSS er skrevet af:
 */
 /* --- ATOMS --- */
 
-*{font-family: "Arial", "Helvetica", "Helvetica Neue", "sans-serif";}
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "Arial", "Helvetica", "Helvetica Neue", "sans-serif";
+}
 
 /* --- MOLECULES ---*/
 
