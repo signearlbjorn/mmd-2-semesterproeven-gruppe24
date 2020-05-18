@@ -10,15 +10,6 @@
 	<link href="css/repport-style.css" rel="stylesheet" type="text/css">
 	
 	<!--TO BE REMOVED AND PUT INTO CSS/JS-->
-	<style> 
-		header, img, div, section, main {float:left; clear:both; display: block;}
-		li{float: left; margin-left: 10px;}
-		ul{list-style: none; float: left;}
-		.placeholderimgchart{ width: 99%; display: grid;}
-		.graphname {text-align: center;}
-		.graph1 h3 {margin: 0 auto;}
-		.hidden{display: none;}
-	</style>
 	<script>
 		function switchedit(editpageswitch){
 			var editpage = ["graphs", "text", "templates", "code"];
@@ -35,13 +26,13 @@
 </head>
 <body>
 	<!--nav er kopieret fra trendog.io-->
-	<nav style="background-color: #7C7C7C; float: left;  display:block; width: 100%;">
-		<div>
+	<nav>
+		<div class="branddiv">
 			<!--LOGO-->
 			<a href="https://app.trendlog.io/"><img class="brandidentity" src="img/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
 			<!--MAIN NAVIGATION-->
 			<ul>
-				<li><a id="home" href="#"><img class="home-icon" src="img/icon-assets/home-icon.svg" alt="home-icon"></a></li>
+				<li><a id="home" href="#"><img class="icon" src="img/icon-assets/home-icon.svg" alt="home-icon"></a></li>
 				<li><a id="dashboards" href="#">Trendboards</a></li>
 				<li><a id="reports" href="#">Reports</a></li>
 				<li><a id="views" href="#">Views</a></li>
@@ -52,13 +43,16 @@
 		</div>
 		<div style="float: right;">
 			<ul style="float: right;">
-				<li><a></a>maitenance</li>
-				<li>unfollow</li>
-				<li>alarms</li>
-				<li>channels</li>
-				<li>channelname</li>
+				<li><a><img class="icon" src="img/icon-assets/wrench-icon.svg" alt="maitenance"></a></li>
+				<li><a><img class="icon" src="img/icon-assets/eye-slashed-icon.svg" alt="unfollow"></a></li>
+				<li><a><img class="icon" src="img/icon-assets/bell-icon.svg" alt="alarms"></a></li>
+				<li><a class="channels">channels</a></li>
+				<li>
+					<select class="channelselect">
+						<option>channelnames</option>
+					</select></li>
 				<!--USERNAME-->
-				<li>profil</li>
+				<li><a>profile <img class="icon" src="img/icon-assets/profile-icon.svg" alt="profile"> </a></li>
 			</ul>
 		</div>
 	</nav>
