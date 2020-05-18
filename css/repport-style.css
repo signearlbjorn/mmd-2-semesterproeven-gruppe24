@@ -21,8 +21,19 @@ nav{
 	height: 50px;
 }
 
+img.home-icon{
+	display: block;
+	width: 14px;
+}
+
 .brandidentity{
 	width: 130px;
+}
+
+#home{
+	font-weight: bold;
+	font-size: 14px;
+	color: #ffffff;
 }
 
 /* --- TEMPLATES --- */
