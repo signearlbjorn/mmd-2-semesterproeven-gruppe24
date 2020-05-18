@@ -1,1 +1,19 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11.9 11.9"><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><g id="glyphicons_halflings"><g id="user"><path id="path" d="M11.9,10.8v.9a.22.22,0,0,1-.2.2H.2a.22.22,0,0,1-.2-.2v-.9a.76.76,0,0,1,.2-.4L3.8,8.1A.52.52,0,0,0,4,7.7V7C3.4,7,3,6,3,5.5V3A3.08,3.08,0,0,1,6,0,3.08,3.08,0,0,1,9,3V5.5C9,6,8.6,7,8,7v.8a.76.76,0,0,0,.2.4l3.6,2.3A1,1,0,0,1,11.9,10.8Z"/></g></g></g></g></svg>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 24.1.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 11.9 11.9" style="enable-background:new 0 0 11.9 11.9;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#00CD00;}
+</style>
+<g id="Layer_2_1_">
+	<g id="Layer_1-2">
+		<g id="glyphicons_halflings">
+			<g id="user">
+				<path id="path" class="st0" d="M11.9,10.8v0.9c0,0.1-0.1,0.2-0.2,0.2H0.2c-0.1,0-0.2-0.1-0.2-0.2v-0.9c0-0.2,0.1-0.3,0.2-0.4
+					l3.6-2.3C3.9,8,4,7.9,4,7.7V7C3.4,7,3,6,3,5.5V3c0-1.6,1.4-3,3-3c1.6,0,3,1.4,3,3v2.5C9,6,8.6,7,8,7v0.8C8,8,8.1,8.1,8.2,8.2
+					l3.6,2.3C11.8,10.6,11.9,10.7,11.9,10.8z"/>
+			</g>
+		</g>
+	</g>
+</g>
+</svg>
