@@ -322,12 +322,21 @@ nav a:hover{
 	margin-left: 25%;
 	margin-right: 25%;
 }
-#styleguide section {
+
+#styleguide section,
+#styleguide article {
 	float: left;
 	width: 100%;
 	height: auto;
 	min-height: 1px;
+}
+
+#styleguide section {
 	margin: 50px 0;
+}
+
+#styleguide article {
+	margin: 15px 0;
 }
 /* styling marginer for sektioner - slut*/
 
