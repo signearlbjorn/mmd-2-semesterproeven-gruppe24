@@ -32,6 +32,14 @@ nav{
 	display: block;
 }
 
+ul{
+	list-style: none; 
+	float: left;
+}
+li{
+	float: left; 
+}
+
 img.icon{
 	display: block;
 	width: 14px;
