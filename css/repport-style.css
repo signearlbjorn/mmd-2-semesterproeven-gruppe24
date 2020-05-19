@@ -46,7 +46,7 @@ nav{
 	float: right;
 }
 .navbarulright li{
-	float: right; 
+	float: left; 
 }
 
 img.icon{
@@ -101,6 +101,7 @@ nav a:hover{
 }
 .profiledropdown{
 	width: 200px;
+	float: right;
 }
 
 .username{
@@ -118,6 +119,7 @@ nav a:hover{
 	font-size: 14px;
 	text-align: left;
 	list-style: none;
+	float: right;
 }
 .profiledropdown-menu li{
 	width: 200px;
