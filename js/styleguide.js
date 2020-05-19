@@ -12,9 +12,10 @@ How to use:
 	give a html element the class of code, and this code will run
 */
 let codeSections = document.getElementsByClassName('code'); // Find all elements with the class code.
-for(i=0; i<codeSections.length; i++){ // Loop all instanceses of code.
+for(let i=0; i<codeSections.length; i++){ // Loop all instanceses of code.
 	let currentSection = codeSections[i].innerHTML; // Get inner html.
 	let newCodeSectionText = currentSection.trim(); // trim (remove leading and trailing whiteSpace)
+	newCodeSectionText = newCodeSectionText.replace(/\t\t\t\t\t\t/g, ''); // repace 6 tabs with nothing
 	newCodeSectionText = newCodeSectionText.replace(/</g, '&lt;'); // repace < with &lt;
 	newCodeSectionText = newCodeSectionText.replace(/\n/g, '</code><code>'); // repace linebreaks with </code><code>
 	newCodeSectionText = newCodeSectionText.replace(/<code><\/code>/g, '<br>'); // repace <code></code> (emty code elements) with <br>
