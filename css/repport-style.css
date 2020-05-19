@@ -259,11 +259,12 @@ nav a:hover{
 	font-family: monospace; /* monospace vælger styreytemets standard font for kode. */
 }
 
-#styleguide .empty{
+#styleguide .empty {
 	background-color: #666;
 }
 
 /* - POSITIONING - */
+
 #styleguide .wrapper {
 	float: none;
 	width: 95%;
