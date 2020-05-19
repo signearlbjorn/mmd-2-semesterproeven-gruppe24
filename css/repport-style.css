@@ -9,6 +9,8 @@ CSS er skrevet af:
 	Michala Gjøl
 */
 
+
+/* --- ATOMS --- */
 *{
 	margin: 0;
 	padding: 0;
@@ -20,7 +22,6 @@ header, img, div, section, main {
 	display: block;
 }
 
-/* --- ATOMS --- */
 h1 {
 	float: left;
 	display: block;
