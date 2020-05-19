@@ -32,12 +32,20 @@ nav{
 	display: block;
 }
 
-ul{
+.navbarulleft {
 	list-style: none; 
 	float: left;
 }
-li{
+.navbarulleft li{
 	float: left; 
+}
+
+.navbarulright {
+	list-style: none; 
+	float: right;
+}
+.navbarulright li{
+	float: right; 
 }
 
 img.icon{
@@ -105,7 +113,7 @@ a:hover{
 .profiledropdown-menu{
 	width: 200px;
 	background-color: #000;	
-	display: block;
+	display: none;
 	font-size: 14px;
 	text-align: left;
 	list-style: none;
