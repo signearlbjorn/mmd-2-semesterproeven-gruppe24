@@ -14,10 +14,12 @@ CSS er skrevet af:
 	padding: 0;
 	font-family: Arial, Helvetica, "Helvetica Neue", sans-serif; /* Defination af fonte: Første prioritet Arial, så Helvetica, Helvetica Neue og til sidst en browser valgt font med uden serif. */
 }
+
 header, img, div, section, main {
-	float:left;
+	float: left;
 	display: block;
 }
+
 /* --- ATOMS --- */
 
 
@@ -25,7 +27,7 @@ header, img, div, section, main {
 
 /* --- ORGANISMS --- */
 
-/*Here starts CSS for Navbar*/
+/* Here starts CSS for Navbar */
 nav{
 	width: 100%;
 	float: left;
@@ -141,7 +143,7 @@ nav a:hover{
 	overflow: hidden;
 	background-color: #e5e5e5;
 }
-/*Here end CSS for NAV*/
+/* Here end CSS for NAV */
 
 /* --- TEMPLATES --- */
 /* Wrapper, positionoers osv. */
@@ -153,17 +155,26 @@ nav a:hover{
 
 /* -- EDIT -- */
 
-.placeholderimgchart{ width: 99%; display: grid;}
-.graphname {text-align: center;}
-.graph1 h3 {margin: 0 auto;}
-.hidden{display: none;}
+.placeholderimgchart{
+	width: 99%;
+	display: grid;
+}
+.graphname {
+	text-align: center;
+}
+.graph1 h3 {
+	margin: 0 auto;
+}
+.hidden{
+	display: none;
+}
 
 /* -- FOLDER OVERVIEW -- */
 
 /* -- STYLE GUIDE -- */
 /* styling af tabeller*/
 .række1 {
-  background-color: pink;
+	background-color: pink;
 }
 
 .række2 {
@@ -172,65 +183,65 @@ nav a:hover{
 /* styling af tabeller - slut*/
 
 /* styling marginer for sektioner*/
-.titler , .sektion1 , .sektion2 , .sektion3 , .table {
-  margin-left: 25%;
-  margin-right: 25%;
+.titler, .sektion1, .sektion2, .sektion3, .table {
+	margin-left: 25%;
+	margin-right: 25%;
 }
 /* styling marginer for sektioner - slut*/
 
 /* switch knap med runde hjørner stil*/
 .switch {
-position: relative;
-display: inline-block;
-width: 60px;
-height: 34px;
+	position: relative;
+	display: inline-block;
+	width: 60px;
+	height: 34px;
 }
 
 .slider {
-position: absolute;
-cursor: pointer;
-top: 0;
-left: 0;
-right: 0;
-bottom: 0;
-background-color: #ccc;
--webkit-transition: .4s;
-transition: .4s;
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	-webkit-transition: .4s;
+	transition: .4s;
 }
 
 .slider:before {
-position: absolute;
-content: "";
-height: 26px;
-width: 26px;
-left: 4px;
-bottom: 4px;
-background-color: white;
--webkit-transition: .4s;
-transition: .4s;
+	position: absolute;
+	content: "";
+	height: 26px;
+	width: 26px;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	-webkit-transition: .4s;
+	transition: .4s;
 }
 /* switch knap med runde hjørner stil - slut*/
 
 /* switch knap med runde hjørner funktion*/
 input:checked + .slider {
-background-color: #2196F3;
+	background-color: #2196F3;
 }
 
 /* switch knap med runde hjørner funktion*/
 input:checked + .slider:before {
--webkit-transform: translateX(26px);
--ms-transform: translateX(26px);
-transform: translateX(26px);
+	-webkit-transform: translateX(26px);
+	-ms-transform: translateX(26px);
+	transform: translateX(26px);
 }
 /* switch knap med runde hjørner funktion - slut*/
 
 /* switch knap med runde hjørner*/
 .slider.round {
-border-radius: 34px;
+	border-radius: 34px;
 }
 
 .slider.round:before {
-border-radius: 50%;
+	border-radius: 50%;
 }
 /* switch knap med runde hjørner - slut*/
 
