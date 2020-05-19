@@ -182,10 +182,26 @@ nav a:hover{
 }
 /* styling af tabeller - slut*/
 
+
+/* - POSITIONING - */
+#styleguide .wrapper {
+	float: none;
+	width: 50%;
+	margin: 0 auto;
+}
+
+
 /* styling marginer for sektioner*/
 .titler, .sektion1, .sektion2, .sektion3, .table {
 	margin-left: 25%;
 	margin-right: 25%;
+}
+#styleguide section {
+	float: left;
+	width: 100%;
+	height: auto;
+	min-height: 1px;
+	margin: 25px 0;
 }
 /* styling marginer for sektioner - slut*/
 
