@@ -21,4 +21,19 @@ for(let i=0; i<codeSections.length; i++){ // Loop all instanceses of code.
 	newCodeSectionText = newCodeSectionText.replace(/<code><\/code>/g, '<br>'); // repace <code></code> (emty code elements) with <br>
 	newCodeSectionText = newCodeSectionText.replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;'); // repace tabs with 4 space;
 	codeSections[i].innerHTML = '<code>' + newCodeSectionText + '</code>'; // update element, and add leading <code> and trailing </code>
+	codeSections[i].addEventListener("click", function(){selectText(codeSections[i])}); // Kopier tekst click event.
+}
+
+function selectText(element) {
+	// https://stackoverflow.com/questions/1173194/select-all-div-text-with-single-mouse-click
+    if (document.selection) { // IE
+        var range = document.body.createTextRange();
+        range.moveToElementText(element);
+        range.select();
+    } else if (window.getSelection) {
+        var range = document.createRange();
+        range.selectNode(element);
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+    }
 }
