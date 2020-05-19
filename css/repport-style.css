@@ -27,12 +27,16 @@ header, img, div, section, main {
 
 /* --- ORGANISMS --- */
 
-/* Here starts CSS for Navbar */
+/*Here starts CSS for Navbar*/
 nav{
 	width: 100%;
 	float: left;
 	background-color: #222;
 	display: block;
+}
+nav div{
+	display: block;
+	float: left;
 }
 
 .navbarulleft {
@@ -41,6 +45,18 @@ nav{
 }
 .navbarulleft li{
 	float: left; 
+}
+.navbarulleft a{
+	font-weight: bold;
+	font-size: 14px;
+	color: #ffffff;
+	float: left;
+	padding: 15px;
+	text-decoration: none;
+}
+
+.profilediv{
+	float: right;
 }
 
 .navbarulright {
@@ -59,6 +75,7 @@ img.icon{
 .brandidentity{
 	width: 130px;
 	padding: 0px 7.75px;
+	margin-bottom: -8px;
 }
 
 nav a{
@@ -73,11 +90,17 @@ nav a:hover{
 	background: #444;
 }
 
+.selection{
+	margin-top: 6px;
+}
+
 .channels{
 	color: #9d9d9d;
 	font-size: 14px;
 	font-weight: 100;
-}
+	float: left;
+	padding: 15px;
+ }
 
 .channelselect{
     display: block;
@@ -114,36 +137,7 @@ nav a:hover{
 	width: 14px;
 	float: right;
 }
-.profiledropdown-menu{
-	width: 200px;
-	background-color: #000;	
-	display: none;
-	font-size: 14px;
-	text-align: left;
-	list-style: none;
-	float: right;
-}
-.profiledropdown-menu li{
-	width: 200px;
-	display: block;
-}
-.profiledropdown-menu a{
-	display: block;
-	padding: 3px 20px;
-	clear: both;
-	font-weight: 400;
-	line-height: 1.42857143;
-	color: #fff;
-	white-space: nowrap;
-	width: 100%;
-}
-.divider{
-	height: 1px;
-	margin: 9px 0;
-	overflow: hidden;
-	background-color: #e5e5e5;
-}
-/* Here end CSS for NAV */
+/*Here end CSS for NAV*/
 
 /* --- TEMPLATES --- */
 /* Wrapper, positionoers osv. */
