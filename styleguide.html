@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="css/repport-style.css">
 </head>
 
-<body>
+<body id="styleguide">
     <!-- Titel på styleguide -->
 <div class="titler">
   <h1 id="styleguidetitel"> Styleguide til Re-design af rapport modul for app.trendlog.io </h1>
@@ -26,9 +26,75 @@
     </ul>
 </div>
   <!-- struktur for løsning slut -->
+<nav id="atomicDesignNavigation">
+	<ul>
+		<li><a href="#atoms">Atomer for løsning</a></li>
+		<li><a href="#molecules">Molekyler for løsning</a></li>
+		<li><a href="#organisms">Organismer for løsning</a></li>
+		<li><a href="#templates">Templates for løsning</a></li>
+		<li><a href="#pages">Pages for løsning</a></li>
+	</ul>
+</nav>
+
+<!-- ATOMS -->
+<section id="atoms">
+	<div class="wrapper">
+		<h3>Atomer for løsning</h3>
+		<ul>
+			<li><a href="#meta-data">Meta data</a></li>
+			<li>text</li>
+			<li>h1</li>
+			<li>h2</li>
+			<li>h3</li>
+			<li>Semantiske sektioner: header, nav, main, section & aside</li>
+			<li>Ikke semantiske sektioner: div, span, table, ul, li, form</li>
+		</ul>
+		<h4 id="meta-data">Meta data</h4>
+		<table class="atomTable">
+			<tr class="række1">
+				<th>Atom</th>
+				<th>HTML</th>
+				<th>CSS</th>
+			</tr>
+			<tr>
+			<tr class="række2">
+				<td class="empty">
+					<!--Atom -->
+					<!-- head section of page -->
+				</td>
+				<td>
+					<code>&lt;!--HTML --></code>
+					<code>&lt;!-- META DESCRIPTIONS --></code>
+					<code>&lt;title>Example title&lt;/title></code>
+					<code>&lt;meta name="Author" content="Max Festersen Hansen, Signe Arlbjørn, Konrad Sarna &amp; Michala Gjøl"></code>
+					<code>&lt;meta name="description" content="Example description. This document was developed for the 2. semester test for OEAMM19EDF, UCL University College, Multimediadesign, Start year 19. Class A-C."></code>
+					<br>
+					<code>&lt;!-- META DATA SETTINGS --></code>
+					<code>&lt;meta charset="utf-8"></code>
+					<code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"></code>
+					<br>
+					<code>&lt;!-- ICONS (FAV ICON) AND STYLLING --></code>
+					<code>&lt;link rel='icon' href='favicon.ico' type='image/x-icon'/></code>
+					<code>&lt;meta name="theme-color" content="#00CD00"></code>
+					<br>
+					<code>&lt;!-- LINKS AND SCRIPTS --></code>
+					<code>&lt;link rel="stylesheet" type="text/css" href="css/repport-style.css"></code>
+					<br>
+					<code>&lt;!-- ROBOTS --></code>
+					<code>&lt;!-- Block indexing of site --></code>
+					<code>&lt;meta name="robots" content="noindex" /></code>
+				</td>
+				<td class="empty">
+					<!--CSS -->
+					<!-- No CSS -->
+				</td>
+			</tr>
+		</table>
+	</div>
+</section>
 
 <!-- SELTION 2 - ALLE MOLEKYLER FOR LØSNING-->
-<div class="sektion2">
+<div class="sektion2" id="molecules">
   <!-- molekyle tabeller for overview-siden -->
   <h3>Molekyler for løsning</h3>
       <!-- Liste over molekyler -->
@@ -392,7 +458,7 @@
 <!-- SELTION 2 - ALLE MOLEKYLER FOR LØSNING - SLUT -->
 
 <!-- SEKTION 3 - ORGANISMER FOR LØSNING -->
-  <div class="sektion3">
+  <div class="sektion3" id="organisms">
     <!-- molekyle tabeller for overview-siden -->
     <h3>Organsimer for løsning</h3>
         <!-- Liste over organimser -->
@@ -632,3 +698,7 @@
         <!-- organisme tabel for 'Navigation-Bar' - slut -->
 </div>
 <!-- SEKTION 3 - ORGANISMER FOR LØSNING - SLUT -->
+<section id="templates">
+</section>
+<section id="pages">
+</section>
