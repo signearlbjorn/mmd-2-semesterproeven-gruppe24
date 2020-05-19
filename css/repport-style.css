@@ -266,10 +266,14 @@ nav a:hover{
 /* - POSITIONING - */
 #styleguide .wrapper {
 	float: none;
-	width: 50%;
+	width: 95%;
 	margin: 0 auto;
 }
-
+@media (min-width:768px){
+	#styleguide .wrapper {
+		width: 50%;
+	}
+}
 
 /* styling marginer for sektioner*/
 .titler, .sektion1, .sektion2, .sektion3, .table {
