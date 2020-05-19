@@ -285,9 +285,21 @@ nav a:hover{
 	width: 100%;
 	height: auto;
 	min-height: 1px;
-	margin: 25px 0;
+	margin: 50px 0;
 }
 /* styling marginer for sektioner - slut*/
+
+/* - LISTER - */
+#styleguide section .wrapper > ul {
+	float: left;
+	width: 100%;
+	margin-top: 5px;
+	margin-bottom: 15px;
+}
+
+#styleguide section .wrapper > ul li {
+	text-indent: 20px;
+}
 
 /* switch knap med runde hjørner stil*/
 .switch {
