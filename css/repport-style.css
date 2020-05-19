@@ -180,8 +180,38 @@ nav a:hover{
 .række2 {
     background-color: yellow;
 }
+
+#styleguide table, #styleguide tbody {
+	float: left;
+	width: 100%;
+}
+#styleguide table tr {
+}
+#styleguide table tr td, #styleguide table tr th {
+	width: 33.33%;
+	min-width:1px;
+	min-height:1px;
+}
+#styleguide table tr td code {
+	clear: right;
+	display: block;
+	margin-bottom: 5px;
+	margin-left: 2em;
+	text-indent: -2em;
+}
+#styleguide table tr td code:last-child {
+	margin-bottom: 0;
+}
 /* styling af tabeller - slut*/
 
+/* - TABLE CONTENT - */
+#styleguide table code {
+	font-family: monospace; /* monospace vælger styreytemets standard font for kode. */
+}
+
+#styleguide .empty{
+	background-color: #666;
+}
 
 /* - POSITIONING - */
 #styleguide .wrapper {
