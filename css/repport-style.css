@@ -179,26 +179,79 @@ nav a:hover{
 }
 
 #styleguide table, #styleguide tbody {
+	width: 100%;
+	border-spacing: 0;
+}
+
+#styleguide table {
+	float: left;
+}
+
+#styleguide table tr td,
+#styleguide table tr th {
+	min-width: 1px;
+	min-height: 1px;
+	box-sizing: border-box;
+}
+
+#styleguide table tr th {
+	padding-right: 10px;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+#styleguide table tr td {
+	padding: 10px;
+	border-right: solid 1px #000;
+}
+
+#styleguide table tr td:last-child {
+	border-right: none;
+}
+
+#styleguide table.atomTable tr td,
+#styleguide table.atomTable tr th {
 	float: left;
 	width: 100%;
+	padding: 10px;	
 }
-#styleguide table tr {
+
+@media (min-width:481px){
+	#styleguide table.atomTable tr td,
+	#styleguide table.atomTable tr th {
+		float: none;
+	}
+	
+	#styleguide table.atomTable tr td:nth-child(1),
+	#styleguide table.atomTable tr th:nth-child(1) {
+		width: 40%;
+	}
+
+	#styleguide table.atomTable tr td:nth-child(2),
+	#styleguide table.atomTable tr th:nth-child(2) {
+		width: 40%;
+	}
+
+	#styleguide table.atomTable tr td:nth-child(3),
+	#styleguide table.atomTable tr th:nth-child(3) {
+		width: 20%;
+	}
 }
-#styleguide table tr td, #styleguide table tr th {
-	width: 33.33%;
-	min-width:1px;
-	min-height:1px;
-}
+
 #styleguide table tr td code {
 	clear: right;
 	display: block;
 	margin-bottom: 5px;
 	margin-left: 2em;
-	text-indent: -2em;
+	text-indent: -2em; /* A negative indent together with a positive margin with opisitite value, can imitate outdents. */
+	color: #000;
+    font-size: 14px;
 }
+
 #styleguide table tr td code:last-child {
 	margin-bottom: 0;
 }
+
 /* styling af tabeller - slut*/
 
 /* - TABLE CONTENT - */
