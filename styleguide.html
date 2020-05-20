@@ -69,10 +69,10 @@
 		<h3>Atomer for løsning</h3>
 		<ul>
 			<li><a href="#meta-data">Meta data</a></li>
-			<li>text</li>
+			<li><a href="#text">Text</a></li>
 			<li><a href="#h1">h1 - title</a></li>
-			<li>h2</li>
-			<li>h3</li>
+			<li><a href="#h2">h2 - report title</a></li>
+			<li><a href="#h3">h3 - tab title</a></li>
 			<li>Semantiske sektioner: header, nav, main, section & aside</li>
 			<li>Ikke semantiske sektioner: div, span, table, ul, li, form</li>
 		</ul>
@@ -134,6 +134,72 @@
 			</table>
 			<p class="info">Vær opmærksom på at ROBOTS sektionen stopper indeksering af siden.</p>
 		</article>
+		<article id="text">
+			<h4>Text</h4>
+			<table class="atomTable">
+				<tr class="række1">
+					<th>Atom</th>
+					<th>HTML</th>
+					<th>CSS</th>
+				</tr>
+				<tr class="række2">
+					<!--Atom -->
+					<td>
+						<p>Example of a text explenation in a paragraf, that can be long, due to a need of many words to explain a complex function or situation.</p>
+						<span>Example of short description.</span>
+					</td>
+					<!--HTML -->
+					<td class="code">
+						<p>Example of a text explenation in a paragraf, that can be long, due to a need of many words to explain a complex function or situation.</p>
+						<span>Example of short description.</span>
+					</td>
+					<!--CSS -->
+					<td class="code">
+						/* -- TEXT--  */
+						p, span {
+							font-size: 11px;
+							line-height: 16px;
+							font-weight: 400;
+							color: #000000;
+						}
+
+						@media (min-width:481px) {
+							p, span {
+								font-size: 2.287vw; /* ~11 px on 481px width */
+								line-height: 3.950vw; /* ~19 px on 481px width */
+							}
+						}
+
+						@media (min-width:768px) {
+							p, span {
+								font-size: 14px;
+								line-height: 26px;
+							}
+						}
+
+						@media (min-width:1366px) {
+							p, span {
+								line-height: 30px;
+							}
+						}
+
+						@media (min-width: 1980px) {
+							p, span {
+								font-size: 0.707vw; /* ~14px on 1980px width */
+								line-height: 1.717vw; /* ~34px on 1980px width */
+							}
+						}
+
+						@media (min-width:3840px) {
+							p, span {
+								font-size: 0.729vw; /* ~28px on 3840px width */
+								line-height: 1.745vw; /* ~67x on 3840px width */
+							}
+						}
+					</td>
+				</tr>
+			</table>
+		</article>
 		<article id="h1">
 			<h4>h1 - title</h4>
 			<table class="atomTable">
@@ -153,45 +219,183 @@
 					</td>
 					<!--CSS -->
 					<td class="code">
+						/* -- h1 HEADING -- */
 						h1 {
 							float: left;
 							display: block;
 							margin: 15px 0;
-							font-size: 16px;
+							font-size: 22px;
+							line-height: 35px;
 							font-weight: 400;
-							line-height: 26px;
 							color: #000000;
 						}
 
 						@media (min-width:481px) {
 							h1 {
-								margin: 15px 0;
-								font-size: 3.333vw;
-								line-height: 5.417vw;
+								font-size: 4.574vw; /* ~22 px on 481px width */
+								line-height: 7.277vw; /* ~35 px on 481px width */
 							}
 						}
 
 						@media (min-width:768px) {
 							h1 {
-								margin: 15px 0;
-								font-size: 2.344vw;
-								line-height: 4.036vw;
+								font-size: 32px;
+								line-height: 52px;
 							}
 						}
 
 						@media (min-width:1366px) {
 							h1 {
-								margin: 15px 0;
-								font-size: 2.635vw;
-								line-height: 5.783vw;
+								line-height: 56px;
+							}
+						}
+
+						@media (min-width: 1980px) {
+							h1 {
+								font-size: 1.616vw; /* ~32px on 1980px width */
+								line-height: 3.030vw; /* ~60px on 1980px width */
 							}
 						}
 
 						@media (min-width:3840px) {
 							h1 {
-								margin: 15px 0;
-								font-size: 1.667vw;
-								line-height: 3.099vw;
+								font-size: 1.667vw; /* ~64px on 3840px width */
+								line-height: 3.099vw; /* ~119px on 3840px width */
+							}
+						}
+					</td>
+				</tr>
+			</table>
+		</article>
+		<article id="h2">
+			<h4>h2 - report titles</h4>
+			<table class="atomTable">
+				<tr class="række1">
+					<th>Atom</th>
+					<th>HTML</th>
+					<th>CSS</th>
+				</tr>
+				<tr class="række2">
+					<!--Atom -->
+					<td>
+						<h2>Reports name</h2>
+					</td>
+					<!--HTML -->
+					<td class="code">
+						<h2>Reports name</h2>
+					</td>
+					<!--CSS -->
+					<td class="code">
+						/* -- h2 HEADING -- */
+						h2 {
+							float: left;
+							display: block;
+							margin: 10px 0;
+							font-size: 16px;
+							line-height: 26px;
+							font-weight: 400;
+							color: #000000;
+						}
+
+						@media (min-width:481px) {
+							h2 {
+								font-size: 3.333vw; /* ~16 px on 481px width */
+								line-height: 5.417vw; /* ~26 px on 481px width */
+							}
+						}
+
+						@media (min-width:768px) {
+							h2 {
+								font-size: 27px;
+								line-height: 44px;
+							}
+						}
+
+						@media (min-width:1366px) {
+							h2 {
+								line-height: 49px;
+							}
+						}
+
+						@media (min-width: 1980px) {
+							h2 {
+								font-size: 0.909vw; /* ~27px on 1980px width */
+								line-height: 2.677vw; /* ~53px on 1980px width */
+							}
+						}
+
+						@media (min-width:3840px) {
+							h2 {
+								font-size: 1.146vw; /* ~44px on 3840px width */
+								line-height: 2.344vw; /* ~90px on 3840px width */
+							}
+						}
+					</td>
+				</tr>
+			</table>
+		</article>
+		<article id="h3">
+			<h4>h3 - tab titles</h4>
+			<table class="atomTable">
+				<tr class="række1">
+					<th>Atom</th>
+					<th>HTML</th>
+					<th>CSS</th>
+				</tr>
+				<tr class="række2">
+					<!--Atom -->
+					<td>
+						<h3>Favorite templates</h3>
+					</td>
+					<!--HTML -->
+					<td class="code">
+						<h3>Favorite templates</h3>
+					</td>
+					<!--CSS -->
+					<td class="code">
+						/* -- h3 HEADING -- */
+						h3 {
+							float: left;
+							display: block;
+							margin-top: 10px;
+							margin-bottom: 5px;
+							font-size: 13px;
+							line-height: 22px;
+							font-weight: 400;
+							color: #000000;
+						}
+
+						@media (min-width:481px) {
+							h3 {
+								font-size: 2.703vw; /* ~13 px on 481px width */
+								line-height: 4.574vw; /* ~22 px on 481px width */
+							}
+						}
+
+						@media (min-width:768px) {
+							h3 {
+								font-size: 21px;
+								line-height: 36px;
+							}
+						}
+
+						@media (min-width:1366px) {
+							h3 {
+								line-height: 40px;
+							}
+						}
+
+						@media (min-width: 1980px) {
+							h3 {
+								font-size: 1.061vw; /* ~21px on 1980px width */
+								line-height: 2.222vw; /* ~44px on 1980px width */
+							}
+						}
+
+						@media (min-width:3840px) {
+							h3 {
+								font-size: 1.094vw; /* ~42px on 3840px width */
+								line-height: 2.057vw; /* ~79px on 3840px width */
 							}
 						}
 					</td>
