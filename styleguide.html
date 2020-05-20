@@ -266,15 +266,29 @@
                 <!-- række 1 i tabel - slut-->
                 <!-- række 2 i tabel -->
                 <tr class="række2">
-                  <td>
-					  <li><button type="button" class="">settings</button></li>
-					  <li>
-						  <img class="settingsicon" src="img/icons/settings.svg" alt="settings-icon">
-					  </li>
+					<td>
+						<li><button type="button" class="">settings</button></li>
+						<li>
+							<img class="settingsicon" src="img/icons/settings.svg" alt="settings-icon">
+						</li>
 					</td>
-                  <td><button type="button" class="settingbutton"><img class="settingsicon" src="img/icons/settings.svg" alt="settings-icon"></button></td>
-                  <td><button type="button" class="settingbutton"><img class="settingsicon" src="img/icons/settings.svg" alt="settings-icon"></button></td>
-                  <td> CSS for 'tandhjul' </td>
+					<td><button type="button" class="settingbutton"><img class="settingsicon" src="img/icons/settings.svg" alt="settings-icon"></button></td>
+					<td>
+						&#8249;button type="button" class="settingbutton"&gt;
+						&#8249;img class="settingsicon" src="../icons/settings.svg" alt="settings-icon"&gt;
+						&#8249;/button&gt;
+					</td>
+					<td>
+						.settingsicon{<br>
+							width: 25px;<br>
+						}<br>
+						.settingbutton{<br>
+							border: none;<br>
+							display: block;<br>
+							cursor: pointer;<br>
+							background-color: transparent;<br>
+						}<br>
+					</td>
                   <td> JavaScript for 'tandhjul' </td>
                 </tr>
             </table>
