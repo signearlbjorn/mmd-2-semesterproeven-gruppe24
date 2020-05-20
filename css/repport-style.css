@@ -218,6 +218,16 @@ h3 {
 	background-color: #D6D7C6;
 	width: 250px;
 }
+.closesettingmenu{
+	display: block;
+	background-color: transparent;
+	float: right;
+	width: 100%;
+	border: none;
+}
+.closesettingmenuicon{
+	float: right;
+}
 .settingsmenubutton{
 	display: block;
 	width: 225px;

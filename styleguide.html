@@ -515,15 +515,22 @@
 					<!--Atoms-->
 					<td>
 						<li>
-							<button type="button" onClick="" class="">setting</button></li>
+							<button type="button" onClick="" class="">setting</button>
+						</li>
+						<li>
 							<button type="button" onClick="" class=""><a>Edit</a> <img class="" src="img/icons/edit.svg" alt="editicon"></button>
+						</li>
 						<li>
 							<img class="" src="img/icons/edit.svg" alt="editicon">
+						</li>
+						<li>
+						<button type="button" onClick="" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
 						</li>
 					</td>
 					<!--Molecule-->
 					<td>
 						<div class="settingsmenu">
+							<button type="button" onClick="" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
 							<button type="button" onClick="" class="settingsmenubutton"><a>Edit</a> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon"></button>
 							<button type="button" onClick="" class="settingsmenubutton"><a>Show</a> <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon"></button>
 							<button type="button" onClick="" class="settingsmenubutton"><a>Schedule</a> <img class="settingsmenuicon" src="img/icons/menu.svg" alt="scheduleicon"></button>
@@ -536,6 +543,7 @@
 					<!--HTML to copy-->
 					<td>
 					&#8249;div class="settingsmenu"&gt;<br>
+						&#8249;button type="button" onClick="" class="closesettingmenu"&gt;&#8249;img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"&gt;&#8249;/button&gt;
 						&#8249;button type="button" onClick="" class="settingsmenubutton"&gt;&#8249;a&gt;Edit&#8249;/a&gt; &#8249;img class="settingsmenuicon" src="../icons/edit.svg" alt="editicon"&gt;&#8249;/button&gt;<br>
 						&#8249;button type="button" onClick="" class="settingsmenubutton"&gt;&#8249;a&gt;Show&#8249;/a&gt; &#8249;img class="settingsmenuicon" src="../icons/eye.svg" alt="showicon"&gt;&#8249;/button&gt;<br>
 						&#8249;button type="button" onClick="" class="settingsmenubutton"&gt;&#8249;a&gt;Schedule&#8249;/a&gt; &#8249;img class="settingsmenuicon" src="../icons/menu.svg" alt="scheduleicon"&gt;&#8249;/button&gt;<br>
@@ -550,6 +558,16 @@
 						.settingsmenu{<br>
 							background-color: #D6D7C6;<br>
 							width: 250px;<br>
+						}<br>
+						.closesettingmenu{<br>
+							display: block;<br>
+							background-color: transparent;<br>
+							float: right;<br>
+							width: 100%;<br>
+							border: none;<br>
+						}<br>
+						.closesettingmenuicon{<br>
+							float: right;<br>
 						}<br>
 						.settingsmenubutton{<br>
 							display: block;<br>
