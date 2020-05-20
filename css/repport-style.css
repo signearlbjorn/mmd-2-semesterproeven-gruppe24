@@ -66,9 +66,20 @@ h1 {
 
 /* --- MOLECULES ---*/
 
+/*Here starts CSS code for settings button (kog img)*/
+.settingsicon{
+	width: 25px;
+}
+.settingbutton{
+	border: none;
+	display: block;
+	cursor: pointer;
+	background-color: transparent;
+}
+
 /* --- ORGANISMS --- */
 
-/*Here starts CSS for Navbar*/
+/*Here starts CSS code for Navbar*/
 nav{
 	width: 100%;
 	float: left;
