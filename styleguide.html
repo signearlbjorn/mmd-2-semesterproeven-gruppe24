@@ -466,7 +466,6 @@
                     <th>CSS</th>
                     <th>JavaScript</th>
                   </tr>
-                <tr>
                 <!-- række 1 i tabel - slut-->
                 <!-- række 2 i tabel -->
                 <tr class="række2">
@@ -477,21 +476,19 @@
 						</li>
 					</td>
 					<td><button type="button" onClick="" class="settingbutton"><img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon"></button></td>
-					<td>
-						&#8249;button type="button" onClick="" class="settingbutton"&gt;
-						&#8249;img class="settingsicon" src="../icons/settings.svg" alt="settings-icon"&gt;
-						&#8249;/button&gt;
+					<td class="code">
+						<button type="button" onClick="" class="settingbutton"><img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon"></button>
 					</td>
-					<td>
-						.settingsicon{<br>
-							width: 25px;<br>
-						}<br>
-						.settingbutton{<br>
-							border: none;<br>
-							display: block;<br>
-							cursor: pointer;<br>
-							background-color: transparent;<br>
-						}<br>
+					<td class="code">
+						.settingsicon{
+							width: 25px;
+						}
+						.settingbutton{
+							border: none;
+							display: block;
+							cursor: pointer;
+							background-color: transparent;
+						}
 					</td>
                   <td> JavaScript for 'tandhjul' </td>
                 </tr>
@@ -541,54 +538,54 @@
 						</div>
 					</td>
 					<!--HTML to copy-->
-					<td>
-					&#8249;div class="settingsmenu"&gt;<br>
-						&#8249;button type="button" onClick="" class="closesettingmenu"&gt;&#8249;img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"&gt;&#8249;/button&gt;
-						&#8249;button type="button" onClick="" class="settingsmenubutton"&gt;&#8249;a&gt;Edit&#8249;/a&gt; &#8249;img class="settingsmenuicon" src="../icons/edit.svg" alt="editicon"&gt;&#8249;/button&gt;<br>
-						&#8249;button type="button" onClick="" class="settingsmenubutton"&gt;&#8249;a&gt;Show&#8249;/a&gt; &#8249;img class="settingsmenuicon" src="../icons/eye.svg" alt="showicon"&gt;&#8249;/button&gt;<br>
-						&#8249;button type="button" onClick="" class="settingsmenubutton"&gt;&#8249;a&gt;Schedule&#8249;/a&gt; &#8249;img class="settingsmenuicon" src="../icons/menu.svg" alt="scheduleicon"&gt;&#8249;/button&gt;<br>
-						&#8249;button type="button" onClick=""  class="settingsmenubutton"&gt;&#8249;a&gt;Share&#8249;/a&gt; &#8249;img class="settingsmenuicon" src="../icons/share-2.svg" alt="shareicon"&gt;&#8249;/button&gt;<br>
-						&#8249;button type="button" onClick="" class="settingsmenubutton"&gt;&#8249;a&gt;Save as..&#8249;/a&gt;&#8249;img class="settingsmenuicon" src="../icons/save.svg" alt="saveasicon"&gt;&#8249;/button&gt;<br>
-						&#8249;button type="button" onClick="" class="settingsmenubutton"&gt;&#8249;a&gt;Print&#8249;/a&gt;&#8249;img class="settingsmenuicon" src="../icons/printer.svg" alt="printicon"&gt;&#8249;/button&gt;<br>
-						&#8249;button type="button" onClick="" class="settingsmenubutton"&gt;&#8249;a&gt;Delete&#8249;/a&gt;&#8249;img class="settingsmenuicon" src="../icons/trash-2.svg" alt="deleteicon"&gt;&#8249;/button&gt;<br>
-					&#8249;/div&gt;
+					<td class="code">
+						<div class="settingsmenu">
+							<button type="button" onClick="" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><a>Edit</a> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><a>Show</a> <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><a>Schedule</a> <img class="settingsmenuicon" src="img/icons/menu.svg" alt="scheduleicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><a>Share</a> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><a>Save as..</a><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><a>Print</a><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><a>Delete</a><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
+						</div>
 					</td>
 					<!--CSS to copy-->
-					<td>
-						.settingsmenu{<br>
-							background-color: #D6D7C6;<br>
-							width: 250px;<br>
-						}<br>
-						.closesettingmenu{<br>
-							display: block;<br>
-							background-color: transparent;<br>
-							float: right;<br>
-							width: 100%;<br>
-							border: none;<br>
-							cursor: pointer;<br>
-						}<br>
-						.closesettingmenuicon{<br>
-							float: right;<br>
-						}<br>
-						.settingsmenubutton{<br>
-							display: block;<br>
-							width: 225px;<br>
-							margin: 0 auto;<br>
-							text-align: center;<br>
-							border-radius: 12px;<br>
-							margin-bottom: 3px;<br>
-							cursor: pointer;<br>
-						}<br>
-						.settingsmenubutton a{<br>
-							float: left;<br>
-							color: #848484;<br>
-							font-size: 19px;<br>
-							margin-left: 7px;<br>
-						}<br>
-						.settingsmenuicon{<br>
-							float: right;<br>
-							margin-right: 7px;<br>
-							width: 20px;<br>
+					<td class="code">
+						.settingsmenu{
+							background-color: #D6D7C6;
+							width: 250px;
+						}
+						.closesettingmenu{
+							display: block;
+							background-color: transparent;
+							float: right;
+							width: 100%;
+							border: none;
+							cursor: pointer;
+						}
+						.closesettingmenuicon{
+							float: right;
+						}
+						.settingsmenubutton{
+							display: block;
+							width: 225px;
+							margin: 0 auto;
+							text-align: center;
+							border-radius: 12px;
+							margin-bottom: 3px;
+							cursor: pointer;
+						}
+						.settingsmenubutton a{
+							float: left;
+							color: #848484;
+							font-size: 19px;
+							margin-left: 7px;
+						}
+						.settingsmenuicon{
+							float: right;
+							margin-right: 7px;
+							width: 20px;
 						}
 					</td>
                   <td> JavaScript for 'tandhjul menu' </td>
