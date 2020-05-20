@@ -224,6 +224,7 @@ h3 {
 	float: right;
 	width: 100%;
 	border: none;
+	cursor: pointer;
 }
 .closesettingmenuicon{
 	float: right;
@@ -234,6 +235,8 @@ h3 {
 	margin: 0 auto;
 	text-align: center;
 	border-radius: 12px;
+	margin-bottom: 3px; 
+	cursor: pointer;
 }
 .settingsmenubutton a{
 	float: left;
