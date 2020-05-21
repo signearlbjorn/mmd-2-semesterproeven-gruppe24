@@ -471,7 +471,9 @@ nav a:hover{
 }
 
 #styleguide table tr td {
+	position: relative;
 	border-bottom: solid 1px #000;
+	vertical-align:top;
 }
 
 #styleguide table tr td:last-child {
@@ -546,6 +548,50 @@ nav a:hover{
 
 #styleguide .empty {
 	background-color: #666;
+}
+
+#styleguide .tableExplainer {
+	float: left;
+	width: 100%;
+	padding: 5px;
+	border: solid 1px #094049; /* Darker blue */
+	border-radius: 4px;
+	margin-bottom: 5px;
+	background-color: #128193; /* Dark blue */
+	box-sizing: border-box;
+}
+
+#styleguide .tableExplainerText {
+	float: left;
+	color: #fff;
+	clear: right;
+}
+#styleguide .tableExplainer img {
+	float: left;
+	margin-right: 0.25em;
+	clear: left;
+}
+#styleguide .tableExplainerButton{
+	float: left;
+	clear: both;
+	width: 100%;
+	padding: inherit;
+	border: outset 2px #052C1E;
+	border-radius: inherit;
+	color: #fff;
+	background-color: #129365;
+	box-sizing: inherit;
+}
+
+#styleguide .tableExplainerButton:hover{
+	background-color: #41A883;
+	box-sizing: inherit;
+}
+
+#styleguide .tableExplainerButton:active{
+	border: inset 2px #052C1E;
+	background-color: #41A883;
+	box-sizing: inherit;
 }
 
 /* - POSITIONING - */

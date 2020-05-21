@@ -11,6 +11,7 @@ Why:
 How to use:
 	give a html element the class of code, and this code will run
 */
+
 let codeSections = document.getElementsByClassName('code'); // Find all elements with the class code.
 for(let i=0; i<codeSections.length; i++){ // Loop all instanceses of code.
 	let currentSection = codeSections[i].innerHTML; // Get inner html.
@@ -21,19 +22,25 @@ for(let i=0; i<codeSections.length; i++){ // Loop all instanceses of code.
 	newCodeSectionText = newCodeSectionText.replace(/<code><\/code>/g, '<br>'); // repace <code></code> (emty code elements) with <br>
 	newCodeSectionText = newCodeSectionText.replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;'); // repace tabs with 4 space;
 	codeSections[i].innerHTML = '<code>' + newCodeSectionText + '</code>'; // update element, and add leading <code> and trailing </code>
-	codeSections[i].addEventListener("dblclick", function(){selectText(codeSections[i])}); // Kopier tekst click event.
+	
+	codeSections[i].addEventListener("dblclick", function(){selectText(codeSections[i])}); // Add eventlistner on doubleclick for selectText.
+}
+
+let tableExplainer = document.getElementsByClassName('tableExplainer'); // Find all elements with the class tableExplainer.
+for(let i=0; i<tableExplainer.length; i++){ // Loop all instanceses of tableExplainer.
+	let tableExplainerInstance = tableExplainer[i];
+	let tableExplainerButton = tableExplainerInstance.getElementsByClassName('tableExplainerButton'); // Find elements with the class tableExplainerButton in tableExplainer
+	tableExplainerButton = tableExplainerButton[0]; // Always set to first instance.
+	tableExplainerButton.addEventListener("click", function(){tableExplainer[i].parentNode.removeChild(tableExplainer[i]);}); // Add eventlistner on click for tableExplainerButton, and when fired, remove tableExplainer instance from dom.
 }
 
 function selectText(element) {
-	// https://stackoverflow.com/questions/1173194/select-all-div-text-with-single-mouse-click
-    if (document.selection) { // IE
-        var range = document.body.createTextRange();
-        range.moveToElementText(element);
-        range.select();
-    } else if (window.getSelection) {
-        var range = document.createRange();
-        range.selectNode(element);
-        window.getSelection().removeAllRanges();
-        window.getSelection().addRange(range);
+	// Based on: https://stackoverflow.com/questions/1173194/select-all-div-text-with-single-mouse-click
+	// IE kode removed, as we do not attempt to support the platform, and the function is not a critical part of the experience.
+    if (window.getSelection) { // If window.getSelection exists, run the code
+        var range = document.createRange(); // Create range object
+        range.selectNode(element); // Set range to target element
+        window.getSelection().removeAllRanges(); // Remove all set ranges (what should or has been selected)
+        window.getSelection().addRange(range); // Set the selection to range
     }
 }
