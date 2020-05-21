@@ -215,8 +215,14 @@ h3 {
 }
 /*Here starts CSS code for settings menu*/
 .settingsmenu{
-	background-color: #D6D7C6;
+	background-color: #D3D3D3;
 	width: 250px;
+	border-radius: 12px;
+}
+.settingsmenu-dark{
+	background-color: #222222;
+	width: 250px;
+	border-radius: 12px;
 }
 .closesettingmenu{
 	display: block;
@@ -228,15 +234,34 @@ h3 {
 }
 .closesettingmenuicon{
 	float: right;
+	width: 24px;
+	padding-right: 12px;
+}
+.closesettingmenu-dark{
+	display: block;
+	background-color: transparent;
+	float: right;
+	width: 100%;
+	border: none;
+	cursor: pointer;
+}
+.closesettingmenuicon-dark{
+	float: left;
+	width: 24px;
+	padding-left: 12px;
 }
 .settingsmenubutton{
 	display: block;
 	width: 225px;
 	margin: 0 auto;
 	text-align: center;
+	border: #000000;
 	border-radius: 12px;
-	margin-bottom: 3px; 
+	margin-bottom: 5px; 
 	cursor: pointer;
+}
+.settingsmenubutton:hover{
+	background-color: #adadad;
 }
 .settingsmenubutton a{
 	float: left;
@@ -249,6 +274,26 @@ h3 {
 	margin-right: 7px;
 	width: 20px;
 }
+/*Here starts code for 'new report bbutton'*/
+.newreportbutton{
+	border: none;
+	border-radius: 12px;
+	background-color: #00cd00;
+	width: 150px;
+	cursor: pointer; 
+	display: grid;
+	grid-template-columns: auto auto;
+	align-content: center;
+}
+.newreportspan{
+	font-size: 18px;
+	display: grid;
+}
+.plusimg{
+	display: grid;
+	margin: 0 0 0 auto;
+}
+
 
 /* --- ORGANISMS --- */
 
