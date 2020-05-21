@@ -786,29 +786,80 @@
 					<td>
 						<li><button type="button" onClick="" class="">button tag</button></li>
 						<li>
-							<img class="settingsicon" src="img/icons/?.svg" alt="settings-icon">
+							<img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
 						</li>
 					</td>
 					<td>
-						<button type="button" onClick="" class="upladtemplatebutton"><a>Upload template</a><img class="settingsicon" src="img/icons/upload.svg" alt="settings-icon"></button>
+						<button type="button" onClick="" class="helpbutton"><a>Help</a><img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon"></button>
 					</td>
 					<td class="code">
-						<button type="button" onClick="" class="settingbutton"><img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon"></button>
+						<button type="button" onClick="" class="helpbutton"><a>Help</a><img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon"></button>
 					</td>
 					<td class="code">
-						.settingsicon{
-							width: 25px;
-						}
-						.settingbutton{
-							border: none;
-							display: block;
-							cursor: pointer;
-							background-color: transparent;
-						}
+						.helpbutton{
+	background-color: #D3D3D3;
+	border: none;
+	border-radius: 12px;
+	width: 50px;
+	height: 15px;
+	cursor: pointer;
+	display: block;
+}
+.helpbutton a{
+    color: #000;
+    font-size: 10px;
+	margin-left: 7px;
+	float: left;
+}
+.helpbutton img{
+	width:10px;
+}
 					</td>
                   <td> JavaScript for 'tandhjul' </td>
                 </tr>
-				<!--Knapper til text i editor>
+				<!--Knapper til text i editor-->
+				<tr class="række2">
+					<td>
+						<li><button type="button" onClick="" class="">button tag</button></li>
+						<li>
+							text
+						</li>
+						<li>
+							<img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</li>
+					</td>
+					<td>
+						<div class="texteditdiv">Size<button type="" onclick="" class="texteditbutton"><a>Choose..</a><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+					</td>
+					<td class="code">
+						<div class="texteditdiv">Size<button type="" onclick="" class="texteditbutton"><a>Choose..</a><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+					</td>
+					<td class="code">
+						.texteditdiv{
+    float: left;
+	font-size: 20px;
+}
+.texteditdiv img{
+	float: right;
+}
+.texteditbutton{
+    background-color: #fff;
+    border-color: #000;
+    border-radius: 12px;
+	width: 200px;
+    cursor: pointer;
+    display: block;
+    float: right;
+}
+.texteditbutton a{
+float: left;
+color: #000;
+font-size: 19px;
+margin-left: 7px;
+}
+					</td>
+                  <td> JavaScript for 'tandhjul' </td>
+                </tr>
 				<tr class="række2">
 					<td>
 						<li><button type="button" onClick="" class="">button tag</button></li>
@@ -816,48 +867,39 @@
 							<img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon">
 						</li>
 					</td>
-					<td><button type="button" onClick="" class="settingbutton"><img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon"></button></td>
-					<td class="code">
-						<button type="button" onClick="" class="settingbutton"><img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon"></button>
-					</td>
-					<td class="code">
-						.settingsicon{
-							width: 25px;
-						}
-						.settingbutton{
-							border: none;
-							display: block;
-							cursor: pointer;
-							background-color: transparent;
-						}
-					</td>
-                  <td> JavaScript for 'tandhjul' </td>
-                </tr>
-				<!--Knapper til pop-up>
-				<tr class="række2">
 					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td><button type="button" onClick="" class="settingbutton"><img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon"></button></td>
-					<td class="code">
-						<button type="button" onClick="" class="settingbutton"><img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon"></button>
+						<div class="texteditdiv">Weight<button type="" onclick="" class="texteditbutton"><a>Choose..</a><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
 					</td>
 					<td class="code">
-						.settingsicon{
-							width: 25px;
-						}
-						.settingbutton{
-							border: none;
-							display: block;
-							cursor: pointer;
-							background-color: transparent;
-						}
+						<div class="texteditdiv">Weight<button type="" onclick="" class="texteditbutton"><a>Choose..</a><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+					</td>
+					<td class="code">
+						.texteditdiv{
+    float: left;
+	font-size: 20px;
+}
+.texteditdiv img{
+	float: right;
+}
+.texteditbutton{
+    background-color: #fff;
+    border-color: #000;
+    border-radius: 12px;
+	width: 200px;
+    cursor: pointer;
+    display: block;
+    float: right;
+}
+.texteditbutton a{
+float: left;
+color: #000;
+font-size: 19px;
+margin-left: 7px;
+}
 					</td>
                   <td> JavaScript for 'tandhjul' </td>
                 </tr>
+				<!--Knapper til pop-up-->
 				<tr class="række2">
 					<td>
 						<li><button type="button" onClick="" class="">button tag</button></li>
