@@ -305,7 +305,7 @@ h3 {
 	display: grid;
 	margin: 0 0 0 auto;
 }
-/*Here starts CSS code for filter by button*/
+/*Here starts CSS code for sort by by button*/
 .sortbydiv{
 	font-size: 19px; 
 	float: left;
@@ -324,6 +324,103 @@ h3 {
     color: #848484;
     font-size: 19px;
     margin-left: 7px;
+}
+/*Here starts CSS code for filter by button*/
+.filterbutton{
+	background-color: #fff;
+	border: none;
+	border-radius: 12px;
+	width: 85px;
+	cursor: pointer;
+	display: block;
+}
+.filterbutton a{
+    color: #000;
+    font-size: 14px;
+    margin-left: 7px;
+}
+/*Here starts CSS code for quantity by button*/
+.quantitydiv{
+	font-size: 15px; 
+	float: left;
+}
+.quantitybutton{
+	background-color: #fff;
+	border-color: #000;
+	border-radius: 12px;
+
+	cursor: pointer;
+	display: block;
+	float: right;
+}
+.quantitybutton a{
+    float: left;
+    color: #000;
+    font-size: 19px;
+    margin-left: 7px;
+}
+/*Here starts code for prevoíous button in editor*/
+.previousbutton{
+	background-color: #fff;
+	border: none;
+	border-radius: 12px;
+	width: 100px;
+	cursor: pointer;
+	display: block;
+}
+.previousbutton a{
+    color: #000;
+    font-size: 14px;
+    margin-right: 17px;
+	float: right;
+}
+.previousbutton img{
+	margin: 0;
+}
+/*Here starts code for next button in editor*/
+.nextbutton{
+	background-color: #fff;
+	border: none;
+	border-radius: 12px;
+	width: 100px;
+	cursor: pointer;
+	display: block;
+}
+.nextbutton a{
+    color: #000;
+    font-size: 14px;
+	margin-left: 16px;
+}
+/*Here starts code for upload image in editor*/
+.uploadimagebutton{
+	background-color: #fff;
+	border: none;
+	border-radius: 12px;
+	width: 120px;
+	cursor: pointer;
+	display: block;
+}
+.uploadimagebutton a{
+	color: #000;
+    font-size: 12px;
+}
+/*Here starts code for uplad template button*/
+.upladtemplatebutton{
+	background-color: #D3D3D3;
+	border: none;
+	border-radius: 12px;
+	width: 100px;
+	cursor: pointer;
+	display: block;
+}
+.upladtemplatebutton a{
+    color: #000;
+    font-size: 10px;
+	margin-left: 7px;
+	float: left;
+}
+.upladtemplatebutton img{
+	width:15px;
 }
 /* --- ORGANISMS --- */
 
