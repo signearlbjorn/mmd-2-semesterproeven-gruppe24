@@ -305,8 +305,26 @@ h3 {
 	display: grid;
 	margin: 0 0 0 auto;
 }
-
-
+/*Here starts CSS code for filter by button*/
+.sortbydiv{
+	font-size: 19px; 
+	float: left;
+}
+.sortbybutton{
+	background-color: #fff;
+	border-color: #000;
+	border-radius: 12px;
+	width: 150px;
+	cursor: pointer;
+	display: block;
+	float: right;
+}
+.sortbybutton a{
+    float: left;
+    color: #848484;
+    font-size: 19px;
+    margin-left: 7px;
+}
 /* --- ORGANISMS --- */
 
 /*Here starts CSS code for Navbar*/
