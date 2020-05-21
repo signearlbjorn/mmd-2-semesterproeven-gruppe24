@@ -63,7 +63,19 @@ p, span {
         line-height: 1.745vw; /* ~67x on 3840px width */
     }
 }
-
+/*Styleguide nav*/
+#atomicDesignNavigation{
+	align-content: center;
+}
+#atomicDesignNavigation ul{
+	list-style: none;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+}
+#atomicDesignNavigation{
+	display: grid;
+}
 /* -- h1 HEADING -- */
 h1 {
 	float: left;
