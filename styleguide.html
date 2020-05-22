@@ -409,55 +409,10 @@
 <!-- SELTION 2 - ALLE MOLEKYLER FOR LØSNING-->
 <div class="sektion2" id="molecules">
   <!-- molekyle tabeller for overview-siden -->
-  <h3>Molekyler for løsning</h3>
-      <!-- Liste over molekyler -->
-      <ul>
-        <li>Tandhjul</li>
-        <li>Opret ny raport / create new report</li>
-        <li>Opret ny mappe / creaete new folder</li>
-        <li>Preview-switch-knap</li>
-        <li>Filter</li>
-        <li>Sort by</li>
-        <li>Søg</li>
-        <li>View all pages</li>
-        <li>Refresh</li>
-        <li>Raport display</li>
-        <li>Delete page</li>
-        <li>View all pages</li>
-        <li>Upload picture</li>
-        <li>Save report</li>
-        <li>Close editor</li>
-        <li>Prevoius page</li>
-        <li>Add page</li>
-        <li>Next page</li>
-        <li>Faneblad</li>
-        <li>Load template</li>
-        <li>Favorit stjerne</li>
-        <li>Opret ny mappe / create new folder</li>
-        <li>Go back to overview</li>
-        <li>Folder-illustration</li>
-        <li>Pop-up funktionalitet</li>
-        <li>Lukke ikon på pop up/dropdown</li>
-        <li>Drop down menu (fra tandhjul)</li>
-        <li>Date range (skal bruges i filter)</li>
-        <li>Cancel knap (på pop-up)</li>
-        <li>Opret knap (på pop-up)</li>
-        <li>Delete report knap (på pop-up)</li>
-        <li>E-mail - input</li>
-        <li>Save and close</li>
-        <li>Just close</li>
-        <li>Green Done</li>
-        <li>Message input</li>
-        <li>QR</li>
-        <li>Vertical display på show</li>
-        <li>Horisontal display på show</li>
-        <li>Save as input på pop-up</li>
-        <li>Report name input på create report pop-up</li>
-        <li>tabs (på editor)</li>
-      </ul>
-      <!-- Liste over molekyler - slut -->
-
-	<h4>Buttons with text and icons</h4>
+  <h3>Molecyles</h3>
+  <br>
+  <br>
+  <h4>Buttons with text and icons</h4>
             <!-- række 1 i tabel -->
             <table class="overviewmolekyler">
                   <tr class="række1">
@@ -1682,8 +1637,8 @@ margin-left: 7px;
           <!-- række 2 i tabel - slut -->
     <!-- molekyle tabel for 'Opret ny mappe / create new folder' - slut-->
 
-    <!-- molekyle tabel for Overview-side 'preview switch knap' -->
-      <h4>Overview-side 'preview switch knap'</h4>
+    <!-- molekyle tabel for switch knap: preview/list - slut-->
+      <h4>Switch knap: preview/list </h4>
           <!-- række 1 i tabel -->
           <table class="overviewmolekyler">
               <tr class="række1">
@@ -1696,83 +1651,91 @@ margin-left: 7px;
             <!-- række 1 i tabel - slut -->
             <!-- række 2 i tabel -->
             <tr class="række2">
-              <td><li>label tag</li><li>input</li><li>span</li></td>
+              <td><li>div</li><li>input</li><li>label</li><li>span</li></td>
               <td>
-                <label class="switch">
-                  <input type="checkbox">
-                  <span class="slider round"></span>
-                </label>
+                <div class="switch">
+                  <input type="radio" class="switch-input" name="view" value="week" id="week" checked>
+                  <label for="week" class="switch-label switch-label-off">Preview</label>
+                  <input type="radio" class="switch-input" name="view" value="month" id="month">
+                  <label class="switch-label switch-label-on">List</label>
+                  <span class="switch-selection"></span>
+                </div>
               </td>
               <td class="code">
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-				</td>
+                < div class="switch">
+                  <input type="radio" class="switch-input" name="view" value="week" id="week" checked>
+                  <label for="week" class="switch-label switch-label-off">Preview</label>
+                  <input type="radio" class="switch-input" name="view" value="month" id="month">
+                  <label for="month" class="switch-label switch-label-on">List</label>
+                  <span class="switch-selection"></span>
+                </div>
+				      </td>
               <td class="code">
-                /* switch knap med runde hjørner stil */
                 .switch {
-                position: relative;
-                display: inline-block;
-                width: 60px;
-                height: 34px;
-              }
+                	position: relative;
+                	margin: 20px auto;
+                	height: 26px;
+                	width: 120px;
+                	background: rgba(0, 0, 0, 0.25);
+                	border-radius: 15px;
+                }
 
-              .slider {
-                position: absolute;
-                cursor: pointer;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: #ccc;
-                -webkit-transition: .4s;
-                transition: .4s;
-              }
+                	.switch-label {
+                	  position: relative;
+                	  z-index: 2;
+                	  float: left;
+                	  width: 58px;
+                	  line-height: 26px;
+                	  font-size: 11px;
+                	  color: rgba(255, 255, 255, 0.35);
+                	  text-align: center;
+                	  cursor: pointer;
+                	}
+                	.switch-label:active {
+                	  font-weight: regular;
+                	}
 
-              .slider:before {
-                position: absolute;
-                content: "";
-                height: 26px;
-                width: 26px;
-                left: 4px;
-                bottom: 4px;
-                background-color: white;
-                -webkit-transition: .4s;
-                transition: .4s;
+                	.switch-label-off {
+                	  padding-left: 2px;
+                	}
 
+                	.switch-label-on {
+                	  padding-right: 2px;
+                	}
 
-              input:checked + .slider {
-                background-color: #2196F3
-              }
+                	.switch-input {
+                	  display: none;
+                	}
+                	.switch-input:checked + .switch-label {
+                	  font-weight: regular;
+                	  color: rgba(0, 0, 0, 0.65);
 
-              .slider.round {
-                border-radius: 34px;
-              }
+                	}
+                	.switch-input:checked + .switch-label-on ~ .switch-selection {
+                	  left: 60px;
+                	}
 
-              .slider.round:before {
-                border-radius: 50%;
-              }
-              /* switch knap med runde hjørner stil - slut */
-          <br>
-          <br>
-              /* switch knap med runde hjørner funktion */
-              input:checked + .slider:before {
-                -webkit-transform: translateX(26px);
-                -ms-transform: translateX(26px);
-                transform: translateX(26px);
+                	.switch-selection {
+                	  display: block;
+                	  position: absolute;
+                	  z-index: 1;
+                	  top: 2px;
+                	  left: 2px;
+                	  width: 58px;
+                	  height: 22px;
+                	  background: #00CD00;
+                	  border-radius: 15px;
+                	}
               }<br>
-              /* switch knap med runde hjørner funktion - slut */
-
               </td>
-              <td> JavaScript for 'preview switch knap' </td>
+              <td> JavaScript</td>
             </tr>
           </table>
           <!-- række 2 i tabel - slut -->
-    <!-- molekyle tabel for Overview-side 'preview switch knap' - slut-->
+    <!-- molekyle tabel for switch knap: preview/list - slut-->
 
-    <!-- molekyle tabel for 'Filter'-->
-      <h4>Filter</h4>
+    <!-- molekyle tabel for switch knap: multiple/singular-->
+      <h4>switch knap: multiple/singular</h4>
           <!-- række 1 i tabel -->
           <table class="overviewmolekyler">
               <tr class="række1">
@@ -1785,15 +1748,31 @@ margin-left: 7px;
             <!-- række 1 i tabel - slut-->
             <!-- række 2 i tabel -->
               <tr class="række2">
-                <td><li>?</li><li>?</li></td>
-                <td>indsæt molekyle</td>
-                <td> indsæt html kode - "læsbar/ikke aktiv kode" </td>
-                <td> indsæt css kode - "læsbar/ikke aktiv kode" </td>
-                <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
+                <td><li>div</li><li>input</li><li>label</li><li>span</li></td>
+                <td>
+                  <div class="switch">
+                    <input type="radio" class="switch-input" name="view" value="week" id="week" checked>
+                    <label for="week" class="switch-label switch-label-off">Preview</label>
+                    <input type="radio" class="switch-input" name="view" value="month" id="month">
+                    <label for="month" class="switch-label switch-label-on">List</label>
+                    <span class="switch-selection"></span>
+                  </div>
+                </td>
+                <td class="code">
+                  <divclass="switch">
+                    <input type="radio" class="switch-input" name="view" value="week" id="week" checked>
+                    <label for="week" class="switch-label switch-label-off">Singular</label>
+                    <input type="radio" class="switch-input" name="view" value="month" id="month">
+                    <label for="month" class="switch-label switch-label-on">Multiple</label>
+                    <span class="switch-selection"></span>
+                  </div>
+                </td>
+                <td> se Switch knap: preview/list</td>
+                <td> indsæt JavaScript kode</td>
               </tr>
           </table>
           <!-- række 2 i tabel - slut -->
-    <!-- molekyle tabel for 'filter' - slut -->
+    <!-- molekyle tabel for switch knap: multiple/singular-->
 
     <!-- molekyle tabel for 'Sort by'-->
       <h4>Sort by</h4>
@@ -2261,7 +2240,7 @@ margin-left: 7px;
 	</nav>
 				<!--HTML to copy-->
 			</td>
-            <td class="code"> 
+            <td class="code">
 	<nav class="smallnav">
 		<div class="branddiv">
 			<!--LOGO-->
@@ -2313,7 +2292,7 @@ margin-left: 7px;
 }
 
 .smallnav div ul {
-	list-style: none; 
+	list-style: none;
 	float: left;
 	width: 100%;
 }
@@ -2421,7 +2400,7 @@ margin-left: 7px;
 			</td>
 				<!--HTML to copy-->
 
-            <td class="code"> 
+            <td class="code">
  			</td>
 			  <!--CSS to copy-->
             <td class="code">
