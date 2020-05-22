@@ -156,8 +156,8 @@
 					</td>
 					<!--CSS -->
 					<td class="code">
-						/* -- TEXT--  */
-						p, span {
+						/* -- TEXT --  */
+						* {
 							font-size: 11px;
 							line-height: 16px;
 							font-weight: 400;
@@ -165,34 +165,34 @@
 						}
 
 						@media (min-width:481px) {
-							p, span {
+							* {
 								font-size: 2.287vw; /* ~11 px on 481px width */
 								line-height: 3.950vw; /* ~19 px on 481px width */
 							}
 						}
 
 						@media (min-width:768px) {
-							p, span {
-								font-size: 14px;
+							* {
+								font-size: 16px;
 								line-height: 26px;
 							}
 						}
 
 						@media (min-width:1366px) {
-							p, span {
+							* {
 								line-height: 30px;
 							}
 						}
 
 						@media (min-width: 1980px) {
-							p, span {
+							* {
 								font-size: 0.707vw; /* ~14px on 1980px width */
 								line-height: 1.717vw; /* ~34px on 1980px width */
 							}
 						}
 
 						@media (min-width:3840px) {
-							p, span {
+							* {
 								font-size: 0.729vw; /* ~28px on 3840px width */
 								line-height: 1.745vw; /* ~67x on 3840px width */
 							}
@@ -200,6 +200,7 @@
 					</td>
 				</tr>
 			</table>
+			<p class="info">Vær opmærksom på at <b>*</b> påvirker alt indhold.</p>
 		</article>
 		<article id="h1">
 			<h4>h1 - title</h4>
