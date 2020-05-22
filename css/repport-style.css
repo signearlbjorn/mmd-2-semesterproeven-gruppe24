@@ -467,13 +467,19 @@ margin-left: 7px;
 /* --- ORGANISMS --- */
 /*Here starts CSS for Editor page preview*/
 .report-preview{
-	width: 49%;
+	width: 50%;
 	background-color: #6f6f6f;
+	display: grid;
+	align-content: center;
+}
+/*Here starts CSS for editor page preview*/
+.pagediv{
+	margin: 0 auto;
 }
 /*Here starts CSS for editor tabs*/
 .editor{
 	float: right; 
-	width: 49%; 
+	width: 50%; 
 	height: 100%;
 	background-color: #404040;
 }
