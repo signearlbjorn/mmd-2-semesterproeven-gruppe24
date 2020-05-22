@@ -290,6 +290,35 @@ h3 {
 	margin-right: 7px;
 	width: 20px;
 }
+
+/*Here starts CSS code for type button*/
+.frame {
+	background-color: black;
+	width: 410px;
+}
+
+.type {
+	margin-left: 5px;
+}
+
+.typetext {
+	color: white;
+}
+.typebutton {
+	width: 400px;
+	border-radius: 10px;
+}
+.typebuttontext {
+	float: left;
+	font-style: italic;
+	color: grey;
+	margin-left: 5px;
+}
+.chevronicon {
+	float: right;
+	margin-top: 5px;
+}
+
 /*Here starts code for 'new report bbutton'*/
 .newreportbutton{
 	border: none;
