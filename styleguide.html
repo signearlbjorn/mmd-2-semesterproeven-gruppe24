@@ -1753,34 +1753,9 @@ margin-left: 7px;
           <!-- række 2 i tabel - slut -->
     <!-- molekyle tabel for switch knapper- slut-->
 
-    <!-- molekyle tabel for switch knap: multiple/singular-->
-      <h4>switch knap: multiple/singular</h4>
-          <!-- række 1 i tabel -->
-          <table class="overviewmolekyler">
-              <tr class="række1">
-                <th>Atomer</th>
-                <th>Molekyle</th>
-                <th>HTML</th>
-                <th>CSS</th>
-                <th>JavaScript</th>
-              </tr>
-            <!-- række 1 i tabel - slut-->
-            <!-- række 2 i tabel -->
-              <tr class="række2">
-                <td><li>div</li><li>input</li><li>label</li><li>span</li></td>
-                <td>
-                >
-                </td>
-                <td> se Switch knap: preview/list</td>
-                <td> indsæt JavaScript kode</td>
-              </tr>
-          </table>
-          <!-- række 2 i tabel - slut -->
-    <!-- molekyle tabel for switch knap: multiple/singular-->
-
-    <!-- molekyle tabel for 'Sort by'-->
-      <h4>Sort by</h4>
-          <!-- række 1 i tabel -->
+    <!-- molekyle tabel for MEGASWITCH-->
+      <h4>MEGASWITCH</h4>
+      <!-- række 1 i tabel -->
           <table class="overviewmolekyler">
               <tr class="række1">
                 <th>Atomer</th>
@@ -1792,15 +1767,121 @@ margin-left: 7px;
             <!-- række 1 i tabel - slut-->
             <!-- række 2 i tabel -->
             <tr class="række2">
-              <td><li>?</li><li>?</li></td>
-              <td>indsæt molekyle</td>
-              <td> indsæt html kode - "læsbar/ikke aktiv kode" </td>
-              <td> indsæt css kode - "læsbar/ikke aktiv kode" </td>
-              <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
+              <td><li>div</li><li>input</li><li>label</li><li>span</li></td>
+              <td>
+                <div class="megaswitch">
+                  <input type="radio" class="switch-input0" name="view4" id="a1" checked>
+                  <label for="a1" class="switch-label0 switch-label-off0">A1</label>
+
+                  <input type="radio" class="switch-input0" name="view4" id="a2">
+                  <label for="a2" class="switch-label0 switch-label-on1">A2</label>
+
+                  <input type="radio" class="switch-input0" name="view4" id="a3">
+                  <label for="a3" class="switch-label0 switch-label-on2">A3</label>
+
+                  <input type="radio" class="switch-input0" name="view4" id="a4">
+                  <label for="a4" class="switch-label0 switch-label-on3">A4</label>
+
+                  <span class="switch-selection0"></span>
+                </div>
+              </td>
+              <td class="code">
+                <div class="megaswitch">
+                  <input type="radio" class="switch-input0" name="view4" id="a1" checked>
+                  <label for="a1" class="switch-label0 switch-label-off0">A1</label>
+
+                  <input type="radio" class="switch-input0" name="view4" id="a2">
+                  <label for="a2" class="switch-label0 switch-label-on1">A2</label>
+
+                  <input type="radio" class="switch-input0" name="view4" id="a3">
+                  <label for="a3" class="switch-label0 switch-label-on2">A3</label>
+
+                  <input type="radio" class="switch-input0" name="view4" id="a4">
+                  <label for="a4" class="switch-label0 switch-label-on3">A4</label>
+
+                  <span class="switch-selection0"></span>
+                </div>
+              </td>
+              <td class="code">
+                  .megaswitch {
+                  position: relative;
+                  margin: 20px auto;
+                  height: 26px;
+                  width: 240px;
+                  background: white;
+                  border-radius: 15px;
+                }
+                /*slut*/
+
+                /*style for labels*/
+                .switch-label0 {
+                  position: relative;
+                  z-index: 2;
+                  float: left;
+                  width: 58px;
+                  line-height: 26px;
+                  font-size: 11px;
+                  color: black;
+                  text-align: center;
+                  cursor: pointer;
+                }
+                .switch-label0:active {
+                  font-weight: regular;
+                }
+
+                .switch-label-off0 {
+                  padding-left: 2px;
+                }
+
+                .switch-label-on0 {
+                  padding-right: 2px;
+                }
+                /*slut*/
+
+                /*style for labels*/
+                .switch-input0 {
+                  display: none;
+                }
+                /*slut*/
+
+                /*styling for hvor den runde grønne knap (.switch-selector) skal rykke sig hen alt efter hvilket hvilket label der bliver "checked" */
+                .switch-input0:checked + .switch-label0 {
+                  font-weight: bold;
+                  color: black;
+                }
+
+                .switch-input0:checked + .switch-label-on1 ~ .switch-selection0 {
+                  left: 60px;
+                }
+
+                .switch-input0:checked + .switch-label-on2 ~ .switch-selection0 {
+                  left: 120px;
+                }
+
+                .switch-input0:checked + .switch-label-on3 ~ .switch-selection0 {
+                  left: 180px;
+                }
+                /*slut*/
+
+                /*style for den runde grønne knap der switcher fra højre til venstre*/
+                .switch-selection0 {
+                  display: block;
+                  position: absolute;
+                  z-index: 1;
+                  top: 2px;
+                  left: 2px;
+                  width: 58px;
+                  height: 22px;
+                  background: #00CD00;
+                  border-radius: 15px;
+                }
+              </td>
+              <td> indsæt JavaScript kode</td>
             </tr>
           </table>
-          <!-- række 2 i tabel - slut -->
-    <!-- molekyle tabel for 'sort by' - slut -->
+      <!-- række 2 i tabel - slut -->
+    <!-- molekyle tabel for MEGASWITCH - slut-->
+
 
     <!-- molekyle tabel for 'søg'-->
       <h4>Søg</h4>

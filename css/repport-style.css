@@ -469,64 +469,141 @@ font-size: 19px;
 margin-left: 7px;
 }
 
-/* her starter switch knap med runde hjørner*/
-.switch {
-  position: relative;
-  margin: 20px auto;
-  height: 26px;
-  width: 120px;
-  background: white;
-  border-radius: 15px;
-}
+/* her starter styling for almindelige switch knapper*/
+		.switch {
+		  position: relative;
+		  margin: 20px auto;
+		  height: 26px;
+		  width: 120px;
+		  background: white;
+		  border-radius: 15px;
+		}
 
-.switch-label {
-  position: relative;
-  z-index: 2;
-  float: left;
-  width: 58px;
-  line-height: 26px;
-  font-size: 11px;
-  color: black;
-  text-align: center;
-  cursor: pointer;
-}
-.switch-label:active {
-  font-weight: regular;
-}
+		.switch-label {
+		  position: relative;
+		  z-index: 2;
+		  float: left;
+		  width: 58px;
+		  line-height: 26px;
+		  font-size: 11px;
+		  color: black;
+		  text-align: center;
+		  cursor: pointer;
+		}
+		.switch-label:active {
+		  font-weight: regular;
+		}
 
-.switch-label-off {
-  padding-left: 2px;
-}
+		.switch-label-off {
+		  padding-left: 2px;
+		}
 
-.switch-label-on {
-  padding-right: 2px;
-}
+		.switch-label-on {
+		  padding-right: 2px;
+		}
 
-.switch-input {
-  display: none;
-}
+		.switch-input {
+		  display: none;
+		}
 
-.switch-input:checked + .switch-label {
-  font-weight: regular;
-  color: black;
-}
+		.switch-input:checked + .switch-label {
+		  font-weight: regular;
+		  color: black;
+		}
 
-.switch-input:checked + .switch-label-on ~ .switch-selection {
-  left: 60px;
-}
+		.switch-input:checked + .switch-label-on ~ .switch-selection {
+		  left: 60px;
+		}
 
-.switch-selection {
-  display: block;
-  position: absolute;
-  z-index: 1;
-  top: 2px;
-  left: 2px;
-  width: 58px;
-  height: 22px;
-  background: #00CD00;
-  border-radius: 15px;
-}
-/* switch knap med runde hjørner - slut*/
+		.switch-selection {
+		  display: block;
+		  position: absolute;
+		  z-index: 1;
+		  top: 2px;
+		  left: 2px;
+		  width: 58px;
+		  height: 22px;
+		  background: #00CD00;
+		  border-radius: 15px;
+		}
+/* styling for almindelige switchknapper - slut*/
+
+/*STYLING FOR MEGASWITCH*/
+		/*style for kanppens baggrund*/
+		.megaswitch {
+		  position: relative;
+		  margin: 20px auto;
+		  height: 26px;
+		  width: 240px;
+		  background: white;
+		  border-radius: 15px;
+		}
+		/*slut*/
+
+		/*style for labels*/
+		.switch-label0 {
+		  position: relative;
+		  z-index: 2;
+		  float: left;
+		  width: 58px;
+		  line-height: 26px;
+		  font-size: 11px;
+		  color: black;
+		  text-align: center;
+		  cursor: pointer;
+		}
+		.switch-label0:active {
+		  font-weight: regular;
+		}
+
+		.switch-label-off0 {
+		  padding-left: 2px;
+		}
+
+		.switch-label-on0 {
+		  padding-right: 2px;
+		}
+		/*slut*/
+
+		/*style for labels*/
+		.switch-input0 {
+		  display: none;
+		}
+		/*slut*/
+
+		/*styling for hvor den runde grønne knap (.switch-selector) skal rykke sig hen alt efter hvilket hvilket label der bliver "checked" */
+		.switch-input0:checked + .switch-label0 {
+		  font-weight: bold;
+		  color: black;
+		}
+
+		.switch-input0:checked + .switch-label-on1 ~ .switch-selection0 {
+		  left: 60px;
+		}
+
+		.switch-input0:checked + .switch-label-on2 ~ .switch-selection0 {
+		  left: 120px;
+		}
+
+		.switch-input0:checked + .switch-label-on3 ~ .switch-selection0 {
+		  left: 180px;
+		}
+		/*slut*/
+
+		/*style for den runde grønne knap der switcher fra højre til venstre*/
+		.switch-selection0 {
+		  display: block;
+		  position: absolute;
+		  z-index: 1;
+		  top: 2px;
+		  left: 2px;
+		  width: 58px;
+		  height: 22px;
+		  background: #00CD00;
+		  border-radius: 15px;
+		}
+		/*slut*/
+/*STYLING FOR MEGASWITCH - SLUT*/
 
 /* --- ORGANISMS --- */
 /*Here starts CSS for Editor page preview*/
