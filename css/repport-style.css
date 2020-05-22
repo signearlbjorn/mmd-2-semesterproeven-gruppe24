@@ -716,7 +716,49 @@ nav a:hover{
 	width: 14px;
 	float: right;
 }
-/*Here neds CSS for NAV - Small screen*/
+/*Here ends CSS for NAV - Small screen*/
+/*Here starts CSS for pop up delete*/
+.popupdelete{
+	background-color: #262626;
+	text-align: center;
+	width: 400px;
+	height: 220px;
+	border-radius: 12px;
+}
+.popupdelete span{
+	color: #fff;
+	margin: 50px auto;
+	display: block;
+}
+.popupdeletebuttons{
+	display: grid;
+	grid-template-columns: auto auto;
+	float: none;
+	width: 100%;
+	margin: 0 auto;
+}
+.cancel{
+	background-color: #fff;
+	text-align: center;
+	border: none;
+	border-radius: 12px;
+	margin: 0 auto;
+	width: 100px;
+	height: 50px;
+	cursor: pointer;
+}
+.delete{
+	background-color: #DF5539;
+	color: #fff;
+	text-align: center;
+	border: none;
+	border-radius: 12px;
+	margin: 0 auto;
+	width: 100px;
+	height: 50px;
+	cursor: pointer;
+}
+/*Here ends CSS for pop up delete*/
 /* --- TEMPLATES --- */
 /* Wrapper, positionoers osv. */
 
