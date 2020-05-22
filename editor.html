@@ -9,32 +9,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="css/repport-style.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" type="text/css" href="css/sheets-of-paper-a4.css">
-
-	<!--TO BE REMOVED AND PUT INTO CSS/JS-->
-	<script>
-		function switchedit(editpageswitch){
-			var editpage = ["graphs", "text", "templates", "code"];
-			for(i = 0; i < editpage.length; i++){
-				if(editpageswitch == editpage[i]){
-					document.getElementById(editpage[i]).classList.remove("hidden");
-				}
-				else{
-					document.getElementById(editpage[i]).classList.add("hidden");
-				}
-			}
-		}
-		function switcheditdivbg(edittabbgswitch){
-			var editbg = ["graphsdiv", "textdiv", "templatesdiv", "codediv"];
-			for(i = 0; i < editbg.length; i++){
-				if(edittabbgswitch == editbg[i]){
-					document.getElementById(editbbg[i]).classList.remove("lightbg");
-				}
-				else{
-					document.getElementById(editbbg[i]).classList.add("lightbg")
-				}
-			}
-		}
-	</script>
 </head>
 <body>
 	<!--nav is coded in image of trendog.io's navbar-->
@@ -95,13 +69,13 @@
 			</div>
 		</div>
 		<!--EDITOR-->
-		<div class="editor">
+		<div  class="editor">
 			<!--EDITOR NAVIGATION BAR-->
 			<div class="editornav">
-					<div id="graphsdiv" class="tabsnavbubtton "><a onclick="switchedit('graphs'); switcheditdivbg(grapghsdiv);" href="#">graphs</a></div>
-					<div id="textdiv" class="tabsnavbubtton lightbg"><a onclick="switchedit('text'); switcheditdivbg(textdiv);" href="#">text</a></div>
-					<div id="templatesdiv" class="tabsnavbubtton lightbg"><a onclick="switchedit('templates'); switcheditdivbg(templatesdiv);" href="#">Templates</a></div>
-					<div id="codediv" class="tabsnavbubtton lightbg"><a onclick="switchedit('code'); switcheditdivbg(codediv);" href="#">Code</a></div>
+					<div id="graphsdiv" class="tabsnavbubtton"><a onClick="switchedit('graphs'); switcheditdivbg(grapghsdiv);" href="#">Graphs</a></div>
+					<div id="textdiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('text'); switcheditdivbg(textdiv);" href="#">Text</a></div>
+					<div id="templatesdiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('templates'); switcheditdivbg(templatesdiv);" href="#">Templates</a></div>
+					<div id="codediv" class="tabsnavbubtton lightbg"><a onClick="switchedit('code'); switcheditdivbg(codediv);" href="#">Code</a></div>
 			</div> 
 			<!--GRPAHS-->
 			<div id="graphs" class="">
@@ -235,10 +209,12 @@
 				</div>
 			</div>
 			<!--CODE EDITOR-->
-			<div id="code" class="hidden"><a>code</a>
+			<div id="code" class="hidden">
+				<a>code</a>
 			</div>
 		</div>
 	</main>
+	<script type="text/javascript" src="js/editor-tabs-switcher.js"></script>
 </body>
 </html>
 
