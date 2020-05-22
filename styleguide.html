@@ -2379,7 +2379,86 @@ margin-left: 7px;
             <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
           </tr>
           </table>
-	  <h4>Pop ud delete</h4>
+          <h4>Pop ud delete</h4>
+  	  <h4>Pop ud delete - report</h4>
+  	  <table class="overvieworganimser">
+              <tr class="række1">
+                <th>Molekyler</th>
+  @ -2392,18 +2392,159 @@ margin-left: 7px;
+            <tr class="række2">
+  			  <!--Molecules-->
+  			  <td>
+				<li>Text</li>
+				<li>Button</li>
+			  </td>
+				<!--Organism-->
+			<td>
+				<div class="popupdelete">
+					<span>Are you sure you want to delete "Report Name"?</span>
+					<div class="popupdeletebuttons">
+						<button type="button" class="cancel">Cancel</button>
+						<button type="button" class="delete">Delete</button>
+					</div>
+				</div>
+			</td>
+				<!--HTML to copy-->
+            <td class="code">
+				<div class="popupdelete">
+					<span>Are you sure you want to delete "Report Name"?</span>
+					<div class="popupdeletebuttons">
+						<button type="button" class="cancel">Cancel</button>
+						<button type="button" class="delete">Delete</button>
+					</div>
+				</div>
+ 			</td>
+			  <!--CSS to copy-->
+            <td class="code">
+				.popupdelete{
+					background-color: #262626;
+					text-align: center;
+					width: 400px;
+					height: 220px;
+					border-radius: 12px;
+				}
+				.popupdelete span{
+					color: #fff;
+					margin: 50px auto;
+					display: block;
+				}
+				.popupdeletebuttons{
+					display: grid;
+					grid-template-columns: auto auto;
+					float: none;
+					width: 100%;
+					margin: 0 auto;
+				}
+				.cancel{
+					background-color: #fff;
+					text-align: center;
+					border: none;
+					border-radius: 12px;
+					margin: 0 auto;
+					width: 100px;
+					height: 50px;
+					cursor: pointer;
+				}
+				.delete{
+					background-color: #DF5539;
+					color: #fff;
+					text-align: center;
+					border: none;
+					border-radius: 12px;
+					margin: 0 auto;
+					width: 100px;
+					height: 50px;
+					cursor: pointer;
+				}
+			</td>
+			  <!--Js to copy-->
+            <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
+          </tr>
+	  </table>
+	  <h4>Pop ud delete - folder</h4>
 	  <table class="overvieworganimser">
             <tr class="række1">
               <th>Molekyler</th>
@@ -2392,18 +2471,71 @@ margin-left: 7px;
           <tr class="række2">
 			  <!--Molecules-->
 			  <td>
-				<li></li>
-				<li></li>
+				<li>Text</li>
+				<li>Button</li>
 			  </td>
 				<!--Organism-->
 			<td>
+				<div class="popupdelete">
+					<span>Are you sure you want to delete "Folder Name"?</span>
+					<div class="popupdeletebuttons">
+						<button type="button" class="cancel">Cancel</button>
+						<button type="button" class="delete">Delete</button>
+					</div>
+				</div>
 			</td>
 				<!--HTML to copy-->
-
             <td class="code">
+				<div class="popupdelete">
+					<span>Are you sure you want to delete "Folder Name"?</span>
+					<div class="popupdeletebuttons">
+						<button type="button" class="cancel">Cancel</button>
+						<button type="button" class="delete">Delete</button>
+					</div>
+				</div>
  			</td>
 			  <!--CSS to copy-->
             <td class="code">
+				.popupdelete{
+					background-color: #262626;
+					text-align: center;
+					width: 400px;
+					height: 220px;
+					border-radius: 12px;
+				}
+				.popupdelete span{
+					color: #fff;
+					margin: 50px auto;
+					display: block;
+				}
+				.popupdeletebuttons{
+					display: grid;
+					grid-template-columns: auto auto;
+					float: none;
+					width: 100%;
+					margin: 0 auto;
+				}
+				.cancel{
+					background-color: #fff;
+					text-align: center;
+					border: none;
+					border-radius: 12px;
+					margin: 0 auto;
+					width: 100px;
+					height: 50px;
+					cursor: pointer;
+				}
+				.delete{
+					background-color: #DF5539;
+					color: #fff;
+					text-align: center;
+					border: none;
+					border-radius: 12px;
+					margin: 0 auto;
+					width: 100px;
+					height: 50px;
+					cursor: pointer;
+				}
 			</td>
 			  <!--Js to copy-->
             <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
