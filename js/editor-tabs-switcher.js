@@ -1,6 +1,7 @@
 // JavaScript Document
-function switchedit(switcheditpage){
-	var editpage = ["grpahs", "text", "templates", "code"];
+/*Disse to funktioner lader brugeren skifte mellem editor tabs*/
+function switchedit(switcheditpage) {
+	var editpage = ["graphs", "text", "templates", "code"];
 	for(i = 0; i < editpage.length; i++){
 		if(switcheditpage == editpage[i]){
 			document.getElementById(editpage[i]).classList.remove("hidden");
@@ -10,14 +11,15 @@ function switchedit(switcheditpage){
 		}
 	}
 }
-function switcheditbg(editbgswitch){
+
+function switcheditbg(editbgswitch) {
 	var editbg = ["graphsdiv", "textdiv", "templatesdiv", "codediv"];
 	for(ii = 0; ii < editbg.length; ii++){
 		if(editbgswitch == editbg[i]){
 			document.getElementById(editbg[ii]).classList.remove("lightbg");
 		}
 		else{
-			document.getElementById(editbg[ii]).classList.add("lightbg")
+			document.getElementById(editbg[ii]).classList.add("lightbg");
 		}
 	}
 }
