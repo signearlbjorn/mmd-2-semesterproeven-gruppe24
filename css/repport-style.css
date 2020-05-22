@@ -506,7 +506,7 @@ margin-left: 7px;
 	background-color: #6F6F6F;
 }
 
-/*Here starts CSS code for Navbar*/
+/*Here starts CSS code for Navbar  - big screen*/
 nav{
 	width: 100%;
 	float: left;
@@ -619,8 +619,104 @@ nav a:hover{
 	width: 14px;
 	float: right;
 }
-/*Here end CSS for NAV*/
+/*Here ends CSS for NAV - big screen*/
+/*Here starts CSS for NAV - Small screen*/
+.smallnav{
+	float: left;
+	background-color: #222;
+	display: block;
+	width: auto;
+}
+.smallnav div{
+	display: block;
+	float: left;
+	width: 100%;
+}
 
+.smallnav div ul {
+	list-style: none; 
+	float: left;
+	width: 100%;
+}
+.smallnav div ul li{
+	width: 100%;
+}
+.smallnav div ul li a{
+	font-weight: bold;
+	font-size: 14px;
+	color: #ffffff;
+	float: left;
+	padding: 15px;
+	text-decoration: none;
+}
+
+.smallnav img.icon{
+	display: block;
+	width: 14px;
+}
+
+.smallnav a{
+	font-weight: bold;
+	font-size: 14px;
+	color: #ffffff;
+	float: left;
+	padding: 15px;
+	text-decoration: none;
+	width: 100%;
+}
+.smallnav a:hover{
+	background: #444;
+}
+
+.smallnav.selection{
+	margin-top: 6px;
+}
+
+.smallnav.channels{
+	color: #9d9d9d;
+	font-size: 14px;
+	font-weight: 100;
+	padding: 15px;
+ }
+
+.smallnav.channelselect{
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.smallnav.profiledropdown-a{
+	width: 80%;
+}
+.smallnav.profiledropdown{
+	width: 200px;
+}
+
+.smallnav.username{
+	float: left;
+	font-weight: bold;
+	font-size: 14px;
+	color: #ffffff;
+}
+.smallnav.profile-icon{
+	display: block;
+	width: 14px;
+	float: right;
+}
+/*Here neds CSS for NAV - Small screen*/
 /* --- TEMPLATES --- */
 /* Wrapper, positionoers osv. */
 
