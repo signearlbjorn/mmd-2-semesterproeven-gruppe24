@@ -22,6 +22,17 @@
 				}
 			}
 		}
+		function switcheditdivbg(edittabbgswitch){
+			var editbg = ["graphsdiv", "textdiv", "templatesdiv", "codediv"];
+			for(i = 0; i < editbg.length; i++){
+				if(edittabbgswitch == editbg[i]){
+					document.getElementById(editbbg[i]).classList.remove("lightbg");
+				}
+				else{
+					document.getElementById(editbbg[i]).classList.add("lightbg")
+				}
+			}
+		}
 	</script>
 </head>
 <body>
@@ -29,25 +40,25 @@
 	<nav>
 		<div class="branddiv">
 			<!--LOGO-->
-			<a href="#"><img class="brandidentity" src="img/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
+			<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
 			<!--MAIN NAVIGATION-->
 			<ul class="navbarulleft">
-				<li><a id="home" href="#"><img class="icon" src="img/icon-assets/home-icon.svg" alt="home-icon"></a></li>
-				<li><a id="dashboards" href="#">Trendboards</a></li>
-				<li><a id="reports" href="#">Reports</a></li>
-				<li><a id="views" href="#">Views</a></li>
-				<li><a id="feeds" href="#">Feeds</a></li>
-				<li><a id="settings" href="#">Settings</a></li>
-				<li><a id="shares" href="#">Shares</a></li>
+				<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
+				<li><a>Trendboards</a></li>
+				<li><a>Reports</a></li>
+				<li><a>Views</a></li>
+				<li><a>Feeds</a></li>
+				<li><a>Settings</a></li>
+				<li><a>Shares</a></li>
 			</ul>
 		</div>
-		<div style="float: right;">
+		<div class="profilediv">
 			<ul class="navbarulright" style="float: right;">
-				<li><a><img class="icon" src="img/icon-assets/wrench-icon.svg" alt="maitenance"></a></li>
-				<li><a><img class="icon" src="img/icon-assets/eye-slashed-icon.svg" alt="unfollow"></a></li>
-				<li><a><img class="icon" src="img/icon-assets/bell-icon.svg" alt="alarms"></a></li>
-				<li><a class="channels">channels</a></li>
-				<li>
+				<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
+				<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
+				<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
+				<li><p class="channels">channels</p></li>
+				<li class="selection">
 					<select class="channelselect">
 						<option>channelnames</option>
 					</select></li>
@@ -55,14 +66,8 @@
 				<li class="profiledropdown">
 					<a class="profiledropdown-a">
 						<span class="username">Profile P.</span>
-						<img class="profile-icon" src="img/icon-assets/profile-icon.svg" alt="profile">
+						<img class="profile-icon" src="img/icons/user.svg" alt="profile">
 					</a>
-					<!--De-->
-					<ul class="profiledropdown-menu">
-						<li><a id="myprofile" href="#">My profile</a></li>
-						<li class="divider"></li>
-						<li><a id="logout" href="/" target="_top">Sign out</a></li>
-					</ul>
 				</li>
 			</ul>
 		</div>
@@ -80,15 +85,13 @@
 		<div class="report-preview" style="width: 49%%; background-color: #AC9A9B;">
 		</div>
 		<!--EDITOR-->
-		<div class="editor" style="float: right; width: 49%; background-color: #C46768;">
+		<div class="editor">
 			<!--EDITOR NAVIGATION BAR-->
-			<div>
-				<ul>
-					<li><a onclick="switchedit('graphs');" href="#" style="display: block;">Graphs</a></li>
-					<li><a onclick="switchedit('text');" href="#" style="display: block;">Text</a></li>
-					<li><a onclick="switchedit('templates');" href="#" style="display: block;">Templates</a></li>
-					<li><a onclick="switchedit('code');" href="#" style="display: block;">Code</a></li>
-				</ul>
+			<div class="editornav">
+					<div id="graphsdiv" class="tabsnavbubtton "><a onclick="switchedit('graphs'); switcheditdivbg(grapghsdiv);" href="#">graphs</a></div>
+					<div id="textdiv" class="tabsnavbubtton lightbg"><a onclick="switchedit('text'); switcheditdivbg(textdiv);" href="#">text</a></div>
+					<div id="templatesdiv" class="tabsnavbubtton lightbg"><a onclick="switchedit('templates'); switcheditdivbg(templatesdiv);" href="#">Templates</a></div>
+					<div id="codediv" class="tabsnavbubtton lightbg"><a onclick="switchedit('code'); switcheditdivbg(codediv);" href="#">Code</a></div>
 			</div> 
 			<!--GRPAHS-->
 			<div id="graphs" class="">
