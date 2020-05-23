@@ -9,6 +9,9 @@ CSS er skrevet af:
 	Michala Gjøl
 */
 
+body {
+	background-color: #D3D3D3;
+}
 
 /* --- ATOMS --- */
 *{
@@ -651,9 +654,9 @@ margin-left: 7px;
 /* --- ORGANISMS --- */
 /*Here starts CSS for header in editor*/
 .editorHeader{
-	background-color: #BBBBBB; 
-	border-color: black; 
-	display: block; 
+	background-color: #BBBBBB;
+	border-color: black;
+	display: block;
 	width: 100%;
 }
 /*Here starts CSS for Main in Editor*/
@@ -1130,7 +1133,7 @@ header .wrapper {
 
 #styleguide table tr td {
 	position: relative;
-	padding: 10px;	
+	padding: 10px;
 	border-bottom: solid 1px #000;
 	vertical-align: top;
 }
@@ -1144,7 +1147,7 @@ header .wrapper {
 	#styleguide table tr th {
 		float: none;
 	}
-	
+
 	#styleguide table tr td {
 		border-right: solid 1px #000;
 		border-bottom: none;
