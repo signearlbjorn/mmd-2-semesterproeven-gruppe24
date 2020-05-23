@@ -44,3 +44,17 @@ function selectText(element) {
         window.getSelection().addRange(range); // Set the selection to range
     }
 }
+
+/* PRIORITY STAR / STJERNE PRIORITERING */
+function changeImage() {
+
+	if (document.getElementById("imgClickAndChange").src == "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg")
+	{
+		document.getElementById("imgClickAndChange").src = "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/starfull.svg";
+	}
+	else
+	{
+		document.getElementById("imgClickAndChange").src = "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg";
+	}
+}
+
