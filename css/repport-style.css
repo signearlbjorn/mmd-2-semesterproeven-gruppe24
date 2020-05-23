@@ -1246,6 +1246,7 @@ header .wrapper {
 	border-bottom: solid 3px #6F6F6F;
 	margin-top: 40px;
 	margin-bottom: 20px;
+	background-color: #ddd;
 }
 .example:before {
 	content:"Eksempel:";
