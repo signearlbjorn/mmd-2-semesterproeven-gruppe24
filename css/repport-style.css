@@ -17,11 +17,16 @@ CSS er skrevet af:
 	font-family: Arial, Helvetica, "Helvetica Neue", sans-serif; /* Defination af fonte: Første prioritet Arial, så Helvetica, Helvetica Neue og til sidst en browser valgt font med uden serif. */
 }
 
+/* -- SEMANTICS AND COMMON ELEMENTS -- */
 header, img, div, section, main {
 	float: left;
 	display: block;
 }
 
+header {
+	width: 100%;
+	background-color: #222;
+}
 /* -- TEXT --  */
 * {
     font-size: 11px;
@@ -759,8 +764,42 @@ nav a:hover{
 	cursor: pointer;
 }
 /*Here ends CSS for pop up delete*/
+
+
 /* --- TEMPLATES --- */
-/* Wrapper, positionoers osv. */
+/* -- POSITIONING -- */
+/* - WRAPPER - */
+.wrapper {
+	float: none;
+	width: 95%;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+@media (min-width:1366px) {
+	.wrapper {
+		width: 75%;
+	}
+}
+
+header .wrapper {
+	width: 100%;
+}
+
+@media (min-width:1920px) {
+	header .wrapper{
+		width: 75%;
+	}
+}
+
+
+/* -- SECTIONS -- */
+.topsection,
+.mainsection {
+	float: left;
+	width: 100%;
+}
+
 
 /* --- PAGES --- */
 /* -- OVERVIEW -- */
@@ -782,6 +821,22 @@ nav a:hover{
 .hidden{
 	display: none;
 }
+
+/* - WRAPPER - */
+#edit .topsection .wrapper {
+	width: 100%;
+}
+
+@media (min-width:1920px) {
+	#edit .topsection .wrapper {
+		width: 75%;
+	}
+}
+
+#edit .mainsection .wrapper {
+	width: calc(100% - 15px);
+}
+
 
 /* -- FOLDER OVERVIEW -- */
 
@@ -827,14 +882,12 @@ nav a:hover{
 	border-bottom: none;
 }
 
-#styleguide table.atomTable tr td,
-#styleguide table.atomTable tr th {
-	float: left;
-	width: 100%;
-	padding: 10px;	
-}
-
 @media (min-width:481px){
+	#styleguide table tr td {
+		border-right: solid 1px #000;
+		border-bottom: none;
+	}
+	
 	#styleguide table tr td {
 		border-right: solid 1px #000;
 		border-bottom: none;
@@ -843,7 +896,16 @@ nav a:hover{
 	#styleguide table tr td:last-child {
 		border-right: none;
 	}
+}
 
+#styleguide table.atomTable tr td,
+#styleguide table.atomTable tr th {
+	float: left;
+	width: 100%;
+	padding: 10px;	
+}
+
+@media (min-width:481px){
 	#styleguide table.atomTable tr td,
 	#styleguide table.atomTable tr th {
 		float: none;
@@ -865,18 +927,19 @@ nav a:hover{
 	}
 }
 
-#styleguide table tr td code {
-	clear: right;
-	display: block;
-	margin-bottom: 5px;
-	margin-left: 2em;
-	text-indent: -2em; /* A negative indent together with a positive margin with opisitite value, can imitate outdents. */
-	color: #000;
-    font-size: 14px;
+#styleguide table.templateTable tr td,
+#styleguide table.templateTable tr th {
+	float: left;
+	width: 100%;
+	padding: 10px;
 }
 
-#styleguide table tr td code:last-child {
-	margin-bottom: 0;
+@media (min-width:481px){
+	#styleguide table.templateTable tr td,
+	#styleguide table.templateTable tr th {
+		float: none;
+		width: 50%;
+	}
 }
 
 /* styling af tabeller - slut*/
@@ -892,6 +955,21 @@ nav a:hover{
 	-ms-user-select: all;       /* Internet Explorer/Edge */
 	user-select: all;           /* Non-prefixed version */
 }
+
+#styleguide table tr td code {
+	clear: right;
+	display: block;
+	margin-bottom: 5px;
+	margin-left: 2em;
+	text-indent: -2em; /* A negative indent together with a positive margin with opisitite value, can imitate outdents. */
+	color: #000;
+    font-size: 14px;
+}
+
+#styleguide table tr td code:last-child {
+	margin-bottom: 0;
+}
+
 
 #styleguide .empty {
 	background-color: #666;
@@ -942,16 +1020,48 @@ nav a:hover{
 }
 
 /* - POSITIONING - */
+#example {
+	float: left;
+	width: 100%;
+	margin: 20px 0;
+}
+
 #styleguide .wrapper {
 	float: none;
 	width: 95%;
 	margin: 0 auto;
 }
+
 @media (min-width:768px){
 	#styleguide .wrapper {
 		width: 50%;
 	}
 }
+
+/* - WRAPPER - */
+.wrapper, #example .wrapper {
+	float: none;
+	width: 95%;
+	margin: 0 auto;
+	overflow: auto;
+}
+
+@media (min-width:1366px) {
+	.wrapper, #example .wrapper {
+		width: 75%;
+	}
+}
+
+nav .wrapper, nav #example .wrapper {
+	width: 100%;
+}
+
+@media (min-width:1920px) {
+	nav .wrapper, nav #example .wrapper {
+		width: 75%;
+	}
+}
+
 
 /* styling marginer for sektioner*/
 .titler, .sektion1, .sektion2, .sektion3, .table {
@@ -972,10 +1082,14 @@ nav a:hover{
 }
 
 #styleguide article {
-	margin: 15px 0;
+	margin-top: 10px;
+	margin-bottom: 20px;
 }
 
-
+#styleguide #edit {
+	float: left;
+	width: 100%;
+}
 /* styling marginer for sektioner - slut*/
 
 /* - LISTER - */

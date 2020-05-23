@@ -2594,6 +2594,240 @@ margin-left: 7px;
 </div>
 <!-- SEKTION 3 - ORGANISMER FOR LØSNING - SLUT -->
 <section id="templates">
+	<div class="wrapper">
+		<h3>Atomer for løsning</h3>
+		<ul>
+			<li><a href="#wrapper-with-content">Wrapper with content.</a></li>
+			<li><a href="#wrapper-header">Wrapper in header</a></li>
+			<li><a href="#wrapper-edit">Wrapper on edit page</a></li>
+		</ul>
+	</div>
+	<article id="wrapper-with-content">
+		<div class="wrapper">
+			<h4>Wrapper with content.</h4>
+		</div>
+		<div id="example">
+			<div class="wrapper">
+				<span style="float:left; width:100%; background-color: #FF0;">Example content, with 100% width</span>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="templateTable">
+				<tr class="række1">
+					<th>HTML eksempel</th>
+					<th>CSS</th>
+				</tr>
+				<tr class="række2">
+					<!--HTML -->
+					<td class="code">
+						<div class="wrapper important">
+							<span style="float:left; width:100%; margin:20px 0; background-color: #FF0;">Example content, with 100% width</span>
+						</div>
+					</td>
+					<!--CSS -->
+					<td class="code">
+						/* - WRAPPER - */
+						.wrapper, #example .wrapper {
+							float: none;
+							width: 95%;
+							margin: 0 auto;
+							overflow: auto;
+						}
+
+						@media (min-width:1366px) {
+							.wrapper, #example .wrapper {
+								width: 75%;
+							}
+						}
+
+						nav .wrapper, nav #example .wrapper {
+							width: 100%;
+						}
+
+						@media (min-width:1920px) {
+							nav .wrapper, nav #example .wrapper {
+								width: 75%;
+							}
+						}
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<article id="wrapper-header">
+		<div class="wrapper">
+			<h4>Wrapper in header.</h4>
+		</div>
+		<div id="example">
+			<header>
+				<div class="wrapper">
+					<nav>
+						<div class="branddiv">
+							<!--LOGO-->
+							<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
+							<!--MAIN NAVIGATION-->
+							<ul class="navbarulleft">
+								<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
+								<li><a>Trendboards</a></li>
+								<li><a>Reports</a></li>
+								<li><a>Views</a></li>
+								<li><a>Feeds</a></li>
+								<li><a>Settings</a></li>
+								<li><a>Shares</a></li>
+							</ul>
+						</div>
+						<div class="profilediv">
+							<ul class="navbarulright" style="float: right;">
+								<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
+								<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
+								<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
+								<li><p class="channels">channels</p></li>
+								<li class="selection">
+									<select class="channelselect">
+										<option>channelnames</option>
+									</select></li>
+								<!--USERNAME-->
+								<li class="profiledropdown">
+									<a class="profiledropdown-a">
+										<span class="username">Profile P.</span>
+										<img class="profile-icon" src="img/icons/user.svg" alt="profile">
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</header>
+		</div>
+		<div class="wrapper">
+			<table class="templateTable">
+				<tr class="række1">
+					<th>HTML eksempel</th>
+					<th>CSS</th>
+				</tr>
+				<tr class="række2">
+					<!--HTML -->
+					<td class="code">
+						<header>
+							<div class="wrapper">
+								<nav>
+									<div class="branddiv">
+										<!--LOGO-->
+										<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
+										<!--MAIN NAVIGATION-->
+										<ul class="navbarulleft">
+											<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
+											<li><a>Trendboards</a></li>
+											<li><a>Reports</a></li>
+											<li><a>Views</a></li>
+											<li><a>Feeds</a></li>
+											<li><a>Settings</a></li>
+											<li><a>Shares</a></li>
+										</ul>
+									</div>
+									<div class="profilediv">
+										<ul class="navbarulright" style="float: right;">
+											<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
+											<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
+											<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
+											<li><p class="channels">channels</p></li>
+											<li class="selection">
+												<select class="channelselect">
+													<option>channelnames</option>
+												</select></li>
+											<!--USERNAME-->
+											<li class="profiledropdown">
+												<a class="profiledropdown-a">
+													<span class="username">Profile P.</span>
+													<img class="profile-icon" src="img/icons/user.svg" alt="profile">
+												</a>
+											</li>
+										</ul>
+									</div>
+								</nav>
+							</div>
+						</header>
+					</td>
+					<!--CSS -->
+					<td class="code">
+						header {
+							width: 100%;
+							background-color: #222;
+						}
+						
+						header .wrapper {
+							width: 100%;
+						}
+
+						@media (min-width:1920px) {
+							header .wrapper{
+								width: 75%;
+							}
+						}
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<article id="wrapper-edit">
+		<div class="wrapper">
+			<h4>Wrapper on edit-page.</h4>
+		</div>
+		<div id="example">
+			<div id="edit">
+				<section class="topsection">
+					<div class="wrapper">
+						<span style="float:left; width:100%; background-color: #FF0;">Top content example</span>
+					</div>
+				</section>
+				<main class="mainsection">
+					<div class="wrapper">
+						<span style="float:left; width:100%; background-color: #FF0;">Main content example</span>
+					</div>
+				</main>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="templateTable">
+				<tr class="række1">
+					<th>HTML eksempel</th>
+					<th>CSS</th>
+				</tr>
+				<tr class="række2">
+					<!--HTML -->
+					<td class="code">
+						<section class="topsection">
+							<div class="wrapper">
+								<span style="float:left; width:100%; background-color: #FF0;">Example content, with 100% width</span>
+							</div>
+						</section>
+						<main class="mainsection">
+							<div class="wrapper">
+								<span style="float:left; width:100%; background-color: #FF0;">Example content, with 100% width</span>
+							</div>
+						</main>
+					</td>
+					<!--CSS -->
+					<td class="code">
+						/* - WRAPPER - */
+						#edit .topsection .wrapper {
+							width: 100%;
+						}
+
+						@media (min-width:1920px) {
+							#edit .topsection .wrapper {
+								width: 75%;
+							}
+						}
+
+						#edit .mainsection .wrapper {
+							width: calc(100% - 15px);
+						}
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
 </section>
 <section id="pages">
 </section>
