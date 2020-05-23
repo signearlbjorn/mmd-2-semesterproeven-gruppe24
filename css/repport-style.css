@@ -1484,5 +1484,9 @@ header .wrapper, #wrapper_header_example header .wrapper {
 	text-indent: 20px;
 }
 
+/*STYLEGUIDE TITLES*/
+.styleguide-title {
+	clear: both;
+}
 
 /* --- ANITIONMER --- */
