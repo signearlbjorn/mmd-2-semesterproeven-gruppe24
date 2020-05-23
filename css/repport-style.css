@@ -480,6 +480,7 @@ h3 {
 	width: 50px;
 	cursor: pointer;
 	display: block;
+	float: right;
 }
 .helpbutton a{
     color: #000;
@@ -709,18 +710,28 @@ margin-left: 7px;
 	background-color: #505050;
 	width: 98%;
 }
-.graphs1{
-	width: 100%;
+#graphs{
 	display: grid;
 	grid-template-columns: auto auto auto;
 }
-#codeEditorTab{
+.graphs1{
 	width: 100%;
 }
+#codeEditorTab, #text, #graphs, #templates{
+	width: 99%;
+}
+.codeEditorOverDiv{
+	width: 100%;
+	margin: 0 auto;
+}
 .codeEditor{
-	width: 98%;
+	margin: 0 auto;
+	width: 99%;
 	height: 1000px;
 	background-color: #fff;
+	display: block;
+	float: right;
+	padding: 15px;
 }
 .textTool{
 	width: 100%;
@@ -733,16 +744,16 @@ margin-left: 7px;
 	color: #fff;
 	font-weight: bold;
 }
-.textTool button{
-	float: right;
-}
-.textToolImgDiv{
+.textToolImgButton{
 	background-color: #303030;
+	border: none;
 	border-radius: 12px;
 	width: 40px;
 	height: 40px;
+	float: left;
+	cursor: pointer;
 }
-.textToolImgDiv img{
+.textToolImgButton img{
 	margin: 5px;
 	width: 30px;
 	float: none;
@@ -754,6 +765,24 @@ margin-left: 7px;
 .textEditDiv label{
 	margin-right: 50px;
 	width: auto;
+}
+.codeEditorButtons{
+	width: 80%;
+	float: right;
+	margin: 0 auto;
+	display: block;
+	padding: 5px;
+}
+.showReport{
+	float: left;
+	display: block;
+    width: 150px;
+    text-align: center;
+    border: #000000;
+    border-radius: 12px;
+    margin: 0 5px;
+    cursor: pointer;
+    background-color: #D3D3D3;
 }
 /*Here starts CSS code for Navbar  - big screen*/
 nav{
@@ -1110,14 +1139,22 @@ header .wrapper {
 /* -- EDIT -- */
 
 .placeholderimgchart{
-	width: 99%;
+	width: 100%;
 	display: grid;
 }
-.graphname {
+.graphName {
 	text-align: center;
+	width: 100%;
 }
-.graph1 h3 {
+.graphName h3 {
 	margin: 0 auto;
+	float: left;
+}
+.graphName p{
+	float: right;
+}
+.graphImg{
+	width: 100%;
 }
 .hidden{
 	display: none;
