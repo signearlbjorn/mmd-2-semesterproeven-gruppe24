@@ -409,12 +409,12 @@ h3 {
 }
 .previousbutton a{
     color: #000;
-    font-size: 14px;
-    margin-right: 17px;
+    font-size: 10px;
+    margin-right: 6px;
 	float: right;
 }
 .previousbutton img{
-	margin: 0;
+	margin: 6px auto;
 }
 /*Here starts code for next button in editor*/
 .nextbutton{
@@ -427,8 +427,10 @@ h3 {
 }
 .nextbutton a{
     color: #000;
-    font-size: 14px;
-	margin-left: 16px;
+    font-size: 10px;
+}
+.nextbutton img{
+	margin: 6px auto;
 }
 /*Here starts code for upload image in editor*/
 .uploadimagebutton{
@@ -641,9 +643,14 @@ margin-left: 7px;
 /*STYLING FOR MEGASWITCH - SLUT*/
 
 /* --- ORGANISMS --- */
+/*Here starts CSS for Main in Editor*/
+.mainEditor{
+	display: grid;
+	grid-template-columns: 55% 45%;
+}
 /*Here starts CSS for Editor page preview*/
 .report-preview{
-	width: 50%;
+	width: 100%;
 	background-color: #6f6f6f;
 	display: grid;
 	align-content: center;
@@ -654,7 +661,7 @@ margin-left: 7px;
 /*Here starts CSS for editor tabs*/
 .editor{
 	float: right;
-	width: 50%;
+	width: 100%;
 	height: 100%;
 	background-color: #404040;
 }

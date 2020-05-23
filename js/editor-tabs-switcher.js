@@ -1,7 +1,7 @@
 // JavaScript Document
 /*Disse to funktioner lader brugeren skifte mellem editor tabs*/
 function switchedit(switcheditpage) {
-	var editpage = ["graphs", "text", "templates", "code"];
+	let editpage = ["graphs", "text", "templates", "code"];
 	for(i = 0; i < editpage.length; i++){
 		if(switcheditpage == editpage[i]){
 			document.getElementById(editpage[i]).classList.remove("hidden");
@@ -13,9 +13,9 @@ function switchedit(switcheditpage) {
 }
 
 function switcheditbg(editbgswitch) {
-	var editbg = ["graphsdiv", "textdiv", "templatesdiv", "codediv"];
+	let editbg = ["graphsDiv", "textDiv", "templatesDiv", "codeDiv"];
 	for(ii = 0; ii < editbg.length; ii++){
-		if(editbgswitch == editbg[i]){
+		if(editbgswitch == editbg[ii]){
 			document.getElementById(editbg[ii]).classList.remove("lightbg");
 		}
 		else{
