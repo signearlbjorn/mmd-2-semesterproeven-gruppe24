@@ -488,13 +488,13 @@
             <script language="javascript">
                 function changeImage() {
 
-                    if (document.getElementById("imgClickAndChange").src == "file:///mmd-2-semesterproeven-gruppe24/developer/img/icons/star.svg")
+                    if (document.getElementById("imgClickAndChange").src == "img/icons/star.svg")
                     {
-                        document.getElementById("imgClickAndChange").src = "file:///mmd-2-semesterproeven-gruppe24/developer/img/icons/starfull.svg";
+                        document.getElementById("imgClickAndChange").src = "img/icons/starfull.svg";
                     }
                     else
                     {
-                        document.getElementById("imgClickAndChange").src = "file:///mmd-2-semesterproeven-gruppe24/developer/img/icons/star.svg";
+                        document.getElementById("imgClickAndChange").src = "img/icons/star.svg";
                     }
                 }
             </script>
@@ -3883,6 +3883,34 @@
 <br><br>
  <!-- Upload template pop-up -->
   <h4>Upload template pop-up</h4>
+  <br>
+        <!-- eksempel for upload pop-up -->
+            <div class="frameforuploadpopup">
+
+              <div class="uploadpopuptitelwrap">
+                  <img src="img/icons/upload.svg" width="40px" height="40px" alt="">
+                  <h1 class="uploadtemplate">Upload a template</h1>
+              </div>
+
+              <!-- upload template knap -->
+              <div class="uploadtemplateknap">
+                <p class="typetext">Upload template</p>
+                  <button type="" onclick="" class="typebutton">
+                    <a class="typebuttontext">Choose...</a>
+                    <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+                  </button>
+              </div>
+              <!-- upload template knap - slut-->
+
+              <!-- cancel knap -->
+
+              <!-- cancel knap slut - slut-->
+
+              <!-- done knap -->
+
+              <!-- done - slut-->
+            </div>
+        <!-- eksempel for upload pop-up - slut-->
         <!-- Tabel for upload -->
         <table class="overvieworganimser">
           <!-- Række 1-->
@@ -3896,26 +3924,64 @@
           <tr class="row-two">
     			<!--Molecules-->
     			<td>
+    				<li>2x Icon</li>
     				<li>Text</li>
-    				<li>Button</li>
+            <li>Knap med text og icon</li>
+            <li>2x knap med text</li>
   			  </td>
   				<!--Organism-->
   			  <td>
-            <div class="uploadtemplateknap">
-              <p class="typetext">Upload template</p>
-                <button type="" onclick="" class="typebutton">
-                  <a class="typebuttontext">Choose...</a>
-                  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                </button>
-            </div>
-    			</td>
+          se eksempel for oven
   				<!--HTML to copy-->
           <td class="code">
-          x
+            <div class="frameforuploadpopup">
+
+              <div class="uploadpopuptitelwrap">
+                  <img src="img/icons/x.svg" width="40px" height="40px" alt="">
+                  <img src="img/icons/upload.svg" width="40px" height="40px" alt="">
+                  <h1 class="uploadtemplate">Upload a template</h1>
+              </div>
+
+              <!-- upload template knap -->
+              <div class="uploadtemplateknap">
+                <p class="typetext">Upload template</p>
+                  <button type="" onclick="" class="typebutton">
+                    <a class="typebuttontext">Choose...</a>
+                    <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+                  </button>
+              </div>
+              <!-- upload template knap - slut-->
+
+              <!-- cancel knap -->
+
+              <!-- cancel knap slut - slut-->
+
+              <!-- done knap -->
+
+              <!-- done - slut-->
+            </div>
      			</td>
   			  <!--CSS to copy-->
           <td class="code">
-          x
+            .frameforuploadpopup {
+            	background-color: #D3D3D3;
+            	width: 425px;
+              height: 150px;
+            	border-radius: 5px;
+            }
+
+            .uploadtemplate {
+            	margin-top: -10px;
+            }
+
+            .uploadpopuptitelwrap {
+            	margin-top: 15px;
+            }
+
+            .uploadpopuptitelwrap, .uploadtemplateknap{
+            	margin-left: 10px;
+            	margin-right: 10px;
+            }
           </td>
   			  <!--Js to copy-->
           <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>

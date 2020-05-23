@@ -1157,6 +1157,28 @@ nav a:hover{
 }
 /* Styling for SIDE TITEL OG SETTINGS BAR" FOR EDITOR SIDEN ORAGBISME - SLUT */
 
+/* Styling for Upload pop-up ORAGBISME*/
+.frameforuploadpopup {
+	background-color: #D3D3D3;
+	width: 425px;
+  height: 150px;
+	border-radius: 5px;
+}
+
+.uploadtemplate {
+	margin-top: -10px;
+}
+
+.uploadpopuptitelwrap {
+	margin-top: 15px;
+}
+
+.uploadpopuptitelwrap, .uploadtemplateknap{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/* Styling for Upload pop-up ORAGBISME - SLUT */
+
 /* --- ORGANISMER SLUT --- */
 
 
