@@ -689,13 +689,13 @@ margin-left: 7px;
 }
 .editortabs{
 	margin: 20px 10px 0;
-	background-color: #505050; 
+	background-color: #505050;
 	height: inherit;
 	width: 98%;
 }
 .graphs1{
-	width: 100%; 
-	display: grid; 
+	width: 100%;
+	display: grid;
 	grid-template-columns: auto auto auto;
 }
 
@@ -1076,7 +1076,7 @@ header .wrapper {
 		border-right: solid 1px #000;
 		border-bottom: none;
 	}
-	
+
 	#styleguide table tr td {
 		border-right: solid 1px #000;
 		border-bottom: none;
@@ -1091,7 +1091,7 @@ header .wrapper {
 #styleguide table.atomTable tr th {
 	float: left;
 	width: 100%;
-	padding: 10px;	
+	padding: 10px;
 }
 
 @media (min-width:481px){
@@ -1250,11 +1250,10 @@ nav .wrapper, nav #example .wrapper {
 	}
 }
 
-
 /* styling marginer for sektioner*/
 .titler, .sektion1, .sektion2, .sektion3, .table {
-	margin-left: 25%;
-	margin-right: 25%;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 #styleguide section,
