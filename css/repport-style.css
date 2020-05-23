@@ -710,12 +710,12 @@ margin-left: 7px;
 	background-color: #505050;
 	width: 98%;
 }
-#graphs{
+.graphsOverDiv{
 	display: grid;
 	grid-template-columns: auto auto auto;
 }
 .graphs1{
-	width: 100%;
+	width: 98%;
 }
 #codeEditorTab, #text, #graphs, #templates{
 	width: 99%;
