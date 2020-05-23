@@ -1190,7 +1190,7 @@ header .wrapper {
 }
 
 /* - POSITIONING - */
-#example {
+.example {
 	float: left;
 	width: 100%;
 	margin: 20px 0;
@@ -1209,7 +1209,7 @@ header .wrapper {
 }
 
 /* - WRAPPER - */
-.wrapper, #example .wrapper {
+.wrapper, .example .wrapper {
 	float: none;
 	width: 95%;
 	margin: 0 auto;
@@ -1217,17 +1217,17 @@ header .wrapper {
 }
 
 @media (min-width:1366px) {
-	.wrapper, #example .wrapper {
+	.wrapper, .example .wrapper {
 		width: 75%;
 	}
 }
 
-nav .wrapper, nav #example .wrapper {
+header .wrapper, #wrapper_header_example header .wrapper {
 	width: 100%;
 }
 
 @media (min-width:1920px) {
-	nav .wrapper, nav #example .wrapper {
+	header .wrapper, #wrapper_header_example header .wrapper {
 		width: 75%;
 	}
 }
