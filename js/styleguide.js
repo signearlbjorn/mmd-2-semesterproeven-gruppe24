@@ -58,3 +58,17 @@ function changeImage() {
 	}
 }
 
+let rowOne = document.getElementsByClassName("row-one");
+for(let i=0; i<rowOne.length; i++){ // Loop all instanceses of rowOne.
+	rowOne[i].addEventListener("click", function(){dis(rowOne[i])});
+}
+function dis(element){
+	let parrent = element.parentNode; /* Få fat i parrent node (tbody/table) */
+	let rowTwo = parrent.getElementsByClassName("row-two");
+	rowTwo = rowTwo[0];
+	if(rowTwo.classList.contains("show")){
+		rowTwo.classList.remove("show");
+	} else {
+		rowTwo.classList.add("show");
+	}
+}
