@@ -425,350 +425,507 @@
 <section id="molecules">
 	<!-- molekyle tabeller for overview-siden -->
 	<div class="wrapper">
-		<h3>Molecyles</h3>
-  <h4>Buttons with text and icons</h4>
-            <!-- række 1 i tabel -->
+		<h3>Molekyler</h3>
+ 		<ul>
+			<li><a href="#id">section</a></li>
+			<li><a href="#text">Text</a></li>
+			<li><a href="#h1">h1 - title</a></li>
+			<li><a href="#h2">h2 - report title</a></li>
+			<li><a href="#h3">h3 - tab title</a></li>
+			<li>Semantiske sektioner: header, nav, main, section & aside</li>
+			<li>Ikke semantiske sektioner: div, span, table, ul, li, form</li>
+		</ul>
+	</div>
+	<article id="folder-knap-på-filter-pop-up">
+		<div class="wrapper">
+			<h4>Folder knap på filter pop-up</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="frame">
+					<div class="type">
+						<p class="typetext">Folder</<p>
+						<button type="" onclick="" class="typebutton">
+							<a class="typebuttontext">Name</a>
+							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
             <table class="overviewmolekyler">
                 <tr class="row-one">
-                    <th>Atomer</th>
-                    <th>Molekyle</th>
                     <th>HTML</th>
                     <th>CSS</th>
                     <th>JavaScript</th>
                   </tr>
-            <!-- række 1 i tabel - slut-->
-            <!-- række 2 i tabel -->
-
-				    <!--Knapper til overview-->
-            <!--Folder knap på filter pop-up-->
-            <tr class="row-two">
-              <td>
-                <ui><li>?</li><li>?</li></ui>
-              </td>
-              <td>
-                <div class="frame">
-                  <div class="type"><p class="typetext">Folder</<p><button type="" onclick="" class="typebutton"><a class="typebuttontext">Name</a><img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
-                </div>
-              </td>
-              <td class="code">
-                <div class="frame">
-                  <div class="type"><p class="typetext">Folder</p><button type="" onclick="" class="typebutton"><a class="typebuttontext">Namet</a><img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
-                </div>
-              </td>
-              <td class="code">
-                .frame {
-                  background-color: black;
-                  width: 410px;
-                }
-
-                .type {
-                  margin-left: 5px;
-                }
-
-                .typetext {
-                  color: white;
-                }
-                .typebutton {
-                  width: 400px;
-                  border-radius: 10px;
-                }
-                .typebuttontext {
-                  float: left;
-                  font-style: italic;
-                  color: grey;
-                  margin-left: 5px;
-                }
-                .chevronicon {
-                  float: right;
-                  margin-top: 5px;
-                }
-              </td>
-              <td>Javascript</td>
-        </tr>
-        <!--Folder knap på filter pop-up - slut-->
-
-
-            <!--Schedule knap på filter pop-up-->
-            <tr class="row-two">
-              <td>
-                <ui><li>?</li><li>?</li></ui>
-              </td>
-              <td>
-                <div class="frame">
-                  <div class="type"><p class="typetext">Schedule</<p><button type="" onclick="" class="typebutton"><a class="typebuttontext">Not set</a><img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
-                </div>
-              </td>
-              <td class="code">
-                <div class="frame">
-                  <div class="type"><p class="typetext">Schedule</p><button type="" onclick="" class="typebutton"><a class="typebuttontext">Not set</a><img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
-                </div>
-              </td>
-              <td class="code">
-                .frame {
-                  background-color: black;
-                  width: 410px;
-                }
-
-                .type {
-                  margin-left: 5px;
-                }
-
-                .typetext {
-                  color: white;
-                }
-                .typebutton {
-                  width: 400px;
-                  border-radius: 10px;
-                }
-                .typebuttontext {
-                  float: left;
-                  font-style: italic;
-                  color: grey;
-                  margin-left: 5px;
-                }
-                .chevronicon {
-                  float: right;
-                  margin-top: 5px;
-                }
-              </td>
-              <td>Javascript</td>
-        </tr>
-        <!--Schedule target knap på filter pop-up - slut-->
-
-                <!--result knap på filter pop-up-->
-                <tr class="row-two">
-                  <td>
-                    <ui><li>?</li><li>?</li></ui>
-                  </td>
-                  <td>
-                    <div class="frame">
-                      <div class="type"><p class="typetext">Result</<p><button type="" onclick="" class="typebutton"><a class="typebuttontext">Not set</a><img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
-                    </div>
-                  </td>
-                  <td class="code">
-                    <div class="frame">
-                      <div class="type"><p class="typetext">Type</p><button type="" onclick="" class="typebutton"><a class="typebuttontext">Day of week</a><img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
-                    </div>
-                  </td>
-                  <td class="code">
-                    .frame {
-                      background-color: black;
-                      width: 410px;
-                    }
-
-                    .type {
-                      margin-left: 5px;
-                    }
-
-                    .typetext {
-                      color: white;
-                    }
-                    .typebutton {
-                      width: 400px;
-                      border-radius: 10px;
-                    }
-                    .typebuttontext {
-                      float: left;
-                      font-style: italic;
-                      color: grey;
-                      margin-left: 5px;
-                    }
-                    .chevronicon {
-                      float: right;
-                      margin-top: 5px;
-                    }
-                  </td>
-                  <td>Javascript</td>
-            </tr>
-            <!--result target knap på filter pop-up - slut-->
-
-                <!--date target knap på filter pop-up-->
-                <tr class="row-two">
-                  <td>
-                    <ui><li>?</li><li>?</li></ui>
-                  </td>
-                  <td>
-                    <div class="frame">
-                      <div class="type"><p class="typetext">Date target</<p><button type="" onclick="" class="typebutton"><a class="typebuttontext">Last edited</a><img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
-                    </div>
-                  </td>
-                  <td class="code">
-                    <div class="frame">
-                      <div class="type"><p class="typetext">Type</p><button type="" onclick="" class="typebutton"><a class="typebuttontext">Day of week</a><img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
-                    </div>
-                  </td>
-                  <td class="code">
-                    .frame {
-                    	background-color: black;
-                    	width: 410px;
-                    }
-
-                    .type {
-                    	margin-left: 5px;
-                    }
-
-                    .typetext {
-                    	color: white;
-                    }
-                    .typebutton {
-                    	width: 400px;
-                    	border-radius: 10px;
-                    }
-                    .typebuttontext {
-                    	float: left;
-                    	font-style: italic;
-                    	color: grey;
-                    	margin-left: 5px;
-                    }
-                    .chevronicon {
-                    	float: right;
-                    	margin-top: 5px;
-                    }
-                  </td>
-                  <td>Javascript</td>
-            </tr>
-            <!--date target knap på filter pop-up - slut-->
-
-            <!--type knap på filter pop-up-->
-            <tr class="row-two">
-              <td>
-                <ui><li>?</li><li>?</li></ui>
-              </td>
-              <td>
-                <div class="frame">
-                  <div class="type"><p class="typetext">Type</p><button type="" onclick="" class="typebutton"><a class="typebuttontext">Day of week</a><img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
-                </div>
-              </td>
-              <td class="code">
-                <div class="frame">
-                  <div class="type"><p class="typetext">Type</p><button type="" onclick="" class="typebutton"><a class="typebuttontext">Day of week</a><img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
-                </div>
-              </td>
-              <td class="code">
-                .frame {
-                  background-color: black;
-                  width: 410px;
-                }
-
-                .type {
-                  margin-left: 5px;
-                }
-
-                .typetext {
-                  color: white;
-                }
-                .typebutton {
-                  width: 400px;
-                  border-radius: 10px;
-                }
-                .typebuttontext {
-                  float: left;
-                  font-style: italic;
-                  color: grey;
-                  margin-left: 5px;
-                }
-                .chevronicon {
-                  float: right;
-                  margin-top: 5px;
-                }
-              </td>
-              <td>Javascript</td>
-        </tr>
-        <!--type knap på filter pop-up - slut-->
-
-            <!--folder overview knap-->
-            <tr class="row-two">
-              <td>
-    						<li><button type="button" onClick="" class="">button tag</button></li>
-    						<li>
-    							<img class="settingsicon" src="img/icons/folder.svg" alt="folder-icon">
-    						</li>
-    					</td>
-    					<td>
-    						<button type="button" onclick="" class="settingsmenubutton"><a>Folder overview</a> <img class="settingsmenuicon" src="img/icons/folder.svg" alt="editicon"></button></td>
-    					<td class="code">
-    						<button type="button" onclick="" class="settingsmenubutton"><a>Folder overview</a> <img class="settingsmenuicon" src="img/icons/folder.svg" alt="editicon"></button>
-    					</td>
-    					<td class="code">
-    						}
-    						.settingsmenubutton{
-    							display: block;
-    							width: 225px;
-    							margin: 0 auto;
-    							text-align: center;
-    							border: #000000;
-    							border-radius: 12px;
-    							margin-bottom: 5px;
-    							cursor: pointer;
-    						}
-    						.settingsmenubutton a{
-    							float: left;
-    							color: #848484;
-    							font-size: 19px;
-    							margin-left: 7px;
-    						}
-    						.settingsmenuicon{
-    							float: right;
-    							margin-right: 7px;
-    							width: 20px;
-    						}
-    					</td>
-              <td> JavaScript for 'tandhjul' </td>
-            </tr>
-          <!--folder overview knap - slut-->
-
-          <!--new report knap-->
 				<tr class="row-two">
-					<td>
-					<li><button type="button">New report</button></li>
-					<li><img src="img/icons/plus.svg" alt="new report img"></li>
-				  </td>
-				  <td>
-					  <button type="button" class="newreportbutton"><img class="plusimg" src="img/icons/plus.svg" alt="new report img"><span class="newreportspan">New report</span></button>
-				  </td>
-				  <td class="code">
-					  <button type="button" class="newreportbutton"><img class="plusimg" src="img/icons/plus.svg" alt="new preort img"><span class="newreportspan">New report</span></button>
-				  </td>
-				  <td class="code">
-					  .newreportbutton{
-					  	border: none;
-					  	border-radius: 12px;
-					  	background-color: #00cd00;
-					  	width: 150px;
-					  	cursor: pointer;
-					  	display: grid;
-					  	grid-template-columns: auto auto;
-					  	align-content: center;
-					  }
-					  .newreportspan{
-						font-size: 18px;
-						display: grid;
-					  }
-					  .plusimg{
-						display: grid;
-						margin: 0 0 0 auto;
-					  }
-					</td>
-                  <td> JavaScript for 'tandhjul' </td>
-                </tr>
-          <!--new report knap - slut-->
-				<tr class="row-two">
-					<td>
-						<li>
-							Text
-						</li>
-						<li>
-							<button type="" onClick="" class="">selection</button>
-						</li>
-						<li>
-							<img class="settingsicon" src="img/icons/chevron-down.svg" alt="arrowdown">
-						</li>
-					</td>
-					<td>
-						<div class="sortbydiv">Sort by<button type="" onClick="" class="sortbybutton"><a>Choose..</a><img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown"></button></div>
+					<td class="code">
+						<div class="frame">
+							<div class="type">
+								<p class="typetext">Folder</<p>
+								<button type="" onclick="" class="typebutton">
+									<a class="typebuttontext">Name</a>
+									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+								</button>
+							</div>
+						</div>
 					</td>
 					<td class="code">
-						<div class="sortbydiv">Sort by<button type="" onClick="" class="sortbybutton"><a>Choose..</a><img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown"></button></div>
+						.frame {
+							background-color: black;
+							width: 410px;
+						}
+
+						.type {
+							margin-left: 5px;
+						}
+
+						.typetext {
+							color: white;
+						}
+						.typebutton {
+							width: 400px;
+							border-radius: 10px;
+						}
+						.typebuttontext {
+							float: left;
+							font-style: italic;
+							color: grey;
+							margin-left: 5px;
+						}
+						.chevronicon {
+							float: right;
+							margin-top: 5px;
+						}
+					</td>
+					<td class="empty"></td>
+				</tr>
+			</table>
+			<!--Folder knap på filter pop-up - slut-->
+		</div>
+	</article>
+			<!--Schedule knap på filter pop-up-->
+ 	<article id="schedule knap på filter pop-up">
+		<div class="wrapper">
+			<h4>Schedule knap på filter pop-up</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+                <div class="frame">
+					<div class="type">
+						<p class="typetext">Schedule</<p>
+						<button type="" onclick="" class="typebutton">
+							<a class="typebuttontext">Not set</a>
+							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+                </div>
+			</div>
+		</div>
+		<div class="wrapper">
+           <table class="overviewmolekyler">
+                <tr class="row-one">
+                    <th>HTML</th>
+                    <th>CSS</th>
+                    <th>JavaScript</th>
+                </tr>
+				<tr class="row-two">
+					<td class="code">
+						<div class="wrapper">
+							<div class="frame">
+								<div class="type">
+									<p class="typetext">Schedule</<p>
+									<button type="" onclick="" class="typebutton">
+										<a class="typebuttontext">Not set</a>
+										<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+									</button>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td class="code">
+						.frame {
+							background-color: black;
+							width: 410px;
+						}
+
+						.type {
+							margin-left: 5px;
+						}
+
+						.typetext {
+							color: white;
+						}
+						.typebutton {
+							width: 400px;
+							border-radius: 10px;
+						}
+						.typebuttontext {
+							float: left;
+							font-style: italic;
+							color: grey;
+							margin-left: 5px;
+						}
+						.chevronicon {
+							float: right;
+							margin-top: 5px;
+						}
+					</td>
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<article id="result-knap-på-filter-pop-up">
+		<div class="wrapper">
+			<h4>Result knap på filter pop-up</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="frame">
+					<div class="type">
+						<p class="typetext">Result</<p>
+						<button type="" onclick="" class="typebutton">
+							<a class="typebuttontext">Not set</a>
+							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<div class="frame">
+							<div class="type">
+								<p class="typetext">Result</<p>
+								<button type="" onclick="" class="typebutton">
+									<a class="typebuttontext">Not set</a>
+									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+								</button>
+							</div>
+						</div>
+					</td>
+					<td class="code">
+						.frame {
+							background-color: black;
+							width: 410px;
+						}
+
+						.type {
+							margin-left: 5px;
+						}
+
+						.typetext {
+							color: white;
+						}
+						.typebutton {
+							width: 400px;
+							border-radius: 10px;
+						}
+						.typebuttontext {
+							float: left;
+							font-style: italic;
+							color: grey;
+							margin-left: 5px;
+						}
+						.chevronicon {
+							float: right;
+							margin-top: 5px;
+						}
+					</td>
+					<td class="empty"></td>
+				</tr>
+			</table>
+			<p class="info">Warning eller info.</p>
+		</div>
+	</article>
+	<article id="date-target-knap-på-filter-pop-up">
+		<div class="wrapper">
+			<h4>Date target knap på filter pop-up</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="frame">
+					<div class="type">
+						<p class="typetext">Date target</<p>
+						<button type="" onclick="" class="typebutton">
+							<a class="typebuttontext">Last edited</a>
+							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+                <tr class="row-two">
+					<td class="code">
+						<div class="frame">
+							<div class="type">
+								<p class="typetext">Date target</<p>
+								<button type="" onclick="" class="typebutton">
+									<a class="typebuttontext">Last edited</a>
+									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+								</button>
+							</div>
+						</div>
+					</td>
+					<td class="code">
+						.frame {
+							background-color: black;
+							width: 410px;
+						}
+
+						.type {
+							margin-left: 5px;
+						}
+
+						.typetext {
+							color: white;
+						}
+						.typebutton {
+							width: 400px;
+							border-radius: 10px;
+						}
+						.typebuttontext {
+							float: left;
+							font-style: italic;
+							color: grey;
+							margin-left: 5px;
+						}
+						.chevronicon {
+							float: right;
+							margin-top: 5px;
+						}
+					</td>
+					<td class="empty"></td>
+				</tr>
+			</table>
+			<p class="info">Warning eller info.</p>
+		</div>
+	</article>
+	<article id="type-knap-på-filter-pop-up">
+		<div class="wrapper">
+			<h4>Type knap på filter pop-up</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+                <div class="frame">
+					<div class="type">
+						<p class="typetext">Type</p>
+						<button type="" onclick="" class="typebutton">
+							<a class="typebuttontext">Day of week</a>
+							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+                </div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<div class="frame">
+							<div class="type">
+								<p class="typetext">Type</p>
+								<button type="" onclick="" class="typebutton">
+									<a class="typebuttontext">Day of week</a>
+									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+								</button>
+							</div>
+						</div>
+					</td>
+					<td class="code">
+						.frame {
+							background-color: black;
+							width: 410px;
+						}
+
+						.type {
+							margin-left: 5px;
+						}
+
+						.typetext {
+							color: white;
+						}
+						.typebutton {
+							width: 400px;
+							border-radius: 10px;
+						}
+						.typebuttontext {
+							float: left;
+							font-style: italic;
+							color: grey;
+							margin-left: 5px;
+						}
+						.chevronicon {
+							float: right;
+							margin-top: 5px;
+						}
+					</td>
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<article id="folder-overview-knap">
+		<div class="wrapper">
+			<h4>Folder overview knap</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button type="button" onclick="" class="settingsmenubutton">
+					<a>Folder overview</a>
+					<img class="settingsmenuicon" src="img/icons/folder.svg" alt="editicon">
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<button type="button" onclick="" class="settingsmenubutton">
+							<a>Folder overview</a>
+							<img class="settingsmenuicon" src="img/icons/folder.svg" alt="editicon">
+						</button>
+					</td>
+					<td class="code">
+						<!-- } -->
+						.settingsmenubutton{
+							display: block;
+							width: 225px;
+							margin: 0 auto;
+							text-align: center;
+							border: #000000;
+							border-radius: 12px;
+							margin-bottom: 5px;
+							cursor: pointer;
+						}
+						.settingsmenubutton a{
+							float: left;
+							color: #848484;
+							font-size: 19px;
+							margin-left: 7px;
+						}
+						.settingsmenuicon{
+							float: right;
+							margin-right: 7px;
+							width: 20px;
+						}
+					</td>
+					<td class="empty"></td>
+				</tr>
+			</table>
+			<p class="info">Warning eller info.</p>
+		</div>
+	</article>
+	<article id="new-report-knap">
+		<div class="wrapper">
+			<h4>New report knap</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button type="button" class="newreportbutton">
+					<img class="plusimg" src="img/icons/plus.svg" alt="new report img">
+					<span class="newreportspan">New report</span>
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<button type="button" class="newreportbutton">
+							<img class="plusimg" src="img/icons/plus.svg" alt="new report img">
+							<span class="newreportspan">New report</span>
+						</button>
+					</td>
+					<td class="code">
+						.newreportbutton{
+							border: none;
+							border-radius: 12px;
+							background-color: #00cd00;
+							width: 150px;
+							cursor: pointer;
+							display: grid;
+							grid-template-columns: auto auto;
+							align-content: center;
+						}
+						.newreportspan{
+							font-size: 18px;
+							display: grid;
+						}
+						.plusimg{
+							display: grid;
+							margin: 0 0 0 auto;
+						}
+					</td>
+					<td class="empty"></td>
+                </tr>
+			</table>
+			<p class="info">Warning eller info.</p>
+		</div>
+	</article>
+	<article id="sort-by-knap">
+		<div class="wrapper">
+			<h4>Sort by knap</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="sortbydiv">
+					Sort by
+					<button type="" onClick="" class="sortbybutton">
+						<a>Choose..</a>
+						<img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<div class="sortbydiv">
+							Sort by
+							<button type="" onClick="" class="sortbybutton">
+								<a>Choose..</a>
+								<img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
+							</button>
+						</div>
 					</td>
 					<td class="code">
 						.sortbydiv{
@@ -791,801 +948,1005 @@
 						    margin-left: 7px;
 						}
 					</td>
-                  <td> JavaScript for 'tandhjul' </td>
+					<td class="empty"></td>
                 </tr>
+			</table>
+		</div>
+	</article>
+	<article id="filter-knap">
+		<div class="wrapper">
+			<h4>Filter knap</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button type="button" onclick="" class="filterbutton">
+					<a>Filter</a>
+					<img class="settingsmenuicon" src="img/icons/sliders.svg" alt="slider-icon">
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
 				<tr class="row-two">
-					<td>
-						<li>
-							text
-						</li>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/sliders.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td>
-						<button type="button" onclick="" class="filterbutton"><a>Filter</a><img class="settingsmenuicon" src="img/icons/sliders.svg" alt="slider-icon"></button>
-					</td>
 					<td class="code">
-						<button type="button" onclick="" class="filterbutton"><a>Filter</a><img class="settingsmenuicon" src="img/icons/sliders.svg" alt="slider-icon"></button>
+						<button type="button" onclick="" class="filterbutton">
+							<a>Filter</a>
+							<img class="settingsmenuicon" src="img/icons/sliders.svg" alt="slider-icon">
+						</button>
 					</td>
 					<td class="code">
 						.filterbutton{
-	background-color: #fff;
-	border: none;
-	border-radius: 12px;
-	width: 85px;
-	cursor: pointer;
-	display: block;
-}
-.filterbutton a{
-    color: #000;
-    font-size: 14px;
-    margin-left: 7px;
-}
+							background-color: #fff;
+							border: none;
+							border-radius: 12px;
+							width: 85px;
+							cursor: pointer;
+							display: block;
+						}
+						.filterbutton a{
+							color: #000;
+							font-size: 14px;
+							margin-left: 7px;
+						}
 					</td>
-                  <td> JavaScript for 'tandhjul' </td>
+					<td class="empty"></td>
                 </tr>
+			</table>
+		</div>
+	</article>
+	<article id="antal-visninger">
+		<div class="wrapper">
+			<h4>Antal visninger</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="quantitydiv">
+					Quantity
+					<button type="" onClick="" class="quantitybutton">
+						<a>8</a>
+						<img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
 				<tr class="row-two">
-					<td>
-						<li>
-							text
-						</li>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/sliders.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td>
-						<div class="quantitydiv">Quantity<button type="" onClick="" class="quantitybutton"><a>8</a><img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown"></button></div>
-					</td>
 					<td class="code">
-						<div class="quantitydiv">Quantity<button type="" onClick="" class="quantitybutton"><a>8</a><img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown"></button></div>
+						<div class="quantitydiv">
+							Quantity
+							<button type="" onClick="" class="quantitybutton">
+								<a>8</a>
+								<img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
+							</button>
+						</div>
 					</td>
 					<td class="code">
 						.quantitydiv{
-	font-size: 15px;
-	float: left;
-}
-.quantitybutton{
-	background-color: #fff;
-	border-color: #000;
-	border-radius: 12px;
+							font-size: 15px;
+							float: left;
+						}
+						.quantitybutton{
+							background-color: #fff;
+							border-color: #000;
+							border-radius: 12px;
 
-	cursor: pointer;
-	display: block;
-	float: right;
-}
-.quantitybutton a{
-    float: left;
-    color: #000;
-    font-size: 19px;
-    margin-left: 7px;
-}
+							cursor: pointer;
+							display: block;
+							float: right;
+						}
+						.quantitybutton a{
+							float: left;
+							color: #000;
+							font-size: 19px;
+							margin-left: 7px;
+						}
 					</td>
-                  <td> JavaScript for 'tandhjul' </td>
+					<td class="empty"></td>
                 </tr>
-				<!--Knapper til edditor-->
+			</table>
+		</div>
+	</article>
+	<article id="forrige-knap">
+		<div class="wrapper">
+			<h4>Forrige-knap</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button type="button" onclick="" class="previousbutton">
+					<a>Previous</a>
+					<img class="settingsmenuicon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
 				<tr class="row-two">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/chevron-left.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td>
-						<button type="button" onclick="" class="previousbutton"><a>Previous</a><img class="settingsmenuicon" src="img/icons/chevron-left.svg" alt="arrowleft-icon"></button>
-					</td>
 					<td class="code">
-						<button type="button" onclick="" class="previousbutton"><a>Previous</a><img class="settingsmenuicon" src="img/icons/chevron-left.svg" alt="arrowleft-icon"></button>
+						<button type="button" onclick="" class="previousbutton">
+							<a>Previous</a>
+							<img class="settingsmenuicon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
+						</button>
 					</td>
 					<td class="code">
 						.previousbutton{
-	background-color: #fff;
-	border: none;
-	border-radius: 12px;
-	width: 100px;
-	cursor: pointer;
-	display: block;
-}
-.previousbutton a{
-    color: #000;
-    font-size: 14px;
-    margin-right: 17px;
-	float: right;
-}
-.previousbutton img{
-	margin: 0;
-}
+							background-color: #fff;
+							border: none;
+							border-radius: 12px;
+							width: 100px;
+							cursor: pointer;
+							display: block;
+						}
+						.previousbutton a{
+							color: #000;
+							font-size: 14px;
+							margin-right: 17px;
+							float: right;
+						}
+						.previousbutton img{
+							margin: 0;
+						}
 					</td>
-                  <td> JavaScript for 'tandhjul' </td>
+					<td class="empty"></td>
                 </tr>
+			</table>
+		</div>
+	</article>
+	<article id="upload-image">
+		<div class="wrapper">
+			<h4>Upload image</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button type="button" onclick="" class="uploadimagebutton">
+					<a>Upload image</a>
+					<img class="settingsmenuicon" src="img/icons/image.svg" alt="arrowright-icon">
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
 				<tr class="row-two">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/image.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td>
-						<button type="button" onclick="" class="uploadimagebutton"><a>Upload image</a><img class="settingsmenuicon" src="img/icons/image.svg" alt="arrowright-icon"></button>
-					</td>
 					<td class="code">
-						<button type="button" onclick="" class="uploadimagebutton"><a>Upload image</a><img class="settingsmenuicon" src="img/icons/image.svg" alt="arrowright-icon"></button>
+						<button type="button" onclick="" class="uploadimagebutton">
+							<a>Upload image</a>
+							<img class="settingsmenuicon" src="img/icons/image.svg" alt="arrowright-icon">
+						</button>
 					</td>
 					<td class="code">
 						.uploadimagebutton{
-	background-color: #fff;
-	border: none;
-	border-radius: 12px;
-	width: 120px;
-	cursor: pointer;
-	display: block;
-}
-.uploadimagebutton a{
-	color: #000;
-    font-size: 12px;
-}
+							background-color: #fff;
+							border: none;
+							border-radius: 12px;
+							width: 120px;
+							cursor: pointer;
+							display: block;
+						}
+						.uploadimagebutton a{
+							color: #000;
+							font-size: 12px;
+						}
 					</td>
-                  <td> JavaScript for 'tandhjul' </td>
+					<td class="empty"></td>
                 </tr>
+			</table>
+		</div>
+	</article>
+	<article id="id">
+		<div class="wrapper">
+			<h4>SnippetTittle</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button type="button" onClick="" class="settingbutton">
+					<img class="settingsicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
 				<tr class="row-two">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/chevron-right.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td>
-						<button type="button" onclick="" class="nextbutton"><a>Previous</a><img class="settingsmenuicon" src="img/icons/chevron-right.svg" alt="arrowright-icon"></button>
-					</td>
 					<td class="code">
-						<button type="button" onClick="" class="settingbutton"><img class="settingsicon" src="img/icons/chevron-right.svg" alt="arrowright-icon"></button>
+						<button type="button" onClick="" class="settingbutton">
+							<img class="settingsicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
+						</button>
 					</td>
 					<td class="code">
 						.nextbutton{
-	background-color: #fff;
-	border: none;
-	border-radius: 12px;
-	width: 100px;
-	cursor: pointer;
-	display: block;
-}
-.nextbutton a{
-    color: #000;
-    font-size: 14px;
-	margin-left: 16px;
-}
+							background-color: #fff;
+							border: none;
+							border-radius: 12px;
+							width: 100px;
+							cursor: pointer;
+							display: block;
+						}
+						.nextbutton a{
+							color: #000;
+							font-size: 14px;
+							margin-left: 16px;
+						}
 					</td>
-                  <td> JavaScript for 'tandhjul' </td>
+					<td class="empty"></td>
                 </tr>
-				<!--Knapper til template i editor-->
+			</table>
+		</div>
+	</article>
+	<article id="upload-template">
+		<div class="wrapper">
+			<h4>Upload template</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button type="button" onClick="" class="upladtemplatebutton">
+					<a>Upload template</a>
+					<img class="settingsicon" src="img/icons/upload.svg" alt="settings-icon">
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
 				<tr class="row-two">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/upload.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td>
-						<button type="button" onClick="" class="upladtemplatebutton"><a>Upload template</a><img class="settingsicon" src="img/icons/upload.svg" alt="settings-icon"></button>
-					</td>
 					<td class="code">
-						<button type="button" onClick="" class="upladtemplatebutton"><a>Upload template</a><img class="settingsicon" src="img/icons/upload.svg" alt="settings-icon"></button>
+						<button type="button" onClick="" class="upladtemplatebutton">
+							<a>Upload template</a>
+							<img class="settingsicon" src="img/icons/upload.svg" alt="settings-icon">
+						</button>
 					</td>
 					<td class="code">
 						.upladtemplatebutton{
-	background-color: #D3D3D3;
-	border: none;
-	border-radius: 12px;
-	width: 100px;
-	cursor: pointer;
-	display: block;
-}
-.upladtemplatebutton a{
-    color: #000;
-    font-size: 10px;
-	margin-left: 7px;
-	float: left;
-}
-.upladtemplatebutton img{
-	width:15px;
-}
+							background-color: #D3D3D3;
+							border: none;
+							border-radius: 12px;
+							width: 100px;
+							cursor: pointer;
+							display: block;
+						}
+						.upladtemplatebutton a{
+							color: #000;
+							font-size: 10px;
+							margin-left: 7px;
+							float: left;
+						}
+						.upladtemplatebutton img{
+							width:15px;
+						}
 					</td>
-                  <td> JavaScript for 'tandhjul' </td>
+					<td class="empty"></td>
                 </tr>
+			</table>
+		</div>
+	</article>
+	<article id="help-knap">
+		<div class="wrapper">
+			<h4>Help knap</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button type="button" onClick="" class="helpbutton">
+					<a>Help</a>
+					<img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
 				<tr class="row-two">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td>
-						<button type="button" onClick="" class="helpbutton"><a>Help</a><img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon"></button>
-					</td>
 					<td class="code">
-						<button type="button" onClick="" class="helpbutton"><a>Help</a><img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon"></button>
+						<button type="button" onClick="" class="helpbutton">
+							<a>Help</a>
+							<img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
+						</button>
 					</td>
 					<td class="code">
 						.helpbutton{
-	background-color: #D3D3D3;
-	border: none;
-	border-radius: 12px;
-	width: 50px;
-	height: 15px;
-	cursor: pointer;
-	display: block;
-}
-.helpbutton a{
-    color: #000;
-    font-size: 10px;
-	margin-left: 7px;
-	float: left;
-}
-.helpbutton img{
-	width:10px;
-}
-					</td>
-                  <td> JavaScript for 'tandhjul' </td>
-                </tr>
-				<!--Knapper til text i editor-->
-				<tr class="row-two">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							text
-						</li>
-						<li>
-							<img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td>
-						<div class="texteditdiv">Size<button type="" onclick="" class="texteditbutton"><a>Choose..</a><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
-					</td>
-					<td class="code">
-						<div class="texteditdiv">Size<button type="" onclick="" class="texteditbutton"><a>Choose..</a><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
-					</td>
-					<td class="code">
-						.texteditdiv{
-    float: left;
-	font-size: 20px;
-}
-.texteditdiv img{
-	float: right;
-}
-.texteditbutton{
-    background-color: #fff;
-    border-color: #000;
-    border-radius: 12px;
-	width: 200px;
-    cursor: pointer;
-    display: block;
-    float: right;
-}
-.texteditbutton a{
-float: left;
-color: #000;
-font-size: 19px;
-margin-left: 7px;
-}
-					</td>
-                  <td> JavaScript for 'tandhjul' </td>
-                </tr>
-				<tr class="row-two">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td>
-						<div class="texteditdiv">Weight<button type="" onclick="" class="texteditbutton"><a>Choose..</a><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
-					</td>
-					<td class="code">
-						<div class="texteditdiv">Weight<button type="" onclick="" class="texteditbutton"><a>Choose..</a><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
-					</td>
-					<td class="code">
-						.texteditdiv{
-    float: left;
-	font-size: 20px;
-}
-.texteditdiv img{
-	float: right;
-}
-.texteditbutton{
-    background-color: #fff;
-    border-color: #000;
-    border-radius: 12px;
-	width: 200px;
-    cursor: pointer;
-    display: block;
-    float: right;
-}
-.texteditbutton a{
-float: left;
-color: #000;
-font-size: 19px;
-margin-left: 7px;
-}
-					</td>
-                  <td> JavaScript for 'tandhjul' </td>
-                </tr>
-				<!--Knapper til pop-up-->
-				<tr class="row-two">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td><button type="button" onClick="" class="settingbutton"><img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon"></button></td>
-					<td class="code">
-						<button type="button" onClick="" class="settingbutton"><img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon"></button>
-					</td>
-					<td class="code">
-						.settingsicon{
-							width: 25px;
-						}
-						.settingbutton{
+							background-color: #D3D3D3;
 							border: none;
-							display: block;
+							border-radius: 12px;
+							width: 50px;
+							height: 15px;
 							cursor: pointer;
-							background-color: transparent;
-						}
-					</td>
-                  <td> JavaScript for 'tandhjul' </td>
-                </tr>
-				<tr class="row-two">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td><button type="button" onClick="" class="settingbutton"><img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon"></button></td>
-					<td class="code">
-						<button type="button" onClick="" class="settingbutton"><img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon"></button>
-					</td>
-					<td class="code">
-						.settingsicon{
-							width: 25px;
-						}
-						.settingbutton{
-							border: none;
 							display: block;
-							cursor: pointer;
-							background-color: transparent;
+						}
+						.helpbutton a{
+							color: #000;
+							font-size: 10px;
+							margin-left: 7px;
+							float: left;
+						}
+						.helpbutton img{
+							width:10px;
 						}
 					</td>
-                  <td> JavaScript for 'tandhjul' </td>
+					<td class="empty"></td>
                 </tr>
+			</table>
+		</div>
+	</article>
+	<!--Knapper til text i editor-->
+	<article id="size-knap">
+		<div class="wrapper">
+			<h4>Size knap</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="texteditdiv">
+					Size
+					<button type="" onclick="" class="texteditbutton">
+						<a>Choose..</a>
+						<img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
 				<tr class="row-two">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td><button type="button" onClick="" class="settingbutton"><img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon"></button></td>
 					<td class="code">
-						<button type="button" onClick="" class="settingbutton"><img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon"></button>
-					</td>
-					<td class="code">
-						.settingsicon{
-							width: 25px;
-						}
-						.settingbutton{
-							border: none;
-							display: block;
-							cursor: pointer;
-							background-color: transparent;
-						}
-					</td>
-                  <td> JavaScript for 'tandhjul' </td>
-                </tr>
-				<tr class="row-two">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td><button type="button" onClick="" class="settingbutton"><img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon"></button></td>
-					<td class="code">
-						<button type="button" onClick="" class="settingbutton"><img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon"></button>
-					</td>
-					<td class="code">
-						.settingsicon{
-							width: 25px;
-						}
-						.settingbutton{
-							border: none;
-							display: block;
-							cursor: pointer;
-							background-color: transparent;
-						}
-					</td>
-                  <td> JavaScript for 'tandhjul' </td>
-                </tr>
-				<tr class="row-two">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td><button type="button" onClick="" class="settingbutton"><img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon"></button></td>
-					<td class="code">
-						<button type="button" onClick="" class="settingbutton"><img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon"></button>
-					</td>
-					<td class="code">
-						.settingsicon{
-							width: 25px;
-						}
-						.settingbutton{
-							border: none;
-							display: block;
-							cursor: pointer;
-							background-color: transparent;
-						}
-					</td>
-                  <td> JavaScript for 'tandhjul' </td>
-                </tr>
-				<!--Knapper til dropdown tanhjul mnu-->
-				<tr class="row-two">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/edit.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td>
-						<button type="button" onclick="" class="settingsmenubutton"><a>Edit</a> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon"></button>
-					</td>
-					<td class="code">
-						<button type="button" onclick="" class="settingsmenubutton"><a>Edit</a> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon"></button>
-					</td>
-					<td class="code">
-						.settingsmenubutton{
-    display: block;
-    width: 225px;
-    margin: 0 auto;
-    text-align: center;
-    border: #000000;
-    border-radius: 12px;
-    margin-bottom: 5px;
-    cursor: pointer;
-}
-.settingsmenubutton a{
-    float: left;
-    color: #848484;
-    font-size: 19px;
-    margin-left: 7px;
-}
-.settingsmenuicon{
-    float: right;
-    margin-right: 7px;
-    width: 20px;
-}
-					</td>
-                  <td> JavaScript for 'tandhjul' </td>
-                </tr>
-				<tr class="row-two">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/eye.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td>
-					    <button type="button" onclick="" class="settingsmenubutton"><a>Show</a> <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon"></button>
-					</td>
-					<td class="code">
-						<button type="button" onclick="" class="settingsmenubutton"><a>Show</a> <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon"></button>
-					</td>
-					<td class="code">
-						.settingsmenubutton{
-    display: block;
-    width: 225px;
-    margin: 0 auto;
-    text-align: center;
-    border: #000000;
-    border-radius: 12px;
-    margin-bottom: 5px;
-    cursor: pointer;
-}
-.settingsmenubutton a{
-    float: left;
-    color: #848484;
-    font-size: 19px;
-    margin-left: 7px;
-}
-.settingsmenuicon{
-    float: right;
-    margin-right: 7px;
-    width: 20px;
-}
-					</td>
-                  <td> JavaScript for 'tandhjul' </td>
-                </tr>
-				<tr class="row-two">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/calendar.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td>
-					    <button type="button" onclick="" class="settingsmenubutton"><a>Schedule</a> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
-					</td>
-					<td class="code">
-						<button type="button" onclick="" class="settingsmenubutton"><a>Schedule</a> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
-					</td>
-					<td class="code">
-.settingsmenubutton{
-    display: block;
-    width: 225px;
-    margin: 0 auto;
-    text-align: center;
-    border: #000000;
-    border-radius: 12px;
-    margin-bottom: 5px;
-    cursor: pointer;
-}
-.settingsmenubutton a{
-    float: left;
-    color: #848484;
-    font-size: 19px;
-    margin-left: 7px;
-}
-.settingsmenuicon{
-    float: right;
-    margin-right: 7px;
-    width: 20px;
-}
-					</td>
-                  <td> JavaScript for 'tandhjul' </td>
-                </tr>
-				<tr class="row-two">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/share-2.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td>
-					    <button type="button" onclick="" class="settingsmenubutton"><a>Share</a> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
-					</td>
-					<td class="code">
-						<button type="button" onclick="" class="settingsmenubutton"><a>Share</a> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
-					</td>
-					<td class="code">
-.settingsmenubutton{
-    display: block;
-    width: 225px;
-    margin: 0 auto;
-    text-align: center;
-    border: #000000;
-    border-radius: 12px;
-    margin-bottom: 5px;
-    cursor: pointer;
-}
-.settingsmenubutton a{
-    float: left;
-    color: #848484;
-    font-size: 19px;
-    margin-left: 7px;
-}
-.settingsmenuicon{
-    float: right;
-    margin-right: 7px;
-    width: 20px;
-}
-					</td>
-                  <td> JavaScript for 'tandhjul' </td>
-                </tr>
-				<tr class="row-two">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/save.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td>
-					    <button type="button" onclick="" class="settingsmenubutton"><a>Save as..</a><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
-					</td>
-					<td class="code">
-						<button type="button" onclick="" class="settingsmenubutton"><a>Save as..</a><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
-					</td>
-					<td class="code">
-.settingsmenubutton{
-    display: block;
-    width: 225px;
-    margin: 0 auto;
-    text-align: center;
-    border: #000000;
-    border-radius: 12px;
-    margin-bottom: 5px;
-    cursor: pointer;
-}
-.settingsmenubutton a{
-    float: left;
-    color: #848484;
-    font-size: 19px;
-    margin-left: 7px;
-}
-.settingsmenuicon{
-    float: right;
-    margin-right: 7px;
-    width: 20px;
-}
-					</td>
-                  <td> JavaScript for 'tandhjul' </td>
-                </tr>
-				<tr class="row-two">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/printer.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td>
-						<button type="button" onclick="" class="settingsmenubutton"><a>Print</a><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
-					</td>
-					<td class="code">
-						<button type="button" onclick="" class="settingsmenubutton"><a>Print</a><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
-					</td>
-					<td class="code">
-						.settingsmenubutton{
-    display: block;
-    width: 225px;
-    margin: 0 auto;
-    text-align: center;
-    border: #000000;
-    border-radius: 12px;
-    margin-bottom: 5px;
-    cursor: pointer;
-}
-.settingsmenubutton a{
-    float: left;
-    color: #848484;
-    font-size: 19px;
-    margin-left: 7px;
-}
-.settingsmenuicon{
-    float: right;
-    margin-right: 7px;
-    width: 20px;
-}
-					</td>
-                  <td> JavaScript for 'tandhjul' </td>
-                </tr>
-				<tr class="row-two">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/trash.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td>
-						<button type="button" onclick="" class="settingsmenubutton"><a>Delete</a><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
-					</td>
-					<td class="code">
-						<button type="button" onclick="" class="settingsmenubutton"><a>Delete</a><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
-					</td>
-					<td class="code">
-						.settingsmenubutton{
-    display: block;
-    width: 225px;
-    margin: 0 auto;
-    text-align: center;
-    border: #000000;
-    border-radius: 12px;
-    margin-bottom: 5px;
-    cursor: pointer;
-}
-.settingsmenubutton a{
-    float: left;
-    color: #848484;
-    font-size: 19px;
-    margin-left: 7px;
-}
-.settingsmenuicon{
-    float: right;
-    margin-right: 7px;
-    width: 20px;
-}
-					</td>
-                  <td> JavaScript for 'tandhjul' </td>
-                </tr>
-
-            </table>
-  <!-- molekyle tabel for 'Tandhjul-ikon'-->
-        <h4>Tandhjul</h4>
-            <!-- række 1 i tabel -->
-            <table class="overviewmolekyler">
-                  <tr class="row-one">
-                    <th>Atomer</th>
-                    <th>Molekyle</th>
-                    <th>HTML</th>
-                    <th>CSS</th>
-                    <th>JavaScript</th>
-                  </tr>
-                <!-- række 1 i tabel - slut-->
-                <!-- række 2 i tabel -->
-                <tr class="row-two">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon">
-						</li>
-					</td>
-					<td>
-						<button type="button" onClick="" class="settingbutton"><img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon"></button>
-					</td>
-					<td class="code">
-						<button type="button" onClick="" class="settingbutton"><img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon"></button>
-					</td>
-					<td class="code">
-						.settingsicon{
-							width: 25px;
-						}
-						.settingbutton{
-							border: none;
-							display: block;
-							cursor: pointer;
-							background-color: transparent;
-						}
-					</td>
-                  <td> JavaScript for 'tandhjul' </td>
-                </tr>
-            </table>
-            <!-- række 2 i tabel - slut -->
-  <!-- molekyle tabel for 'Tandhjul-ikon' - slut -->
-
-  <!--molecule for 'Tandhjul 1/kog' menu - start -->
-		<h4>Tandhjul 1 menu</h4>
-            <!-- række 1 i tabel -->
-            <table class="overviewmolekyler">
-                  <tr class="row-one">
-                    <th>Atomer</th>
-                    <th>Molekyle</th>
-                    <th>HTML</th>
-                    <th>CSS</th>
-                    <th>JavaScript</th>
-                  </tr>
-                <!-- række 1 i tabel - slut-->
-                <!-- række 2 i tabel -->
-                <tr class="row-two">
-					<!--Atoms-->
-					<td>
-						<li>
-							<button type="button" onClick="" class="">button tag</button>
-						</li>
-						<li>
-							<button type="button" onClick="" class=""><a>Edit</a> <img class="" src="img/icons/edit.svg" alt="editicon"></button>
-						</li>
-						<li>
-							<img class="" src="img/icons/edit.svg" alt="editicon">
-						</li>
-						<li>
-						<button type="button" onClick="" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
-						</li>
-					</td>
-					<!--Molecule-->
-					<td>
-						<div class="settingsmenu">
-							<button type="button" onClick="" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Edit</a> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Show</a> <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Schedule</a> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Share</a> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Save as..</a><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Print</a><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Delete</a><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
+						<div class="texteditdiv">
+							Size
+							<button type="" onclick="" class="texteditbutton">
+								<a>Choose..</a>
+								<img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+							</button>
 						</div>
 					</td>
+					<td class="code">
+						.texteditdiv{
+							float: left;
+							font-size: 20px;
+						}
+						.texteditdiv img{
+							float: right;
+						}
+						.texteditbutton{
+							background-color: #fff;
+							border-color: #000;
+							border-radius: 12px;
+							width: 200px;
+							cursor: pointer;
+							display: block;
+							float: right;
+						}
+						.texteditbutton a{
+							float: left;
+							color: #000;
+							font-size: 19px;
+							margin-left: 7px;
+						}
+					</td>
+					<td class="empty"></td>
+                </tr>
+			</table>
+		</div>
+	</article>
+	<article id="id">
+		<div class="wrapper">
+			<h4>SnippetTittle</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="texteditdiv">
+					Weight
+					<button type="" onclick="" class="texteditbutton">
+						<a>Choose..</a>
+						<img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+					</button>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<div class="texteditdiv">
+							Weight
+							<button type="" onclick="" class="texteditbutton">
+								<a>Choose..</a>
+								<img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+							</button>
+						</div>
+					</td>
+					<td class="code">
+						.texteditdiv{
+							float: left;
+							font-size: 20px;
+						}
+						.texteditdiv img{
+							float: right;
+						}
+						.texteditbutton{
+							background-color: #fff;
+							border-color: #000;
+							border-radius: 12px;
+							width: 200px;
+							cursor: pointer;
+							display: block;
+							float: right;
+						}
+						.texteditbutton a{
+							float: left;
+							color: #000;
+							font-size: 19px;
+							margin-left: 7px;
+						}
+					</td>
+					<td class="empty"></td>
+                </tr>
+			</table>
+		</div>
+	</article>
+	<!--Knapper til pop-up-->
+	<article id="id">
+		<div class="wrapper">
+			<h4>SnippetTittle</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button type="button" onClick="" class="settingbutton">
+					<img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon">
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<button type="button" onClick="" class="settingbutton">
+							<img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon">
+						</button>
+					</td>
+					<td class="code">
+						.settingsicon{
+							width: 25px;
+						}
+						.settingbutton{
+							border: none;
+							display: block;
+							cursor: pointer;
+							background-color: transparent;
+						}
+					</td>
+					<td class="empty"></td>
+                </tr>
+			</table>
+		</div>
+	</article>
+	<article id="settings-knap">
+		<div class="wrapper">
+			<h4>Settings knap</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button type="button" onClick="" class="settingbutton">
+					<img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon">
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<button type="button" onClick="" class="settingbutton">
+							<img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon">
+						</button>
+					</td>
+					<td class="code">
+						.settingsicon{
+							width: 25px;
+						}
+						.settingbutton{
+							border: none;
+							display: block;
+							cursor: pointer;
+							background-color: transparent;
+						}
+					</td>
+					<td class="empty"></td>
+                </tr>
+			</table>
+		</div>
+	</article>
+	<article id="tandhjul">
+		<div class="wrapper">
+			<h4>Tandhjul</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button type="button" onClick="" class="settingbutton">
+					<img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon">
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<button type="button" onClick="" class="settingbutton">
+							<img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon">
+						</button>
+					</td>
+					<td class="code">
+						.settingsicon{
+							width: 25px;
+						}
+						.settingbutton{
+							border: none;
+							display: block;
+							cursor: pointer;
+							background-color: transparent;
+						}
+					</td>
+					<td class="empty"></td>
+                </tr>
+			</table>
+		</div>
+	</article>
+	<!--Knapper til dropdown tanhjul menu-->
+	<article id="edit-knap">
+		<div class="wrapper">
+			<h4>Edit knap</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button type="button" onclick="" class="settingsmenubutton">
+					<a>Edit</a>
+					<img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon">
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<button type="button" onclick="" class="settingsmenubutton">
+							<a>Edit</a>
+							<img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon">
+						</button>
+					</td>
+					<td class="code">
+						.settingsmenubutton{
+							display: block;
+							width: 225px;
+							margin: 0 auto;
+							text-align: center;
+							border: #000000;
+							border-radius: 12px;
+							margin-bottom: 5px;
+							cursor: pointer;
+						}
+						.settingsmenubutton a{
+							float: left;
+							color: #848484;
+							font-size: 19px;
+							margin-left: 7px;
+						}
+						.settingsmenuicon{
+							float: right;
+							margin-right: 7px;
+							width: 20px;
+						}
+					</td>
+					<td class="empty"></td>
+                </tr>
+			</table>
+		</div>
+	</article>
+	<article id="show-knap">
+		<div class="wrapper">
+			<h4>Show knap</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button type="button" onclick="" class="settingsmenubutton">
+					<a>Show</a>
+					<img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon">
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<button type="button" onclick="" class="settingsmenubutton">
+							<a>Show</a>
+							<img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon">
+						</button>
+					</td>
+					<td class="code">
+						.settingsmenubutton{
+							display: block;
+							width: 225px;
+							margin: 0 auto;
+							text-align: center;
+							border: #000000;
+							border-radius: 12px;
+							margin-bottom: 5px;
+							cursor: pointer;
+						}
+						.settingsmenubutton a{
+							float: left;
+							color: #848484;
+							font-size: 19px;
+							margin-left: 7px;
+						}
+						.settingsmenuicon{
+							float: right;
+							margin-right: 7px;
+							width: 20px;
+						}
+					</td>
+					<td class="empty"></td>
+                </tr>
+			</table>
+		</div>
+	</article>
+	<article id="schedule-knap">
+		<div class="wrapper">
+			<h4>Schedule knap</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button type="button" onclick="" class="settingsmenubutton">
+					<a>Schedule</a>
+					<img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon">
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<button type="button" onclick="" class="settingsmenubutton">
+							<a>Schedule</a>
+							<img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon">
+						</button>
+					</td>
+					<td class="code">
+						.settingsmenubutton{
+							display: block;
+							width: 225px;
+							margin: 0 auto;
+							text-align: center;
+							border: #000000;
+							border-radius: 12px;
+							margin-bottom: 5px;
+							cursor: pointer;
+						}
+						.settingsmenubutton a{
+							float: left;
+							color: #848484;
+							font-size: 19px;
+							margin-left: 7px;
+						}
+						.settingsmenuicon{
+							float: right;
+							margin-right: 7px;
+							width: 20px;
+						}
+					</td>
+					<td class="empty"></td>
+                </tr>
+			</table>
+		</div>
+	</article>
+	<article id="share-knap">
+		<div class="wrapper">
+			<h4>Share knap</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button type="button" onclick="" class="settingsmenubutton">
+					<a>Share</a>
+					<img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon">
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<button type="button" onclick="" class="settingsmenubutton">
+							<a>Share</a>
+							<img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon">
+						</button>
+					</td>
+					<td class="code">
+						.settingsmenubutton{
+							display: block;
+							width: 225px;
+							margin: 0 auto;
+							text-align: center;
+							border: #000000;
+							border-radius: 12px;
+							margin-bottom: 5px;
+							cursor: pointer;
+						}
+						.settingsmenubutton a{
+							float: left;
+							color: #848484;
+							font-size: 19px;
+							margin-left: 7px;
+						}
+						.settingsmenuicon{
+							float: right;
+							margin-right: 7px;
+							width: 20px;
+						}
+					</td>
+					<td class="empty"></td>
+                </tr>
+			</table>
+		</div>
+	</article>
+	<article id="save-as-knap">
+		<div class="wrapper">
+			<h4>Save as.. knap</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button type="button" onclick="" class="settingsmenubutton">
+					<a>Save as..</a>
+					<img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon">
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<button type="button" onclick="" class="settingsmenubutton">
+							<a>Save as..</a>
+							<img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon">
+						</button>
+					</td>
+					<td class="code">
+						.settingsmenubutton{
+							display: block;
+							width: 225px;
+							margin: 0 auto;
+							text-align: center;
+							border: #000000;
+							border-radius: 12px;
+							margin-bottom: 5px;
+							cursor: pointer;
+						}
+						.settingsmenubutton a{
+							float: left;
+							color: #848484;
+							font-size: 19px;
+							margin-left: 7px;
+						}
+						.settingsmenuicon{
+							float: right;
+							margin-right: 7px;
+							width: 20px;
+						}
+					</td>
+					<td class="empty"></td>
+                </tr>
+			</table>
+		</div>
+	</article>
+	<article id="print-knap">
+		<div class="wrapper">
+			<h4>Print knap</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button type="button" onclick="" class="settingsmenubutton">
+					<a>Print</a>
+					<img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon">
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<button type="button" onclick="" class="settingsmenubutton">
+							<a>Print</a>
+							<img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon">
+						</button>
+					</td>
+					<td class="code">
+						.settingsmenubutton{
+							display: block;
+							width: 225px;
+							margin: 0 auto;
+							text-align: center;
+							border: #000000;
+							border-radius: 12px;
+							margin-bottom: 5px;
+							cursor: pointer;
+						}
+						.settingsmenubutton a{
+							float: left;
+							color: #848484;
+							font-size: 19px;
+							margin-left: 7px;
+						}
+						.settingsmenuicon{
+							float: right;
+							margin-right: 7px;
+							width: 20px;
+						}
+					</td>
+					<td class="empty"></td>
+                </tr>
+			</table>
+		</div>
+	</article>
+	<article id="delete-knap">
+		<div class="wrapper">
+			<h4>Delete knap</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button type="button" onclick="" class="settingsmenubutton">
+					<a>Delete</a>
+					<img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon">
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<button type="button" onclick="" class="settingsmenubutton">
+							<a>Delete</a>
+							<img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon">
+						</button>
+					</td>
+					<td class="code">
+						.settingsmenubutton{
+							display: block;
+							width: 225px;
+							margin: 0 auto;
+							text-align: center;
+							border: #000000;
+							border-radius: 12px;
+							margin-bottom: 5px;
+							cursor: pointer;
+						}
+						.settingsmenubutton a{
+							float: left;
+							color: #848484;
+							font-size: 19px;
+							margin-left: 7px;
+						}
+						.settingsmenuicon{
+							float: right;
+							margin-right: 7px;
+							width: 20px;
+						}
+					</td>
+					<td class="empty"></td>
+                </tr>
+			</table>
+		</div>
+	</article>
+	<!--molecule for 'Tandhjul 1/kog' menu - start -->
+	<article id="tandhjul-menu-1">
+		<div class="wrapper">
+			<h4>Tandhjul 1 menu</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="settingsmenu">
+					<button type="button" onClick="" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><a>Edit</a> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><a>Show</a> <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><a>Schedule</a> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><a>Share</a> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><a>Save as..</a><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><a>Print</a><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><a>Delete</a><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+            <table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+                <tr class="row-two">
 					<!--HTML to copy-->
 					<td class="code">
 						<div class="settingsmenu">
@@ -1641,53 +2002,39 @@ margin-left: 7px;
 							width: 20px;
 						}
 					</td>
-                  <td> JavaScript for 'tandhjul menu' </td>
+					<td class="empty"></td>
                 </tr>
-            </table>
-            <!-- række 2 i tabel - slut -->
+			</table>
+		</div>
+	</article>
   <!--molecule for 'Tandhjul 1/kog' menu - done -->
   <!--molecule for 'Tandhjul 2/kog' menu - start -->
-		<h4>Tandhjul 2 menu</h4>
-            <!-- række 1 i tabel -->
+	<article id="tandhjul-menu-2">
+		<div class="wrapper">
+			<h4>Tandhjul 2 menu</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="settingsmenu-dark">
+					<button type="button" onClick="" class="closesettingmenu-dark"><img class="closesettingmenuicon-dark" src="img/icons/x-dark.svg" alt="xicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><a>Edit</a> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="edit icon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><a>Refresh</a> <img class="settingsmenuicon" src="img/icons/refresh.svg" alt="refresh icon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><a>Schedule</a> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><a>Share</a> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><a>Save as..</a><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><a>Print</a><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><a>Delete</a><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
             <table class="overviewmolekyler">
-                  <tr class="row-one">
-                    <th>Atomer</th>
-                    <th>Molekyle</th>
+                <tr class="row-one">
                     <th>HTML</th>
                     <th>CSS</th>
                     <th>JavaScript</th>
-                  </tr>
-                <!-- række 1 i tabel - slut-->
-                <!-- række 2 i tabel -->
+                </tr>
                 <tr class="row-two">
-					<!--Atoms-->
-					<td>
-						<li>
-							<button type="button" onClick="" class="">button tag</button>
-						</li>
-						<li>
-							<button type="button" onClick="" class=""><a>Edit</a> <img class="" src="img/icons/edit.svg" alt="editicon"></button>
-						</li>
-						<li>
-							<img class="" src="img/icons/edit.svg" alt="editicon">
-						</li>
-						<li>
-						<button type="button" onClick="" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
-						</li>
-					</td>
-					<!--Molecule-->
-					<td>
-						<div class="settingsmenu-dark">
-							<button type="button" onClick="" class="closesettingmenu-dark"><img class="closesettingmenuicon-dark" src="img/icons/x-dark.svg" alt="xicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Edit</a> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="edit icon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Refresh</a> <img class="settingsmenuicon" src="img/icons/refresh.svg" alt="refresh icon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Schedule</a> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Share</a> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Save as..</a><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Print</a><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Delete</a><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
-						</div>
-					</td>
 					<!--HTML to copy-->
 					<td class="code">
 						<div class="settingsmenu-dark">
@@ -1722,50 +2069,35 @@ margin-left: 7px;
 							padding-left: 12px;
 						}
 					</td>
-                  <td> JavaScript for 'tandhjul menu' </td>
+					<td class="empty"></td>
                 </tr>
-            </table>
-            <!-- række 2 i tabel - slut -->
-  <!--molecule for 'Tandhjul 2/kog' menu - done -->
-
-	  <!--molecule for 'Tandhjul 3/kog' menu - start -->
-		<h4>Tandhjul 3 menu</h4>
-            <!-- række 1 i tabel -->
+			</table>
+		</div>
+	</article>
+	<!--molecule for 'Tandhjul 2/kog' menu - done -->
+	<!--molecule for 'Tandhjul 3/kog' menu - start -->
+ 	<article id="tandhjul-menu-3">
+		<div class="wrapper">
+			<h4>Tandhjul 3 menu</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="settingsmenu">
+					<button type="button" onClick="" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><a>Share</a> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><a>Save as..</a><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><a>Delete</a><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
             <table class="overviewmolekyler">
                   <tr class="row-one">
-                    <th>Atomer</th>
-                    <th>Molekyle</th>
                     <th>HTML</th>
                     <th>CSS</th>
                     <th>JavaScript</th>
                   </tr>
-                <!-- række 1 i tabel - slut-->
-                <!-- række 2 i tabel -->
                 <tr class="row-two">
-					<!--Atoms-->
-					<td>
-						<li>
-							<button type="button" onClick="" class="">button tag</button>
-						</li>
-						<li>
-							<button type="button" onClick="" class=""><a>Edit</a> <img class="" src="img/icons/edit.svg" alt="editicon"></button>
-						</li>
-						<li>
-							<img class="" src="img/icons/edit.svg" alt="editicon">
-						</li>
-						<li>
-						<button type="button" onClick="" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
-						</li>
-					</td>
-					<!--Molecule-->
-					<td>
-						<div class="settingsmenu">
-							<button type="button" onClick="" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Share</a> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Save as..</a><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Delete</a><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
-						</div>
-					</td>
 					<!--HTML to copy-->
 					<td class="code">
 						<div class="settingsmenu">
@@ -1815,430 +2147,444 @@ margin-left: 7px;
 							width: 20px;
 						}
 					</td>
-                  <td> JavaScript for 'tandhjul menu' </td>
+					<td class="empty"></td>
                 </tr>
-            </table>
-            <!-- række 2 i tabel - slut -->
-  <!--molecule for 'Tandhjul 3/kog' menu - done -->
-
-  <!-- molekyle tabel for 'Opret ny rapport'-->
-      <h4>Opret ny rapport</h4>
-            <!-- række 1 i tabel -->
+			</table>
+		</div>
+	</article>
+	<!--molecule for 'Tandhjul 3/kog' menu - done -->
+	<!-- molekyle tabel for 'Opret ny rapport'-->
+	<article id="opret-ny-rapport">
+		<div class="wrapper">
+			<h4>Opret ny rapport</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button type="button" class="newreportbutton">
+					<img class="plusimg" src="img/icons/plus.svg" alt="new preort img">
+					<span class="newreportspan">New report</span>
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
             <table class="overviewmolekyler">
                 <tr class="row-one">
-                  <th>Atomer</th>
-                  <th>Molekyle</th>
                   <th>HTML</th>
                   <th>CSS</th>
                   <th>JavaScript</th>
                 </tr>
-              <!-- række 1 i tabel - slut -->
-              <!-- række 2 i tabel -->
-              <tr class="row-two">
-				  <td>
-					<li><button type="button">New report</button></li>
-					<li><img src="img/icons/plus.svg" alt="new report img"></li>
-				  </td>
-				  <td>
-					  <button type="button" class="newreportbutton"><img class="plusimg" src="img/icons/plus.svg" alt="new report img"><span class="newreportspan">New report</span></button>
-				  </td>
-				  <td class="code">
-					  <button type="button" class="newreportbutton"><img class="plusimg" src="img/icons/plus.svg" alt="new preort img"><span class="newreportspan">New report</span></button>
-				  </td>
-				  <td class="code">
-					  .newreportbutton{
-					  	border: none;
-					  	border-radius: 12px;
-					  	background-color: #00cd00;
-					  	width: 150px;
-					  	cursor: pointer;
-					  	display: grid;
-					  	grid-template-columns: auto auto;
-					  	align-content: center;
-					  }
-					  .newreportspan{
-						font-size: 18px;
-						display: grid;
-					  }
-					  .plusimg{
-						display: grid;
-						margin: 0 0 0 auto;
-					  }
-				  </td>
-                <td> JavaScript for 'opret ny rapport' </td>
-              </tr>
-          </table>
-            <!-- række 2 i tabel - slut -->
+				<tr class="row-two">
+					<td class="code">
+						<button type="button" class="newreportbutton">
+							<img class="plusimg" src="img/icons/plus.svg" alt="new preort img">
+							<span class="newreportspan">New report</span>
+						</button>
+					</td>
+					<td class="code">
+						.newreportbutton{
+							border: none;
+							border-radius: 12px;
+							background-color: #00cd00;
+							width: 150px;
+							cursor: pointer;
+							display: grid;
+							grid-template-columns: auto auto;
+							align-content: center;
+						}
+						.newreportspan{
+							font-size: 18px;
+							display: grid;
+						}
+						.plusimg{
+							display: grid;
+							margin: 0 0 0 auto;
+						}
+					</td>
+					<td class="empty"></td>
+				</tr>
+			</table>
+			</table>
+		</div>
+	</article>
     <!-- molekyle tabel for 'Opret ny rapport' - slut-->
-
     <!-- molekyle tabel for 'Opret ny rapport'-->
-      <h4>Opret ny mappe / Create new folder</h4>
-          <!-- række 1 i tabel -->
-          <table class="overviewmolekyler">
+	<article id="opret-ny-mappe">
+		<div class="wrapper">
+			<h4>Opret ny mappe / Create new folder</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button title="">
+					<img src="placeholder" alt="placeholder">
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
                 <tr class="row-one">
-                  <th>Atomer</th>
-                  <th>Molekyle</th>
-                  <th>HTML</th>
-                  <th>CSS</th>
-                  <th>JavaScript</th>
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
                 </tr>
-              <!-- række 1 i tabel - slut -->
-              <!-- række 2 i tabel -->
-              <tr class="row-two">
-                <td><li>Button tag</li><li>Img</li></td>
-                <td><button title=""><img src="placeholder" alt="placeholder"> </button></td>
-                <td> <button title=""><img src="placeholder" alt="placeholder"> </button> </td>
-                <td> CSS for 'opret ny mappe / create new folder' </td>
-                <td> JavaScript for 'opret ny mappe / create new folder' </td>
-              </tr>
-          </table>
-          <!-- række 2 i tabel - slut -->
-    <!-- molekyle tabel for 'Opret ny mappe / create new folder' - slut-->
-
+				<tr class="row-two">
+					<td class="code">
+						<button title="">
+							<img src="placeholder" alt="placeholder">
+						</button>
+					</td>
+					<!-- CSS -->
+					<td class="empty"></td>
+					<!-- JavaScript -->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<!-- molekyle tabel for 'Opret ny mappe / create new folder' - slut-->
     <!-- molekyle tabel for switch knapper -->
-      <h4>Switch knapper</h4>
-          <!-- række 1 i tabel -->
-          <table class="overviewmolekyler">
-              <tr class="row-one">
-                <th>Atomer</th>
-                <th>Molekyle</th>
-                <th>HTML</th>
-                <th>CSS</th>
-                <th>JavaScript</th>
-              </tr>
-            <!-- række 1 i tabel - slut -->
-            <!-- række 2 i tabel -->
-            <tr class="row-two">
-              <td><li>div</li><li>input</li><li>label</li><li>span</li></td>
-              <td>
+	<article id="id">
+		<div class="wrapper">
+			<h4>Switch knapper</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="switch">
+					<input type="radio" class="switch-input" name="view3" value="week3" id="indsæt1" checked>
+					<label for="indsæt1" class="switch-label switch-label-off">Vertical</label>
+					<input type="radio" class="switch-input" name="view3" id="indsæt2">
+					<label for=indsæt2 class="switch-label switch-label-on">Horizontal</label>
+					<span class="switch-selection"></span>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<div class="switch">
+							<input type="radio" class="switch-input" name="view3" value="week3" id="indsæt1" checked>
+							<label for="indsæt1" class="switch-label switch-label-off">Vertical</label>
+							<input type="radio" class="switch-input" name="view3" id="indsæt2">
+							<label for=indsæt2 class="switch-label switch-label-on">Horizontal</label>
+							<span class="switch-selection"></span>
+						</div>
+					</td>
+					<td class="code">
+						.switch {
+							position: relative;
+							margin: 20px auto;
+							height: 26px;
+							width: 120px;
+							background: white;
+							border-radius: 15px;
+						}
 
-                    <div class="switch">
-                      <input type="radio" class="switch-input" name="view" id="preview" checked>
-                      <label for="preview" class="switch-label switch-label-off">Preview</label>
-                      <input type="radio" class="switch-input" name="view" id="list">
-                      <label for="list" class="switch-label switch-label-on">List</label>
-                      <span class="switch-selection"></span>
-                    </div>
+						.switch-label {
+							position: relative;
+							z-index: 2;
+							float: left;
+							width: 58px;
+							line-height: 26px;
+							font-size: 11px;
+							color: black;
+							text-align: center;
+							cursor: pointer;
+						}
+						.switch-label:active {
+							font-weight: regular;
+						}
 
-                    <div class="switch">
-                      <input type="radio" class="switch-input" name="view2" value="week2" id="singular" checked>
-                      <label for="singular" class="switch-label switch-label-off">Singular</label>
-                      <input type="radio" class="switch-input" name="view2" value="month2" id="multiple">
-                      <label for="multiple" class="switch-label switch-label-on">Multiple</label>
-                      <span class="switch-selection"></span>
-                    </div>
+						.switch-label-off {
+							padding-left: 2px;
+						}
 
-                    <div class="switch">
-                      <input type="radio" class="switch-input" name="view3" value="week3" id=vertical checked>
-                      <label for="vertical" class="switch-label switch-label-off">Vertical</label>
-                      <input type="radio" class="switch-input" name="view3" id="horizontal">
-                      <label for=horizontal class="switch-label switch-label-on">Horizontal</label>
-                      <span class="switch-selection"></span>
-                    </div>
+						.switch-label-on {
+							padding-right: 2px;
+						}
 
-              </td>
-              <td class="code">
-                <div class="switch">
-                  <input type="radio" class="switch-input" name="view3" value="week3" id="indsæt1" checked>
-                  <label for="indsæt1" class="switch-label switch-label-off">Vertical</label>
-                  <input type="radio" class="switch-input" name="view3" id="indsæt2">
-                  <label for=indsæt2 class="switch-label switch-label-on">Horizontal</label>
-                  <span class="switch-selection"></span>
-                </div>
-				      </td>
-              <td class="code">
-                .switch {
-                  position: relative;
-                  margin: 20px auto;
-                  height: 26px;
-                  width: 120px;
-                  background: white;
-                  border-radius: 15px;
-                }
+						.switch-input {
+							display: none;
+						}
 
-                .switch-label {
-                  position: relative;
-                  z-index: 2;
-                  float: left;
-                  width: 58px;
-                  line-height: 26px;
-                  font-size: 11px;
-                  color: black;
-                  text-align: center;
-                  cursor: pointer;
-                }
-                .switch-label:active {
-                  font-weight: regular;
-                }
+						.switch-input:checked + .switch-label {
+							font-weight: regular;
+							color: black;
+						}
 
-                .switch-label-off {
-                  padding-left: 2px;
-                }
+						.switch-input:checked + .switch-label-on ~ .switch-selection {
+							left: 60px;
+						}
 
-                .switch-label-on {
-                  padding-right: 2px;
-                }
-
-                .switch-input {
-                  display: none;
-                }
-
-                .switch-input:checked + .switch-label {
-                  font-weight: regular;
-                  color: black;
-                }
-
-                .switch-input:checked + .switch-label-on ~ .switch-selection {
-                  left: 60px;
-                }
-
-                .switch-selection {
-                  display: block;
-                  position: absolute;
-                  z-index: 1;
-                  top: 2px;
-                  left: 2px;
-                  width: 58px;
-                  height: 22px;
-                  background: #00CD00;
-                  border-radius: 15px;
-                }
-              <br>
-              </td>
-              <td> JavaScript</td>
-            </tr>
-          </table>
-          <!-- række 2 i tabel - slut -->
+						.switch-selection {
+							display: block;
+							position: absolute;
+							z-index: 1;
+							top: 2px;
+							left: 2px;
+							width: 58px;
+							height: 22px;
+							background: #00CD00;
+							border-radius: 15px;
+						}
+					</td>
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
     <!-- molekyle tabel for switch knapper- slut-->
-
     <!-- molekyle tabel for MEGASWITCH-->
-      <h4>MEGASWITCH</h4>
-      <!-- række 1 i tabel -->
-          <table class="overviewmolekyler">
-              <tr class="row-one">
-                <th>Atomer</th>
-                <th>Molekyle</th>
-                <th>HTML</th>
-                <th>CSS</th>
-                <th>JavaScript</th>
-              </tr>
-            <!-- række 1 i tabel - slut-->
-            <!-- række 2 i tabel -->
-            <tr class="row-two">
-              <td><li>div</li><li>input</li><li>label</li><li>span</li></td>
-              <td>
-                <div class="megaswitch">
-                  <input type="radio" class="switch-input0" name="view4" id="a1" checked>
-                  <label for="a1" class="switch-label0 switch-label-off0">A1</label>
+	<article id="megaswitch">
+		<div class="wrapper">
+			<h4>MEGASWITCH</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="megaswitch">
+					<input type="radio" class="switch-input0" name="view4" id="a1" checked>
+					<label for="a1" class="switch-label0 switch-label-off0">A1</label>
 
-                  <input type="radio" class="switch-input0" name="view4" id="a2">
-                  <label for="a2" class="switch-label0 switch-label-on1">A2</label>
+					<input type="radio" class="switch-input0" name="view4" id="a2">
+					<label for="a2" class="switch-label0 switch-label-on1">A2</label>
 
-                  <input type="radio" class="switch-input0" name="view4" id="a3">
-                  <label for="a3" class="switch-label0 switch-label-on2">A3</label>
+					<input type="radio" class="switch-input0" name="view4" id="a3">
+					<label for="a3" class="switch-label0 switch-label-on2">A3</label>
 
-                  <input type="radio" class="switch-input0" name="view4" id="a4">
-                  <label for="a4" class="switch-label0 switch-label-on3">A4</label>
+					<input type="radio" class="switch-input0" name="view4" id="a4">
+					<label for="a4" class="switch-label0 switch-label-on3">A4</label>
 
-                  <span class="switch-selection0"></span>
-                </div>
-              </td>
-              <td class="code">
-                <div class="megaswitch">
-                  <input type="radio" class="switch-input0" name="view4" id="a1" checked>
-                  <label for="a1" class="switch-label0 switch-label-off0">A1</label>
+					<span class="switch-selection0"></span>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<div class="megaswitch">
+							<input type="radio" class="switch-input0" name="view4" id="a1" checked>
+							<label for="a1" class="switch-label0 switch-label-off0">A1</label>
 
-                  <input type="radio" class="switch-input0" name="view4" id="a2">
-                  <label for="a2" class="switch-label0 switch-label-on1">A2</label>
+							<input type="radio" class="switch-input0" name="view4" id="a2">
+							<label for="a2" class="switch-label0 switch-label-on1">A2</label>
 
-                  <input type="radio" class="switch-input0" name="view4" id="a3">
-                  <label for="a3" class="switch-label0 switch-label-on2">A3</label>
+							<input type="radio" class="switch-input0" name="view4" id="a3">
+							<label for="a3" class="switch-label0 switch-label-on2">A3</label>
 
-                  <input type="radio" class="switch-input0" name="view4" id="a4">
-                  <label for="a4" class="switch-label0 switch-label-on3">A4</label>
+							<input type="radio" class="switch-input0" name="view4" id="a4">
+							<label for="a4" class="switch-label0 switch-label-on3">A4</label>
 
-                  <span class="switch-selection0"></span>
-                </div>
-              </td>
-              <td class="code">
-                  .megaswitch {
-                  position: relative;
-                  margin: 20px auto;
-                  height: 26px;
-                  width: 240px;
-                  background: white;
-                  border-radius: 15px;
-                }
-                /*slut*/
+							<span class="switch-selection0"></span>
+						</div>
+					</td>
+					<td class="code">
+						.megaswitch {
+							position: relative;
+							margin: 20px auto;
+							height: 26px;
+							width: 240px;
+							background: white;
+							border-radius: 15px;
+						}
+						/*slut*/
 
-                /*style for labels*/
-                .switch-label0 {
-                  position: relative;
-                  z-index: 2;
-                  float: left;
-                  width: 58px;
-                  line-height: 26px;
-                  font-size: 11px;
-                  color: black;
-                  text-align: center;
-                  cursor: pointer;
-                }
-                .switch-label0:active {
-                  font-weight: regular;
-                }
+						/*style for labels*/
+						.switch-label0 {
+							position: relative;
+							z-index: 2;
+							float: left;
+							width: 58px;
+							line-height: 26px;
+							font-size: 11px;
+							color: black;
+							text-align: center;
+							cursor: pointer;
+						}
+						.switch-label0:active {
+							font-weight: regular;
+						}
 
-                .switch-label-off0 {
-                  padding-left: 2px;
-                }
+						.switch-label-off0 {
+							padding-left: 2px;
+						}
 
-                .switch-label-on0 {
-                  padding-right: 2px;
-                }
-                /*slut*/
+						.switch-label-on0 {
+							padding-right: 2px;
+						}
+						/*slut*/
 
-                /*style for labels*/
-                .switch-input0 {
-                  display: none;
-                }
-                /*slut*/
+						/*style for labels*/
+							.switch-input0 {
+							display: none;
+						}
+						/*slut*/
 
-                /*styling for hvor den runde grønne knap (.switch-selector) skal rykke sig hen alt efter hvilket hvilket label der bliver "checked" */
-                .switch-input0:checked + .switch-label0 {
-                  font-weight: bold;
-                  color: black;
-                }
+						/*styling for hvor den runde grønne knap (.switch-selector) skal rykke sig hen alt efter hvilket hvilket label der bliver "checked" */
+						.switch-input0:checked + .switch-label0 {
+							font-weight: bold;
+							color: black;
+						}
 
-                .switch-input0:checked + .switch-label-on1 ~ .switch-selection0 {
-                  left: 60px;
-                }
+						.switch-input0:checked + .switch-label-on1 ~ .switch-selection0 {
+							left: 60px;
+						}
 
-                .switch-input0:checked + .switch-label-on2 ~ .switch-selection0 {
-                  left: 120px;
-                }
+						.switch-input0:checked + .switch-label-on2 ~ .switch-selection0 {
+							left: 120px;
+						}
 
-                .switch-input0:checked + .switch-label-on3 ~ .switch-selection0 {
-                  left: 180px;
-                }
-                /*slut*/
+						.switch-input0:checked + .switch-label-on3 ~ .switch-selection0 {
+							left: 180px;
+						}
+						/*slut*/
 
-                /*style for den runde grønne knap der switcher fra højre til venstre*/
-                .switch-selection0 {
-                  display: block;
-                  position: absolute;
-                  z-index: 1;
-                  top: 2px;
-                  left: 2px;
-                  width: 58px;
-                  height: 22px;
-                  background: #00CD00;
-                  border-radius: 15px;
-                }
-              </td>
-              <td> indsæt JavaScript kode</td>
-            </tr>
-          </table>
-      <!-- række 2 i tabel - slut -->
+						/*style for den runde grønne knap der switcher fra højre til venstre*/
+						.switch-selection0 {
+							display: block;
+							position: absolute;
+							z-index: 1;
+							top: 2px;
+							left: 2px;
+							width: 58px;
+							height: 22px;
+							background: #00CD00;
+							border-radius: 15px;
+						}
+					</td>
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
     <!-- molekyle tabel for MEGASWITCH - slut-->
-
-
     <!-- molekyle tabel for 'søg'-->
-      <h4>Søg</h4>
-          <!-- række 1 i tabel -->
-          <table class="overviewmolekyler">
-            <tr class="row-one">
-              <th>Atomer</th>
-              <th>Molekyle</th>
-              <th>HTML</th>
-              <th>CSS</th>
-              <th>JavaScript</th>
-            </tr>
-            <!-- række 1 i tabel - slut-->
-            <!-- række 2 i tabel -->
-              <tr class="row-two">
-                  <td><li>?</li><li>?</li></td>
-                  <td>indsæt molekyle</td>
-                  <td> indsæt html kode - "læsbar/ikke aktiv kode" </td>
-                  <td> indsæt css kode - "læsbar/ikke aktiv kode" </td>
-                <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
-              </tr>
-            </table>
-            <!-- række 2 i tabel - slut -->
-      <!-- molekyle tabel for 'søg' - slut -->
-
-      <!-- molekyle tabel for 'View all pages'-->
-        <h4>View all pages</h4>
-            <!-- række 1 i tabel -->
+	<article id="soeg">
+		<div class="wrapper">
+			<h4>Søg</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!-- HTML -->
+					<td class="empty"></td>
+					<!-- CSS -->
+					<td class="empty"></td>
+					<!-- JavaScript -->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<!-- molekyle tabel for 'søg' - slut -->
+	<!-- molekyle tabel for 'View all pages'-->
+	<article id="view-all-pages">
+		<div class="wrapper">
+			<h4>View all pages</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				
+			</div>
+		</div>
+		<div class="wrapper">
             <table class="overviewmolekyler">
-              <tr class="row-one">
-                <th>Atomer</th>
-                <th>Molekyle</th>
-                <th>HTML</th>
-                <th>CSS</th>
-                <th>JavaScript</th>
-              </tr>
-              <!-- række 1 i tabel - slut-->
-              <!-- række 2 i tabel -->
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
                 <tr class="row-two">
-                    <td><li>atom</li><li>atom</li></td>
-                    <td>indsæt molekyle</td>
-                    <td> indsæt html kode - "læsbar/ikke aktiv kode" </td>
-                    <td> indsæt css kode - "læsbar/ikke aktiv kode" </td>
-                  <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
+					<!-- HTML -->
+					<td class="empty"></td>
+					<!-- CSS -->
+					<td class="empty"></td>
+					<!-- JavaScript -->
+					<td class="empty"></td>
                 </tr>
-              </table>
-              <!-- række 2 i tabel - slut -->
-        <!-- molekyle tabel for 'View all pages' - slut -->
-
-        <!-- molekyle tabel for 'Refresh'-->
-          <h4>Refresh</h4>
-              <!-- række 1 i tabel -->
-              <table class="overviewmolekyler">
-                <tr class="row-one">
-                  <th>Atomer</th>
-                  <th>Molekyle</th>
-                  <th>HTML</th>
-                  <th>CSS</th>
-                  <th>JavaScript</th>
+			</table>
+		</div>
+	</article>
+	<!-- molekyle tabel for 'View all pages' - slut -->
+	<!-- molekyle tabel for 'Refresh'-->
+	<article id="refresh">
+		<div class="wrapper">
+			<h4>Refresh</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!-- HTML -->
+					<td class="empty"></td>
+					<!-- CSS -->
+					<td class="empty"></td>
+					<!-- JavaScript -->
+					<td class="empty"></td>
                 </tr>
-                <!-- række 1 i tabel - slut-->
-                <!-- række 2 i tabel -->
-                  <tr class="row-two">
-                      <td><li>atom</li><li>atom</li></td>
-                      <td>indsæt molekyle</td>
-                      <td> indsæt html kode - "læsbar/ikke aktiv kode" </td>
-                      <td> indsæt css kode - "læsbar/ikke aktiv kode" </td>
-                    <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
-                  </tr>
-                </table>
-                <!-- række 2 i tabel - slut -->
-          <!-- molekyle tabel for 'Refresh' - slut -->
-
-          <!-- molekyle tabel for 'Raport display-->
+			</table>
+		</div>
+	</article>
+	<!-- molekyle tabel for 'Refresh' - slut -->
+	<!-- molekyle tabel for 'Raport display-->
+	<article id="raport-display">
+		<div class="wrapper">
             <h4>Raport display</h4>
-                <!-- række 1 i tabel -->
-                <table class="overviewmolekyler">
-                  <tr class="row-one">
-                    <th>Atomer</th>
-                    <th>Molekyle</th>
-                    <th>HTML</th>
-                    <th>CSS</th>
-                    <th>JavaScript</th>
-                  </tr>
-                  <!-- række 1 i tabel - slut-->
-                  <!-- række 2 i tabel -->
-                    <tr class="row-two">
-                        <td><li>atom</li><li>atom</li></td>
-                        <td>indsæt molekyle</td>
-                        <td> indsæt html kode - "læsbar/ikke aktiv kode" </td>
-                        <td> indsæt css kode - "læsbar/ikke aktiv kode" </td>
-                      <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
-                    </tr>
-                  </table>
-                  <!-- række 2 i tabel - slut -->
-            <!-- molekyle tabel for 'Raport display' - slut -->
-
-  </div>
-<!-- SELTION 2 - ALLE MOLEKYLER FOR LØSNING - SLUT -->
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!-- HTML -->
+					<td class="empty"></td>
+					<!-- CSS -->
+					<td class="empty"></td>
+					<!-- JavaScript -->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<!-- molekyle tabel for 'Raport display' - slut -->
+</section>
+<!-- Molekyler - SLUT -->
 
 <!-- SEKTION 3 - ORGANISMER FOR LØSNING -->
   <div class="sektion3" id="organisms">
