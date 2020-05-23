@@ -482,6 +482,22 @@
 					</td>
 				</tr>
             </table>
+            <!-- JAVASCRIPT FOR STJERNE PRORITERINGS MOLEKYLE FORDI JEG IKKKE KAN SÆTTE DET I JAVASCRIPT DOKUMENT UDEN ALT FUCKER MVH. SIGNE -->
+            <script language="javascript">
+                function changeImage() {
+
+                    if (document.getElementById("imgClickAndChange").src == "img/icons/star.svg")
+                    {
+                        document.getElementById("imgClickAndChange").src = "img/icons/starfull.svg";
+                    }
+                    else
+                    {
+                        document.getElementById("imgClickAndChange").src = "img/icons/star.svg";
+                    }
+                }
+            </script>
+            <!-- JAVASCRIPT FOR STJERNE PRORITERINGS MOLEKYLE FORDI JEG IKKKE KAN SÆTTE DET I JAVASCRIPT DOKUMENT UDEN ALT FUCKER MVH. SIGNE -->
+            <!-- række 2 i tabel - slut -->
  		</div>
 	</article>
    <!-- Stjerne Prioritering - slut  -->
@@ -3013,7 +3029,8 @@
 	</article>
 	<div class="title-area">
 		<div class="wrapper">
-			<h3 id="sidetitlerogsettingsbar" class="styleguide-title">Pop ud delete</h3>
+			<!--Delete pou-up's -->
+			<h3 id="sidetitlerogsettingsbar" class="styleguide-title">Delete pop-up's</h3>
 		</div>
 	</div>
 	<article id="delete-report-pop-up">
@@ -3055,26 +3072,29 @@
 					</td>
 					<!--CSS to copy-->
 					<td class="code">
-						.popupdelete{
+						.popupdelete {
 							background-color: #262626;
 							text-align: center;
 							width: 400px;
 							height: 220px;
 							border-radius: 12px;
 						}
-						.popupdelete span{
+
+						.popupdelete span {
 							color: #fff;
 							margin: 50px auto;
 							display: block;
 						}
-						.popupdeletebuttons{
+
+						.popupdeletebuttons {
 							display: grid;
 							grid-template-columns: auto auto;
 							float: none;
 							width: 100%;
 							margin: 0 auto;
 						}
-						.cancel{
+
+						.cancel {
 							background-color: #fff;
 							text-align: center;
 							border: none;
@@ -3084,7 +3104,8 @@
 							height: 50px;
 							cursor: pointer;
 						}
-						.delete{
+
+						.delete {
 							background-color: #DF5539;
 							color: #fff;
 							text-align: center;
@@ -3096,7 +3117,7 @@
 							cursor: pointer;
 						}
 					</td>
-					  <!--Js to copy-->
+					<!--Js to copy-->
 					<td class="empty"></td>
 				</tr>
 			</table>
@@ -3115,6 +3136,7 @@
 						<button type="button" class="delete">Delete</button>
 					</div>
 				</div>
+<<<<<<< HEAD
 			</div>
 		</div>
 		<div class="wrapper">
@@ -3137,26 +3159,29 @@
 					</td>
 					<!--CSS to copy-->
 					<td class="code">
-						.popupdelete{
+						.popupdelete {
 							background-color: #262626;
 							text-align: center;
 							width: 400px;
 							height: 220px;
 							border-radius: 12px;
 						}
-						.popupdelete span{
+
+						.popupdelete span {
 							color: #fff;
 							margin: 50px auto;
 							display: block;
 						}
-						.popupdeletebuttons{
+
+						.popupdeletebuttons {
 							display: grid;
 							grid-template-columns: auto auto;
 							float: none;
 							width: 100%;
 							margin: 0 auto;
 						}
-						.cancel{
+
+						.cancel {
 							background-color: #fff;
 							text-align: center;
 							border: none;
@@ -3166,7 +3191,8 @@
 							height: 50px;
 							cursor: pointer;
 						}
-						.delete{
+
+						.delete {
 							background-color: #DF5539;
 							color: #fff;
 							text-align: center;
@@ -3190,14 +3216,18 @@
 			<h3 id="sidetitlerogsettingsbar" class="styleguide-title"> Side titler og settings bar</h3>
 		</div>
 	</div>
+	<div class="title-area">
+		<div class="wrapper">
+			<h3 id="sidetitlerogsettingsbar"> Side titler og settings bar</h3>
+		</div>
+	</div>
 	<article id="id">
 		<div class="wrapper">
-			<h4>SnippetTittle</h4>
 			<h4 class="styleguide-title">Side titel og settings bar for overview-side</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
- <!--organisme for stor til at være i table -->
+	<!--organisme for stor til at være i table -->
   <div class="frameforsidetitelogsettingsbar">
 
     <div class="sidetitelogsettingswrap">
@@ -3760,13 +3790,40 @@
 			<h3 id="uploadpopup" class="styleguide-title">Ulpoad pop-up's</h3>
 		</div>
 	</div>
+	<!-- Upload template pop-up -->
 	<article id="upload-template-pop-up">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Upload template pop-up</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				
+        <!-- eksempel for upload pop-up -->
+            <div class="frameforuploadpopup">
+
+              <div class="uploadpopuptitelwrap">
+                  <img src="img/icons/upload.svg" width="40px" height="40px" alt="">
+                  <h1 class="uploadtemplate">Upload a template</h1>
+              </div>
+
+              <!-- upload template knap -->
+              <div class="uploadtemplateknap">
+                <p class="typetext">Upload template</p>
+                  <button type="" onclick="" class="typebutton">
+                    <a class="typebuttontext">Choose...</a>
+                    <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+                  </button>
+              </div>
+              <!-- upload template knap - slut-->
+
+              <!-- cancel knap -->
+
+              <!-- cancel knap slut - slut-->
+
+              <!-- done knap -->
+
+              <!-- done - slut-->
+            </div>
+        <!-- eksempel for upload pop-up - slut-->
 			</div>
 		</div>
 		<div class="wrapper">
@@ -3779,9 +3836,53 @@
 				<tr class="row-two">
 					<!-- HTML -->
 					<td class="code">
+            <div class="frameforuploadpopup">
+
+              <div class="uploadpopuptitelwrap">
+                  <img src="img/icons/x.svg" width="40px" height="40px" alt="">
+                  <img src="img/icons/upload.svg" width="40px" height="40px" alt="">
+                  <h1 class="uploadtemplate">Upload a template</h1>
+              </div>
+
+              <!-- upload template knap -->
+              <div class="uploadtemplateknap">
+                <p class="typetext">Upload template</p>
+                  <button type="" onclick="" class="typebutton">
+                    <a class="typebuttontext">Choose...</a>
+                    <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+                  </button>
+              </div>
+              <!-- upload template knap - slut-->
+
+              <!-- cancel knap -->
+
+              <!-- cancel knap slut - slut-->
+
+              <!-- done knap -->
+
+              <!-- done - slut-->
 					</td>
 					<!-- CSS -->
 					<td class="code">
+            .frameforuploadpopup {
+            	background-color: #D3D3D3;
+            	width: 425px;
+              height: 150px;
+            	border-radius: 5px;
+            }
+
+            .uploadtemplate {
+            	margin-top: -10px;
+            }
+
+            .uploadpopuptitelwrap {
+            	margin-top: 15px;
+            }
+
+            .uploadpopuptitelwrap, .uploadtemplateknap{
+            	margin-left: 10px;
+            	margin-right: 10px;
+            }
 					</td>
 					<!-- JavaScript -->
 					<td class="code">
