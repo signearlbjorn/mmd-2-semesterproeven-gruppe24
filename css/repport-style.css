@@ -324,7 +324,7 @@ h3 {
 	margin-top: 5px;
 }
 
-/*Here starts code for 'new report bbutton'*/
+/*Here starts code for 'new report button'*/
 .newreportbutton{
 	border: none;
 	border-radius: 12px;
@@ -678,6 +678,17 @@ margin-left: 7px;
 }
 .lightbg{
 	background-color: #6F6F6F;
+}
+.editortabs{
+	margin: 20px 10px 0;
+	background-color: #505050; 
+	height: inherit;
+	width: 98%;
+}
+.graphs1{
+	width: 100%; 
+	display: grid; 
+	grid-template-columns: auto auto auto;
 }
 
 /*Here starts CSS code for Navbar  - big screen*/
