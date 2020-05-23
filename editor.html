@@ -78,14 +78,59 @@
 		<div  class="editor">
 			<!--EDITOR NAVIGATION BAR-->
 			<div class="editornav">
-					<div id="graphsDiv" class="tabsnavbubtton"><a onClick="switchedit('graphs');switcheditbg('graphsDiv');">Graphs</a></div>
-					<div id="textDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('text'); switcheditbg('textDiv');">Text</a></div>
-					<div id="templatesDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('templates'); switcheditbg('templatesDiv');">Templates</a></div>
-					<div id="codeDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('code'); switcheditbg('codeDiv');">Code</a></div>
+				<div id="templatesDiv" class="tabsnavbubtton"><a onClick="switchedit('templates'); switcheditbg('templatesDiv');">Templates</a></div>
+				<div id="graphsDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('graphs');switcheditbg('graphsDiv');">Graphs</a></div>
+				<div id="textDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('text'); switcheditbg('textDiv');">Text</a></div>
+				<div id="codeDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('codeEditorTab'); switcheditbg('codeDiv');">Code</a></div>
 			</div>
 			<div class="editortabs">
+			<!--TEMPLATES-->
+			<div id="templates" class="">
+				<div style="width: 100%; display: grid; grid-template-columns: auto auto;">
+				<div class="graph1">
+					<a>
+					<div>
+						<div>
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+						<div class="graphname"><h3>Basic 1</h3></div>
+					</div>
+					</a>
+				</div>
+				<div class="graph1">
+					<a>
+					<div>
+						<div>
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+						<div class="graphname"><h3>Basic 1</h3></div>
+					</div>
+					</a>
+				</div>
+				<div class="graph1">
+					<a>
+					<div>
+						<div>
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+						<div class="graphname"><h3>Basic 1</h3></div>
+					</div>
+					</a>
+				</div>
+				<div class="graph1">
+					<a>
+					<div>
+						<div>
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+						<div class="graphname"><h3>Basic 1</h3></div>
+					</div>
+					</a>
+				</div>
+				</div>
+			</div>
 			<!--GRPAHS-->
-			<div id="graphs" class="">
+			<div id="graphs" class="hidden">
 				<div class="graphs1">
 				<div class="graph1">
 					<a>
@@ -170,54 +215,11 @@
 					<option>Heading 4</option>
 				</select>
 			</div>
-			<!--TEMPLATES-->
-			<div id="templates" class="hidden">
-				<div style="width: 100%; display: grid; grid-template-columns: auto auto;">
-				<div class="graph1">
-					<a>
-					<div>
-						<div>
-							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
-						</div>
-						<div class="graphname"><h3>Basic 1</h3></div>
-					</div>
-					</a>
-				</div>
-				<div class="graph1">
-					<a>
-					<div>
-						<div>
-							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
-						</div>
-						<div class="graphname"><h3>Basic 1</h3></div>
-					</div>
-					</a>
-				</div>
-				<div class="graph1">
-					<a>
-					<div>
-						<div>
-							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
-						</div>
-						<div class="graphname"><h3>Basic 1</h3></div>
-					</div>
-					</a>
-				</div>
-				<div class="graph1">
-					<a>
-					<div>
-						<div>
-							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
-						</div>
-						<div class="graphname"><h3>Basic 1</h3></div>
-					</div>
-					</a>
-				</div>
-				</div>
-			</div>
 			<!--CODE EDITOR-->
-			<div id="code" class="hidden">
-				<a>code</a>
+			<div id="codeEditorTab" class="hidden">
+				<div class="codeEditor" contenteditable="true">
+					<code><p>Code place holder</p></code>
+				</div>
 			</div>
 			</div>
 		</div>
