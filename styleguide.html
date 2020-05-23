@@ -443,7 +443,7 @@
 		<div class="example">
 			<div class="wrapper">
 				<p class="star">
-					<img alt="" src="git og github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg"
+					<img alt="" src="img/icons/star.svg"
 					  style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()"  />
 				</p>
 			</div>
@@ -457,13 +457,13 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<p class="star">
-							<img alt="" src="git og github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg"
-							  style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()"  />
-						</p>
+            <p class="star">
+    					<img alt="" src="img/icons/star.svg"
+    					  style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()"  />
+    				</p>
 					</td>
 					<td class="code">
-						.star {
+            .star {
 							background-color: black;
 							width: 26px;
 						}
@@ -1192,7 +1192,7 @@
 					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
-					<td class="code">						
+					<td class="code">
 						<button type="button" onclick="" class="nextbutton">
 							<a>Next page</a>
 							<img class="settingsmenuicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
@@ -1387,23 +1387,24 @@
 					</td>
 					<td class="code">
 						.helpbutton{
-							background-color: #D3D3D3;
-							border: none;
-							border-radius: 12px;
-							width: 50px;
-							height: 15px;
-							cursor: pointer;
-							display: block;
-						}
-						.helpbutton a{
-							color: #000;
-							font-size: 10px;
-							margin-left: 7px;
-							float: left;
-						}
-						.helpbutton img{
-							width:10px;
-						}
+	background-color: #D3D3D3;
+	border: none;
+	border-radius: 12px;
+	width: 50px;
+	cursor: pointer;
+	display: block;
+}
+.helpbutton a{
+    color: #000;
+    font-size: 10px;
+	margin-left: 7px;
+	float: left;
+}
+.helpbutton img{
+	width:10px;
+	float: right;
+	margin: 9px 9px 0 0;
+}
 					</td>
 					<td class="empty"></td>
                 </tr>
@@ -2587,7 +2588,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				
+
 			</div>
 		</div>
 		<div class="wrapper">
@@ -2616,7 +2617,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				
+
 			</div>
 		</div>
 		<div class="wrapper">
@@ -2645,7 +2646,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				
+
 			</div>
 		</div>
 		<div class="wrapper">
@@ -2674,7 +2675,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				
+
 			</div>
 		</div>
 		<div class="wrapper">
@@ -3343,80 +3344,97 @@
             <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
           </tr>
           </table>
-</div>
-<!-- SEKTION 3 - ORGANISMER FOR LØSNING - SLUT -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <!--"SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN ORAGBISME - SLUT-->
 
-<div class="frameforsidetitelogsettingsbar">
+ <h4>Side titel og settings bar for overview-side</h4>
+ <!--organisme for stor til at være i table -->
+  <div class="frameforsidetitelogsettingsbar">
 
-  <div class="sidetitelogsettingswrap">
+    <div class="sidetitelogsettingswrap">
 
-        <!-- side titel -->
-        <div class="sidetitelcontainer">
-          <h1>Report overview</h1>
-        </div>
-        <!-- side titel - slut-->
+          <!-- side titel -->
+          <div class="sidetitelcontainer">
+            <h1>Report overview</h1>
+          </div>
+          <!-- side titel - slut-->
 
-        <!-- opret ny rapport knap -->
-        <div class="opretnyrapportcontainer">
-          <button type="button" class="newreportbutton">
-            <img class="plusimg" src="img/icons/plus.svg" alt="new preort img">
-            <span class="newreportspan">New report</span>
-          </button>
-        </div>
-        <!-- opret ny rapport knap - slut-->
-
-        <!-- quantity molekyle -->
-        <div class="quantitycontainer">
-            <div class="quantitydiv">Quantity
-              <button type="" onclick="" class="quantitybutton">
-                <a>8</a>
-                <img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
-              </button>
-            </div>
-        </div>
-        <!-- quantity molekyle - slut-->
-
-        <!-- switch knap preview/list -->
-        <div class="switch-preview-list-container">
-            <div class="switch">
-              <input type="radio" class="switch-input" name="view" id="preview" checked>
-              <label for="preview" class="switch-label switch-label-off">Preview</label>
-              <input type="radio" class="switch-input" name="view" id="list">
-              <label for="list" class="switch-label switch-label-on">List</label>
-              <span class="switch-selection"></span>
-            </div>
-        </div>
-        <!-- switch knap preview/list - slut-->
-
-        <!-- folder-overview knap -->
-        <div class="folderoverviewcontainer">
-            <button type="button" onclick="" class="settingsmenubutton">
-              <a>Folder overview</a>
-              <img class="settingsmenuicon" src="img/icons/folder.svg" alt="editicon">
+          <!-- opret ny rapport knap -->
+          <div class="opretnyrapportcontainer">
+            <button type="button" class="newreportbutton">
+              <img class="plusimg" src="img/icons/plus.svg" alt="new preort img">
+              <span class="newreportspan">New report</span>
             </button>
-        </div>
-        <!-- folder-overview knap - slut-->
+          </div>
+          <!-- opret ny rapport knap - slut-->
 
-        <!-- filter knap -->
-        <div class="filtercontainer">
-            <button type="button" onclick="" class="filterbutton">
-              <a>Filter</a>
-              <img class="settingsmenuicon" src="img/icons/sliders.svg" alt="slider-icon">
-            </button>
-        </div>
-        <!-- filter - slut-->
+          <!-- quantity molekyle -->
+          <div class="quantitycontainer">
+              <div class="quantitydiv">Quantity
+                <button type="" onclick="" class="quantitybutton">
+                  <a>8</a>
+                  <img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
+                </button>
+              </div>
+          </div>
+          <!-- quantity molekyle - slut-->
 
-        <!-- sort by knap -->
-        <div class="sortbycontainer">
-            <div class="sortbydiv">
-              Sort by<button type="" onclick="" class="sortbybutton">
-                <a>Choose..</a>
-                <img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
+          <!-- switch knap preview/list -->
+          <div class="switch-preview-list-container">
+              <div class="switch">
+                <input type="radio" class="switch-input" name="view" id="preview" checked>
+                <label for="preview" class="switch-label switch-label-off">Preview</label>
+                <input type="radio" class="switch-input" name="view" id="list">
+                <label for="list" class="switch-label switch-label-on">List</label>
+                <span class="switch-selection"></span>
+              </div>
+          </div>
+          <!-- switch knap preview/list - slut-->
+
+          <!-- folder-overview knap -->
+          <div class="folderoverviewcontainer">
+              <button type="button" onclick="" class="settingsmenubutton">
+                <a>Folder overview</a>
+                <img class="settingsmenuicon" src="img/icons/folder.svg" alt="editicon">
               </button>
-            </div>
-        </div>
+          </div>
+          <!-- folder-overview knap - slut-->
+
+          <!-- filter knap -->
+          <div class="filtercontainer">
+              <button type="button" onclick="" class="filterbutton">
+                <a>Filter</a>
+                <img class="settingsmenuicon" src="img/icons/sliders.svg" alt="slider-icon">
+              </button>
+          </div>
+          <!-- filter - slut-->
+
+          <!-- sort by knap -->
+          <div class="sortbycontainer">
+              <div class="sortbydiv">
+                Sort by<button type="" onclick="" class="sortbybutton">
+                  <a>Choose..</a>
+                  <img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
+                </button>
+              </div>
+          </div>
 
         <!-- sort by - slut-->
 
@@ -3425,8 +3443,12 @@
 
     </div>
 
+<!-- sektion 3 lukke div -->
 </div>
 <!--"SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN ORAGBISME - SLUT-->
+
+</div>
+<!-- SEKTION 3 - ORGANISMER FOR LØSNING - SLUT -->
 
 <section id="templates">
 	<div class="wrapper">
