@@ -649,6 +649,13 @@ margin-left: 7px;
 /*STYLING FOR MEGASWITCH - SLUT*/
 
 /* --- ORGANISMS --- */
+/*Here starts CSS for header in editor*/
+.editorHeader{
+	background-color: #BBBBBB; 
+	border-color: black; 
+	display: block; 
+	width: 100%;
+}
 /*Here starts CSS for Main in Editor*/
 .mainEditor{
 	display: grid;
@@ -696,7 +703,6 @@ margin-left: 7px;
 .editortabs{
 	margin: 20px 10px 0;
 	background-color: #505050;
-	height: inherit;
 	width: 98%;
 }
 .graphs1{
