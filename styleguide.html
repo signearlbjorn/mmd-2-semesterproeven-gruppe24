@@ -2634,6 +2634,7 @@
           <li>Horisontal display af rapport på “show”</li>
           <li>Create new report</li>
           <li>Create new report pop-up</li>
+          <li><a href="#uploadpopup">Upload pop-up's<a></li>
           <li>FLERE ORGANISMER INCOMING..</li>
 	 	</ul>
         <br>
@@ -3107,12 +3108,17 @@
             <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
           </tr>
           </table>
-          <h4>Pop ud delete</h4>
-  	  <h4>Pop ud delete - report</h4>
-  	  <table class="overvieworganimser">
+
+<!--Delete pou-up's -->
+<h3>Delete pop-up's</h3>
+
+<h4>Pop ud delete - report</h4>
+      <!--what is this? -->
+      @ -2392,18 +2392,159 @@ margin-left: 7px;
+      <!--what is this? -->
+      <table class="overvieworganimser">
               <tr class="row-one">
                 <th>Molekyler</th>
-  @ -2392,18 +2392,159 @@ margin-left: 7px;
             <tr class="row-two">
   			  <!--Molecules-->
   			  <td>
@@ -3272,7 +3278,7 @@
 
 <!--"SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN ORAGBISME - SLUT-->
 <h3 id="sidetitlerogsettingsbar"> Side titler og settings bar</h3>
-<br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
  <h4>Side titel og settings bar for overview-side</h4>
  <!--organisme for stor til at være i table -->
   <div class="frameforsidetitelogsettingsbar">
@@ -3368,7 +3374,7 @@
       <tr class="row-two">
     <!--Molecules-->
     <td>
-    <li>Side titek</li>
+    <li>Side titel</li>
     <li>Opret ny rapport knap</li>
     <li>Quanity knap</li>
     <li>Switch knap</li>
@@ -3521,6 +3527,355 @@
       </table>
 
 </div>
+<!--"SIDE TITEL OG SETTINGS BAR" FOR EDITOR SIDEN ORAGBISME - SLUT-->
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<!--"SIDE TITEL OG SETTINGS BAR" FOR EDITOR SIDEN ORAGBISME -->
+ <h4>Side titel og settings bar for editor-side</h4>
+ <!--organisme for stor til at være i table -->
+
+ <div class="frameforsidetitelogsettingsbar">
+
+   <div class="sidetitelogsettingswrap">
+
+         <!-- side titel -->
+         <div class="sidetitelcontainer">
+           <h1>Report editor</h1>
+         </div>
+         <!-- side titel - slut-->
+
+         <!-- Close editor -->
+         <div class="closecontainer">
+           <h1>Close editor</h1>
+         </div>
+         <!-- Close editor - slut-->
+
+         <!-- slet rapport -->
+         <div class="deletecontainer">
+           <h1>Delete report</h1>
+         </div>
+         <!-- slet rapport - slut-->
+
+         <!-- gem rapport -->
+         <div class="savecontainer">
+           <h1>Save report</h1>
+         </div>
+         <!-- gem rapport - slut-->
+
+         <!-- previous page -->
+         <div class="previouspagecontainer">
+           <button type="button" onclick="" class="previousbutton">
+               <a>Previous page</a>
+               <img class="settingsmenuicon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
+           </button>
+
+         </div>
+         <!-- previous page  - slut-->
+
+         <!-- switch knap multiple/singular-->
+         <div class="switch-multiple-singular-container">
+           <div class="switch">
+               <input type="radio" class="switch-input" name="view3" value="week3" id="multiple" checked="">
+               <label for="multiple" class="switch-label switch-label-off">Multiple</label>
+               <input type="radio" class="switch-input" name="view3" id="singular">
+               <label for="singular" class="switch-label switch-label-on">Vertical</label>
+               <span class="switch-selection"></span>
+           </div>
+         </div>
+         <!-- switch knap multiple/singular - slut-->
+
+         <!-- switch knap horizontal/vertical -->
+         <div class="switch-horizontal-vertical-container">
+           <div class="switch">
+               <input type="radio" class="switch-input" name="view3" value="week3" id="horizontal" checked="">
+               <label for="horizontal" class="switch-label switch-label-off">Horizontal</label>
+               <input type="radio" class="switch-input" name="view3" id="singular">
+               <label for="vertical" class="switch-label switch-label-on">Vertical</label>
+               <span class="switch-selection"></span>
+           </div>
+         </div>
+         <!-- switch knap horizontal/vertical - slut-->
+
+         <!-- add page knap -->
+         <div class="addpageknapcontainer">
+
+         </div>
+         <!-- add page knap - slut-->
+
+         <!-- delete page knap -->
+         <div class="deletepageknapcontainer">
+
+         </div>
+         <!-- delete page knap - slut-->
+
+         <!-- Upload image knap -->
+         <div class="uploadimageknapcontainer">
+           <button type="button" onclick="" class="uploadimagebutton">
+               <a>Upload image</a>
+               <img class="settingsmenuicon" src="img/icons/image.svg" alt="arrowright-icon">
+           </button>
+         </div>
+         <!-- Upload image knap - slut-->
+
+         <!-- next page -->
+         <div class="nextpagecontainer">
+           <button type="button" onclick="" class="nextbutton">
+               <a>Next page</a>
+               <img class="settingsmenuicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
+           </button>
+
+         </div>
+         <!-- next page  - slut-->
+
+         <!-- MEGA SWITCH -->
+         <div class="megaswitchcontainer">
+           <div class="megaswitch">
+               <input type="radio" class="switch-input0" name="view4" id="a1" checked="">
+               <label for="a1" class="switch-label0 switch-label-off0">A1</label>
+
+               <input type="radio" class="switch-input0" name="view4" id="a2">
+               <label for="a2" class="switch-label0 switch-label-on1">A2</label>
+
+               <input type="radio" class="switch-input0" name="view4" id="a3">
+               <label for="a3" class="switch-label0 switch-label-on2">A3</label>
+
+               <input type="radio" class="switch-input0" name="view4" id="a4">
+               <label for="a4" class="switch-label0 switch-label-on3">A4</label>
+
+               <span class="switch-selection0"></span>
+           </div>
+         </div>
+         <!-- MEGA SWITCH - slut-->
+
+     </div>
+
+ </div>
+ <!--"SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN TABEL -->
+ <table class="overvieworganimser">
+         <tr class="row-one">
+           <th>Molekyler</th>
+           <th>Organsime</th>
+           <th>HTML</th>
+           <th>CSS</th>
+           <th>JavaScript</th>
+         </tr>
+       <!-- række 2 i tabel -->
+       <tr class="row-two">
+     <!--Molecules-->
+     <td>
+     <li>Side titek</li>
+     <li>Opret ny rapport knap</li>
+     <li>Quanity knap</li>
+     <li>Switch knap</li>
+     <li>Folder overview knap</li>
+     <li>Filter</li>
+     <li>Sort by knap</li>
+     </td>
+     <!--Organism-->
+   <td>
+     Se eksempel over tabellen
+   </td>
+     <!--HTML to copy-->
+   <td class="code">
+     <div class="frameforsidetitelogsettingsbar">
+
+       <div class="sidetitelogsettingswrap">
+
+             <!-- side titel -->
+             <div class="sidetitelcontainer">
+               <h1>Report editor</h1>
+             </div>
+             <!-- side titel - slut-->
+
+             <!-- Close editor -->
+             <div class="closecontainer">
+               <h1>Close editor</h1>
+             </div>
+             <!-- Close editor - slut-->
+
+             <!-- slet rapport -->
+             <div class="deletecontainer">
+               <h1>Delete report</h1>
+             </div>
+             <!-- slet rapport - slut-->
+
+             <!-- gem rapport -->
+             <div class="savecontainer">
+               <h1>Save report</h1>
+             </div>
+             <!-- gem rapport - slut-->
+
+             <!-- previous page -->
+             <div class="previouspagecontainer">
+               <button type="button" onclick="" class="previousbutton">
+                   <a>Previous page</a>
+                   <img class="settingsmenuicon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
+               </button>
+
+             </div>
+             <!-- previous page  - slut-->
+
+             <!-- switch knap multiple/singular-->
+             <div class="switch-multiple-singular-container">
+               <div class="switch">
+                   <input type="radio" class="switch-input" name="view3" value="week3" id="multiple" checked="">
+                   <label for="multiple" class="switch-label switch-label-off">Multiple</label>
+                   <input type="radio" class="switch-input" name="view3" id="singular">
+                   <label for="singular" class="switch-label switch-label-on">Vertical</label>
+                   <span class="switch-selection"></span>
+               </div>
+             </div>
+             <!-- switch knap multiple/singular - slut-->
+
+             <!-- switch knap horizontal/vertical -->
+             <div class="switch-horizontal-vertical-container">
+               <div class="switch">
+                   <input type="radio" class="switch-input" name="view3" value="week3" id="horizontal" checked="">
+                   <label for="horizontal" class="switch-label switch-label-off">Horizontal</label>
+                   <input type="radio" class="switch-input" name="view3" id="singular">
+                   <label for="vertical" class="switch-label switch-label-on">Vertical</label>
+                   <span class="switch-selection"></span>
+               </div>
+             </div>
+             <!-- switch knap horizontal/vertical - slut-->
+
+             <!-- add page knap -->
+             <div class="addpageknapcontainer">
+
+             </div>
+             <!-- add page knap - slut-->
+
+             <!-- delete page knap -->
+             <div class="deletepageknapcontainer">
+
+             </div>
+             <!-- delete page knap - slut-->
+
+             <!-- Upload image knap -->
+             <div class="uploadimageknapcontainer">
+               <button type="button" onclick="" class="uploadimagebutton">
+                   <a>Upload image</a>
+                   <img class="settingsmenuicon" src="img/icons/image.svg" alt="arrowright-icon">
+               </button>
+             </div>
+             <!-- Upload image knap - slut-->
+
+             <!-- next page -->
+             <div class="nextpagecontainer">
+               <button type="button" onclick="" class="nextbutton">
+                   <a>Next page</a>
+                   <img class="settingsmenuicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
+               </button>
+
+             </div>
+             <!-- next page  - slut-->
+
+             <!-- MEGA SWITCH -->
+             <div class="megaswitchcontainer">
+               <div class="megaswitch">
+                   <input type="radio" class="switch-input0" name="view4" id="a1" checked="">
+                   <label for="a1" class="switch-label0 switch-label-off0">A1</label>
+
+                   <input type="radio" class="switch-input0" name="view4" id="a2">
+                   <label for="a2" class="switch-label0 switch-label-on1">A2</label>
+
+                   <input type="radio" class="switch-input0" name="view4" id="a3">
+                   <label for="a3" class="switch-label0 switch-label-on2">A3</label>
+
+                   <input type="radio" class="switch-input0" name="view4" id="a4">
+                   <label for="a4" class="switch-label0 switch-label-on3">A4</label>
+
+                   <span class="switch-selection0"></span>
+               </div>
+             </div>
+             <!-- MEGA SWITCH - slut-->
+
+         </div>
+
+     </div>
+   </td>
+     <!--CSS to copy-->
+   <td class="code">
+     .sidetitelogsettingswrap {
+       margin-left: 15%;
+       margin-right: 15%;
+     }
+
+     .sidetitelcontainer, .previouspagecontainer {
+       float: left;
+     }
+
+     .closecontainer, .savecontainer, .deletecontainer {
+     	float: right;
+     }
+
+     .savecontainer, .deletecontainer {
+     	margin-right: 45px;
+     }
+
+     .previouspagecontainer {
+       margin-top: 80px;
+       margin-left: -190px;
+     }
+
+     .switch-multiple-singular-container {
+       float: left;
+       margin-top: 60px;
+     	margin-left: -60px;
+     }
+
+     .switch-horizontal-vertical-container{
+       float: left;
+       margin-top: 60px;
+     	margin-left: 20px;
+     }
+
+     .addpageknapcontainer {
+       float: left;
+       margin-top: 80px;
+     	margin-left: 10px;
+     }
+
+     .deletepageknapcontainer {
+       float: left;
+       margin-top: 80px;
+     }
+
+     .uploadimageknapcontainer {
+       float: left;
+       margin-top: -5px;
+     	margin-left: 100px;
+     }
+
+     .nextpagecontainer {
+       float: left;
+       margin-top: -5px;
+     	margin-left: 100px;
+     }
+
+     .megaswitchcontainer {
+       float: right;
+     	margin-top: -20px;
+     }
+   </td>
+     <!--Js to copy-->
+         <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
+       </tr>
+       </table>
+
+ </div>
+ <!--"SIDE TITEL OG SETTINGS BAR" FOR EDITOR SIDEN ORAGBISME - SLUT-->
+
+<h3 id="uploadpopup">Ulpoad pop-up's</h3>
+<br><br>
+ <!-- Upload template pop-up -->
+  <h4>Upload template pop-up</h4>
+
+
+ <!-- Upload template pop-up - slut -->
+
+
 <!-- SEKTION 3 - ORGANISMER FOR LØSNING - SLUT -->
 
 <section id="templates">

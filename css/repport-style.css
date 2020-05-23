@@ -1087,11 +1087,75 @@ nav a:hover{
 
 .sortbycontainer {
   float: left;
-  margin-top: 80px;
+  margin-top: 15px;
 	margin-left: 25px;
 }
 /* Styling for SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN ORAGBISME - SLUT */
 
+/* Styling for SIDE TITEL OG SETTINGS BAR" FOR EDITOR SIDEN ORAGBISME */
+/*PLACERING / POSITIONER*/
+.sidetitelogsettingswrap {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.sidetitelcontainer, .previouspagecontainer {
+  float: left;
+}
+
+.closecontainer, .savecontainer, .deletecontainer {
+	float: right;
+}
+
+.savecontainer, .deletecontainer {
+	margin-right: 45px;
+}
+
+.previouspagecontainer {
+  margin-top: 80px;
+  margin-left: -190px;
+}
+
+.switch-multiple-singular-container {
+  float: left;
+  margin-top: 60px;
+	margin-left: -60px;
+}
+
+.switch-horizontal-vertical-container{
+  float: left;
+  margin-top: 60px;
+	margin-left: 20px;
+}
+
+.addpageknapcontainer {
+  float: left;
+  margin-top: 80px;
+	margin-left: 10px;
+}
+
+.deletepageknapcontainer {
+  float: left;
+  margin-top: 80px;
+}
+
+.uploadimageknapcontainer {
+  float: left;
+  margin-top: -5px;
+	margin-left: 100px;
+}
+
+.nextpagecontainer {
+  float: left;
+  margin-top: -5px;
+	margin-left: 100px;
+}
+
+.megaswitchcontainer {
+  float: right;
+	margin-top: -20px;
+}
+/* Styling for SIDE TITEL OG SETTINGS BAR" FOR EDITOR SIDEN ORAGBISME - SLUT */
 
 /* --- ORGANISMER SLUT --- */
 
