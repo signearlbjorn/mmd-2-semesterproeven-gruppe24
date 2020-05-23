@@ -196,24 +196,19 @@
 			</div>
 			<!--TEXT EDITOR-->
 			<div id="text" class="hidden">
-				<label for="font">Font</label>
-				<select id="fontselector">
-					<option>Serif</option>
-					<option>Arial</option>
-					<option>Sans-Serif</option>
-					<option>Tahoma</option>
-					<option>Verdana</option>
-					<option>Lucia Sans Unicode</option>
-				</select>
-				<label for="style">Style</label>
-				<select id="style">
-					<option>Normal paragraph</option>
-					<option>Title</option>
-					<option>Heading 1</option>
-					<option>Heading 2</option>
-					<option>Heading 3</option>
-					<option>Heading 4</option>
-				</select>
+				<div class="textTool">
+					<label>Text tool</label>
+					<div class="textToolImgDiv"><img class="settingsicon" src="img/icons/type.svg" alt="Text tool"></div>
+					<button type="button" onclick="" class="helpbutton">
+    					<a>Help</a>
+					    <img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
+					</button>
+				</div>
+				<div class="textTool">
+					<label>Text edit</label>
+					<div class="textEditDiv"><label>Size</label><button type="" onclick="" class="texteditbutton"><a>Choose..</a><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+					<div class="textEditDiv"><label>Weight</label><button type="" onclick="" class="texteditbutton"><a>Choose..</a><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+				</div>
 			</div>
 			<!--CODE EDITOR-->
 			<div id="codeEditorTab" class="hidden">

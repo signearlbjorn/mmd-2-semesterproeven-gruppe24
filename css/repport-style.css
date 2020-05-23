@@ -722,7 +722,39 @@ margin-left: 7px;
 	height: 1000px;
 	background-color: #fff;
 }
-
+.textTool{
+	width: 100%;
+	margin: 20px 0 200px 0;
+	padding: 0 20px;
+}
+.textTool label{
+	float: left;
+	width: 100%;
+	color: #fff;
+	font-weight: bold;
+}
+.textTool button{
+	float: right;
+}
+.textToolImgDiv{
+	background-color: #303030;
+	border-radius: 12px;
+	width: 40px;
+	height: 40px;
+}
+.textToolImgDiv img{
+	margin: 5px;
+	width: 30px;
+	float: none;
+}
+.textEditDiv{
+	color: #fff;
+	margin-right: 30px;
+}
+.textEditDiv label{
+	margin-right: 50px;
+	width: auto;
+}
 /*Here starts CSS code for Navbar  - big screen*/
 nav{
 	width: 100%;
