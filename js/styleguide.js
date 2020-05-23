@@ -57,4 +57,3 @@ function changeImage() {
 		document.getElementById("imgClickAndChange").src = "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg";
 	}
 }
-

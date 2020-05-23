@@ -1165,6 +1165,11 @@ nav a:hover{
 	border-radius: 5px;
 }
 
+.x {
+	float: right;
+	margin-right: -100px;
+}
+
 .uploadtemplate {
 	margin-top: -10px;
 }
