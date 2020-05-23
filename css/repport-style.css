@@ -309,6 +309,7 @@ h3 {
 .typetext {
 	color: white;
 }
+
 .typebutton {
 	width: 400px;
 	border-radius: 10px;
@@ -1023,11 +1024,11 @@ header .wrapper {
 
 /* -- STYLE GUIDE -- */
 /* styling af tabeller*/
-.række1 {
+.row-one {
 	background-color: #404040;
 }
 
-.række2 {
+.row-two {
     background-color: #6F6F6F;
 }
 
