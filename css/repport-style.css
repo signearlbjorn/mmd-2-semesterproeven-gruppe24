@@ -1028,10 +1028,13 @@ header .wrapper {
 
 #styleguide table {
 	float: left;
+	table-layout: fixed;
 }
 
 #styleguide table tr td,
 #styleguide table tr th {
+	float: left;
+	width: 100%;
 	min-width: 1px;
 	min-height: 1px;
 	box-sizing: border-box;
@@ -1045,8 +1048,9 @@ header .wrapper {
 
 #styleguide table tr td {
 	position: relative;
+	padding: 10px;	
 	border-bottom: solid 1px #000;
-	vertical-align:top;
+	vertical-align: top;
 }
 
 #styleguide table tr td:last-child {
@@ -1054,6 +1058,11 @@ header .wrapper {
 }
 
 @media (min-width:481px){
+	#styleguide table tr td,
+	#styleguide table tr th {
+		float: none;
+	}
+	
 	#styleguide table tr td {
 		border-right: solid 1px #000;
 		border-bottom: none;
@@ -1068,51 +1077,6 @@ header .wrapper {
 		border-right: none;
 	}
 }
-
-#styleguide table.atomTable tr td,
-#styleguide table.atomTable tr th {
-	float: left;
-	width: 100%;
-	padding: 10px;	
-}
-
-@media (min-width:481px){
-	#styleguide table.atomTable tr td,
-	#styleguide table.atomTable tr th {
-		float: none;
-	}
-
-	#styleguide table.atomTable tr td:nth-child(1),
-	#styleguide table.atomTable tr th:nth-child(1) {
-		width: 40%;
-	}
-
-	#styleguide table.atomTable tr td:nth-child(2),
-	#styleguide table.atomTable tr th:nth-child(2) {
-		width: 40%;
-	}
-
-	#styleguide table.atomTable tr td:nth-child(3),
-	#styleguide table.atomTable tr th:nth-child(3) {
-		width: 20%;
-	}
-}
-
-#styleguide table.templateTable tr td,
-#styleguide table.templateTable tr th {
-	float: left;
-	width: 100%;
-	padding: 10px;
-}
-
-@media (min-width:481px){
-	#styleguide table.templateTable tr td,
-	#styleguide table.templateTable tr th {
-		float: none;
-		width: 50%;
-	}
-}
-
 /* styling af tabeller - slut*/
 
 /* - TABLE CONTENT - */
