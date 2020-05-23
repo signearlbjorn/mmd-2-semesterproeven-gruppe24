@@ -714,6 +714,14 @@ margin-left: 7px;
 	display: grid;
 	grid-template-columns: auto auto auto;
 }
+#codeEditorTab{
+	width: 100%;
+}
+.codeEditor{
+	width: 98%;
+	height: 1000px;
+	background-color: #fff;
+}
 
 /*Here starts CSS code for Navbar  - big screen*/
 nav{
