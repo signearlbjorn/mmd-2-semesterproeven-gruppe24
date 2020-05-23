@@ -1340,6 +1340,17 @@ header .wrapper {
 #styleguide .empty {
 	background-color: #555;
 }
+#styleguide .empty:before {
+	content:"Ingen kode";
+	position: absolute;
+	top: 0;
+	left: 0;
+	float: left;
+	width: 100%;
+	text-align: center;
+	font-style: italic;
+}
+
 
 #styleguide .tableExplainer {
 	float: left;
@@ -1444,11 +1455,6 @@ header .wrapper, #wrapper_header_example header .wrapper {
 }
 
 /* styling marginer for sektioner*/
-.titler, .sektion1, .sektion2, .sektion3, .table {
-	margin-left: 5%;
-	margin-right: 5%;
-}
-
 #styleguide section,
 #styleguide article {
 	float: left;
