@@ -1110,10 +1110,13 @@ header .wrapper {
 
 #styleguide table {
 	float: left;
+	table-layout: fixed;
 }
 
 #styleguide table tr td,
 #styleguide table tr th {
+	float: left;
+	width: 100%;
 	min-width: 1px;
 	min-height: 1px;
 	box-sizing: border-box;
@@ -1127,8 +1130,9 @@ header .wrapper {
 
 #styleguide table tr td {
 	position: relative;
+	padding: 10px;	
 	border-bottom: solid 1px #000;
-	vertical-align:top;
+	vertical-align: top;
 }
 
 #styleguide table tr td:last-child {
@@ -1136,6 +1140,11 @@ header .wrapper {
 }
 
 @media (min-width:481px){
+	#styleguide table tr td,
+	#styleguide table tr th {
+		float: none;
+	}
+	
 	#styleguide table tr td {
 		border-right: solid 1px #000;
 		border-bottom: none;
@@ -1150,51 +1159,6 @@ header .wrapper {
 		border-right: none;
 	}
 }
-
-#styleguide table.atomTable tr td,
-#styleguide table.atomTable tr th {
-	float: left;
-	width: 100%;
-	padding: 10px;
-}
-
-@media (min-width:481px){
-	#styleguide table.atomTable tr td,
-	#styleguide table.atomTable tr th {
-		float: none;
-	}
-
-	#styleguide table.atomTable tr td:nth-child(1),
-	#styleguide table.atomTable tr th:nth-child(1) {
-		width: 40%;
-	}
-
-	#styleguide table.atomTable tr td:nth-child(2),
-	#styleguide table.atomTable tr th:nth-child(2) {
-		width: 40%;
-	}
-
-	#styleguide table.atomTable tr td:nth-child(3),
-	#styleguide table.atomTable tr th:nth-child(3) {
-		width: 20%;
-	}
-}
-
-#styleguide table.templateTable tr td,
-#styleguide table.templateTable tr th {
-	float: left;
-	width: 100%;
-	padding: 10px;
-}
-
-@media (min-width:481px){
-	#styleguide table.templateTable tr td,
-	#styleguide table.templateTable tr th {
-		float: none;
-		width: 50%;
-	}
-}
-
 /* styling af tabeller - slut*/
 
 /* - TABLE CONTENT - */
@@ -1216,6 +1180,7 @@ header .wrapper {
 	margin-left: 2em;
 	text-indent: -2em; /* A negative indent together with a positive margin with opisitite value, can imitate outdents. */
 	color: #000;
+	word-break: break-word;
 }
 
 #styleguide table tr td code:last-child {
@@ -1224,7 +1189,7 @@ header .wrapper {
 
 
 #styleguide .empty {
-	background-color: #666;
+	background-color: #555;
 }
 
 #styleguide .tableExplainer {
@@ -1272,10 +1237,24 @@ header .wrapper {
 }
 
 /* - POSITIONING - */
-#example {
+.example {
+	position: relative;
 	float: left;
 	width: 100%;
-	margin: 20px 0;
+	padding: 20px 0;
+	border-top: solid 4px #404040;
+	border-bottom: solid 3px #6F6F6F;
+	margin-top: 40px;
+	margin-bottom: 20px;
+}
+.example:before {
+	content:"Eksempel:";
+	position: absolute;
+	top: -25px;
+	left: 20px;
+	font-size: 16px;
+	line-height: 25px;
+	font-style: italic;
 }
 
 #styleguide .wrapper {
@@ -1291,7 +1270,7 @@ header .wrapper {
 }
 
 /* - WRAPPER - */
-.wrapper, #example .wrapper {
+.wrapper, .example .wrapper {
 	float: none;
 	width: 95%;
 	margin: 0 auto;
@@ -1299,17 +1278,17 @@ header .wrapper {
 }
 
 @media (min-width:1366px) {
-	.wrapper, #example .wrapper {
+	.wrapper, .example .wrapper {
 		width: 75%;
 	}
 }
 
-nav .wrapper, nav #example .wrapper {
+header .wrapper, #wrapper_header_example header .wrapper {
 	width: 100%;
 }
 
 @media (min-width:1920px) {
-	nav .wrapper, nav #example .wrapper {
+	header .wrapper, #wrapper_header_example header .wrapper {
 		width: 75%;
 	}
 }
