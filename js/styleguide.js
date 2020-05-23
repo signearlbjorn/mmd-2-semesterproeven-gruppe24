@@ -44,19 +44,3 @@ function selectText(element) {
         window.getSelection().addRange(range); // Set the selection to range
     }
 }
-
-// SCRIPT TIL STJERNE PRORITERINGS MOLEKYLE -->
-		<script language="javascript">
-		    function changeImage() {
-
-		        if (document.getElementById("imgClickAndChange").src == "file:///Users/signearlbjorn/Desktop/star.svg")
-		        {
-		            document.getElementById("imgClickAndChange").src = "file:///Users/signearlbjorn/Desktop/starfull.svg";
-		        }
-		        else
-		        {
-		            document.getElementById("imgClickAndChange").src = "file:///Users/signearlbjorn/Desktop/star.svg";
-		        }
-		    }
-		</script>
-// SCRIPT TIL STJERNE PRORITERINGS MOLEKYLE - SLUT -->
