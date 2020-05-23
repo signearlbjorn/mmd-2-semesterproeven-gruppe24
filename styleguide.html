@@ -488,13 +488,13 @@
             <script language="javascript">
                 function changeImage() {
 
-                    if (document.getElementById("imgClickAndChange").src == "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg")
+                    if (document.getElementById("imgClickAndChange").src == "file:///mmd-2-semesterproeven-gruppe24/developer/img/icons/star.svg")
                     {
-                        document.getElementById("imgClickAndChange").src = "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/starfull.svg";
+                        document.getElementById("imgClickAndChange").src = "file:///mmd-2-semesterproeven-gruppe24/developer/img/icons/starfull.svg";
                     }
                     else
                     {
-                        document.getElementById("imgClickAndChange").src = "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg";
+                        document.getElementById("imgClickAndChange").src = "file:///mmd-2-semesterproeven-gruppe24/developer/img/icons/star.svg";
                     }
                 }
             </script>
@@ -3117,13 +3117,17 @@
       @ -2392,18 +2392,159 @@ margin-left: 7px;
       <!--what is this? -->
       <table class="overvieworganimser">
-              <tr class="row-one">
-                <th>Molekyler</th>
-            <tr class="row-two">
-  			  <!--Molecules-->
-  			  <td>
-				<li>Text</li>
-				<li>Button</li>
+        <tr class="row-one">
+            <th>Molekyler</th>
+            <th>Organisme</th>
+            <th>HTML</th>
+            <th>CSS</th>
+            <th>JavaScript</th>
+        <tr class="row-two">
+  			<!--Molecules-->
+  			<td>
+  				<li>Text</li>
+  				<li>Button</li>
 			  </td>
 				<!--Organism-->
 			<td>
@@ -3136,58 +3140,62 @@
 				</div>
 			</td>
 				<!--HTML to copy-->
-            <td class="code">
-				<div class="popupdelete">
-					<span>Are you sure you want to delete "Report Name"?</span>
-					<div class="popupdeletebuttons">
-						<button type="button" class="cancel">Cancel</button>
-						<button type="button" class="delete">Delete</button>
-					</div>
-				</div>
+      <td class="code">
+        <div class="popupdelete">
+          <span>Are you sure you want to delete "Report Name"?</span>
+          <div class="popupdeletebuttons">
+            <button type="button" class="cancel">Cancel</button>
+            <button type="button" class="delete">Delete</button>
+          </div>
+        </div>
  			</td>
 			  <!--CSS to copy-->
-            <td class="code">
-				.popupdelete{
-					background-color: #262626;
-					text-align: center;
-					width: 400px;
-					height: 220px;
-					border-radius: 12px;
-				}
-				.popupdelete span{
-					color: #fff;
-					margin: 50px auto;
-					display: block;
-				}
-				.popupdeletebuttons{
-					display: grid;
-					grid-template-columns: auto auto;
-					float: none;
-					width: 100%;
-					margin: 0 auto;
-				}
-				.cancel{
-					background-color: #fff;
-					text-align: center;
-					border: none;
-					border-radius: 12px;
-					margin: 0 auto;
-					width: 100px;
-					height: 50px;
-					cursor: pointer;
-				}
-				.delete{
-					background-color: #DF5539;
-					color: #fff;
-					text-align: center;
-					border: none;
-					border-radius: 12px;
-					margin: 0 auto;
-					width: 100px;
-					height: 50px;
-					cursor: pointer;
-				}
-			</td>
+      <td class="code">
+        .popupdelete {
+          background-color: #262626;
+          text-align: center;
+          width: 400px;
+          height: 220px;
+          border-radius: 12px;
+        }
+
+        .popupdelete span {
+          color: #fff;
+          margin: 50px auto;
+          display: block;
+        }
+
+        .popupdeletebuttons {
+          display: grid;
+          grid-template-columns: auto auto;
+          float: none;
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        .cancel {
+          background-color: #fff;
+          text-align: center;
+          border: none;
+          border-radius: 12px;
+          margin: 0 auto;
+          width: 100px;
+          height: 50px;
+          cursor: pointer;
+        }
+
+        .delete {
+          background-color: #DF5539;
+          color: #fff;
+          text-align: center;
+          border: none;
+          border-radius: 12px;
+          margin: 0 auto;
+          width: 100px;
+          height: 50px;
+          cursor: pointer;
+        }
+      </td>
 			  <!--Js to copy-->
             <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
           </tr>
@@ -3218,58 +3226,62 @@
 					</div>
 				</div>
 			</td>
-				<!--HTML to copy-->
-            <td class="code">
-				<div class="popupdelete">
-					<span>Are you sure you want to delete "Folder Name"?</span>
-					<div class="popupdeletebuttons">
-						<button type="button" class="cancel">Cancel</button>
-						<button type="button" class="delete">Delete</button>
-					</div>
-				</div>
+			<!--HTML to copy-->
+      <td class="code">
+        <div class="popupdelete">
+          <span>Are you sure you want to delete "Folder Name"?</span>
+          <div class="popupdeletebuttons">
+            <button type="button" class="cancel">Cancel</button>
+            <button type="button" class="delete">Delete</button>
+          </div>
+        </div>
  			</td>
 			  <!--CSS to copy-->
-            <td class="code">
-				.popupdelete{
-					background-color: #262626;
-					text-align: center;
-					width: 400px;
-					height: 220px;
-					border-radius: 12px;
-				}
-				.popupdelete span{
-					color: #fff;
-					margin: 50px auto;
-					display: block;
-				}
-				.popupdeletebuttons{
-					display: grid;
-					grid-template-columns: auto auto;
-					float: none;
-					width: 100%;
-					margin: 0 auto;
-				}
-				.cancel{
-					background-color: #fff;
-					text-align: center;
-					border: none;
-					border-radius: 12px;
-					margin: 0 auto;
-					width: 100px;
-					height: 50px;
-					cursor: pointer;
-				}
-				.delete{
-					background-color: #DF5539;
-					color: #fff;
-					text-align: center;
-					border: none;
-					border-radius: 12px;
-					margin: 0 auto;
-					width: 100px;
-					height: 50px;
-					cursor: pointer;
-				}
+      <td class="code">
+        .popupdelete {
+          background-color: #262626;
+          text-align: center;
+          width: 400px;
+          height: 220px;
+          border-radius: 12px;
+        }
+
+        .popupdelete span {
+          color: #fff;
+          margin: 50px auto;
+          display: block;
+        }
+
+        .popupdeletebuttons {
+          display: grid;
+          grid-template-columns: auto auto;
+          float: none;
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        .cancel {
+          background-color: #fff;
+          text-align: center;
+          border: none;
+          border-radius: 12px;
+          margin: 0 auto;
+          width: 100px;
+          height: 50px;
+          cursor: pointer;
+        }
+
+        .delete {
+          background-color: #DF5539;
+          color: #fff;
+          text-align: center;
+          border: none;
+          border-radius: 12px;
+          margin: 0 auto;
+          width: 100px;
+          height: 50px;
+          cursor: pointer;
+        }
 			</td>
 			  <!--Js to copy-->
             <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
@@ -3871,6 +3883,44 @@
 <br><br>
  <!-- Upload template pop-up -->
   <h4>Upload template pop-up</h4>
+        <!-- Tabel for upload -->
+        <table class="overvieworganimser">
+          <!-- Række 1-->
+          <tr class="row-one">
+              <th>Molekyler</th>
+              <th>Organisme</th>
+              <th>HTML</th>
+              <th>CSS</th>
+              <th>JavaScript</th>
+          <!-- Række 2-->
+          <tr class="row-two">
+    			<!--Molecules-->
+    			<td>
+    				<li>Text</li>
+    				<li>Button</li>
+  			  </td>
+  				<!--Organism-->
+  			  <td>
+            <div class="uploadtemplateknap">
+              <p class="typetext">Upload template</p>
+                <button type="" onclick="" class="typebutton">
+                  <a class="typebuttontext">Choose...</a>
+                  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+                </button>
+            </div>
+    			</td>
+  				<!--HTML to copy-->
+          <td class="code">
+          x
+     			</td>
+  			  <!--CSS to copy-->
+          <td class="code">
+          x
+          </td>
+  			  <!--Js to copy-->
+          <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
+        </tr>
+  	  </table>
 
 
  <!-- Upload template pop-up - slut -->
