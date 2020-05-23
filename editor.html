@@ -52,9 +52,9 @@
 		<h1>REPORT EDITOR</h1>
 		<div class="switch">
 			<input type="radio" class="switch-input" name="view3" value="week3" id="indsæt1" checked="">
-			<label for="indsæt1" class="switch-label switch-label-off">Vertical</label>
+			<label for="indsæt1" class="switch-label switch-label-off" onClick="switchpagepreview(pageVertical)">Vertical</label>
 			<input type="radio" class="switch-input" name="view3" id="indsæt2">
-			<label for="indsæt2" class="switch-label switch-label-on">Horizontal</label>
+			<label for="indsæt2" class="switch-label switch-label-on" onClick="switchpagepreview(pageHorizontal)">Horizontal</label>
 			<span class="switch-selection"></span>
 		</div>
 		<!--CLOSE &AMP SAVE FUNKCION-->
@@ -65,12 +65,25 @@
 	<main class="mainEditor" style="width: 100%;">
 		<!--REPORT PAGE PREVIEW-->
 		<div class="report-preview">
-			<div class="pagediv">
+			<div id="pageVertical" class="pagediv">
 				<div class="page" contenteditable="true">
 					<p>First <code>.page</code> element</p>
 					<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
 					<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+				</div>
+			</div>
+			<div id="pageHorizontal" class="pagediv hidden">
+				<div class="page" contenteditable="true">
+				<p>Second <code>.page</code> element</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+				<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
+				<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+				<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+				<div class="page-break" contenteditable="false"></div>
+				<p>This sentence is preceded by a manual page break:<br>&nbsp;&nbsp;&nbsp;&nbsp;<code>&lt;div class="page-break" contenteditable="false"&gt;&lt;/div&gt;</code></p>
+				<p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, At accusam aliquyam diam diam dolore dolores duo eirmod eos erat, et nonumy sed tempor et et invidunt justo labore Stet clita ea et gubergren, kasd magna no rebum. sanctus sea sed takimata ut vero voluptua. est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat.</p>
+				<p>Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
 				</div>
 			</div>
 		</div>
@@ -79,7 +92,7 @@
 			<!--EDITOR NAVIGATION BAR-->
 			<div class="editornav">
 				<div id="templatesDiv" class="tabsnavbubtton"><a onClick="switchedit('templates'); switcheditbg('templatesDiv');">Templates</a></div>
-				<div id="graphsDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('graphs');switcheditbg('graphsDiv');">Graphs</a></div>
+				<div id="graphsDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('graphs'); switcheditbg('graphsDiv');">Graphs</a></div>
 				<div id="textDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('text'); switcheditbg('textDiv');">Text</a></div>
 				<div id="codeDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('codeEditorTab'); switcheditbg('codeDiv');">Code</a></div>
 			</div>
@@ -87,110 +100,180 @@
 			<!--TEMPLATES-->
 			<div id="templates" class="">
 				<div style="width: 100%; display: grid; grid-template-columns: auto auto;">
-				<div class="graph1">
+				<div class="graphs1">
+					<div class="graph1">
 					<a>
 					<div>
-						<div>
+						<div class="graphName">
+							<h3>Basic 1</h3>
+							<p class="star">
+								<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()">
+							</p>
+						</div>
+						<div class="graphImg">
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
 						</div>
-						<div class="graphname"><h3>Basic 1</h3></div>
 					</div>
 					</a>
 				</div>
-				<div class="graph1">
+				</div>
+				<div class="graphs1">
+					<div class="graph1">
 					<a>
 					<div>
-						<div>
+						<div class="graphName">
+							<h3>Basic 1</h3>
+							<p class="star">
+								<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+							</p>
+						</div>
+						<div class="graphImg">
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
 						</div>
-						<div class="graphname"><h3>Basic 1</h3></div>
 					</div>
 					</a>
 				</div>
-				<div class="graph1">
+				</div>
+				<div class="graphs1">
+					<div class="graph1">
 					<a>
 					<div>
-						<div>
+						<div class="graphName">
+							<h3>Basic 1</h3>
+							<p class="star">
+								<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+							</p>
+						</div>
+						<div class="graphImg">
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
 						</div>
-						<div class="graphname"><h3>Basic 1</h3></div>
 					</div>
 					</a>
 				</div>
-				<div class="graph1">
+				</div>
+				<div class="graphs1">
+					<div class="graph1">
 					<a>
 					<div>
-						<div>
+						<div class="graphName">
+							<h3>Basic 1</h3>
+							<p class="star">
+								<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+							</p>
+						</div>
+						<div class="graphImg">
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
 						</div>
-						<div class="graphname"><h3>Basic 1</h3></div>
 					</div>
 					</a>
+				</div>
 				</div>
 				</div>
 			</div>
 			<!--GRPAHS-->
 			<div id="graphs" class="hidden">
-				<div class="graphs1">
-				<div class="graph1">
+				<div class="graphsOverDiv">
+					<div class="graphs1">
+					<div class="graph1">
 					<a>
 					<div>
-						<div>
+						<div class="graphName">
+							<h3>Basic 1</h3>
+							<p class="star">
+								<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+							</p>
+						</div>
+						<div class="graphImg">
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
 						</div>
-						<div class="graphname"><h3>Basic 1</h3></div>
 					</div>
 					</a>
 				</div>
-				<div class="graph1">
+				</div>
+					<div class="graphs1">
+					<div class="graph1">
 					<a>
 					<div>
-						<div>
+						<div class="graphName">
+							<h3>Basic 1</h3>
+							<p class="star">
+								<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+							</p>
+						</div>
+						<div class="graphImg">
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
 						</div>
-						<div><h3>Basic 2</h3></div>
 					</div>
 					</a>
 				</div>
-				<div class="graph1">
+				</div>
+					<div class="graphs1">
+					<div class="graph1">
 					<a>
 					<div>
-						<div>
+						<div class="graphName">
+							<h3>Basic 1</h3>
+							<p class="star">
+								<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+							</p>
+						</div>
+						<div class="graphImg">
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
 						</div>
-						<div><h3>Basic 3</h3></div>
 					</div>
 					</a>
 				</div>
-				<div class="graph1">
+				</div>
+					<div class="graphs1">
+					<div class="graph1">
 					<a>
 					<div>
-						<div>
+						<div class="graphName">
+							<h3>Basic 1</h3>
+							<p class="star">
+								<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+							</p>
+						</div>
+						<div class="graphImg">
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
 						</div>
-						<div><h3>Basic 4</h3></div>
 					</div>
 					</a>
 				</div>
-				<div class="graph1">
+				</div>	
+					<div class="graphs1">
+					<div class="graph1">
 					<a>
 					<div>
-						<div>
+						<div class="graphName">
+							<h3>Basic 1</h3>
+							<p class="star">
+								<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+							</p>
+						</div>
+						<div class="graphImg">
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
 						</div>
-						<div><h3>Basic 5</h3></div>
 					</div>
 					</a>
 				</div>
-				<div class="graph1">
+				</div>
+					<div class="graphs1">
+					<div class="graph1">
 					<a>
 					<div>
-						<div>
+						<div class="graphName">
+							<h3>Basic 1</h3>
+							<p class="star">
+								<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+							</p>
+						</div>
+						<div class="graphImg">
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
 						</div>
-						<div><h3>Basic 6</h3></div>
 					</div>
 					</a>
+				</div>
 				</div>
 				</div>
 			</div>
@@ -198,7 +281,7 @@
 			<div id="text" class="hidden">
 				<div class="textTool">
 					<label>Text tool</label>
-					<div class="textToolImgDiv"><img class="settingsicon" src="img/icons/type.svg" alt="Text tool"></div>
+					<button type="type" class="textToolImgButton"><img class="settingsicon" src="img/icons/type.svg" alt="Text tool"></button>
 					<button type="button" onclick="" class="helpbutton">
     					<a>Help</a>
 					    <img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
@@ -212,14 +295,35 @@
 			</div>
 			<!--CODE EDITOR-->
 			<div id="codeEditorTab" class="hidden">
+				<div class="codeEditorOverDiv">
+					<div class="codeEditorButtons">
+						<button type="button" onclick="" class="showReport">
+						    <a>Show report</a>
+						    <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon">
+						</button>
+						<button type="button" onclick="" class="showReport">
+						    <a>Download</a>
+						    <img class="settingsmenuicon" src="img/icons/download.svg" alt="showicon">
+						</button>
+						<button type="button" onclick="" class="showReport">
+						    <a>Upload</a>
+						    <img class="settingsmenuicon" src="img/icons/upload.svg" alt="showicon">
+						</button>
+						<button type="button" onclick="" class="helpbutton">
+    						<a>Help</a>
+						    <img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
+						</button>
+					</div>
 				<div class="codeEditor" contenteditable="true">
 					<code><p>Code place holder</p></code>
+				</div>
 				</div>
 			</div>
 			</div>
 		</div>
 	</main>
 	<script src="js/editor-tabs-switcher.js"></script>
+	<script src="js/styleguide.js" defer></script>
 </body>
 </html>
 
