@@ -434,105 +434,301 @@
 <!-- SELTION 2 - ALLE MOLEKYLER FOR LØSNING-->
 <div class="sektion2" id="molecules">
   <!-- molekyle tabeller for overview-siden -->
-  <h3>Molekyler for løsning</h3>
-      <!-- Liste over molekyler -->
-      <ul>
-        <li>Tandhjul</li>
-        <li>Opret ny raport / create new report</li>
-        <li>Opret ny mappe / creaete new folder</li>
-        <li>Preview-switch-knap</li>
-        <li>Filter</li>
-        <li>Sort by</li>
-        <li>Søg</li>
-        <li>View all pages</li>
-        <li>Refresh</li>
-        <li>Raport display</li>
-        <li>Delete page</li>
-        <li>View all pages</li>
-        <li>Upload picture</li>
-        <li>Save report</li>
-        <li>Close editor</li>
-        <li>Prevoius page</li>
-        <li>Add page</li>
-        <li>Next page</li>
-        <li>Faneblad</li>
-        <li>Load template</li>
-        <li>Favorit stjerne</li>
-        <li>Opret ny mappe / create new folder</li>
-        <li>Go back to overview</li>
-        <li>Folder-illustration</li>
-        <li>Pop-up funktionalitet</li>
-        <li>Lukke ikon på pop up/dropdown</li>
-        <li>Drop down menu (fra tandhjul)</li>
-        <li>Date range (skal bruges i filter)</li>
-        <li>Cancel knap (på pop-up)</li>
-        <li>Opret knap (på pop-up)</li>
-        <li>Delete report knap (på pop-up)</li>
-        <li>E-mail - input</li>
-        <li>Save and close</li>
-        <li>Just close</li>
-        <li>Green Done</li>
-        <li>Message input</li>
-        <li>QR</li>
-        <li>Vertical display på show</li>
-        <li>Horisontal display på show</li>
-        <li>Save as input på pop-up</li>
-        <li>Report name input på create report pop-up</li>
-        <li>tabs (på editor)</li>
-      </ul>
-      <!-- Liste over molekyler - slut -->
-
-	<h4>Buttons with text and icons</h4>
+  <h3>Molecyles</h3>
+  <br>
+  <br>
+  <h4>Buttons with text and icons</h4>
             <!-- række 1 i tabel -->
             <table class="overviewmolekyler">
-                  <tr class="række1">
+                <tr class="række1">
                     <th>Atomer</th>
                     <th>Molekyle</th>
                     <th>HTML</th>
                     <th>CSS</th>
                     <th>JavaScript</th>
                   </tr>
-                <!-- række 1 i tabel - slut-->
-                <!-- række 2 i tabel -->
-				<!--Knapper til overview-->
+            <!-- række 1 i tabel - slut-->
+            <!-- række 2 i tabel -->
+
+				    <!--Knapper til overview-->
+            <!--Folder knap på filter pop-up-->
+            <tr class="række2">
+              <td>
+                <ui><li>?</li><li>?</li></ui>
+              </td>
+              <td>
+                <div class="frame">
+                  <div class="type"><p class="typetext">Folder</<p><button type="" onclick="" class="typebutton"><a class="typebuttontext">Name</a><img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+                </div>
+              </td>
+              <td class="code">
+                <div class="frame">
+                  <div class="type"><p class="typetext">Folder</p><button type="" onclick="" class="typebutton"><a class="typebuttontext">Namet</a><img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+                </div>
+              </td>
+              <td class="code">
+                .frame {
+                  background-color: black;
+                  width: 410px;
+                }
+
+                .type {
+                  margin-left: 5px;
+                }
+
+                .typetext {
+                  color: white;
+                }
+                .typebutton {
+                  width: 400px;
+                  border-radius: 10px;
+                }
+                .typebuttontext {
+                  float: left;
+                  font-style: italic;
+                  color: grey;
+                  margin-left: 5px;
+                }
+                .chevronicon {
+                  float: right;
+                  margin-top: 5px;
+                }
+              </td>
+              <td>Javascript</td>
+        </tr>
+        <!--Folder knap på filter pop-up - slut-->
+
+
+            <!--Schedule knap på filter pop-up-->
+            <tr class="række2">
+              <td>
+                <ui><li>?</li><li>?</li></ui>
+              </td>
+              <td>
+                <div class="frame">
+                  <div class="type"><p class="typetext">Schedule</<p><button type="" onclick="" class="typebutton"><a class="typebuttontext">Not set</a><img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+                </div>
+              </td>
+              <td class="code">
+                <div class="frame">
+                  <div class="type"><p class="typetext">Schedule</p><button type="" onclick="" class="typebutton"><a class="typebuttontext">Not set</a><img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+                </div>
+              </td>
+              <td class="code">
+                .frame {
+                  background-color: black;
+                  width: 410px;
+                }
+
+                .type {
+                  margin-left: 5px;
+                }
+
+                .typetext {
+                  color: white;
+                }
+                .typebutton {
+                  width: 400px;
+                  border-radius: 10px;
+                }
+                .typebuttontext {
+                  float: left;
+                  font-style: italic;
+                  color: grey;
+                  margin-left: 5px;
+                }
+                .chevronicon {
+                  float: right;
+                  margin-top: 5px;
+                }
+              </td>
+              <td>Javascript</td>
+        </tr>
+        <!--Schedule target knap på filter pop-up - slut-->
+
+                <!--result knap på filter pop-up-->
                 <tr class="række2">
-					<td>
-						<li><button type="button" onClick="" class="">button tag</button></li>
-						<li>
-							<img class="settingsicon" src="img/icons/folder.svg" alt="folder-icon">
-						</li>
-					</td>
-					<td>
-						<button type="button" onclick="" class="settingsmenubutton"><a>Folder overview</a> <img class="settingsmenuicon" src="img/icons/folder.svg" alt="editicon"></button></td>
-					<td class="code">
-						<button type="button" onclick="" class="settingsmenubutton"><a>Folder overview</a> <img class="settingsmenuicon" src="img/icons/folder.svg" alt="editicon"></button>
-					</td>
-					<td class="code">
-						}
-						.settingsmenubutton{
-							display: block;
-							width: 225px;
-							margin: 0 auto;
-							text-align: center;
-							border: #000000;
-							border-radius: 12px;
-							margin-bottom: 5px;
-							cursor: pointer;
-						}
-						.settingsmenubutton a{
-							float: left;
-							color: #848484;
-							font-size: 19px;
-							margin-left: 7px;
-						}
-						.settingsmenuicon{
-							float: right;
-							margin-right: 7px;
-							width: 20px;
-						}
-					</td>
-                  <td> JavaScript for 'tandhjul' </td>
-                </tr>
+                  <td>
+                    <ui><li>?</li><li>?</li></ui>
+                  </td>
+                  <td>
+                    <div class="frame">
+                      <div class="type"><p class="typetext">Result</<p><button type="" onclick="" class="typebutton"><a class="typebuttontext">Not set</a><img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+                    </div>
+                  </td>
+                  <td class="code">
+                    <div class="frame">
+                      <div class="type"><p class="typetext">Type</p><button type="" onclick="" class="typebutton"><a class="typebuttontext">Day of week</a><img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+                    </div>
+                  </td>
+                  <td class="code">
+                    .frame {
+                      background-color: black;
+                      width: 410px;
+                    }
+
+                    .type {
+                      margin-left: 5px;
+                    }
+
+                    .typetext {
+                      color: white;
+                    }
+                    .typebutton {
+                      width: 400px;
+                      border-radius: 10px;
+                    }
+                    .typebuttontext {
+                      float: left;
+                      font-style: italic;
+                      color: grey;
+                      margin-left: 5px;
+                    }
+                    .chevronicon {
+                      float: right;
+                      margin-top: 5px;
+                    }
+                  </td>
+                  <td>Javascript</td>
+            </tr>
+            <!--result target knap på filter pop-up - slut-->
+
+                <!--date target knap på filter pop-up-->
+                <tr class="række2">
+                  <td>
+                    <ui><li>?</li><li>?</li></ui>
+                  </td>
+                  <td>
+                    <div class="frame">
+                      <div class="type"><p class="typetext">Date target</<p><button type="" onclick="" class="typebutton"><a class="typebuttontext">Last edited</a><img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+                    </div>
+                  </td>
+                  <td class="code">
+                    <div class="frame">
+                      <div class="type"><p class="typetext">Type</p><button type="" onclick="" class="typebutton"><a class="typebuttontext">Day of week</a><img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+                    </div>
+                  </td>
+                  <td class="code">
+                    .frame {
+                    	background-color: black;
+                    	width: 410px;
+                    }
+
+                    .type {
+                    	margin-left: 5px;
+                    }
+
+                    .typetext {
+                    	color: white;
+                    }
+                    .typebutton {
+                    	width: 400px;
+                    	border-radius: 10px;
+                    }
+                    .typebuttontext {
+                    	float: left;
+                    	font-style: italic;
+                    	color: grey;
+                    	margin-left: 5px;
+                    }
+                    .chevronicon {
+                    	float: right;
+                    	margin-top: 5px;
+                    }
+                  </td>
+                  <td>Javascript</td>
+            </tr>
+            <!--date target knap på filter pop-up - slut-->
+
+            <!--type knap på filter pop-up-->
+            <tr class="række2">
+              <td>
+                <ui><li>?</li><li>?</li></ui>
+              </td>
+              <td>
+                <div class="frame">
+                  <div class="type"><p class="typetext">Type</p><button type="" onclick="" class="typebutton"><a class="typebuttontext">Day of week</a><img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+                </div>
+              </td>
+              <td class="code">
+                <div class="frame">
+                  <div class="type"><p class="typetext">Type</p><button type="" onclick="" class="typebutton"><a class="typebuttontext">Day of week</a><img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+                </div>
+              </td>
+              <td class="code">
+                .frame {
+                  background-color: black;
+                  width: 410px;
+                }
+
+                .type {
+                  margin-left: 5px;
+                }
+
+                .typetext {
+                  color: white;
+                }
+                .typebutton {
+                  width: 400px;
+                  border-radius: 10px;
+                }
+                .typebuttontext {
+                  float: left;
+                  font-style: italic;
+                  color: grey;
+                  margin-left: 5px;
+                }
+                .chevronicon {
+                  float: right;
+                  margin-top: 5px;
+                }
+              </td>
+              <td>Javascript</td>
+        </tr>
+        <!--type knap på filter pop-up - slut-->
+
+            <!--folder overview knap-->
+            <tr class="række2">
+              <td>
+    						<li><button type="button" onClick="" class="">button tag</button></li>
+    						<li>
+    							<img class="settingsicon" src="img/icons/folder.svg" alt="folder-icon">
+    						</li>
+    					</td>
+    					<td>
+    						<button type="button" onclick="" class="settingsmenubutton"><a>Folder overview</a> <img class="settingsmenuicon" src="img/icons/folder.svg" alt="editicon"></button></td>
+    					<td class="code">
+    						<button type="button" onclick="" class="settingsmenubutton"><a>Folder overview</a> <img class="settingsmenuicon" src="img/icons/folder.svg" alt="editicon"></button>
+    					</td>
+    					<td class="code">
+    						}
+    						.settingsmenubutton{
+    							display: block;
+    							width: 225px;
+    							margin: 0 auto;
+    							text-align: center;
+    							border: #000000;
+    							border-radius: 12px;
+    							margin-bottom: 5px;
+    							cursor: pointer;
+    						}
+    						.settingsmenubutton a{
+    							float: left;
+    							color: #848484;
+    							font-size: 19px;
+    							margin-left: 7px;
+    						}
+    						.settingsmenuicon{
+    							float: right;
+    							margin-right: 7px;
+    							width: 20px;
+    						}
+    					</td>
+              <td> JavaScript for 'tandhjul' </td>
+            </tr>
+          <!--folder overview knap - slut-->
+
+          <!--new report knap-->
 				<tr class="række2">
 					<td>
 					<li><button type="button">New report</button></li>
@@ -566,6 +762,7 @@
 					</td>
                   <td> JavaScript for 'tandhjul' </td>
                 </tr>
+          <!--new report knap - slut-->
 				<tr class="række2">
 					<td>
 						<li>
@@ -1357,6 +1554,7 @@ margin-left: 7px;
             </table>
             <!-- række 2 i tabel - slut -->
   <!-- molekyle tabel for 'Tandhjul-ikon' - slut -->
+
   <!--molecule for 'Tandhjul 1/kog' menu - start -->
 		<h4>Tandhjul 1 menu</h4>
             <!-- række 1 i tabel -->
@@ -1540,6 +1738,7 @@ margin-left: 7px;
             </table>
             <!-- række 2 i tabel - slut -->
   <!--molecule for 'Tandhjul 2/kog' menu - done -->
+
 	  <!--molecule for 'Tandhjul 3/kog' menu - start -->
 		<h4>Tandhjul 3 menu</h4>
             <!-- række 1 i tabel -->
@@ -1707,8 +1906,8 @@ margin-left: 7px;
           <!-- række 2 i tabel - slut -->
     <!-- molekyle tabel for 'Opret ny mappe / create new folder' - slut-->
 
-    <!-- molekyle tabel for Overview-side 'preview switch knap' -->
-      <h4>Overview-side 'preview switch knap'</h4>
+    <!-- molekyle tabel for switch knapper -->
+      <h4>Switch knapper</h4>
           <!-- række 1 i tabel -->
           <table class="overviewmolekyler">
               <tr class="række1">
@@ -1721,108 +1920,111 @@ margin-left: 7px;
             <!-- række 1 i tabel - slut -->
             <!-- række 2 i tabel -->
             <tr class="række2">
-              <td><li>label tag</li><li>input</li><li>span</li></td>
+              <td><li>div</li><li>input</li><li>label</li><li>span</li></td>
               <td>
-                <label class="switch">
-                  <input type="checkbox">
-                  <span class="slider round"></span>
-                </label>
+
+                    <div class="switch">
+                      <input type="radio" class="switch-input" name="view" id="preview" checked>
+                      <label for="preview" class="switch-label switch-label-off">Preview</label>
+                      <input type="radio" class="switch-input" name="view" id="list">
+                      <label for="list" class="switch-label switch-label-on">List</label>
+                      <span class="switch-selection"></span>
+                    </div>
+
+                    <div class="switch">
+                      <input type="radio" class="switch-input" name="view2" value="week2" id="singular" checked>
+                      <label for="singular" class="switch-label switch-label-off">Singular</label>
+                      <input type="radio" class="switch-input" name="view2" value="month2" id="multiple">
+                      <label for="multiple" class="switch-label switch-label-on">Multiple</label>
+                      <span class="switch-selection"></span>
+                    </div>
+
+                    <div class="switch">
+                      <input type="radio" class="switch-input" name="view3" value="week3" id=vertical checked>
+                      <label for="vertical" class="switch-label switch-label-off">Vertical</label>
+                      <input type="radio" class="switch-input" name="view3" id="horizontal">
+                      <label for=horizontal class="switch-label switch-label-on">Horizontal</label>
+                      <span class="switch-selection"></span>
+                    </div>
+
               </td>
               <td class="code">
-                <label class="switch">
-                    <input type="checkbox">
-                    <span class="slider round"></span>
-                </label>
-				</td>
+                <div class="switch">
+                  <input type="radio" class="switch-input" name="view3" value="week3" id="indsæt1" checked>
+                  <label for="indsæt1" class="switch-label switch-label-off">Vertical</label>
+                  <input type="radio" class="switch-input" name="view3" id="indsæt2">
+                  <label for=indsæt2 class="switch-label switch-label-on">Horizontal</label>
+                  <span class="switch-selection"></span>
+                </div>
+				      </td>
               <td class="code">
-                /* switch knap med runde hjørner stil */
                 .switch {
-                position: relative;
-                display: inline-block;
-                width: 60px;
-                height: 34px;
-              }
+                  position: relative;
+                  margin: 20px auto;
+                  height: 26px;
+                  width: 120px;
+                  background: white;
+                  border-radius: 15px;
+                }
 
-              .slider {
-                position: absolute;
-                cursor: pointer;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                background-color: #ccc;
-                -webkit-transition: .4s;
-                transition: .4s;
-              }
+                .switch-label {
+                  position: relative;
+                  z-index: 2;
+                  float: left;
+                  width: 58px;
+                  line-height: 26px;
+                  font-size: 11px;
+                  color: black;
+                  text-align: center;
+                  cursor: pointer;
+                }
+                .switch-label:active {
+                  font-weight: regular;
+                }
 
-              .slider:before {
-                position: absolute;
-                content: "";
-                height: 26px;
-                width: 26px;
-                left: 4px;
-                bottom: 4px;
-                background-color: white;
-                -webkit-transition: .4s;
-                transition: .4s;
+                .switch-label-off {
+                  padding-left: 2px;
+                }
 
+                .switch-label-on {
+                  padding-right: 2px;
+                }
 
-              input:checked + .slider {
-                background-color: #2196F3
-              }
+                .switch-input {
+                  display: none;
+                }
 
-              .slider.round {
-                border-radius: 34px;
-              }
+                .switch-input:checked + .switch-label {
+                  font-weight: regular;
+                  color: black;
+                }
 
-              .slider.round:before {
-                border-radius: 50%;
-              }
-              /* switch knap med runde hjørner stil - slut */
-          <br>
-          <br>
-              /* switch knap med runde hjørner funktion */
-              input:checked + .slider:before {
-                -webkit-transform: translateX(26px);
-                -ms-transform: translateX(26px);
-                transform: translateX(26px);
-              }<br>
-              /* switch knap med runde hjørner funktion - slut */
+                .switch-input:checked + .switch-label-on ~ .switch-selection {
+                  left: 60px;
+                }
 
+                .switch-selection {
+                  display: block;
+                  position: absolute;
+                  z-index: 1;
+                  top: 2px;
+                  left: 2px;
+                  width: 58px;
+                  height: 22px;
+                  background: #00CD00;
+                  border-radius: 15px;
+                }
+              <br>
               </td>
-              <td> JavaScript for 'preview switch knap' </td>
+              <td> JavaScript</td>
             </tr>
           </table>
           <!-- række 2 i tabel - slut -->
-    <!-- molekyle tabel for Overview-side 'preview switch knap' - slut-->
+    <!-- molekyle tabel for switch knapper- slut-->
 
-    <!-- molekyle tabel for 'Filter'-->
-      <h4>Filter</h4>
-          <!-- række 1 i tabel -->
-          <table class="overviewmolekyler">
-              <tr class="række1">
-                <th>Atomer</th>
-                <th>Molekyle</th>
-                <th>HTML</th>
-                <th>CSS</th>
-                <th>JavaScript</th>
-              </tr>
-            <!-- række 1 i tabel - slut-->
-            <!-- række 2 i tabel -->
-              <tr class="række2">
-                <td><li>?</li><li>?</li></td>
-                <td>indsæt molekyle</td>
-                <td> indsæt html kode - "læsbar/ikke aktiv kode" </td>
-                <td> indsæt css kode - "læsbar/ikke aktiv kode" </td>
-                <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
-              </tr>
-          </table>
-          <!-- række 2 i tabel - slut -->
-    <!-- molekyle tabel for 'filter' - slut -->
-
-    <!-- molekyle tabel for 'Sort by'-->
-      <h4>Sort by</h4>
-          <!-- række 1 i tabel -->
+    <!-- molekyle tabel for MEGASWITCH-->
+      <h4>MEGASWITCH</h4>
+      <!-- række 1 i tabel -->
           <table class="overviewmolekyler">
               <tr class="række1">
                 <th>Atomer</th>
@@ -1834,15 +2036,121 @@ margin-left: 7px;
             <!-- række 1 i tabel - slut-->
             <!-- række 2 i tabel -->
             <tr class="række2">
-              <td><li>?</li><li>?</li></td>
-              <td>indsæt molekyle</td>
-              <td> indsæt html kode - "læsbar/ikke aktiv kode" </td>
-              <td> indsæt css kode - "læsbar/ikke aktiv kode" </td>
-              <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
+              <td><li>div</li><li>input</li><li>label</li><li>span</li></td>
+              <td>
+                <div class="megaswitch">
+                  <input type="radio" class="switch-input0" name="view4" id="a1" checked>
+                  <label for="a1" class="switch-label0 switch-label-off0">A1</label>
+
+                  <input type="radio" class="switch-input0" name="view4" id="a2">
+                  <label for="a2" class="switch-label0 switch-label-on1">A2</label>
+
+                  <input type="radio" class="switch-input0" name="view4" id="a3">
+                  <label for="a3" class="switch-label0 switch-label-on2">A3</label>
+
+                  <input type="radio" class="switch-input0" name="view4" id="a4">
+                  <label for="a4" class="switch-label0 switch-label-on3">A4</label>
+
+                  <span class="switch-selection0"></span>
+                </div>
+              </td>
+              <td class="code">
+                <div class="megaswitch">
+                  <input type="radio" class="switch-input0" name="view4" id="a1" checked>
+                  <label for="a1" class="switch-label0 switch-label-off0">A1</label>
+
+                  <input type="radio" class="switch-input0" name="view4" id="a2">
+                  <label for="a2" class="switch-label0 switch-label-on1">A2</label>
+
+                  <input type="radio" class="switch-input0" name="view4" id="a3">
+                  <label for="a3" class="switch-label0 switch-label-on2">A3</label>
+
+                  <input type="radio" class="switch-input0" name="view4" id="a4">
+                  <label for="a4" class="switch-label0 switch-label-on3">A4</label>
+
+                  <span class="switch-selection0"></span>
+                </div>
+              </td>
+              <td class="code">
+                  .megaswitch {
+                  position: relative;
+                  margin: 20px auto;
+                  height: 26px;
+                  width: 240px;
+                  background: white;
+                  border-radius: 15px;
+                }
+                /*slut*/
+
+                /*style for labels*/
+                .switch-label0 {
+                  position: relative;
+                  z-index: 2;
+                  float: left;
+                  width: 58px;
+                  line-height: 26px;
+                  font-size: 11px;
+                  color: black;
+                  text-align: center;
+                  cursor: pointer;
+                }
+                .switch-label0:active {
+                  font-weight: regular;
+                }
+
+                .switch-label-off0 {
+                  padding-left: 2px;
+                }
+
+                .switch-label-on0 {
+                  padding-right: 2px;
+                }
+                /*slut*/
+
+                /*style for labels*/
+                .switch-input0 {
+                  display: none;
+                }
+                /*slut*/
+
+                /*styling for hvor den runde grønne knap (.switch-selector) skal rykke sig hen alt efter hvilket hvilket label der bliver "checked" */
+                .switch-input0:checked + .switch-label0 {
+                  font-weight: bold;
+                  color: black;
+                }
+
+                .switch-input0:checked + .switch-label-on1 ~ .switch-selection0 {
+                  left: 60px;
+                }
+
+                .switch-input0:checked + .switch-label-on2 ~ .switch-selection0 {
+                  left: 120px;
+                }
+
+                .switch-input0:checked + .switch-label-on3 ~ .switch-selection0 {
+                  left: 180px;
+                }
+                /*slut*/
+
+                /*style for den runde grønne knap der switcher fra højre til venstre*/
+                .switch-selection0 {
+                  display: block;
+                  position: absolute;
+                  z-index: 1;
+                  top: 2px;
+                  left: 2px;
+                  width: 58px;
+                  height: 22px;
+                  background: #00CD00;
+                  border-radius: 15px;
+                }
+              </td>
+              <td> indsæt JavaScript kode</td>
             </tr>
           </table>
-          <!-- række 2 i tabel - slut -->
-    <!-- molekyle tabel for 'sort by' - slut -->
+      <!-- række 2 i tabel - slut -->
+    <!-- molekyle tabel for MEGASWITCH - slut-->
+
 
     <!-- molekyle tabel for 'søg'-->
       <h4>Søg</h4>
@@ -2286,7 +2594,7 @@ margin-left: 7px;
 	</nav>
 				<!--HTML to copy-->
 			</td>
-            <td class="code"> 
+            <td class="code">
 	<nav class="smallnav">
 		<div class="branddiv">
 			<!--LOGO-->
@@ -2338,7 +2646,7 @@ margin-left: 7px;
 }
 
 .smallnav div ul {
-	list-style: none; 
+	list-style: none;
 	float: left;
 	width: 100%;
 }
@@ -2425,19 +2733,15 @@ margin-left: 7px;
             <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
           </tr>
           </table>
-	  <h4>Pop ud delete - report</h4>
-	  <table class="overvieworganimser">
-            <tr class="række1">
-              <th>Molekyler</th>
-              <th>Organsime</th>
-              <th>HTML</th>
-              <th>CSS</th>
-              <th>JavaScript</th>
-            </tr>
-          <!-- række 2 i tabel -->
-          <tr class="række2">
-			  <!--Molecules-->
-			  <td>
+          <h4>Pop ud delete</h4>
+  	  <h4>Pop ud delete - report</h4>
+  	  <table class="overvieworganimser">
+              <tr class="række1">
+                <th>Molekyler</th>
+  @ -2392,18 +2392,159 @@ margin-left: 7px;
+            <tr class="række2">
+  			  <!--Molecules-->
+  			  <td>
 				<li>Text</li>
 				<li>Button</li>
 			  </td>
