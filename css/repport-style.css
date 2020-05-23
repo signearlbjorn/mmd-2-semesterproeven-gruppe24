@@ -224,6 +224,12 @@ h3 {
 
 /* --- MOLECULES ---*/
 
+/*Style til stherne prioriterings molekyle*/
+.star {
+	background-color: black;
+	width: 26px;
+}
+
 /*Here starts CSS code for settings button (kog img)*/
 .settingsicon{
 	width: 25px;
