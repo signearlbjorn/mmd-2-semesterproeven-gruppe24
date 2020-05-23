@@ -960,6 +960,58 @@ nav a:hover{
 }
 /*Here ends CSS for pop up delete*/
 
+/* Styling for SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN ORAGBISME */
+.frameforsidetitelogsettingsbar {
+	background-color: #D3D3D3;
+	width: 100%;
+  height: 150px;
+}
+
+/*PLACERING / POSITIONER*/
+
+.sidetitelogsettingswrap {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.sidetitelcontainer, .quantitycontainer  {
+  float: left;
+}
+
+.opretnyrapportcontainer {
+  float: right;
+  margin-top: 10px;
+}
+
+.quantitycontainer {
+  margin-top: 80px;
+  margin-left: -215px;
+}
+
+.switch-preview-list-container {
+  float: left;
+  margin-top: 80px;
+}
+
+.folderoverviewcontainer {
+  float: left;
+  margin-top: 80px;
+}
+
+.filtercontainer {
+  float: left;
+  margin-top: 80px;
+}
+
+.sortbycontainer {
+  float: right;
+  margin-top: 80px;
+}
+/* Styling for SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN ORAGBISME - SLUT */
+
+
+/* --- ORGANISMER SLUT --- */
+
 
 /* --- TEMPLATES --- */
 /* -- POSITIONING -- */
