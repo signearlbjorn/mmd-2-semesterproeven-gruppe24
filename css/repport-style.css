@@ -224,6 +224,12 @@ h3 {
 
 /* --- MOLECULES ---*/
 
+/*Style til stherne prioriterings molekyle*/
+.star {
+	background-color: black;
+	width: 26px;
+}
+
 /*Here starts CSS code for settings button (kog img)*/
 .settingsicon{
 	width: 25px;
@@ -643,6 +649,13 @@ margin-left: 7px;
 /*STYLING FOR MEGASWITCH - SLUT*/
 
 /* --- ORGANISMS --- */
+/*Here starts CSS for header in editor*/
+.editorHeader{
+	background-color: #BBBBBB; 
+	border-color: black; 
+	display: block; 
+	width: 100%;
+}
 /*Here starts CSS for Main in Editor*/
 .mainEditor{
 	display: grid;
@@ -689,13 +702,17 @@ margin-left: 7px;
 }
 .editortabs{
 	margin: 20px 10px 0;
+<<<<<<< HEAD
 	background-color: #505050; 
+=======
+	background-color: #505050;
 	height: inherit;
+>>>>>>> 7e9e092e4c38612b22e2cc67415235adb34b9943
 	width: 98%;
 }
 .graphs1{
-	width: 100%; 
-	display: grid; 
+	width: 100%;
+	display: grid;
 	grid-template-columns: auto auto auto;
 }
 
@@ -1076,7 +1093,7 @@ header .wrapper {
 		border-right: solid 1px #000;
 		border-bottom: none;
 	}
-	
+
 	#styleguide table tr td {
 		border-right: solid 1px #000;
 		border-bottom: none;
@@ -1091,7 +1108,7 @@ header .wrapper {
 #styleguide table.atomTable tr th {
 	float: left;
 	width: 100%;
-	padding: 10px;	
+	padding: 10px;
 }
 
 @media (min-width:481px){
@@ -1250,11 +1267,10 @@ nav .wrapper, nav #example .wrapper {
 	}
 }
 
-
 /* styling marginer for sektioner*/
 .titler, .sektion1, .sektion2, .sektion3, .table {
-	margin-left: 25%;
-	margin-right: 25%;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 #styleguide section,
