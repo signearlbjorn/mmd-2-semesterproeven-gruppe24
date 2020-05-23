@@ -478,7 +478,6 @@ h3 {
 	border: none;
 	border-radius: 12px;
 	width: 50px;
-	height: 15px;
 	cursor: pointer;
 	display: block;
 }
@@ -490,6 +489,8 @@ h3 {
 }
 .helpbutton img{
 	width:10px;
+	float: right;
+	margin: 9px 9px 0 0;
 }
 /*Here starts code for text edit button*/
 .texteditdiv{
