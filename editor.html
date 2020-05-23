@@ -47,17 +47,23 @@
 			</ul>
 		</div>
 	</nav>
-	<header style="background-color: #BBBBBB; border-color: black; display: block; width: 100%;">
+	<header class="editorHeader">
 		<!--TITLE-->
 		<h1>REPORT EDITOR</h1>
+		<div class="switch">
+			<input type="radio" class="switch-input" name="view3" value="week3" id="indsæt1" checked="">
+			<label for="indsæt1" class="switch-label switch-label-off">Vertical</label>
+			<input type="radio" class="switch-input" name="view3" id="indsæt2">
+			<label for="indsæt2" class="switch-label switch-label-on">Horizontal</label>
+			<span class="switch-selection"></span>
+		</div>
 		<!--CLOSE &AMP SAVE FUNKCION-->
 		<div style="float: right;">
 			<a>Close &amp; Save</a>
 		</div>
 	</header>
-	<main style="width: 100%;">
+	<main class="mainEditor" style="width: 100%;">
 		<!--REPORT PAGE PREVIEW-->
-		
 		<div class="report-preview">
 			<div class="pagediv">
 				<div class="page" contenteditable="true">
@@ -72,16 +78,17 @@
 		<div  class="editor">
 			<!--EDITOR NAVIGATION BAR-->
 			<div class="editornav">
-					<div id="graphsdiv" class="tabsnavbubtton"><a onClick="switchedit('graphs');switcheditbg('graphsdiv')">Graphs</a></div>
-					<div id="textdiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('text'); switcheditbg('textdiv')">Text</a></div>
-					<div id="templatesdiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('templates'); switcheditbg('templatesdiv')">Templates</a></div>
-					<div id="codediv" class="tabsnavbubtton lightbg"><a onClick="switchedit('code'); switcheditbg(codediv)">Code</a></div>
+					<div id="graphsDiv" class="tabsnavbubtton"><a onClick="switchedit('graphs');switcheditbg('graphsDiv');">Graphs</a></div>
+					<div id="textDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('text'); switcheditbg('textDiv');">Text</a></div>
+					<div id="templatesDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('templates'); switcheditbg('templatesDiv');">Templates</a></div>
+					<div id="codeDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('code'); switcheditbg('codeDiv');">Code</a></div>
 			</div>
+			<div class="editortabs">
 			<!--GRPAHS-->
 			<div id="graphs" class="">
-				<div style="width: 100%; display: grid; grid-template-columns: auto auto auto;">
+				<div class="graphs1">
 				<div class="graph1">
-					<a href="#">
+					<a>
 					<div>
 						<div>
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
@@ -91,7 +98,7 @@
 					</a>
 				</div>
 				<div class="graph1">
-					<a href="#">
+					<a>
 					<div>
 						<div>
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
@@ -101,7 +108,7 @@
 					</a>
 				</div>
 				<div class="graph1">
-					<a href="#">
+					<a>
 					<div>
 						<div>
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
@@ -111,7 +118,7 @@
 					</a>
 				</div>
 				<div class="graph1">
-					<a href="#">
+					<a>
 					<div>
 						<div>
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
@@ -121,7 +128,7 @@
 					</a>
 				</div>
 				<div class="graph1">
-					<a href="#">
+					<a>
 					<div>
 						<div>
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
@@ -131,7 +138,7 @@
 					</a>
 				</div>
 				<div class="graph1">
-					<a href="#">
+					<a>
 					<div>
 						<div>
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
@@ -167,7 +174,7 @@
 			<div id="templates" class="hidden">
 				<div style="width: 100%; display: grid; grid-template-columns: auto auto;">
 				<div class="graph1">
-					<a href="#">
+					<a>
 					<div>
 						<div>
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
@@ -177,7 +184,7 @@
 					</a>
 				</div>
 				<div class="graph1">
-					<a href="#">
+					<a>
 					<div>
 						<div>
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
@@ -187,7 +194,7 @@
 					</a>
 				</div>
 				<div class="graph1">
-					<a href="#">
+					<a>
 					<div>
 						<div>
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
@@ -197,7 +204,7 @@
 					</a>
 				</div>
 				<div class="graph1">
-					<a href="#">
+					<a>
 					<div>
 						<div>
 							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
@@ -211,6 +218,7 @@
 			<!--CODE EDITOR-->
 			<div id="code" class="hidden">
 				<a>code</a>
+			</div>
 			</div>
 		</div>
 	</main>

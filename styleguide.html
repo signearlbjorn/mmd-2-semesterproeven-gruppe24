@@ -436,6 +436,76 @@
 			<li>Ikke semantiske sektioner: div, span, table, ul, li, form</li>
 		</ul>
 	</div>
+	<article id="stjerne-prioritering">
+		<div class="wrapper">
+			<h4>Stjerne Prioritering</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<p class="star">
+					<img alt="" src="git og github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg"
+					  style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()"  />
+				</p>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td>
+					  <ui><li>p</li><li>img</li></ui>
+					</td>
+					<td class="code">
+						<p class="star">
+							<img alt="" src="git og github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg"
+							  style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()"  />
+						</p>
+					</td>
+					<td class="code">
+						.star {
+							background-color: black;
+							width: 26px;
+						}
+					</td>
+					<td class="code">
+						<script language="javascript">
+							function changeImage() {
+								if (document.getElementById("imgClickAndChange").src == "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg")
+								{
+									document.getElementById("imgClickAndChange").src = "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg";
+								}
+								else
+								{
+									document.getElementById("imgClickAndChange").src = "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg";
+								}
+							}
+						</script>
+					</td>
+				</tr>
+            </table>
+            <!-- JAVASCRIPT FOR STJERNE PRORITERINGS MOLEKYLE FORDI JEG IKKKE KAN SÆTTE DET I JAVASCRIPT DOKUMENT UDEN ALT FUCKER MVH. SIGNE -->
+            <script language="javascript">
+                function changeImage() {
+
+                    if (document.getElementById("imgClickAndChange").src == "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg")
+                    {
+                        document.getElementById("imgClickAndChange").src = "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/starfull.svg";
+                    }
+                    else
+                    {
+                        document.getElementById("imgClickAndChange").src = "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg";
+                    }
+                }
+            </script>
+            <!-- JAVASCRIPT FOR STJERNE PRORITERINGS MOLEKYLE FORDI JEG IKKKE KAN SÆTTE DET I JAVASCRIPT DOKUMENT UDEN ALT FUCKER MVH. SIGNE -->
+            <!-- række 2 i tabel - slut -->
+ 		</div>
+	</article>
+   <!-- Stjerne Prioritering - slut  -->
 	<article id="folder-knap-på-filter-pop-up">
 		<div class="wrapper">
 			<h4>Folder knap på filter pop-up</h4>
@@ -840,7 +910,6 @@
 					<td class="empty"></td>
 				</tr>
 			</table>
-			<p class="info">Warning eller info.</p>
 		</div>
 	</article>
 	<article id="new-report-knap">
@@ -993,7 +1062,6 @@
 							font-size: 14px;
 							margin-left: 7px;
 						}
-					</td>
 					<td class="empty"></td>
                 </tr>
 			</table>
@@ -1064,7 +1132,7 @@
 		<div class="example">
 			<div class="wrapper">
 				<button type="button" onclick="" class="previousbutton">
-					<a>Previous</a>
+					<a>Previous page</a>
 					<img class="settingsmenuicon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
 				</button>
 			</div>
@@ -1079,7 +1147,7 @@
 				<tr class="row-two">
 					<td class="code">
 						<button type="button" onclick="" class="previousbutton">
-							<a>Previous</a>
+							<a>Previous page</a>
 							<img class="settingsmenuicon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
 						</button>
 					</td>
@@ -1094,12 +1162,60 @@
 						}
 						.previousbutton a{
 							color: #000;
-							font-size: 14px;
-							margin-right: 17px;
+							font-size: 10px;
+							margin-right: 6px;
 							float: right;
 						}
 						.previousbutton img{
-							margin: 0;
+							margin: 6px auto;
+						}
+					</td>
+					<td class="empty"></td>
+                </tr>
+			</table>
+		</div>
+	</article>
+	<article id="naeste-knap">
+		<div class="wrapper">
+			<h4>Næste-knap</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button type="button" onclick="" class="nextbutton">
+					<a>Next page</a>
+					<img class="settingsmenuicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
+				</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">						
+						<button type="button" onclick="" class="nextbutton">
+							<a>Next page</a>
+							<img class="settingsmenuicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
+						</button>
+					</td>
+					<td class="code">
+						.nextbutton{
+							background-color: #fff;
+							border: none;
+							border-radius: 12px;
+							width: 100px;
+							cursor: pointer;
+							display: block;
+						}
+						.nextbutton a{
+							color: #000;
+							font-size: 10px;
+						}
+						.nextbutton img{
+							margin: 6px auto;
 						}
 					</td>
 					<td class="empty"></td>
@@ -3232,6 +3348,89 @@
           </table>
 </div>
 <!-- SEKTION 3 - ORGANISMER FOR LØSNING - SLUT -->
+<br>
+<!--"SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN ORAGBISME - SLUT-->
+
+<div class="frameforsidetitelogsettingsbar">
+
+  <div class="sidetitelogsettingswrap">
+
+        <!-- side titel -->
+        <div class="sidetitelcontainer">
+          <h1>Report overview</h1>
+        </div>
+        <!-- side titel - slut-->
+
+        <!-- opret ny rapport knap -->
+        <div class="opretnyrapportcontainer">
+          <button type="button" class="newreportbutton">
+            <img class="plusimg" src="img/icons/plus.svg" alt="new preort img">
+            <span class="newreportspan">New report</span>
+          </button>
+        </div>
+        <!-- opret ny rapport knap - slut-->
+
+        <!-- quantity molekyle -->
+        <div class="quantitycontainer">
+            <div class="quantitydiv">Quantity
+              <button type="" onclick="" class="quantitybutton">
+                <a>8</a>
+                <img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
+              </button>
+            </div>
+        </div>
+        <!-- quantity molekyle - slut-->
+
+        <!-- switch knap preview/list -->
+        <div class="switch-preview-list-container">
+            <div class="switch">
+              <input type="radio" class="switch-input" name="view" id="preview" checked>
+              <label for="preview" class="switch-label switch-label-off">Preview</label>
+              <input type="radio" class="switch-input" name="view" id="list">
+              <label for="list" class="switch-label switch-label-on">List</label>
+              <span class="switch-selection"></span>
+            </div>
+        </div>
+        <!-- switch knap preview/list - slut-->
+
+        <!-- folder-overview knap -->
+        <div class="folderoverviewcontainer">
+            <button type="button" onclick="" class="settingsmenubutton">
+              <a>Folder overview</a>
+              <img class="settingsmenuicon" src="img/icons/folder.svg" alt="editicon">
+            </button>
+        </div>
+        <!-- folder-overview knap - slut-->
+
+        <!-- filter knap -->
+        <div class="filtercontainer">
+            <button type="button" onclick="" class="filterbutton">
+              <a>Filter</a>
+              <img class="settingsmenuicon" src="img/icons/sliders.svg" alt="slider-icon">
+            </button>
+        </div>
+        <!-- filter - slut-->
+
+        <!-- sort by knap -->
+        <div class="sortbycontainer">
+            <div class="sortbydiv">
+              Sort by<button type="" onclick="" class="sortbybutton">
+                <a>Choose..</a>
+                <img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
+              </button>
+            </div>
+        </div>
+
+        <!-- sort by - slut-->
+
+        <!-- search knap -->
+        <!-- search knap - slut-->
+
+    </div>
+
+</div>
+<!--"SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN ORAGBISME - SLUT-->
+
 <section id="templates">
 	<div class="wrapper">
 		<h3>Atomer for løsning</h3>
@@ -3393,7 +3592,7 @@
 							width: 100%;
 							background-color: #222;
 						}
-						
+
 						header .wrapper {
 							width: 100%;
 						}

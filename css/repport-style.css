@@ -224,6 +224,12 @@ h3 {
 
 /* --- MOLECULES ---*/
 
+/*Style til stherne prioriterings molekyle*/
+.star {
+	background-color: black;
+	width: 26px;
+}
+
 /*Here starts CSS code for settings button (kog img)*/
 .settingsicon{
 	width: 25px;
@@ -325,7 +331,7 @@ h3 {
 	margin-top: 5px;
 }
 
-/*Here starts code for 'new report bbutton'*/
+/*Here starts code for 'new report button'*/
 .newreportbutton{
 	border: none;
 	border-radius: 12px;
@@ -409,12 +415,12 @@ h3 {
 }
 .previousbutton a{
     color: #000;
-    font-size: 14px;
-    margin-right: 17px;
+    font-size: 10px;
+    margin-right: 6px;
 	float: right;
 }
 .previousbutton img{
-	margin: 0;
+	margin: 6px auto;
 }
 /*Here starts code for next button in editor*/
 .nextbutton{
@@ -427,8 +433,10 @@ h3 {
 }
 .nextbutton a{
     color: #000;
-    font-size: 14px;
-	margin-left: 16px;
+    font-size: 10px;
+}
+.nextbutton img{
+	margin: 6px auto;
 }
 /*Here starts code for upload image in editor*/
 .uploadimagebutton{
@@ -641,9 +649,21 @@ margin-left: 7px;
 /*STYLING FOR MEGASWITCH - SLUT*/
 
 /* --- ORGANISMS --- */
+/*Here starts CSS for header in editor*/
+.editorHeader{
+	background-color: #BBBBBB; 
+	border-color: black; 
+	display: block; 
+	width: 100%;
+}
+/*Here starts CSS for Main in Editor*/
+.mainEditor{
+	display: grid;
+	grid-template-columns: 55% 45%;
+}
 /*Here starts CSS for Editor page preview*/
 .report-preview{
-	width: 50%;
+	width: 100%;
 	background-color: #6f6f6f;
 	display: grid;
 	align-content: center;
@@ -654,7 +674,7 @@ margin-left: 7px;
 /*Here starts CSS for editor tabs*/
 .editor{
 	float: right;
-	width: 50%;
+	width: 100%;
 	height: 100%;
 	background-color: #404040;
 }
@@ -679,6 +699,16 @@ margin-left: 7px;
 }
 .lightbg{
 	background-color: #6F6F6F;
+}
+.editortabs{
+	margin: 20px 10px 0;
+	background-color: #505050;
+	width: 98%;
+}
+.graphs1{
+	width: 100%;
+	display: grid;
+	grid-template-columns: auto auto auto;
 }
 
 /*Here starts CSS code for Navbar  - big screen*/
@@ -936,6 +966,58 @@ nav a:hover{
 }
 /*Here ends CSS for pop up delete*/
 
+/* Styling for SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN ORAGBISME */
+.frameforsidetitelogsettingsbar {
+	background-color: #D3D3D3;
+	width: 100%;
+  height: 150px;
+}
+
+/*PLACERING / POSITIONER*/
+
+.sidetitelogsettingswrap {
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.sidetitelcontainer, .quantitycontainer  {
+  float: left;
+}
+
+.opretnyrapportcontainer {
+  float: right;
+  margin-top: 10px;
+}
+
+.quantitycontainer {
+  margin-top: 80px;
+  margin-left: -215px;
+}
+
+.switch-preview-list-container {
+  float: left;
+  margin-top: 80px;
+}
+
+.folderoverviewcontainer {
+  float: left;
+  margin-top: 80px;
+}
+
+.filtercontainer {
+  float: left;
+  margin-top: 80px;
+}
+
+.sortbycontainer {
+  float: right;
+  margin-top: 80px;
+}
+/* Styling for SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN ORAGBISME - SLUT */
+
+
+/* --- ORGANISMER SLUT --- */
+
 
 /* --- TEMPLATES --- */
 /* -- POSITIONING -- */
@@ -1067,7 +1149,7 @@ header .wrapper {
 		border-right: solid 1px #000;
 		border-bottom: none;
 	}
-	
+
 	#styleguide table tr td {
 		border-right: solid 1px #000;
 		border-bottom: none;
@@ -1210,11 +1292,10 @@ header .wrapper, #wrapper_header_example header .wrapper {
 	}
 }
 
-
 /* styling marginer for sektioner*/
 .titler, .sektion1, .sektion2, .sektion3, .table {
-	margin-left: 25%;
-	margin-right: 25%;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 
 #styleguide section,

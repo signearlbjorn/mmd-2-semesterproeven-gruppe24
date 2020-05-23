@@ -22,7 +22,7 @@ for(let i=0; i<codeSections.length; i++){ // Loop all instanceses of code.
 	newCodeSectionText = newCodeSectionText.replace(/<code><\/code>/g, '<br>'); // repace <code></code> (emty code elements) with <br>
 	newCodeSectionText = newCodeSectionText.replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;'); // repace tabs with 4 space;
 	codeSections[i].innerHTML = '<code>' + newCodeSectionText + '</code>'; // update element, and add leading <code> and trailing </code>
-	
+
 	codeSections[i].addEventListener("dblclick", function(){selectText(codeSections[i])}); // Add eventlistner on doubleclick for selectText.
 }
 
