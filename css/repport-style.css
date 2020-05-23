@@ -1180,6 +1180,7 @@ header .wrapper {
 	margin-left: 2em;
 	text-indent: -2em; /* A negative indent together with a positive margin with opisitite value, can imitate outdents. */
 	color: #000;
+	word-break: break-word;
 }
 
 #styleguide table tr td code:last-child {
