@@ -10,7 +10,7 @@ CSS er skrevet af:
 */
 
 body {
-	background-color: #D3D3D3;
+	background-color: #F2F2F2;
 }
 
 /* --- ATOMS --- */
@@ -1003,27 +1003,31 @@ nav a:hover{
 
 .quantitycontainer {
   margin-top: 80px;
-  margin-left: -215px;
+  margin-left: -228px;
 }
 
 .switch-preview-list-container {
   float: left;
-  margin-top: 80px;
+  margin-top: 65px;
+	margin-left: -100px;
 }
 
 .folderoverviewcontainer {
   float: left;
   margin-top: 80px;
+	margin-left: 25px;
 }
 
 .filtercontainer {
   float: left;
   margin-top: 80px;
+	margin-left: 25px;
 }
 
 .sortbycontainer {
-  float: right;
+  float: left;
   margin-top: 80px;
+	margin-left: 25px;
 }
 /* Styling for SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN ORAGBISME - SLUT */
 
@@ -1258,6 +1262,7 @@ header .wrapper {
 	border-bottom: solid 3px #6F6F6F;
 	margin-top: 40px;
 	margin-bottom: 20px;
+	background-color: #ddd;
 }
 .example:before {
 	content:"Eksempel:";
