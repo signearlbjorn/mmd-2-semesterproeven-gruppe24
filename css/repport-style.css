@@ -1245,6 +1245,15 @@ nav a:hover{
 }
 /*ekstra style til schedule as pop-up - slut*/
 
+/*ekstra style til create new report pop-up*/
+.frameforcreatenewreportpopup {
+	background-color: #6F6F6F;
+	width:450px;
+	height: 400px;
+	border-radius: 5px;
+}
+/*ekstra style til create new report pop-up  - slut*/
+
 /* --- ORGANISMER SLUT --- */
 
 
