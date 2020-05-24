@@ -1238,6 +1238,13 @@ nav a:hover{
 }
 /*ekstra style til share as pop-up - SLUT*/
 
+/*ekstra style til schedule as pop-up*/
+.timebutton {
+	width: 80px;
+	border-radius: 10px;
+}
+/*ekstra style til schedule as pop-up - slut*/
+
 /* --- ORGANISMER SLUT --- */
 
 
