@@ -896,6 +896,7 @@ nav a:hover{
 	display: block;
 	width: 14px;
 	float: right;
+	margin-right: 30px;
 }
 /*Here ends CSS for NAV - big screen*/
 /*Here starts CSS for NAV - Small screen*/
@@ -926,6 +927,7 @@ nav a:hover{
 	float: left;
 	padding: 15px;
 	text-decoration: none;
+	width: 93%;
 }
 
 .smallnav img.icon{
@@ -1317,6 +1319,18 @@ header .wrapper {
 }
 
 #styleguide table tr th {
+	cursor: pointer;
+}
+
+#styleguide table tr td {
+	display: none;
+}
+
+#styleguide table tr.show td{
+	display: table-cell;
+}
+
+#styleguide table tr th {
 	padding-right: 10px;
 	padding-top: 10px;
 	padding-left: 10px;
@@ -1413,11 +1427,14 @@ header .wrapper {
 	color: #fff;
 	clear: right;
 }
+
 #styleguide .tableExplainer img {
 	float: left;
 	margin-right: 0.25em;
 	clear: left;
+	max-width: 25px;
 }
+
 #styleguide .tableExplainerButton{
 	float: left;
 	clear: both;
@@ -1519,6 +1536,10 @@ header .wrapper, #wrapper_header_example header .wrapper {
 
 #styleguide #edit {
 	float: left;
+	width: 100%;
+}
+
+#styleguide .title-area {
 	width: 100%;
 }
 /* styling marginer for sektioner - slut*/

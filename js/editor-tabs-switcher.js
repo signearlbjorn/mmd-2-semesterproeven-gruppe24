@@ -14,23 +14,30 @@ function switchedit(switcheditpage) {
 
 function switcheditbg(editbgswitch) {
 	let editbg = ["graphsDiv", "textDiv", "templatesDiv", "codeDiv"];
-	for(ii = 0; ii < editbg.length; ii++){
-		if(editbgswitch == editbg[ii]){
-			document.getElementById(editbg[ii]).classList.remove("lightbg");
+	for(i = 0; i < editbg.length; i++){
+		if(editbgswitch == editbg[i]){
+			document.getElementById(editbg[i]).classList.remove("lightbg");
 		}
 		else{
-			document.getElementById(editbg[ii]).classList.add("lightbg");
+			document.getElementById(editbg[i]).classList.add("lightbg");
 		}
 	}
 }
+
+console.log('Init');
 function switchpagepreview(previewSwitch){
+	console.log('Start funktion');
 	let editpreview = ["pageVertical", "pageHorizontal"];
-	for(iii = 0; iii < editpreview.lenght; iii++){
-		if(previewSwitch == editpreview[iii]){
-			document.getElementById(editpreview[iii]).classList.remove("hidden");
+	for(i = 0; i < editpreview.length; i++){
+		console.log('loop yai');
+		if(previewSwitch == editpreview[i]){
+			console.log('if');
+			document.getElementById(editpreview[i]).classList.remove("hidden");
 		}
 		else{
-			document.getElementById(editpreview[iii]).classList.add("hidden");
+			console.log('else');
+			document.getElementById(editpreview[i]).classList.add("hidden");
 		}
+		console.log('Loop end :-(');
 	}
 }

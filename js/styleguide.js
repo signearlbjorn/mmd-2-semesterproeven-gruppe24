@@ -48,12 +48,27 @@ function selectText(element) {
 /* PRIORITY STAR / STJERNE PRIORITERING */
 function changeImage() {
 
-	if (document.getElementById("imgClickAndChange").src == "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg")
+	if (document.getElementById("imgClickAndChange").src == "img/icons/star.svg")
 	{
-		document.getElementById("imgClickAndChange").src = "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/starfull.svg";
+		document.getElementById("imgClickAndChange").src = "img/icons/starfull.svg";
 	}
 	else
 	{
-		document.getElementById("imgClickAndChange").src = "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg";
+		document.getElementById("imgClickAndChange").src = "img/icons/star.svg";
+	}
+}
+
+let rowOne = document.getElementsByClassName("row-one");
+for(let i=0; i<rowOne.length; i++){ // Loop all instanceses of rowOne.
+	rowOne[i].addEventListener("click", function(){dis(rowOne[i])});
+}
+function dis(element){
+	let parrent = element.parentNode; /* Få fat i parrent node (tbody/table) */
+	let rowTwo = parrent.getElementsByClassName("row-two");
+	rowTwo = rowTwo[0];
+	if(rowTwo.classList.contains("show")){
+		rowTwo.classList.remove("show");
+	} else {
+		rowTwo.classList.add("show");
 	}
 }

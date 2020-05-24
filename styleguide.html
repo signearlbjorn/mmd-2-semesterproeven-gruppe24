@@ -38,9 +38,11 @@
 		<h1 id="styleguidetitel" class="styleguide-title"> Styleguide til Re-design af rapport modul for app.trendlog.io </h1>
 		<h2 id="styleguideundertitel" class="styleguide-title"> af gruppe 24 </h2>
 		<div class="tableExplainer">
-			<img src="img/icons/copy.svg" alt="Kopier-ikon">
+			<img src="img/icons/wrench.svg" alt="Wrench-ikon" class="tableExplainerIcon">
+			<span class="tableExplainerText">Tryk på tabel overskrifter, for at se tabelindholdet.</span>
+			<img src="img/icons/copy.svg" alt="Kopier-ikon" class="tableExplainerIcon">
 			<span class="tableExplainerText">Tryk på text for at markere en linje i tabelceller med kode.</span>
-			<img src="img/icons/copy.svg" alt="Kopier-ikon">
+			<img src="img/icons/copy.svg" alt="Kopier-ikon" class="tableExplainerIcon">
 			<span class="tableExplainerText">Dobbeltclick for at markere hele sektionen i tabelceller med kode.</span>
 			<button class="tableExplainerButton">Forstået</button>
 		</div>
@@ -483,22 +485,6 @@
 					</td>
 				</tr>
             </table>
-            <!-- JAVASCRIPT FOR STJERNE PRORITERINGS MOLEKYLE FORDI JEG IKKKE KAN SÆTTE DET I JAVASCRIPT DOKUMENT UDEN ALT FUCKER MVH. SIGNE -->
-            <script language="javascript">
-                function changeImage() {
-
-                    if (document.getElementById("imgClickAndChange").src == "img/icons/star.svg")
-                    {
-                        document.getElementById("imgClickAndChange").src = "img/icons/starfull.svg";
-                    }
-                    else
-                    {
-                        document.getElementById("imgClickAndChange").src = "img/icons/star.svg";
-                    }
-                }
-            </script>
-            <!-- JAVASCRIPT FOR STJERNE PRORITERINGS MOLEKYLE FORDI JEG IKKKE KAN SÆTTE DET I JAVASCRIPT DOKUMENT UDEN ALT FUCKER MVH. SIGNE -->
-            <!-- række 2 i tabel - slut -->
  		</div>
 	</article>
    <!-- Stjerne Prioritering - slut  -->
@@ -1537,126 +1523,7 @@
 		</div>
 	</article>
 	<!--Knapper til pop-up-->
-	<article id="id">
-		<div class="wrapper">
-			<h4 class="styleguide-title">SnippetTittle</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<button type="button" onClick="" class="settingbutton">
-					<img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon">
-				</button>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="table-ref">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<td class="code">
-						<button type="button" onClick="" class="settingbutton">
-							<img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon">
-						</button>
-					</td>
-					<td class="code">
-						.settingsicon{
-							width: 25px;
-						}
-						.settingbutton{
-							border: none;
-							display: block;
-							cursor: pointer;
-							background-color: transparent;
-						}
-					</td>
-					<td class="empty"></td>
-                </tr>
-			</table>
-		</div>
-	</article>
-	<article id="settings-knap">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Settings knap</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<button type="button" onClick="" class="settingbutton">
-					<img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon">
-				</button>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="table-ref">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<td class="code">
-						<button type="button" onClick="" class="settingbutton">
-							<img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon">
-						</button>
-					</td>
-					<td class="code">
-						.settingsicon{
-							width: 25px;
-						}
-						.settingbutton{
-							border: none;
-							display: block;
-							cursor: pointer;
-							background-color: transparent;
-						}
-					</td>
-					<td class="empty"></td>
-                </tr>
-			</table>
-		</div>
-	</article>
-	<article id="tandhjul">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Tandhjul</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<button type="button" onClick="" class="settingbutton">
-					<img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon">
-				</button>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="table-ref">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<td class="code">
-						<button type="button" onClick="" class="settingbutton">
-							<img class="settingsicon" src="img/icons/tandhjul.svg" alt="settings-icon">
-						</button>
-					</td>
-					<td class="code">
-						.settingsicon{
-							width: 25px;
-						}
-						.settingbutton{
-							border: none;
-							display: block;
-							cursor: pointer;
-							background-color: transparent;
-						}
-					</td>
-					<td class="empty"></td>
-                </tr>
-			</table>
-		</div>
-	</article>
+
 	<!--Knapper til dropdown tanhjul menu-->
 	<article id="edit-knap">
 		<div class="wrapper">
@@ -3022,6 +2889,7 @@
 							display: block;
 							width: 14px;
 							float: right;
+							margin-right: 30px;
 						}
 					</td>
 					<!--Js to copy-->
@@ -3121,7 +2989,7 @@
 					</td>
 					<!--CSS to copy-->
 					<td class="code">
-				.smallnav{
+.smallnav{
 	float: left;
 	background-color: #222;
 	display: block;
@@ -3148,6 +3016,7 @@
 	float: left;
 	padding: 15px;
 	text-decoration: none;
+	width: 93%;
 }
 
 .smallnav img.icon{
