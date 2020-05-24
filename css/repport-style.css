@@ -1349,6 +1349,14 @@ nav a:hover{
 }
 /*ekstra style til schedule as pop-up - slut*/
 /* -- HIGHCHARTS -- */
+.highcharts-credits {
+	display: none;
+}
+
+.highcharts:hover .highcharts-credits {
+	display: block;
+}
+
 .highcart-preview {
 	position: relative;
 	float: left;
@@ -1367,6 +1375,7 @@ nav a:hover{
 .highcart-preview .star {
 	float: right;
 }
+
 .aspect-one-to-one {
 	position: relative;
 	float:left;
@@ -1388,14 +1397,6 @@ nav a:hover{
 	border-radius: 5px;
 	background-color: #6F6F6F;
 	border-sizing: border-box;
-}
-
-.highcharts-credits {
-	display: none;
-}
-
-.highcharts:hover .highcharts-credits {
-	display: block;
 }
 
 /*ekstra style til create new report pop-up*/
