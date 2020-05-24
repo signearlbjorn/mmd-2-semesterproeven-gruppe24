@@ -1452,6 +1452,7 @@ header .wrapper {
 	margin-bottom: 20px;
 	background-color: #ddd;
 }
+
 .example:before {
 	content:"Eksempel:";
 	position: absolute;
