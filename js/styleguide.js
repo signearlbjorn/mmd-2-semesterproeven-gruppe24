@@ -48,13 +48,13 @@ function selectText(element) {
 /* PRIORITY STAR / STJERNE PRIORITERING */
 function changeImage() {
 
-	if (document.getElementById("imgClickAndChange").src == "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg")
+	if (document.getElementById("imgClickAndChange").src == "img/icons/star.svg")
 	{
-		document.getElementById("imgClickAndChange").src = "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/starfull.svg";
+		document.getElementById("imgClickAndChange").src = "img/icons/starfull.svg";
 	}
 	else
 	{
-		document.getElementById("imgClickAndChange").src = "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg";
+		document.getElementById("imgClickAndChange").src = "img/icons/star.svg";
 	}
 }
 

@@ -23,14 +23,21 @@ function switcheditbg(editbgswitch) {
 		}
 	}
 }
+
+console.log('Init');
 function switchpagepreview(previewSwitch){
+	console.log('Start funktion');
 	let editpreview = ["pageVertical", "pageHorizontal"];
-	for(iii = 0; iii < editpreview.lenght; iii++){
+	for(iii = 0; iii < editpreview.length; iii++){
+		console.log('loop yai');
 		if(previewSwitch == editpreview[iii]){
+			console.log('if');
 			document.getElementById(editpreview[iii]).classList.remove("hidden");
 		}
 		else{
+			console.log('else');
 			document.getElementById(editpreview[iii]).classList.add("hidden");
 		}
+		console.log('Loop end :-(');
 	}
 }
