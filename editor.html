@@ -51,10 +51,10 @@
 		<!--TITLE-->
 		<h1>REPORT EDITOR</h1>
 		<div class="switch">
-			<input type="radio" class="switch-input" name="view3" value="week3" id="indsæt1" checked="">
-			<label for="indsæt1" class="switch-label switch-label-off" onClick="switchpagepreview(pageVertical)">Vertical</label>
-			<input type="radio" class="switch-input" name="view3" id="indsæt2">
-			<label for="indsæt2" class="switch-label switch-label-on" onClick="switchpagepreview(pageHorizontal)">Horizontal</label>
+			<input type="radio" class="switch-input" name="view3" value="week3" id="indsæt1" checked="" onClick="switchpagepreview(pageVertical)">
+			<label for="indsæt1" class="switch-label switch-label-off">Vertical</label>
+			<input type="radio" class="switch-input" name="view3" id="indsæt2" onClick="switchpagepreview(pageHorizontal)">
+			<label for="indsæt2" class="switch-label switch-label-on">Horizontal</label>
 			<span class="switch-selection"></span>
 		</div>
 		<!--CLOSE &AMP SAVE FUNKCION-->
@@ -283,14 +283,14 @@
 					<label>Text tool</label>
 					<button type="type" class="textToolImgButton"><img class="settingsicon" src="img/icons/type.svg" alt="Text tool"></button>
 					<button type="button" onclick="" class="helpbutton">
-    					<a>Help</a>
+    					<span>Help</span>
 					    <img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
 					</button>
 				</div>
 				<div class="textTool">
 					<label>Text edit</label>
-					<div class="textEditDiv"><label>Size</label><button type="" onclick="" class="texteditbutton"><a>Choose..</a><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
-					<div class="textEditDiv"><label>Weight</label><button type="" onclick="" class="texteditbutton"><a>Choose..</a><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+					<div class="textEditDiv"><label>Size</label><button type="" onclick="" class="texteditbutton"><span>Choose..</span><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+					<div class="textEditDiv"><label>Weight</label><button type="" onclick="" class="texteditbutton"><span>Choose..</span><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
 				</div>
 			</div>
 			<!--CODE EDITOR-->
@@ -298,19 +298,19 @@
 				<div class="codeEditorOverDiv">
 					<div class="codeEditorButtons">
 						<button type="button" onclick="" class="showReport">
-						    <a>Show report</a>
+						    <span>Show report</span>
 						    <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon">
 						</button>
 						<button type="button" onclick="" class="showReport">
-						    <a>Download</a>
+						    <span>Download</span>
 						    <img class="settingsmenuicon" src="img/icons/download.svg" alt="showicon">
 						</button>
 						<button type="button" onclick="" class="showReport">
-						    <a>Upload</a>
+						    <span>Upload</span>
 						    <img class="settingsmenuicon" src="img/icons/upload.svg" alt="showicon">
 						</button>
 						<button type="button" onclick="" class="helpbutton">
-    						<a>Help</a>
+    						<span>Help</span>
 						    <img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
 						</button>
 					</div>

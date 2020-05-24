@@ -11,7 +11,6 @@ function switchedit(switcheditpage) {
 		}
 	}
 }
-
 function switcheditbg(editbgswitch) {
 	let editbg = ["graphsDiv", "textDiv", "templatesDiv", "codeDiv"];
 	for(i = 0; i < editbg.length; i++){
@@ -23,7 +22,6 @@ function switcheditbg(editbgswitch) {
 		}
 	}
 }
-
 console.log('Init');
 function switchpagepreview(previewSwitch){
 	console.log('Start funktion');
