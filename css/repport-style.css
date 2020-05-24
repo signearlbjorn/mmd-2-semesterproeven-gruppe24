@@ -1186,6 +1186,65 @@ nav a:hover{
 }
 /* Styling for Upload pop-up ORAGBISME - SLUT */
 
+
+/*Styling for setting pop-up organismer*/
+.frameforsettingpopup {
+	background-color: #222222;
+	width:450px;
+  height: 300px;
+	border-radius: 5px;
+}
+
+.settingtitel {
+	color: white;
+	margin-top: -10px;
+	margin-left: 10px;
+}
+
+.settingpopupicon, .settingpopupxicon {
+	width: 40px;
+	height: 40px;
+}
+
+.settingpopupxicon {
+	float: right;
+	margin-right: -200px;
+}
+
+.popuptitel, .settingpopupknap{
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/*Styling for setting pop-up organismer - SLUT*/
+
+/*ekstra style til share as pop-up*/
+.frameforshareaspopup {
+	background-color: #222222;
+	width:450px;
+  height: 500px;
+	border-radius: 5px;
+}
+
+.messageframe {
+	width: 100px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.textarea {
+	width: 100px;
+	height: 200px;
+}
+/*ekstra style til share as pop-up - SLUT*/
+
+/*ekstra style til schedule as pop-up*/
+.timebutton {
+	width: 80px;
+	border-radius: 10px;
+}
+/*ekstra style til schedule as pop-up - slut*/
+
 /* --- ORGANISMER SLUT --- */
 
 
