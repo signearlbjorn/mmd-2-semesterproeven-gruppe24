@@ -445,7 +445,7 @@
 			<div class="wrapper">
 				<p class="star">
 					<img alt="" src="img/icons/star.svg"
-					  style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()"  />
+					  style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()">
 				</p>
 			</div>
 		</div>
@@ -460,7 +460,7 @@
 					<td class="code">
             <p class="star">
     					<img alt="" src="img/icons/star.svg"
-    					  style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()"  />
+    					  style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()">
     				</p>
 					</td>
 					<td class="code">
@@ -501,7 +501,7 @@
 					<div class="type">
 						<p class="typetext">Folder</<p>
 						<button type="" onclick="" class="typebutton">
-							<a class="typebuttontext">Name</a>
+							<span class="typebuttontext">Name</a>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
 					</div>
@@ -521,7 +521,7 @@
 							<div class="type">
 								<p class="typetext">Folder</<p>
 								<button type="" onclick="" class="typebutton">
-									<a class="typebuttontext">Name</a>
+									<azx class="typebuttontext">Name</a>
 									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 								</button>
 							</div>
@@ -572,7 +572,7 @@
 					<div class="type">
 						<p class="typetext">Schedule</<p>
 						<button type="" onclick="" class="typebutton">
-							<a class="typebuttontext">Not set</a>
+							<span class="typebuttontext">Not set</span>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
 					</div>
@@ -593,7 +593,7 @@
 								<div class="type">
 									<p class="typetext">Schedule</<p>
 									<button type="" onclick="" class="typebutton">
-										<a class="typebuttontext">Not set</a>
+										<span class="typebuttontext">Not set</span>
 										<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 									</button>
 								</div>
@@ -643,7 +643,7 @@
 					<div class="type">
 						<p class="typetext">Result</<p>
 						<button type="" onclick="" class="typebutton">
-							<a class="typebuttontext">Not set</a>
+							<span class="typebuttontext">Not set</span>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
 					</div>
@@ -663,7 +663,7 @@
 							<div class="type">
 								<p class="typetext">Result</<p>
 								<button type="" onclick="" class="typebutton">
-									<a class="typebuttontext">Not set</a>
+									<span class="typebuttontext">Not set</span>
 									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 								</button>
 							</div>
@@ -713,7 +713,7 @@
 					<div class="type">
 						<p class="typetext">Date target</<p>
 						<button type="" onclick="" class="typebutton">
-							<a class="typebuttontext">Last edited</a>
+							<span class="typebuttontext">Last edited</span>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
 					</div>
@@ -733,7 +733,7 @@
 							<div class="type">
 								<p class="typetext">Date target</<p>
 								<button type="" onclick="" class="typebutton">
-									<a class="typebuttontext">Last edited</a>
+									<span class="typebuttontext">Last edited</span>
 									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 								</button>
 							</div>
@@ -783,7 +783,7 @@
 					<div class="type">
 						<p class="typetext">Type</p>
 						<button type="" onclick="" class="typebutton">
-							<a class="typebuttontext">Day of week</a>
+							<span class="typebuttontext">Day of week</span>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
 					</div>
@@ -803,7 +803,7 @@
 							<div class="type">
 								<p class="typetext">Type</p>
 								<button type="" onclick="" class="typebutton">
-									<a class="typebuttontext">Day of week</a>
+									<span class="typebuttontext">Day of week</span>
 									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 								</button>
 							</div>
@@ -849,7 +849,7 @@
 		<div class="example">
 			<div class="wrapper">
 				<button type="button" onclick="" class="settingsmenubutton">
-					<a>Folder overview</a>
+					<span>Folder overview</span>
 					<img class="settingsmenuicon" src="img/icons/folder.svg" alt="editicon">
 				</button>
 			</div>
@@ -864,7 +864,7 @@
 				<tr class="row-two">
 					<td class="code">
 						<button type="button" onclick="" class="settingsmenubutton">
-							<a>Folder overview</a>
+							<span>Folder overview</span>
 							<img class="settingsmenuicon" src="img/icons/folder.svg" alt="editicon">
 						</button>
 					</td>
@@ -880,7 +880,7 @@
 							margin-bottom: 5px;
 							cursor: pointer;
 						}
-						.settingsmenubutton a{
+						.settingsmenubutton span{
 							float: left;
 							color: #848484;
 							font-size: 19px;
@@ -934,7 +934,7 @@
 							grid-template-columns: auto auto;
 							align-content: center;
 						}
-						.newreportspan{
+						.newreport span{
 							font-size: 18px;
 							display: grid;
 						}
@@ -958,7 +958,7 @@
 				<div class="sortbydiv">
 					Sort by
 					<button type="" onClick="" class="sortbybutton">
-						<a>Choose..</a>
+						<span>Choose..</span>
 						<img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
 					</button>
 				</div>
@@ -976,7 +976,7 @@
 						<div class="sortbydiv">
 							Sort by
 							<button type="" onClick="" class="sortbybutton">
-								<a>Choose..</a>
+								<span>Choose..</span>
 								<img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
 							</button>
 						</div>
@@ -995,7 +995,7 @@
 							display: block;
 							float: right;
 						}
-						.sortbybutton a{
+						.sortbybutton span{
 						    float: left;
 						    color: #848484;
 						    font-size: 19px;
@@ -1014,7 +1014,7 @@
 		<div class="example">
 			<div class="wrapper">
 				<button type="button" onclick="" class="filterbutton">
-					<a>Filter</a>
+					<span>Filter</span>
 					<img class="settingsmenuicon" src="img/icons/sliders.svg" alt="slider-icon">
 				</button>
 			</div>
@@ -1029,7 +1029,7 @@
 				<tr class="row-two">
 					<td class="code">
 						<button type="button" onclick="" class="filterbutton">
-							<a>Filter</a>
+							<span>Filter</span>
 							<img class="settingsmenuicon" src="img/icons/sliders.svg" alt="slider-icon">
 						</button>
 					</td>
@@ -1042,7 +1042,7 @@
 							cursor: pointer;
 							display: block;
 						}
-						.filterbutton a{
+						.filterbutton span{
 							color: #000;
 							font-size: 14px;
 							margin-left: 7px;
@@ -1061,7 +1061,7 @@
 				<div class="quantitydiv">
 					Quantity
 					<button type="" onClick="" class="quantitybutton">
-						<a>8</a>
+						<span>8</span>
 						<img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
 					</button>
 				</div>
@@ -1079,7 +1079,7 @@
 						<div class="quantitydiv">
 							Quantity
 							<button type="" onClick="" class="quantitybutton">
-								<a>8</a>
+								<span>8</span>
 								<img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
 							</button>
 						</div>
@@ -1098,7 +1098,7 @@
 							display: block;
 							float: right;
 						}
-						.quantitybutton a{
+						.quantitybutton span{
 							float: left;
 							color: #000;
 							font-size: 19px;
@@ -1117,7 +1117,7 @@
 		<div class="example">
 			<div class="wrapper">
 				<button type="button" onclick="" class="previousbutton">
-					<a>Previous page</a>
+					<span>Previous page</span>
 					<img class="settingsmenuicon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
 				</button>
 			</div>
@@ -1132,7 +1132,7 @@
 				<tr class="row-two">
 					<td class="code">
 						<button type="button" onclick="" class="previousbutton">
-							<a>Previous page</a>
+							<span>Previous page</span>
 							<img class="settingsmenuicon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
 						</button>
 					</td>
@@ -1145,7 +1145,7 @@
 							cursor: pointer;
 							display: block;
 						}
-						.previousbutton a{
+						.previousbutton span{
 							color: #000;
 							font-size: 10px;
 							margin-right: 6px;
@@ -1167,7 +1167,7 @@
 		<div class="example">
 			<div class="wrapper">
 				<button type="button" onclick="" class="nextbutton">
-					<a>Next page</a>
+					<span>Next page</span>
 					<img class="settingsmenuicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
 				</button>
 			</div>
@@ -1182,7 +1182,7 @@
 				<tr class="row-two">
 					<td class="code">
 						<button type="button" onclick="" class="nextbutton">
-							<a>Next page</a>
+							<span>Next page</span>
 							<img class="settingsmenuicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
 						</button>
 					</td>
@@ -1195,7 +1195,7 @@
 							cursor: pointer;
 							display: block;
 						}
-						.nextbutton a{
+						.nextbutton span{
 							color: #000;
 							font-size: 10px;
 						}
@@ -1215,7 +1215,7 @@
 		<div class="example">
 			<div class="wrapper">
 				<button type="button" onclick="" class="uploadimagebutton">
-					<a>Upload image</a>
+					<span>Upload image</span>
 					<img class="settingsmenuicon" src="img/icons/image.svg" alt="arrowright-icon">
 				</button>
 			</div>
@@ -1230,7 +1230,7 @@
 				<tr class="row-two">
 					<td class="code">
 						<button type="button" onclick="" class="uploadimagebutton">
-							<a>Upload image</a>
+							<span>Upload image</span>
 							<img class="settingsmenuicon" src="img/icons/image.svg" alt="arrowright-icon">
 						</button>
 					</td>
@@ -1243,9 +1243,43 @@
 							cursor: pointer;
 							display: block;
 						}
-						.uploadimagebutton a{
+						.uploadimagebutton span{
 							color: #000;
 							font-size: 12px;
+						}
+					</td>
+					<td class="empty"></td>
+                </tr>
+			</table>
+		</div>
+	</article>
+	<article id="burgerMenuKnap">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Burger menu knap</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<a onclick="" class="uploadimagebutton">
+					<img class="burgerMenu" src="img/icons/menu.svg" alt="menu-icon">
+				</a>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<a onclick="" class="uploadimagebutton">
+					<img class="burgerMenu" src="img/icons/menu.svg" alt="menu-icon">
+				</a>
+					</td>
+					<td class="code">
+						.burgerMenu{
+							display: block;
 						}
 					</td>
 					<td class="empty"></td>
@@ -1286,7 +1320,7 @@
 							cursor: pointer;
 							display: block;
 						}
-						.nextbutton a{
+						.nextbutton span{
 							color: #000;
 							font-size: 14px;
 							margin-left: 16px;
@@ -1304,7 +1338,7 @@
 		<div class="example">
 			<div class="wrapper">
 				<button type="button" onClick="" class="upladtemplatebutton">
-					<a>Upload template</a>
+					<span>Upload template</span>
 					<img class="settingsicon" src="img/icons/upload.svg" alt="settings-icon">
 				</button>
 			</div>
@@ -1319,7 +1353,7 @@
 				<tr class="row-two">
 					<td class="code">
 						<button type="button" onClick="" class="upladtemplatebutton">
-							<a>Upload template</a>
+							<span>Upload template</span>
 							<img class="settingsicon" src="img/icons/upload.svg" alt="settings-icon">
 						</button>
 					</td>
@@ -1332,7 +1366,7 @@
 							cursor: pointer;
 							display: block;
 						}
-						.upladtemplatebutton a{
+						.upladtemplatebutton span{
 							color: #000;
 							font-size: 10px;
 							margin-left: 7px;
@@ -1354,7 +1388,7 @@
 		<div class="example">
 			<div class="wrapper">
 				<button type="button" onClick="" class="helpbutton">
-					<a>Help</a>
+					<span>Help</span>
 					<img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
 				</button>
 			</div>
@@ -1369,30 +1403,30 @@
 				<tr class="row-two">
 					<td class="code">
 						<button type="button" onClick="" class="helpbutton">
-							<a>Help</a>
+							<span>Help</span>
 							<img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
 						</button>
 					</td>
 					<td class="code">
 						.helpbutton{
-	background-color: #D3D3D3;
-	border: none;
-	border-radius: 12px;
-	width: 50px;
-	cursor: pointer;
-	display: block;
-}
-.helpbutton a{
-    color: #000;
-    font-size: 10px;
-	margin-left: 7px;
-	float: left;
-}
-.helpbutton img{
-	width:10px;
-	float: right;
-	margin: 9px 9px 0 0;
-}
+							background-color: #D3D3D3;
+							border: none;
+							border-radius: 12px;
+							width: 50px;
+							cursor: pointer;
+							display: block;
+						}
+						.helpbutton span{
+						    color: #000;
+						    font-size: 10px;
+							margin-left: 7px;
+							float: left;
+						}
+						.helpbutton img{
+							width:10px;
+							float: right;
+							margin: 9px 9px 0 0;
+						}
 					</td>
 					<td class="empty"></td>
                 </tr>
@@ -1409,7 +1443,7 @@
 				<div class="texteditdiv">
 					Size
 					<button type="" onclick="" class="texteditbutton">
-						<a>Choose..</a>
+						<span>Choose..</span>
 						<img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 					</button>
 				</div>
@@ -1427,7 +1461,7 @@
 						<div class="texteditdiv">
 							Size
 							<button type="" onclick="" class="texteditbutton">
-								<a>Choose..</a>
+								<span>Choose..</span>
 								<img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 							</button>
 						</div>
@@ -1449,7 +1483,7 @@
 							display: block;
 							float: right;
 						}
-						.texteditbutton a{
+						.texteditbutton span{
 							float: left;
 							color: #000;
 							font-size: 19px;
@@ -1470,7 +1504,7 @@
 				<div class="texteditdiv">
 					Weight
 					<button type="" onclick="" class="texteditbutton">
-						<a>Choose..</a>
+						<span>Choose..</span>
 						<img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 					</button>
 				</div>
@@ -1488,7 +1522,7 @@
 						<div class="texteditdiv">
 							Weight
 							<button type="" onclick="" class="texteditbutton">
-								<a>Choose..</a>
+								<span>Choose..</span>
 								<img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 							</button>
 						</div>
@@ -1510,7 +1544,7 @@
 							display: block;
 							float: right;
 						}
-						.texteditbutton a{
+						.texteditbutton span{
 							float: left;
 							color: #000;
 							font-size: 19px;
@@ -1532,7 +1566,7 @@
 		<div class="example">
 			<div class="wrapper">
 				<button type="button" onclick="" class="settingsmenubutton">
-					<a>Edit</a>
+					<span>Edit</span>
 					<img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon">
 				</button>
 			</div>
@@ -1547,7 +1581,7 @@
 				<tr class="row-two">
 					<td class="code">
 						<button type="button" onclick="" class="settingsmenubutton">
-							<a>Edit</a>
+							<span>Edit</span>
 							<img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon">
 						</button>
 					</td>
@@ -1562,7 +1596,7 @@
 							margin-bottom: 5px;
 							cursor: pointer;
 						}
-						.settingsmenubutton a{
+						.settingsmenubutton span{
 							float: left;
 							color: #848484;
 							font-size: 19px;
@@ -1586,7 +1620,7 @@
 		<div class="example">
 			<div class="wrapper">
 				<button type="button" onclick="" class="settingsmenubutton">
-					<a>Show</a>
+					<span>Show</span>
 					<img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon">
 				</button>
 			</div>
@@ -1601,7 +1635,7 @@
 				<tr class="row-two">
 					<td class="code">
 						<button type="button" onclick="" class="settingsmenubutton">
-							<a>Show</a>
+							<span>Show</span>
 							<img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon">
 						</button>
 					</td>
@@ -1616,7 +1650,7 @@
 							margin-bottom: 5px;
 							cursor: pointer;
 						}
-						.settingsmenubutton a{
+						.settingsmenubutton span{
 							float: left;
 							color: #848484;
 							font-size: 19px;
@@ -1640,7 +1674,7 @@
 		<div class="example">
 			<div class="wrapper">
 				<button type="button" onclick="" class="settingsmenubutton">
-					<a>Schedule</a>
+					<span>Schedule</span>
 					<img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon">
 				</button>
 			</div>
@@ -1655,7 +1689,7 @@
 				<tr class="row-two">
 					<td class="code">
 						<button type="button" onclick="" class="settingsmenubutton">
-							<a>Schedule</a>
+							<span>Schedule</span>
 							<img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon">
 						</button>
 					</td>
@@ -1670,7 +1704,7 @@
 							margin-bottom: 5px;
 							cursor: pointer;
 						}
-						.settingsmenubutton a{
+						.settingsmenubutton span{
 							float: left;
 							color: #848484;
 							font-size: 19px;
@@ -1694,7 +1728,7 @@
 		<div class="example">
 			<div class="wrapper">
 				<button type="button" onclick="" class="settingsmenubutton">
-					<a>Share</a>
+					<span>Share</span>
 					<img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon">
 				</button>
 			</div>
@@ -1709,7 +1743,7 @@
 				<tr class="row-two">
 					<td class="code">
 						<button type="button" onclick="" class="settingsmenubutton">
-							<a>Share</a>
+							<span>Share</span>
 							<img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon">
 						</button>
 					</td>
@@ -1724,7 +1758,7 @@
 							margin-bottom: 5px;
 							cursor: pointer;
 						}
-						.settingsmenubutton a{
+						.settingsmenubutton span{
 							float: left;
 							color: #848484;
 							font-size: 19px;
@@ -1748,7 +1782,7 @@
 		<div class="example">
 			<div class="wrapper">
 				<button type="button" onclick="" class="settingsmenubutton">
-					<a>Save as..</a>
+					<span>Save as..</span>
 					<img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon">
 				</button>
 			</div>
@@ -1763,7 +1797,7 @@
 				<tr class="row-two">
 					<td class="code">
 						<button type="button" onclick="" class="settingsmenubutton">
-							<a>Save as..</a>
+							<span>Save as..</span>
 							<img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon">
 						</button>
 					</td>
@@ -1778,7 +1812,7 @@
 							margin-bottom: 5px;
 							cursor: pointer;
 						}
-						.settingsmenubutton a{
+						.settingsmenubutton span{
 							float: left;
 							color: #848484;
 							font-size: 19px;
@@ -1802,7 +1836,7 @@
 		<div class="example">
 			<div class="wrapper">
 				<button type="button" onclick="" class="settingsmenubutton">
-					<a>Print</a>
+					<span>Print</span>
 					<img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon">
 				</button>
 			</div>
@@ -1817,7 +1851,7 @@
 				<tr class="row-two">
 					<td class="code">
 						<button type="button" onclick="" class="settingsmenubutton">
-							<a>Print</a>
+							<span>Print</span>
 							<img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon">
 						</button>
 					</td>
@@ -1832,7 +1866,7 @@
 							margin-bottom: 5px;
 							cursor: pointer;
 						}
-						.settingsmenubutton a{
+						.settingsmenubutton span{
 							float: left;
 							color: #848484;
 							font-size: 19px;
@@ -1856,7 +1890,7 @@
 		<div class="example">
 			<div class="wrapper">
 				<button type="button" onclick="" class="settingsmenubutton">
-					<a>Delete</a>
+					<span>Delete</span>
 					<img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon">
 				</button>
 			</div>
@@ -1871,7 +1905,7 @@
 				<tr class="row-two">
 					<td class="code">
 						<button type="button" onclick="" class="settingsmenubutton">
-							<a>Delete</a>
+							<span>Delete</span>
 							<img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon">
 						</button>
 					</td>
@@ -1886,7 +1920,7 @@
 							margin-bottom: 5px;
 							cursor: pointer;
 						}
-						.settingsmenubutton a{
+						.settingsmenubutton span{
 							float: left;
 							color: #848484;
 							font-size: 19px;
@@ -2262,7 +2296,7 @@
         <div class="type">
           <p class="typetext">Email adress</p>
           <button type="" onclick="" class="typebutton">
-            <a class="typebuttontext">example@email.com</a>
+            <span class="typebuttontext">example@email.com</span>
             <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
           </button>
         </div>
@@ -2283,7 +2317,7 @@
             <div class="type">
               <p class="typetext">Email adress</p>
               <button type="" onclick="" class="typebutton">
-                <a class="typebuttontext">example@email.com</a>
+                <span class="typebuttontext">example@email.com</span>
                 <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
               </button>
             </div>
@@ -2310,7 +2344,7 @@
       <div class="type">
         <p class="typetext">Send with</p>
         <button type="" onclick="" class="typebutton">
-          <a class="typebuttontext">email</a>
+          <span class="typebuttontext">email</span>
           <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
         </button>
       </div>
@@ -2331,7 +2365,7 @@
           <div class="type">
             <p class="typetext">Send with</p>
             <button type="" onclick="" class="typebutton">
-              <a class="typebuttontext">example@email.com</a>
+              <span class="typebuttontext">example@email.com</span>
               <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
             </button>
           </div>
@@ -2358,7 +2392,7 @@
       <div class="type">
         <p class="typetext">Time</p>
         <button type="" onclick="" class="typebutton">
-          <a class="typebuttontext">00:00</a>
+          <span class="typebuttontext">00:00</span>
           <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
         </button>
       </div>
@@ -2379,7 +2413,7 @@
           <div class="type">
             <p class="typetext">Send with</p>
             <button type="" onclick="" class="typebutton">
-              <a class="typebuttontext">00:00</a>
+              <span class="typebuttontext">00:00</span>
               <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
             </button>
           </div>
@@ -2757,102 +2791,102 @@
 					</td>
 					<!--CSS to copy-->
 					<td class="code">
-.smallnav{
-	float: left;
-	background-color: #222;
-	display: block;
-	width: auto;
-}
-.smallnav div{
-	display: block;
-	float: left;
-	width: 100%;
-}
-
-.smallnav div ul {
-	list-style: none;
-	float: left;
-	width: 100%;
-}
-.smallnav div ul li{
-	width: 100%;
-}
-.smallnav div ul li a{
-	font-weight: bold;
-	font-size: 14px;
-	color: #ffffff;
-	float: left;
-	padding: 15px;
-	text-decoration: none;
-	width: 93%;
-}
-
-.smallnav img.icon{
-	display: block;
-	width: 14px;
-}
-
-.smallnav a{
-	font-weight: bold;
-	font-size: 14px;
-	color: #ffffff;
-	float: left;
-	padding: 15px;
-	text-decoration: none;
-	width: 100%;
-}
-.smallnav a:hover{
-	background: #444;
-}
-
-.smallnav.selection{
-	margin-top: 6px;
-}
-
-.smallnav.channels{
-	color: #9d9d9d;
-	font-size: 14px;
-	font-weight: 100;
-	padding: 15px;
- }
-
-.smallnav.channelselect{
-    display: block;
-    width: 100%;
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-}
-
-.smallnav.profiledropdown-a{
-	width: 80%;
-}
-.smallnav.profiledropdown{
-	width: 200px;
-}
-
-.smallnav.username{
-	float: left;
-	font-weight: bold;
-	font-size: 14px;
-	color: #ffffff;
-}
-.smallnav.profile-icon{
-	display: block;
-	width: 14px;
-	float: right;
-}
+						.smallnav{
+							float: left;
+							background-color: #222;
+							display: block;
+							width: auto;
+						}
+						.smallnav div{
+							display: block;
+							float: left;
+							width: 100%;
+						}
+						
+						.smallnav div ul {
+							list-style: none;
+							float: left;
+							width: 100%;
+						}
+						.smallnav div ul li{
+							width: 100%;
+						}
+						.smallnav div ul li a{
+							font-weight: bold;
+							font-size: 14px;
+							color: #ffffff;
+							float: left;
+							padding: 15px;
+							text-decoration: none;
+							width: 93%;
+						}
+						
+						.smallnav img.icon{
+							display: block;
+							width: 14px;
+						}
+						
+						.smallnav a{
+							font-weight: bold;
+							font-size: 14px;
+							color: #ffffff;
+							float: left;
+							padding: 15px;
+							text-decoration: none;
+							width: 100%;
+						}
+						.smallnav a:hover{
+							background: #444;
+						}
+						
+						.smallnav.selection{
+							margin-top: 6px;
+						}
+						
+						.smallnav.channels{
+							color: #9d9d9d;
+							font-size: 14px;
+							font-weight: 100;
+							padding: 15px;
+						 }
+						
+						.smallnav.channelselect{
+						    display: block;
+						    width: 100%;
+						    height: 34px;
+						    padding: 6px 12px;
+						    font-size: 14px;
+						    line-height: 1.42857143;
+						    color: #555;
+						    background-color: #fff;
+						    background-image: none;
+						    border: 1px solid #ccc;
+						    border-radius: 4px;
+						    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+						    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+						    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+						    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+						    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+						}
+						
+						.smallnav.profiledropdown-a{
+							width: 80%;
+						}
+						.smallnav.profiledropdown{
+							width: 200px;
+						}
+						
+						.smallnav.username{
+							float: left;
+							font-weight: bold;
+							font-size: 14px;
+							color: #ffffff;
+						}
+						.smallnav.profile-icon{
+							display: block;
+							width: 14px;
+							float: right;
+						}
 					</td>
 					<!--Js to copy-->
 					<td class="empty"></td>
@@ -2870,13 +2904,13 @@
 			<div class="wrapper">
 				<div class="settingsmenu">
 					<button type="button" onClick="" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><a>Edit</a> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><a>Show</a> <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><a>Schedule</a> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><a>Share</a> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><a>Save as..</a><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><a>Print</a><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><a>Delete</a><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><span>Edit</span> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><span>Show</span> <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><span>Schedule</span> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><span>Share</span> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><span>Save as..</span><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><span>Print</span><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><span>Delete</span><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
 				</div>
 			</div>
 		</div>
@@ -2892,13 +2926,13 @@
 					<td class="code">
 						<div class="settingsmenu">
 							<button type="button" onClick="" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Edit</a> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Show</a> <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Schedule</a> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Share</a> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Save as..</a><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Print</a><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Delete</a><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><span>Edit</span> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><span>Show</span> <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><span>Schedule</span> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><span>Share</span> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><span>Save as..</span><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><span>Print</span><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><span>Delete</span><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
 						</div>
 					</td>
 					<!--CSS to copy-->
@@ -2931,7 +2965,7 @@
 							margin-bottom: 5px;
 							cursor: pointer;
 						}
-						.settingsmenubutton a{
+						.settingsmenubutton span{
 							float: left;
 							color: #848484;
 							font-size: 19px;
@@ -2959,13 +2993,13 @@
 			<div class="wrapper">
 				<div class="settingsmenu-dark">
 					<button type="button" onClick="" class="closesettingmenu-dark"><img class="closesettingmenuicon-dark" src="img/icons/x-dark.svg" alt="xicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><a>Edit</a> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="edit icon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><a>Refresh</a> <img class="settingsmenuicon" src="img/icons/refresh.svg" alt="refresh icon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><a>Schedule</a> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><a>Share</a> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><a>Save as..</a><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><a>Print</a><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><a>Delete</a><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><span>Edit</span> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="edit icon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><span>Refresh</span> <img class="settingsmenuicon" src="img/icons/refresh.svg" alt="refresh icon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><span>Schedule</span> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><span>Share</span> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><span>Save as..</span><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><span>Print</a><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><span>Delete</span><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
 				</div>
 			</div>
 		</div>
@@ -2981,13 +3015,13 @@
 					<td class="code">
 						<div class="settingsmenu-dark">
 							<button type="button" onClick="" class="closesettingmenu-dark"><img class="closesettingmenuicon-dark" src="img/icons/x-dark.svg" alt="xicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Edit</a> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="edit icon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Refresh</a> <img class="settingsmenuicon" src="img/icons/refresh.svg" alt="refresh icon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Schedule</a> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Share</a> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Save as..</a><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Print</a><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Delete</a><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><span>Edit</span> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="edit icon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><span>Refresh</span> <img class="settingsmenuicon" src="img/icons/refresh.svg" alt="refresh icon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><span>Schedule</span> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><span>Share</span> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><span>Save as..</span><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><span>Print</a><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><span>Delete</span><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
 						</div>
 					</td>
 					<!--CSS to copy-->
@@ -3026,9 +3060,9 @@
 			<div class="wrapper">
 				<div class="settingsmenu">
 					<button type="button" onClick="" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><a>Share</a> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><a>Save as..</a><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><a>Delete</a><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><span>Share</span> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><span>Save as..</span><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
+					<button type="button" onClick="" class="settingsmenubutton"><span>Delete</span><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
 				</div>
 			</div>
 		</div>
@@ -3044,9 +3078,9 @@
 					<td class="code">
 						<div class="settingsmenu">
 							<button type="button" onClick="" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Share</a> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Save as..</a><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><a>Delete</a><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><span>Share</span> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><span>Save as..</span><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
+							<button type="button" onClick="" class="settingsmenubutton"><span>Delete</span><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
 						</div>
 					</td>
 					<!--CSS to copy-->
@@ -3077,7 +3111,7 @@
 							margin-bottom: 5px;
 							cursor: pointer;
 						}
-						.settingsmenubutton a{
+						.settingsmenubutton span{
 							float: left;
 							color: #848484;
 							font-size: 19px;
@@ -3316,7 +3350,7 @@
           <div class="quantitycontainer">
               <div class="quantitydiv">Quantity
                 <button type="" onclick="" class="quantitybutton">
-                  <a>8</a>
+                  <span>8</span>
                   <img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
                 </button>
               </div>
@@ -3338,7 +3372,7 @@
           <!-- folder-overview knap -->
           <div class="folderoverviewcontainer">
               <button type="button" onclick="" class="settingsmenubutton">
-                <a>Folder overview</a>
+                <span>Folder overview</span>
                 <img class="settingsmenuicon" src="img/icons/folder.svg" alt="editicon">
               </button>
           </div>
@@ -3347,7 +3381,7 @@
           <!-- filter knap -->
           <div class="filtercontainer">
               <button type="button" onclick="" class="filterbutton">
-                <a>Filter</a>
+                <span>Filter</span>
                 <img class="settingsmenuicon" src="img/icons/sliders.svg" alt="slider-icon">
               </button>
           </div>
@@ -3357,7 +3391,7 @@
           <div class="sortbycontainer">
               <div class="sortbydiv">
                 Sort by<button type="" onclick="" class="sortbybutton">
-                  <a>Choose..</a>
+                  <span>Choose..</span>
                   <img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
                 </button>
               </div>
@@ -3383,11 +3417,10 @@
 				</tr>
 				<tr class="row-two">
 					<!--HTML to copy-->
-					<td class="code">
+	<td class="code">
 		<div class="frameforsidetitelogsettingsbar">
 
 		  <div class="sidetitelogsettingswrap">
-
 				<!-- side titel -->
 				<div class="sidetitelcontainer">
 				  <h1>Report overview</h1>
@@ -3438,7 +3471,7 @@
 				<!-- filter knap -->
 				<div class="filtercontainer">
 					<button type="button" onclick="" class="filterbutton">
-					  <a>Filter</a>
+					  <span>Filter</span>
 					  <img class="settingsmenuicon" src="img/icons/sliders.svg" alt="slider-icon">
 					</button>
 				</div>
@@ -3448,11 +3481,13 @@
 				<div class="sortbycontainer">
 					<div class="sortbydiv">
 					  Sort by<button type="" onclick="" class="sortbybutton">
-						<a>Choose..</a>
+						<span>Choose..</span>
 						<img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
 					  </button>
 					</div>
 				</div>
+			  </div>
+			</div>
   </td>
     <!--CSS to copy-->
   <td class="code">
@@ -3557,7 +3592,7 @@
          <!-- previous page -->
          <div class="previouspagecontainer">
            <button type="button" onclick="" class="previousbutton">
-               <a>Previous page</a>
+               <span>Previous page</span>
                <img class="settingsmenuicon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
            </button>
 
@@ -3603,7 +3638,7 @@
          <!-- Upload image knap -->
          <div class="uploadimageknapcontainer">
            <button type="button" onclick="" class="uploadimagebutton">
-               <a>Upload image</a>
+               <span>Upload image</span>
                <img class="settingsmenuicon" src="img/icons/image.svg" alt="arrowright-icon">
            </button>
          </div>
@@ -3612,7 +3647,7 @@
          <!-- next page -->
          <div class="nextpagecontainer">
            <button type="button" onclick="" class="nextbutton">
-               <a>Next page</a>
+               <span>Next page</span>
                <img class="settingsmenuicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
            </button>
 
@@ -3684,7 +3719,7 @@
              <!-- previous page -->
              <div class="previouspagecontainer">
                <button type="button" onclick="" class="previousbutton">
-                   <a>Previous page</a>
+                   <span>Previous page</span>
                    <img class="settingsmenuicon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
                </button>
 
@@ -3730,7 +3765,7 @@
              <!-- Upload image knap -->
              <div class="uploadimageknapcontainer">
                <button type="button" onclick="" class="uploadimagebutton">
-                   <a>Upload image</a>
+                   <span>Upload image</span>
                    <img class="settingsmenuicon" src="img/icons/image.svg" alt="arrowright-icon">
                </button>
              </div>
@@ -3739,7 +3774,7 @@
              <!-- next page -->
              <div class="nextpagecontainer">
                <button type="button" onclick="" class="nextbutton">
-                   <a>Next page</a>
+                   <span>Next page</span>
                    <img class="settingsmenuicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
                </button>
 
@@ -3858,7 +3893,7 @@
               <div class="uploadtemplateknap">
                 <p class="typetext">Upload template</p>
                   <button type="" onclick="" class="typebutton">
-                    <a class="typebuttontext">Choose...</a>
+                    <span class="typebuttontext">Choose...</span>
                     <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
                   </button>
               </div>
@@ -3897,7 +3932,7 @@
               <div class="uploadtemplateknap">
                 <p class="typetext">Upload template</p>
                   <button type="" onclick="" class="typebutton">
-                    <a class="typebuttontext">Choose...</a>
+                    <span class="typebuttontext">Choose...</span>
                     <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
                   </button>
               </div>
@@ -3958,7 +3993,7 @@
                <div class="uploadtemplateknap">
                  <p class="typetext">Upload image</p>
                    <button type="" onclick="" class="typebutton">
-                     <a class="typebuttontext">Choose...</a>
+                     <span class="typebuttontext">Choose...</span>
                      <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
                    </button>
                </div>
@@ -4012,7 +4047,7 @@
                  <div class="uploadtemplateknap">
                    <p class="typetext">Upload image</p>
                      <button type="" onclick="" class="typebutton">
-                       <a class="typebuttontext">Choose...</a>
+                       <span class="typebuttontext">Choose...</span>
                        <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
                      </button>
                  </div>
@@ -4081,7 +4116,7 @@
                <div class="settingpopupknap">
                  <p class="typetext">Share as</p>
                    <button type="" onclick="" class="typebutton">
-                     <a class="typebuttontext">PDF</a>
+                     <span class="typebuttontext">PDF</span>
                      <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
                    </button>
                </div>
@@ -4091,7 +4126,7 @@
                <div class="settingpopupknap">
                  <p class="typetext">Share to</p>
                    <button type="" onclick="" class="typebutton">
-                     <a class="typebuttontext">email@example.com</a>
+                     <span class="typebuttontext">email@example.com</span>
                      <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
                    </button>
                </div>
@@ -4101,7 +4136,7 @@
                <div class="settingpopupknap">
                  <p class="typetext">Your email</p>
                    <button type="" onclick="" class="typebutton">
-                     <a class="typebuttontext">email@example.com</a>
+                     <span class="typebuttontext">email@example.com</span>
                      <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
                    </button>
                </div>
@@ -4179,7 +4214,7 @@
               <div class="settingpopupknap">
                 <p class="typetext">Type</p>
                   <button type="" onclick="" class="typebutton">
-                    <a class="typebuttontext">Day of week</a>
+                    <aspan class="typebuttontext">Day of week</aspan>
                     <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
                   </button>
               </div>
@@ -4189,7 +4224,7 @@
               <div class="settingpopupknap">
                 <p class="typetext">Time</p>
                   <button type="" onclick="" class="timebutton">
-                    <a class="typebuttontext">00:00</a>
+                    <aspan class="typebuttontext">00:00</aspan>
                   </button>
               </div>
               <!-- Time knap- slut-->
@@ -4198,7 +4233,7 @@
               <div class="settingpopupknap">
                 <p class="typetext">Your email</p>
                   <button type="" onclick="" class="typebutton">
-                    <a class="typebuttontext">email@example.com</a>
+                    <aspan class="typebuttontext">email@example.com</aspan>
                     <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
                   </button>
               </div>
@@ -4277,7 +4312,7 @@
          <div class="settingpopupknap">
            <p class="typetext">Save as</p>
              <button type="" onclick="" class="typebutton">
-               <a class="typebuttontext">PDF</a>
+               <aspan class="typebuttontext">PDF</aspan>
                <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
              </button>
          </div>
@@ -4287,7 +4322,7 @@
          <div class="settingpopupknap">
            <p class="typetext">Save to</p>
              <button type="" onclick="" class="typebutton">
-               <a class="typebuttontext">Choos location...</a>
+               <aspan class="typebuttontext">Choos location...</aspan>
                <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
              </button>
          </div>
@@ -4354,7 +4389,7 @@
         <div class="settingpopupknap">
           <p class="typetext">Choose printer</p>
             <button type="" onclick="" class="typebutton">
-              <a class="typebuttontext">Choose...</a>
+              <aspan class="typebuttontext">Choose...</aspan>
               <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
             </button>
         </div>
@@ -4364,7 +4399,7 @@
         <div class="settingpopupknap">
           <p class="typetext">Choose quantity</p>
             <button type="" onclick="" class="typebutton">
-              <a class="typebuttontext">Choose...</a>
+              <aspan class="typebuttontext">Choose...</aspan>
               <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
             </button>
         </div>
@@ -4435,7 +4470,7 @@
             <div class="settingpopupknap">
               <p class="typetext">Date target</p>
               <button type="" onclick="" class="typebutton">
-                <a class="typebuttontext">Last edited</a>
+                <aspan class="typebuttontext">Last edited</aspan>
                 <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
               </button>
             </div>
@@ -4445,7 +4480,7 @@
             <div class="settingpopupknap">
               <p class="typetext">Result</p>
                 <button type="" onclick="" class="typebutton">
-                  <a class="typebuttontext">Not set</a>
+                  <aspan class="typebuttontext">Not set</aspan>
                   <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
                 </button>
             </div>
@@ -4455,7 +4490,7 @@
             <div class="settingpopupknap">
               <p class="typetext">Schedule</p>
                 <button type="" onclick="" class="typebutton">
-                  <a class="typebuttontext">Not set</a>
+                  <aspan class="typebuttontext">Not set</aspan>
                   <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
                 </button>
             </div>
@@ -4465,7 +4500,7 @@
             <div class="settingpopupknap">
               <p class="typetext">Schedule</p>
                 <button type="" onclick="" class="typebutton">
-                  <a class="typebuttontext">Not set</a>
+                  <aspan class="typebuttontext">Not set</aspan>
                   <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
                 </button>
             </div>
@@ -4534,7 +4569,7 @@
             <div class="settingpopupknap">
               <p class="typetext">Choose name</p>
                 <button type="" onclick="" class="typebutton">
-                  <a class="typebuttontext">write name here...</a>
+                  <aspan class="typebuttontext">write name here...</aspan>
                   <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
                 </button>
             </div>
@@ -4544,7 +4579,7 @@
             <div class="settingpopupknap">
               <p class="typetext">Location</p>
                 <button type="" onclick="" class="typebutton">
-                  <a class="typebuttontext">Choose...</a>
+                  <aspan class="typebuttontext">Choose...</aspan>
                   <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
                 </button>
             </div>

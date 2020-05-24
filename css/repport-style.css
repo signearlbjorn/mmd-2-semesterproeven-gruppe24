@@ -293,7 +293,7 @@ h3 {
 .settingsmenubutton:hover{
 	background-color: #adadad;
 }
-.settingsmenubutton a{
+.settingsmenubutton span{
 	float: left;
 	color: #848484;
 	font-size: 19px;
@@ -367,7 +367,7 @@ h3 {
 	display: block;
 	float: right;
 }
-.sortbybutton a{
+.sortbybutton span{
     float: left;
     color: #848484;
     font-size: 19px;
@@ -382,7 +382,7 @@ h3 {
 	cursor: pointer;
 	display: block;
 }
-.filterbutton a{
+.filterbutton span{
     color: #000;
     font-size: 14px;
     margin-left: 7px;
@@ -401,7 +401,7 @@ h3 {
 	display: block;
 	float: right;
 }
-.quantitybutton a{
+.quantitybutton span{
     float: left;
     color: #000;
     font-size: 19px;
@@ -416,7 +416,7 @@ h3 {
 	cursor: pointer;
 	display: block;
 }
-.previousbutton a{
+.previousbutton span{
     color: #000;
     font-size: 10px;
     margin-right: 6px;
@@ -434,7 +434,7 @@ h3 {
 	cursor: pointer;
 	display: block;
 }
-.nextbutton a{
+.nextbutton span{
     color: #000;
     font-size: 10px;
 }
@@ -450,7 +450,7 @@ h3 {
 	cursor: pointer;
 	display: block;
 }
-.uploadimagebutton a{
+.uploadimagebutton span{
 	color: #000;
     font-size: 12px;
 }
@@ -463,7 +463,7 @@ h3 {
 	cursor: pointer;
 	display: block;
 }
-.upladtemplatebutton a{
+.upladtemplatebutton span{
     color: #000;
     font-size: 10px;
 	margin-left: 7px;
@@ -482,7 +482,7 @@ h3 {
 	display: block;
 	float: right;
 }
-.helpbutton a{
+.helpbutton span{
     color: #000;
     font-size: 10px;
 	margin-left: 7px;
@@ -510,7 +510,7 @@ h3 {
     display: block;
     float: right;
 }
-.texteditbutton a{
+.texteditbutton span{
 float: left;
 color: #000;
 font-size: 19px;
@@ -899,6 +899,10 @@ nav a:hover{
 	margin-right: 30px;
 }
 /*Here ends CSS for NAV - big screen*/
+/*Burger menu button CSS*/
+.burgerMenu{
+	display: block;
+}
 /*Here starts CSS for NAV - Small screen*/
 .smallnav{
 	float: left;
