@@ -181,4 +181,94 @@ document.addEventListener('DOMContentLoaded', function () {
 			// 5 of caregoy 3
 		}]
 	});
+	// #highcharts-type-column-element-preview	
+	var typeColumnPreviewExample = Highcharts.chart('highcharts-type-column-preview-example', {
+		chart: {
+			type: 'column',
+			animation: false,
+			AnimationOptionsObject: false,
+			backgroundColor: "#FFF",
+			borderWidth: 0,
+			plotShadow: false,
+			plotBorderWidth: 1,
+			plotBorderColor: 0,
+		},
+		tooltip: { enabled: false },
+		legend: { enabled: false },
+		credits: { enabled: false },
+		plotOptions: {
+			series:{
+				states: {
+					inactive: {
+						opacity: 1
+					},
+					hover: {
+						enabled: false
+					}
+				}
+			}
+		},
+		title: {
+			text: 'column',
+			align: "left"
+		},
+		xAxis: {
+			title: {
+				text: ''
+			},	
+			categories: ['A', 'B', 'C'],
+		},
+		yAxis: {
+			title: {
+				text: ''
+			},
+		},
+		series: [{
+			name: '1',
+			data: [1, 3, 5]
+			// 0 of caregoy 1
+			// 2 of caregoy 2
+			// 4 of caregoy 3
+		}, {
+			name: '2',
+			data: [2, 4, 6]
+			// 1 of caregoy 1
+			// 3 of caregoy 2
+			// 5 of caregoy 3
+		}]
+	});
+	
+	// #highcharts-type-column-element-example
+	var typeColumnElementExample = Highcharts.chart('highcharts-type-column-element-example', {
+		chart: {
+			type: 'column',
+		},
+		title: {
+			text: 'Graph title'
+		},
+		xAxis: {
+			title: {
+				text: 'X-axis title'
+			},	
+			categories: ['Category 1', 'Category 2', 'Category 3']
+		},
+		yAxis: {
+			title: {
+				text: 'Y-axis title'
+			}
+		},
+		series: [{
+			name: 'Series name 1',
+			data: [0, 2, 4]
+			// 0 of caregoy 1
+			// 2 of caregoy 2
+			// 4 of caregoy 3
+		}, {
+			name: 'Series name 2',
+			data: [1, 3, 5]
+			// 1 of caregoy 1
+			// 3 of caregoy 2
+			// 5 of caregoy 3
+		}]
+	});
 });
