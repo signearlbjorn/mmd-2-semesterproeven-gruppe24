@@ -27,15 +27,21 @@ for(let i=0; i<codeSections.length; i++){ // Loop all instanceses of code.
 
 	codeSections[i].addEventListener("dblclick", function(){selectText(codeSections[i])}); // Add eventlistner on doubleclick for selectText.
 }
-
-let tableExplainer = document.getElementsByClassName('tableExplainer'); // Find all elements with the class tableExplainer.
-for(let i=0; i<tableExplainer.length; i++){ // Loop all instanceses of tableExplainer.
-	let tableExplainerInstance = tableExplainer[i];
-	let tableExplainerButton = tableExplainerInstance.getElementsByClassName('tableExplainerButton'); // Find elements with the class tableExplainerButton in tableExplainer
-	tableExplainerButton = tableExplainerButton[0]; // Always set to first instance.
-	tableExplainerButton.addEventListener("click", function(){tableExplainer[i].parentNode.removeChild(tableExplainer[i]);}); // Add eventlistner on click for tableExplainerButton, and when fired, remove tableExplainer instance from dom.
+function activateTableExplainer() {
+	let tableExplainer = document.getElementsByClassName('tableExplainer'); // Find all elements with the class tableExplainer.
+	for(let i=0; i<tableExplainer.length; i++){ // Loop all instanceses of tableExplainer.
+		let tableExplainerInstance = tableExplainer[i];
+		let tableExplainerButton = tableExplainerInstance.getElementsByClassName('tableExplainerButton'); // Find elements with the class tableExplainerButton in tableExplainer
+		tableExplainerButton = tableExplainerButton[0]; // Always set to first instance.
+		tableExplainerButton.addEventListener("click", function(){
+			for(let j=tableExplainer.length-1; j>=0; j--) {
+				// console.log("Intance: " + j);
+				tableExplainer[j].parentNode.removeChild(tableExplainer[j]);
+			}
+			saveCookieTableExplainer();
+		}); // Add eventlistner on click for tableExplainerButton, and when fired, remove tableExplainer instance from dom.
+	}
 }
-
 function selectText(element) {
 	// Based on: https://stackoverflow.com/questions/1173194/select-all-div-text-with-single-mouse-click
 	// IE kode removed, as we do not attempt to support the platform, and the function is not a critical part of the experience.
@@ -66,10 +72,21 @@ function changeImage() {
 
 let rowOne = document.getElementsByClassName("row-one");
 for(let i=0; i<rowOne.length; i++){ // Loop all instanceses of rowOne.
-	rowOne[i].addEventListener("click", function(){dis(rowOne[i])});
+	// On click on row-one, expand or compress row-tow
+	rowOne[i].addEventListener("click", function(){expandOrCompress(rowOne[i])});
+	
+	// Insert info section before tables.
+	if(!getTableExplainerCookie()){
+		InfoTable = document.createElement("div");
+		InfoTable.setAttribute('class', 'tableExplainer');
+		InfoTable.innerHTML = '<img src="img/icons/wrench.svg" alt="Wrench-ikon" class="tableExplainerIcon"><span class="tableExplainerText">Tryk på tabel overskrifter, for at se tabelindholdet.</span><img src="img/icons/copy.svg" alt="Kopier-ikon" class="tableExplainerIcon"><span class="tableExplainerText">Tryk på text for at markere en linje i tabelceller med kode.</span><img src="img/icons/copy.svg" alt="Kopier-ikon" class="tableExplainerIcon"><span class="tableExplainerText">Dobbeltclick for at markere hele sektionen i tabelceller med kode.</span><button class="tableExplainerButton">Forstået</button>';
+		let grandGrandParrent = rowOne[i].parentNode.parentNode.parentNode; // Få fat i parrent noder få at nå ud af tabel (div)
+		grandGrandParrent.insertBefore(InfoTable, grandGrandParrent.childNodes[0]);
+		activateTableExplainer();
+	}
 }
-function dis(element){
-	let parrent = element.parentNode; /* Få fat i parrent node (tbody/table) */
+function expandOrCompress(element) {
+	let parrent = element.parentNode; // Få fat i parrent node (tbody)
 	let rowTwo = parrent.getElementsByClassName("row-two");
 	rowTwo = rowTwo[0];
 	if(rowTwo.classList.contains("show")){
@@ -272,3 +289,31 @@ document.addEventListener('DOMContentLoaded', function () {
 		}]
 	});
 });
+
+/*Cookie code*/
+/*Code based on https://www.w3schools.com/js/js_cookies.asp*/
+function getTableExplainerCookie() {
+    //console.log('Getting cookies')
+    var name = "tableExplainer" + "=";
+    var cookieSplits = document.cookie.split(';');
+    for (var i = 0; i < cookieSplits.length; i++) {
+        var currentCookiePart = cookieSplits[i];
+		//console.log(cookieSplits[i]);
+		//console.log(currentCookiePart.charAt(0));
+		while (currentCookiePart.charAt(0) == ' ') {
+			currentCookiePart = currentCookiePart.substring(1);
+        }
+        if (currentCookiePart.indexOf(name) == 0) {
+            return true;
+        }
+    }
+    return false;
+}
+
+function saveCookieTableExplainer() {
+    let date = new Date();
+    date.setTime(date.getTime() + (720 * 24 * 60 * 60 * 1000));
+    let cookieExpire = "expires=" + date.toUTCString();
+    document.cookie = "tableExplainer" + "=" + 1 + ";" + cookieExpire + ";path=/";
+    console.log('Cookie - tableExplainer - is saved.')
+}
