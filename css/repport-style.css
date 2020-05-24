@@ -653,6 +653,102 @@ margin-left: 7px;
 		/*slut*/
 /*STYLING FOR MEGASWITCH - SLUT*/
 
+
+/*Here starts CSS for search input*/
+.searchInput {
+    background-image: url('../img/icons/search.svg'); /* Add a search icon to input */
+    background-position: 10px 11px; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
+    width: 20%; 
+    font-size: 16px; /* Increase font-size */
+    padding: 10px 20px 5px 50px; /* Add some padding */
+    border: 1px solid #ddd; /* Add a grey border */
+    border-radius: 10px; /*round corners*/
+}
+
+/*Search input CSS ends*/
+
+/*Other buttons CSS*/
+
+.button-g{
+    min-width: 75px; 
+    width: auto; 
+    border: solid 1px #00CD00; 
+    border-radius: 10px; 
+    background-color: #00CD00; 
+    padding: 8px 10px; 
+    font-size: 16px;
+    cursor: pointer; 
+    display: inline-block;    
+}
+
+.button-b{
+    min-width: 75px; 
+    width: auto; 
+    border: solid 1px #5071A3; 
+    border-radius: 10px; 
+    background-color: #5071A3; 
+    padding: 8px 10px; 
+    font-size: 16px;
+    cursor: pointer; 
+    display: inline-block;    
+}
+
+.button-r{
+    min-width: 75px; 
+    width: auto; 
+    color: white; 
+    border: solid 1px #E4342B; 
+    border-radius: 10px; 
+    background-color: #E4342B; 
+    padding: 8px 20px; 
+    font-size: 16px;
+    cursor: pointer; 
+    display: inline-block;    
+}
+
+.button-w{
+    min-width: 75px; 
+    width: auto; 
+    color: black; 
+    border: solid 1px grey; 
+    border-radius: 10px; 
+    background-color: white; 
+    padding: 8px 20px; 
+    font-size: 16px;
+    cursor: pointer; 
+    display: inline-block;    
+}
+
+
+
+.buttont{
+    border: solid 1px #5071A3; 
+    border-radius: 10px; 
+    background-color: #5071A3; 
+    padding: 14px 28px; 
+    font-size: 16px;
+    cursor: pointer; 
+    display: inline-block;    
+}
+
+.Ticon{
+    width: 200%;
+    margin-left:-47%; 
+}
+
+.buttongr{
+    margin-top: 10px; 
+    border: solid 1px #6F6F6F; 
+    border-radius: 10px; 
+    background-color: #6F6F6F; 
+    padding: 8px 28px; 
+    font-size: 16px;
+    cursor: pointer; 
+    display: inline-block;    
+}
+/*Other buttons CSS end*/
+
 /* --- ORGANISMS --- */
 /*Here starts CSS for header in editor*/
 .editorHeader{
