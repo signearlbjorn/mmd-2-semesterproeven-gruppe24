@@ -3939,8 +3939,7 @@
         </tr>
   	  </table>
  <!-- Upload template pop-up - slut -->
- <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
- <br><br>
+
   <!-- Upload image pop-up -->
    <h4>Upload image pop-up</h4>
    <br>
@@ -4069,18 +4068,18 @@
    <h4>POP-UP SHARE AS ORGANISME</h4>
    <!--organisme for stor til at være i table -->
    <div class="example">
-       <!-- SAVE AS-POP-UP ORGANISME -->
-             <div class="frameforsettingpopup">
+       <!-- SHARE AS-POP-UP ORGANISME -->
+             <div class="frameforshareaspopup">
 
                <div class="popuptitel">
                    <img class="settingpopupicon" src="img/icons/savegreen.svg" alt="">
                    <img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
-                   <h1 class="settingtitel">Save as</h1>
+                   <h1 class="settingtitel">Share as</h1>
                </div>
 
                <!-- Choose printer knap -->
                <div class="settingpopupknap">
-                 <p class="typetext">Save as</p>
+                 <p class="typetext">Share as</p>
                    <button type="" onclick="" class="typebutton">
                      <a class="typebuttontext">PDF</a>
                      <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
@@ -4090,13 +4089,34 @@
 
                <!-- Choose quantity knap -->
                <div class="settingpopupknap">
-                 <p class="typetext">Save to</p>
+                 <p class="typetext">Share to</p>
                    <button type="" onclick="" class="typebutton">
-                     <a class="typebuttontext">Choos location...</a>
+                     <a class="typebuttontext">email@example.com</a>
                      <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
                    </button>
                </div>
                <!-- Choose quantity knap - slut-->
+
+               <!-- Email knap -->
+               <div class="settingpopupknap">
+                 <p class="typetext">Your email</p>
+                   <button type="" onclick="" class="typebutton">
+                     <a class="typebuttontext">email@example.com</a>
+                     <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+                   </button>
+               </div>
+               <!-- Email knap - slut-->
+
+               <!-- message input -->
+               <div class="messageframe">
+                  <div class="type">
+                      <p class="typetext">Message</p>
+                      <form action="/action_page.php" id="message"></form>
+                      <br>
+                      <textarea rows="4" cols="50" name="comment" form="usrform"> Enter message here...</textarea>
+                  </div>
+                </div>
+                <!-- message input - slut -->
 
                <!-- cancel knap -->
 
@@ -4106,7 +4126,7 @@
 
                <!-- done - slut-->
              </div>
-       <!-- SAVE AS-POP-UP ORGANISME - SLUT -->
+       <!-- SHARE AS-POP-UP ORGANISME - SLUT -->
    </div>
   <!--"POP-UP EKSEMPEL - SLUT-->
 
@@ -4145,6 +4165,67 @@
 
   <h4>POP-UP SCHEDULE ORGANISME</h4>
   <!--organisme for stor til at være i table -->
+  <div class="example">
+      <!-- SHARE AS-POP-UP ORGANISME -->
+            <div class="frameforshareaspopup">
+
+              <div class="popuptitel">
+                  <img class="settingpopupicon" src="img/icons/savegreen.svg" alt="">
+                  <img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
+                  <h1 class="settingtitel">Share as</h1>
+              </div>
+
+              <!-- Choose printer knap -->
+              <div class="settingpopupknap">
+                <p class="typetext">Share as</p>
+                  <button type="" onclick="" class="typebutton">
+                    <a class="typebuttontext">PDF</a>
+                    <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+                  </button>
+              </div>
+              <!-- Choose printer knap - slut-->
+
+              <!-- Choose quantity knap -->
+              <div class="settingpopupknap">
+                <p class="typetext">Share to</p>
+                  <button type="" onclick="" class="typebutton">
+                    <a class="typebuttontext">email@example.com</a>
+                    <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+                  </button>
+              </div>
+              <!-- Choose quantity knap - slut-->
+
+              <!-- Email knap -->
+              <div class="settingpopupknap">
+                <p class="typetext">Your email</p>
+                  <button type="" onclick="" class="typebutton">
+                    <a class="typebuttontext">email@example.com</a>
+                    <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+                  </button>
+              </div>
+              <!-- Email knap - slut-->
+
+              <!-- message input -->
+              <div class="messageframe">
+                 <div class="type">
+                     <p class="typetext">Message</p>
+                     <form action="/action_page.php" id="message"></form>
+                     <br>
+                     <textarea rows="4" cols="50" name="comment" form="usrform"> Enter message here...</textarea>
+                 </div>
+               </div>
+               <!-- message input - slut -->
+
+              <!-- cancel knap -->
+
+              <!-- cancel knap slut - slut-->
+
+              <!-- done knap -->
+
+              <!-- done - slut-->
+            </div>
+      <!-- SHARE AS-POP-UP ORGANISME - SLUT -->
+  </div>
 
  <!--"POP-UP EKSEMPEL - SLUT-->
 

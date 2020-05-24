@@ -1218,6 +1218,26 @@ nav a:hover{
 }
 /*Styling for setting pop-up organismer - SLUT*/
 
+/*ekstra style til share as pop-up*/
+.frameforshareaspopup {
+	background-color: #222222;
+	width:450px;
+  height: 500px;
+	border-radius: 5px;
+}
+
+.messageframe {
+	width: 100px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.textarea {
+	width: 100px;
+	height: 200px;
+}
+/*ekstra style til share as pop-up - SLUT*/
+
 /* --- ORGANISMER SLUT --- */
 
 
