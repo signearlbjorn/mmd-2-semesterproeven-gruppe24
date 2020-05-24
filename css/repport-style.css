@@ -61,10 +61,10 @@ th {
     }
 }
 
-@media (min-width: 1980px) {
+@media (min-width: 1920px) {
     * {
-        font-size: 0.707vw; /* ~14px on 1980px width */
-        line-height: 1.717vw; /* ~34px on 1980px width */
+        font-size: 0.729vw; /* ~14px on 1920px width */
+        line-height: 1.719vw; /* ~33px on 1920px width */
     }
 }
 
@@ -124,10 +124,10 @@ h1 {
 	}
 }
 
-@media (min-width: 1980px) {
+@media (min-width: 1920px) {
 	h1 {
-		font-size: 1.616vw; /* ~32px on 1980px width */
-		line-height: 3.030vw; /* ~60px on 1980px width */
+		font-size: 1.616vw; /* ~32px on 1920px width */
+		line-height: 3.073vw; /* ~59px on 1920px width */
 	}
 }
 
@@ -169,10 +169,10 @@ h2 {
 	}
 }
 
-@media (min-width: 1980px) {
+@media (min-width: 1920px) {
 	h2 {
-		font-size: 0.909vw; /* ~27px on 1980px width */
-		line-height: 2.677vw; /* ~53px on 1980px width */
+		font-size: 1.406vw; /* ~27px on 1920px width */
+		line-height: 2.760vw; /* ~53px on 1920px width */
 	}
 }
 
@@ -215,10 +215,10 @@ h3 {
 	}
 }
 
-@media (min-width: 1980px) {
+@media (min-width: 1920px) {
 	h3 {
-		font-size: 1.061vw; /* ~21px on 1980px width */
-		line-height: 2.222vw; /* ~44px on 1980px width */
+		font-size: 1.061vw; /* ~21px on 1920px width */
+		line-height: 2.292vw; /* ~44px on 1920px width */
 	}
 }
 
@@ -1368,8 +1368,13 @@ nav a:hover{
 	float: left;
 	cursor: pointer;
 	font-weight: 400;
-	font-size: 18px;
+	font-size: 112,5%;
 	line-height: 25px;
+}
+@media (min-width:1920px){
+	.highcart-preview h4 {
+		font-size: 20px;
+	}
 }
 
 .highcart-preview .star {
@@ -1687,9 +1692,16 @@ header .wrapper {
 	position: absolute;
 	top: -25px;
 	left: 20px;
-	font-size: 16px;
+	font-size: 112,5%;
 	line-height: 25px;
 	font-style: italic;
+}
+
+@media (min-width:1920px){
+	.example:before {
+		top: -2vw;
+		line-height: 2vw;
+	}
 }
 
 #styleguide .wrapper {
