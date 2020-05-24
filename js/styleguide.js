@@ -1,5 +1,7 @@
 // ----- STYLEGUIDE JAVASCRIPT -----
 
+console.log('styleguide.js loaded.');
+
 // --- Format coding sections as copy friendly code, without use of pre ---
 /*
 What is does:
@@ -47,13 +49,17 @@ function selectText(element) {
 
 /* PRIORITY STAR / STJERNE PRIORITERING */
 function changeImage() {
+	console.log('changeImage function active.');
+	// console.log(document.getElementById("imgClickAndChange").src.endsWith("img/icons/star.svg"));
 
-	if (document.getElementById("imgClickAndChange").src == "img/icons/star.svg")
+	if (document.getElementById("imgClickAndChange").src.endsWith("img/icons/star.svg")) // Must use endsWith method instead of == when directory layout is uncertain
 	{
+		console.log('changeImage if true.');
 		document.getElementById("imgClickAndChange").src = "img/icons/starfull.svg";
 	}
 	else
 	{
+		console.log('changeImage if false.');
 		document.getElementById("imgClickAndChange").src = "img/icons/star.svg";
 	}
 }
