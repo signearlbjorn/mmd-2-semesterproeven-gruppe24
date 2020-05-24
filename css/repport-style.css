@@ -1184,6 +1184,24 @@ nav a:hover{
 }
 /* Styling for Upload pop-up ORAGBISME - SLUT */
 
+
+/*Styling for setting pop-up organismer*/
+.frameforsettingpopup {
+	background-color: #222222;
+	width: 450;
+  height: 250px;
+}
+
+.settingtitel {
+	color: white;
+}
+
+.popuptitel, .settingpopupknap{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+/*Styling for setting pop-up organismer - SLUT*/
+
 /* --- ORGANISMER SLUT --- */
 
 
