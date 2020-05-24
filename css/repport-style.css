@@ -1190,20 +1190,29 @@ nav a:hover{
 /*Styling for setting pop-up organismer*/
 .frameforsettingpopup {
 	background-color: #222222;
-	width: 450;
+	width:450px;
   height: 250px;
+	border-radius: 5px;
 }
 
 .settingtitel {
 	color: white;
+	margin-top: -10px;
+	margin-left: 10px;
 }
 
-.settingpopupicon {
+.settingpopupicon, .settingpopupxicon {
 	width: 40px;
 	height: 40px;
 }
 
+.settingpopupxicon {
+	float: right;
+	margin-right: -200px;
+}
+
 .popuptitel, .settingpopupknap{
+	margin-top: 20px;
 	margin-left: 10px;
 	margin-right: 10px;
 }
