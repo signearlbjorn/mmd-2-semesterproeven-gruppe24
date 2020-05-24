@@ -1252,6 +1252,13 @@ nav a:hover{
 	height: 400px;
 	border-radius: 5px;
 }
+
+.settingpopupxiconblack {
+	float: right;
+	margin-right: -80px;
+	width: 40px;
+	height: 40px;
+}
 /*ekstra style til create new report pop-up  - slut*/
 
 /* --- ORGANISMER SLUT --- */
