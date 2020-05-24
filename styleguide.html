@@ -5217,6 +5217,427 @@
 			</table>
 		</div>
 	</article>
+	<article id="highcharts-type-line-preview">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Highcharts type: line - preview</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<!-- Highcharts type: line -->
+				<article class="highcart-preview">
+					<h4>line</h4>
+					<p class="star">
+						<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()">
+					</p>
+					<div class="aspect-one-to-one">
+						<button class="highchart-button" title="indsæt graf">
+							<div id="highcharts-type-line-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+						</button>
+					</div>
+				</article>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML-->
+					<td class="code">
+						<!-- Highcharts type: line -->
+						<article class="highcart-preview">
+							<h4>line</h4>
+							<p class="star">
+								<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()">
+							</p>
+							<div class="aspect-one-to-one">
+								<button class="highchart-button" title="indsæt graf">
+									<div id="highcharts-type-line-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+								</button>
+							</div>
+						</article>
+					</td>
+					<!--CSS-->
+					<td class="code">
+						.highcart-preview {
+							position: relative;
+							float: left;
+							margin: 0;
+							width: 33%;
+						}
+
+						.highcart-preview h4 {
+							float: left;
+							cursor: pointer;
+							font-weight: 400;
+							font-size: 18px;
+							line-height: 25px;
+						}
+
+						.highcart-preview .star {
+							float: right;
+						}
+
+						.aspect-one-to-one {
+							position: relative;
+							float:left;
+							width: 100%;
+							padding-top: 100%; /* 1:1 Aspect Ratio */
+							margin-top: 16px;
+						}
+
+						.highchart-button {
+							position: absolute;
+							top: 0;
+							left: 0;
+							float: left;
+							clear: both;
+							width: 100%;
+							height: 100%;
+							padding: 15px;
+							border: none;
+							border-radius: 5px;
+							background-color: #6F6F6F;
+							border-sizing: border-box;
+						}
+					</td>
+					<!--JavaScript-->
+					<td class="code">
+						// #highcharts-type-line-example
+						document.addEventListener('DOMContentLoaded', function () {
+							var myChart = Highcharts.chart('highcharts-type-line-example', {
+								chart: {
+									type: 'line',
+								},
+								title: {
+									text: 'Graph title'
+								},
+								xAxis: {
+									title: {
+										text: 'X-axis title'
+									},	
+									categories: ['Category 1', 'Category 2', 'Category 3']
+								},
+								yAxis: {
+									title: {
+										text: 'Y-axis title'
+									}
+								},
+								series: [{
+									name: 'Series name 1',
+									data: [0, 2, 4]
+									// 0 of caregoy 1
+									// 2 of caregoy 2
+									// 4 of caregoy 3
+								}, {
+									name: 'Series name 2',
+									data: [1, 3, 5]
+									// 1 of caregoy 1
+									// 3 of caregoy 2
+									// 5 of caregoy 3
+								}]
+							});
+						});
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<article id="highcharts-type-line-element">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Highcharts type: line - page element</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<!-- Highcharts type: line -->
+				<div id="highcharts-type-line-element-example" style="width:100%; height:400px;"></div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML-->
+					<td class="code">
+						<!-- Highcharts type: line -->
+						<div id="highcharts-type-line-element-example" style="width:100%; height:400px;"></div>
+					</td>
+					<!--CSS-->
+					<td class="empty"></td>
+					<!--JavaScript-->
+					<td class="code">
+						document.addEventListener('DOMContentLoaded', function () {
+							var myChart = Highcharts.chart('highcharts-type-line-example', {
+								chart: {
+									type: 'line',
+								},
+								title: {
+									text: 'Graph title'
+								},
+								xAxis: {
+									title: {
+										text: 'X-axis title'
+									},	
+									categories: ['Category 1', 'Category 2', 'Category 3']
+								},
+								yAxis: {
+									title: {
+										text: 'Y-axis title'
+									}
+								},
+								series: [{
+									name: 'Series name 1',
+									data: [0, 2, 4]
+									// 0 of caregoy 1
+									// 2 of caregoy 2
+									// 4 of caregoy 3
+								}, {
+									name: 'Series name 2',
+									data: [1, 3, 5]
+									// 1 of caregoy 1
+									// 3 of caregoy 2
+									// 5 of caregoy 3
+								}]
+							});
+						});
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<article id="highcharts-type-pie-preview">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Highcharts type: pie - preview</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<!-- Highcharts type: pie -->
+				<article class="highcart-preview">
+					<h4>pie</h4>
+					<p class="star">
+						<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()">
+					</p>
+					<div class="aspect-one-to-one">
+						<button class="highchart-button" title="indsæt graf">
+							<div id="highcharts-type-pie-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+						</button>
+					</div>
+				</article>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML-->
+					<td class="code">
+						<!-- Highcharts type: pie -->
+						<article class="highcart-preview">
+							<h4>pie</h4>
+							<p class="star">
+								<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()">
+							</p>
+							<div class="aspect-one-to-one">
+								<button class="highchart-button" title="indsæt graf">
+									<div id="highcharts-type-pie-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+								</button>
+							</div>
+						</article>
+					</td>
+					<!--CSS-->
+					<td class="code">
+						.highcart-preview {
+							position: relative;
+							float: left;
+							margin: 0;
+							width: 33%;
+						}
+
+						.highcart-preview h4 {
+							float: left;
+							cursor: pointer;
+							font-weight: 400;
+							font-size: 18px;
+							line-height: 25px;
+						}
+
+						.highcart-preview .star {
+							float: right;
+						}
+
+						.aspect-one-to-one {
+							position: relative;
+							float:left;
+							width: 100%;
+							padding-top: 100%; /* 1:1 Aspect Ratio */
+							margin-top: 16px;
+						}
+
+						.highchart-button {
+							position: absolute;
+							top: 0;
+							left: 0;
+							float: left;
+							clear: both;
+							width: 100%;
+							height: 100%;
+							padding: 15px;
+							border: none;
+							border-radius: 5px;
+							background-color: #6F6F6F;
+							border-sizing: border-box;
+						}
+					</td>
+					<!--JavaScript-->
+					<td class="code">
+						// #highcharts-type-pie-element-preview	
+						var typepiePreviewExample = Highcharts.chart('highcharts-type-pie-preview-example', {
+							chart: {
+								type: 'pie',
+								animation: false,
+								AnimationOptionsObject: false,
+								backgroundColor: "#FFF",
+								borderWidth: 0,
+								plotShadow: false,
+								plotBorderWidth: 1,
+								plotBorderColor: 0,
+							},
+							tooltip: { enabled: false },
+							legend: { enabled: false },
+							credits: { enabled: false },
+							plotOptions: {
+							pie: {
+							allowPointSelect: false,
+							},
+							series:{
+									states: {
+										inactive: {
+											opacity: 1
+										},
+										hover: {
+											enabled: false
+										}
+									}
+								}
+							},
+							title: {
+								text: 'pie',
+								align: "left"
+							},
+							xAxis: {
+								title: {
+									text: ''
+								},	
+								categories: ['A', 'B', 'C'],
+							},
+							yAxis: {
+								title: {
+									text: ''
+								},
+							},
+							series: [{
+								name: 'ABC',
+								colorByPoint: true,
+								data: [{
+									name: 'A',
+									y: 4,
+								}, {
+									name: 'B',
+									y: 3
+								}, {
+									name: 'C',
+									y: 2
+								}, {
+									name: 'D',
+									y: 1
+								}]
+							}]
+						});
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<article id="highcharts-type-pie-element">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Highcharts type: pie - page element</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<!-- Highcharts type: pie -->
+				<div id="highcharts-type-pie-element-example" style="width:100%; height:400px;"></div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML-->
+					<td class="code">
+						<!-- Highcharts type: pie -->
+						<div id="highcharts-type-pie-element-example" style="width:100%; height:400px;"></div>
+					</td>
+					<!--CSS-->
+					<td class="empty"></td>
+					<!--JavaScript-->
+					<td class="code">
+						// #highcharts-type-pie-element-example
+						var typepieElementExample = Highcharts.chart('highcharts-type-pie-element-example', {
+							chart: {
+								type: 'pie',
+							},
+							title: {
+								text: 'Graph title'
+							},
+							xAxis: {
+								title: {
+									text: 'X-axis title'
+								},	
+								categories: ['Category 1', 'Category 2', 'Category 3']
+							},
+							yAxis: {
+								title: {
+									text: 'Y-axis title'
+								}
+							},
+							series: [{
+								name: 'ABC',
+								colorByPoint: true,
+								data: [{
+									name: 'A',
+									y: 3,
+								}, {
+									name: 'B',
+									y: 2
+								}, {
+									name: 'C',
+									y: 1
+								}, {
+									name: 'D',
+									y: 1
+								}]
+							}]
+						});
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
 <!-- lukke section for organimser-->
 </section>
 <!-- SEKTION 3 - ORGANISMER FOR LØSNING - SLUT -->
