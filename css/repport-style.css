@@ -300,7 +300,6 @@ h3 {
 
 /*Style til stherne prioriterings molekyle*/
 .star {
-	background-color: black;
 	width: 26px;
 }
 
@@ -1046,6 +1045,12 @@ margin-left: 7px;
 }
 .graphs1{
 	width: 98%;
+	display: grid;
+}
+.templates-overDiv{
+	width: 100%; 
+	display: grid; 
+	grid-template-columns: auto auto;
 }
 #codeEditorTab, #text, #graphs, #templates{
 	width: 99%;
@@ -1674,8 +1679,8 @@ nav a:hover{
 
 .highcart-preview {
 	position: relative;
-	margin: 0;
-	width: 100%;
+	width: 98%;
+	margin: 10px auto 0;
 }
 
 .highcart-preview h4 {
@@ -1684,11 +1689,13 @@ nav a:hover{
 	font-weight: 400;
 	font-size: 112,5%;
 	line-height: 25px;
+	color: #fff;
 }
 
 @media (min-width:1920px){
 	.highcart-preview h4 {
 		font-size: 20px;
+		color: #fff;
 	}
 }
 
@@ -1779,7 +1786,7 @@ nav a:hover{
     width: 300px;
     height: 342px;
     border-radius: 8px;
-    margin-top: 10px;
+    margin: 10px auto 0;
 }
 
 
@@ -1834,7 +1841,7 @@ nav a:hover{
     color: white;
     font-size: 20px;
     display: inline-block;
-    margin-top: 40px;
+    margin-top: 10px;
     margin-left: 18px;
 }
 
@@ -2268,7 +2275,6 @@ header .wrapper, #wrapper_header_example header .wrapper {
 /* - LISTER - */
 #styleguide section .wrapper > ul {
 	float: left;
-	width: 100%;
 	width: 100%;
 	margin-top: 5px;
 	margin-bottom: 15px;

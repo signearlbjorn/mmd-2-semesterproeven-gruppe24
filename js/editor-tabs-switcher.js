@@ -23,8 +23,6 @@ function switcheditbg(editbgswitch) {
 	}
 }
 console.log('editor-switcher-page-loaded');
-let singylarHorizontal = document.getElementById("singularHorizontal");
-singularHorizontal.addEventListener("lclick", function(){switchpagepreview});
 
 function switchpagepreview(previewSwitch){
 	console.log('Start funktion');

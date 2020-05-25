@@ -72,7 +72,8 @@ div.page-break {
 		/* Create the top page margin on the lower virtual page */
 		margin-bottom: 2cm;
 		/* Let this page appear as empty space between the virtual pages */
-		background: #eee;
+		background: #707070;
+		width: 22cm;
 	}
 }
 /* For top-level headings only */
