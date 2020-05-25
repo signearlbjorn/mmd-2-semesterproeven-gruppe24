@@ -6805,13 +6805,6 @@
 			</table>
 		</div>
 	</article>
-
-
-
-
-
-
-
 	<article id="wrapper-header">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Wrapper in header.</h4>
@@ -6920,6 +6913,512 @@
 						@media (min-width:1920px) {
 							header .wrapper{
 								width: 75%;
+							}
+						}
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<article id="editor-tabs">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Editor Tabs</h4>
+		</div>
+		<div id="wrapper_header_example" class="example">
+			<div  class="editor">
+			<!--EDITOR NAVIGATION BAR-->
+			<div class="editornav">
+				<div id="templatesDiv" class="tabsnavbubtton"><a onClick="switchedit('templates'); switcheditbg('templatesDiv');">Templates</a></div>
+				<div id="graphsDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('graphs'); switcheditbg('graphsDiv');">Graphs</a></div>
+				<div id="textDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('text'); switcheditbg('textDiv');">Text</a></div>
+				<div id="codeDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('codeEditorTab'); switcheditbg('codeDiv');">Code</a></div>
+			</div>
+			<div class="editortabs">
+			<!--TEMPLATES-->
+			<div id="templates" class="">
+				<div style="width: 100%; display: grid; grid-template-columns: auto auto;">
+				<div class="graphs1">
+					<div class="graph1">
+					<a>
+					<div>
+						<div class="graphName">
+							<h3>Basic 1</h3>
+							<p class="star">
+								<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()">
+							</p>
+						</div>
+						<div class="graphImg">
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+					</div>
+					</a>
+				</div>
+				</div>
+				<div class="graphs1">
+					<div class="graph1">
+					<a>
+					<div>
+						<div class="graphName">
+							<h3>Basic 1</h3>
+							<p class="star">
+								<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+							</p>
+						</div>
+						<div class="graphImg">
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+					</div>
+					</a>
+				</div>
+				</div>
+				<div class="graphs1">
+					<div class="graph1">
+					<a>
+					<div>
+						<div class="graphName">
+							<h3>Basic 1</h3>
+							<p class="star">
+								<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+							</p>
+						</div>
+						<div class="graphImg">
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+					</div>
+					</a>
+				</div>
+				</div>
+				<div class="graphs1">
+					<div class="graph1">
+					<a>
+					<div>
+						<div class="graphName">
+							<h3>Basic 1</h3>
+							<p class="star">
+								<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+							</p>
+						</div>
+						<div class="graphImg">
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+					</div>
+					</a>
+				</div>
+				</div>
+				</div>
+			</div>
+			<!--GRPAHS-->
+			<div id="graphs" class="hidden">
+				<div class="graphsOverDiv">
+					<!-- Highcharts type: bar -->
+					<article class="highcart-preview">
+					    <h4>Bar</h4>
+					    <p class="star">
+					        <img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+					    </p>
+					    <div class="aspect-one-to-one">
+					        <button class="highchart-button" title="indsæt graf">
+					            <div id="highcharts-type-bar-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+					        </button>
+					    </div>
+					</article>
+					<!-- Highcharts type: column -->
+					<article class="highcart-preview">
+					    <h4>Column</h4>
+					    <p class="star">
+					        <img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+					    </p>
+					    <div class="aspect-one-to-one">
+					        <button class="highchart-button" title="indsæt graf">
+					            <div id="highcharts-type-column-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+					        </button>
+					    </div>
+					</article>
+					<!-- Highcharts type: line -->
+					<article class="highcart-preview">
+					    <h4>line</h4>
+					    <p class="star">
+					        <img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+					    </p>
+					    <div class="aspect-one-to-one">
+					        <button class="highchart-button" title="indsæt graf">
+					            <div id="highcharts-type-line-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+					        </button>
+					    </div>
+					</article>
+					<!-- Highcharts type: pie -->
+					<article class="highcart-preview">
+					    <h4>pie</h4>
+					    <p class="star">
+					        <img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+					    </p>
+					    <div class="aspect-one-to-one">
+					        <button class="highchart-button" title="indsæt graf">
+					            <div id="highcharts-type-pie-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+					        </button>
+					    </div>
+					</article>
+				</div>
+			</div>
+			<!--TEXT EDITOR-->
+			<div id="text" class="hidden">
+				<div class="textTool">
+					<label>Text tool</label>
+					<button type="type" class="textToolImgButton"><img class="settingsicon" src="img/icons/type.svg" alt="Text tool"></button>
+					<button type="button" onclick="" class="helpbutton">
+    					<span>Help</span>
+					    <img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
+					</button>
+				</div>
+				<div class="textTool">
+					<label>Text edit</label>
+					<div class="textEditDiv"><label>Size</label><button type="" onclick="" class="texteditbutton"><span>Choose..</span><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+					<div class="textEditDiv"><label>Weight</label><button type="" onclick="" class="texteditbutton"><span>Choose..</span><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+				</div>
+			</div>
+			<!--CODE EDITOR-->
+			<div id="codeEditorTab" class="hidden">
+				<div class="codeEditorOverDiv">
+					<div class="codeEditorButtons">
+						<button type="button" onclick="" class="showReport">
+						    <span>Show report</span>
+						    <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon">
+						</button>
+						<button type="button" onclick="" class="showReport">
+						    <span>Download</span>
+						    <img class="settingsmenuicon" src="img/icons/download.svg" alt="showicon">
+						</button>
+						<button type="button" onclick="" class="showReport">
+						    <span>Upload</span>
+						    <img class="settingsmenuicon" src="img/icons/upload.svg" alt="showicon">
+						</button>
+						<button type="button" onclick="" class="helpbutton">
+    						<span>Help</span>
+						    <img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
+						</button>
+					</div>
+				<div class="codeEditor" contenteditable="true">
+					<code><p>Code place holder</p></code>
+				</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		</div>
+		<div class="wrapper">
+			<table class="templateTable">
+				<tr class="row-one">
+					<th>HTML eksempel</th>
+					<th>CSS</th>
+					<th>Java Script</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML -->
+					<td class="code">
+						<div  class="editor">
+			<!--EDITOR NAVIGATION BAR-->
+			<div class="editornav">
+				<div id="templatesDiv" class="tabsnavbubtton"><a onClick="switchedit('templates'); switcheditbg('templatesDiv');">Templates</a></div>
+				<div id="graphsDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('graphs'); switcheditbg('graphsDiv');">Graphs</a></div>
+				<div id="textDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('text'); switcheditbg('textDiv');">Text</a></div>
+				<div id="codeDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('codeEditorTab'); switcheditbg('codeDiv');">Code</a></div>
+			</div>
+			<div class="editortabs">
+			<!--TEMPLATES-->
+			<div id="templates" class="">
+				<div style="width: 100%; display: grid; grid-template-columns: auto auto;">
+				<div class="graphs1">
+					<div class="graph1">
+					<a>
+					<div>
+						<div class="graphName">
+							<h3>Basic 1</h3>
+							<p class="star">
+								<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()">
+							</p>
+						</div>
+						<div class="graphImg">
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+					</div>
+					</a>
+				</div>
+				</div>
+				<div class="graphs1">
+					<div class="graph1">
+					<a>
+					<div>
+						<div class="graphName">
+							<h3>Basic 1</h3>
+							<p class="star">
+								<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+							</p>
+						</div>
+						<div class="graphImg">
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+					</div>
+					</a>
+				</div>
+				</div>
+				<div class="graphs1">
+					<div class="graph1">
+					<a>
+					<div>
+						<div class="graphName">
+							<h3>Basic 1</h3>
+							<p class="star">
+								<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+							</p>
+						</div>
+						<div class="graphImg">
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+					</div>
+					</a>
+				</div>
+				</div>
+				<div class="graphs1">
+					<div class="graph1">
+					<a>
+					<div>
+						<div class="graphName">
+							<h3>Basic 1</h3>
+							<p class="star">
+								<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+							</p>
+						</div>
+						<div class="graphImg">
+							<img class="placeholderimgchart" src="https://assets.highcharts.com/images/demo-thumbnails/highcharts/line-basic-default.png" alt="line and dot chart">
+						</div>
+					</div>
+					</a>
+				</div>
+				</div>
+				</div>
+			</div>
+			<!--GRPAHS-->
+			<div id="graphs" class="hidden">
+				<div class="graphsOverDiv">
+					<!-- Highcharts type: bar -->
+					<article class="highcart-preview">
+					    <h4>Bar</h4>
+					    <p class="star">
+					        <img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+					    </p>
+					    <div class="aspect-one-to-one">
+					        <button class="highchart-button" title="indsæt graf">
+					            <div id="highcharts-type-bar-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+					        </button>
+					    </div>
+					</article>
+					<!-- Highcharts type: column -->
+					<article class="highcart-preview">
+					    <h4>Column</h4>
+					    <p class="star">
+					        <img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+					    </p>
+					    <div class="aspect-one-to-one">
+					        <button class="highchart-button" title="indsæt graf">
+					            <div id="highcharts-type-column-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+					        </button>
+					    </div>
+					</article>
+					<!-- Highcharts type: line -->
+					<article class="highcart-preview">
+					    <h4>line</h4>
+					    <p class="star">
+					        <img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+					    </p>
+					    <div class="aspect-one-to-one">
+					        <button class="highchart-button" title="indsæt graf">
+					            <div id="highcharts-type-line-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+					        </button>
+					    </div>
+					</article>
+					<!-- Highcharts type: pie -->
+					<article class="highcart-preview">
+					    <h4>pie</h4>
+					    <p class="star">
+					        <img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+					    </p>
+					    <div class="aspect-one-to-one">
+					        <button class="highchart-button" title="indsæt graf">
+					            <div id="highcharts-type-pie-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+					        </button>
+					    </div>
+					</article>
+				</div>
+			</div>
+			<!--TEXT EDITOR-->
+			<div id="text" class="hidden">
+				<div class="textTool">
+					<label>Text tool</label>
+					<button type="type" class="textToolImgButton"><img class="settingsicon" src="img/icons/type.svg" alt="Text tool"></button>
+					<button type="button" onclick="" class="helpbutton">
+    					<span>Help</span>
+					    <img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
+					</button>
+				</div>
+				<div class="textTool">
+					<label>Text edit</label>
+					<div class="textEditDiv"><label>Size</label><button type="" onclick="" class="texteditbutton"><span>Choose..</span><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+					<div class="textEditDiv"><label>Weight</label><button type="" onclick="" class="texteditbutton"><span>Choose..</span><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+				</div>
+			</div>
+			<!--CODE EDITOR-->
+			<div id="codeEditorTab" class="hidden">
+				<div class="codeEditorOverDiv">
+					<div class="codeEditorButtons">
+						<button type="button" onclick="" class="showReport">
+						    <span>Show report</span>
+						    <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon">
+						</button>
+						<button type="button" onclick="" class="showReport">
+						    <span>Download</span>
+						    <img class="settingsmenuicon" src="img/icons/download.svg" alt="showicon">
+						</button>
+						<button type="button" onclick="" class="showReport">
+						    <span>Upload</span>
+						    <img class="settingsmenuicon" src="img/icons/upload.svg" alt="showicon">
+						</button>
+						<button type="button" onclick="" class="helpbutton">
+    						<span>Help</span>
+						    <img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
+						</button>
+					</div>
+				<div class="codeEditor" contenteditable="true">
+					<code><p>Code place holder</p></code>
+				</div>
+				</div>
+			</div>
+			</div>
+		</div>
+					</td>
+					<!--CSS -->
+					<td class="code">
+						/*Here starts CSS for editor tabs*/
+						.editor{
+							float: right;
+							width: 100%;
+							height: 100%;
+							background-color: #404040;
+						}
+						.editornav{
+							width: 100%;
+							display: grid;
+							grid-template-columns: auto auto auto auto;
+						}
+						.tabsnavbubtton{
+							display: grid;
+							margin: 0 auto;
+							width: 100%;
+							height: 50px;
+							text-align: center;
+						}
+						.tabsnavbubtton a{
+							text-decoration: none;
+							color: #fff;
+							font-size: 24px;
+							margin: auto;
+							cursor: pointer;
+						}
+						.lightbg{
+							background-color: #6F6F6F;
+						}
+						.editortabs{
+							margin: 20px 10px 0;
+							background-color: #505050;
+							width: 98%;
+						}
+						.graphsOverDiv{
+							display: grid;
+							grid-template-columns: auto auto auto;
+							width: 100%;
+						}
+						.graphs1{
+							width: 98%;
+						}
+						#codeEditorTab, #text, #graphs, #templates{
+							width: 99%;
+						}
+						.codeEditorOverDiv{
+							width: 100%;
+							margin: 0 auto;
+						}
+						.codeEditor{
+							margin: 0 auto;
+							width: 99%;
+							height: 1000px;
+							background-color: #fff;
+							display: block;
+							float: right;
+							padding: 15px;
+						}
+						.textTool{
+							width: 100%;
+							margin: 20px 0 200px 0;
+							padding: 0 20px;
+						}
+						.textTool label{
+							float: left;
+							width: 100%;
+							color: #fff;
+							font-weight: bold;
+						}
+						.textToolImgButton{
+							background-color: #303030;
+							border: none;
+							border-radius: 12px;
+							width: 40px;
+							height: 40px;
+							float: left;
+							cursor: pointer;
+						}
+						.textToolImgButton img{
+							margin: 5px;
+							width: 30px;
+							float: none;
+						}
+						.textEditDiv{
+							color: #fff;
+							margin-right: 30px;
+						}
+						.textEditDiv label{
+							margin-right: 50px;
+							width: auto;
+						}
+						.codeEditorButtons{
+							width: 80%;
+							float: right;
+							margin: 0 auto;
+							display: block;
+							padding: 5px;
+						}
+					</td>
+					<!--Java Script-->
+					<td class="code">
+						/*Disse to funktioner lader brugeren skifte mellem editor tabs*/
+						function switchedit(switcheditpage) {
+							let editpage = ["graphs", "text", "templates", "codeEditorTab"];
+							for(i = 0; i < editpage.length; i++){
+								if(switcheditpage == editpage[i]){
+									document.getElementById(editpage[i]).classList.remove("hidden");
+								}
+								else{
+									document.getElementById(editpage[i]).classList.add("hidden");
+								}
+							}
+						}
+						function switcheditbg(editbgswitch) {
+							let editbg = ["graphsDiv", "textDiv", "templatesDiv", "codeDiv"];
+							for(i = 0; i < editbg.length; i++){
+								if(editbgswitch == editbg[i]){
+									document.getElementById(editbg[i]).classList.remove("lightbg");
+								}
+								else{
+									document.getElementById(editbg[i]).classList.add("lightbg");
+								}
 							}
 						}
 					</td>

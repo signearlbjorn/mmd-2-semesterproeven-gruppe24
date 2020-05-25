@@ -2105,6 +2105,7 @@ header .wrapper, #wrapper_header_example header .wrapper {
 #styleguide section .wrapper > ul {
 	float: left;
 	width: 100%;
+	width: 100%;
 	margin-top: 5px;
 	margin-bottom: 15px;
 }
