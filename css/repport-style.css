@@ -629,7 +629,7 @@ margin-left: 7px;
 /* her starter styling for almindelige switch knapper*/
 		.switch {
 		  position: relative;
-		  margin: 20px auto;
+		  margin: auto;
 		  height: 26px;
 		  width: 120px;
 		  background: white;
@@ -1288,8 +1288,16 @@ nav a:hover{
 /*PLACERING / POSITIONER*/
 
 .sidetitelogsettingswrap {
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 3%;
+	width: 94%;
+}
+
+.topEditorHeader{
+	width: 100%;
+}
+.bottomEditorHeader{
+	width: 100%;
+	padding-top: 18px;
 }
 
 .sidetitelcontainer, .quantitycontainer  {
@@ -1334,8 +1342,8 @@ nav a:hover{
 /* Styling for SIDE TITEL OG SETTINGS BAR" FOR EDITOR SIDEN ORAGBISME */
 /*PLACERING / POSITIONER*/
 .sidetitelogsettingswrap {
-  margin-left: 15%;
-  margin-right: 15%;
+  margin-left: 3%;
+  width: 94%;
 }
 
 .sidetitelcontainer, .previouspagecontainer {
@@ -1351,43 +1359,36 @@ nav a:hover{
 }
 
 .previouspagecontainer {
-  margin-top: 80px;
-  margin-left: -190px;
+
 }
 
 .switch-multiple-singular-container {
   float: left;
-  margin-top: 60px;
-	margin-left: -60px;
+	margin-left: 20px;
 }
 
 .switch-horizontal-vertical-container{
   float: left;
-  margin-top: 60px;
 	margin-left: 20px;
 }
 
 .addpageknapcontainer {
   float: left;
-  margin-top: 80px;
 	margin-left: 10px;
 }
 
 .deletepageknapcontainer {
   float: left;
-  margin-top: 80px;
 }
 
 .uploadimageknapcontainer {
-  float: left;
-  margin-top: -5px;
-	margin-left: 100px;
+	float: left;
+	margin-left: 50px;
 }
 
 .nextpagecontainer {
-  float: left;
-  margin-top: -5px;
-	margin-left: 100px;
+	float: left;
+	margin-left: 50px;
 }
 
 .megaswitchcontainer {
