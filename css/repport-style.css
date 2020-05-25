@@ -86,6 +86,7 @@ button {
 	position: relative;
 	float: left;
 	overflow: hidden;
+	clear: both;
 	cursor: pointer;
 }
 
