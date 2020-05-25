@@ -4823,11 +4823,16 @@
 
                <!-- Choose printer knap -->
                <div class="settingpopupknap">
-                 <p class="typetext">Share as</p>
-                   <button type="" onclick="" class="typebutton">
-                     <span class="typebuttontext">PDF</span>
-                     <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                   </button>
+					<label>
+						<span class="typetext">Share as ...</span>
+						<div class="select-wrapper">
+							<select name="share-report-as" class="typebutton">
+								<option value="pdf" selected>PDF</option>
+								<option value="qr">QR-code</option>
+								<option value="link">Link</option>
+							</select>
+						</div>
+				   </label>
                </div>
                <!-- Choose printer knap - slut-->
 
@@ -4877,8 +4882,6 @@
   <!--"TABEL for pop-up -->
   <table class="overvieworganimser">
           <tr class="row-one">
-            <th>Molekyler</th>
-            <th>Organsime</th>
             <th>HTML</th>
             <th>CSS</th>
             <th>JavaScript</th>
@@ -4886,13 +4889,6 @@
         <!-- række 2 i tabel -->
         <tr class="row-two">
       <!--Molecules-->
-            <td>
-            x
-            </td>
-            <!--Organism-->
-          <td>
-            Se eksempel over tabellen
-          </td>
             <!--HTML to copy-->
           <td class="code">
           x

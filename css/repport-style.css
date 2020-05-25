@@ -348,12 +348,30 @@ h3 {
 	width: 400px;
 	border-radius: 10px;
 }
+
+select.typebutton {
+	height: 37px;
+	color: #7C7C7C;
+	font-style: italic;
+	border: solid 1px #707070;
+	padding:0 5px;
+	box-sizing: border-box;
+	cursor: pointer;
+}
+
+select.typebutton option{
+	color: #000;
+	font-style: normal;
+	cursor: pointer;
+}
+
 .typebuttontext {
 	float: left;
 	font-style: italic;
 	color: grey;
 	margin-left: 5px;
 }
+
 .chevronicon {
 	float: right;
 	margin-top: 5px;
