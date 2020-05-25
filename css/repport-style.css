@@ -918,6 +918,7 @@ margin-left: 7px;
 .graphsOverDiv{
 	display: grid;
 	grid-template-columns: auto auto auto;
+	width: 100%;
 }
 .graphs1{
 	width: 98%;
@@ -1107,6 +1108,27 @@ nav a:hover{
 /*Burger menu button CSS*/
 .burgerMenu{
 	display: block;
+	cursor: pointer;
+	float: none;
+	width: 35px;
+}
+.bar1, .bar2, .bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: #333;
+	margin: 3px 0;
+	transition: 0.4s;
+}
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .bar2 {
+	opacity: 0;
+}
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
 }
 /*Here starts CSS for NAV - Small screen*/
 .smallnav{
@@ -1151,7 +1173,7 @@ nav a:hover{
 	float: left;
 	padding: 15px;
 	text-decoration: none;
-	width: 100%;
+	width: 93%;
 }
 .smallnav a:hover{
 	background: #444;
@@ -1204,6 +1226,12 @@ nav a:hover{
 	display: block;
 	width: 14px;
 	float: right;
+}
+.hiddenNav{
+	display: none;
+}
+.burgerMenu:hover + .hiddenNav{
+	display: block;
 }
 /*Here neds CSS for NAV - Small screen*/
 /*Here ends CSS for NAV - Small screen*/
@@ -1464,9 +1492,8 @@ nav a:hover{
 
 .highcart-preview {
 	position: relative;
-	float: left;
 	margin: 0;
-	width: 33%;
+	width: 100%;
 }
 
 .highcart-preview h4 {
@@ -1476,6 +1503,7 @@ nav a:hover{
 	font-size: 112,5%;
 	line-height: 25px;
 }
+
 @media (min-width:1920px){
 	.highcart-preview h4 {
 		font-size: 20px;

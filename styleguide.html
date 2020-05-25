@@ -419,7 +419,7 @@
 			<div class="wrapper">
 				<p class="star">
 					<img alt="" src="img/icons/star.svg"
-					  style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()">
+					  style="height: 25px; width: 25px" id="imgClickAndChange-1" onclick="function(){changeImage(this.id);}">
 				</p>
 			</div>
 		</div>
@@ -432,33 +432,41 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-            <p class="star">
-    					<img alt="" src="img/icons/star.svg"
-    					  style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()">
-    				</p>
+						<p class="star">
+							<img alt="" src="img/icons/star.svg"
+							  style="height: 25px; width: 25px" id="imgClickAndChange-1" onclick="function(){changeImage(this.id);}">
+						</p>
 					</td>
 					<td class="code">
-            .star {
+						.star {
 							background-color: black;
 							width: 26px;
 						}
 					</td>
 					<td class="code">
-						<script language="javascript">
-							function changeImage() {
-								if (document.getElementById("imgClickAndChange").src == "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg")
-								{
-									document.getElementById("imgClickAndChange").src = "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg";
-								}
-								else
-								{
-									document.getElementById("imgClickAndChange").src = "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg";
-								}
+						/* PRIORITY STAR / STJERNE PRIORITERING */
+						function changeImage(elem) {
+							console.log('changeImage function active.');
+							// console.log(document.getElementById("imgClickAndChange").src.endsWith("img/icons/star.svg"));
+							elem = document.getElementById(elem);
+							//if (document.getElementById("imgClickAndChange").src =="img/icons/star.svg") // Must use endsWith method instead of == when directory layout is uncertain
+							if (elem.src.endsWith("img/icons/star.svg")) // Must use endsWith method instead of == when directory layout is uncertain
+							{
+								console.log('changeImage if true.');
+								elem.src = "img/icons/starfull.svg";
+								// Prioritize graph/template
 							}
-						</script>
+							else
+							{
+								console.log('changeImage if false.');
+								elem.src = "img/icons/star.svg";
+								// Unprioritize graph/template
+							}
+						}
 					</td>
 				</tr>
             </table>
+			<p class="info">Hver stjerne skal have et unikt id, som skal reffere til parrent.</p>
  		</div>
 	</article>
    <!-- Stjerne Prioritering - slut  -->
@@ -1517,9 +1525,11 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<a onclick="" class="uploadimagebutton">
-					<img class="burgerMenu" src="img/icons/menu.svg" alt="menu-icon">
-				</a>
+				<div class="burgerMenu" onclick="burgerMenuChange(this)">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -1531,16 +1541,186 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<a onclick="" class="uploadimagebutton">
-					<img class="burgerMenu" src="img/icons/menu.svg" alt="menu-icon">
-				</a>
+						<div class="burgerMenu" onclick="burgerMenuChange(burgerMenu)">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						</div>
 					</td>
 					<td class="code">
 						.burgerMenu{
-							display: block;
+							display: inline-block;
+							cursor: pointer;
+							float: none;
+							width: 35px;
+						}
+						
+						.bar1, .bar2, .bar3 {
+							width: 35px;
+							height: 5px;
+							background-color: #333;
+							margin: 3px 0;
+							transition: 0.4s;
+						}
+						
+						.change .bar1 {
+							-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+							transform: rotate(-45deg) translate(-9px, 6px);
+						}
+						
+						.change .bar2 {
+							opacity: 0;
+						}
+						
+						.change .bar3 {
+							-webkit-transform: rotate(45deg) translate(-8px, -8px);
+							transform: rotate(45deg) translate(-8px, -8px);
 						}
 					</td>
-					<td class="empty"></td>
+					<td class="code">
+						function burgerMenuChange(burgerMenu) {
+							burgerMenu.classList.toggle("change");
+						}
+
+					</td>
+                </tr>
+			</table>
+		</div>
+	</article>
+	<article id="burgerMenuKnapFunction">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Burger menu knap + function</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="burgerMenu" onclick="burgerMenuChange(this)">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+				<nav class="smallnav hiddenNav">
+					<div class="branddiv">
+						<!--LOGO-->
+						<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
+			            <!--MAIN NAVIGATION-->
+						<ul>
+							<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
+							<li><a>Trendboards</a></li>
+							<li><a>Reports</a></li>
+							<li><a>Views</a></li>
+							<li><a>Feeds</a></li>
+							<li><a>Settings</a></li>
+							<li><a>Shares</a></li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
+							<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
+							<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
+							<li><p class="channels">channels</p></li>
+							<li class="selection">
+								<select class="channelselect">
+									<option>channelnames</option>
+								</select></li>
+							<!--USERNAME-->
+							<li class="profiledropdown">
+								<a class="profiledropdown-a">
+									<span class="username">Profile P.</span>
+									<img class="profile-icon" src="img/icons/user.svg" alt="profile">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<div class="burgerMenu" onclick="burgerMenuChange(burgerMenu)">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						</div>
+						<nav class="smallnav hiddenNav">
+							<div class="branddiv">
+								<!--LOGO-->
+								<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
+					            <!--MAIN NAVIGATION-->
+								<ul>
+									<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
+									<li><a>Trendboards</a></li>
+									<li><a>Reports</a></li>
+									<li><a>Views</a></li>
+									<li><a>Feeds</a></li>
+									<li><a>Settings</a></li>
+									<li><a>Shares</a></li>
+								</ul>
+							</div>
+							<div>
+								<ul>
+									<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
+									<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
+									<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
+									<li><p class="channels">channels</p></li>
+									<li class="selection">
+										<select class="channelselect">
+											<option>channelnames</option>
+										</select></li>
+									<!--USERNAME-->
+									<li class="profiledropdown">
+										<a class="profiledropdown-a">
+											<span class="username">Profile P.</span>
+											<img class="profile-icon" src="img/icons/user.svg" alt="profile">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</nav>
+					</td>
+					<td class="code">
+						.burgerMenu{
+							display: inline-block;
+							cursor: pointer;
+							float: none;
+							width: 35px;
+						}
+						
+						.bar1, .bar2, .bar3 {
+							width: 35px;
+							height: 5px;
+							background-color: #333;
+							margin: 3px 0;
+							transition: 0.4s;
+						}
+						
+						.change .bar1 {
+							-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+							transform: rotate(-45deg) translate(-9px, 6px);
+						}
+						
+						.change .bar2 {
+							opacity: 0;
+						}
+						
+						.change .bar3 {
+							-webkit-transform: rotate(45deg) translate(-8px, -8px);
+							transform: rotate(45deg) translate(-8px, -8px);
+						}
+					</td>
+					<td class="code">
+						function burgerMenuChange(burgerMenu) {
+							burgerMenu.classList.toggle("change");
+						}
+
+					</td>
                 </tr>
 			</table>
 		</div>
@@ -3237,7 +3417,7 @@
 							float: left;
 							padding: 15px;
 							text-decoration: none;
-							width: 100%;
+							width: 93%;
 						}
 						.smallnav a:hover{
 							background: #444;
@@ -5136,9 +5316,8 @@
 					<td class="code">
 						.highcart-preview {
 							position: relative;
-							float: left;
 							margin: 0;
-							width: 33%;
+							width: 100%;
 						}
 
 						.highcart-preview h4 {
@@ -5225,7 +5404,7 @@
 		<div class="example">
 			<div class="wrapper">
 				<!-- Highcharts type: bar -->
-				<div id="highcharts-type-bar-element-example" style="width:100%; height:400px;"></div>
+				<div id="highcharts-type-bar-element-example" style="width:100%; height:400px;" class="highcharts highcharts-example"></div>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -5239,7 +5418,7 @@
 					<!--HTML-->
 					<td class="code">
 						<!-- Highcharts type: bar -->
-						<div id="highcharts-type-bar-element-example" style="width:100%; height:400px;"></div>
+						<div id="highcharts-type-bar-element-example" style="width:100%; height:400px;" class="highcharts highcharts-example"></div>
 					</td>
 					<!--CSS-->
 					<td class="empty"></td>
@@ -5420,7 +5599,7 @@
 		<div class="example">
 			<div class="wrapper">
 				<!-- Highcharts type: column -->
-				<div id="highcharts-type-column-element-example" style="width:100%; height:400px;"></div>
+				<div id="highcharts-type-column-element-example" style="width:100%; height:400px;" class="highcharts highcharts-example"></div>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -5434,7 +5613,7 @@
 					<!--HTML-->
 					<td class="code">
 						<!-- Highcharts type: column -->
-						<div id="highcharts-type-column-element-example" style="width:100%; height:400px;"></div>
+						<div id="highcharts-type-column-element-example" style="width:100%; height:400px;" class="highcharts highcharts-example"></div>
 					</td>
 					<!--CSS-->
 					<td class="empty"></td>
@@ -5615,7 +5794,7 @@
 		<div class="example">
 			<div class="wrapper">
 				<!-- Highcharts type: line -->
-				<div id="highcharts-type-line-element-example" style="width:100%; height:400px;"></div>
+				<div id="highcharts-type-line-element-example" style="width:100%; height:400px;" class="highcharts highcharts-example"></div>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -5629,7 +5808,7 @@
 					<!--HTML-->
 					<td class="code">
 						<!-- Highcharts type: line -->
-						<div id="highcharts-type-line-element-example" style="width:100%; height:400px;"></div>
+						<div id="highcharts-type-line-element-example" style="width:100%; height:400px;" class="highcharts highcharts-example"></div>
 					</td>
 					<!--CSS-->
 					<td class="empty"></td>
@@ -5838,7 +6017,7 @@
 		<div class="example">
 			<div class="wrapper">
 				<!-- Highcharts type: pie -->
-				<div id="highcharts-type-pie-element-example" style="width:100%; height:400px;"></div>
+				<div id="highcharts-type-pie-element-example" style="width:100%; height:400px;" class="highcharts highcharts-example"></div>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -5852,7 +6031,7 @@
 					<!--HTML-->
 					<td class="code">
 						<!-- Highcharts type: pie -->
-						<div id="highcharts-type-pie-element-example" style="width:100%; height:400px;"></div>
+						<div id="highcharts-type-pie-element-example" style="width:100%; height:400px;" class="highcharts highcharts-example"></div>
 					</td>
 					<!--CSS-->
 					<td class="empty"></td>
