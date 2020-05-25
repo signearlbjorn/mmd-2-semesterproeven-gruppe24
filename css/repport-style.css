@@ -79,6 +79,27 @@ th {
 button {
 	cursor: pointer;
 }
+/* -- SELECT --*/
+select{
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	text-overflow: '';
+
+}
+.select-wrapper {
+	position: relative;
+}
+.select-wrapper:before {
+	content: "";
+	position: absolute;
+	top: calc(50% - 10px);
+	right: 10px;
+	width: 19px;
+	height: 13px;
+	background-image: url("../img/icons/chevron-down.svg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
 
 /*Styleguide nav*/
 #atomicDesignNavigation{
@@ -385,19 +406,8 @@ h3 {
 	cursor: pointer;
 }
 
-.sort-by-label:before {
-	content: "";
-	position: absolute;
-	top: calc(50% - 10px);
-	right: 10px;
-	width: 19px;
-	height: 13px;
-	background-image: url("../img/icons/chevron-down.svg");
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
 .sort-by-span {
+	float: left;
 	height: 37px;
 	margin-right: 12px;
 	font-size: 142.85%;
@@ -420,9 +430,6 @@ h3 {
 	padding-left: 10px;
 	padding-right: 23px;
 	border-radius: 19px;
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	text-overflow: '';
 	font-size: 16px;
 	line-height: 37px;
 	color: #7C7C7C;
