@@ -496,6 +496,84 @@ h3 {
     font-size: 14px;
     margin-left: 7px;
 }
+
+/* -- DATE-RANGE --*/
+.date-range {
+	float: left;
+	width: 100%;
+	cursor: pointer;
+}
+
+.date-range-title,
+.date-range-input,
+.date-range-start-end-split {
+	font-size: 135.71%;
+	line-height: 135.71%;
+	color: #FFF;
+}
+
+.date-range-title {
+	float: left;
+	clear: both;
+}
+
+.date-range-date-wrapper {
+	float: right;
+	clear: both;
+}
+
+.date-range-input {
+	position: relative;
+	display: block;
+	float: left;
+	clear: both;
+	border: none;
+	text-decoration: underline;
+	background-color: transparent;
+	cursor: pointer;
+}
+.date-range-input:before {
+	content:"";
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 65%;
+	height: 1px;
+	background-color: #FFF;
+}
+
+.date-range-input:placeholder {
+	text-decoration: underline;
+}
+
+.date-range-start-end-split {
+	display: none;
+	float: left;
+	margin: 0 10px;
+}
+
+@media (min-width:768px){
+	.date-range-title {
+		width: 30%;
+		clear: left;
+	}
+	
+	.date-range-date-wrapper {
+		clear: right;
+	}
+	
+	.date-range-input {
+		width: auto;
+		clear: none;
+	}
+}
+
+@media (min-width:1366px){
+	.date-range-start-end-split {
+		display: inline-block;
+	}
+}
+
 /*Here starts CSS code for quantity by button*/
 .quantitydiv{
 	font-size: 15px;
