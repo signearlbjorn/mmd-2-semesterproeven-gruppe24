@@ -602,11 +602,11 @@ select.typebutton option{
 		width: 30%;
 		clear: left;
 	}
-	
+
 	.date-range-date-wrapper {
 		clear: right;
 	}
-	
+
 	.date-range-input {
 		width: auto;
 		clear: none;
@@ -1623,7 +1623,7 @@ nav a:hover{
 /*ekstra style til share as pop-up*/
 .frameforshareaspopup {
 	background-color: #222222;
-	width:450px;
+	width:440px;
   height: 600px;
 	border-radius: 5px;
 }
@@ -1667,6 +1667,42 @@ nav a:hover{
 	margin-right: 40px;
 }
 /*ekstra style til save pop-up - slut*/
+
+/*ekstra style til filter pop-up*/
+.daterangecontainer {
+	background: grey;
+	float: left;
+}
+.daterangetitelinfilterpopup {
+	font-size: 10px;
+	float: left;
+	margin-left: 10px;
+}
+.popupcancelknapfilter{
+	float: left;
+	margin left: 10px;
+	margin-top: 20px;
+}
+
+.clearallfilterknap {
+	float: left;
+	margin left: 10px;
+	margin-top: 20px;
+}
+
+.popupdoneknapfilter{
+	float: right;
+	margin-top: 20px;
+	margin right: 30px;
+}
+/*ekstra style til filter pop-up - slut*/
+
+/*ekstra style for create report pop up*/
+.frameforcreatenewreportpopup {
+	width: 420px;
+	height: 350px;
+}
+/*ekstra style for create report pop up - slut*/
 
 /* -- HIGHCHARTS -- */
 .highcharts-credits {
@@ -1741,7 +1777,6 @@ nav a:hover{
 	height: 40px;
 }
 /*ekstra style til create new report pop-up  - slut*/
-
 
 
 /* popup infobox css*/
