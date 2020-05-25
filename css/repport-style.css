@@ -896,6 +896,7 @@ margin-left: 7px;
 .graphsOverDiv{
 	display: grid;
 	grid-template-columns: auto auto auto;
+	width: 100%;
 }
 .graphs1{
 	width: 98%;
