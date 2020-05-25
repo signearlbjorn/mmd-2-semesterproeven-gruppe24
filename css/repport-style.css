@@ -444,6 +444,22 @@ h3 {
 	}
 }
 
+/*Add and delete page button CSS*/
+
+.adddelete-button{ 
+    border-radius: 15px; 
+    cursor: pointer;    
+}
+
+.plusminus-iconimg{
+    width: 100%; 
+    display: block;
+    
+}
+
+/*Add and delete page button end*/
+
+
 /*Here starts CSS code for filter by button*/
 .filterbutton{
 	background-color: #fff;
