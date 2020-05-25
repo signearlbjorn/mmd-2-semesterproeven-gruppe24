@@ -423,12 +423,25 @@ h3 {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	text-overflow: '';
+	font-size: 16px;
 	line-height: 37px;
 	color: #7C7C7C;
 	font-style: italic;
 	border-color: #6F6F6F;
 	background-color: #fff;
 	cursor: pointer;
+}
+
+@media (min-width:786px) {
+	.sort-by-select {
+		font-size: 15px;
+	}
+}
+
+@media (min-width:1920px) {
+	.sort-by-select {
+		font-size: 22px;
+	}
 }
 
 /*Here starts CSS code for filter by button*/
