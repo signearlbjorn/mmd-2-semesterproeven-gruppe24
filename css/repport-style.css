@@ -460,6 +460,28 @@ h3 {
 /*Add and delete page button end*/
 
 
+
+/*Buttons with text and icon css*/
+
+.text-icon{
+    font-size: 20px;
+    margin-top: 30px; 
+}
+
+
+.texticon-button{
+    background-color: transparent; 
+    border:none; 
+    display: inline-block; 
+}
+
+.texticon-iconimg{
+    width: 150%; 
+    margin-bottom: -12px; 
+}
+
+/*Buttons with text and icon css end*/
+
 /*Here starts CSS code for filter by button*/
 .filterbutton{
 	background-color: #fff;
