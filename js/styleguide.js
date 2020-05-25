@@ -522,3 +522,12 @@ function saveCookieTableExplainer() {
 function burgerMenuChange(burgerMenu) {
   burgerMenu.classList.toggle("change");
 }
+
+// DIABLE LINKS
+let disabledLinks = document.getElementsByClassName("disabled");
+for(let i=0; i < disabledLinks.length; i++){
+	disabledLinks[i].addEventListener("click", function(){
+		event.preventDefault();
+		return null;
+	});
+}

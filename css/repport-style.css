@@ -2329,5 +2329,10 @@ header .wrapper, #wrapper_header_example header .wrapper {
 .styleguide-title {
 	clear: both;
 }
-
+/* - STYLEGUIDE DISABLED LINKS - */
+.disabled{
+	color: #777;
+	cursor: not-allowed;
+}
 /* --- ANITIONMER --- */
+/* No animations added yet */
