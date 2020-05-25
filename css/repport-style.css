@@ -92,7 +92,7 @@ button {
 
 .select-span {
 	float: left;
-	height: 37px;
+	min-height: 37px;
 	margin-right: 12px;
 	font-size: 142.85%;
 	line-height: 37px;
@@ -108,6 +108,7 @@ button {
 
 .select {
 	display: block;
+	min-height: 37px;
 	padding-left: 10px;
 	padding-right: 28px;
 	border-radius: 19px;
@@ -378,21 +379,29 @@ h3 {
 
 /*Here starts CSS code for type button*/
 .frame {
+	float: left; /* Added float to display height right */
 	background-color: black;
-	width: 410px;
+	width: 100%;
+	/* width: 400px; *//* Did not scale with parrent */
 }
 
 .type {
+	width: calc(100% - 10px); /* 100% width -10px margin */
 	margin-left: 5px;
+	margin-right: 5px; /* Margin added */
 }
 
 .typetext {
+	float: left; /* Added float to display height right */
 	color: white;
+	font-size: 110%; /* Must be larger on smaller screens */
 }
 
 .typebutton {
-	width: 400px;
+	float: left; /* Added float to display height right */
+	width: 100%;
 	border-radius: 10px;
+	font-size: 110%; /* Must be larger on smaller screens */
 }
 
 select.typebutton {
@@ -416,12 +425,21 @@ select.typebutton option{
 	font-style: italic;
 	color: grey;
 	margin-left: 5px;
+	font-size: 110%;
 }
 
 .chevronicon {
 	float: right;
 	margin-top: 5px;
 }
+
+@media (min-width:1366){
+	.typetext, .typebutton, .typebuttontext {
+		font-size: 100%;
+	}
+}
+
+
 /* save-to-select */
 .save-to-select {
 	display: block;
@@ -441,6 +459,7 @@ select.typebutton option{
 	display: grid;
 	grid-template-columns: auto auto;
 	align-content: center;
+	overflow: hidden;
 }
 .newreportspan{
 	font-size: 18px;
@@ -676,6 +695,7 @@ select.typebutton option{
 }
 /*Here starts code for upload image in editor*/
 .uploadimagebutton{
+	min-height: 37px; /* Too small on small screens */
 	background-color: #fff;
 	border: none;
 	border-radius: 12px;
@@ -689,6 +709,7 @@ select.typebutton option{
 }
 /*Here starts code for uplad template button*/
 .upladtemplatebutton{
+	min-height: 37px; /* Too small on mobile and tablet */
 	background-color: #D3D3D3;
 	border: none;
 	border-radius: 12px;
@@ -707,6 +728,7 @@ select.typebutton option{
 }
 /*Here starts code for help button*/
 .helpbutton{
+	min-height: 37px; /* Too small on small screens */
 	background-color: #D3D3D3;
 	border: none;
 	border-radius: 12px;
@@ -2228,6 +2250,7 @@ header .wrapper {
 
 .example:before {
 	content:"Eksempel:";
+	display: none;
 	position: absolute;
 	top: -25px;
 	left: 20px;
@@ -2236,7 +2259,13 @@ header .wrapper {
 	font-style: italic;
 }
 
-@media (min-width:1920px){
+@media (min-width:768px) {
+	.example:before {
+		display: inline-block;
+	}
+}
+
+@media (min-width:1920px) {
 	.example:before {
 		top: -2vw;
 		line-height: 2vw;
