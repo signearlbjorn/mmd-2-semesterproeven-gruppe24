@@ -110,7 +110,9 @@ Highcharts.setOptions({
     }
 });
 
+//window.onload.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
+	// console.log('hej')
 	// #highcharts-type-bar-preview-example
 	var typeBarPreviewExample = Highcharts.chart('highcharts-type-bar-preview-example', {
 		chart: {
@@ -167,9 +169,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			// 5 of caregoy 3
 		}]
 	});
-	
+	// console.log('med')
 	// #highcharts-type-bar-element-example
-	var typeBarElementExample = Highcharts.chart('highcharts-type-bar-element-example', {
+	var typeBarElementExample = new Highcharts.chart('highcharts-type-bar-element-example', {
 		chart: {
 			type: 'bar',
 		},
@@ -201,9 +203,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			// 5 of caregoy 3
 		}]
 	});
+	// console.log('dig')
 	
 	// #highcharts-type-column-element-preview	
-	var typeColumnPreviewExample = Highcharts.chart('highcharts-type-column-preview-example', {
+	var typeColumnPreviewExample = new Highcharts.chart('highcharts-type-column-preview-example', {
 		chart: {
 			type: 'column',
 			animation: false,
@@ -258,9 +261,10 @@ document.addEventListener('DOMContentLoaded', function () {
 			// 5 of caregoy 3
 		}]
 	});
+	// console.log('min')
 	
 	// #highcharts-type-column-element-example
-	var typeColumnElementExample = Highcharts.chart('highcharts-type-column-element-example', {
+	var typeColumnElementExample = new Highcharts.chart('highcharts-type-column-element-example', {
 		chart: {
 			type: 'column',
 		},
@@ -292,9 +296,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			// 5 of caregoy 3
 		}]
 	});
-	
+	// console.log('ven')
 	// #highcharts-type-line-element-preview	
-	var typelinePreviewExample = Highcharts.chart('highcharts-type-line-preview-example', {
+	var typelinePreviewExample = new Highcharts.chart('highcharts-type-line-preview-example', {
 		chart: {
 			type: 'line',
 			animation: false,
@@ -349,9 +353,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			// 5 of caregoy 3
 		}]
 	});
-	
+	// console.log('finder du')
 	// #highcharts-type-line-element-example
-	var typelineElementExample = Highcharts.chart('highcharts-type-line-element-example', {
+	var typelineElementExample = new Highcharts.chart('highcharts-type-line-element-example', {
 		chart: {
 			type: 'line',
 		},
@@ -383,9 +387,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			// 5 of caregoy 3
 		}]
 	});
-	
+	// console.log('fejl')
 	// #highcharts-type-pie-element-preview	
-	var typepiePreviewExample = Highcharts.chart('highcharts-type-pie-preview-example', {
+	var typepiePreviewExample = new Highcharts.chart('highcharts-type-pie-preview-example', {
 		chart: {
 			type: 'pie',
 			animation: false,
@@ -447,9 +451,9 @@ document.addEventListener('DOMContentLoaded', function () {
 			}]
 		}]
 	});
-	
+	// console.log('igen?')
 	// #highcharts-type-pie-element-example
-	var typepieElementExample = Highcharts.chart('highcharts-type-pie-element-example', {
+	var typepieElementExample = new Highcharts.chart('highcharts-type-pie-element-example', {
 		chart: {
 			type: 'pie',
 		},
