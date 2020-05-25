@@ -50,18 +50,122 @@
 	</nav>
 	<header class="editorHeader">
 		<!--TITLE-->
-		<h1>REPORT EDITOR</h1>
-		<div class="switch">
-			<input type="radio" class="switch-input" name="view3" value="week3" id="indsæt1" checked="" onClick="switchpagepreview(pageVertical)">
-			<label for="indsæt1" class="switch-label switch-label-off">Vertical</label>
-			<input type="radio" class="switch-input" name="view3" id="indsæt2" onClick="switchpagepreview(pageHorizontal)">
-			<label for="indsæt2" class="switch-label switch-label-on">Horizontal</label>
+		<div class="frameforsidetitelogsettingsbar">
+
+			<div class="sidetitelogsettingswrap">
+			
+			<!-- side titel -->
+			<div class="sidetitelcontainer">
+			<h1>Report editor</h1>
+			</div>
+			<!-- side titel - slut-->
+			
+			<!-- Close editor -->
+			<div class="closecontainer">
+			<h1>Close editor</h1>
+			</div>
+			<!-- Close editor - slut-->
+			
+			<!-- slet rapport -->
+			<div class="deletecontainer">
+			<h1>Delete report</h1>
+			</div>
+			<!-- slet rapport - slut-->
+			
+			<!-- gem rapport -->
+			<div class="savecontainer">
+			<h1>Save report</h1>
+			</div>
+			<!-- gem rapport - slut-->
+			
+			<!-- previous page -->
+			<div class="previouspagecontainer">
+			<button type="button" onclick="" class="previousbutton">
+			<span>Previous page</span>
+			<img class="settingsmenuicon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
+			</button>
+			
+			</div>
+			<!-- previous page - slut-->
+			
+			<!-- switch knap multiple/singular-->
+			<div class="switch-multiple-singular-container">
+			<div class="switch">
+			<input type="radio" class="switch-input" name="view3" value="week3" id="multiple" checked="">
+			<label for="multiple" class="switch-label switch-label-off">Multiple</label>
+			<input type="radio" class="switch-input" name="view3" id="singular">
+			<label for="singular" class="switch-label switch-label-on">Vertical</label>
 			<span class="switch-selection"></span>
-		</div>
-		<!--CLOSE &AMP SAVE FUNKCION-->
-		<div style="float: right;">
-			<a>Close &amp; Save</a>
-		</div>
+			</div>
+			</div>
+			<!-- switch knap multiple/singular - slut-->
+			
+			<!-- switch knap horizontal/vertical -->
+			<div class="switch-horizontal-vertical-container">
+			<div class="switch">
+			<input type="radio" class="switch-input" name="view3" value="week3" id="horizontal" checked="">
+			<label for="horizontal" class="switch-label switch-label-off">Horizontal</label>
+			<input type="radio" class="switch-input" name="view3" id="singular">
+			<label for="vertical" class="switch-label switch-label-on">Vertical</label>
+			<span class="switch-selection"></span>
+			</div>
+			</div>
+			<!-- switch knap horizontal/vertical - slut-->
+			
+			<!-- add page knap -->
+			<div class="addpageknapcontainer">
+			
+			</div>
+			<!-- add page knap - slut-->
+			
+			<!-- delete page knap -->
+			<div class="deletepageknapcontainer">
+			
+			</div>
+			<!-- delete page knap - slut-->
+			
+			<!-- Upload image knap -->
+			<div class="uploadimageknapcontainer">
+			<button type="button" onclick="" class="uploadimagebutton">
+			<span>Upload image</span>
+			<img class="settingsmenuicon" src="img/icons/image.svg" alt="arrowright-icon">
+			</button>
+			</div>
+			<!-- Upload image knap - slut-->
+			
+			<!-- next page -->
+			<div class="nextpagecontainer">
+			<button type="button" onclick="" class="nextbutton">
+			<span>Next page</span>
+			<img class="settingsmenuicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
+			</button>
+			
+			</div>
+			<!-- next page - slut-->
+			
+			<!-- MEGA SWITCH -->
+			<div class="megaswitchcontainer">
+			<div class="megaswitch">
+			<input type="radio" class="switch-input0" name="view4" id="a1" checked="">
+			<label for="a1" class="switch-label0 switch-label-off0">A1</label>
+			
+			<input type="radio" class="switch-input0" name="view4" id="a2">
+			<label for="a2" class="switch-label0 switch-label-on1">A2</label>
+			
+			<input type="radio" class="switch-input0" name="view4" id="a3">
+			<label for="a3" class="switch-label0 switch-label-on2">A3</label>
+			
+			<input type="radio" class="switch-input0" name="view4" id="a4">
+			<label for="a4" class="switch-label0 switch-label-on3">A4</label>
+			
+			<span class="switch-selection0"></span>
+			</div>
+			</div>
+			<!-- MEGA SWITCH - slut-->
+			
+			</div>
+			
+			</div>
 	</header>
 	<main class="mainEditor" style="width: 100%;">
 		<!--REPORT PAGE PREVIEW-->
@@ -190,7 +294,7 @@
 					<article class="highcart-preview">
 						<h4>Column</h4>
 						<p class="star">
-							<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()">
+							<img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
 						</p>
 						<div class="aspect-one-to-one">
 							<button class="highchart-button" title="indsæt graf">
@@ -207,6 +311,18 @@
 					    <div class="aspect-one-to-one">
 					        <button class="highchart-button" title="indsæt graf">
 					            <div id="highcharts-type-line-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+					        </button>
+					    </div>
+					</article>
+					<!-- Highcharts type: pie -->
+					<article class="highcart-preview">
+					    <h4>pie</h4>
+					    <p class="star">
+					        <img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="" onclick="changeImage()">
+					    </p>
+					    <div class="aspect-one-to-one">
+					        <button class="highchart-button" title="indsæt graf">
+					            <div id="highcharts-type-pie-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
 					        </button>
 					    </div>
 					</article>
@@ -258,7 +374,7 @@
 		</div>
 	</main>
 	<script src="js/editor-tabs-switcher.js"></script>
-	<script src="js/styleguide.js" defer></script>
+	<script src="js/editor-highcharts.js" defer></script>
 </body>
 </html>
 
