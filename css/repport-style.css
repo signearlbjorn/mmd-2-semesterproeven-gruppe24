@@ -1316,7 +1316,7 @@ nav a:hover{
 
 .switch-preview-list-container {
   float: left;
-  margin-top: 65px;
+  margin-top: 75px;
 	margin-left: -100px;
 }
 
@@ -1334,8 +1334,14 @@ nav a:hover{
 
 .sortbycontainer {
   float: left;
-  margin-top: 15px;
+  margin-top: 75px;
 	margin-left: 25px;
+}
+
+.searchcontainer {
+	float: right;
+	margin-top: 40px;
+	margin-right: -50px;
 }
 /* Styling for SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN ORAGBISME - SLUT */
 
