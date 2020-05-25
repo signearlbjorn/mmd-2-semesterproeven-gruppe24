@@ -531,3 +531,31 @@ for(let i=0; i < disabledLinks.length; i++){
 		return null;
 	});
 }
+
+// WINDOW SIZES
+let previewPage = document.getElementById("preview-page");
+previewPage.addEventListener("change", function(){openWidowSize(previewPage)});
+
+function openWidowSize(elem) {
+	//console.log(elem);
+	switch(elem.value) {
+		case "mobile":
+			window.open("styleguide.html","","width=414, height=736, resizable=false, status=false, location = false");
+			return true
+			break;
+		case "tablet":
+			window.open("styleguide.html","","width=768, height=1024, resizable=false, status=false, location = false");
+			return true
+			break;
+		case "desktop":
+			window.open("styleguide.html","","width=1366, height=768, resizable=false, status=false, location = false");
+			return true
+			break;
+		case "tv":
+			window.open("styleguide.html","","width=3840, height=2160, resizable=false, status=false, location = false");
+			return true
+			break;
+		default:
+			return false
+	}
+} 
