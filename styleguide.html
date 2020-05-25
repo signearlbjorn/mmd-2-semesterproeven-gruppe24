@@ -3254,6 +3254,246 @@
 </div>
 </article>
 <!-- molekyle tabel for 'message' - slut -->
+	<article id="quantity">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Quanitity select</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<label class="select-label">
+					<span class="select-span">Quantity</span>
+					<div class="select-wrapper">
+						<select name="reports-shown" class="select">
+							<option value="8" selected="">8</option>
+							<option value="16">16</option>
+							<option value="24">24</option>
+							<option value="32">32</option>
+							<option value="40">40</option>
+							<option value="80">80</option>
+						</select>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML-->
+					<td class="code">
+						<label class="select-label">
+							<span class="select-span">Quantity</span>
+							<div class="select-wrapper">
+								<select name="reports-shown" class="select">
+									<option value="8" selected="">8</option>
+									<option value="16">16</option>
+									<option value="24">24</option>
+									<option value="32">32</option>
+									<option value="40">40</option>
+									<option value="80">80</option>
+								</select>
+							</div>
+						</label>
+					</td>
+					<!--CSS-->
+					<td class="code">
+						/* -- SELECT --*/
+						.select-label {
+							position: relative;
+							float: left;
+							overflow: hidden;
+							cursor: pointer;
+						}
+
+						.select-span {
+							float: left;
+							height: 37px;
+							margin-right: 12px;
+							font-size: 142.85%;
+							line-height: 37px;
+							color: #000;
+						}
+
+						@media (min-width:3200px) {
+							.select-span {
+								font-size: 32px;
+								line-height: 37px;
+							}
+						}
+
+						.select {
+							display: block;
+							padding-left: 10px;
+							padding-right: 28px;
+							border-radius: 19px;
+							font-size: 16px;
+							color: #7C7C7C;
+							font-style: italic;
+							-webkit-appearance: none;
+							-moz-appearance: none;
+							text-overflow: '';
+							border-color: #6F6F6F;
+							background-color: #fff;
+							cursor: pointer;
+						}
+
+						.select option{
+							font-style: normal;
+						}
+
+						@media (min-width:786px) {
+							.select {
+								font-size: 100%;
+							}
+						}
+
+						.select-wrapper {
+							position: relative;
+						}
+
+						.select-wrapper:before {
+							content: "";
+							position: absolute;
+							top: calc(50% - 10px);
+							right: 10px;
+							width: 19px;
+							height: 13px;
+							background-image: url("../img/icons/chevron-down.svg");
+							background-repeat: no-repeat;
+							background-size: cover;
+						}
+					</td>
+					<!--JavaScript-->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<article id="save-to">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Save to select</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<label class="select-label save-to-select">
+					<span class="select-span">Save to</span>
+					<div class="select-wrapper">
+						<select name="save-to-location" class="select">
+							<option value="overview" selected="">Overview</option>
+							<option value="2020">2020</option>
+							<option value="for-seo">for CEO</option>
+							<option value="production">production</option>
+						</select>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML-->
+					<td class="code">
+						<label class="select-label save-to-select">
+							<span class="select-span">Save to</span>
+							<div class="select-wrapper">
+								<select name="save-to-location" class="select">
+									<option value="overview" selected="">Overview</option>
+									<option value="2020">2020</option>
+									<option value="for-seo">for CEO</option>
+									<option value="production">production</option>
+								</select>
+							</div>
+						</label>
+					</td>
+					<!--CSS-->
+					<td class="code">
+						/* save-to-select */
+						.save-to-select {
+							display: block;
+							float: left;
+						}
+						
+						/* -- SELECT --*/
+						.select-label {
+							position: relative;
+							float: left;
+							overflow: hidden;
+							cursor: pointer;
+						}
+
+						.select-span {
+							float: left;
+							height: 37px;
+							margin-right: 12px;
+							font-size: 142.85%;
+							line-height: 37px;
+							color: #000;
+						}
+
+						@media (min-width:3200px) {
+							.select-span {
+								font-size: 32px;
+								line-height: 37px;
+							}
+						}
+
+						.select {
+							display: block;
+							padding-left: 10px;
+							padding-right: 28px;
+							border-radius: 19px;
+							font-size: 16px;
+							color: #7C7C7C;
+							font-style: italic;
+							-webkit-appearance: none;
+							-moz-appearance: none;
+							text-overflow: '';
+							border-color: #6F6F6F;
+							background-color: #fff;
+							cursor: pointer;
+						}
+
+						.select option{
+							font-style: normal;
+						}
+
+						@media (min-width:786px) {
+							.select {
+								font-size: 100%;
+							}
+						}
+
+						.select-wrapper {
+							position: relative;
+						}
+
+						.select-wrapper:before {
+							content: "";
+							position: absolute;
+							top: calc(50% - 10px);
+							right: 10px;
+							width: 19px;
+							height: 13px;
+							background-image: url("../img/icons/chevron-down.svg");
+							background-repeat: no-repeat;
+							background-size: cover;
+						}
+					</td>
+					<!--JavaScript-->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
 
 	<!-- molekyle tabel for 'Raport display' - slut -->
 </section>
@@ -7397,7 +7637,6 @@
 			</table>
 		</div>
 </article>
-
 <!-- lukke section for organimser-->
 </section>
 <!-- SEKTION 3 - ORGANISMER FOR LØSNING - SLUT -->

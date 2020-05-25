@@ -422,7 +422,15 @@ select.typebutton option{
 	float: right;
 	margin-top: 5px;
 }
-
+/* save-to-select */
+.save-to-select {
+	display: block;
+	float: left;
+}
+.save-to-select .select-span,
+.save-to-select .select-wrapper {
+	clear: both;
+}
 /*Here starts code for 'new report button'*/
 .newreportbutton{
 	border: none;
