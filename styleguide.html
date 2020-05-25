@@ -986,6 +986,117 @@
 			</table>
 		</div>
 	</article>
+	<article id="sort">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Sort</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<label class="sort-by-label">
+					<span class="sort-by-span">Sort by</span>
+					<select name="sort-reports" class="sort-by-select">
+						<option value="name-az" selected>name a-z</option>
+						<option value="name-za">name z-a</option>
+						<option value="creation-first">latest creation</option>
+						<option value="creation-last">last creation</option>
+						<option value="change-first">latest change</option>
+						<option value="change-last">last change</option>
+						<option value="id-acending">acending ID</option>
+						<option value="id-decending">decending ID </option>
+						<option value="group-az">group a-z</option>
+						<option value="group-za">group z-a</option>
+					</select>
+				</label>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML-->
+					<td class="code">
+						<label class="sort-by-label">
+							<span class="sort-by-span">Sort by</span>
+							<select name="sort-reports" class="sort-by-select">
+								<option value="name-az" selected>name a-z</option>
+								<option value="name-za">name z-a</option>
+								<option value="creation-first">latest creation</option>
+								<option value="creation-last">last creation</option>
+								<option value="change-first">latest change</option>
+								<option value="change-last">last change</option>
+								<option value="id-acending">acending ID</option>
+								<option value="id-decending">decending ID </option>
+								<option value="group-az">group a-z</option>
+								<option value="group-za">group z-a</option>
+							</select>
+						</label>
+					</td>
+					<!--CSS-->
+					<td class="code">
+						.sort-by-label {
+							position: relative;
+							float: left;
+							overflow: hidden;
+							cursor: pointer;
+						}
+
+						.sort-by-label:before {
+							content: "";
+							position: absolute;
+							top: calc(50% - 10px);
+							right: 10px;
+							width: 19px;
+							height: 13px;
+							background-image: url("../img/icons/chevron-down.svg");
+							background-repeat: no-repeat;
+							background-size: cover;
+						}
+
+						.sort-by-span {
+							height: 37px;
+							margin-right: 12px;
+							font-size: 142.85%;
+							line-height: 37px;
+							color: #000;
+						}
+
+						@media (min-width:3200px) {
+							.sort-by-span {
+								font-size: 32px;
+								line-height: 37px;
+							}
+						}
+
+						.sort-by-select {
+							display: block;
+							float: right;
+							width: 205px;
+							height: 37px;
+							padding-left: 10px;
+							padding-right: 23px;
+							border-radius: 19px;
+							-webkit-appearance: none;
+							-moz-appearance: none;
+							text-overflow: '';
+							line-height: 37px;
+							color: #7C7C7C;
+							font-style: italic;
+							border-color: #6F6F6F;
+							background-color: #fff;
+							cursor: pointer;
+						}
+					</td>
+					</td>
+					<!--JavaScript-->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
 	<article id="filter-knap">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Filter knap</h4>
@@ -5867,3 +5978,4 @@
 </section>
 </body>
 </html>
+
