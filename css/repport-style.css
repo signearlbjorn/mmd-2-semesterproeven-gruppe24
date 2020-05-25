@@ -1405,9 +1405,14 @@ nav a:hover{
 	border-radius: 5px;
 }
 
-.x {
+.x1 {
 	float: right;
-	margin-right: 50px;
+	margin-right: -110px;
+}
+
+.x2{
+	float: right;
+	margin-right: -170px;
 }
 
 .uploadtemplate {
