@@ -514,3 +514,7 @@ function saveCookieTableExplainer() {
     document.cookie = "tableExplainer" + "=" + 1 + ";" + cookieExpire + ";path=/";
     console.log('Cookie - tableExplainer - is saved.')
 }
+/*Js for burgermenu change*/
+function burgerMenuChange(burgerMenu) {
+  burgerMenu.classList.toggle("change");
+}

@@ -1319,6 +1319,69 @@
 			</table>
 		</div>
 	</article>
+    
+    <article id="adddelete-knap">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Add and delete page buttons</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+                
+                
+				 <button type="button" class="adddelete-button">
+                    <img class="plusminus-iconimg" src="img/icons/plus.svg" alt="plus icon">
+                </button>
+    
+    
+                <button type="button" class="adddelete-button">
+                    <img class="plusminus-iconimg" src="img/icons/minus.svg" alt="plus icon">
+                </button>
+                
+                
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+				    <button type="button" class="adddelete-button">
+                        <img class="plusminus-iconimg" src="img/icons/plus.svg" alt="plus icon">
+                    </button>
+    
+    
+                    <button type="button" class="adddelete-button">
+                        <img class="plusminus-iconimg" src="img/icons/minus.svg" alt="plus icon">
+                    </button>
+					</td>
+					<td class="code">
+			
+                    .adddelete-button{ 
+                        border-radius: 15px; 
+                        cursor: pointer;    
+                    }
+
+                    .plusminus-iconimg{
+                        width: 100%; 
+                        display: block;
+
+                    }
+					</td>
+					<td class="empty"></td>
+                </tr>
+			</table>
+		</div>
+	</article>
+    
+    
+    
+    
+    
+    
 	<article id="upload-image">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Upload image</h4>
@@ -1370,9 +1433,11 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<a onclick="" class="uploadimagebutton">
-					<img class="burgerMenu" src="img/icons/menu.svg" alt="menu-icon">
-				</a>
+				<div class="burgerMenu" onclick="burgerMenuChange(this)">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -1384,16 +1449,186 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<a onclick="" class="uploadimagebutton">
-					<img class="burgerMenu" src="img/icons/menu.svg" alt="menu-icon">
-				</a>
+						<div class="burgerMenu" onclick="burgerMenuChange(burgerMenu)">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						</div>
 					</td>
 					<td class="code">
 						.burgerMenu{
-							display: block;
+							display: inline-block;
+							cursor: pointer;
+							float: none;
+							width: 35px;
+						}
+						
+						.bar1, .bar2, .bar3 {
+							width: 35px;
+							height: 5px;
+							background-color: #333;
+							margin: 3px 0;
+							transition: 0.4s;
+						}
+						
+						.change .bar1 {
+							-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+							transform: rotate(-45deg) translate(-9px, 6px);
+						}
+						
+						.change .bar2 {
+							opacity: 0;
+						}
+						
+						.change .bar3 {
+							-webkit-transform: rotate(45deg) translate(-8px, -8px);
+							transform: rotate(45deg) translate(-8px, -8px);
 						}
 					</td>
-					<td class="empty"></td>
+					<td class="code">
+						function burgerMenuChange(burgerMenu) {
+							burgerMenu.classList.toggle("change");
+						}
+
+					</td>
+                </tr>
+			</table>
+		</div>
+	</article>
+	<article id="burgerMenuKnapFunction">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Burger menu knap + function</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="burgerMenu" onclick="burgerMenuChange(this)">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+				<nav class="smallnav hiddenNav">
+					<div class="branddiv">
+						<!--LOGO-->
+						<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
+			            <!--MAIN NAVIGATION-->
+						<ul>
+							<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
+							<li><a>Trendboards</a></li>
+							<li><a>Reports</a></li>
+							<li><a>Views</a></li>
+							<li><a>Feeds</a></li>
+							<li><a>Settings</a></li>
+							<li><a>Shares</a></li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
+							<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
+							<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
+							<li><p class="channels">channels</p></li>
+							<li class="selection">
+								<select class="channelselect">
+									<option>channelnames</option>
+								</select></li>
+							<!--USERNAME-->
+							<li class="profiledropdown">
+								<a class="profiledropdown-a">
+									<span class="username">Profile P.</span>
+									<img class="profile-icon" src="img/icons/user.svg" alt="profile">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<div class="burgerMenu" onclick="burgerMenuChange(burgerMenu)">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						</div>
+						<nav class="smallnav hiddenNav">
+							<div class="branddiv">
+								<!--LOGO-->
+								<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
+					            <!--MAIN NAVIGATION-->
+								<ul>
+									<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
+									<li><a>Trendboards</a></li>
+									<li><a>Reports</a></li>
+									<li><a>Views</a></li>
+									<li><a>Feeds</a></li>
+									<li><a>Settings</a></li>
+									<li><a>Shares</a></li>
+								</ul>
+							</div>
+							<div>
+								<ul>
+									<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
+									<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
+									<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
+									<li><p class="channels">channels</p></li>
+									<li class="selection">
+										<select class="channelselect">
+											<option>channelnames</option>
+										</select></li>
+									<!--USERNAME-->
+									<li class="profiledropdown">
+										<a class="profiledropdown-a">
+											<span class="username">Profile P.</span>
+											<img class="profile-icon" src="img/icons/user.svg" alt="profile">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</nav>
+					</td>
+					<td class="code">
+						.burgerMenu{
+							display: inline-block;
+							cursor: pointer;
+							float: none;
+							width: 35px;
+						}
+						
+						.bar1, .bar2, .bar3 {
+							width: 35px;
+							height: 5px;
+							background-color: #333;
+							margin: 3px 0;
+							transition: 0.4s;
+						}
+						
+						.change .bar1 {
+							-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+							transform: rotate(-45deg) translate(-9px, 6px);
+						}
+						
+						.change .bar2 {
+							opacity: 0;
+						}
+						
+						.change .bar3 {
+							-webkit-transform: rotate(45deg) translate(-8px, -8px);
+							transform: rotate(45deg) translate(-8px, -8px);
+						}
+					</td>
+					<td class="code">
+						function burgerMenuChange(burgerMenu) {
+							burgerMenu.classList.toggle("change");
+						}
+
+					</td>
                 </tr>
 			</table>
 		</div>
@@ -3090,7 +3325,7 @@
 							float: left;
 							padding: 15px;
 							text-decoration: none;
-							width: 100%;
+							width: 93%;
 						}
 						.smallnav a:hover{
 							background: #444;
@@ -5753,6 +5988,493 @@
 			</table>
 		</div>
 	</article>
+        
+        
+        
+        
+	<article id="highcharts-type-pie-element">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Popup infobox</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+                
+				<div class="popupinfobox">
+                    <button type="button" class="close-icon">
+                    <img class="X-icon" src="img/icons/x.svg" alt="Close-X">
+                    </button> 
+                        <span>Placeholder text</span>   
+                </div>
+                
+                
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML-->
+					<td class="code">
+						<div class="popupinfobox">
+                    <button type="button" class="close-icon">
+                    <img class="X-icon" src="img/icons/x.svg" alt="close-X">
+                    </button> 
+                        <span>Placeholder text</span>   
+                        </div>
+					</td>
+					<!--CSS-->
+					<td class="code">
+                    .popupinfobox{
+                        background-color: #D3D3D3;
+                        text-align: center;
+                        width: 400px;
+                        height: 220px;
+                        border-radius: 12px;
+                        margin-top: 10px; 
+                    }
+
+                    .popupinfobox span {
+                        color: black;
+                        font-size: 30px;
+                        display:inline-block; 
+                        margin-top: 65px; 
+                    }
+
+
+                    .close-icon{
+                        background-color: transparent; 
+                        border: none; 
+                        cursor: pointer;
+                        display: grid; 
+     
+                    }
+
+                    .X-icon{
+                        margin-left: 365px; 
+                        margin-top: 2px; 
+                    }
+                    </td>
+					<!--JavaScript-->
+					<td class="code">
+						
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
+        
+        
+        
+<article id="highcharts-type-pie-element">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Report preview</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+                
+				<div class="preview-outbox">
+                    <span class="rep-name">Report name</span>
+                    <button type="button" class="gear-icon">
+                    <img class="gear-iconimg" src="img/icons/tandhjul.svg" alt="gear">
+                    </button>   
+                    <div class="preview-inbox">
+                    <img class="preview-img" src="img/previewreport.png">
+                    </div>
+                </div>
+                
+                
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML-->
+					<td class="code">
+				<div class="preview-outbox">
+                    <span class="rep-name">Report name</span>
+                    <button type="button" class="gear-icon">
+                    <img class="gear-iconimg" src="img/icons/tandhjul.svg" alt="gear">
+                    </button>   
+                    <div class="preview-inbox">
+                    <img class="preview-img" src="img/previewreport.png">
+                    </div>
+                </div>
+					</td>
+					<!--CSS-->
+					<td class="code">
+                    .preview-outbox{
+                        background-color: #404040;
+                        width: 300px;
+                        height: 342px;
+                        border-radius: 8px;
+                        margin-top: 10px; 
+                        }
+
+
+                    .rep-name{
+                        color: white;
+                        font-size: 20px;
+                        display: inline-block; 
+                        margin-top: 40px; 
+                        margin-left: 18px;   
+                    }
+
+
+                    .gear-icon{
+                        background-color: transparent; 
+                        border: none; 
+                        cursor: pointer;    
+                    }
+
+                    .gear-iconimg{
+                        width: 9%; 
+                        margin-left: 250px;
+                        display: block;
+                        margin-top: -24px; 
+                        margin-bottom: 12
+                    }
+
+
+                    .preview-inbox{
+                        background-color: #6F6F6F; 
+                        width: 276px;
+                        height: 250px;
+                        border-radius: 6px;
+                        display: inline-block; 
+                        margin-left: 12px; 
+                        margin-right: 12px;
+                        margin-bottom: 12px; 
+                        margin-top: 0px; 
+                    }
+
+                    .preview-img{
+                        width: 90%;
+                        display: inline-block; 
+                        margin-top: 29px; 
+                        margin-bottom: 29px; 
+                        margin-left: 14px; 
+                        margin-right: 14px; 
+                    }
+                    </td>
+					<!--JavaScript-->
+					<td class="code">
+						
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
+        
+        
+        <article id="highcharts-type-pie-element">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Template preview</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+                
+				<div class="preview-outbox">
+                    <span class="temp-name">Template name</span>
+                     <button type="button" class="favstar-icon">
+                    <img class="favstar-iconimg" src="img/icons/starfull.svg" alt="Filled star">
+                    </button>   
+                    <div class="preview-inbox">
+                    <img class="preview-img" src="img/temppic.png">
+                    </div>
+                </div>
+                
+                
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML-->
+					<td class="code">
+                       
+                <div class="preview-outbox">
+                    <span class="temp-name">Template name</span>
+                     <button type="button" class="favstar-icon">
+                    <img class="favstar-iconimg" src="img/icons/starfull.svg" alt="Filled star">
+                    </button>   
+                    <div class="preview-inbox">
+                    <img class="preview-img" src="img/temppic.png">
+                    </div>
+                </div>
+				
+					</td>
+					<!--CSS-->
+					<td class="code">
+                    .preview-outbox{
+                        background-color: #404040;
+                        width: 300px;
+                        height: 342px;
+                        border-radius: 8px;
+                        margin-top: 10px; 
+                        }
+
+
+                    .preview-inbox{
+                        background-color: #6F6F6F; 
+                        width: 276px;
+                        height: 250px;
+                        border-radius: 6px;
+                        display: inline-block; 
+                        margin-left: 12px; 
+                        margin-right: 12px;
+                        margin-bottom: 12px; 
+                        margin-top: 0px; 
+                    }
+
+                    .preview-img{
+                        width: 90%;
+                        display: inline-block; 
+                        margin-top: 29px; 
+                        margin-bottom: 29px; 
+                        margin-left: 14px; 
+                        margin-right: 14px; 
+                    }
+                        
+                    .temp-name{
+                        color: white;
+                        font-size: 20px;
+                        display: inline-block; 
+                        margin-top: 40px; 
+                        margin-left: 18px;   
+                    }
+
+                    .favstar-icon{
+                        background-color: transparent; 
+                        border: none; 
+                        cursor: pointer;    
+                    }
+
+                    .favstar-iconimg{
+                        width: 9%; 
+                        margin-left: 250px;
+                        display: block;
+                        margin-top: -24px; 
+                        margin-bottom: 12px;
+                    }
+                        
+                        
+                    </td>
+					<!--JavaScript-->
+					<td class="code">
+						
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
+        
+<article id="highcharts-type-pie-element">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Graph preview</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+                
+			<div class="preview-outbox">
+                <span class="graph-name">Graph name</span>
+                 <button type="button" class="favstar-icon">
+                <img class="favstar-iconimg" src="img/icons/starfull.svg" alt="Filled star">
+                </button>   
+                <div class="preview-inbox">
+                <img class="graph-img" src="img/graphpic.png">
+                </div>
+            </div>
+                
+                
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML-->
+					<td class="code">
+                       
+            	<div class="preview-outbox">
+                    <span class="graph-name">Graph name</span>
+                     <button type="button" class="favstar-icon">
+                    <img class="favstar-iconimg" src="img/icons/starfull.svg" alt="Filled star">
+                    </button>   
+                    <div class="preview-inbox">
+                    <img class="graph-img" src="img/graphpic.png">
+                    </div>
+                </div>
+				
+					</td>
+					<!--CSS-->
+					<td class="code">
+                    .preview-outbox{
+                        background-color: #404040;
+                        width: 300px;
+                        height: 342px;
+                        border-radius: 8px;
+                        margin-top: 10px; 
+                        }
+
+
+                    .preview-inbox{
+                        background-color: #6F6F6F; 
+                        width: 276px;
+                        height: 250px;
+                        border-radius: 6px;
+                        display: inline-block; 
+                        margin-left: 12px; 
+                        margin-right: 12px;
+                        margin-bottom: 12px; 
+                        margin-top: 0px; 
+                    }
+
+                    .preview-img{
+                        width: 90%;
+                        display: inline-block; 
+                        margin-top: 29px; 
+                        margin-bottom: 29px; 
+                        margin-left: 14px; 
+                        margin-right: 14px; 
+                    }
+                        
+                    .graph-name{
+                        color: white;
+                        font-size: 20px;
+                        display: inline-block; 
+                        margin-top: 40px; 
+                        margin-left: 18px;   
+                    }
+                        
+                        .graph-img{
+                            width: 80%;
+                            display: inline-block; 
+                            margin-top: 22px; 
+                            margin-bottom: 22px; 
+                            margin-left: 28px; 
+                            margin-right: 28px; 
+                    }
+                        
+                        
+                    </td>
+					<!--JavaScript-->
+					<td class="code">
+						
+					</td>
+				</tr>
+			</table>
+		</div>
+</article>  
+        
+<article id="highcharts-type-pie-element">
+		<div class="wrapper">
+			<h4 class="styleguide-title">List preview</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+                
+			<div class="report-listbox">
+                <span class="rep-namelist">Report name</span>
+                <span class="rep-IDlist">ID</span>
+                 <button type="button" class="gear-iconlist">
+                <img class="gear-iconimglist" src="img/icons/tandhjul.svg" alt="gear">
+                </button>   
+            </div>
+                
+                
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML-->
+					<td class="code">
+                       
+                <div class="report-listbox">
+                    <span class="rep-namelist">Report name</span>
+                    <span class="rep-IDlist">ID</span>
+                     <button type="button" class="gear-iconlist">
+                    <img class="gear-iconimglist" src="img/icons/tandhjul.svg" alt="gear">
+                    </button>   
+                </div>
+				
+					</td>
+					<!--CSS-->
+					<td class="code">
+                    .report-listbox{
+                        background-color: #6F6F6F; 
+                        width: 80%;
+                        height: 4%;
+                        border-radius: 6px;
+                        display: inline-block; 
+   
+                    }
+
+                    .rep-namelist{
+                        color: black; 
+                        font-size: 18px;
+                        display: inline-block; 
+                        margin-left: 15px;
+                        margin-top: 1px; 
+                    }
+
+                    .rep-IDlist{
+                        color: black;
+                        font-size: 18px;
+                        display: inline-block;  
+                        margin-left: 15px;
+                        margin-top: 2px; 
+                    }
+
+                    .gear-iconlist{
+                        background-color: transparent; 
+                        border: none; 
+                        cursor: pointer;    
+                    }
+
+                    .gear-iconimglist{
+                        width: 2%; 
+                        margin-left: 975px;
+                        display: block;
+                        margin-top: 2px; 
+                        margin-bottom: 2px;
+                        margin-top: -21px; 
+                    }
+                        
+                        
+                    </td>
+					<!--JavaScript-->
+					<td class="code">
+						
+					</td>
+				</tr>
+			</table>
+		</div>
+</article>
+        
 <!-- lukke section for organimser-->
 </section>
 <!-- SEKTION 3 - ORGANISMER FOR LØSNING - SLUT -->
@@ -5813,6 +6535,13 @@
 			</table>
 		</div>
 	</article>
+    
+    
+    
+    
+    
+    
+    
 	<article id="wrapper-header">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Wrapper in header.</h4>

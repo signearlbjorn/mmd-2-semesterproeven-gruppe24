@@ -444,6 +444,22 @@ h3 {
 	}
 }
 
+/*Add and delete page button CSS*/
+
+.adddelete-button{ 
+    border-radius: 15px; 
+    cursor: pointer;    
+}
+
+.plusminus-iconimg{
+    width: 100%; 
+    display: block;
+    
+}
+
+/*Add and delete page button end*/
+
+
 /*Here starts CSS code for filter by button*/
 .filterbutton{
 	background-color: #fff;
@@ -880,6 +896,7 @@ margin-left: 7px;
 .graphsOverDiv{
 	display: grid;
 	grid-template-columns: auto auto auto;
+	width: 100%;
 }
 .graphs1{
 	width: 98%;
@@ -1069,6 +1086,27 @@ nav a:hover{
 /*Burger menu button CSS*/
 .burgerMenu{
 	display: block;
+	cursor: pointer;
+	float: none;
+	width: 35px;
+}
+.bar1, .bar2, .bar3 {
+	width: 35px;
+	height: 5px;
+	background-color: #333;
+	margin: 3px 0;
+	transition: 0.4s;
+}
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+}
+.change .bar2 {
+	opacity: 0;
+}
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-8px, -8px);
+	transform: rotate(45deg) translate(-8px, -8px);
 }
 /*Here starts CSS for NAV - Small screen*/
 .smallnav{
@@ -1113,7 +1151,7 @@ nav a:hover{
 	float: left;
 	padding: 15px;
 	text-decoration: none;
-	width: 100%;
+	width: 93%;
 }
 .smallnav a:hover{
 	background: #444;
@@ -1166,6 +1204,12 @@ nav a:hover{
 	display: block;
 	width: 14px;
 	float: right;
+}
+.hiddenNav{
+	display: none;
+}
+.burgerMenu:hover + .hiddenNav{
+	display: block;
 }
 /*Here neds CSS for NAV - Small screen*/
 /*Here ends CSS for NAV - Small screen*/
@@ -1486,6 +1530,188 @@ nav a:hover{
 	height: 40px;
 }
 /*ekstra style til create new report pop-up  - slut*/
+
+
+
+/* popup infobox css*/
+
+.popupinfobox{
+    background-color: #D3D3D3;
+    text-align: center;
+    width: 400px;
+    height: 220px;
+    border-radius: 12px;
+    margin-top: 10px; 
+}
+
+.popupinfobox span {
+    color: black;
+    font-size: 30px;
+    display:inline-block; 
+    margin-top: 65px; 
+}
+
+
+.close-icon{
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer;
+    display: grid; 
+     
+}
+
+.X-icon{
+    margin-left: 365px; 
+    margin-top: 2px; 
+}
+
+/*popup infobox css slut*/
+
+
+/*Preview css start*/
+
+.preview-outbox{
+    background-color: #404040;
+    width: 300px;
+    height: 342px;
+    border-radius: 8px;
+    margin-top: 10px; 
+}
+
+
+
+.rep-name{
+    color: white;
+    font-size: 20px;
+    display: inline-block; 
+    margin-top: 40px; 
+    margin-left: 18px;   
+}
+
+
+.gear-icon{
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer;    
+}
+
+.gear-iconimg{
+    width: 9%; 
+    margin-left: 250px;
+    display: block;
+    margin-top: -24px; 
+    margin-bottom: 12
+}
+
+
+.preview-inbox{
+    background-color: #6F6F6F; 
+    width: 276px;
+    height: 250px;
+    border-radius: 6px;
+    display: inline-block; 
+    margin-left: 12px; 
+    margin-right: 12px;
+    margin-bottom: 12px; 
+    margin-top: 0px; 
+}
+
+.preview-img{
+    width: 90%;
+    display: inline-block; 
+    margin-top: 29px; 
+    margin-bottom: 29px; 
+    margin-left: 14px; 
+    margin-right: 14px; 
+}
+
+
+.temp-name{
+    color: white;
+    font-size: 20px;
+    display: inline-block; 
+    margin-top: 40px; 
+    margin-left: 18px;   
+}
+
+.favstar-icon{
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer;    
+}
+
+.favstar-iconimg{
+    width: 9%; 
+    margin-left: 250px;
+    display: block;
+    margin-top: -24px; 
+    margin-bottom: 12
+}
+
+
+.graph-name{
+    color: white;
+    font-size: 20px;
+    display: inline-block; 
+    margin-top: 40px; 
+    margin-left: 18px;   
+}
+
+.graph-img{
+    width: 80%;
+    display: inline-block; 
+    margin-top: 22px; 
+    margin-bottom: 22px; 
+    margin-left: 28px; 
+    margin-right: 28px; 
+}
+
+/*preview css slut*/
+
+
+/*List view css start*/
+
+.report-listbox{
+    background-color: #6F6F6F; 
+    width: 80%;
+    height: 4%;
+    border-radius: 6px;
+    display: inline-block; 
+   
+}
+
+.rep-namelist{
+    color: black; 
+    font-size: 18px;
+    display: inline-block; 
+    margin-left: 15px;
+    margin-top: 1px; 
+}
+
+.rep-IDlist{
+    color: black;
+    font-size: 18px;
+    display: inline-block;  
+    margin-left: 15px;
+    margin-top: 2px; 
+}
+
+.gear-iconlist{
+    background-color: transparent; 
+    border: none; 
+    cursor: pointer;    
+}
+
+.gear-iconimglist{
+    width: 2%; 
+    margin-left: 975px;
+    display: block;
+    margin-top: 2px; 
+    margin-bottom: 2px;
+    margin-top: -21px; 
+}
+
+/*List view css end*/
 
 /* --- ORGANISMER SLUT --- */
 
