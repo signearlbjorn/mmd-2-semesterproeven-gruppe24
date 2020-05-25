@@ -4146,10 +4146,9 @@
 		</div>
 				<!--organisme for stor til at være i table -->
  <div class="frameforsidetitelogsettingsbar">
-
-   <div class="sidetitelogsettingswrap">
-
-         <!-- side titel -->
+	<div class="sidetitelogsettingswrap">
+	<div class="topEditorHeader">
+        <!-- side titel -->
          <div class="sidetitelcontainer">
            <h1>Report editor</h1>
          </div>
@@ -4157,22 +4156,42 @@
 
          <!-- Close editor -->
          <div class="closecontainer">
-           <h1>Close editor</h1>
+           <div class="text-icon">
+				<span>Close editor
+					<button type="button" class="texticon-button">
+						<img class="texticon-iconimg" src="img/icons/x.svg" alt="X-icon">
+					</button>
+				</span>
+			</div>
          </div>
          <!-- Close editor - slut-->
 
          <!-- slet rapport -->
          <div class="deletecontainer">
-           <h1>Delete report</h1>
+            <div class="text-icon">
+				<span>Delete report
+					<button type="button" class="texticon-button">
+						<img class="texticon-iconimg" src="img/icons/trash.svg" alt="X-icon">
+					</button>
+				</span>
+			</div>
          </div>
          <!-- slet rapport - slut-->
 
          <!-- gem rapport -->
          <div class="savecontainer">
-           <h1>Save report</h1>
-         </div>
+			<div class="text-icon">
+				<span>Save report
+					<button type="button" class="texticon-button">
+						<img class="texticon-iconimg" src="img/icons/save.svg" alt="X-icon">
+					</button>
+				</span>
+			</div>
+	  	 </div>
          <!-- gem rapport - slut-->
-
+	</div>
+	<div class="bottomEditorHeader">
+	
          <!-- previous page -->
          <div class="previouspagecontainer">
            <button type="button" onclick="" class="previousbutton">
@@ -4197,25 +4216,29 @@
 
          <!-- switch knap horizontal/vertical -->
          <div class="switch-horizontal-vertical-container">
-           <div class="switch">
-               <input type="radio" class="switch-input" name="view3" value="week3" id="horizontal" checked="">
-               <label for="horizontal" class="switch-label switch-label-off">Horizontal</label>
-               <input type="radio" class="switch-input" name="view3" id="singular">
-               <label for="vertical" class="switch-label switch-label-on">Vertical</label>
-               <span class="switch-selection"></span>
-           </div>
+			<div class="switch">
+				<input type="radio" class="switch-input" name="view4" value="1" id="v" checked="">
+				<label for="v" class="switch-label switch-label-off">Horizontal</label>
+				<input type="radio" class="switch-input" name="view4" id="h" value="2">
+				<label for="h" class="switch-label switch-label-on">Vertical</label>
+				<span class="switch-selection"></span>
+			</div>
          </div>
          <!-- switch knap horizontal/vertical - slut-->
 
          <!-- add page knap -->
          <div class="addpageknapcontainer">
-
+			<button type="button" class="adddelete-button">
+				<img class="plusminus-iconimg" src="img/icons/plus.svg" alt="plus icon">
+			</button>
          </div>
          <!-- add page knap - slut-->
 
          <!-- delete page knap -->
          <div class="deletepageknapcontainer">
-
+			<button type="button" class="adddelete-button">
+				<img class="plusminus-iconimg" src="img/icons/minus.svg" alt="plus icon">
+			</button>
          </div>
          <!-- delete page knap - slut-->
 
@@ -4272,128 +4295,156 @@
 				<tr class="row-two">
 					<!--HTML to copy-->
 					<td class="code">
-     <div class="frameforsidetitelogsettingsbar">
+     <div class="sidetitelogsettingswrap">
+	<div class="topEditorHeader">
+        <!-- side titel -->
+         <div class="sidetitelcontainer">
+           <h1>Report editor</h1>
+         </div>
+         <!-- side titel - slut-->
 
-       <div class="sidetitelogsettingswrap">
+         <!-- Close editor -->
+         <div class="closecontainer">
+           <div class="text-icon">
+				<span>Close editor
+					<button type="button" class="texticon-button">
+						<img class="texticon-iconimg" src="img/icons/x.svg" alt="X-icon">
+					</button>
+				</span>
+			</div>
+         </div>
+         <!-- Close editor - slut-->
 
-             <!-- side titel -->
-             <div class="sidetitelcontainer">
-               <h1>Report editor</h1>
-             </div>
-             <!-- side titel - slut-->
+         <!-- slet rapport -->
+         <div class="deletecontainer">
+            <div class="text-icon">
+				<span>Delete report
+					<button type="button" class="texticon-button">
+						<img class="texticon-iconimg" src="img/icons/trash.svg" alt="X-icon">
+					</button>
+				</span>
+			</div>
+         </div>
+         <!-- slet rapport - slut-->
 
-             <!-- Close editor -->
-             <div class="closecontainer">
-               <h1>Close editor</h1>
-             </div>
-             <!-- Close editor - slut-->
-
-             <!-- slet rapport -->
-             <div class="deletecontainer">
-               <h1>Delete report</h1>
-             </div>
-             <!-- slet rapport - slut-->
-
-             <!-- gem rapport -->
-             <div class="savecontainer">
-               <h1>Save report</h1>
-             </div>
-             <!-- gem rapport - slut-->
-
-             <!-- previous page -->
-             <div class="previouspagecontainer">
-               <button type="button" onclick="" class="previousbutton">
-                   <span>Previous page</span>
-                   <img class="settingsmenuicon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
-               </button>
-
-             </div>
-             <!-- previous page  - slut-->
-
-             <!-- switch knap multiple/singular-->
-             <div class="switch-multiple-singular-container">
-               <div class="switch">
-                   <input type="radio" class="switch-input" name="view3" value="week3" id="multiple" checked="">
-                   <label for="multiple" class="switch-label switch-label-off">Multiple</label>
-                   <input type="radio" class="switch-input" name="view3" id="singular">
-                   <label for="singular" class="switch-label switch-label-on">Vertical</label>
-                   <span class="switch-selection"></span>
-               </div>
-             </div>
-             <!-- switch knap multiple/singular - slut-->
-
-             <!-- switch knap horizontal/vertical -->
-             <div class="switch-horizontal-vertical-container">
-               <div class="switch">
-                   <input type="radio" class="switch-input" name="view3" value="week3" id="horizontal" checked="">
-                   <label for="horizontal" class="switch-label switch-label-off">Horizontal</label>
-                   <input type="radio" class="switch-input" name="view3" id="singular">
-                   <label for="vertical" class="switch-label switch-label-on">Vertical</label>
-                   <span class="switch-selection"></span>
-               </div>
-             </div>
-             <!-- switch knap horizontal/vertical - slut-->
-
-             <!-- add page knap -->
-             <div class="addpageknapcontainer">
-
-             </div>
-             <!-- add page knap - slut-->
-
-             <!-- delete page knap -->
-             <div class="deletepageknapcontainer">
-
-             </div>
-             <!-- delete page knap - slut-->
-
-             <!-- Upload image knap -->
-             <div class="uploadimageknapcontainer">
-               <button type="button" onclick="" class="uploadimagebutton">
-                   <span>Upload image</span>
-                   <img class="settingsmenuicon" src="img/icons/image.svg" alt="arrowright-icon">
-               </button>
-             </div>
-             <!-- Upload image knap - slut-->
-
-             <!-- next page -->
-             <div class="nextpagecontainer">
-               <button type="button" onclick="" class="nextbutton">
-                   <span>Next page</span>
-                   <img class="settingsmenuicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
-               </button>
-
-             </div>
-             <!-- next page  - slut-->
-
-             <!-- MEGA SWITCH -->
-             <div class="megaswitchcontainer">
-               <div class="megaswitch">
-                   <input type="radio" class="switch-input0" name="view4" id="a1" checked="">
-                   <label for="a1" class="switch-label0 switch-label-off0">A1</label>
-
-                   <input type="radio" class="switch-input0" name="view4" id="a2">
-                   <label for="a2" class="switch-label0 switch-label-on1">A2</label>
-
-                   <input type="radio" class="switch-input0" name="view4" id="a3">
-                   <label for="a3" class="switch-label0 switch-label-on2">A3</label>
-
-                   <input type="radio" class="switch-input0" name="view4" id="a4">
-                   <label for="a4" class="switch-label0 switch-label-on3">A4</label>
-
-                   <span class="switch-selection0"></span>
-               </div>
-             </div>
-             <!-- MEGA SWITCH - slut-->
+         <!-- gem rapport -->
+         <div class="savecontainer">
+			<div class="text-icon">
+				<span>Save report
+					<button type="button" class="texticon-button">
+						<img class="texticon-iconimg" src="img/icons/save.svg" alt="X-icon">
+					</button>
+				</span>
+			</div>
+	  	 </div>
+         <!-- gem rapport - slut-->
+	</div>
+	<div class="bottomEditorHeader">
+	
+         <!-- previous page -->
+         <div class="previouspagecontainer">
+           <button type="button" onclick="" class="previousbutton">
+               <span>Previous page</span>
+               <img class="settingsmenuicon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
+           </button>
 
          </div>
+         <!-- previous page  - slut-->
+
+         <!-- switch knap multiple/singular-->
+         <div class="switch-multiple-singular-container">
+           <div class="switch">
+               <input type="radio" class="switch-input" name="view3" value="week3" id="multiple" checked="">
+               <label for="multiple" class="switch-label switch-label-off">Multiple</label>
+               <input type="radio" class="switch-input" name="view3" id="singular">
+               <label for="singular" class="switch-label switch-label-on">Vertical</label>
+               <span class="switch-selection"></span>
+           </div>
+         </div>
+         <!-- switch knap multiple/singular - slut-->
+
+         <!-- switch knap horizontal/vertical -->
+         <div class="switch-horizontal-vertical-container">
+			<div class="switch">
+				<input type="radio" class="switch-input" name="view4" value="1" id="v" checked="">
+				<label for="v" class="switch-label switch-label-off">Horizontal</label>
+				<input type="radio" class="switch-input" name="view4" id="h" value="2">
+				<label for="h" class="switch-label switch-label-on">Vertical</label>
+				<span class="switch-selection"></span>
+			</div>
+         </div>
+         <!-- switch knap horizontal/vertical - slut-->
+
+         <!-- add page knap -->
+         <div class="addpageknapcontainer">
+			<button type="button" class="adddelete-button">
+				<img class="plusminus-iconimg" src="img/icons/plus.svg" alt="plus icon">
+			</button>
+         </div>
+         <!-- add page knap - slut-->
+
+         <!-- delete page knap -->
+         <div class="deletepageknapcontainer">
+			<button type="button" class="adddelete-button">
+				<img class="plusminus-iconimg" src="img/icons/minus.svg" alt="plus icon">
+			</button>
+         </div>
+         <!-- delete page knap - slut-->
+
+         <!-- Upload image knap -->
+         <div class="uploadimageknapcontainer">
+           <button type="button" onclick="" class="uploadimagebutton">
+               <span>Upload image</span>
+               <img class="settingsmenuicon" src="img/icons/image.svg" alt="arrowright-icon">
+           </button>
+         </div>
+         <!-- Upload image knap - slut-->
+
+         <!-- next page -->
+         <div class="nextpagecontainer">
+           <button type="button" onclick="" class="nextbutton">
+               <span>Next page</span>
+               <img class="settingsmenuicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
+           </button>
+
+         </div>
+         <!-- next page  - slut-->
+
+         <!-- MEGA SWITCH -->
+         <div class="megaswitchcontainer">
+           <div class="megaswitch">
+               <input type="radio" class="switch-input0" name="view4" id="a1" checked="">
+               <label for="a1" class="switch-label0 switch-label-off0">A1</label>
+
+               <input type="radio" class="switch-input0" name="view4" id="a2">
+               <label for="a2" class="switch-label0 switch-label-on1">A2</label>
+
+               <input type="radio" class="switch-input0" name="view4" id="a3">
+               <label for="a3" class="switch-label0 switch-label-on2">A3</label>
+
+               <input type="radio" class="switch-input0" name="view4" id="a4">
+               <label for="a4" class="switch-label0 switch-label-on3">A4</label>
+
+               <span class="switch-selection0"></span>
+           </div>
+         </div>
+         <!-- MEGA SWITCH - slut-->
 
      </div>
+ </div>
    </td>
      <!--CSS to copy-->
    <td class="code">
 	   				.sidetitelogsettingswrap {
-	   				margin-left: 15%;
-	   				margin-right: 15%;
+	   				margin-left: 3%;
+	   				width: 94%;
+	   				}
+	   				.topEditorHeader{
+					width: 100%;
+					}
+					.bottomEditorHeader{
+						width: 100%;
+						padding-top: 18px;
 	   				}
 	   				.sidetitelcontainer, .previouspagecontainer {
 	   				float: left;
@@ -4405,37 +4456,29 @@
 	   				margin-right: 45px;
 	   				}
 	   				.previouspagecontainer {
-	   				margin-top: 80px;
-	   				margin-left: -190px;
 	   				}
 	   				.switch-multiple-singular-container {
 	   				float: left;
-	   				margin-top: 60px;
-	   				margin-left: -60px;
+	   				margin-left: 20px;
 	   				}
 	   				.switch-horizontal-vertical-container{
 	   				float: left;
-	   				margin-top: 60px;
-	   				margin-left: 20px;
+	   				margin-left: 10px;
 	   				}
 	   				.addpageknapcontainer {
 	   				float: left;
-	   				margin-top: 80px;
 	   				margin-left: 10px;
 	   				}
 	   				.deletepageknapcontainer {
 	   				float: left;
-	   				margin-top: 80px;
 	   				}
 	   				.uploadimageknapcontainer {
 	   				float: left;
-	   				margin-top: -5px;
-	   				margin-left: 100px;
+	   				margin-left: 50px;
 	   				}
 	   				.nextpagecontainer {
 	   				float: left;
-	   				margin-top: -5px;
-	   				margin-left: 100px;
+	   				margin-left: 50px;
 	   				}
 	   				.megaswitchcontainer {
 	   				float: right;
