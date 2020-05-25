@@ -2221,8 +2221,7 @@ header .wrapper {
 	padding: 20px 0;
 	border-top: solid 4px #404040;
 	border-bottom: solid 3px #6F6F6F;
-	margin-top: 40px;
-	margin-bottom: 20px;
+	margin-bottom: 10px;
 	background-color: #ddd;
 }
 
@@ -2289,7 +2288,11 @@ header .wrapper, #wrapper_header_example header .wrapper {
 }
 
 #styleguide section {
-	margin: 50px 0;
+	margin: 35px 0;
+}
+
+#styleguide #titles {
+	margin-top: 0;
 }
 
 #styleguide > section > article {
