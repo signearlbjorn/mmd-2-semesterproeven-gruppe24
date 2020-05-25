@@ -10,9 +10,6 @@ Highcharts.setOptions({
     }
 });
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Initiate graphs here
-}
 // #highcharts-type-bar-example
 document.addEventListener('DOMContentLoaded', function () {
     var myChart = Highcharts.chart('highcharts-type-bar-example', {
@@ -47,9 +44,9 @@ document.addEventListener('DOMContentLoaded', function () {
             // 5 of caregoy 3
         }]
     });
-});
+
 // #highcharts-type-column-example
-document.addEventListener('DOMContentLoaded', function () {
+
     var myChart = Highcharts.chart('highcharts-type-column-example', {
         chart: {
             type: 'column',
@@ -84,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 // #highcharts-type-line-example
-document.addEventListener('DOMContentLoaded', function () {
+
     var myChart = Highcharts.chart('highcharts-type-line-example', {
         chart: {
             type: 'line',
@@ -117,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function () {
             // 5 of caregoy 3
         }]
     });
-});
+
 // #highcharts-type-pie-element-preview    
 var typepiePreviewExample = Highcharts.chart('highcharts-type-pie-preview-example', {
     chart: {
