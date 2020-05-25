@@ -1,4 +1,4 @@
-// JavaScript Document
+// JavaScript for Editor tabs
 /*Disse to funktioner lader brugeren skifte mellem editor tabs*/
 function switchedit(switcheditpage) {
 	let editpage = ["graphs", "text", "templates", "codeEditorTab"];
