@@ -1400,13 +1400,13 @@ nav a:hover{
 .frameforuploadpopup {
 	background-color: #D3D3D3;
 	width: 425px;
-  height: 200px;
+  height: 220px;
 	border-radius: 5px;
 }
 
 .x {
 	float: right;
-	margin-right: -100px;
+	margin-right: 50px;
 }
 
 .uploadtemplate {
@@ -1421,12 +1421,17 @@ nav a:hover{
 	margin-left: 10px;
 	margin-right: 10px;
 }
-.uploadpopuptextknapvenstre {
-	float: left;
-}
 
 .uploadpopuptextknaphøjre {
-	float; right;
+	float: right;
+	margin-top: 10px;
+	margin-right: 10px;
+}
+
+.uploadpopuptextknapvenstre {
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
 }
 /* Styling for Upload pop-up ORAGBISME - SLUT */
 
