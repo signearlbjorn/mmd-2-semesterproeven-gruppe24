@@ -419,7 +419,7 @@
 			<div class="wrapper">
 				<p class="star">
 					<img alt="" src="img/icons/star.svg"
-					  style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()">
+					  style="height: 25px; width: 25px" id="imgClickAndChange-1" onclick="function(){changeImage(this.id);}">
 				</p>
 			</div>
 		</div>
@@ -432,33 +432,41 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-            <p class="star">
-    					<img alt="" src="img/icons/star.svg"
-    					  style="height: 25px; width: 25px" id="imgClickAndChange" onclick="changeImage()">
-    				</p>
+						<p class="star">
+							<img alt="" src="img/icons/star.svg"
+							  style="height: 25px; width: 25px" id="imgClickAndChange-1" onclick="function(){changeImage(this.id);}">
+						</p>
 					</td>
 					<td class="code">
-            .star {
+						.star {
 							background-color: black;
 							width: 26px;
 						}
 					</td>
 					<td class="code">
-						<script language="javascript">
-							function changeImage() {
-								if (document.getElementById("imgClickAndChange").src == "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg")
-								{
-									document.getElementById("imgClickAndChange").src = "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg";
-								}
-								else
-								{
-									document.getElementById("imgClickAndChange").src = "file:///Users/signearlbjorn/Desktop/git%20og%20github/mmd-2-semesterproeven-gruppe24/img/icons/star.svg";
-								}
+						/* PRIORITY STAR / STJERNE PRIORITERING */
+						function changeImage(elem) {
+							console.log('changeImage function active.');
+							// console.log(document.getElementById("imgClickAndChange").src.endsWith("img/icons/star.svg"));
+							elem = document.getElementById(elem);
+							//if (document.getElementById("imgClickAndChange").src =="img/icons/star.svg") // Must use endsWith method instead of == when directory layout is uncertain
+							if (elem.src.endsWith("img/icons/star.svg")) // Must use endsWith method instead of == when directory layout is uncertain
+							{
+								console.log('changeImage if true.');
+								elem.src = "img/icons/starfull.svg";
+								// Prioritize graph/template
 							}
-						</script>
+							else
+							{
+								console.log('changeImage if false.');
+								elem.src = "img/icons/star.svg";
+								// Unprioritize graph/template
+							}
+						}
 					</td>
 				</tr>
             </table>
+			<p class="info">Hver stjerne skal have et unikt id, som skal reffere til parrent.</p>
  		</div>
 	</article>
    <!-- Stjerne Prioritering - slut  -->

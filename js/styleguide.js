@@ -54,19 +54,22 @@ function selectText(element) {
 }
 
 /* PRIORITY STAR / STJERNE PRIORITERING */
-function changeImage() {
+function changeImage(elem) {
 	console.log('changeImage function active.');
 	// console.log(document.getElementById("imgClickAndChange").src.endsWith("img/icons/star.svg"));
-
-	if (document.getElementById("imgClickAndChange").src.endsWith("img/icons/star.svg")) // Must use endsWith method instead of == when directory layout is uncertain
+	elem = document.getElementById(elem);
+	//if (document.getElementById("imgClickAndChange").src =="img/icons/star.svg") // Must use endsWith method instead of == when directory layout is uncertain
+	if (elem.src.endsWith("img/icons/star.svg")) // Must use endsWith method instead of == when directory layout is uncertain
 	{
 		console.log('changeImage if true.');
-		document.getElementById("imgClickAndChange").src = "img/icons/starfull.svg";
+		elem.src = "img/icons/starfull.svg";
+		// Prioritize graph/template
 	}
 	else
 	{
 		console.log('changeImage if false.');
-		document.getElementById("imgClickAndChange").src = "img/icons/star.svg";
+		elem.src = "img/icons/star.svg";
+		// Unprioritize graph/template
 	}
 }
 
