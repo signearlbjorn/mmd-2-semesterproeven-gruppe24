@@ -2397,20 +2397,34 @@ header .wrapper, #wrapper_header_example header .wrapper {
 	text-indent: 20px;
 }
 
+
 /* - STYLEGUIDE TEXT - */
 #styleguide .info, #styleguide .info b, #styleguide .info a {
 	clear: both;
 	color: #128193;
 }
 
+
 /* - STYLEGUIDE TITLES - */
 .styleguide-title {
 	clear: both;
 }
+
+
 /* - STYLEGUIDE DISABLED LINKS - */
 .disabled{
 	color: #777;
 	cursor: not-allowed;
+}
+
+/* OTHER BUTTONS */
+#styleguide #other-buttons button {
+	float: left;
+	margin-bottom: 5px;
+	clear: both;
+}
+#styleguide #other-buttons button:last-child {
+	margin-bottom: 0;
 }
 /* --- ANITIONMER --- */
 /* No animations added yet */

@@ -1644,8 +1644,6 @@ select.typebutton option{
 			</table>
 		</div>
 	</article>
-
-
     <article id="buttonswithtextandicons">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Buttons with text and icons</h4>
@@ -2676,12 +2674,14 @@ select.typebutton option{
 	</article>-->
 	<!-- molekyle tabel for 'Opret ny mappe / create new folder' - slut-->
     <!-- molekyle tabel for switch knapper -->
-	<article id="id">
+	<div class="title-area">
 		<div class="wrapper">
-      <h3 id="switchknapper" class="styleguide-title">Switch Knapper</h3>
-      <br>
-      <br>
-			<h4 class="styleguide-title">Switch knapper</h4>
+			<h3 id="switchknapper" class="styleguide-title">Switch Knapper</h3>
+		</div>
+	</div>
+	<article id="vertical-horisontal-switch">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Vertical/Horizontal Switch</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -2924,19 +2924,19 @@ select.typebutton option{
 				<tr class="row-two">
 					<!-- HTML -->
                     <td class="code">
-                    <input type="text" class="searchInput"  placeholder="Search...">
+						<input type="text" class="searchInput"  placeholder="Search...">
                     </td>
 					<!-- CSS -->
 					<td class="code">
-                    .searchInput {
-                        background-image: url('../img/icons/search.svg');
-                        background-position: 10px 11px;
-                        background-repeat: no-repeat;
-                        width: 20%;
-                        font-size: 16px;
-                        padding: 10px 20px 5px 50px;
-                        border: 1px solid #ddd;
-                        border-radius: 10px;
+						.searchInput {
+							background-image: url('../img/icons/search.svg');
+							background-position: 10px 11px;
+							background-repeat: no-repeat;
+							width: 20%;
+							font-size: 16px;
+							padding: 10px 20px 5px 50px;
+							border: 1px solid #ddd;
+							border-radius: 10px;
                         }
                     </td>
 					<!-- JavaScript -->
@@ -2946,10 +2946,8 @@ select.typebutton option{
 		</div>
 	</article>
 	<!-- molekyle tabel for 'søg' - slut -->
-
-
-        <!-- molekyle tabel for 'Other buttons'-->
-	<article id="soeg">
+	<!-- molekyle tabel for 'Other buttons'-->
+	<article id="other-buttons">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Other buttons</h4>
 		</div>
@@ -2978,97 +2976,94 @@ select.typebutton option{
 				<tr class="row-two">
 					<!-- HTML -->
                     <td class="code">
-                    <button type="button" onclick="" class="button-g"> Done </button>
-                <button type="button" onclick="" class="button-g"> Save&amp;close </button>
-                <button type="button" onclick="" class="button-g"> Load template </button>
-                <button type="button" onclick="" class="button-g"> Print </button>
-                <button type="button" onclick="" class="button-g"> Create </button>
-                <button type="button" onclick="" class="button-r"> Delete</button>
-                <button type="button" onclick="" class="button-w"> Cancel</button>
-                <button type="button" onclick="" class="button-w"> Save </button>
-                <button type="button" onclick="" class="button-w"> Clear all filter </button>
-                <button type="button" onclick="" class="button-b"> Just close</button>
-                <button type="button" onclick="" class="buttongr"> <img class="Ticon" src="img/icons/type.svg" alt="text-icon">  </button>
+						<button type="button" onclick="" class="button-g"> Done </button>
+						<button type="button" onclick="" class="button-g"> Save&amp;close </button>
+						<button type="button" onclick="" class="button-g"> Load template </button>
+						<button type="button" onclick="" class="button-g"> Print </button>
+						<button type="button" onclick="" class="button-g"> Create </button>
+						<button type="button" onclick="" class="button-r"> Delete</button>
+						<button type="button" onclick="" class="button-w"> Cancel</button>
+						<button type="button" onclick="" class="button-w"> Save </button>
+						<button type="button" onclick="" class="button-w"> Clear all filter </button>
+						<button type="button" onclick="" class="button-b"> Just close</button>
+						<button type="button" onclick="" class="buttongr"> <img class="Ticon" src="img/icons/type.svg" alt="text-icon">  </button>
                     </td>
 					<!-- CSS -->
 					<td class="code">
-                    .button-g{
-                        min-width: 75px;
-                        width: auto;
-                        border: solid 1px #00CD00;
-                        border-radius: 10px;
-                        background-color: #00CD00;
-                        padding: 14px 28px;
-                        font-size: 16px;
-                        cursor: pointer;
-                        display: inline-block;
-                        }
+						.button-g{
+							min-width: 75px;
+							width: auto;
+							border: solid 1px #00CD00;
+							border-radius: 10px;
+							background-color: #00CD00;
+							padding: 14px 28px;
+							font-size: 16px;
+							cursor: pointer;
+							display: inline-block;
+						}
 
-                    .button-b{
-                        min-width: 75px;
-                        width: auto;
-                        border: solid 1px #5071A3;
-                        border-radius: 10px;
-                        background-color: #5071A3;
-                        padding: 14px 28px;
-                        font-size: 16px;
-                        cursor: pointer;
-                        display: inline-block;
-                        }
+						.button-b{
+							min-width: 75px;
+							width: auto;
+							border: solid 1px #5071A3;
+							border-radius: 10px;
+							background-color: #5071A3;
+							padding: 14px 28px;
+							font-size: 16px;
+							cursor: pointer;
+							display: inline-block;
+						}
 
-                    .button-r{
-                        min-width: 75px;
-                        width: auto;
-                        color: white;
-                        border: solid 1px #E4342B;
-                        border-radius: 10px;
-                        background-color: #E4342B;
-                        padding: 14px 28px;
-                        font-size: 16px;
-                        cursor: pointer;
-                        display: inline-block;
-                        }
+						.button-r{
+							min-width: 75px;
+							width: auto;
+							color: white;
+							border: solid 1px #E4342B;
+							border-radius: 10px;
+							background-color: #E4342B;
+							padding: 14px 28px;
+							font-size: 16px;
+							cursor: pointer;
+							display: inline-block;
+						}
 
-                    .button-w{
-                        min-width: 75px;
-                        width: auto;
-                        color: black;
-                        border: solid 1px grey;
-                        border-radius: 10px;
-                        background-color: white;
-                        padding: 14px 28px;
-                        font-size: 16px;
-                        cursor: pointer;
-                        display: inline-block;
-                        }
+						.button-w{
+							min-width: 75px;
+							width: auto;
+							color: black;
+							border: solid 1px grey;
+							border-radius: 10px;
+							background-color: white;
+							padding: 14px 28px;
+							font-size: 16px;
+							cursor: pointer;
+							display: inline-block;
+						}
 
+						.buttont{
+							border: solid 1px #5071A3;
+							border-radius: 10px;
+							background-color: #5071A3;
+							padding: 14px 28px;
+							font-size: 16px;
+							cursor: pointer;
+							display: inline-block;
+						}
 
+						.Ticon{
+							width: 200%;
+							margin-left:-45%;
+						}
 
-                    .buttont{
-                        border: solid 1px #5071A3;
-                        border-radius: 10px;
-                        background-color: #5071A3;
-                        padding: 14px 28px;
-                        font-size: 16px;
-                        cursor: pointer;
-                        display: inline-block;
-                        }
-
-                    .Ticon{
-                        width: 200%;
-                        margin-left:-45%;
-                        }
-
-                    .buttongr{
-                        border: solid 1px #6F6F6F;
-                        border-radius: 10px;
-                        background-color: #6F6F6F;
-                        padding: 8px 28px;
-                        font-size: 16px;
-                        cursor: pointer;
-                        display: inline-block;
-                        }
-
+						.buttongr{
+							border: solid 1px #6F6F6F;
+							border-radius: 10px;
+							background-color: #6F6F6F;
+							padding: 8px 28px;
+							font-size: 16px;
+							cursor: pointer;
+							display: inline-block;
+						}
                     </td>
 					<!-- JavaScript -->
 					<td class="empty"></td>
@@ -3077,74 +3072,76 @@ select.typebutton option{
 		</div>
 	</article>
 	<!-- molekyle tabel for 'Other buttons' - slut -->
-
-<h3 id="textinpytmolekyler">Text input</h3>
+	<div class="title-area">
+		<div class="wrapper">
+			<h3 id="textinpytmolekyler" class="styleguide-title">Text inputs</h3>
+		</div>
+	</div>
   <!-- molekyle tabel for 'email'-->
-<article id="email">
-  <div class="wrapper">
-    <h4>Email-input knap</h4>
-  </div>
-  <div class="example">
-    <div class="wrapper">
-      <div class="frame">
-        <div class="type">
-          <p class="typetext">Email adress</p>
-          <button type="" onclick="" class="typebutton">
-            <span class="typebuttontext">example@email.com</span>
-            <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-          </button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="wrapper">
-    <table class="overviewmolekyler">
-      <tr class="row-one">
-        <th>HTML</th>
-        <th>CSS</th>
-        <th>JavaScript</th>
-      </tr>
-      <tr class="row-two">
-        <!-- HTML -->
-        <td class="code">
-          <div class="frame">
-            <div class="type">
-              <p class="typetext">Email adress</p>
-              <button type="" onclick="" class="typebutton">
-                <span class="typebuttontext">example@email.com</span>
-                <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-              </button>
-            </div>
-          </div>
-        </td>
-        <!-- CSS -->
-        <td class="empty"></td>
-        <!-- JavaScript -->
-        <td class="empty"></td>
-      </tr>
-    </table>
-  </div>
-</article>
-<!-- molekyle tabel for 'email-input' - slut -->
-
-<!-- molekyle tabel for 'send with'-->
-<article id="send with">
-<div class="wrapper">
-  <h4>Send with</h4>
-</div>
-<div class="example">
-  <div class="wrapper">
-    <div class="frame">
-      <div class="type">
-        <p class="typetext">Send with</p>
-        <button type="" onclick="" class="typebutton">
-          <span class="typebuttontext">email</span>
-          <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
+	<article id="email">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Email-input knap</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="frame">
+					<div class="type">
+						<p class="typetext">Email adress</p>
+						<button type="" onclick="" class="typebutton">
+							<span class="typebuttontext">example@email.com</span>
+							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!-- HTML -->
+					<td class="code">
+						<div class="frame">
+							<div class="type">
+								<p class="typetext">Email adress</p>
+								<button type="" onclick="" class="typebutton">
+									<span class="typebuttontext">example@email.com</span>
+									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+								</button>
+							</div>
+						</div>
+					</td>
+					<!-- CSS -->
+					<td class="empty"></td>
+					<!-- JavaScript -->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<!-- molekyle tabel for 'email-input' - slut -->
+	<!-- molekyle tabel for 'send with'-->
+	<article id="send with">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Send with</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="frame">
+					<div class="type">
+						<p class="typetext">Send with</p>
+						<button type="" onclick="" class="typebutton">
+							<span class="typebuttontext">email</span>
+							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
 <div class="wrapper">
   <table class="overviewmolekyler">
     <tr class="row-one">
