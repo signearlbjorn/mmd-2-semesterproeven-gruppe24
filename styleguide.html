@@ -1489,116 +1489,6 @@ select.typebutton option{
 			</table>
 		</div>
 	</article>
-	<article id="antal-visninger">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Antal visninger</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<label class="select-label">
-					<span class="select-span">Quantity</span>
-					<div class="select-wrapper">
-						<select name="reports-shown" class="select">
-							<option value="8" selected="">8</option>
-							<option value="16">16</option>
-							<option value="24">24</option>
-							<option value="32">32</option>
-							<option value="40">40</option>
-							<option value="80">80</option>
-						</select>
-					</div>
-				</label>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="table-ref">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<td class="code">
-						<div class="quantitydiv">
-							Quantity
-							<button type="" onClick="" class="quantitybutton">
-								<span>8</span>
-								<img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
-							</button>
-						</div>
-					</td>
-					<td class="code">
-						/* -- SELECT --*/
-						.select-label {
-							position: relative;
-							float: left;
-							overflow: hidden;
-							cursor: pointer;
-						}
-
-						.select-span {
-							float: left;
-							height: 37px;
-							margin-right: 12px;
-							font-size: 142.85%;
-							line-height: 37px;
-							color: #000;
-						}
-
-						@media (min-width:3200px) {
-							.select-span {
-								font-size: 32px;
-								line-height: 37px;
-							}
-						}
-
-						.select {
-							display: block;
-							padding-left: 10px;
-							padding-right: 28px;
-							border-radius: 19px;
-							font-size: 16px;
-							color: #7C7C7C;
-							font-style: italic;
-							-webkit-appearance: none;
-							-moz-appearance: none;
-							text-overflow: '';
-							border-color: #6F6F6F;
-							background-color: #fff;
-							cursor: pointer;
-						}
-
-						.select option{
-							font-style: normal;
-						}
-
-						@media (min-width:786px) {
-							.select {
-								font-size: 100%;
-							}
-						}
-
-						.select-wrapper {
-							position: relative;
-						}
-
-						.select-wrapper:before {
-							content: "";
-							position: absolute;
-							top: calc(50% - 10px);
-							right: 10px;
-							width: 19px;
-							height: 13px;
-							background-image: url("../img/icons/chevron-down.svg");
-							background-repeat: no-repeat;
-							background-size: cover;
-						}
-					</td>
-					<td class="empty"></td>
-                </tr>
-			</table>
-		</div>
-	</article>
 	<article id="forrige-knap">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Forrige-knap</h4>
@@ -2748,59 +2638,6 @@ select.typebutton option{
 			</table>
 		</div>
 	</article>
-	<!-- molekyle tabel for 'Opret ny rapport'-->
-	<article id="opret-ny-rapport">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Opret ny rapport</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<button type="button" class="newreportbutton">
-					<img class="plusimg" src="img/icons/plus.svg" alt="new preort img">
-					<span class="newreportspan">New report</span>
-				</button>
-			</div>
-		</div>
-		<div class="wrapper">
-            <table class="overviewmolekyler">
-                <tr class="row-one">
-                  <th>HTML</th>
-                  <th>CSS</th>
-                  <th>JavaScript</th>
-                </tr>
-				<tr class="row-two">
-					<td class="code">
-						<button type="button" class="newreportbutton">
-							<img class="plusimg" src="img/icons/plus.svg" alt="new preort img">
-							<span class="newreportspan">New report</span>
-						</button>
-					</td>
-					<td class="code">
-						.newreportbutton{
-							border: none;
-							border-radius: 12px;
-							background-color: #00cd00;
-							width: 150px;
-							cursor: pointer;
-							display: grid;
-							grid-template-columns: auto auto;
-							align-content: center;
-						}
-						.newreportspan{
-							font-size: 18px;
-							display: grid;
-						}
-						.plusimg{
-							display: grid;
-							margin: 0 0 0 auto;
-						}
-					</td>
-					<td class="empty"></td>
-				</tr>
-			</table>
-		</div>
-	</article>
-    <!-- molekyle tabel for 'Opret ny rapport' - slut-->
     <!-- molekyle tabel for 'Opret ny rapport'-->
 	<!--<article id="opret-ny-mappe">
 		<div class="wrapper">
@@ -4545,11 +4382,20 @@ select.typebutton option{
 
           <!-- quantity molekyle -->
           <div class="quantitycontainer">
-              <div class="quantitydiv">Quantity
-                <button type="" onclick="" class="quantitybutton">
-                  <span>8</span>
-                  <img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
-                </button>
+              <div class="quantitydiv">
+				<label class="select-label">
+					<span class="select-span">Quantity</span>
+					<div class="select-wrapper">
+						<select name="reports-shown" class="select">
+							<option value="8" selected="">8</option>
+							<option value="16">16</option>
+							<option value="24">24</option>
+							<option value="32">32</option>
+							<option value="40">40</option>
+							<option value="80">80</option>
+						</select>
+					</div>
+				</label>
               </div>
           </div>
           <!-- quantity molekyle - slut-->
