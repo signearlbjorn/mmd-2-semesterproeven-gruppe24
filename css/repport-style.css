@@ -1564,26 +1564,27 @@ nav a:hover{
 
 .switch-multiple-singular-container {
   float: left;
-	margin-left: 20px;
+	margin-left: 60px;
 }
 
 .switch-horizontal-vertical-container{
   float: left;
-	margin-left: 20px;
+	margin-left: 30px;
 }
 
 .addpageknapcontainer {
   float: left;
-	margin-left: 10px;
+	margin-left: 60px;
 }
 
 .deletepageknapcontainer {
   float: left;
+	margin-left: 60px;
 }
 
 .uploadimageknapcontainer {
 	float: left;
-	margin-left: 50px;
+	margin-left: 60px;
 }
 
 .nextpagecontainer {
