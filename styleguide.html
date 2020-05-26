@@ -3078,7 +3078,7 @@ select.typebutton option{
 		</div>
 	</div>
   <!-- molekyle tabel for 'email'-->
-	<article id="email">
+	<article id="email-input">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Email-input knap</h4>
 		</div>
@@ -3116,7 +3116,53 @@ select.typebutton option{
 						</div>
 					</td>
 					<!-- CSS -->
-					<td class="empty"></td>
+					<td class="code">
+						/*Here starts CSS code for type button*/
+						.frame {
+							float: left; /* Added float to display height right */
+							background-color: black;
+							width: 100%;
+							/* width: 400px; *//* Did not scale with parrent */
+						}
+
+						.type {
+							width: calc(100% - 10px); /* 100% width -10px margin */
+							margin-left: 5px;
+							margin-right: 5px; /* Margin added */
+						}
+
+						.typetext {
+							float: left; /* Added float to display height right */
+							color: white;
+							font-size: 110%; /* Must be larger on smaller screens */
+						}
+
+						.typebutton {
+							float: left; /* Added float to display height right */
+							width: 100%;
+							border-radius: 10px;
+							font-size: 110%; /* Must be larger on smaller screens */
+						}
+						
+						.typebuttontext {
+							float: left;
+							font-style: italic;
+							color: grey;
+							margin-left: 5px;
+							font-size: 110%;
+						}
+
+						.chevronicon {
+							float: right;
+							margin-top: 5px;
+						}
+
+						@media (min-width:1366){
+							.typetext, .typebutton, .typebuttontext {
+								font-size: 100%;
+							}
+						}
+					</td>
 					<!-- JavaScript -->
 					<td class="empty"></td>
 				</tr>
@@ -3125,7 +3171,7 @@ select.typebutton option{
 	</article>
 	<!-- molekyle tabel for 'email-input' - slut -->
 	<!-- molekyle tabel for 'send with'-->
-	<article id="send with">
+	<article id="send-with">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Send with</h4>
 		</div>
@@ -3142,133 +3188,251 @@ select.typebutton option{
 				</div>
 			</div>
 		</div>
-<div class="wrapper">
-  <table class="overviewmolekyler">
-    <tr class="row-one">
-      <th>HTML</th>
-      <th>CSS</th>
-      <th>JavaScript</th>
-    </tr>
-    <tr class="row-two">
-      <!-- HTML -->
-      <td class="code">
-        <div class="frame">
-          <div class="type">
-            <p class="typetext">Send with</p>
-            <button type="" onclick="" class="typebutton">
-              <span class="typebuttontext">example@email.com</span>
-              <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-            </button>
-          </div>
-        </div>
-      </td>
-      <!-- CSS -->
-      <td class="empty"></td>
-      <!-- JavaScript -->
-      <td class="empty"></td>
-    </tr>
-  </table>
-</div>
-</article>
-<!-- molekyle tabel for 'send with' - slut -->
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!-- HTML -->
+					<td class="code">
+						<div class="frame">
+							<div class="type">
+								<p class="typetext">Send with</p>
+								<button type="" onclick="" class="typebutton">
+									<span class="typebuttontext">email</span>
+									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+								</button>
+							</div>
+						</div>
+					</td>
+					<!-- CSS -->
+					<td class="code">
+						/*Here starts CSS code for type button*/
+						.frame {
+							float: left; /* Added float to display height right */
+							background-color: black;
+							width: 100%;
+							/* width: 400px; *//* Did not scale with parrent */
+						}
 
-<!-- molekyle tabel for 'time'-->
-<article id="Time">
-<div class="wrapper">
-  <h4>Time</h4>
-</div>
-<div class="example">
-  <div class="wrapper">
-    <div class="frame">
-      <div class="type">
-        <p class="typetext">Time</p>
-        <button type="" onclick="" class="typebutton">
-          <span class="typebuttontext">00:00</span>
-          <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="wrapper">
-  <table class="overviewmolekyler">
-    <tr class="row-one">
-      <th>HTML</th>
-      <th>CSS</th>
-      <th>JavaScript</th>
-    </tr>
-    <tr class="row-two">
-      <!-- HTML -->
-      <td class="code">
-        <div class="frame">
-          <div class="type">
-            <p class="typetext">Send with</p>
-            <button type="" onclick="" class="typebutton">
-              <span class="typebuttontext">00:00</span>
-              <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-            </button>
-          </div>
-        </div>
-      </td>
-      <!-- CSS -->
-      <td class="empty"></td>
-      <!-- JavaScript -->
-      <td class="empty"></td>
-    </tr>
-  </table>
-</div>
-</article>
-<!-- molekyle tabel for 'time' - slut -->
+						.type {
+							width: calc(100% - 10px); /* 100% width -10px margin */
+							margin-left: 5px;
+							margin-right: 5px; /* Margin added */
+						}
 
-<!-- molekyle tabel for 'message'-->
-<article id="Time">
-<div class="wrapper">
-  <h4>Message</h4>
-</div>
-<div class="example">
-  <div class="wrapper">
-    <div class="frame">
-      <div class="type">
-        <p class="typetext">Message</p>
-        <form action="/action_page.php" id="message">
-        </form>
-        <br>
-        <textarea rows="4" cols="50" name="comment" form="usrform">
-        Enter message here...</textarea>
-      </div>
-    </div>
-  </div>
-</div>
-<div class="wrapper">
-  <table class="overviewmolekyler">
-    <tr class="row-one">
-      <th>HTML</th>
-      <th>CSS</th>
-      <th>JavaScript</th>
-    </tr>
-    <tr class="row-two">
-      <!-- HTML -->
-      <td class="code">
-        <div class="frame">
-          <div class="type">
-            <p class="typetext">Message</p>
-            <form action="/action_page.php" id="message">
-            </form>
-            <br>
-            <textarea rows="4" cols="50" name="comment" form="usrform">
-            Enter message here...</textarea>
-          </div>
-        </div>
-      </td>
-      <!-- CSS -->
-      <td class="empty"></td>
-      <!-- JavaScript -->
-      <td class="empty"></td>
-    </tr>
-  </table>
-</div>
-</article>
-<!-- molekyle tabel for 'message' - slut -->
+						.typetext {
+							float: left; /* Added float to display height right */
+							color: white;
+							font-size: 110%; /* Must be larger on smaller screens */
+						}
+
+						.typebutton {
+							float: left; /* Added float to display height right */
+							width: 100%;
+							border-radius: 10px;
+							font-size: 110%; /* Must be larger on smaller screens */
+						}
+						
+						.typebuttontext {
+							float: left;
+							font-style: italic;
+							color: grey;
+							margin-left: 5px;
+							font-size: 110%;
+						}
+
+						.chevronicon {
+							float: right;
+							margin-top: 5px;
+						}
+
+						@media (min-width:1366){
+							.typetext, .typebutton, .typebuttontext {
+								font-size: 100%;
+							}
+						}
+					</td>
+					<!-- JavaScript -->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<!-- molekyle tabel for 'send with' - slut -->
+	<!-- molekyle tabel for 'time'-->
+	<article id="time">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Time</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="frame">
+					<div class="type">
+						<p class="typetext">Time</p>
+						<button type="" onclick="" class="typebutton">
+							<span class="typebuttontext">00:00</span>
+							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!-- HTML -->
+					<td class="code">
+						<div class="frame">
+							<div class="type">
+								<p class="typetext">Time</p>
+								<button type="" onclick="" class="typebutton">
+									<span class="typebuttontext">00:00</span>
+									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+								</button>
+							</div>
+						</div>
+					</td>
+					<!-- CSS -->
+					<td class="code">
+						/*Here starts CSS code for type button*/
+						.frame {
+							float: left; /* Added float to display height right */
+							background-color: black;
+							width: 100%;
+							/* width: 400px; *//* Did not scale with parrent */
+						}
+
+						.type {
+							width: calc(100% - 10px); /* 100% width -10px margin */
+							margin-left: 5px;
+							margin-right: 5px; /* Margin added */
+						}
+
+						.typetext {
+							float: left; /* Added float to display height right */
+							color: white;
+							font-size: 110%; /* Must be larger on smaller screens */
+						}
+
+						.typebutton {
+							float: left; /* Added float to display height right */
+							width: 100%;
+							border-radius: 10px;
+							font-size: 110%; /* Must be larger on smaller screens */
+						}
+						
+						.typebuttontext {
+							float: left;
+							font-style: italic;
+							color: grey;
+							margin-left: 5px;
+							font-size: 110%;
+						}
+
+						.chevronicon {
+							float: right;
+							margin-top: 5px;
+						}
+
+						@media (min-width:1366){
+							.typetext, .typebutton, .typebuttontext {
+								font-size: 100%;
+							}
+						}
+					</td>
+					<!-- JavaScript -->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<!-- molekyle tabel for 'time' - slut -->
+	<!-- molekyle tabel for 'message'-->
+	<article id="message-textfield">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Message</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="frame">
+					<div class="type">
+						<p class="typetext">Message</p>
+						<textarea rows="4" cols="50" name="comment" class="type-text-field" placeholder="Enter message here..."></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!-- HTML -->
+					<td class="code">
+						<div class="frame">
+							<div class="type">
+								<p class="typetext">Message</p>
+								<textarea rows="4" cols="50" name="comment" class="type-text-field" placeholder="Enter message here..."></textarea>
+							</div>
+						</div>
+					</td>
+					<!-- CSS -->
+					<td class="code">
+						.frame {
+							float: left; /* Added float to display height right */
+							background-color: black;
+							width: 100%;
+							/* width: 400px; *//* Did not scale with parrent */
+						}
+
+						.type {
+							width: calc(100% - 10px); /* 100% width -10px margin */
+							margin-left: 5px;
+							margin-right: 5px; /* Margin added */
+						}
+
+						.typetext {
+							float: left; /* Added float to display height right */
+							color: white;
+							font-size: 110%; /* Must be larger on smaller screens */
+						}
+
+						.type-text-field{
+							float: left;
+							width: 100%;
+							min-height: 165px;
+							padding: 5px;
+							border: solid 1px #707070;
+							border-radius: 6px;
+							resize: none;
+							box-sizing: border-box;
+						}
+
+						@media (min-width:1366){
+							.typetext, .typebutton, .typebuttontext {
+								font-size: 100%;
+							}
+						}
+					</td>
+					<!-- JavaScript -->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<!-- molekyle tabel for 'message' - slut -->
 	<article id="quantity">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Quanitity select</h4>
@@ -3509,28 +3673,12 @@ select.typebutton option{
 			</table>
 		</div>
 	</article>
-
-	<!-- molekyle tabel for 'Raport display' - slut -->
 </section>
 <!-- Molekyler - SLUT -->
-
 <!-- ORGANISMER -->
 <section id="organisms">
 	<div class="wrapper">
 		<h3 class="styleguide-title">Organsimer</h3>
-		<!-- molekyle tabeller for overview-siden -->
-        <!-- Liste over organimser -->
-		<!-- Should be deleted. Waiting for group response
-		<ul>
-			<li>Navigation-Bar</li>
-			<li>Vertikal display af rapport på “show”</li>
-			<li>Horisontal display af rapport på “show”</li>
-			<li>Create new report</li>
-			<li>Create new report pop-up</li>
-			<li><a href="#uploadpopup">Upload pop-up's<a></li>
-			<li>FLERE ORGANISMER INCOMING..</li>
-		</ul>
-		-->
 	</div>
 	<!-- organisme tabel for 'Navigation-Bar' - start-->
 	<article id="navigation-bar">
@@ -3584,43 +3732,44 @@ select.typebutton option{
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-				<nav>
-			<div class="branddiv">
-			<!--LOGO-->
-			<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
-			<!--MAIN NAVIGATION-->
-			<ul class="navbarulleft">
-				<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
-				<li><a>Trendboards</a></li>
-				<li><a>Reports</a></li>
-				<li><a>Views</a></li>
-				<li><a>Feeds</a></li>
-				<li><a>Settings</a></li>
-				<li><a>Shares</a></li>
-			</ul>
-		</div>
-			<div class="profilediv">
-			<ul class="navbarulright" style="float: right;">
-				<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
-				<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
-				<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
-				<li><p class="channels">channels</p></li>
-				<li class="selection">
-					<select class="channelselect">
-						<option>channelnames</option>
-					</select></li>
-				<!--USERNAME-->
-				<li class="profiledropdown">
-					<a class="profiledropdown-a">
-						<span class="username">Profile P.</span>
-						<img class="profile-icon" src="img/icons/user.svg" alt="profile">
-					</a>
-				</li>
-			</ul>
-		</div>
-		</nav>
+						<nav>
+							<div class="branddiv">
+								<!--LOGO-->
+								<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
+								<!--MAIN NAVIGATION-->
+								<ul class="navbarulleft">
+									<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
+									<li><a>Trendboards</a></li>
+									<li><a>Reports</a></li>
+									<li><a>Views</a></li>
+									<li><a>Feeds</a></li>
+									<li><a>Settings</a></li>
+									<li><a>Shares</a></li>
+								</ul>
+							</div>
+							<div class="profilediv">
+								<ul class="navbarulright" style="float: right;">
+									<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
+									<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
+									<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
+									<li><p class="channels">channels</p></li>
+									<li class="selection">
+										<select class="channelselect">
+											<option>channelnames</option>
+										</select>
+									</li>
+									<!--USERNAME-->
+									<li class="profiledropdown">
+										<a class="profiledropdown-a">
+											<span class="username">Profile P.</span>
+											<img class="profile-icon" src="img/icons/user.svg" alt="profile">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</nav>
 					</td>
-					  <!--CSS to copy-->
+					<!--CSS to copy-->
 					<td class="code">
 						nav{
 							width: 100%;
@@ -3786,53 +3935,58 @@ select.typebutton option{
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-	<nav class="smallnav">
-		<div class="branddiv">
-			<!--LOGO-->
-			<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
-			<!--MAIN NAVIGATION-->
-			<ul>
-				<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
-				<li><a>Trendboards</a></li>
-				<li><a>Reports</a></li>
-				<li><a>Views</a></li>
-				<li><a>Feeds</a></li>
-				<li><a>Settings</a></li>
-				<li><a>Shares</a></li>
-			</ul>
-		</div>
-		<div>
-			<ul>
-				<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
-				<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
-				<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
-				<li><p class="channels">channels</p></li>
-				<li class="selection">
-					<select class="channelselect">
-						<option>channelnames</option>
-					</select></li>
-				<!--USERNAME-->
-				<li class="profiledropdown">
-					<a class="profiledropdown-a">
-						<span class="username">Profile P.</span>
-						<img class="profile-icon" src="img/icons/user.svg" alt="profile">
-					</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
+						<nav class="smallnav">
+							<div class="branddiv">
+								<!--LOGO-->
+								<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
+								<!--MAIN NAVIGATION-->
+								<ul>
+									<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
+									<li><a>Trendboards</a></li>
+									<li><a>Reports</a></li>
+									<li><a>Views</a></li>
+									<li><a>Feeds</a></li>
+									<li><a>Settings</a></li>
+									<li><a>Shares</a></li>
+								</ul>
+							</div>
+							<div>
+								<ul>
+									<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
+									<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
+									<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
+									<li><p class="channels">channels</p></li>
+									<li class="selection">
+										<select class="channelselect">
+											<option>channelnames</option>
+										</select></li>
+									<!--USERNAME-->
+									<li class="profiledropdown">
+										<a class="profiledropdown-a">
+											<span class="username">Profile P.</span>
+											<img class="profile-icon" src="img/icons/user.svg" alt="profile">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</nav>
 					</td>
 					<!--CSS to copy-->
 					<td class="code">
 						.smallnav{
+							position: absolute;
+							top: 0;
+							left: 0;
 							float: left;
 							background-color: #222;
 							display: block;
-							width: auto;
+							width: 100%;
+							height: 100vh;
+							overflow-y: auto;
 						}
 						.smallnav div{
 							display: block;
-							float: left;
+							float: le	ft;
 							width: 100%;
 						}
 
@@ -3846,12 +4000,6 @@ select.typebutton option{
 						}
 						.smallnav div ul li a{
 							font-weight: bold;
-							font-size: 14px;
-							color: #ffffff;
-							float: left;
-							padding: 15px;
-							text-decoration: none;
-							width: 93%;
 						}
 
 						.smallnav img.icon{
@@ -3861,35 +4009,35 @@ select.typebutton option{
 
 						.smallnav a{
 							font-weight: bold;
-							font-size: 14px;
 							color: #ffffff;
 							float: left;
 							padding: 15px;
 							text-decoration: none;
-							width: 93%;
+							width: 100%;
+							box-sizing: border-box;
+							cursor: pointer;
 						}
 						.smallnav a:hover{
 							background: #444;
 						}
 
-						.smallnav.selection{
+						.selection{
 							margin-top: 6px;
 						}
 
-						.smallnav.channels{
+						.smallnav .channels{
 							color: #9d9d9d;
 							font-size: 14px;
 							font-weight: 100;
 							padding: 15px;
 						 }
 
-						.smallnav.channelselect{
+						.smallnav .channelselect{
 						    display: block;
-						    width: 100%;
+						    width: calc(100% - 30px); /* 100% width - 30px margin*/
 						    height: 34px;
 						    padding: 6px 12px;
-						    font-size: 14px;
-						    line-height: 1.42857143;
+							margin: 0 15px;
 						    color: #555;
 						    background-color: #fff;
 						    background-image: none;
@@ -4168,26 +4316,20 @@ select.typebutton option{
 			<h3 id="sidetitlerogsettingsbar" class="styleguide-title">Delete pop-up's</h3>
 		</div>
 	</div>
-	<article id="delete-report-pop-up">
+	<article id="delete-report-pop-up" class="pop-up-article">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Pop ud delete - report</h4>
 		</div>
 		<div class="example">
-			<div class="wrapper">
-				<div class="popupdelete">
-					<span>Are you sure you want to delete "Report Name"?</span>
-					<div class="popupdeletebuttons">
-						<button type="button" class="cancel">Cancel</button>
-						<button type="button" class="delete">Delete</button>
-					</div>
+			<div class="popupdelete">
+				<span>Are you sure you want to delete "Report Name"?</span>
+				<div class="popupdeletebuttons">
+					<button type="button" class="cancel">Cancel</button>
+					<button type="button" class="delete">Delete</button>
 				</div>
 			</div>
 		</div>
 		<div class="wrapper">
-		  <!--what is this? -->
-		  @ -2392,18 +2392,159 @@ margin-left: 7px;
-		  <!--what is this? -->
-		  <!-- Det er en uløst merge-conflict nogen har pushed. -->
 			<table class="overvieworganimser">
 				<tr class="row-one">
 					<th>HTML</th>
@@ -4208,11 +4350,22 @@ select.typebutton option{
 					<!--CSS to copy-->
 					<td class="code">
 						.popupdelete {
+							position: absolute;
+							top: calc(50% - 110px); /* Half of screen - half of element height */
+							left: 0;
 							background-color: #262626;
 							text-align: center;
-							width: 400px;
+							width: 100%;
+							max-width: 400px;
 							height: 220px;
 							border-radius: 12px;
+						}
+
+						@media (min-width:401px){
+							/* Calculate left position, when width is over 400px */
+							.popupdelete {
+								left: calc(50vw - 200px); /* Half of screen - element width */
+							}
 						}
 
 						.popupdelete span {
@@ -4258,18 +4411,16 @@ select.typebutton option{
 			</table>
 		</div>
 	</article>
-	<article id="delete-folder-pop-up">
+	<article id="delete-folder-pop-up" class="pop-up-article">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Pop ud delete - folder</h4>
 		</div>
 		<div class="example">
-			<div class="wrapper">
-				<div class="popupdelete">
-					<span>Are you sure you want to delete "Folder Name"?</span>
-					<div class="popupdeletebuttons">
-						<button type="button" class="cancel">Cancel</button>
-						<button type="button" class="delete">Delete</button>
-					</div>
+			<div class="popupdelete">
+				<span>Are you sure you want to delete "Folder Name"?</span>
+				<div class="popupdeletebuttons">
+					<button type="button" class="cancel">Cancel</button>
+					<button type="button" class="delete">Delete</button>
 				</div>
 			</div>
 		</div>
@@ -4294,11 +4445,22 @@ select.typebutton option{
 					<!--CSS to copy-->
 					<td class="code">
 						.popupdelete {
+							position: absolute;
+							top: calc(50% - 110px); /* Half of screen - half of element height */
+							left: 0;
 							background-color: #262626;
 							text-align: center;
-							width: 400px;
+							width: 100%;
+							max-width: 400px;
 							height: 220px;
 							border-radius: 12px;
+						}
+
+						@media (min-width:401px){
+							/* Calculate left position, when width is over 400px */
+							.popupdelete {
+								left: calc(50vw - 200px); /* Half of screen - element width */
+							}
 						}
 
 						.popupdelete span {
@@ -4344,8 +4506,6 @@ select.typebutton option{
 			</table>
 		</div>
 	</article>
-
-
 	<div class="title-area">
 		<div class="wrapper">
 			<!--"SIDE TITEL OG SETTINGS BAR"-->

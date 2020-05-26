@@ -428,6 +428,17 @@ select.typebutton option{
 	font-size: 110%;
 }
 
+.type-text-field{
+	float: left;
+	width: 100%;
+	min-height: 165px;
+	padding: 5px;
+	border: solid 1px #707070;
+	border-radius: 6px;
+	resize: none;
+	box-sizing: border-box;
+}
+
 .chevronicon {
 	float: right;
 	margin-top: 5px;
@@ -1326,16 +1337,20 @@ nav a:hover{
 }
 /*Here starts CSS for NAV - Small screen*/
 .smallnav{
+	position: absolute;
+	top: 0;
+	left: 0;
 	float: left;
 	background-color: #222;
 	display: block;
-	width: auto;
-	margin-left: -5px;
-	margin-top: -35px;
+	width: 100%;
+	height: 100vh;
+	overflow-y: auto;
 }
+
 .smallnav div{
 	display: block;
-	float: left;
+	float: le	ft;
 	width: 100%;
 }
 
@@ -1344,17 +1359,13 @@ nav a:hover{
 	float: left;
 	width: 100%;
 }
+
 .smallnav div ul li{
 	width: 100%;
 }
+
 .smallnav div ul li a{
 	font-weight: bold;
-	font-size: 14px;
-	color: #ffffff;
-	float: left;
-	padding: 15px;
-	text-decoration: none;
-	width: 93%;
 }
 
 .smallnav img.icon{
@@ -1364,45 +1375,45 @@ nav a:hover{
 
 .smallnav a{
 	font-weight: bold;
-	font-size: 14px;
 	color: #ffffff;
 	float: left;
 	padding: 15px;
 	text-decoration: none;
-	width: 93%;
+	width: 100%;
+	box-sizing: border-box;
+	cursor: pointer;
 }
 .smallnav a:hover{
 	background: #444;
 }
 
-.smallnav.selection{
+.selection{
 	margin-top: 6px;
 }
 
-.smallnav.channels{
+.smallnav .channels{
 	color: #9d9d9d;
 	font-size: 14px;
 	font-weight: 100;
 	padding: 15px;
  }
 
-.smallnav.channelselect{
-    display: block;
-    width: 100%;
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
-    color: #555;
-    background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+.smallnav .channelselect{
+	display: block;
+	width: calc(100% - 30px); /* 100% width - 30px margin*/
+	height: 34px;
+	padding: 6px 12px;
+	margin: 0 15px;
+	color: #555;
+	background-color: #fff;
+	background-image: none;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+	-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+	-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
 
 .smallnav.profiledropdown-a{
@@ -1418,27 +1429,42 @@ nav a:hover{
 	font-size: 14px;
 	color: #ffffff;
 }
+
 .smallnav.profile-icon{
 	display: block;
 	width: 14px;
 	float: right;
 }
+
 .hiddenNav{
 	display: none;
 }
+
 .burgerMenu:hover + .hiddenNav{
 	display: block;
 }
 /*Here neds CSS for NAV - Small screen*/
 /*Here ends CSS for NAV - Small screen*/
 /*Here starts CSS for pop up delete*/
-.popupdelete{
+.popupdelete {
+	position: absolute;
+	top: calc(50% - 110px); /* Half of screen - half of element height */
+	left: 0;
 	background-color: #262626;
 	text-align: center;
-	width: 400px;
+	width: 100%;
+	max-width: 400px;
 	height: 220px;
 	border-radius: 12px;
 }
+
+@media (min-width:401px){
+	/* Calculate left position, when width is over 400px */
+	.popupdelete {
+		left: calc(50vw - 200px); /* Half of screen - element width */
+	}
+}
+
 .popupdelete span{
 	color: #fff;
 	margin: 50px auto;
@@ -2353,7 +2379,7 @@ header .wrapper, #wrapper_header_example header .wrapper {
 	}
 }
 
-/* styling marginer for sektioner*/
+/* styling for sektioner*/
 #styleguide section,
 #styleguide > section > article {
 	float: left;
@@ -2383,7 +2409,15 @@ header .wrapper, #wrapper_header_example header .wrapper {
 #styleguide .title-area {
 	width: 100%;
 }
-/* styling marginer for sektioner - slut*/
+
+#styleguide #navbar-bar-small-screens .example {
+	min-height: 100vh;
+}
+#styleguide .pop-up-article .example{
+	min-height: 300px;
+}
+
+/* styling for sektioner - slut*/
 
 /* - LISTER - */
 #styleguide section .wrapper > ul {
@@ -2423,8 +2457,11 @@ header .wrapper, #wrapper_header_example header .wrapper {
 	margin-bottom: 5px;
 	clear: both;
 }
+
 #styleguide #other-buttons button:last-child {
 	margin-bottom: 0;
 }
+
+
 /* --- ANITIONMER --- */
 /* No animations added yet */
