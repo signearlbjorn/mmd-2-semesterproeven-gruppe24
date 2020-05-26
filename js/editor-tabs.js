@@ -23,7 +23,7 @@ function switcheditbg(editbgswitch) {
 	}
 }
 console.log('editor-switcher-page-loaded');
-
+/*Denne funktion lader dig skifte mellem vertkal og horisontal sige visning i editor*/
 function switchpagepreview(previewSwitch){
 	console.log('Start funktion');
 	let editpreview = ["pageVertical", "pageHorizontal"];
@@ -40,3 +40,4 @@ function switchpagepreview(previewSwitch){
 		console.log('Loop end :-(');
 	}
 }
+/**/
