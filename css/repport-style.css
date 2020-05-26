@@ -1303,7 +1303,7 @@ nav a:hover{
 .burgerMenu{
 	display: block;
 	cursor: pointer;
-	float: none;
+	float: left;
 	width: 35px;
 }
 .bar1, .bar2, .bar3 {
@@ -1330,6 +1330,8 @@ nav a:hover{
 	background-color: #222;
 	display: block;
 	width: auto;
+	margin-left: -5px;
+	margin-top: -35px;
 }
 .smallnav div{
 	display: block;
