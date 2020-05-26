@@ -312,15 +312,32 @@ h3 {
 	background-color: transparent;
 }
 /*Here starts CSS code for settings menu*/
-.settingsmenu{
-	background-color: #D3D3D3;
+.settingsmenu, .settingsmenu-dark {
 	width: 250px;
 	border-radius: 12px;
+	padding-right: 12px;
+	padding-left: 12px;
+	padding-top: 10px;
+	padding-bottom: 25px;
+	border-sizing: border-box;
+}
+
+.settingsmenu-dark .settingsmenubutton:last-child,
+.settingsmenu .settingsmenubutton:last-child {
+	margin-bottom: 0;
+}
+
+.settingsmenu-dark .settingsmenubutton span,
+.settingsmenu .settingsmenubutton span {
+	font-size: 16px;
+	line-height: 20px;
+}
+
+.settingsmenu{
+	background-color: #D3D3D3;
 }
 .settingsmenu-dark{
 	background-color: #222222;
-	width: 250px;
-	border-radius: 12px;
 }
 .closesettingmenu{
 	display: block;
@@ -348,8 +365,16 @@ h3 {
 	width: 24px;
 	padding-left: 12px;
 }
+.settingsmenu-dark .settingsmenubutton,
+.settingsmenu .settingsmenubutton {
+	width: 100%;
+	padding: 8px 17px;
+	border: solid 1px #707070;
+	margin-bottom: 5px;
+	box-sizing: border-box;
+}
 
-.settingsmenubutton{
+.settingsmenubutton {
 	display: block;
 	width: auto;
 	margin: 0 auto;
