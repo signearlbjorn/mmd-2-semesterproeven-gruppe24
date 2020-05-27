@@ -152,6 +152,7 @@ button {
 /*Styleguide nav*/
 #atomicDesignNavigation{
 	align-content: center;
+	display: none;
 }
 #atomicDesignNavigation ul{
 	list-style: none;
@@ -159,8 +160,10 @@ button {
 	display: grid;
 	grid-template-columns: auto auto auto auto auto;
 }
-#atomicDesignNavigation{
-	display: grid;
+@media (min-width:768px){
+	#atomicDesignNavigation{
+		display: grid;
+	}
 }
 /* -- h1 HEADING -- */
 h1 {
@@ -1157,7 +1160,7 @@ margin-left: 7px;
 	grid-template-columns: auto;
 }
 
-@media (min-width:768px){
+@media (min-width:1366px){
 	.templates-overDiv{
 		grid-template-columns: auto auto;
 	}
