@@ -565,7 +565,6 @@ select.typebutton option{
 
 .text-icon{
     font-size: 20px;
-    margin-top: 30px;
 }
 
 
@@ -576,7 +575,7 @@ select.typebutton option{
 }
 
 .texticon-iconimg{
-    width: 150%;
+    width: 100%;
     margin-bottom: -12px;
 }
 
@@ -872,7 +871,6 @@ margin-left: 7px;
 		/*style for kanppens baggrund*/
 		.megaswitch {
 		  position: relative;
-		  margin: 20px auto;
 		  height: 26px;
 		  width: 240px;
 		  background: white;
@@ -1667,55 +1665,115 @@ nav a:hover{
 
 /* Styling for SIDE TITEL OG SETTINGS BAR" FOR EDITOR SIDEN ORAGBISME */
 /*PLACERING / POSITIONER*/
-.sidetitelcontainer, .previouspagecontainer {
-  float: left;
-}
-
 .closecontainer, .savecontainer, .deletecontainer {
 	float: right;
 }
 
-.savecontainer, .deletecontainer {
-	margin-right: 45px;
+@media (min-width:481px) {
+	.closecontainer, .savecontainer, .deletecontainer {
+		height: 7.277vw;
+	}
 }
 
-.previouspagecontainer {
+@media (min-width:768px) {
+	.closecontainer, .savecontainer, .deletecontainer {
+		height: 52px;
+	}
+}
 
+@media (min-width:1366px) {
+	.closecontainer, .savecontainer, .deletecontainer {
+		height: 56px;
+	}
+}
+
+@media (min-width: 1920px) {
+	.closecontainer, .savecontainer, .deletecontainer {
+		height: 3.073vw; /* ~59px on 1920px width */
+	}
+}
+
+@media (min-width:3840px) {
+	.closecontainer, .savecontainer, .deletecontainer {
+		height: 3.099vw; /* ~119px on 3840px width */
+	}
+}
+
+.sidetitelcontainer, .previouspagecontainer {
+  float: left;
+}
+
+.previouspagecontainer,
+.savecontainer,
+.deletecontainer,
+.switch-multiple-singular-container,
+.switch-horizontal-vertical-container,
+.addpageknapcontainer,
+.deletepageknapcontainer,
+.uploadimageknapcontainer,
+.nextpagecontainer {
+	margin-right: 1vw;
+}
+
+.closecontainer .text-icon, .savecontainer .text-icon, .deletecontainer .text-icon {
+	transform: translateY(50%);
 }
 
 .switch-multiple-singular-container {
-  float: left;
-	margin-left: 60px;
+	float: left;
 }
 
 .switch-horizontal-vertical-container{
-  float: left;
-	margin-left: 30px;
+	float: left;
 }
 
 .addpageknapcontainer {
-  float: left;
-	margin-left: 60px;
+	float: left;
 }
 
 .deletepageknapcontainer {
-  float: left;
-	margin-left: 60px;
+	float: left;
 }
 
 .uploadimageknapcontainer {
 	float: left;
-	margin-left: 60px;
 }
 
 .nextpagecontainer {
 	float: left;
-	margin-left: 50px;
 }
 
 .megaswitchcontainer {
-  float: right;
-	margin-top: -20px;
+	float: right;
+}
+
+@media (min-width:1366px) {
+	.previouspagecontainer,
+	.savecontainer,
+	.deletecontainer,
+	.switch-multiple-singular-container,
+	.switch-horizontal-vertical-container,
+	.addpageknapcontainer,
+	.deletepageknapcontainer,
+	.uploadimageknapcontainer,
+	.nextpagecontainer {
+		margin-right: 34px;
+	}
+	
+	.folderoverviewcontainer .settingsmenubutton span,
+	.filtercontainer .filterbutton span,
+	.sortbycontainer .select-span {
+		display: inline-block;
+	}
+	
+	.sortbycontainer .sort-by-select,
+	.searchcontainer .searchInput {
+		max-width: 100%;
+	}
+	
+	.searchcontainer {
+		float: right;
+	}
 }
 /* Styling for SIDE TITEL OG SETTINGS BAR" FOR EDITOR SIDEN ORAGBISME - SLUT */
 
@@ -2186,6 +2244,11 @@ header .wrapper {
 
 /* --- PAGES --- */
 /* -- OVERVIEW -- */
+#overview,
+.overview {
+	width: 100%;
+}
+
 #overview .frameforsidetitelogsettingsbar .wrapper,
 .overview .frameforsidetitelogsettingsbar .wrapper {
 	float: none !important;

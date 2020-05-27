@@ -1719,7 +1719,6 @@ select.typebutton option{
 					<td class="code">
 						 .text-icon{
 							font-size: 20px;
-							margin-top: 30px;
 						}
 
 						.texticon-button{
@@ -1729,7 +1728,7 @@ select.typebutton option{
 						}
 
 						.texticon-iconimg{
-							width: 150%;
+							width: 100%;
 							margin-bottom: -12px;
 						}
 					</td>
@@ -2868,7 +2867,6 @@ select.typebutton option{
 					<td class="code">
 						.megaswitch {
 							position: relative;
-							margin: 20px auto;
 							height: 26px;
 							width: 240px;
 							background: white;
@@ -5235,114 +5233,174 @@ select.typebutton option{
 							</div>
 						</div>
 					</td>
-     <!--CSS to copy-->
-   <td class="code">
-	   				.sidetitelogsettingswrap {
-	   				margin-left: 3%;
-	   				width: 94%;
-	   				}
-	   				.topEditorHeader{
-					width: 100%;
-					}
-					.bottomEditorHeader{
-						width: 100%;
-						padding-top: 18px;
-	   				}
-	   				.sidetitelcontainer, .previouspagecontainer {
-	   				float: left;
-	   				}
-	   				.closecontainer, .savecontainer, .deletecontainer {
-	   				float: right;
-	   				}
-	   				.savecontainer, .deletecontainer {
-	   				margin-right: 45px;
-	   				}
-	   				.previouspagecontainer {
-	   				}
-	   				.switch-multiple-singular-container {
-	   				float: left;
-	   				margin-left: 60px;
-	   				}
-	   				.switch-horizontal-vertical-container{
-	   				float: left;
-	   				margin-left: 30px;
-	   				}
-	   				.addpageknapcontainer {
-	   				float: left;
-	   				margin-left: 60px;
-	   				}
-	   				.deletepageknapcontainer {
-	   				float: left;
-	   				margin-left: 60px;
-	   				}
-	   				.uploadimageknapcontainer {
-	   				float: left;
-	   				margin-left: 60px;
-	   				}
-	   				.nextpagecontainer {
-	   				float: left;
-	   				margin-left: 50px;
-	   				}
-	   				.megaswitchcontainer {
-	   				float: right;
-	   				margin-top: -20px;
-	   				}
-   </td>
-     <!--Js to copy-->
-         <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
-       </tr>
-       </table>
-     </div>
-  </article>
- <!--"SIDE TITEL OG SETTINGS BAR" FOR EDITOR SIDEN ORAGBISME - SLUT-->
+					<!--CSS to copy-->
+					<td class="code">
+						/* Styling for SIDE TITEL OG SETTINGS BAR" FOR EDITOR SIDEN ORAGBISME */
+						/*PLACERING / POSITIONER*/
+						.closecontainer, .savecontainer, .deletecontainer {
+							float: right;
+						}
 
+						@media (min-width:481px) {
+							.closecontainer, .savecontainer, .deletecontainer {
+								height: 7.277vw;
+							}
+						}
 
-<!--"UPLOAD POP-UP ORGANSIMER-->
+						@media (min-width:768px) {
+							.closecontainer, .savecontainer, .deletecontainer {
+								height: 52px;
+							}
+						}
+
+						@media (min-width:1366px) {
+							.closecontainer, .savecontainer, .deletecontainer {
+								height: 56px;
+							}
+						}
+
+						@media (min-width: 1920px) {
+							.closecontainer, .savecontainer, .deletecontainer {
+								height: 3.073vw; /* ~59px on 1920px width */
+							}
+						}
+
+						@media (min-width:3840px) {
+							.closecontainer, .savecontainer, .deletecontainer {
+								height: 3.099vw; /* ~119px on 3840px width */
+							}
+						}
+
+						.sidetitelcontainer, .previouspagecontainer {
+						  float: left;
+						}
+
+						.previouspagecontainer,
+						.savecontainer,
+						.deletecontainer,
+						.switch-multiple-singular-container,
+						.switch-horizontal-vertical-container,
+						.addpageknapcontainer,
+						.deletepageknapcontainer,
+						.uploadimageknapcontainer,
+						.nextpagecontainer {
+							margin-right: 1vw;
+						}
+
+						.closecontainer .text-icon, .savecontainer .text-icon, .deletecontainer .text-icon {
+							transform: translateY(50%);
+						}
+
+						.switch-multiple-singular-container {
+							float: left;
+						}
+
+						.switch-horizontal-vertical-container{
+							float: left;
+						}
+
+						.addpageknapcontainer {
+							float: left;
+						}
+
+						.deletepageknapcontainer {
+							float: left;
+						}
+
+						.uploadimageknapcontainer {
+							float: left;
+						}
+
+						.nextpagecontainer {
+							float: left;
+						}
+
+						.megaswitchcontainer {
+							float: right;
+						}
+
+						@media (min-width:1366px) {
+							.previouspagecontainer,
+							.savecontainer,
+							.deletecontainer,
+							.switch-multiple-singular-container,
+							.switch-horizontal-vertical-container,
+							.addpageknapcontainer,
+							.deletepageknapcontainer,
+							.uploadimageknapcontainer,
+							.nextpagecontainer {
+								margin-right: 34px;
+							}
+							
+							.folderoverviewcontainer .settingsmenubutton span,
+							.filtercontainer .filterbutton span,
+							.sortbycontainer .select-span {
+								display: inline-block;
+							}
+							
+							.sortbycontainer .sort-by-select,
+							.searchcontainer .searchInput {
+								max-width: 100%;
+							}
+							
+							.searchcontainer {
+								float: right;
+							}
+						}
+						/* Styling for SIDE TITEL OG SETTINGS BAR" FOR EDITOR SIDEN ORAGBISME - SLUT */
+					</td>
+					<!--Js to copy-->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<!--"SIDE TITEL OG SETTINGS BAR" FOR EDITOR SIDEN ORAGBISME - SLUT-->
+	<!--"UPLOAD POP-UP ORGANSIMER-->
 	<div class="title-area">
 		<div class="wrapper">
 			<h3 id="uploadpopup" class="styleguide-title">Ulpoad pop-up's</h3>
 		</div>
 	</div>
-
-  <!--"UPLOAD TEMPLATE POP-UP ORGANSIMER-->
+	<!--"UPLOAD TEMPLATE POP-UP ORGANSIMER-->
 		<div class="wrapper">
 			<h4 class="styleguide-title">Upload template pop-up</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-        <!-- eksempel for upload pop-up -->
-            <div class="frameforuploadpopup">
+				<!-- eksempel for upload pop-up -->
+				<div class="frameforuploadpopup">
 
-              <div class="uploadpopuptitelwrap">
-                  <img src="img/icons/upload.svg" width="40px" height="40px" alt="">
-                  <h1 class="uploadtemplate">Upload a template</h1>
-                  <img src="img/icons/x.svg" class="x1" width="40px" height="40px" alt="">
-              </div>
+				  <div class="uploadpopuptitelwrap">
+					  <img src="img/icons/upload.svg" width="40px" height="40px" alt="">
+					  <h1 class="uploadtemplate">Upload a template</h1>
+					  <img src="img/icons/x.svg" class="x1" width="40px" height="40px" alt="">
+				  </div>
 
-              <!-- upload template knap -->
-              <div class="uploadtemplateknap">
-                <p class="typetext">Upload template</p>
-                  <button type="" onclick="" class="typebutton">
-                    <span class="typebuttontext">Choose...</span>
-                    <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                  </button>
-              </div>
-              <!-- upload template knap - slut-->
+				  <!-- upload template knap -->
+				  <div class="uploadtemplateknap">
+					<p class="typetext">Upload template</p>
+					  <button type="" onclick="" class="typebutton">
+						<span class="typebuttontext">Choose...</span>
+						<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+					  </button>
+				  </div>
+				  <!-- upload template knap - slut-->
 
-              <!-- done knap -->
-               <div class="uploadpopuptextknapvenstre">
-                 <button type="button" onclick="" class="button-g"> Done </button>
-               </div>
-              <!-- done - slut-->
+				  <!-- done knap -->
+				   <div class="uploadpopuptextknapvenstre">
+					 <button type="button" onclick="" class="button-g"> Done </button>
+				   </div>
+				  <!-- done - slut-->
 
-              <!-- cancel knap -->
-              <div class="uploadpopuptextknaphøjre">
-                 <button type="button" onclick="" class="button-w"> Cancel</button>
-               </div>
-              <!-- cancel knap slut - slut-->
+				  <!-- cancel knap -->
+				  <div class="uploadpopuptextknaphøjre">
+					 <button type="button" onclick="" class="button-w"> Cancel</button>
+				   </div>
+				  <!-- cancel knap slut - slut-->
 
-            </div>
-        <!-- eksempel for upload pop-up - slut-->
+				</div>
+				<!-- eksempel for upload pop-up - slut-->
 			</div>
 		</div>
 <!--"UPLOAD TEMPLATE POP-UP ORANISME TABEL-->
