@@ -2165,19 +2165,6 @@ nav a:hover{
 	}
 }
 
-.frameforsidetitelogsettingsbar .wrapper {
-	float: none !important;
-	width: 95% !important;
-	margin: 0 auto !important;
-	overflow: auto !important;
-}
-
-@media (min-width:1366px) {
-	.frameforsidetitelogsettingsbar .wrapper {
-		width: 75% !important;
-	}
-}
-
 header .wrapper {
 	width: 100%;
 }
@@ -2199,6 +2186,21 @@ header .wrapper {
 
 /* --- PAGES --- */
 /* -- OVERVIEW -- */
+#overview .frameforsidetitelogsettingsbar .wrapper,
+.overview .frameforsidetitelogsettingsbar .wrapper {
+	float: none !important;
+	width: 95% !important;
+	margin: 0 auto !important;
+	overflow: auto !important;
+}
+
+@media (min-width:1366px) {
+	#overview .frameforsidetitelogsettingsbar .wrapper,
+	.overview .frameforsidetitelogsettingsbar .wrapper {
+		width: 75% !important;
+	}
+}
+
 
 /* -- SHOW  -- */
 
@@ -2227,18 +2229,21 @@ header .wrapper {
 }
 
 /* - WRAPPER - */
-#edit .topsection .wrapper {
-	width: 100%;
+.editor .frameforsidetitelogsettingsbar .wrapper,
+#editor .frameforsidetitelogsettingsbar .wrapper {
+	width: 100% !important;
 }
 
 @media (min-width:1920px) {
-	#edit .topsection .wrapper {
-		width: 75%;
+	.editor .frameforsidetitelogsettingsbar .wrapper,
+	#editor .frameforsidetitelogsettingsbar .wrapper {
+		width: 75% !important;
 	}
 }
 
-#edit .mainsection .wrapper {
-	width: calc(100% - 15px);
+.editor .mainsection .wrapper,
+#editor .mainsection .wrapper {
+	width: calc(100% - 15px) !important;
 }
 
 
