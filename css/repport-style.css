@@ -1779,10 +1779,21 @@ nav a:hover{
 
 /* Styling for Upload pop-up ORAGBISME*/
 .frameforuploadpopup {
+    position: absolute;
+    top: calc(50% - 110px); /* Half of screen - half of element height */
+    left: 0;
 	background-color: #D3D3D3;
-	width: 425px;
-  height: 220px;
-	border-radius: 5px;
+    width: 100%;
+    max-width: 425px;
+	height: 220px;
+    border-radius: 12px;
+}
+
+@media (min-width:401px){
+    /* Calculate left position, when width is over 400px */
+    .frameforuploadpopup {
+        left: calc(50vw - 212px); /* Half of screen - element width */
+    }
 }
 
 .x1 {

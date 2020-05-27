@@ -5363,6 +5363,7 @@ select.typebutton option{
 		</div>
 	</div>
 	<!--"UPLOAD TEMPLATE POP-UP ORGANSIMER-->
+	<article id="upload-template-pop-up" class="pop-up-article">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Upload template pop-up</h4>
 		</div>
@@ -5370,40 +5371,35 @@ select.typebutton option{
 			<div class="wrapper">
 				<!-- eksempel for upload pop-up -->
 				<div class="frameforuploadpopup">
-
-				  <div class="uploadpopuptitelwrap">
-					  <img src="img/icons/upload.svg" width="40px" height="40px" alt="">
-					  <h1 class="uploadtemplate">Upload a template</h1>
-					  <img src="img/icons/x.svg" class="x1" width="40px" height="40px" alt="">
-				  </div>
-
-				  <!-- upload template knap -->
-				  <div class="uploadtemplateknap">
-					<p class="typetext">Upload template</p>
-					  <button type="" onclick="" class="typebutton">
-						<span class="typebuttontext">Choose...</span>
-						<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-					  </button>
-				  </div>
-				  <!-- upload template knap - slut-->
-
-				  <!-- done knap -->
-				   <div class="uploadpopuptextknapvenstre">
-					 <button type="button" onclick="" class="button-g"> Done </button>
-				   </div>
-				  <!-- done - slut-->
-
-				  <!-- cancel knap -->
-				  <div class="uploadpopuptextknaphøjre">
-					 <button type="button" onclick="" class="button-w"> Cancel</button>
-				   </div>
-				  <!-- cancel knap slut - slut-->
-
+					<div class="uploadpopuptitelwrap">
+						<img src="img/icons/upload.svg" width="40px" height="40px" alt="">
+						<h1 class="uploadtemplate">Upload a template</h1>
+						<img src="img/icons/x.svg" class="x1" width="40px" height="40px" alt="">
+					</div>
+					<!-- upload template knap -->
+					<div class="uploadtemplateknap">
+						<p class="typetext">Upload template</p>
+						<button type="" onclick="" class="typebutton">
+							<span class="typebuttontext">Choose...</span>
+							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+					<!-- upload template knap - slut-->
+					<!-- done knap -->
+					<div class="uploadpopuptextknapvenstre">
+						<button type="button" onclick="" class="button-g"> Done </button>
+					</div>
+					<!-- done - slut-->
+					<!-- cancel knap -->
+					<div class="uploadpopuptextknaphøjre">
+						<button type="button" onclick="" class="button-w"> Cancel</button>
+					</div>
+					<!-- cancel knap slut - slut-->
 				</div>
 				<!-- eksempel for upload pop-up - slut-->
 			</div>
 		</div>
-<!--"UPLOAD TEMPLATE POP-UP ORANISME TABEL-->
+		<!--"UPLOAD TEMPLATE POP-UP ORANISME TABEL-->
 		<div class="wrapper">
 			<table class="table-ref">
 				<tr class="row-one">
@@ -5414,626 +5410,413 @@ select.typebutton option{
 				<tr class="row-two">
 					<!-- HTML -->
 					<td class="code">
-            <div class="frameforuploadpopup">
-
-              <div class="uploadpopuptitelwrap">
-                  <img src="img/icons/upload.svg" width="40px" height="40px" alt="">
-                  <h1 class="uploadtemplate">Upload a template</h1>
-                  <img src="img/icons/x.svg" class="x1" width="40px" height="40px" alt="">
-              </div>
-
-              <!-- upload template knap -->
-              <div class="uploadtemplateknap">
-                <p class="typetext">Upload template</p>
-                  <button type="" onclick="" class="typebutton">
-                    <span class="typebuttontext">Choose...</span>
-                    <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                  </button>
-              </div>
-              <!-- upload template knap - slut-->
-
-              <!-- done knap -->
-               <div class="uploadpopuptextknapvenstre">
-                 <button type="button" onclick="" class="button-g"> Done </button>
-               </div>
-              <!-- done - slut-->
-
-              <!-- cancel knap -->
-              <div class="uploadpopuptextknaphøjre">
-                 <button type="button" onclick="" class="button-w"> Cancel</button>
-               </div>
-              <!-- cancel knap slut - slut-->
-
-            </div>
+						<!-- eksempel for upload pop-up -->
+						<div class="frameforuploadpopup">
+							<div class="uploadpopuptitelwrap">
+								<img src="img/icons/upload.svg" width="40px" height="40px" alt="">
+								<h1 class="uploadtemplate">Upload a template</h1>
+								<img src="img/icons/x.svg" class="x1" width="40px" height="40px" alt="">
+							</div>
+							<!-- upload template knap -->
+							<div class="uploadtemplateknap">
+								<p class="typetext">Upload template</p>
+								<button type="" onclick="" class="typebutton">
+									<span class="typebuttontext">Choose...</span>
+									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+								</button>
+							</div>
+							<!-- upload template knap - slut-->
+							<!-- done knap -->
+							<div class="uploadpopuptextknapvenstre">
+								<button type="button" onclick="" class="button-g"> Done </button>
+							</div>
+							<!-- done - slut-->
+							<!-- cancel knap -->
+							<div class="uploadpopuptextknaphøjre">
+								<button type="button" onclick="" class="button-w"> Cancel</button>
+							</div>
+							<!-- cancel knap slut - slut-->
+						</div>
+						<!-- eksempel for upload pop-up - slut-->
 					</td>
 					<!-- CSS -->
 					<td class="code">
-            .frameforuploadpopup {
-            	background-color: #D3D3D3;
-            	width: 425px;
-              height: 220px;
-            	border-radius: 5px;
-            }
+						/* Styling for Upload pop-up ORAGBISME*/
+						.frameforuploadpopup {
+							position: absolute;
+							top: calc(50% - 110px); /* Half of screen - half of element height */
+							left: 0;
+							background-color: #D3D3D3;
+							width: 100%;
+							max-width: 425px;
+							height: 220px;
+							border-radius: 12px;
+						}
 
-            .x1 {
-            	float: right;
-            	margin-right: -110px;
-            }
+						@media (min-width:401px){
+							/* Calculate left position, when width is over 400px */
+							.frameforuploadpopup {
+								left: calc(50vw - 212px); /* Half of screen - element width */
+							}
+						}
 
-            .x2{
-            	float: right;
-            	margin-right: -170px;
-            }
+						.x1 {
+							float: right;
+							margin-right: -110px;
+						}
 
-            .uploadtemplate {
-            	margin-top: -10px;
-            }
+						.x2{
+							float: right;
+							margin-right: -170px;
+						}
 
-            .uploadpopuptitelwrap {
-            	margin-top: 15px;
-            }
+						.uploadtemplate {
+							margin-top: -10px;
+						}
 
-            .uploadpopuptitelwrap, .uploadtemplateknap{
-            	margin-left: 10px;
-            	margin-right: 10px;
-            }
+						.uploadpopuptitelwrap {
+							margin-top: 15px;
+						}
 
-            .uploadpopuptextknaphøjre {
-            	float: right;
-            	margin-top: 10px;
-            	margin-right: 10px;
-            }
+						.uploadpopuptitelwrap, .uploadtemplateknap{
+							margin-left: 10px;
+							margin-right: 10px;
+						}
 
-            .uploadpopuptextknapvenstre {
-            	float: left;
-            	margin-top: 10px;
-            	margin-left: 10px;
-            }
-          </td>
-  			  <!--Js to copy-->
-          <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
-        </tr>
-  	  </table>
-	</div>
- <!-- Upload template pop-up - slut -->
+						.uploadpopuptextknaphøjre {
+							float: right;
+							margin-top: 10px;
+							margin-right: 10px;
+						}
 
-  <!-- Upload image pop-up -->
-  <div class="wrapper">
-   <h4>Upload image pop-up</h4>
- </div>
-   <div class="example">
-     <div class="wrapper">
-         <!-- eksempel for upload pop-up -->
-             <div class="frameforuploadpopup">
-
-               <div class="uploadpopuptitelwrap">
-                   <img src="img/icons/image.svg" width="40px" height="40px" alt="">
-                   <h1 class="uploadtemplate">Upload image</h1>
-                   <img src="img/icons/x.svg" class="x2" width="40px" height="40px" alt="">
-               </div>
-
-               <!-- upload template knap -->
-               <div class="uploadtemplateknap">
-                 <p class="typetext">Upload image</p>
-                   <button type="" onclick="" class="typebutton">
-                     <span class="typebuttontext">Choose...</span>
-                     <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                   </button>
-               </div>
-
-               <!-- upload template knap - slut-->
-
-               <!-- done knap -->
-                <div class="uploadpopuptextknapvenstre">
-                  <button type="button" onclick="" class="button-g"> Done </button>
-                </div>
-               <!-- done - slut-->
-
-               <!-- cancel knap -->
-               <div class="uploadpopuptextknaphøjre">
-                  <button type="button" onclick="" class="button-w"> Cancel</button>
-                </div>
-               <!-- cancel knap slut - slut-->
-            </div>
-         <!-- eksempel for upload pop-up - slut-->
-       </div>
-     </div>
-     <div class="wrapper">
-         <!-- Tabel for upload -->
-         <table class="overvieworganimser">
-           <!-- Række 1-->
-           <tr class="row-one">
-               <th>Molekyler</th>
-               <th>Organisme</th>
-               <th>HTML</th>
-               <th>CSS</th>
-               <th>JavaScript</th>
-			 </tr>
-           <!-- Række 2-->
-           <tr class="row-two">
-     			<!--Molecules-->
-     			<td>
-     				<li>2x Icon</li>
-     				<li>Text</li>
-             <li>Knap med text og icon</li>
-             <li>2x knap med text</li>
-   			  </td>
-   				<!--Organism-->
-   			  <td>
-           se eksempel for oven
-			   </td>
-   				<!--HTML to copy-->
-           <td class="code">
-             <div class="frameforuploadpopup">
-               <div class="frameforuploadpopup">
-
-                 <div class="uploadpopuptitelwrap">
-                     <img src="img/icons/image.svg" width="40px" height="40px" alt="">
-                     <h1 class="uploadtemplate">Upload image</h1>
-                     <img src="img/icons/x.svg" class="x2" width="40px" height="40px" alt="">
-                 </div>
-
-                 <!-- upload template knap -->
-                 <div class="uploadtemplateknap">
-                   <p class="typetext">Upload image</p>
-                     <button type="" onclick="" class="typebutton">
-                       <span class="typebuttontext">Choose...</span>
-                       <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                     </button>
-                 </div>
-                 <!-- upload template knap - slut-->
-
-                 <!-- done knap -->
-                 <div class="uploadpopuptextknapvenstre">
-                    <button type="button" onclick="" class="button-g">Done</button>
-                 </div>
-                 <!-- done - slut-->
-
-                 <!-- cancel knap -->
-                 <div class="uploadpopuptextknaphøjre">
-                    <button type="button" onclick="" class="button-w">Cancel</button>
-                </div>
-                 <!-- cancel knap slut - slut-->
-               </div>
-             </div>
-      			</td>
-   			  <!--CSS to copy-->
-           <td class="code">
-             .frameforuploadpopup {
-             	background-color: #D3D3D3;
-             	width: 425px;
-               height: 220px;
-             	border-radius: 5px;
-             }
-
-             .x1 {
-             	float: right;
-             	margin-right: -110px;
-             }
-
-             .x2{
-             	float: right;
-             	margin-right: -170px;
-             }
-
-             .uploadtemplate {
-             	margin-top: -10px;
-             }
-
-             .uploadpopuptitelwrap {
-             	margin-top: 15px;
-             }
-
-             .uploadpopuptitelwrap, .uploadtemplateknap{
-             	margin-left: 10px;
-             	margin-right: 10px;
-             }
-
-             .uploadpopuptextknaphøjre {
-             	float: right;
-             	margin-top: 10px;
-             	margin-right: 10px;
-             }
-
-             .uploadpopuptextknapvenstre {
-             	float: left;
-             	margin-top: 10px;
-             	margin-left: 10px;
-             }
-           </td>
-   			  <!--Js to copy-->
-           <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
-         </tr>
-   	  </table>
-      <!-- wrapper close div-->
-     </div>
-     <!-- wrapper close div-->
-<!-- Upload image pop-up - slut -->
-<br>
-<!-- Pop up's from dropdown menu -->
-  <div class="wrapper">
-  <h3> Pop up's from dropdown menu</h3>
-  </div>
-
-  <div class="wrapper">
-   <h4>POP-UP SHARE AS ORGANISME</h4>
- </div>
-
-   <!--organisme for stor til at være i table -->
-   <div class="example">
-     <div class="wrapper">
-       <!-- SHARE AS-POP-UP ORGANISME -->
-             <div class="frameforshareaspopup">
-
-               <div class="popuptitel">
-                   <img class="settingpopupicon" src="img/icons/sharegreen.svg" alt="">
-                   <img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
-                   <h1 class="settingtitel">Share as</h1>
-               </div>
-
-               <!-- Choose printer knap -->
-               <div class="settingpopupknap">
-					<label>
-						<span class="typetext">Share as ...</span>
-						<div class="select-wrapper">
-							<select name="share-report-as" class="typebutton select">
-								<option value="pdf" selected>PDF</option>
-								<option value="qr">QR-code</option>
-								<option value="link">Link</option>
-							</select>
+						.uploadpopuptextknapvenstre {
+							float: left;
+							margin-top: 10px;
+							margin-left: 10px;
+						}
+						/* Styling for Upload pop-up ORAGBISME - SLUT */
+					</td>
+					<!--Js to copy-->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<!-- Upload template pop-up - slut -->
+	<!-- Upload image pop-up -->
+	<article id="upload-image-pop-up" class="pop-up-article">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Upload image pop-up</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<!-- eksempel for upload pop-up -->
+				<div class="frameforuploadpopup">
+					<div class="uploadpopuptitelwrap">
+						<img src="img/icons/image.svg" width="40px" height="40px" alt="">
+						<h1 class="uploadtemplate">Upload image</h1>
+						<img src="img/icons/x.svg" class="x2" width="40px" height="40px" alt="">
+					</div>
+					<!-- upload template knap -->
+					<div class="uploadtemplateknap">
+						<p class="typetext">Upload image</p>
+						<button type="" onclick="" class="typebutton">
+								<span class="typebuttontext">Choose...</span>
+								<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+					<!-- upload template knap - slut-->
+					<!-- done knap -->
+					<div class="uploadpopuptextknapvenstre">
+						<button type="button" onclick="" class="button-g"> Done </button>
+					</div>
+				   <!-- done - slut-->
+				   <!-- cancel knap -->
+					<div class="uploadpopuptextknaphøjre">
+						<button type="button" onclick="" class="button-w"> Cancel</button>
+					</div>
+					<!-- cancel knap slut - slut-->
+				</div>
+				<!-- eksempel for upload pop-up - slut-->
+			</div>
+		</div>
+		<div class="wrapper">
+			<!-- Tabel for upload -->
+			<table class="overvieworganimser">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML to copy-->
+					<td class="code">
+						<div class="frameforuploadpopup">
+							<div class="uploadpopuptitelwrap">
+								<img src="img/icons/image.svg" width="40px" height="40px" alt="">
+								<h1 class="uploadtemplate">Upload image</h1>
+								<img src="img/icons/x.svg" class="x2" width="40px" height="40px" alt="">
+							</div>
+							<!-- upload template knap -->
+							<div class="uploadtemplateknap">
+								<p class="typetext">Upload image</p>
+								<button type="" onclick="" class="typebutton">
+										<span class="typebuttontext">Choose...</span>
+										<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+								</button>
+							</div>
+							<!-- upload template knap - slut-->
+							<!-- done knap -->
+							<div class="uploadpopuptextknapvenstre">
+								<button type="button" onclick="" class="button-g"> Done </button>
+							</div>
+						   <!-- done - slut-->
+						   <!-- cancel knap -->
+							<div class="uploadpopuptextknaphøjre">
+								<button type="button" onclick="" class="button-w"> Cancel</button>
+							</div>
+							<!-- cancel knap slut - slut-->
 						</div>
-				   </label>
-               </div>
-               <!-- Choose printer knap - slut-->
+					</td>
+					<!--CSS to copy-->
+					<td class="code">
+						/* Styling for Upload pop-up ORAGBISME*/
+						.frameforuploadpopup {
+							position: absolute;
+							top: calc(50% - 110px); /* Half of screen - half of element height */
+							left: 0;
+							background-color: #D3D3D3;
+							width: 100%;
+							max-width: 425px;
+							height: 220px;
+							border-radius: 12px;
+						}
 
-               <!-- Choose quantity knap -->
-               <div class="settingpopupknap">
-                 <p class="typetext">Share to</p>
-                   <button type="" onclick="" class="typebutton">
-                     <span class="typebuttontext">email@example.com</span>
-                     <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                   </button>
-               </div>
-               <!-- Choose quantity knap - slut-->
+						@media (min-width:401px){
+							/* Calculate left position, when width is over 400px */
+							.frameforuploadpopup {
+								left: calc(50vw - 212px); /* Half of screen - element width */
+							}
+						}
 
-               <!-- Email knap -->
-               <div class="settingpopupknap">
-                 <p class="typetext">Your email</p>
-                   <button type="" onclick="" class="typebutton">
-                     <span class="typebuttontext">email@example.com</span>
-                     <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                   </button>
-               </div>
-               <!-- Email knap - slut-->
+						.x1 {
+							float: right;
+							margin-right: -110px;
+						}
 
-               <!-- message input -->
-               <div class="messageframe">
-                  <div class="type">
-                      <p class="typetext">Message</p>
-                      <form action="/action_page.php" id="message"></form>
-                      <br>
-                      <textarea rows="4" cols="50" name="comment" form="usrform"> Enter message here...</textarea>
-                  </div>
-                </div>
-                <!-- message input slut -->
+						.x2{
+							float: right;
+							margin-right: -170px;
+						}
 
-                <!-- cancel knap -->
-                <div class="popupcancelknap">
-                   <button type="button" onclick="" class="button-w">Cancel</button>
-                </div>
-                <!-- cancel knap slut - slut-->
+						.uploadtemplate {
+							margin-top: -10px;
+						}
 
-                <!-- done knap -->
-                <div class="popupdoneknap">
-                   <button type="button" onclick="" class="button-g">Done</button>
-                </div>
+						.uploadpopuptitelwrap {
+							margin-top: 15px;
+						}
+
+						.uploadpopuptitelwrap, .uploadtemplateknap{
+							margin-left: 10px;
+							margin-right: 10px;
+						}
+
+						.uploadpopuptextknaphøjre {
+							float: right;
+							margin-top: 10px;
+							margin-right: 10px;
+						}
+
+						.uploadpopuptextknapvenstre {
+							float: left;
+							margin-top: 10px;
+							margin-left: 10px;
+						}
+						/* Styling for Upload pop-up ORAGBISME - SLUT */
+					</td>
+					<!--Js to copy-->
+					<td class="empty"></td>
+				</tr>
+			</table>
+			<!-- wrapper close div-->
+		</div>
+		<!-- wrapper close div-->
+	</article>
+	<!-- Upload image pop-up - slut -->
+	<div class="title-area">
+		<div class="wrapper">
+			<h3 class="styleguide-title">Pop up's from dropdown menu</h3>
+		</div>
+	</div>
+	<!-- Pop up's from dropdown menu -->
+	<article id="upload-image-pop-up" class="pop-up-article">
+		<div class="wrapper">
+			<h4 class="styleguide-title">POP-UP SHARE AS ORGANISME</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<!-- SHARE AS-POP-UP ORGANISME -->
+				<div class="frameforshareaspopup">
+					<div class="popuptitel">
+						<img class="settingpopupicon" src="img/icons/sharegreen.svg" alt="">
+						<img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
+						<h1 class="settingtitel">Share as</h1>
+					</div>
+					<!-- Choose printer knap -->
+					<div class="settingpopupknap">
+						<label>
+							<span class="typetext">Share as ...</span>
+							<div class="select-wrapper">
+								<select name="share-report-as" class="typebutton select">
+									<option value="pdf" selected>PDF</option>
+									<option value="qr">QR-code</option>
+									<option value="link">Link</option>
+								</select>
+							</div>
+					   </label>
+					</div>
+					<!-- Choose printer knap - slut-->
+					<!-- Choose quantity knap -->
+					<div class="settingpopupknap">
+						<p class="typetext">Share to</p>
+						<button type="" onclick="" class="typebutton">
+							<span class="typebuttontext">email@example.com</span>
+							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+					<!-- Choose quantity knap - slut-->
+					<!-- Email knap -->
+					<div class="settingpopupknap">
+						<p class="typetext">Your email</p>
+						<button type="" onclick="" class="typebutton">
+							<span class="typebuttontext">email@example.com</span>
+							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+					<!-- Email knap - slut-->
+					<!-- message input -->
+					<div class="messageframe">
+						<div class="type">
+							<p class="typetext">Message</p>
+							<form action="/action_page.php" id="message"></form>
+							<br>
+							<textarea rows="4" cols="50" name="comment" form="usrform"> Enter message here...</textarea>
+						</div>
+					</div>
+					<!-- message input slut -->
+					<!-- cancel knap -->
+					<div class="popupcancelknap">
+						<button type="button" onclick="" class="button-w">Cancel</button>
+					</div>
+					<!-- cancel knap slut - slut-->
+					<!-- done knap -->
+					<div class="popupdoneknap">
+						<button type="button" onclick="" class="button-g">Done</button>
+					</div>
                 <!-- done - slut-->
-             </div>
-       <!-- SHARE AS-POP-UP ORGANISME - SLUT -->
-      <!--example close div-->
-     </div>
-     <!--slut-->
-   </div>
-  <!--"POP-UP EKSEMPEL - SLUT-->
-
-  <div class="wrapper">
-  <!--"TABEL for pop-up -->
-  <table class="overvieworganimser">
-          <tr class="row-one">
-            <th>HTML</th>
-            <th>CSS</th>
-            <th>JavaScript</th>
-          </tr>
-        <!-- række 2 i tabel -->
-        <tr class="row-two">
-      <!--Molecules-->
-            <!--HTML to copy-->
-          <td class="code">
-            <div class="frameforshareaspopup">
-
-              <div class="popuptitel">
-                  <img class="settingpopupicon" src="img/icons/sharegreen.svg" alt="">
-                  <img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
-                  <h1 class="settingtitel">Share as</h1>
-              </div>
-
-              <!-- Choose printer knap -->
-              <div class="settingpopupknap">
-                <p class="typetext">Share as</p>
-                  <button type="" onclick="" class="typebutton">
-                    <span class="typebuttontext">PDF</span>
-                    <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                  </button>
-              </div>
-              <!-- Choose printer knap - slut-->
-
-              <!-- Choose quantity knap -->
-              <div class="settingpopupknap">
-                <p class="typetext">Share to</p>
-                  <button type="" onclick="" class="typebutton">
-                    <span class="typebuttontext">email@example.com</span>
-                    <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                  </button>
-              </div>
-              <!-- Choose quantity knap - slut-->
-
-              <!-- Email knap -->
-              <div class="settingpopupknap">
-                <p class="typetext">Your email</p>
-                  <button type="" onclick="" class="typebutton">
-                    <span class="typebuttontext">email@example.com</span>
-                    <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                  </button>
-              </div>
-              <!-- Email knap - slut-->
-
-              <!-- message input -->
-              <div class="messageframe">
-                 <div class="type">
-                     <p class="typetext">Message</p>
-                     <form action="/action_page.php" id="message"></form>
-                     <br>
-                     <textarea rows="4" cols="50" name="comment" form="usrform"> Enter message here...</textarea>
-                 </div>
-               </div>
-               <!-- message input slut -->
-
-               <!-- cancel knap -->
-               <div class="popupcancelknap">
-                  <button type="button" onclick="" class="button-w">Cancel</button>
-               </div>
-               <!-- cancel knap slut - slut-->
-
-               <!-- done knap -->
-               <div class="popupdoneknap">
-                  <button type="button" onclick="" class="button-g">Done</button>
-               </div>
-          </td>
-            <!--CSS to copy-->
-          <td class="code">
-            .frameforsettingpopup {
-            	background-color: #222222;
-            	width:450px;
-              height: 400px;
-            	border-radius: 5px;
-            }
-
-            .settingtitel {
-            	color: white;
-            	margin-top: -10px;
-            	margin-left: 10px;
-            }
-
-            .settingpopupicon, .settingpopupxicon {
-            	width: 40px;
-            	height: 40px;
-            }
-
-            .settingpopupxicon {
-            	float: right;
-            	margin-right: -200px;
-            }
-
-            .popuptitel, .settingpopupknap{
-            	margin-top: 20px;
-            	margin-left: 10px;
-            	margin-right: 10px;
-            }
-
-            .popupcancelknap {
-            	float: left;
-            	margin-top: 200px;
-            	margin-left: -105px;
-            }
-
-            .popupdoneknap {
-            	float: right;
-            	margin-top: 200px;
-            	margin-right: 20px;
-            }
-            /*Styling for setting pop-up organismer - SLUT*/
-
-            /*ekstra style til share as pop-up*/
-            .frameforshareaspopup {
-            	background-color: #222222;
-            	width:450px;
-              height: 600px;
-            	border-radius: 5px;
-            }
-
-            .messageframe {
-            	width: 100px;
-            	margin-left: 10px;
-            	margin-right: 10px;
-            }
-
-            .textarea {
-            	width: 100px;
-            	height: 100px;
-            }
-            /*ekstra style til share as pop-up - SLUT*/
-          </td>
-            <!--Js to copy-->
-          <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
-        </tr>
-      </table>
-  <!--"POP UP SHARE AS ORGANISMER- SLUT-->
-</div>
-<br>
-<div class="wrapper">
-  <h4>POP-UP SCHEDULE ORGANISME</h4>
-</div>
-<div class="example">
-  <div class="wrapper">
-  <!--organisme for stor til at være i table -->
-      <!-- SHCHEDULE POP-UP ORGANISME -->
-            <div class="frameforshareaspopup">
-
-              <div class="popuptitel">
-                  <img class="settingpopupicon" src="img/icons/calendargreen.svg" alt="">
-                  <img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
-                  <h1 class="settingtitel">Schedule</h1>
-              </div>
-
-              <!-- Type knap -->
-              <div class="settingpopupknap">
-                <p class="typetext">Type</p>
-                  <button type="" onclick="" class="typebutton">
-                    <aspan class="typebuttontext">Day of week</aspan>
-                    <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                  </button>
-              </div>
-              <!-- Type knap - slut-->
-
-              <!-- Time knap -->
-              <div class="settingpopupknap">
-                <p class="typetext">Time</p>
-                  <button type="" onclick="" class="timebutton">
-                    <aspan class="typebuttontext">00:00</aspan>
-                  </button>
-              </div>
-              <!-- Time knap- slut-->
-
-              <!-- Email knap -->
-              <div class="settingpopupknap">
-                <p class="typetext">Your email</p>
-                  <button type="" onclick="" class="typebutton">
-                    <aspan class="typebuttontext">email@example.com</aspan>
-                    <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                  </button>
-              </div>
-              <!-- Email knap - slut-->
-
-              <!-- message input -->
-              <div class="messageframe">
-                 <div class="type">
-                     <p class="typetext">Message</p>
-                     <form action="/action_page.php" id="message"></form>
-                     <br>
-                     <textarea rows="4" cols="50" name="comment" form="usrform"> Enter message here...</textarea>
-                 </div>
-               </div>
-               <!-- message input - slut -->
-
-               <!-- cancel knap -->
-               <div class="popupcancelknap">
-                  <button type="button" onclick="" class="button-w">Cancel</button>
-               </div>
-               <!-- cancel knap slut - slut-->
-
-               <!-- done knap -->
-               <div class="popupdoneknap">
-                  <button type="button" onclick="" class="button-g">Done</button>
-               </div>
-            </div>
-      <!-- SHCEDULE POP-UP ORGANISME - SLUT -->
-  </div>
- <!--"POP-UP EKSEMPEL - SLUT-->
-  </div>
-
-<div class="wrapper">
- <!--"TABEL for pop-up -->
- <table class="overvieworganimser">
-         <tr class="row-one">
-           <th>Molekyler</th>
-           <th>Organsime</th>
-           <th>HTML</th>
-           <th>CSS</th>
-           <th>JavaScript</th>
-         </tr>
-       <!-- række 2 i tabel -->
-       <tr class="row-two">
-     <!--Molecules-->
-           <td>
-           x
-           </td>
-           <!--Organism-->
-         <td>
-           Se eksempel over tabellen
-         </td>
-           <!--HTML to copy-->
-         <td class="code">
-           <div class="frameforshareaspopup">
-
-             <div class="popuptitel">
-                 <img class="settingpopupicon" src="img/icons/calendargreen.svg" alt="">
-                 <img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
-                 <h1 class="settingtitel">Schedule</h1>
-             </div>
-
-             <!-- Type knap -->
-             <div class="settingpopupknap">
-               <p class="typetext">Type</p>
-                 <button type="" onclick="" class="typebutton">
-                   <aspan class="typebuttontext">Day of week</aspan>
-                   <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                 </button>
-             </div>
-             <!-- Type knap - slut-->
-
-             <!-- Time knap -->
-             <div class="settingpopupknap">
-               <p class="typetext">Time</p>
-                 <button type="" onclick="" class="timebutton">
-                   <aspan class="typebuttontext">00:00</aspan>
-                 </button>
-             </div>
-             <!-- Time knap- slut-->
-
-             <!-- Email knap -->
-             <div class="settingpopupknap">
-               <p class="typetext">Your email</p>
-                 <button type="" onclick="" class="typebutton">
-                   <aspan class="typebuttontext">email@example.com</aspan>
-                   <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                 </button>
-             </div>
-             <!-- Email knap - slut-->
-
-             <!-- message input -->
-             <div class="messageframe">
-                <div class="type">
-                    <p class="typetext">Message</p>
-                    <form action="/action_page.php" id="message"></form>
-                    <br>
-                    <textarea rows="4" cols="50" name="comment" form="usrform"> Enter message here...</textarea>
-                </div>
-              </div>
-              <!-- message input - slut -->
-
-              <!-- cancel knap -->
-              <div class="popupcancelknap">
-                 <button type="button" onclick="" class="button-w">Cancel</button>
-              </div>
-              <!-- cancel knap slut - slut-->
-
-              <!-- done knap -->
-              <div class="popupdoneknap">
-                 <button type="button" onclick="" class="button-g">Done</button>
-              </div>
-         </td>
-           <!--CSS to copy-->
-         <td class="code">
+				</div>
+			   <!-- SHARE AS-POP-UP ORGANISME - SLUT -->
+			</div>
+		</div>
+		<div class="wrapper">
+			<!--"TABEL for pop-up -->
+			<table class="overvieworganimser">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML to copy-->
+					<td class="code">
+					</td>
+					<!--CSS to copy-->
+					<td class="code">
+					</td>
+					<!--Js to copy-->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<!--"POP UP SHARE AS ORGANISMER- SLUT-->
+	<article id="upload-schedule-pop-up" class="pop-up-article">
+		<div class="wrapper">
+			<h4 class="styleguide-title">POP-UP SCHEDULE</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<!-- SHCHEDULE POP-UP ORGANISME -->
+				<div class="frameforshareaspopup">
+					<div class="popuptitel">
+						<img class="settingpopupicon" src="img/icons/calendargreen.svg" alt="">
+						<img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
+						<h1 class="settingtitel">Schedule</h1>
+					</div>
+					<!-- Type knap -->
+					<div class="settingpopupknap">
+						<p class="typetext">Type</p>
+						<button type="" onclick="" class="typebutton">
+							<span class="typebuttontext">Day of week</span>
+							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+					<!-- Type knap - slut-->
+					<!-- Time knap -->
+					<div class="settingpopupknap">
+						<p class="typetext">Time</p>
+						<button type="" onclick="" class="timebutton">
+							<span class="typebuttontext">00:00</span>
+					  </button>
+					</div>
+					<!-- Time knap- slut-->
+					<!-- Email knap -->
+					<div class="settingpopupknap">
+						<p class="typetext">Your email</p>
+						<button type="" onclick="" class="typebutton">
+							<span class="typebuttontext">email@example.com</span>
+							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+					<!-- Email knap - slut-->
+					<!-- message input -->
+					<div class="messageframe">
+						<div class="type">
+							<p class="typetext">Message</p>
+							<form action="/action_page.php" id="message"></form>
+							<br>
+							<textarea rows="4" cols="50" name="comment" form="usrform"> Enter message here...</textarea>
+						</div>
+					</div>
+					<!-- message input - slut -->
+					<!-- cancel knap -->
+					<div class="popupcancelknap">
+						<button type="button" onclick="" class="button-w">Cancel</button>
+					</div>
+					<!-- cancel knap slut - slut-->
+					<!-- done knap -->
+					<div class="popupdoneknap">
+						<button type="button" onclick="" class="button-g">Done</button>
+					</div>
+				</div>
+			<!-- SHCEDULE POP-UP ORGANISME - SLUT -->
+			</div>
+		</div>
+		<div class="wrapper">
+			<!--"TABEL for pop-up -->
+			<table class="overvieworganimser">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML to copy-->
+					<td class="code">
+					</td>
+					<!--CSS to copy-->
+					<td class="code">
            .frameforsettingpopup {
            	background-color: #222222;
            	width:450px;
@@ -6079,124 +5862,72 @@ select.typebutton option{
            	width: 80px;
            	border-radius: 10px;
            }
-         </td>
-           <!--Js to copy-->
-         <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
-       </tr>
-     </table>
- <!--"POP UP SCHEDULE ORGANISMER- SLUT-->
-</div>
-<br>
-<div class="wrapper">
- <h4>POP-UP SAVE AS ORGANISME</h4>
-</div>
- <!--organisme for stor til at være i table -->
- <div class="example">
-   <div class="wrapper">
- <!-- SAVE AS-POP-UP ORGANISME -->
-       <div class="frameforsavaspopup">
-
-         <div class="popuptitel">
-             <img class="settingpopupicon" src="img/icons/savegreen.svg" alt="">
-             <img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
-             <h1 class="settingtitel">Save as</h1>
-         </div>
-
-         <!-- Choose printer knap -->
-         <div class="settingpopupknap">
-           <p class="typetext">Save as</p>
-             <button type="" onclick="" class="typebutton">
-               <aspan class="typebuttontext">PDF</aspan>
-               <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-             </button>
-         </div>
-         <!-- Choose printer knap - slut-->
-
-         <!-- Choose quantity knap -->
-         <div class="settingpopupknap">
-           <p class="typetext">Save to</p>
-             <button type="" onclick="" class="typebutton">
-               <aspan class="typebuttontext">Choos location...</aspan>
-               <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-             </button>
-         </div>
-         <!-- cancel knap -->
-         <div class="popupcancelknap1">
-            <button type="button" onclick="" class="button-w">Cancel</button>
-         </div>
-         <!-- cancel knap slut - slut-->
-
-         <!-- save knap -->
-         <div class="popsaveknap">
-          <button type="button" onclick="" class="button-w"> Save </button>
-         </div>
-       </div>
- <!-- SAVE AS-POP-UP ORGANISME - SLUT -->
-</div>
-</div>
-<!--"POP-UP EKSEMPEL - SLUT-->
-<div class="wrapper">
-<!--"TABEL for pop-up -->
-      <table>
-        <tr class="row-one">
-          <th>Molekyler</th>
-          <th>Organsime</th>
-          <th>HTML</th>
-          <th>CSS</th>
-          <th>JavaScript</th>
-        </tr>
-      <!-- række 2 i tabel -->
-      <tr class="row-two">
-    <!--Molecules-->
-          <td>
-          x
-          </td>
-          <!--Organism-->
-        <td>
-          Se eksempel over tabellen
-        </td>
-          <!--HTML to copy-->
-        <td class="code">
-          <div class="frameforsavaspopup">
-
-            <div class="popuptitel">
-                <img class="settingpopupicon" src="img/icons/savegreen.svg" alt="">
-                <img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
-                <h1 class="settingtitel">Save as</h1>
-            </div>
-
-            <!-- Choose printer knap -->
-            <div class="settingpopupknap">
-              <p class="typetext">Save as</p>
-                <button type="" onclick="" class="typebutton">
-                  <aspan class="typebuttontext">PDF</aspan>
-                  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                </button>
-            </div>
-            <!-- Choose printer knap - slut-->
-
-            <!-- Choose quantity knap -->
-            <div class="settingpopupknap">
-              <p class="typetext">Save to</p>
-                <button type="" onclick="" class="typebutton">
-                  <aspan class="typebuttontext">Choos location...</aspan>
-                  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                </button>
-            </div>
-            <!-- cancel knap -->
-            <div class="popupcancelknap1">
-               <button type="button" onclick="" class="button-w">Cancel</button>
-            </div>
-            <!-- cancel knap slut - slut-->
-
-            <!-- save knap -->
-            <div class="popsaveknap">
-             <button type="button" onclick="" class="button-w"> Save </button>
-            </div>
-          </div>
-        </td>
-          <!--CSS to copy-->
-        <td class="code">
+					</td>
+					<!--Js to copy-->
+					<td class="empty"></td>
+				</tr>
+			</table>
+			<!--"POP UP SCHEDULE ORGANISMER- SLUT-->
+		</div>
+	</article>
+	<article id="save-pop-up" class="pop-up-article">
+		<div class="wrapper">
+			<h4 class="styleguide-title">POP-UP SAVE AS ORGANISME</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<!-- SAVE AS-POP-UP ORGANISME -->
+				<div class="frameforsavaspopup">
+					<div class="popuptitel">
+						<img class="settingpopupicon" src="img/icons/savegreen.svg" alt="">
+						<img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
+						<h1 class="settingtitel">Save as</h1>
+					</div>
+					<!-- Choose printer knap -->
+					<div class="settingpopupknap">
+						<p class="typetext">Save as</p>
+						<button type="" onclick="" class="typebutton">
+							<span class="typebuttontext">PDF</span>
+							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+					<!-- Choose printer knap - slut-->
+					<!-- Choose quantity knap -->
+					<div class="settingpopupknap">
+						<p class="typetext">Save to</p>
+						<button type="" onclick="" class="typebutton">
+							<span class="typebuttontext">Choos location...</span>
+							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+					<!-- cancel knap -->
+					<div class="popupcancelknap1">
+						<button type="button" onclick="" class="button-w">Cancel</button>
+					</div>
+					<!-- cancel knap slut - slut-->
+					<!-- save knap -->
+					<div class="popsaveknap">
+						<button type="button" onclick="" class="button-w"> Save </button>
+					</div>
+				</div>
+			<!-- SAVE AS-POP-UP ORGANISME - SLUT -->
+			</div>
+		</div>
+		<!--"POP-UP EKSEMPEL - SLUT-->
+		<div class="wrapper">
+			<!--"TABEL for pop-up -->
+			<table>
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML to copy-->
+					<td class="code">
+					</td>
+					<!--CSS to copy-->
+					<td class="code">
           .frameforsettingpopup {
           	background-color: #222222;
           	width:450px;
@@ -6246,375 +5977,221 @@ select.typebutton option{
           	margin-right: 40px;
           }
           /*ekstra style til save pop-up - slut*/
-        </td>
-          <!--Js to copy-->
-        <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
-      </tr>
-    </table>
-</div>
-<!--"POP UP SAVE AS ORGANISMER- SLUT-->
-<br>
-<br>
+					</td>
+					<!--Js to copy-->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+		<!--"POP UP SAVE AS ORGANISMER- SLUT-->
+	</article>
+	<article id="save-pop-up" class="pop-up-article">
+		<div class="wrapper">
+			<h4 class="styleguide-title">POP-UP PRINT ORGANISME</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<!-- PRINTER-POP-UP ORGANISME -->
+				<div class="frameforsavaspopup">
+					<div class="popuptitel">
+						<img class="settingpopupicon" src="img/icons/printergreen.svg" alt="">
+						<img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
+						<h1 class="settingtitel">Print report</h1>
+					</div>
+					<!-- Choose printer knap -->
+					<div class="settingpopupknap">
+					  <p class="typetext">Choose printer</p>
+						<button type="" onclick="" class="typebutton">
+						  <aspan class="typebuttontext">Choose...</aspan>
+						  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+					<!-- Choose printer knap - slut-->
+					<!-- Choose quantity knap -->
+					<div class="settingpopupknap">
+					  <p class="typetext">Choose quantity</p>
+						<button type="" onclick="" class="typebutton">
+						  <aspan class="typebuttontext">Choose...</aspan>
+						  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+					<!-- cancel knap -->
+					<div class="popupcancelknap1">
+					   <button type="button" onclick="" class="button-w">Cancel</button>
+					</div>
+					<!-- cancel knap slut - slut-->
+					<!-- print knap -->
+					<div class="popsaveknap">
+						<button type="button" onclick="" class="button-g"> Print </button>
+					</div>
+					<!-- print knap - slet-->
+				</div>
+			<!-- wrapper knap - slet-->
+			</div>
+		</div>
+		<div class="wrapper">
+			<!--"TABEL for pop-up -->
+			<table class="overvieworganimser">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML to copy-->
+					<td class="code">
+					</td>
+					<!--CSS to copy-->
+					<td class="code">
+					 .frameforsettingpopup {
+						background-color: #222222;
+						width:450px;
+					   height: 400px;
+						border-radius: 5px;
+					 }
 
-<div class="wrapper">
-<h4>POP-UP PRINT ORGANISME</h4>
-</div>
+					 .settingtitel {
+						color: white;
+						margin-top: -10px;
+						margin-left: 10px;
+					 }
 
-<!--organisme for stor til at være i table -->
-<div class="example">
-  <div class="wrapper">
-<!-- PRINTER-POP-UP ORGANISME -->
-      <div class="frameforsavaspopup">
+					 .settingpopupicon, .settingpopupxicon {
+						width: 40px;
+						height: 40px;
+					 }
 
-        <div class="popuptitel">
-            <img class="settingpopupicon" src="img/icons/printergreen.svg" alt="">
-            <img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
-            <h1 class="settingtitel">Print report</h1>
-        </div>
+					 .settingpopupxicon {
+						float: right;
+						margin-right: -200px;
+					 }
 
-        <!-- Choose printer knap -->
-        <div class="settingpopupknap">
-          <p class="typetext">Choose printer</p>
-            <button type="" onclick="" class="typebutton">
-              <aspan class="typebuttontext">Choose...</aspan>
-              <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-            </button>
-        </div>
-        <!-- Choose printer knap - slut-->
+					 .popuptitel, .settingpopupknap{
+						margin-top: 20px;
+						margin-left: 10px;
+						margin-right: 10px;
+					 }
 
-        <!-- Choose quantity knap -->
-        <div class="settingpopupknap">
-          <p class="typetext">Choose quantity</p>
-            <button type="" onclick="" class="typebutton">
-              <aspan class="typebuttontext">Choose...</aspan>
-              <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-            </button>
-        </div>
-        <!-- cancel knap -->
-        <div class="popupcancelknap1">
-           <button type="button" onclick="" class="button-w">Cancel</button>
-        </div>
-        <!-- cancel knap slut - slut-->
+					 .frameforsavaspopup {
+						background-color: #222222;
+						width:420px;
+						height: 350px;
+						border-radius: 5px;
+					 }
 
-        <!-- print knap -->
-        <div class="popsaveknap">
-         <button type="button" onclick="" class="button-g"> Print </button>
-        </div>
-        <!-- print knap - slet-->
-      </div>
-      <!-- wrapper knap - slet-->
-      </div>
-<!--"POP-UP EKSEMPEL - SLUT-->
-</div>
-</div>
+					 .popupcancelknap1 {
+						float: left;
+						margin-top: 20px;
+						margin-left: 10px;
+					 }
 
-<div class="wrapper">
-        <!--"TABEL for pop-up -->
-        <table class="overvieworganimser">
-               <tr class="row-one">
-                 <th>Molekyler</th>
-                 <th>Organsime</th>
-                 <th>HTML</th>
-                 <th>CSS</th>
-                 <th>JavaScript</th>
-               </tr>
-             <!-- række 2 i tabel -->
-             <tr class="row-two">
-           <!--Molecules-->
-                 <td>
-                 x
-                 </td>
-                 <!--Organism-->
-               <td>
-                 Se eksempel over tabellen
-               </td>
-                 <!--HTML to copy-->
-               <td class="code">
-                 <div class="frameforsavaspopup">
+					 .popsaveknap {
+						float: right;
+						margin-top: 20px;
+						margin-right: 40px;
+					 }
+						</td>
+						<!--Js to copy-->
+						<td class="empty"></td>
+				</tr>
+			</table>
+			<!--"POP UP PRINT ORGANISMER- SLUT-->
+		</div>
+	</article>
+	<article id="filter-pop-up" class="pop-up-article">
+		<div class="wrapper">
+			<h4 class="styleguide-title">POP-UP FILTER ORGANISME</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<!-- FILTER POP-UP ORGANISME -->
+					  <div class="frameforshareaspopup">
 
-                   <div class="popuptitel">
-                       <img class="settingpopupicon" src="img/icons/printergreen.svg" alt="">
-                       <img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
-                       <h1 class="settingtitel">Print report</h1>
-                   </div>
-
-                   <!-- Choose printer knap -->
-                   <div class="settingpopupknap">
-                     <p class="typetext">Choose printer</p>
-                       <button type="" onclick="" class="typebutton">
-                         <aspan class="typebuttontext">Choose...</aspan>
-                         <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                       </button>
-                   </div>
-                   <!-- Choose printer knap - slut-->
-
-                   <!-- Choose quantity knap -->
-                   <div class="settingpopupknap">
-                     <p class="typetext">Choose quantity</p>
-                       <button type="" onclick="" class="typebutton">
-                         <aspan class="typebuttontext">Choose...</aspan>
-                         <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                       </button>
-                   </div>
-                   <!-- cancel knap -->
-                   <div class="popupcancelknap1">
-                      <button type="button" onclick="" class="button-w">Cancel</button>
-                   </div>
-                   <!-- cancel knap slut - slut-->
-
-                   <!-- print knap -->
-                   <div class="popsaveknap">
-                    <button type="button" onclick="" class="button-g"> Print </button>
-                   </div>
-                   <!-- print knap - slet-->
-                 </div>
-               </td>
-                 <!--CSS to copy-->
-               <td class="code">
-                 .frameforsettingpopup {
-                 	background-color: #222222;
-                 	width:450px;
-                   height: 400px;
-                 	border-radius: 5px;
-                 }
-
-                 .settingtitel {
-                 	color: white;
-                 	margin-top: -10px;
-                 	margin-left: 10px;
-                 }
-
-                 .settingpopupicon, .settingpopupxicon {
-                 	width: 40px;
-                 	height: 40px;
-                 }
-
-                 .settingpopupxicon {
-                 	float: right;
-                 	margin-right: -200px;
-                 }
-
-                 .popuptitel, .settingpopupknap{
-                 	margin-top: 20px;
-                 	margin-left: 10px;
-                 	margin-right: 10px;
-                 }
-
-                 .frameforsavaspopup {
-                 	background-color: #222222;
-                 	width:420px;
-                 	height: 350px;
-                 	border-radius: 5px;
-                 }
-
-                 .popupcancelknap1 {
-                 	float: left;
-                 	margin-top: 20px;
-                 	margin-left: 10px;
-                 }
-
-                 .popsaveknap {
-                 	float: right;
-                 	margin-top: 20px;
-                 	margin-right: 40px;
-                 }
-               </td>
-                 <!--Js to copy-->
-               <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
-             </tr>
-           </table>
-        <!--"POP UP PRINT ORGANISMER- SLUT-->
-</div>
-<br>
-<div class="wrapper">
-<h4>POP-UP FILTER ORGANISME</h4>
-</div>
-<!--organisme for stor til at være i table -->
-<div class="example">
-  <div class="wrapper">
-    <!-- FILTER POP-UP ORGANISME -->
-          <div class="frameforshareaspopup">
-
-            <div class="popuptitel">
-                <img class="settingpopupicon" src="img/icons/slidersgreen.svg" alt="">
-                <img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
-                <h1 class="settingtitel">Filter</h1>
-            </div>
-
-            <!-- DATE RANGE knap -->
-            <div class="daterangecontainer">
-              <label class="date-range">
-                  <span id="daterangetitelinfilterpopup"class="date-range-title">Date range</span>
-                  <div class="date-range-date-wrapper">
-                      <input type="date" id="date-range-start" name="date-range-start" placeholder="yyyy-mm-dd" class="date-range-input">
-                      <span class="date-range-start-end-split">-</span>
-                      <input type="date" id="date-range-end" name="date-range-end" placeholder="yyyy-mm-dd" class="date-range-input">
-                  </div>
-              </label>
-            </div>
-            <!-- DATE RANGE - slut-->
-
-            <!-- DATE TARGET knap -->
-            <div class="settingpopupknap">
-              <p class="typetext">Date target</p>
-              <button type="" onclick="" class="typebutton">
-                <aspan class="typebuttontext">Last edited</aspan>
-                <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-              </button>
-            </div>
-            <!-- DATE TARGET - slut-->
-
-            <!-- RESULAT knap -->
-            <div class="settingpopupknap">
-              <p class="typetext">Result</p>
-                <button type="" onclick="" class="typebutton">
-                  <aspan class="typebuttontext">Not set</aspan>
-                  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                </button>
-            </div>
-            <!-- RESULT knap - slut-->
-
-            <!-- SCHEDULE knap -->
-            <div class="settingpopupknap">
-              <p class="typetext">Schedule</p>
-                <button type="" onclick="" class="typebutton">
-                  <aspan class="typebuttontext">Not set</aspan>
-                  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                </button>
-            </div>
-            <!-- SCHEDULE knap - slut-->
-
-            <!-- FOLDER knap -->
-            <div class="settingpopupknap">
-              <p class="typetext">Schedule</p>
-                <button type="" onclick="" class="typebutton">
-                  <aspan class="typebuttontext">Not set</aspan>
-                  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                </button>
-            </div>
-            <!-- cancel knap -->
-            <div class="popupcancelknapfilter">
-               <button type="button" onclick="" class="button-w">Cancel</button>
-            </div>
-            <!-- cancel knap slut - slut-->
-
-            <!-- clear all knap -->
-            <div class="clearallfilterknap">
-            <button type="button" onclick="" class="button-w"> Clear all filter </button>
-            </div>
-            <!-- clear knap slut - slut-->
-
-            <!-- done knap -->
-            <div class="popupdoneknapfilter">
-               <button type="button" onclick="" class="button-g">Done</button>
-            </div>
-          </div>
-    <!-- SHCEDULE POP-UP ORGANISME - SLUT -->
-</div>
-</div>
-<!--"POP-UP EKSEMPEL - SLUT-->
-
-<div class="wrapper">
-<!--"TABEL for pop-up -->
-<table class="overvieworganimser">
-       <tr class="row-one">
-         <th>Molekyler</th>
-         <th>Organsime</th>
-         <th>HTML</th>
-         <th>CSS</th>
-         <th>JavaScript</th>
-       </tr>
-     <!-- række 2 i tabel -->
-     <tr class="row-two">
-   <!--Molecules-->
-         <td>
-         x
-         </td>
-         <!--Organism-->
-       <td>
-         Se eksempel over tabellen
-       </td>
-         <!--HTML to copy-->
-       <td class="code">
-         <div class="frameforshareaspopup">
-
-           <div class="popuptitel">
-               <img class="settingpopupicon" src="img/icons/slidersgreen.svg" alt="">
-               <img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
-               <h1 class="settingtitel">Filter</h1>
-           </div>
-
-           <!-- DATE RANGE knap -->
-           <div class="daterangecontainer">
-             <label class="date-range">
-                 <span id="daterangetitelinfilterpopup"class="date-range-title">Date range</span>
-                 <div class="date-range-date-wrapper">
-                     <input type="date" id="date-range-start" name="date-range-start" placeholder="yyyy-mm-dd" class="date-range-input">
-                     <span class="date-range-start-end-split">-</span>
-                     <input type="date" id="date-range-end" name="date-range-end" placeholder="yyyy-mm-dd" class="date-range-input">
-                 </div>
-             </label>
-           </div>
-           <!-- DATE RANGE - slut-->
-
-           <!-- DATE TARGET knap -->
-           <div class="settingpopupknap">
-             <p class="typetext">Date target</p>
-             <button type="" onclick="" class="typebutton">
-               <aspan class="typebuttontext">Last edited</aspan>
-               <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-             </button>
-           </div>
-           <!-- DATE TARGET - slut-->
-
-           <!-- RESULAT knap -->
-           <div class="settingpopupknap">
-             <p class="typetext">Result</p>
-               <button type="" onclick="" class="typebutton">
-                 <aspan class="typebuttontext">Not set</aspan>
-                 <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-               </button>
-           </div>
-           <!-- RESULT knap - slut-->
-
-           <!-- SCHEDULE knap -->
-           <div class="settingpopupknap">
-             <p class="typetext">Schedule</p>
-               <button type="" onclick="" class="typebutton">
-                 <aspan class="typebuttontext">Not set</aspan>
-                 <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-               </button>
-           </div>
-           <!-- SCHEDULE knap - slut-->
-
-           <!-- FOLDER knap -->
-           <div class="settingpopupknap">
-             <p class="typetext">Schedule</p>
-               <button type="" onclick="" class="typebutton">
-                 <aspan class="typebuttontext">Not set</aspan>
-                 <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-               </button>
-           </div>
-           <!-- cancel knap -->
-           <div class="popupcancelknapfilter">
-              <button type="button" onclick="" class="button-w">Cancel</button>
-           </div>
-           <!-- cancel knap slut - slut-->
-
-           <!-- clear all knap -->
-           <div class="clearallfilterknap">
-           <button type="button" onclick="" class="button-w"> Clear all filter </button>
-           </div>
-           <!-- clear knap slut - slut-->
-
-           <!-- done knap -->
-           <div class="popupdoneknapfilter">
-              <button type="button" onclick="" class="button-g">Done</button>
-           </div>
-         </div>
-       </td>
-         <!--CSS to copy-->
-       <td class="code">
+						<div class="popuptitel">
+							<img class="settingpopupicon" src="img/icons/slidersgreen.svg" alt="">
+							<img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
+							<h1 class="settingtitel">Filter</h1>
+						</div>
+						<!-- DATE RANGE knap -->
+						<div class="daterangecontainer">
+						  <label class="date-range">
+							  <span id="daterangetitelinfilterpopup"class="date-range-title">Date range</span>
+							  <div class="date-range-date-wrapper">
+								  <input type="date" id="date-range-start" name="date-range-start" placeholder="yyyy-mm-dd" class="date-range-input">
+								  <span class="date-range-start-end-split">-</span>
+								  <input type="date" id="date-range-end" name="date-range-end" placeholder="yyyy-mm-dd" class="date-range-input">
+							  </div>
+						  </label>
+						</div>
+						<!-- DATE RANGE - slut-->
+						<!-- DATE TARGET knap -->
+						<div class="settingpopupknap">
+						  <p class="typetext">Date target</p>
+						  <button type="" onclick="" class="typebutton">
+							<aspan class="typebuttontext">Last edited</aspan>
+							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						  </button>
+						</div>
+						<!-- DATE TARGET - slut-->
+						<!-- RESULAT knap -->
+						<div class="settingpopupknap">
+						  <p class="typetext">Result</p>
+							<button type="" onclick="" class="typebutton">
+							  <aspan class="typebuttontext">Not set</aspan>
+							  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+							</button>
+						</div>
+						<!-- RESULT knap - slut-->
+						<!-- SCHEDULE knap -->
+						<div class="settingpopupknap">
+						  <p class="typetext">Schedule</p>
+							<button type="" onclick="" class="typebutton">
+							  <aspan class="typebuttontext">Not set</aspan>
+							  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+							</button>
+						</div>
+						<!-- SCHEDULE knap - slut-->
+						<!-- FOLDER knap -->
+						<div class="settingpopupknap">
+						  <p class="typetext">Schedule</p>
+							<button type="" onclick="" class="typebutton">
+							  <aspan class="typebuttontext">Not set</aspan>
+							  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+							</button>
+						</div>
+						<!-- cancel knap -->
+						<div class="popupcancelknapfilter">
+						   <button type="button" onclick="" class="button-w">Cancel</button>
+						</div>
+						<!-- cancel knap slut - slut-->
+						<!-- clear all knap -->
+						<div class="clearallfilterknap">
+						<button type="button" onclick="" class="button-w"> Clear all filter </button>
+						</div>
+						<!-- clear knap slut - slut-->
+						<!-- done knap -->
+						<div class="popupdoneknapfilter">
+						   <button type="button" onclick="" class="button-g">Done</button>
+						</div>
+					  </div>
+				<!-- SHCEDULE POP-UP ORGANISME - SLUT -->
+			</div>
+		</div>
+		<!--"POP-UP EKSEMPEL - SLUT-->
+		<div class="wrapper">
+			<!--"TABEL for pop-up -->
+			<table class="overvieworganimser">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML to copy-->
+					<td class="code">
+					</td>
+					<!--CSS to copy-->
+					<td class="code">
          .frameforsettingpopup {
          	background-color: #222222;
          	width:450px;
@@ -6671,165 +6248,108 @@ select.typebutton option{
          	margin-top: 20px;
          	margin right: 30px;
          }
-       </td>
-         <!--Js to copy-->
-       <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
-     </tr>
-   </table>
-<!--"POP UP FILTER ORGANISMER- SLUT-->
-</div>
-<br>
-<div class="wrapper">
-<h4>POP-UP CREATE NEW FOLDER ORGANISME</h4>
-</div>
-<!--organisme for stor til at være i table -->
-<div class="example">
-  <div class="wrapper">
-    <!-- CREATE NEW REPORT  POP-UP ORGANISME -->
-          <div class="frameforcreatenewreportpopup">
+					</td>
+					<!--Js to copy-->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		<!--"POP UP FILTER ORGANISMER- SLUT-->
+		</div>
+	</article>
+	<article id="create-new-folder-pop-up" class="pop-up-article">
+		<div class="wrapper">
+			<h4 class="styleguide-title">POP-UP CREATE NEW FOLDER ORGANISME</h4>
+		</div>
+		<!--organisme for stor til at være i table -->
+		<div class="example">
+			<div class="wrapper">
+				<!-- CREATE NEW REPORT  POP-UP ORGANISME -->
+				  <div class="frameforcreatenewreportpopup">
+					<div class="popuptitel">
+						<img class="settingpopupicon" src="img/icons/folder-plus.svg" alt="">
+						<img class="settingpopupxiconblack" src="img/icons/x.svg" alt="">
+						<h1 class="settingtitel">Create new folder</h1>
+					</div>
+					<!-- Name knap -->
+					<div class="settingpopupknap">
+					  <p class="typetext">Choose name</p>
+						<button type="" onclick="" class="typebutton">
+						  <aspan class="typebuttontext">write name here...</aspan>
+						  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+					<!-- Name knap - slut-->
+					<!-- Save location knap -->
+					<div class="settingpopupknap">
+					  <p class="typetext">Location</p>
+						<button type="" onclick="" class="typebutton">
+						  <aspan class="typebuttontext">Choose...</aspan>
+						  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+					<!-- cancel knap -->
+					<div class="popupcancelknap1">
+					   <button type="button" onclick="" class="button-w">Cancel</button>
+					</div>
+					<!-- cancel knap slut - slut-->
+					<!-- create knap -->
+					<div class="popsaveknap">
+					  <button type="button" onclick="" class="button-g"> Create </button>
+					</div>
+					<!-- create knap  - slut-->
+				  </div>
+				<!-- CREATE NEW FOLDER POP-UP ORGANISME - SLUT -->
+			</div>
+		</div>
+		<div class="wrapper">
+			<!--"TABEL for pop-up -->
+			<table class="overvieworganimser">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML to copy-->
+					<td class="code">
+					</td>
+					<!--CSS to copy-->
+					<td class="code">
+			 .settingtitel {
+				color: white;
+				margin-top: -10px;
+				margin-left: 10px;
+			 }
 
-            <div class="popuptitel">
-                <img class="settingpopupicon" src="img/icons/folder-plus.svg" alt="">
-                <img class="settingpopupxiconblack" src="img/icons/x.svg" alt="">
-                <h1 class="settingtitel">Create new folder</h1>
-            </div>
+			 .settingpopupicon, .settingpopupxicon {
+				width: 40px;
+				height: 40px;
+			 }
 
-            <!-- Name knap -->
-            <div class="settingpopupknap">
-              <p class="typetext">Choose name</p>
-                <button type="" onclick="" class="typebutton">
-                  <aspan class="typebuttontext">write name here...</aspan>
-                  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                </button>
-            </div>
-            <!-- Name knap - slut-->
+			 .settingpopupxicon {
+				float: right;
+				margin-right: -200px;
+			 }
 
-            <!-- Save location knap -->
-            <div class="settingpopupknap">
-              <p class="typetext">Location</p>
-                <button type="" onclick="" class="typebutton">
-                  <aspan class="typebuttontext">Choose...</aspan>
-                  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-                </button>
-            </div>
+			 .popuptitel, .settingpopupknap{
+				margin-top: 20px;
+				margin-left: 10px;
+				margin-right: 10px;
+			 }
 
-            <!-- cancel knap -->
-            <div class="popupcancelknap1">
-               <button type="button" onclick="" class="button-w">Cancel</button>
-            </div>
-            <!-- cancel knap slut - slut-->
-
-            <!-- create knap -->
-            <div class="popsaveknap">
-              <button type="button" onclick="" class="button-g"> Create </button>
-            </div>
-            <!-- create knap  - slut-->
-          </div>
-    <!-- CREATE NEW FOLDER POP-UP ORGANISME - SLUT -->
-</div>
-</div>
-
-<!--"POP-UP EKSEMPEL - SLUT-->
-
-<div class="wrapper">
-<!--"TABEL for pop-up -->
-<table class="overvieworganimser">
-       <tr class="row-one">
-         <th>Molekyler</th>
-         <th>Organsime</th>
-         <th>HTML</th>
-         <th>CSS</th>
-         <th>JavaScript</th>
-       </tr>
-     <!-- række 2 i tabel -->
-     <tr class="row-two">
-   <!--Molecules-->
-         <td>
-         x
-         </td>
-         <!--Organism-->
-       <td>
-         Se eksempel over tabellen
-       </td>
-         <!--HTML to copy-->
-       <td class="code">
-         <div class="frameforcreatenewreportpopup">
-
-           <div class="popuptitel">
-               <img class="settingpopupicon" src="img/icons/folder-plus.svg" alt="">
-               <img class="settingpopupxiconblack" src="img/icons/x.svg" alt="">
-               <h1 class="settingtitel">Create new folder</h1>
-           </div>
-
-           <!-- Name knap -->
-           <div class="settingpopupknap">
-             <p class="typetext">Choose name</p>
-               <button type="" onclick="" class="typebutton">
-                 <aspan class="typebuttontext">write name here...</aspan>
-                 <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-               </button>
-           </div>
-           <!-- Name knap - slut-->
-
-           <!-- Save location knap -->
-           <div class="settingpopupknap">
-             <p class="typetext">Location</p>
-               <button type="" onclick="" class="typebutton">
-                 <aspan class="typebuttontext">Choose...</aspan>
-                 <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-               </button>
-           </div>
-
-           <!-- cancel knap -->
-           <div class="popupcancelknap1">
-              <button type="button" onclick="" class="button-w">Cancel</button>
-           </div>
-           <!-- cancel knap slut - slut-->
-
-           <!-- create knap -->
-           <div class="popsaveknap">
-             <button type="button" onclick="" class="button-g"> Create </button>
-           </div>
-       </td>
-         <!--CSS to copy-->
-       <td class="code">
-         .settingtitel {
-         	color: white;
-         	margin-top: -10px;
-         	margin-left: 10px;
-         }
-
-         .settingpopupicon, .settingpopupxicon {
-         	width: 40px;
-         	height: 40px;
-         }
-
-         .settingpopupxicon {
-         	float: right;
-         	margin-right: -200px;
-         }
-
-         .popuptitel, .settingpopupknap{
-         	margin-top: 20px;
-         	margin-left: 10px;
-         	margin-right: 10px;
-         }
-
-         .frameforcreatenewreportpopup {
-         	width: 420px;
-         	height: 350px;
-         }
-       </td>
-         <!--Js to copy-->
-       <td> indsæt JavaScript kode - "læsbar/ikke aktiv kode" </td>
-     </tr>
-   </table>
-   <!--"POP UP CREATE NEW REPORT ORGANISME- SLUT-->
-<!-- wrapper div-->
-</div>
-<!--slut-->
-<br>
-<!--HIGHCHART-->
+			 .frameforcreatenewreportpopup {
+				width: 420px;
+				height: 350px;
+			 }
+						</td>
+						<!--Js to copy-->
+						<td class="empty"></td>
+				</tr>
+			</table>
+				<!--"POP UP CREATE NEW REPORT ORGANISME- SLUT-->
+		</div>
+	</article>
+	<!--HIGHCHART-->
 	<div class="title-area">
 		<div class="wrapper">
 			<h3 class="styleguide-title">Highcharts indhold</h3>
