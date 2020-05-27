@@ -2158,7 +2158,11 @@ nav a:hover{
     margin: 10px auto 0;
 }
 
-
+.preview-outbox p{
+	float: right;
+	margin-top: 14px;
+	margin-right: 10px;
+}
 
 .rep-name{
     color: white;
