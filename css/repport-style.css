@@ -1375,7 +1375,6 @@ nav a:hover{
 }
 /*Here starts CSS for NAV - Small screen*/
 .smallnav{
-	position: absolute;
 	top: 0;
 	left: 0;
 	float: left;
