@@ -5728,9 +5728,240 @@ select.typebutton option{
 				<tr class="row-two">
 					<!--HTML to copy-->
 					<td class="code">
+						<div class="wrapper">
+							<!-- SHARE AS-POP-UP ORGANISME -->
+							<div class="frameforshareaspopup">
+								<div class="popuptitel">
+									<img class="settingpopupicon" src="img/icons/sharegreen.svg" alt="">
+									<img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
+									<h1 class="settingtitel">Share as</h1>
+								</div>
+								<!-- Choose printer knap -->
+								<div class="settingpopupknap">
+									<label>
+										<span class="typetext">Share as ...</span>
+										<div class="select-wrapper">
+											<select name="share-report-as" class="typebutton select">
+												<option value="pdf" selected>PDF</option>
+												<option value="qr">QR-code</option>
+												<option value="link">Link</option>
+											</select>
+										</div>
+								   </label>
+								</div>
+								<!-- Choose printer knap - slut-->
+								<!-- Choose quantity knap -->
+								<div class="settingpopupknap">
+									<p class="typetext">Share to</p>
+									<button type="" onclick="" class="typebutton">
+										<span class="typebuttontext">email@example.com</span>
+										<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+									</button>
+								</div>
+								<!-- Choose quantity knap - slut-->
+								<!-- Email knap -->
+								<div class="settingpopupknap">
+									<p class="typetext">Your email</p>
+									<button type="" onclick="" class="typebutton">
+										<span class="typebuttontext">email@example.com</span>
+										<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+									</button>
+								</div>
+								<!-- Email knap - slut-->
+								<!-- message input -->
+								<div class="messageframe">
+									<div class="type">
+										<p class="typetext">Message</p>
+										<textarea rows="4" cols="50" name="comment" class="type-text-field" placeholder="Enter message here..."></textarea>
+									</div>
+								</div>
+								<!-- message input slut -->
+								<!-- cancel knap -->
+								<div class="popupcancelknap">
+									<button type="button" onclick="" class="button-w">Cancel</button>
+								</div>
+								<!-- cancel knap slut - slut-->
+								<!-- done knap -->
+								<div class="popupdoneknap">
+									<button type="button" onclick="" class="button-g">Done</button>
+								</div>
+							<!-- done - slut-->
+							</div>
+						   <!-- SHARE AS-POP-UP ORGANISME - SLUT -->
+						</div>
 					</td>
 					<!--CSS to copy-->
 					<td class="code">
+/*Styling for setting pop-up organismer*/
+.frameforsettingpopup {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+	background-color: #222222;
+	width: 100%;
+	max-width: 450px;
+	height: 100vh;
+	max-height: 400px;
+	border-radius: 5px;
+	overflow-y: auto;
+}
+
+@media (min-width:401px){
+    /* Calculate left position, when width is over 400px */
+    .frameforsettingpopup {
+        left: calc(50vw - 200px); /* Half of screen - element width */
+    }
+}
+
+.settingtitel {
+	color: white;
+	margin-top: -10px;
+	margin-left: 10px;
+}
+
+.settingpopupicon, .settingpopupxicon {
+	width: 40px;
+	height: 40px;
+}
+
+.settingpopupxicon {
+	float: right;
+	margin-right: -200px;
+}
+
+.popuptitel, .settingpopupknap{
+	margin-top: 20px;
+	clear: right;
+}
+
+.settingpopupknap,
+.settingpopupknap,
+.settingpopupknap,
+.messageframe {
+	width: calc(100% - 20px); /*100% width - 20px margin*/
+	clear: both;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.popupcancelknap, .popupdoneknap {
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+	
+.popupcancelknap{
+	clear: left;
+}
+
+.popupdoneknap {
+	float: right;
+}
+/*Styling for setting pop-up organismer - SLUT*/
+
+/*ekstra style til share as pop-up*/
+.frameforshareaspopup {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+	background-color: #222222;
+	width: 100%;
+	max-width: 440px;
+	height: 100vh;
+	max-height: 600px;
+	border-radius: 5px;
+	overflow-y: auto;
+}
+
+@media (min-width:441px){
+    /* Calculate left position, when width is over 400px */
+    .frameforshareaspopup {
+        left: calc(50vw - 220px); /* Half of screen - element width */
+    }
+}
+
+.textarea {
+	width: 100px;
+	height: 100px;
+}
+/*ekstra style til share as pop-up - SLUT*/
+
+/*ekstra style til schedule as pop-up*/
+.timebutton {
+	width: 80px;
+	border-radius: 10px;
+}
+/*ekstra style til schedule as pop-up - slut*/
+
+/*ekstra style til save as as pop-up*/
+.frameforsavaspopup {
+    position: absolute;
+    top: calc(50% - 175px); /* Half of screen - half of element height */
+    left: 0;
+	background-color: #222222;
+	width: 100%;
+	max-width:420px;
+	height: 100vh;
+	max-height: 350px;
+	border-radius: 5px;
+	overflow-y: auto;
+}
+
+@media (min-width:401px){
+    /* Calculate left position, when width is over 400px */
+    .frameforsavaspopup {
+        left: calc(50vw - 210px); /* Half of screen - element width */
+    }
+}
+
+.popupcancelknap1 {
+	float: left;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+.popsaveknap {
+	float: right;
+	margin-top: 20px;
+	margin-right: 40px;
+}
+/*ekstra style til save pop-up - slut*/
+
+/*ekstra style til filter pop-up*/
+.daterangecontainer {
+	background: grey;
+	float: left;
+}
+.daterangetitelinfilterpopup {
+	font-size: 10px;
+	float: left;
+	margin-left: 10px;
+}
+.popupcancelknapfilter{
+	float: left;
+	margin left: 10px;
+	margin-top: 20px;
+}
+
+.clearallfilterknap {
+	float: left;
+	margin left: 10px;
+	margin-top: 20px;
+}
+
+.popupdoneknapfilter{
+	float: right;
+	margin-top: 20px;
+	margin right: 30px;
+}
+/*ekstra style til filter pop-up - slut*/
+
+/*ekstra style for create report pop up*/
+.frameforcreatenewreportpopup {
+	width: 420px;
+	height: 350px;
+}
+/*ekstra style for create report pop up - slut*/
 					</td>
 					<!--Js to copy-->
 					<td class="empty"></td>
@@ -5810,54 +6041,232 @@ select.typebutton option{
 				<tr class="row-two">
 					<!--HTML to copy-->
 					<td class="code">
+						<!-- SHCHEDULE POP-UP ORGANISME -->
+						<div class="frameforshareaspopup">
+							<div class="popuptitel">
+								<img class="settingpopupicon" src="img/icons/calendargreen.svg" alt="">
+								<img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
+								<h1 class="settingtitel">Schedule</h1>
+							</div>
+							<!-- Type knap -->
+							<div class="settingpopupknap">
+								<p class="typetext">Type</p>
+								<button type="" onclick="" class="typebutton">
+									<span class="typebuttontext">Day of week</span>
+									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+								</button>
+							</div>
+							<!-- Type knap - slut-->
+							<!-- Time knap -->
+							<div class="settingpopupknap">
+								<p class="typetext">Time</p>
+								<button type="" onclick="" class="timebutton">
+									<span class="typebuttontext">00:00</span>
+							  </button>
+							</div>
+							<!-- Time knap- slut-->
+							<!-- Email knap -->
+							<div class="settingpopupknap">
+								<p class="typetext">Your email</p>
+								<button type="" onclick="" class="typebutton">
+									<span class="typebuttontext">email@example.com</span>
+									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+								</button>
+							</div>
+							<!-- Email knap - slut-->
+							<!-- message input -->
+							<div class="messageframe">
+								<div class="type">
+									<p class="typetext">Message</p>
+									<textarea rows="4" cols="50" name="comment" class="type-text-field" placeholder="Enter message here..."></textarea>
+								</div>
+							</div>
+							<!-- message input - slut -->
+							<!-- cancel knap -->
+							<div class="popupcancelknap">
+								<button type="button" onclick="" class="button-w">Cancel</button>
+							</div>
+							<!-- cancel knap slut - slut-->
+							<!-- done knap -->
+							<div class="popupdoneknap">
+								<button type="button" onclick="" class="button-g">Done</button>
+							</div>
+						</div>
+					<!-- SHCEDULE POP-UP ORGANISME - SLUT -->
+					</div>
 					</td>
 					<!--CSS to copy-->
 					<td class="code">
-           .frameforsettingpopup {
-           	background-color: #222222;
-           	width:450px;
-             height: 400px;
-           	border-radius: 5px;
-           }
+/*Styling for setting pop-up organismer*/
+.frameforsettingpopup {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+	background-color: #222222;
+	width: 100%;
+	max-width: 450px;
+	height: 100vh;
+	max-height: 400px;
+	border-radius: 5px;
+	overflow-y: auto;
+}
 
-           .settingtitel {
-           	color: white;
-           	margin-top: -10px;
-           	margin-left: 10px;
-           }
+@media (min-width:401px){
+    /* Calculate left position, when width is over 400px */
+    .frameforsettingpopup {
+        left: calc(50vw - 200px); /* Half of screen - element width */
+    }
+}
 
-           .settingpopupicon, .settingpopupxicon {
-           	width: 40px;
-           	height: 40px;
-           }
+.settingtitel {
+	color: white;
+	margin-top: -10px;
+	margin-left: 10px;
+}
 
-           .settingpopupxicon {
-           	float: right;
-           	margin-right: -200px;
-           }
+.settingpopupicon, .settingpopupxicon {
+	width: 40px;
+	height: 40px;
+}
 
-           .popuptitel, .settingpopupknap{
-           	margin-top: 20px;
-           	margin-left: 10px;
-           	margin-right: 10px;
-           }
+.settingpopupxicon {
+	float: right;
+	margin-right: -200px;
+}
 
-           .popupcancelknap {
-           	float: left;
-           	margin-top: 200px;
-           	margin-left: -105px;
-           }
+.popuptitel, .settingpopupknap{
+	margin-top: 20px;
+	clear: right;
+}
 
-           .popupdoneknap {
-           	float: right;
-           	margin-top: 200px;
-           	margin-right: 20px;
-           }
+.settingpopupknap,
+.settingpopupknap,
+.settingpopupknap,
+.messageframe {
+	width: calc(100% - 20px); /*100% width - 20px margin*/
+	clear: both;
+	margin-left: 10px;
+	margin-right: 10px;
+}
 
-           .timebutton {
-           	width: 80px;
-           	border-radius: 10px;
-           }
+.popupcancelknap, .popupdoneknap {
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+	
+.popupcancelknap{
+	clear: left;
+}
+
+.popupdoneknap {
+	float: right;
+}
+/*Styling for setting pop-up organismer - SLUT*/
+
+/*ekstra style til share as pop-up*/
+.frameforshareaspopup {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+	background-color: #222222;
+	width: 100%;
+	max-width: 440px;
+	height: 100vh;
+	max-height: 600px;
+	border-radius: 5px;
+	overflow-y: auto;
+}
+
+@media (min-width:441px){
+    /* Calculate left position, when width is over 400px */
+    .frameforshareaspopup {
+        left: calc(50vw - 220px); /* Half of screen - element width */
+    }
+}
+
+.textarea {
+	width: 100px;
+	height: 100px;
+}
+/*ekstra style til share as pop-up - SLUT*/
+
+/*ekstra style til schedule as pop-up*/
+.timebutton {
+	width: 80px;
+	border-radius: 10px;
+}
+/*ekstra style til schedule as pop-up - slut*/
+
+/*ekstra style til save as as pop-up*/
+.frameforsavaspopup {
+    position: absolute;
+    top: calc(50% - 175px); /* Half of screen - half of element height */
+    left: 0;
+	background-color: #222222;
+	width: 100%;
+	max-width:420px;
+	height: 100vh;
+	max-height: 350px;
+	border-radius: 5px;
+	overflow-y: auto;
+}
+
+@media (min-width:401px){
+    /* Calculate left position, when width is over 400px */
+    .frameforsavaspopup {
+        left: calc(50vw - 210px); /* Half of screen - element width */
+    }
+}
+
+.popupcancelknap1 {
+	float: left;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+.popsaveknap {
+	float: right;
+	margin-top: 20px;
+	margin-right: 40px;
+}
+/*ekstra style til save pop-up - slut*/
+
+/*ekstra style til filter pop-up*/
+.daterangecontainer {
+	background: grey;
+	float: left;
+}
+.daterangetitelinfilterpopup {
+	font-size: 10px;
+	float: left;
+	margin-left: 10px;
+}
+.popupcancelknapfilter{
+	float: left;
+	margin left: 10px;
+	margin-top: 20px;
+}
+
+.clearallfilterknap {
+	float: left;
+	margin left: 10px;
+	margin-top: 20px;
+}
+
+.popupdoneknapfilter{
+	float: right;
+	margin-top: 20px;
+	margin right: 30px;
+}
+/*ekstra style til filter pop-up - slut*/
+
+/*ekstra style for create report pop up*/
+.frameforcreatenewreportpopup {
+	width: 420px;
+	height: 350px;
+}
+/*ekstra style for create report pop up - slut*/
 					</td>
 					<!--Js to copy-->
 					<td class="empty"></td>
@@ -5906,7 +6315,7 @@ select.typebutton option{
 						<button type="button" onclick="" class="button-w"> Save </button>
 					</div>
 				</div>
-			<!-- SAVE AS-POP-UP ORGANISME - SLUT -->
+				<!-- SAVE AS-POP-UP ORGANISME - SLUT -->
 			</div>
 		</div>
 		<!--"POP-UP EKSEMPEL - SLUT-->
@@ -5921,58 +6330,214 @@ select.typebutton option{
 				<tr class="row-two">
 					<!--HTML to copy-->
 					<td class="code">
+						<!-- SAVE AS-POP-UP ORGANISME -->
+						<div class="frameforsavaspopup">
+							<div class="popuptitel">
+								<img class="settingpopupicon" src="img/icons/savegreen.svg" alt="">
+								<img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
+								<h1 class="settingtitel">Save as</h1>
+							</div>
+							<!-- Choose printer knap -->
+							<div class="settingpopupknap">
+								<p class="typetext">Save as</p>
+								<button type="" onclick="" class="typebutton">
+									<span class="typebuttontext">PDF</span>
+									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+								</button>
+							</div>
+							<!-- Choose printer knap - slut-->
+							<!-- Choose quantity knap -->
+							<div class="settingpopupknap">
+								<p class="typetext">Save to</p>
+								<button type="" onclick="" class="typebutton">
+									<span class="typebuttontext">Choos location...</span>
+									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+								</button>
+							</div>
+							<!-- cancel knap -->
+							<div class="popupcancelknap1">
+								<button type="button" onclick="" class="button-w">Cancel</button>
+							</div>
+							<!-- cancel knap slut - slut-->
+							<!-- save knap -->
+							<div class="popsaveknap">
+								<button type="button" onclick="" class="button-w"> Save </button>
+							</div>
+						</div>
+						<!-- SAVE AS-POP-UP ORGANISME - SLUT -->
 					</td>
 					<!--CSS to copy-->
 					<td class="code">
-          .frameforsettingpopup {
-          	background-color: #222222;
-          	width:450px;
-            height: 400px;
-          	border-radius: 5px;
-          }
+/*Styling for setting pop-up organismer*/
+.frameforsettingpopup {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+	background-color: #222222;
+	width: 100%;
+	max-width: 450px;
+	height: 100vh;
+	max-height: 400px;
+	border-radius: 5px;
+	overflow-y: auto;
+}
 
-          .settingtitel {
-          	color: white;
-          	margin-top: -10px;
-          	margin-left: 10px;
-          }
+@media (min-width:401px){
+    /* Calculate left position, when width is over 400px */
+    .frameforsettingpopup {
+        left: calc(50vw - 200px); /* Half of screen - element width */
+    }
+}
 
-          .settingpopupicon, .settingpopupxicon {
-          	width: 40px;
-          	height: 40px;
-          }
+.settingtitel {
+	color: white;
+	margin-top: -10px;
+	margin-left: 10px;
+}
 
-          .settingpopupxicon {
-          	float: right;
-          	margin-right: -200px;
-          }
+.settingpopupicon, .settingpopupxicon {
+	width: 40px;
+	height: 40px;
+}
 
-          .popuptitel, .settingpopupknap{
-          	margin-top: 20px;
-          	margin-left: 10px;
-          	margin-right: 10px;
-          }
+.settingpopupxicon {
+	float: right;
+	margin-right: -200px;
+}
 
-          /*ekstra style til save as as pop-up*/
-          .frameforsavaspopup {
-          	background-color: #222222;
-          	width:420px;
-          	height: 350px;
-          	border-radius: 5px;
-          }
+.popuptitel, .settingpopupknap{
+	margin-top: 20px;
+	clear: right;
+}
 
-          .popupcancelknap1 {
-          	float: left;
-          	margin-top: 20px;
-          	margin-left: 10px;
-          }
+.settingpopupknap,
+.settingpopupknap,
+.settingpopupknap,
+.messageframe {
+	width: calc(100% - 20px); /*100% width - 20px margin*/
+	clear: both;
+	margin-left: 10px;
+	margin-right: 10px;
+}
 
-          .popsaveknap {
-          	float: right;
-          	margin-top: 20px;
-          	margin-right: 40px;
-          }
-          /*ekstra style til save pop-up - slut*/
+.popupcancelknap, .popupdoneknap {
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+	
+.popupcancelknap{
+	clear: left;
+}
+
+.popupdoneknap {
+	float: right;
+}
+/*Styling for setting pop-up organismer - SLUT*/
+
+/*ekstra style til share as pop-up*/
+.frameforshareaspopup {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+	background-color: #222222;
+	width: 100%;
+	max-width: 440px;
+	height: 100vh;
+	max-height: 600px;
+	border-radius: 5px;
+	overflow-y: auto;
+}
+
+@media (min-width:441px){
+    /* Calculate left position, when width is over 400px */
+    .frameforshareaspopup {
+        left: calc(50vw - 220px); /* Half of screen - element width */
+    }
+}
+
+.textarea {
+	width: 100px;
+	height: 100px;
+}
+/*ekstra style til share as pop-up - SLUT*/
+
+/*ekstra style til schedule as pop-up*/
+.timebutton {
+	width: 80px;
+	border-radius: 10px;
+}
+/*ekstra style til schedule as pop-up - slut*/
+
+/*ekstra style til save as as pop-up*/
+.frameforsavaspopup {
+    position: absolute;
+    top: calc(50% - 175px); /* Half of screen - half of element height */
+    left: 0;
+	background-color: #222222;
+	width: 100%;
+	max-width:420px;
+	height: 100vh;
+	max-height: 350px;
+	border-radius: 5px;
+	overflow-y: auto;
+}
+
+@media (min-width:401px){
+    /* Calculate left position, when width is over 400px */
+    .frameforsavaspopup {
+        left: calc(50vw - 210px); /* Half of screen - element width */
+    }
+}
+
+.popupcancelknap1 {
+	float: left;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+.popsaveknap {
+	float: right;
+	margin-top: 20px;
+	margin-right: 40px;
+}
+/*ekstra style til save pop-up - slut*/
+
+/*ekstra style til filter pop-up*/
+.daterangecontainer {
+	background: grey;
+	float: left;
+}
+.daterangetitelinfilterpopup {
+	font-size: 10px;
+	float: left;
+	margin-left: 10px;
+}
+.popupcancelknapfilter{
+	float: left;
+	margin left: 10px;
+	margin-top: 20px;
+}
+
+.clearallfilterknap {
+	float: left;
+	margin left: 10px;
+	margin-top: 20px;
+}
+
+.popupdoneknapfilter{
+	float: right;
+	margin-top: 20px;
+	margin right: 30px;
+}
+/*ekstra style til filter pop-up - slut*/
+
+/*ekstra style for create report pop up*/
+.frameforcreatenewreportpopup {
+	width: 420px;
+	height: 350px;
+}
+/*ekstra style for create report pop up - slut*/
 					</td>
 					<!--Js to copy-->
 					<td class="empty"></td>
@@ -6036,56 +6601,214 @@ select.typebutton option{
 				<tr class="row-two">
 					<!--HTML to copy-->
 					<td class="code">
+						<!-- PRINTER-POP-UP ORGANISME -->
+						<div class="frameforsavaspopup">
+							<div class="popuptitel">
+								<img class="settingpopupicon" src="img/icons/printergreen.svg" alt="">
+								<img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
+								<h1 class="settingtitel">Print report</h1>
+							</div>
+							<!-- Choose printer knap -->
+							<div class="settingpopupknap">
+							  <p class="typetext">Choose printer</p>
+								<button type="" onclick="" class="typebutton">
+								  <aspan class="typebuttontext">Choose...</aspan>
+								  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+								</button>
+							</div>
+							<!-- Choose printer knap - slut-->
+							<!-- Choose quantity knap -->
+							<div class="settingpopupknap">
+							  <p class="typetext">Choose quantity</p>
+								<button type="" onclick="" class="typebutton">
+								  <aspan class="typebuttontext">Choose...</aspan>
+								  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+								</button>
+							</div>
+							<!-- cancel knap -->
+							<div class="popupcancelknap1">
+							   <button type="button" onclick="" class="button-w">Cancel</button>
+							</div>
+							<!-- cancel knap slut - slut-->
+							<!-- print knap -->
+							<div class="popsaveknap">
+								<button type="button" onclick="" class="button-g"> Print </button>
+							</div>
+							<!-- print knap - slet-->
+						</div>
 					</td>
 					<!--CSS to copy-->
 					<td class="code">
-					 .frameforsettingpopup {
-						background-color: #222222;
-						width:450px;
-					   height: 400px;
-						border-radius: 5px;
-					 }
+/*Styling for setting pop-up organismer*/
+.frameforsettingpopup {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+	background-color: #222222;
+	width: 100%;
+	max-width: 450px;
+	height: 100vh;
+	max-height: 400px;
+	border-radius: 5px;
+	overflow-y: auto;
+}
 
-					 .settingtitel {
-						color: white;
-						margin-top: -10px;
-						margin-left: 10px;
-					 }
+@media (min-width:401px){
+    /* Calculate left position, when width is over 400px */
+    .frameforsettingpopup {
+        left: calc(50vw - 200px); /* Half of screen - element width */
+    }
+}
 
-					 .settingpopupicon, .settingpopupxicon {
-						width: 40px;
-						height: 40px;
-					 }
+.settingtitel {
+	color: white;
+	margin-top: -10px;
+	margin-left: 10px;
+}
 
-					 .settingpopupxicon {
-						float: right;
-						margin-right: -200px;
-					 }
+.settingpopupicon, .settingpopupxicon {
+	width: 40px;
+	height: 40px;
+}
 
-					 .popuptitel, .settingpopupknap{
-						margin-top: 20px;
-						margin-left: 10px;
-						margin-right: 10px;
-					 }
+.settingpopupxicon {
+	float: right;
+	margin-right: -200px;
+}
 
-					 .frameforsavaspopup {
-						background-color: #222222;
-						width:420px;
-						height: 350px;
-						border-radius: 5px;
-					 }
+.popuptitel, .settingpopupknap{
+	margin-top: 20px;
+	clear: right;
+}
 
-					 .popupcancelknap1 {
-						float: left;
-						margin-top: 20px;
-						margin-left: 10px;
-					 }
+.settingpopupknap,
+.settingpopupknap,
+.settingpopupknap,
+.messageframe {
+	width: calc(100% - 20px); /*100% width - 20px margin*/
+	clear: both;
+	margin-left: 10px;
+	margin-right: 10px;
+}
 
-					 .popsaveknap {
-						float: right;
-						margin-top: 20px;
-						margin-right: 40px;
-					 }
+.popupcancelknap, .popupdoneknap {
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+	
+.popupcancelknap{
+	clear: left;
+}
+
+.popupdoneknap {
+	float: right;
+}
+/*Styling for setting pop-up organismer - SLUT*/
+
+/*ekstra style til share as pop-up*/
+.frameforshareaspopup {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+	background-color: #222222;
+	width: 100%;
+	max-width: 440px;
+	height: 100vh;
+	max-height: 600px;
+	border-radius: 5px;
+	overflow-y: auto;
+}
+
+@media (min-width:441px){
+    /* Calculate left position, when width is over 400px */
+    .frameforshareaspopup {
+        left: calc(50vw - 220px); /* Half of screen - element width */
+    }
+}
+
+.textarea {
+	width: 100px;
+	height: 100px;
+}
+/*ekstra style til share as pop-up - SLUT*/
+
+/*ekstra style til schedule as pop-up*/
+.timebutton {
+	width: 80px;
+	border-radius: 10px;
+}
+/*ekstra style til schedule as pop-up - slut*/
+
+/*ekstra style til save as as pop-up*/
+.frameforsavaspopup {
+    position: absolute;
+    top: calc(50% - 175px); /* Half of screen - half of element height */
+    left: 0;
+	background-color: #222222;
+	width: 100%;
+	max-width:420px;
+	height: 100vh;
+	max-height: 350px;
+	border-radius: 5px;
+	overflow-y: auto;
+}
+
+@media (min-width:401px){
+    /* Calculate left position, when width is over 400px */
+    .frameforsavaspopup {
+        left: calc(50vw - 210px); /* Half of screen - element width */
+    }
+}
+
+.popupcancelknap1 {
+	float: left;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+.popsaveknap {
+	float: right;
+	margin-top: 20px;
+	margin-right: 40px;
+}
+/*ekstra style til save pop-up - slut*/
+
+/*ekstra style til filter pop-up*/
+.daterangecontainer {
+	background: grey;
+	float: left;
+}
+.daterangetitelinfilterpopup {
+	font-size: 10px;
+	float: left;
+	margin-left: 10px;
+}
+.popupcancelknapfilter{
+	float: left;
+	margin left: 10px;
+	margin-top: 20px;
+}
+
+.clearallfilterknap {
+	float: left;
+	margin left: 10px;
+	margin-top: 20px;
+}
+
+.popupdoneknapfilter{
+	float: right;
+	margin-top: 20px;
+	margin right: 30px;
+}
+/*ekstra style til filter pop-up - slut*/
+
+/*ekstra style for create report pop up*/
+.frameforcreatenewreportpopup {
+	width: 420px;
+	height: 350px;
+}
+/*ekstra style for create report pop up - slut*/
 						</td>
 						<!--Js to copy-->
 						<td class="empty"></td>
@@ -6185,65 +6908,250 @@ select.typebutton option{
 				<tr class="row-two">
 					<!--HTML to copy-->
 					<td class="code">
+						<!-- FILTER POP-UP ORGANISME -->
+							  <div class="frameforshareaspopup">
+
+								<div class="popuptitel">
+									<img class="settingpopupicon" src="img/icons/slidersgreen.svg" alt="">
+									<img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
+									<h1 class="settingtitel">Filter</h1>
+								</div>
+								<!-- DATE RANGE knap -->
+								<div class="daterangecontainer">
+								  <label class="date-range">
+									  <span id="daterangetitelinfilterpopup"class="date-range-title">Date range</span>
+									  <div class="date-range-date-wrapper">
+										  <input type="date" id="date-range-start" name="date-range-start" placeholder="yyyy-mm-dd" class="date-range-input">
+										  <span class="date-range-start-end-split">-</span>
+										  <input type="date" id="date-range-end" name="date-range-end" placeholder="yyyy-mm-dd" class="date-range-input">
+									  </div>
+								  </label>
+								</div>
+								<!-- DATE RANGE - slut-->
+								<!-- DATE TARGET knap -->
+								<div class="settingpopupknap">
+								  <p class="typetext">Date target</p>
+								  <button type="" onclick="" class="typebutton">
+									<aspan class="typebuttontext">Last edited</aspan>
+									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+								  </button>
+								</div>
+								<!-- DATE TARGET - slut-->
+								<!-- RESULAT knap -->
+								<div class="settingpopupknap">
+								  <p class="typetext">Result</p>
+									<button type="" onclick="" class="typebutton">
+									  <aspan class="typebuttontext">Not set</aspan>
+									  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+									</button>
+								</div>
+								<!-- RESULT knap - slut-->
+								<!-- SCHEDULE knap -->
+								<div class="settingpopupknap">
+								  <p class="typetext">Schedule</p>
+									<button type="" onclick="" class="typebutton">
+									  <aspan class="typebuttontext">Not set</aspan>
+									  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+									</button>
+								</div>
+								<!-- SCHEDULE knap - slut-->
+								<!-- FOLDER knap -->
+								<div class="settingpopupknap">
+								  <p class="typetext">Schedule</p>
+									<button type="" onclick="" class="typebutton">
+									  <aspan class="typebuttontext">Not set</aspan>
+									  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+									</button>
+								</div>
+								<!-- cancel knap -->
+								<div class="popupcancelknapfilter">
+								   <button type="button" onclick="" class="button-w">Cancel</button>
+								</div>
+								<!-- cancel knap slut - slut-->
+								<!-- clear all knap -->
+								<div class="clearallfilterknap">
+								<button type="button" onclick="" class="button-w"> Clear all filter </button>
+								</div>
+								<!-- clear knap slut - slut-->
+								<!-- done knap -->
+								<div class="popupdoneknapfilter">
+								   <button type="button" onclick="" class="button-g">Done</button>
+								</div>
+							  </div>
+						<!-- SHCEDULE POP-UP ORGANISME - SLUT -->
 					</td>
 					<!--CSS to copy-->
 					<td class="code">
-         .frameforsettingpopup {
-         	background-color: #222222;
-         	width:450px;
-           height: 400px;
-         	border-radius: 5px;
-         }
+/*Styling for setting pop-up organismer*/
+.frameforsettingpopup {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+	background-color: #222222;
+	width: 100%;
+	max-width: 450px;
+	height: 100vh;
+	max-height: 400px;
+	border-radius: 5px;
+	overflow-y: auto;
+}
 
-         .settingtitel {
-         	color: white;
-         	margin-top: -10px;
-         	margin-left: 10px;
-         }
+@media (min-width:401px){
+    /* Calculate left position, when width is over 400px */
+    .frameforsettingpopup {
+        left: calc(50vw - 200px); /* Half of screen - element width */
+    }
+}
 
-         .settingpopupicon, .settingpopupxicon {
-         	width: 40px;
-         	height: 40px;
-         }
+.settingtitel {
+	color: white;
+	margin-top: -10px;
+	margin-left: 10px;
+}
 
-         .settingpopupxicon {
-         	float: right;
-         	margin-right: -200px;
-         }
+.settingpopupicon, .settingpopupxicon {
+	width: 40px;
+	height: 40px;
+}
 
-         .popuptitel, .settingpopupknap{
-         	margin-top: 20px;
-         	margin-left: 10px;
-         	margin-right: 10px;
-         }
+.settingpopupxicon {
+	float: right;
+	margin-right: -200px;
+}
 
-         .daterangecontainer {
-         	background: grey;
-         	float: left;
-         }
-         .daterangetitelinfilterpopup {
-         	font-size: 10px;
-         	float: left;
-         	margin-left: 10px;
-         }
+.popuptitel, .settingpopupknap{
+	margin-top: 20px;
+	clear: right;
+}
 
-         .popupcancelknapfilter{
-         	float: left;
-         	margin left: 10px;
-         	margin-top: 20px;
-         }
+.settingpopupknap,
+.settingpopupknap,
+.settingpopupknap,
+.messageframe {
+	width: calc(100% - 20px); /*100% width - 20px margin*/
+	clear: both;
+	margin-left: 10px;
+	margin-right: 10px;
+}
 
-         .clearallfilterknap {
-         	float: left;
-         	margin left: 10px;
-         	margin-top: 20px;
-         }
+.popupcancelknap, .popupdoneknap {
+	margin-top: 20px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+	
+.popupcancelknap{
+	clear: left;
+}
 
-         .popupdoneknapfilter{
-         	float: right;
-         	margin-top: 20px;
-         	margin right: 30px;
-         }
+.popupdoneknap {
+	float: right;
+}
+/*Styling for setting pop-up organismer - SLUT*/
+
+/*ekstra style til share as pop-up*/
+.frameforshareaspopup {
+    position: absolute;
+    top: 10vh;
+    left: 0;
+	background-color: #222222;
+	width: 100%;
+	max-width: 440px;
+	height: 100vh;
+	max-height: 600px;
+	border-radius: 5px;
+	overflow-y: auto;
+}
+
+@media (min-width:441px){
+    /* Calculate left position, when width is over 400px */
+    .frameforshareaspopup {
+        left: calc(50vw - 220px); /* Half of screen - element width */
+    }
+}
+
+.textarea {
+	width: 100px;
+	height: 100px;
+}
+/*ekstra style til share as pop-up - SLUT*/
+
+/*ekstra style til schedule as pop-up*/
+.timebutton {
+	width: 80px;
+	border-radius: 10px;
+}
+/*ekstra style til schedule as pop-up - slut*/
+
+/*ekstra style til save as as pop-up*/
+.frameforsavaspopup {
+    position: absolute;
+    top: calc(50% - 175px); /* Half of screen - half of element height */
+    left: 0;
+	background-color: #222222;
+	width: 100%;
+	max-width:420px;
+	height: 100vh;
+	max-height: 350px;
+	border-radius: 5px;
+	overflow-y: auto;
+}
+
+@media (min-width:401px){
+    /* Calculate left position, when width is over 400px */
+    .frameforsavaspopup {
+        left: calc(50vw - 210px); /* Half of screen - element width */
+    }
+}
+
+.popupcancelknap1 {
+	float: left;
+	margin-top: 20px;
+	margin-left: 10px;
+}
+
+.popsaveknap {
+	float: right;
+	margin-top: 20px;
+	margin-right: 40px;
+}
+/*ekstra style til save pop-up - slut*/
+
+/*ekstra style til filter pop-up*/
+.daterangecontainer {
+	background: grey;
+	float: left;
+}
+.daterangetitelinfilterpopup {
+	font-size: 10px;
+	float: left;
+	margin-left: 10px;
+}
+.popupcancelknapfilter{
+	float: left;
+	margin left: 10px;
+	margin-top: 20px;
+}
+
+.clearallfilterknap {
+	float: left;
+	margin left: 10px;
+	margin-top: 20px;
+}
+
+.popupdoneknapfilter{
+	float: right;
+	margin-top: 20px;
+	margin right: 30px;
+}
+/*ekstra style til filter pop-up - slut*/
+
+/*ekstra style for create report pop up*/
+.frameforcreatenewreportpopup {
+	width: 420px;
+	height: 350px;
+}
+/*ekstra style for create report pop up - slut*/
 					</td>
 					<!--Js to copy-->
 					<td class="empty"></td>
