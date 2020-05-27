@@ -40,3 +40,23 @@ function switchpagepreview(previewSwitch){
 		console.log('Loop end :-(');
 	}
 }
+
+/* PRIORITY STAR / STJERNE PRIORITERING */
+function changeImage(elem) {
+    console.log('changeImage function active.');
+    // console.log(document.getElementById("imgClickAndChange").src.endsWith("img/icons/star.svg"));
+    elem = document.getElementById(elem);
+    //if (document.getElementById("imgClickAndChange").src =="img/icons/star.svg") // Must use endsWith method instead of == when directory layout is uncertain
+    if (elem.src.endsWith("img/icons/star.svg")) // Must use endsWith method instead of == when directory layout is uncertain
+    {
+        console.log('changeImage if true.');
+        elem.src = "img/icons/starfull.svg";
+        // Prioritize graph/template
+    }
+    else
+    {
+        console.log('changeImage if false.');
+        elem.src = "img/icons/star.svg";
+        // Unprioritize graph/template
+    }
+}
