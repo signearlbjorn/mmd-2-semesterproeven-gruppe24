@@ -8181,25 +8181,18 @@ select.typebutton option{
 			</table>
 		</div>
 	</article>
-
-
-
-
-	<article id="highcharts-type-pie-element">
+	<article id="infobox-pop-up" class="pop-up-article">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Popup infobox</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-
 				<div class="popupinfobox">
                     <button type="button" class="close-icon">
                     <img class="X-icon" src="img/icons/x.svg" alt="Close-X">
                     </button>
                         <span>Placeholder text</span>
                 </div>
-
-
 			</div>
 		</div>
 		<div class="wrapper">
@@ -8213,62 +8206,74 @@ select.typebutton option{
 					<!--HTML-->
 					<td class="code">
 						<div class="popupinfobox">
-                    <button type="button" class="close-icon">
-                    <img class="X-icon" src="img/icons/x.svg" alt="close-X">
-                    </button>
-                        <span>Placeholder text</span>
-                        </div>
+							<button type="button" class="close-icon">
+							<img class="X-icon" src="img/icons/x.svg" alt="Close-X">
+							</button>
+								<span>Placeholder text</span>
+						</div>
 					</td>
 					<!--CSS-->
 					<td class="code">
-                    .popupinfobox{
-                        background-color: #D3D3D3;
-                        text-align: center;
-                        width: 400px;
-                        height: 220px;
-                        border-radius: 12px;
-                        margin-top: 10px;
-                    }
+						/* popup infobox css*/
+						.popupinfobox{
+							position: absolute;
+							top: 10vh;
+							left: 0;
+							background-color: #D3D3D3;
+							text-align: center;
+							width: 100%;
+							max-width: 400px;
+							height: 100vh;
+							max-height: 220px;
+							border-radius: 12px;
+						}
 
-                    .popupinfobox span {
-                        color: black;
-                        font-size: 30px;
-                        display:inline-block;
-                        margin-top: 65px;
-                    }
+						@media (min-width:401px){
+							/* Calculate left position, when width is over 400px */
+							.popupinfobox {
+								left: calc(50vw - 200px); /* Half of screen - element width */
+							}
+						}
 
+						.popupinfobox span {
+							color: black;
+							font-size: 30px;
+							display:inline-block;
+							margin-top: 65px;
+						}
 
-                    .close-icon{
-                        background-color: transparent;
-                        border: none;
-                        cursor: pointer;
-                        display: grid;
+						.popupinfobox .close-icon,
+						.popupinfobox .close-icon .X-icon {
+							float: right;
+							margin-left: 0;
+						}
 
-                    }
+						.close-icon{
+							background-color: transparent;
+							border: none;
+							cursor: pointer;
+							display: grid;
 
-                    .X-icon{
-                        margin-left: 365px;
-                        margin-top: 2px;
-                    }
+						}
+
+						.X-icon{
+							margin-left: 365px;
+							margin-top: 2px;
+						}
+						/*popup infobox css slut*/
                     </td>
 					<!--JavaScript-->
-					<td class="code">
-
-					</td>
+					<td class="empty"></td>
 				</tr>
 			</table>
 		</div>
 	</article>
-
-
-
-<article id="highcharts-type-pie-element">
+	<article id="report-preview">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Report preview</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-
 				<div class="preview-outbox">
                     <span class="rep-name">Report name</span>
                     <button type="button" class="gear-icon">
@@ -8278,8 +8283,6 @@ select.typebutton option{
                     <img class="preview-img" src="img/previewreport.png">
                     </div>
                 </div>
-
-
 			</div>
 		</div>
 		<div class="wrapper">
@@ -8366,9 +8369,7 @@ select.typebutton option{
 			</table>
 		</div>
 	</article>
-
-
-        <article id="highcharts-type-pie-element">
+	<article id="template-preview">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Template preview</h4>
 		</div>
@@ -8474,110 +8475,7 @@ select.typebutton option{
 			</table>
 		</div>
 	</article>
-
-<article id="highcharts-type-pie-element">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Graph preview</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-
-			<div class="preview-outbox">
-                <span class="graph-name">Graph name</span>
-                 <button type="button" class="favstar-icon">
-                <img class="favstar-iconimg" src="img/icons/starfull.svg" alt="Filled star">
-                </button>
-                <div class="preview-inbox">
-                <img class="graph-img" src="img/graphpic.png">
-                </div>
-            </div>
-
-
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="overviewmolekyler">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<!--HTML-->
-					<td class="code">
-
-            	<div class="preview-outbox">
-                    <span class="graph-name">Graph name</span>
-                     <button type="button" class="favstar-icon">
-                    <img class="favstar-iconimg" src="img/icons/starfull.svg" alt="Filled star">
-                    </button>
-                    <div class="preview-inbox">
-                    <img class="graph-img" src="img/graphpic.png">
-                    </div>
-                </div>
-
-					</td>
-					<!--CSS-->
-					<td class="code">
-                    .preview-outbox{
-                        background-color: #404040;
-                        width: 300px;
-                        height: 342px;
-                        border-radius: 8px;
-                        margin-top: 10px;
-                        }
-
-
-                    .preview-inbox{
-                        background-color: #6F6F6F;
-                        width: 276px;
-                        height: 250px;
-                        border-radius: 6px;
-                        display: inline-block;
-                        margin-left: 12px;
-                        margin-right: 12px;
-                        margin-bottom: 12px;
-                        margin-top: 0px;
-                    }
-
-                    .preview-img{
-                        width: 90%;
-                        display: inline-block;
-                        margin-top: 29px;
-                        margin-bottom: 29px;
-                        margin-left: 14px;
-                        margin-right: 14px;
-                    }
-
-                    .graph-name{
-                        color: white;
-                        font-size: 20px;
-                        display: inline-block;
-                        margin-top: 40px;
-                        margin-left: 18px;
-                    }
-
-                    .graph-img{
-                         width: 80%;
-                         display: inline-block;
-                         margin-top: 22px;
-                         margin-bottom: 22px;
-                         margin-left: 28px;
-                         margin-right: 28px;
-                    }
-
-
-                    </td>
-					<!--JavaScript-->
-					<td class="code">
-
-					</td>
-				</tr>
-			</table>
-		</div>
-</article>
-
-<article id="highcharts-type-pie-element">
+	<!--<article id="highcharts-type-pie-element">
 		<div class="wrapper">
 			<h4 class="styleguide-title">List preview</h4>
 		</div>
@@ -8603,7 +8501,7 @@ select.typebutton option{
 					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
-					<!--HTML-->
+					<!--HTML--><!--
 					<td class="code">
 
                 <div class="report-listbox">
@@ -8615,7 +8513,7 @@ select.typebutton option{
                 </div>
 
 					</td>
-					<!--CSS-->
+					<!--CSS--><!--
 					<td class="code">
                     .report-listbox{
                         background-color: #6F6F6F;
@@ -8659,17 +8557,16 @@ select.typebutton option{
 
 
                     </td>
-					<!--JavaScript-->
+					<!--JavaScript--><!--
 					<td class="code">
 
 					</td>
 				</tr>
 			</table>
 		</div>
-</article>
-<!-- lukke section for organimser-->
+	</article>-->
 </section>
-<!-- SEKTION 3 - ORGANISMER FOR LØSNING - SLUT -->
+
 <!-- TEMPLATES -->
 <section id="templates">
 	<div class="wrapper">
@@ -8844,7 +8741,7 @@ select.typebutton option{
 	</article>
 	<article id="page-preview-in-editor">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Previe page in editor</h4>
+			<h4 class="styleguide-title">preview page in editor</h4>
 		</div>
 		<div id="wrapper_header_example" class="example">
 			<div class="report-preview">
@@ -8879,26 +8776,6 @@ select.typebutton option{
 				<tr class="row-two">
 					<!--HTML -->
 					<td class="code">
-			<!--EDITOR NAVIGATION BAR-->
-			<div class="report-preview">
-				<div id="pageVertical" class="pagediv">
-					<div class="page" contenteditable="true">
-						<p>First <code>.page</code> element</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-						<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-					</div>
-				</div>
-				<div id="pageHorizontal" class="pagediv">
-					<div class="pageHorizontal" contenteditable="true">
-						<p>Second <code>.page</code> element</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-						<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-						<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
-					</div>
-				</div>
-			</div>
 					</td>
 					<!--CSS -->
 					<td class="code">
@@ -8906,9 +8783,12 @@ select.typebutton option{
 						.report-preview{
 							width: 100%;
 							background-color: #6f6f6f;
-							display: grid;
 							align-content: center;
+							overflow-x: auto;
+							padding: 0 2vw;
+							box-sizing: border-box;
 						}
+						
 						.pagediv{
 							margin: 0 auto;
 						}

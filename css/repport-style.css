@@ -1057,9 +1057,12 @@ margin-left: 7px;
 .report-preview{
 	width: 100%;
 	background-color: #6f6f6f;
-	display: grid;
 	align-content: center;
+	overflow-x: auto;
+	padding: 0 2vw;
+	box-sizing: border-box;
 }
+
 .pagediv{
 	margin: 0 auto;
 }
@@ -2082,14 +2085,24 @@ nav a:hover{
 
 
 /* popup infobox css*/
-
 .popupinfobox{
-    background-color: #D3D3D3;
+    position: absolute;
+    top: 10vh;
+    left: 0;
+	background-color: #D3D3D3;
     text-align: center;
-    width: 400px;
-    height: 220px;
+    width: 100%;
+    max-width: 400px;
+    height: 100vh;
+    max-height: 220px;
     border-radius: 12px;
-    margin-top: 10px;
+}
+
+@media (min-width:401px){
+    /* Calculate left position, when width is over 400px */
+    .popupinfobox {
+        left: calc(50vw - 200px); /* Half of screen - element width */
+    }
 }
 
 .popupinfobox span {
@@ -2099,6 +2112,11 @@ nav a:hover{
     margin-top: 65px;
 }
 
+.popupinfobox .close-icon,
+.popupinfobox .close-icon .X-icon {
+	float: right;
+	margin-left: 0;
+}
 
 .close-icon{
     background-color: transparent;
@@ -2112,7 +2130,6 @@ nav a:hover{
     margin-left: 365px;
     margin-top: 2px;
 }
-
 /*popup infobox css slut*/
 
 
