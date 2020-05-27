@@ -1,7 +1,7 @@
 // JavaScript for Editor tabs
 /*Disse to funktioner lader brugeren skifte mellem editor tabs*/
 function switchedit(switcheditpage) {
-	let editpage = ["graphs", "text", "templates", "codeEditorTab"];
+	let editpage = ["graphs", "text", "templates", "codeEditorTab",];
 	for(i = 0; i < editpage.length; i++){
 		if(switcheditpage == editpage[i]){
 			document.getElementById(editpage[i]).classList.remove("hidden");
@@ -40,4 +40,3 @@ function switchpagepreview(previewSwitch){
 		console.log('Loop end :-(');
 	}
 }
-/**/
