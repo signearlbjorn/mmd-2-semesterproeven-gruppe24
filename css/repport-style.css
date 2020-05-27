@@ -1375,6 +1375,7 @@ nav a:hover{
 }
 /*Here starts CSS for NAV - Small screen*/
 .smallnav{
+	position: absolute;
 	top: 0;
 	left: 0;
 	float: left;
@@ -1383,11 +1384,16 @@ nav a:hover{
 	width: 100%;
 	height: 100vh;
 	overflow-y: auto;
+	z-index: 100000;
 }
-
+/* small nav forbliver ikke synlig ved hover - det skal fixes
+.smallnav:hover, .smallnav div:hover, .smallnav div ul:hover, .smallnav div ul li:hover, .smallnav div ul li a:hover, .smallnav img.icon:hover, .smallnav a:hover, .branddiv:hover + .navhidden{
+	dislay: block;
+}
+*/
 .smallnav div{
 	display: block;
-	float: le	ft;
+	float: left;
 	width: 100%;
 }
 
