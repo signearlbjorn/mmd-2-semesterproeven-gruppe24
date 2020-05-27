@@ -60,3 +60,35 @@ function changeImage(elem) {
         // Unprioritize graph/template
     }
 }
+
+
+//Alerts for buttons with text and icon
+
+
+function savedAlert() {
+ alert("Report saved"); 
+}
+
+function closeEditor() {
+  var txt;
+  if (confirm("Are you sure you want to close?")) {
+    txt = "Editor closed";
+  } else{
+      txt = null
+  }
+  document.getElementById("closeconfirm").innerHTML = txt;
+}
+
+
+function deleteReport() {
+  var txt;
+  if (confirm("Are you sure you want to delete this report?")) {
+    txt = "Report deleted";
+  } else{
+      txt = null
+  }
+  document.getElementById("deleteconfirm").innerHTML = txt;
+}
+
+
+
