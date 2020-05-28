@@ -70,7 +70,7 @@ function savedAlert() {
 }
 
 function closeEditor() {
-  var txt;
+  let txt;
   if (confirm("Are you sure you want to close?")) {
     txt = "Editor closed";
   } else{
@@ -81,7 +81,7 @@ function closeEditor() {
 
 
 function deleteReport() {
-  var txt;
+  let txt;
   if (confirm("Are you sure you want to delete this report?")) {
     txt = "Report deleted";
   } else{
