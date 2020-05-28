@@ -2255,47 +2255,53 @@ nav a:hover{
 
 /*List view css start*/
 
+.searchInput {
+    background-image: url('img/icons/search.svg');
+    background-position: 10px 5px;
+    background-repeat: no-repeat;
+    width: 50%;
+    font-size: 16px;
+    padding: 10px 20px 5px 50px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    margin-bottom: 10px; 
+}
+
+
+/*List view*/
+
+#reportUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
 .report-listbox{
-    background-color: #6F6F6F;
+    background-color: #6F6F6F; 
     width: 80%;
     height: 4%;
     border-radius: 6px;
-    display: inline-block;
-
+    display: inline-block; 
+    margin-top: 5px; 
+   
 }
 
 .rep-namelist{
-    color: black;
+    color: black; 
     font-size: 18px;
-    display: inline-block;
+    display: list-item; 
     margin-left: 15px;
-    margin-top: 1px;
+    margin-top: 1px; 
+   
 }
 
-.rep-IDlist{
-    color: black;
-    font-size: 18px;
-    display: inline-block;
-    margin-left: 15px;
-    margin-top: 2px;
-}
-
-.gear-iconlist{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.gear-iconimglist{
-    width: 2%;
-    margin-left: 975px;
-    display: block;
-    margin-top: 2px;
-    margin-bottom: 2px;
-    margin-top: -21px;
-}
 
 /*List view css end*/
+
 
 /* --- ORGANISMER SLUT --- */
 
