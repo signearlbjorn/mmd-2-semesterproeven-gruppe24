@@ -2256,7 +2256,7 @@ nav a:hover{
 /*List view css start*/
 
 .searchInput {
-    background-image: url('img/icons/search.svg');
+    background-image: url('../img/icons/search.svg'); 
     background-position: 10px 5px;
     background-repeat: no-repeat;
     width: 50%;
