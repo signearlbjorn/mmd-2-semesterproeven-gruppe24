@@ -346,7 +346,6 @@ h3 {
 	display: block;
 	background-color: transparent;
 	float: right;
-	width: 100%;
 	border: none;
 	cursor: pointer;
 }
@@ -2375,7 +2374,10 @@ header .wrapper {
 	grid-template-columns: auto auto auto auto;
 	overflow: auto;
 }
-
+.preview-outbox .settingsmenu{
+	position: absolute;
+	margin-top: -35px;
+}
 /* -- SHOW  -- */
 
 /* -- EDIT -- */
