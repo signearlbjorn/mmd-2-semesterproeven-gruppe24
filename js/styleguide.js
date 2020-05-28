@@ -559,3 +559,53 @@ function openWidowSize(elem) {
 			return false
 	}
 } 
+
+
+//Pop up JS start
+
+
+function savedAlert() {
+ alert("Report saved"); 
+}
+
+function closeEditor() {
+  var txt;
+  if (confirm("Are you sure you want to close?")) {
+    txt = "Editor closed";
+  } else{
+      txt = null
+  }
+  document.getElementById("closeconfirm").innerHTML = txt;
+}
+
+
+function deleteReport() {
+  var txt;
+  if (confirm("Are you sure you want to delete this report?")) {
+    txt = "Report deleted";
+  } else{
+      txt = null
+  }
+  document.getElementById("deleteconfirm").innerHTML = txt;
+}
+
+//pop up js slut
+
+//List search/filter funktion
+
+function search_report() { 
+    let input = document.getElementById('myInput').value 
+    input=input.toLowerCase(); 
+    let repList = document.getElementsByClassName('rep-namelist'); 
+      
+    for (i = 0; i < repList.length; i++) {  
+        if (!repList[i].innerHTML.toLowerCase().includes(input)) { 
+            repList[i].style.display="none"; 
+        } 
+        else { 
+            repList[i].style.display="list-item";
+             
+        } 
+    } 
+} 
+console.log("Search complete"); 
