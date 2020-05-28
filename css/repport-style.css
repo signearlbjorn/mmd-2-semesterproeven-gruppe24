@@ -2333,7 +2333,10 @@ header .wrapper {
 	float: left;
 	width: 100%;
 }
-
+.overviewMain{
+	background-color: #D3D3D3;
+	width: 100%;
+}
 
 /* --- PAGES --- */
 /* -- OVERVIEW -- */
@@ -2356,7 +2359,16 @@ header .wrapper {
 		width: 75% !important;
 	}
 }
-
+.pre-viewOverview{
+	width: 85%;
+	height: 80vh;
+	background-color: #404040;
+	margin: 10px auto 0;
+	float: none;
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+	overflow: auto;
+}
 
 /* -- SHOW  -- */
 
