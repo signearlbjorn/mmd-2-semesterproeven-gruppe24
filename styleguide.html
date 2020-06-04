@@ -489,8 +489,8 @@
 			<div class="wrapper">
 				<div class="frame">
 					<div class="type">
-						<p class="typetext">Folder</p>
-						<button type="" onclick="" class="typebutton">
+						<span class="typetext">Folder</span>
+						<button class="typebutton">
 							<span class="typebuttontext">Name</span>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
@@ -509,8 +509,8 @@
 					<td class="code">
 						<div class="frame">
 							<div class="type">
-								<p class="typetext">Folder</p>
-								<button type="" onclick="" class="typebutton">
+								<span class="typetext">Folder</span>
+								<button class="typebutton">
 									<span class="typebuttontext">Name</span>
 									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 								</button>
@@ -595,8 +595,8 @@
 			<div class="wrapper">
                 <div class="frame">
 					<div class="type">
-						<p class="typetext">Schedule</p>
-						<button type="" onclick="" class="typebutton">
+						<span class="typetext">Schedule</span>
+						<button class="typebutton">
 							<span class="typebuttontext">Not set</span>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
@@ -616,8 +616,8 @@
 						<div class="wrapper">
 							<div class="frame">
 								<div class="type">
-									<p class="typetext">Schedule</p>
-									<button type="" onclick="" class="typebutton">
+									<span class="typetext">Schedule</span>
+									<button class="typebutton">
 										<span class="typebuttontext">Not set</span>
 										<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 									</button>
@@ -626,67 +626,67 @@
 						</div>
 					</td>
 					<td class="code">
-/*Here starts CSS code for type button*/
-.frame {
-	float: left; /* Added float to display height right */
-	background-color: black;
-	width: 100%;
-	/* width: 400px; *//* Did not scale with parrent */
-}
+						/*Here starts CSS code for type button*/
+						.frame {
+							float: left; /* Added float to display height right */
+							background-color: black;
+							width: 100%;
+							/* width: 400px; *//* Did not scale with parrent */
+						}
 
-.type {
-	width: calc(100% - 10px); /* 100% width -10px margin */
-	margin-left: 5px;
-	margin-right: 5px; /* Margin added */
-}
+						.type {
+							width: calc(100% - 10px); /* 100% width -10px margin */
+							margin-left: 5px;
+							margin-right: 5px; /* Margin added */
+						}
 
-.typetext {
-	float: left; /* Added float to display height right */
-	color: white;
-	font-size: 110%; /* Must be larger on smaller screens */
-}
+						.typetext {
+							float: left; /* Added float to display height right */
+							color: white;
+							font-size: 110%; /* Must be larger on smaller screens */
+						}
 
-.typebutton {
-	float: left; /* Added float to display height right */
-	width: 100%;
-	border-radius: 10px;
-	font-size: 110%; /* Must be larger on smaller screens */
-}
+						.typebutton {
+							float: left; /* Added float to display height right */
+							width: 100%;
+							border-radius: 10px;
+							font-size: 110%; /* Must be larger on smaller screens */
+						}
 
-select.typebutton {
-	height: 37px;
-	color: #7C7C7C;
-	font-style: italic;
-	border: solid 1px #707070;
-	padding:0 5px;
-	box-sizing: border-box;
-	cursor: pointer;
-}
+						select.typebutton {
+							height: 37px;
+							color: #7C7C7C;
+							font-style: italic;
+							border: solid 1px #707070;
+							padding:0 5px;
+							box-sizing: border-box;
+							cursor: pointer;
+						}
 
-select.typebutton option{
-	color: #000;
-	font-style: normal;
-	cursor: pointer;
-}
+						select.typebutton option{
+							color: #000;
+							font-style: normal;
+							cursor: pointer;
+						}
 
-.typebuttontext {
-	float: left;
-	font-style: italic;
-	color: grey;
-	margin-left: 5px;
-	font-size: 110%;
-}
+						.typebuttontext {
+							float: left;
+							font-style: italic;
+							color: grey;
+							margin-left: 5px;
+							font-size: 110%;
+						}
 
-.chevronicon {
-	float: right;
-	margin-top: 5px;
-}
+						.chevronicon {
+							float: right;
+							margin-top: 5px;
+						}
 
-@media (min-width:1366){
-	.typetext, .typebutton, .typebuttontext {
-		font-size: 100%;
-	}
-}
+						@media (min-width:1366){
+							.typetext, .typebutton, .typebuttontext {
+								font-size: 100%;
+							}
+						}
 					</td>
 					<td class="empty"></td>
 				</tr>
@@ -701,8 +701,8 @@ select.typebutton option{
 			<div class="wrapper">
 				<div class="frame">
 					<div class="type">
-						<p class="typetext">Result</p>
-						<button type="" onclick="" class="typebutton">
+						<span class="typetext">Result</span>
+						<button class="typebutton">
 							<span class="typebuttontext">Not set</span>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
@@ -721,8 +721,8 @@ select.typebutton option{
 					<td class="code">
 						<div class="frame">
 							<div class="type">
-								<p class="typetext">Result</p>
-								<button type="" onclick="" class="typebutton">
+								<span class="typetext">Result</span>
+								<button class="typebutton">
 									<span class="typebuttontext">Not set</span>
 									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 								</button>
@@ -730,67 +730,67 @@ select.typebutton option{
 						</div>
 					</td>
 					<td class="code">
-/*Here starts CSS code for type button*/
-.frame {
-	float: left; /* Added float to display height right */
-	background-color: black;
-	width: 100%;
-	/* width: 400px; *//* Did not scale with parrent */
-}
+						/*Here starts CSS code for type button*/
+						.frame {
+							float: left; /* Added float to display height right */
+							background-color: black;
+							width: 100%;
+							/* width: 400px; *//* Did not scale with parrent */
+						}
 
-.type {
-	width: calc(100% - 10px); /* 100% width -10px margin */
-	margin-left: 5px;
-	margin-right: 5px; /* Margin added */
-}
+						.type {
+							width: calc(100% - 10px); /* 100% width -10px margin */
+							margin-left: 5px;
+							margin-right: 5px; /* Margin added */
+						}
 
-.typetext {
-	float: left; /* Added float to display height right */
-	color: white;
-	font-size: 110%; /* Must be larger on smaller screens */
-}
+						.typetext {
+							float: left; /* Added float to display height right */
+							color: white;
+							font-size: 110%; /* Must be larger on smaller screens */
+						}
 
-.typebutton {
-	float: left; /* Added float to display height right */
-	width: 100%;
-	border-radius: 10px;
-	font-size: 110%; /* Must be larger on smaller screens */
-}
+						.typebutton {
+							float: left; /* Added float to display height right */
+							width: 100%;
+							border-radius: 10px;
+							font-size: 110%; /* Must be larger on smaller screens */
+						}
 
-select.typebutton {
-	height: 37px;
-	color: #7C7C7C;
-	font-style: italic;
-	border: solid 1px #707070;
-	padding:0 5px;
-	box-sizing: border-box;
-	cursor: pointer;
-}
+						select.typebutton {
+							height: 37px;
+							color: #7C7C7C;
+							font-style: italic;
+							border: solid 1px #707070;
+							padding:0 5px;
+							box-sizing: border-box;
+							cursor: pointer;
+						}
 
-select.typebutton option{
-	color: #000;
-	font-style: normal;
-	cursor: pointer;
-}
+						select.typebutton option{
+							color: #000;
+							font-style: normal;
+							cursor: pointer;
+						}
 
-.typebuttontext {
-	float: left;
-	font-style: italic;
-	color: grey;
-	margin-left: 5px;
-	font-size: 110%;
-}
+						.typebuttontext {
+							float: left;
+							font-style: italic;
+							color: grey;
+							margin-left: 5px;
+							font-size: 110%;
+						}
 
-.chevronicon {
-	float: right;
-	margin-top: 5px;
-}
+						.chevronicon {
+							float: right;
+							margin-top: 5px;
+						}
 
-@media (min-width:1366){
-	.typetext, .typebutton, .typebuttontext {
-		font-size: 100%;
-	}
-}
+						@media (min-width:1366){
+							.typetext, .typebutton, .typebuttontext {
+								font-size: 100%;
+							}
+						}
 					</td>
 					<td class="empty"></td>
 				</tr>
@@ -806,8 +806,8 @@ select.typebutton option{
 			<div class="wrapper">
 				<div class="frame">
 					<div class="type">
-						<p class="typetext">Date target</p>
-						<button type="" onclick="" class="typebutton">
+						<span class="typetext">Date target</span>
+						<button class="typebutton">
 							<span class="typebuttontext">Last edited</span>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
@@ -826,8 +826,8 @@ select.typebutton option{
 					<td class="code">
 						<div class="frame">
 							<div class="type">
-								<p class="typetext">Date target</p>
-								<button type="" onclick="" class="typebutton">
+								<span class="typetext">Date target</span>
+								<button class="typebutton">
 									<span class="typebuttontext">Last edited</span>
 									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 								</button>
@@ -835,67 +835,67 @@ select.typebutton option{
 						</div>
 					</td>
 					<td class="code">
-/*Here starts CSS code for type button*/
-.frame {
-	float: left; /* Added float to display height right */
-	background-color: black;
-	width: 100%;
-	/* width: 400px; *//* Did not scale with parrent */
-}
+						/*Here starts CSS code for type button*/
+						.frame {
+							float: left; /* Added float to display height right */
+							background-color: black;
+							width: 100%;
+							/* width: 400px; *//* Did not scale with parrent */
+						}
 
-.type {
-	width: calc(100% - 10px); /* 100% width -10px margin */
-	margin-left: 5px;
-	margin-right: 5px; /* Margin added */
-}
+						.type {
+							width: calc(100% - 10px); /* 100% width -10px margin */
+							margin-left: 5px;
+							margin-right: 5px; /* Margin added */
+						}
 
-.typetext {
-	float: left; /* Added float to display height right */
-	color: white;
-	font-size: 110%; /* Must be larger on smaller screens */
-}
+						.typetext {
+							float: left; /* Added float to display height right */
+							color: white;
+							font-size: 110%; /* Must be larger on smaller screens */
+						}
 
-.typebutton {
-	float: left; /* Added float to display height right */
-	width: 100%;
-	border-radius: 10px;
-	font-size: 110%; /* Must be larger on smaller screens */
-}
+						.typebutton {
+							float: left; /* Added float to display height right */
+							width: 100%;
+							border-radius: 10px;
+							font-size: 110%; /* Must be larger on smaller screens */
+						}
 
-select.typebutton {
-	height: 37px;
-	color: #7C7C7C;
-	font-style: italic;
-	border: solid 1px #707070;
-	padding:0 5px;
-	box-sizing: border-box;
-	cursor: pointer;
-}
+						select.typebutton {
+							height: 37px;
+							color: #7C7C7C;
+							font-style: italic;
+							border: solid 1px #707070;
+							padding:0 5px;
+							box-sizing: border-box;
+							cursor: pointer;
+						}
 
-select.typebutton option{
-	color: #000;
-	font-style: normal;
-	cursor: pointer;
-}
+						select.typebutton option{
+							color: #000;
+							font-style: normal;
+							cursor: pointer;
+						}
 
-.typebuttontext {
-	float: left;
-	font-style: italic;
-	color: grey;
-	margin-left: 5px;
-	font-size: 110%;
-}
+						.typebuttontext {
+							float: left;
+							font-style: italic;
+							color: grey;
+							margin-left: 5px;
+							font-size: 110%;
+						}
 
-.chevronicon {
-	float: right;
-	margin-top: 5px;
-}
+						.chevronicon {
+							float: right;
+							margin-top: 5px;
+						}
 
-@media (min-width:1366){
-	.typetext, .typebutton, .typebuttontext {
-		font-size: 100%;
-	}
-}
+						@media (min-width:1366){
+							.typetext, .typebutton, .typebuttontext {
+								font-size: 100%;
+							}
+						}
 					</td>
 					<td class="empty"></td>
 				</tr>
@@ -910,8 +910,8 @@ select.typebutton option{
 			<div class="wrapper">
                 <div class="frame">
 					<div class="type">
-						<p class="typetext">Type</p>
-						<button type="" onclick="" class="typebutton">
+						<span class="typetext">Type</span>
+						<button class="typebutton">
 							<span class="typebuttontext">Day of week</span>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
@@ -930,8 +930,8 @@ select.typebutton option{
 					<td class="code">
 						<div class="frame">
 							<div class="type">
-								<p class="typetext">Type</p>
-								<button type="" onclick="" class="typebutton">
+								<span class="typetext">Type</span>
+								<button class="typebutton">
 									<span class="typebuttontext">Day of week</span>
 									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 								</button>
@@ -939,67 +939,67 @@ select.typebutton option{
 						</div>
 					</td>
 					<td class="code">
-/*Here starts CSS code for type button*/
-.frame {
-	float: left; /* Added float to display height right */
-	background-color: black;
-	width: 100%;
-	/* width: 400px; *//* Did not scale with parrent */
-}
+						/*Here starts CSS code for type button*/
+						.frame {
+							float: left; /* Added float to display height right */
+							background-color: black;
+							width: 100%;
+							/* width: 400px; *//* Did not scale with parrent */
+						}
 
-.type {
-	width: calc(100% - 10px); /* 100% width -10px margin */
-	margin-left: 5px;
-	margin-right: 5px; /* Margin added */
-}
+						.type {
+							width: calc(100% - 10px); /* 100% width -10px margin */
+							margin-left: 5px;
+							margin-right: 5px; /* Margin added */
+						}
 
-.typetext {
-	float: left; /* Added float to display height right */
-	color: white;
-	font-size: 110%; /* Must be larger on smaller screens */
-}
+						.typetext {
+							float: left; /* Added float to display height right */
+							color: white;
+							font-size: 110%; /* Must be larger on smaller screens */
+						}
 
-.typebutton {
-	float: left; /* Added float to display height right */
-	width: 100%;
-	border-radius: 10px;
-	font-size: 110%; /* Must be larger on smaller screens */
-}
+						.typebutton {
+							float: left; /* Added float to display height right */
+							width: 100%;
+							border-radius: 10px;
+							font-size: 110%; /* Must be larger on smaller screens */
+						}
 
-select.typebutton {
-	height: 37px;
-	color: #7C7C7C;
-	font-style: italic;
-	border: solid 1px #707070;
-	padding:0 5px;
-	box-sizing: border-box;
-	cursor: pointer;
-}
+						select.typebutton {
+							height: 37px;
+							color: #7C7C7C;
+							font-style: italic;
+							border: solid 1px #707070;
+							padding:0 5px;
+							box-sizing: border-box;
+							cursor: pointer;
+						}
 
-select.typebutton option{
-	color: #000;
-	font-style: normal;
-	cursor: pointer;
-}
+						select.typebutton option{
+							color: #000;
+							font-style: normal;
+							cursor: pointer;
+						}
 
-.typebuttontext {
-	float: left;
-	font-style: italic;
-	color: grey;
-	margin-left: 5px;
-	font-size: 110%;
-}
+						.typebuttontext {
+							float: left;
+							font-style: italic;
+							color: grey;
+							margin-left: 5px;
+							font-size: 110%;
+						}
 
-.chevronicon {
-	float: right;
-	margin-top: 5px;
-}
+						.chevronicon {
+							float: right;
+							margin-top: 5px;
+						}
 
-@media (min-width:1366){
-	.typetext, .typebutton, .typebuttontext {
-		font-size: 100%;
-	}
-}
+						@media (min-width:1366){
+							.typetext, .typebutton, .typebuttontext {
+								font-size: 100%;
+							}
+						}
 					</td>
 					<td class="empty"></td>
 				</tr>
@@ -1012,7 +1012,7 @@ select.typebutton option{
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" onclick="" class="settingsmenubutton">
+				<button type="button" class="settingsmenubutton">
 					<span>Folder overview</span>
 					<img class="settingsmenuicon" src="img/icons/folder.svg" alt="editicon">
 				</button>
@@ -1027,7 +1027,7 @@ select.typebutton option{
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" onclick="" class="settingsmenubutton">
+						<button type="button" class="settingsmenubutton">
 							<span>Folder overview</span>
 							<img class="settingsmenuicon" src="img/icons/folder.svg" alt="editicon">
 						</button>
@@ -1070,7 +1070,7 @@ select.typebutton option{
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" class="newreportbutton">
+				<button type="button" class="newreportbutton" title="Initiate creation of a new report.">
 					<img class="plusimg" src="img/icons/plus.svg" alt="new report img">
 					<span class="newreportspan">New report</span>
 				</button>
@@ -1085,94 +1085,41 @@ select.typebutton option{
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" class="newreportbutton">
+						<button type="button" class="newreportbutton" title="Initiate creation of a new report.">
 							<img class="plusimg" src="img/icons/plus.svg" alt="new report img">
 							<span class="newreportspan">New report</span>
 						</button>
 					</td>
 					<td class="code">
-						.newreportbutton{
-							border: none;
-							border-radius: 12px;
-							background-color: #00cd00;
-							width: 150px;
-							cursor: pointer;
-							display: grid;
-							grid-template-columns: auto auto;
-							align-content: center;
+						/*Here starts code for 'new report button'*/
+						.newreportbutton {
+							position: relative;
 							overflow: hidden;
-						}
-						.newreport span{
-							font-size: 18px;
-							display: grid;
-						}
-						.plusimg{
-							display: grid;
-							margin: 0 0 0 auto;
-						}
-					</td>
-					<td class="empty"></td>
-                </tr>
-			</table>
-			<p class="info">Warning eller info.</p>
-		</div>
-	</article>
-
-
-
-
-
-	<article id="sort-by-knap">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Sort by knap</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<div class="sortbydiv">
-					Sort by
-					<button type="" onClick="" class="sortbybutton">
-						<span>Choose..</span>
-						<img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
-					</button>
-				</div>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="table-ref">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<td class="code">
-						<div class="sortbydiv">
-							Sort by
-							<button type="" onClick="" class="sortbybutton">
-								<span>Choose..</span>
-								<img class="settingsmenuicon" src="img/icons/chevron-down.svg" alt="arrowdown">
-							</button>
-						</div>
-					</td>
-					<td class="code">
-						.sortbydiv{
-							font-size: 19px;
-							float: left;
-						}
-						.sortbybutton{
-							background-color: #fff;
-							border-color: #000;
-							border-radius: 12px;
-							width: 150px;
+							padding-right: 29px;
+							padding-left: 62px;
+							border: none;
+							border-radius: 1000px; /* Forcing large size in pixels, will ensure rounded corners */
+							background-color: #00cd00;
 							cursor: pointer;
-							display: block;
-							float: right;
 						}
-						.sortbybutton span{
-						    float: left;
-						    color: #848484;
-						    font-size: 19px;
-						    margin-left: 7px;
+
+						.newreportbutton:hover {
+							background-color: #19d219;
+						}
+
+						.newreportbutton:active {
+							background-color: #00b800;
+						}
+
+						.newreportspan{
+							float: left;
+							font-size: 110%;
+						}
+
+						.plusimg{
+							position: absolute;
+							top: calc(50% - 12px); /* 50% of parrent height - half of element height*/
+							left: 26px;
 						}
 					</td>
 					<td class="empty"></td>
@@ -1190,16 +1137,16 @@ select.typebutton option{
 					<span class="select-span">Sort by</span>
 					<div class="select-wrapper">
 						<select name="sort-reports" class="sort-by-select select">
-							<option value="name-az" selected>name a-z</option>
-							<option value="name-za">name z-a</option>
-							<option value="creation-first">latest creation</option>
-							<option value="creation-last">last creation</option>
-							<option value="change-first">latest change</option>
-							<option value="change-last">last change</option>
-							<option value="id-acending">acending ID</option>
-							<option value="id-decending">decending ID </option>
-							<option value="group-az">group a-z</option>
-							<option value="group-za">group z-a</option>
+							<option value="name-az" selected>Name a-z</option>
+							<option value="name-za">Name z-a</option>
+							<option value="creation-first">Latest creation</option>
+							<option value="creation-last">Last creation</option>
+							<option value="change-first">Latest change</option>
+							<option value="change-last">Last change</option>
+							<option value="id-acending">Acending ID</option>
+							<option value="id-decending">Decending ID </option>
+							<option value="group-az">Group a-z</option>
+							<option value="group-za">Group z-a</option>
 						</select>
 					</div>
 				</label>
@@ -1452,7 +1399,7 @@ select.typebutton option{
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" onclick="" class="filterbutton">
+				<button type="button" class="filterbutton">
 					<span>Filter</span>
 					<img class="settingsmenuicon" src="img/icons/sliders.svg" alt="slider-icon">
 				</button>
@@ -1467,7 +1414,7 @@ select.typebutton option{
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" onclick="" class="filterbutton">
+						<button type="button" class="filterbutton">
 							<span>Filter</span>
 							<img class="settingsmenuicon" src="img/icons/sliders.svg" alt="slider-icon">
 						</button>
@@ -1501,7 +1448,7 @@ select.typebutton option{
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" onclick="" class="previousbutton">
+				<button type="button" class="previousbutton">
 					<span>Previous page</span>
 					<img class="settingsmenuicon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
 				</button>
@@ -1516,7 +1463,7 @@ select.typebutton option{
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" onclick="" class="previousbutton">
+						<button type="button" class="previousbutton">
 							<span>Previous page</span>
 							<img class="settingsmenuicon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
 						</button>
@@ -1551,7 +1498,7 @@ select.typebutton option{
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" onclick="" class="nextbutton">
+				<button type="button" class="nextbutton">
 					<span>Next page</span>
 					<img class="settingsmenuicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
 				</button>
@@ -1566,7 +1513,7 @@ select.typebutton option{
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" onclick="" class="nextbutton">
+						<button type="button" class="nextbutton">
 							<span>Next page</span>
 							<img class="settingsmenuicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
 						</button>
@@ -1778,7 +1725,7 @@ select.typebutton option{
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" onclick="" class="uploadimagebutton">
+				<button type="button" class="uploadimagebutton">
 					<span>Upload image</span>
 					<img class="settingsmenuicon" src="img/icons/image.svg" alt="arrowright-icon">
 				</button>
@@ -1793,7 +1740,7 @@ select.typebutton option{
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" onclick="" class="uploadimagebutton">
+						<button type="button" class="uploadimagebutton">
 							<span>Upload image</span>
 							<img class="settingsmenuicon" src="img/icons/image.svg" alt="arrowright-icon">
 						</button>
@@ -1920,7 +1867,7 @@ select.typebutton option{
 							<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
 							<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
 							<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
-							<li><p class="channels">channels</p></li>
+							<li><span class="channels">channels</span></li>
 							<li class="selection">
 								<select class="channelselect">
 									<option>channelnames</option>
@@ -1971,7 +1918,7 @@ select.typebutton option{
 									<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
 									<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
 									<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
-									<li><p class="channels">channels</p></li>
+									<li><span class="channels">channels</span></li>
 									<li class="selection">
 										<select class="channelselect">
 											<option>channelnames</option>
@@ -2033,7 +1980,7 @@ select.typebutton option{
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" onClick="" class="settingbutton">
+				<button type="button" class="settingbutton">
 					<img class="settingsicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
 				</button>
 			</div>
@@ -2047,7 +1994,7 @@ select.typebutton option{
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" onClick="" class="settingbutton">
+						<button type="button" class="settingbutton">
 							<img class="settingsicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
 						</button>
 					</td>
@@ -2077,7 +2024,7 @@ select.typebutton option{
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" onClick="" class="upladtemplatebutton">
+				<button type="button" class="upladtemplatebutton">
 					<span>Upload template</span>
 					<img class="settingsicon" src="img/icons/upload.svg" alt="settings-icon">
 				</button>
@@ -2092,7 +2039,7 @@ select.typebutton option{
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" onClick="" class="upladtemplatebutton">
+						<button type="button" class="upladtemplatebutton">
 							<span>Upload template</span>
 							<img class="settingsicon" src="img/icons/upload.svg" alt="settings-icon">
 						</button>
@@ -2128,7 +2075,7 @@ select.typebutton option{
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" onClick="" class="helpbutton">
+				<button type="button" class="helpbutton">
 					<span>Help</span>
 					<img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
 				</button>
@@ -2143,7 +2090,7 @@ select.typebutton option{
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" onClick="" class="helpbutton">
+						<button type="button" class="helpbutton">
 							<span>Help</span>
 							<img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
 						</button>
@@ -2184,7 +2131,7 @@ select.typebutton option{
 			<div class="wrapper">
 				<div class="texteditdiv">
 					Size
-					<button type="" onclick="" class="texteditbutton">
+					<button class="texteditbutton">
 						<span>Choose..</span>
 						<img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 					</button>
@@ -2202,7 +2149,7 @@ select.typebutton option{
 					<td class="code">
 						<div class="texteditdiv">
 							Size
-							<button type="" onclick="" class="texteditbutton">
+							<button class="texteditbutton">
 								<span>Choose..</span>
 								<img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 							</button>
@@ -2245,7 +2192,7 @@ select.typebutton option{
 			<div class="wrapper">
 				<div class="texteditdiv">
 					Weight
-					<button type="" onclick="" class="texteditbutton">
+					<button class="texteditbutton">
 						<span>Choose..</span>
 						<img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 					</button>
@@ -2263,7 +2210,7 @@ select.typebutton option{
 					<td class="code">
 						<div class="texteditdiv">
 							Weight
-							<button type="" onclick="" class="texteditbutton">
+							<button class="texteditbutton">
 								<span>Choose..</span>
 								<img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 							</button>
@@ -2307,7 +2254,7 @@ select.typebutton option{
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" onclick="" class="settingsmenubutton">
+				<button type="button" class="settingsmenubutton">
 					<span>Edit</span>
 					<img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon">
 				</button>
@@ -2322,7 +2269,7 @@ select.typebutton option{
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" onclick="" class="settingsmenubutton">
+						<button type="button" class="settingsmenubutton">
 							<span>Edit</span>
 							<img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon">
 						</button>
@@ -2366,7 +2313,7 @@ select.typebutton option{
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" onclick="" class="settingsmenubutton">
+				<button type="button" class="settingsmenubutton">
 					<span>Show</span>
 					<img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon">
 				</button>
@@ -2381,7 +2328,7 @@ select.typebutton option{
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" onclick="" class="settingsmenubutton">
+						<button type="button" class="settingsmenubutton">
 							<span>Show</span>
 							<img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon">
 						</button>
@@ -2425,7 +2372,7 @@ select.typebutton option{
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" onclick="" class="settingsmenubutton">
+				<button type="button" class="settingsmenubutton">
 					<span>Schedule</span>
 					<img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon">
 				</button>
@@ -2440,7 +2387,7 @@ select.typebutton option{
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" onclick="" class="settingsmenubutton">
+						<button type="button" class="settingsmenubutton">
 							<span>Schedule</span>
 							<img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon">
 						</button>
@@ -2484,7 +2431,7 @@ select.typebutton option{
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" onclick="" class="settingsmenubutton">
+				<button type="button" class="settingsmenubutton">
 					<span>Share</span>
 					<img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon">
 				</button>
@@ -2499,7 +2446,7 @@ select.typebutton option{
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" onclick="" class="settingsmenubutton">
+						<button type="button" class="settingsmenubutton">
 							<span>Share</span>
 							<img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon">
 						</button>
@@ -2543,7 +2490,7 @@ select.typebutton option{
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" onclick="" class="settingsmenubutton">
+				<button type="button" class="settingsmenubutton">
 					<span>Save as..</span>
 					<img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon">
 				</button>
@@ -2558,7 +2505,7 @@ select.typebutton option{
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" onclick="" class="settingsmenubutton">
+						<button type="button" class="settingsmenubutton">
 							<span>Save as..</span>
 							<img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon">
 						</button>
@@ -2602,7 +2549,7 @@ select.typebutton option{
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" onclick="" class="settingsmenubutton">
+				<button type="button" class="settingsmenubutton">
 					<span>Print</span>
 					<img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon">
 				</button>
@@ -2617,7 +2564,7 @@ select.typebutton option{
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" onclick="" class="settingsmenubutton">
+						<button type="button" class="settingsmenubutton">
 							<span>Print</span>
 							<img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon">
 						</button>
@@ -2661,7 +2608,7 @@ select.typebutton option{
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" onclick="" class="settingsmenubutton">
+				<button type="button" class="settingsmenubutton">
 					<span>Delete</span>
 					<img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon">
 				</button>
@@ -2676,7 +2623,7 @@ select.typebutton option{
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" onclick="" class="settingsmenubutton">
+						<button type="button" class="settingsmenubutton">
 							<span>Delete</span>
 							<img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon">
 						</button>
@@ -3028,17 +2975,17 @@ select.typebutton option{
 		</div>
 		<div class="example">
 			<div class="wrapper">
-                <button type="button" onclick="" class="button-g"> Done </button>
-                <button type="button" onclick="" class="button-g"> Save&amp;close </button>
-                <button type="button" onclick="" class="button-g"> Load template </button>
-                <button type="button" onclick="" class="button-g"> Print </button>
-                <button type="button" onclick="" class="button-g"> Create </button>
-                <button type="button" onclick="" class="button-r"> Delete</button>
-                <button type="button" onclick="" class="button-w"> Cancel</button>
-                <button type="button" onclick="" class="button-w"> Save </button>
-                <button type="button" onclick="" class="button-w"> Clear all filter </button>
-                <button type="button" onclick="" class="button-b"> Just close</button>
-                <button type="button" onclick="" class="buttongr"> <img class="Ticon" src="img/icons/type.svg" alt="text-icon">  </button>
+                <button type="button" class="button-g"> Done </button>
+                <button type="button" class="button-g"> Save&amp;close </button>
+                <button type="button" class="button-g"> Load template </button>
+                <button type="button" class="button-g"> Print </button>
+                <button type="button" class="button-g"> Create </button>
+                <button type="button" class="button-r"> Delete</button>
+                <button type="button" class="button-w"> Cancel</button>
+                <button type="button" class="button-w"> Save </button>
+                <button type="button" class="button-w"> Clear all filter </button>
+                <button type="button" class="button-b"> Just close</button>
+                <button type="button" class="buttongr"> <img class="Ticon" src="img/icons/type.svg" alt="text-icon">  </button>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -3051,17 +2998,17 @@ select.typebutton option{
 				<tr class="row-two">
 					<!-- HTML -->
                     <td class="code">
-						<button type="button" onclick="" class="button-g"> Done </button>
-						<button type="button" onclick="" class="button-g"> Save&amp;close </button>
-						<button type="button" onclick="" class="button-g"> Load template </button>
-						<button type="button" onclick="" class="button-g"> Print </button>
-						<button type="button" onclick="" class="button-g"> Create </button>
-						<button type="button" onclick="" class="button-r"> Delete</button>
-						<button type="button" onclick="" class="button-w"> Cancel</button>
-						<button type="button" onclick="" class="button-w"> Save </button>
-						<button type="button" onclick="" class="button-w"> Clear all filter </button>
-						<button type="button" onclick="" class="button-b"> Just close</button>
-						<button type="button" onclick="" class="buttongr"> <img class="Ticon" src="img/icons/type.svg" alt="text-icon">  </button>
+						<button type="button" class="button-g"> Done </button>
+						<button type="button" class="button-g"> Save&amp;close </button>
+						<button type="button" class="button-g"> Load template </button>
+						<button type="button" class="button-g"> Print </button>
+						<button type="button" class="button-g"> Create </button>
+						<button type="button" class="button-r"> Delete</button>
+						<button type="button" class="button-w"> Cancel</button>
+						<button type="button" class="button-w"> Save </button>
+						<button type="button" class="button-w"> Clear all filter </button>
+						<button type="button" class="button-b"> Just close</button>
+						<button type="button" class="buttongr"> <img class="Ticon" src="img/icons/type.svg" alt="text-icon">  </button>
                     </td>
 					<!-- CSS -->
 					<td class="code">
@@ -3161,8 +3108,8 @@ select.typebutton option{
 			<div class="wrapper">
 				<div class="frame">
 					<div class="type">
-						<p class="typetext">Email adress</p>
-						<button type="" onclick="" class="typebutton">
+						<span class="typetext">Email adress</span>
+						<button class="typebutton">
 							<span class="typebuttontext">example@email.com</span>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
@@ -3182,8 +3129,8 @@ select.typebutton option{
 					<td class="code">
 						<div class="frame">
 							<div class="type">
-								<p class="typetext">Email adress</p>
-								<button type="" onclick="" class="typebutton">
+								<span class="typetext">Email adress</span>
+								<button class="typebutton">
 									<span class="typebuttontext">example@email.com</span>
 									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 								</button>
@@ -3254,8 +3201,8 @@ select.typebutton option{
 			<div class="wrapper">
 				<div class="frame">
 					<div class="type">
-						<p class="typetext">Send with</p>
-						<button type="" onclick="" class="typebutton">
+						<span class="typetext">Send with</span>
+						<button class="typebutton">
 							<span class="typebuttontext">email</span>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
@@ -3275,8 +3222,8 @@ select.typebutton option{
 					<td class="code">
 						<div class="frame">
 							<div class="type">
-								<p class="typetext">Send with</p>
-								<button type="" onclick="" class="typebutton">
+								<span class="typetext">Send with</span>
+								<button class="typebutton">
 									<span class="typebuttontext">email</span>
 									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 								</button>
@@ -3347,8 +3294,8 @@ select.typebutton option{
 			<div class="wrapper">
 				<div class="frame">
 					<div class="type">
-						<p class="typetext">Time</p>
-						<button type="" onclick="" class="typebutton">
+						<span class="typetext">Time</span>
+						<button class="typebutton">
 							<span class="typebuttontext">00:00</span>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
@@ -3368,8 +3315,8 @@ select.typebutton option{
 					<td class="code">
 						<div class="frame">
 							<div class="type">
-								<p class="typetext">Time</p>
-								<button type="" onclick="" class="typebutton">
+								<span class="typetext">Time</span>
+								<button class="typebutton">
 									<span class="typebuttontext">00:00</span>
 									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 								</button>
@@ -3440,7 +3387,7 @@ select.typebutton option{
 			<div class="wrapper">
 				<div class="frame">
 					<div class="type">
-						<p class="typetext">Message</p>
+						<span class="typetext">Message</span>
 						<textarea rows="4" cols="50" name="comment" class="type-text-field" placeholder="Enter message here..."></textarea>
 					</div>
 				</div>
@@ -3458,7 +3405,7 @@ select.typebutton option{
 					<td class="code">
 						<div class="frame">
 							<div class="type">
-								<p class="typetext">Message</p>
+								<span class="typetext">Message</span>
 								<textarea rows="4" cols="50" name="comment" class="type-text-field" placeholder="Enter message here..."></textarea>
 							</div>
 						</div>
@@ -3781,7 +3728,7 @@ select.typebutton option{
 						<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
 						<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
 						<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
-						<li><p class="channels">channels</p></li>
+						<li><span class="channels">channels</span></li>
 						<li class="selection">
 							<select class="channelselect">
 								<option>channelnames</option>
@@ -3827,7 +3774,7 @@ select.typebutton option{
 									<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
 									<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
 									<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
-									<li><p class="channels">channels</p></li>
+									<li><span class="channels">channels</span></li>
 									<li class="selection">
 										<select class="channelselect">
 											<option>channelnames</option>
@@ -3984,7 +3931,7 @@ select.typebutton option{
 							<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
 							<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
 							<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
-							<li><p class="channels">channels</p></li>
+							<li><span class="channels">channels</span></li>
 							<li class="selection">
 								<select class="channelselect">
 									<option>channelnames</option>
@@ -4030,7 +3977,7 @@ select.typebutton option{
 									<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
 									<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
 									<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
-									<li><p class="channels">channels</p></li>
+									<li><span class="channels">channels</span></li>
 									<li class="selection">
 										<select class="channelselect">
 											<option>channelnames</option>
@@ -4159,14 +4106,14 @@ select.typebutton option{
 		<div class="example">
 			<div class="wrapper">
 				<div class="settingsmenu">
-					<button type="button" onClick="" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><span>Edit</span> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><span>Show</span> <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><span>Schedule</span> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><span>Share</span> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><span>Save as..</span><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><span>Print</span><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><span>Delete</span><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
+					<button type="button" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
+					<button type="button" class="settingsmenubutton"><span>Edit</span> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon"></button>
+					<button type="button" class="settingsmenubutton"><span>Show</span> <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon"></button>
+					<button type="button" class="settingsmenubutton"><span>Schedule</span> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
+					<button type="button" class="settingsmenubutton"><span>Share</span> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
+					<button type="button" class="settingsmenubutton"><span>Save as..</span><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
+					<button type="button" class="settingsmenubutton"><span>Print</span><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
+					<button type="button" class="settingsmenubutton"><span>Delete</span><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
 				</div>
 			</div>
 		</div>
@@ -4181,14 +4128,14 @@ select.typebutton option{
 					<!--HTML to copy-->
 					<td class="code">
 						<div class="settingsmenu">
-							<button type="button" onClick="" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><span>Edit</span> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><span>Show</span> <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><span>Schedule</span> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><span>Share</span> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><span>Save as..</span><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><span>Print</span><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><span>Delete</span><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
+							<button type="button" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
+							<button type="button" class="settingsmenubutton"><span>Edit</span> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon"></button>
+							<button type="button" class="settingsmenubutton"><span>Show</span> <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon"></button>
+							<button type="button" class="settingsmenubutton"><span>Schedule</span> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
+							<button type="button" class="settingsmenubutton"><span>Share</span> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
+							<button type="button" class="settingsmenubutton"><span>Save as..</span><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
+							<button type="button" class="settingsmenubutton"><span>Print</span><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
+							<button type="button" class="settingsmenubutton"><span>Delete</span><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
 						</div>
 					</td>
 					<!--CSS to copy-->
@@ -4248,14 +4195,14 @@ select.typebutton option{
 		<div class="example">
 			<div class="wrapper">
 				<div class="settingsmenu-dark">
-					<button type="button" onClick="" class="closesettingmenu-dark"><img class="closesettingmenuicon-dark" src="img/icons/x-dark.svg" alt="xicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><span>Edit</span> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="edit icon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><span>Refresh</span> <img class="settingsmenuicon" src="img/icons/refresh.svg" alt="refresh icon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><span>Schedule</span> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><span>Share</span> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><span>Save as..</span><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><span>Print</span><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><span>Delete</span><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
+					<button type="button" class="closesettingmenu-dark"><img class="closesettingmenuicon-dark" src="img/icons/x-dark.svg" alt="xicon"></button>
+					<button type="button" class="settingsmenubutton"><span>Edit</span> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="edit icon"></button>
+					<button type="button" class="settingsmenubutton"><span>Refresh</span> <img class="settingsmenuicon" src="img/icons/refresh.svg" alt="refresh icon"></button>
+					<button type="button" class="settingsmenubutton"><span>Schedule</span> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
+					<button type="button" class="settingsmenubutton"><span>Share</span> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
+					<button type="button" class="settingsmenubutton"><span>Save as..</span><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
+					<button type="button" class="settingsmenubutton"><span>Print</span><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
+					<button type="button" class="settingsmenubutton"><span>Delete</span><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
 				</div>
 			</div>
 		</div>
@@ -4270,14 +4217,14 @@ select.typebutton option{
 					<!--HTML to copy-->
 					<td class="code">
 						<div class="settingsmenu-dark">
-							<button type="button" onClick="" class="closesettingmenu-dark"><img class="closesettingmenuicon-dark" src="img/icons/x-dark.svg" alt="xicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><span>Edit</span> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="edit icon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><span>Refresh</span> <img class="settingsmenuicon" src="img/icons/refresh.svg" alt="refresh icon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><span>Schedule</span> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><span>Share</span> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><span>Save as..</span><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><span>Print</span><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><span>Delete</span><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
+							<button type="button" class="closesettingmenu-dark"><img class="closesettingmenuicon-dark" src="img/icons/x-dark.svg" alt="xicon"></button>
+							<button type="button" class="settingsmenubutton"><span>Edit</span> <img class="settingsmenuicon" src="img/icons/edit.svg" alt="edit icon"></button>
+							<button type="button" class="settingsmenubutton"><span>Refresh</span> <img class="settingsmenuicon" src="img/icons/refresh.svg" alt="refresh icon"></button>
+							<button type="button" class="settingsmenubutton"><span>Schedule</span> <img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon"></button>
+							<button type="button" class="settingsmenubutton"><span>Share</span> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
+							<button type="button" class="settingsmenubutton"><span>Save as..</span><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
+							<button type="button" class="settingsmenubutton"><span>Print</span><img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon"></button>
+							<button type="button" class="settingsmenubutton"><span>Delete</span><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
 						</div>
 					</td>
 					<!--CSS to copy-->
@@ -4336,10 +4283,10 @@ select.typebutton option{
 		<div class="example">
 			<div class="wrapper">
 				<div class="settingsmenu">
-					<button type="button" onClick="" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><span>Share</span> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><span>Save as..</span><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
-					<button type="button" onClick="" class="settingsmenubutton"><span>Delete</span><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
+					<button type="button" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
+					<button type="button" class="settingsmenubutton"><span>Share</span> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
+					<button type="button" class="settingsmenubutton"><span>Save as..</span><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
+					<button type="button" class="settingsmenubutton"><span>Delete</span><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
 				</div>
 			</div>
 		</div>
@@ -4354,10 +4301,10 @@ select.typebutton option{
 					<!--HTML to copy-->
 					<td class="code">
 						<div class="settingsmenu">
-							<button type="button" onClick="" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><span>Share</span> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><span>Save as..</span><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
-							<button type="button" onClick="" class="settingsmenubutton"><span>Delete</span><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
+							<button type="button" class="closesettingmenu"><img class="closesettingmenuicon" src="img/icons/x.svg" alt="xicon"></button>
+							<button type="button" class="settingsmenubutton"><span>Share</span> <img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon"></button>
+							<button type="button" class="settingsmenubutton"><span>Save as..</span><img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon"></button>
+							<button type="button" class="settingsmenubutton"><span>Delete</span><img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon"></button>
 						</div>
 					</td>
 					<!--CSS to copy-->
@@ -4653,8 +4600,8 @@ select.typebutton option{
 								<!-- side titel - slut-->
 								<!-- opret ny rapport knap -->
 								<div class="opretnyrapportcontainer">
-									<button type="button" class="newreportbutton">
-										<img class="plusimg" src="img/icons/plus.svg" alt="new preort img">
+									<button type="button" class="newreportbutton" title="Initiate creation of a new report.">
+										<img class="plusimg" src="img/icons/plus.svg" alt="new report img">
 										<span class="newreportspan">New report</span>
 									</button>
 								</div>
@@ -4693,7 +4640,7 @@ select.typebutton option{
 								<!-- switch knap preview/list - slut-->
 								<!-- folder-overview knap -->
 								<div class="folderoverviewcontainer">
-									<button type="button" onclick="" class="settingsmenubutton">
+									<button type="button" class="settingsmenubutton">
 										<span>Folder overview</span>
 										<img class="settingsmenuicon" src="img/icons/folder.svg" alt="editicon">
 									</button>
@@ -4701,7 +4648,7 @@ select.typebutton option{
 								<!-- folder-overview knap - slut-->
 								<!-- filter knap -->
 								<div class="filtercontainer">
-									<button type="button" onclick="" class="filterbutton">
+									<button type="button" class="filterbutton">
 										<span>Filter</span>
 										<img class="settingsmenuicon" src="img/icons/sliders.svg" alt="slider-icon">
 									</button>
@@ -4760,8 +4707,8 @@ select.typebutton option{
 										<!-- side titel - slut-->
 										<!-- opret ny rapport knap -->
 										<div class="opretnyrapportcontainer">
-											<button type="button" class="newreportbutton">
-												<img class="plusimg" src="img/icons/plus.svg" alt="new preort img">
+											<button type="button" class="newreportbutton" title="Initiate creation of a new report.">
+												<img class="plusimg" src="img/icons/plus.svg" alt="new report img">
 												<span class="newreportspan">New report</span>
 											</button>
 										</div>
@@ -4800,7 +4747,7 @@ select.typebutton option{
 										<!-- switch knap preview/list - slut-->
 										<!-- folder-overview knap -->
 										<div class="folderoverviewcontainer">
-											<button type="button" onclick="" class="settingsmenubutton">
+											<button type="button" class="settingsmenubutton">
 												<span>Folder overview</span>
 												<img class="settingsmenuicon" src="img/icons/folder.svg" alt="editicon">
 											</button>
@@ -4808,7 +4755,7 @@ select.typebutton option{
 										<!-- folder-overview knap - slut-->
 										<!-- filter knap -->
 										<div class="filtercontainer">
-											<button type="button" onclick="" class="filterbutton">
+											<button type="button" class="filterbutton">
 												<span>Filter</span>
 												<img class="settingsmenuicon" src="img/icons/sliders.svg" alt="slider-icon">
 											</button>
@@ -5045,7 +4992,7 @@ select.typebutton option{
 							<div class="bottomEditorHeader">
 								<!-- previous page -->
 								<div class="previouspagecontainer">
-									<button type="button" onclick="" class="previousbutton">
+									<button type="button" class="previousbutton">
 									   <span>Previous page</span>
 									   <img class="settingsmenuicon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
 									</button>
@@ -5089,7 +5036,7 @@ select.typebutton option{
 								<!-- delete page knap - slut-->
 								<!-- Upload image knap -->
 								<div class="uploadimageknapcontainer">
-									<button type="button" onclick="" class="uploadimagebutton">
+									<button type="button" class="uploadimagebutton">
 									   <span>Upload image</span>
 									   <img class="settingsmenuicon" src="img/icons/image.svg" alt="arrowright-icon">
 									</button>
@@ -5097,7 +5044,7 @@ select.typebutton option{
 								<!-- Upload image knap - slut-->
 								<!-- next page -->
 								<div class="nextpagecontainer">
-									<button type="button" onclick="" class="nextbutton">
+									<button type="button" class="nextbutton">
 										<span>Next page</span>
 										<img class="settingsmenuicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
 									</button>
@@ -5186,7 +5133,7 @@ select.typebutton option{
 									<div class="bottomEditorHeader">
 										<!-- previous page -->
 										<div class="previouspagecontainer">
-											<button type="button" onclick="" class="previousbutton">
+											<button type="button" class="previousbutton">
 											   <span>Previous page</span>
 											   <img class="settingsmenuicon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
 											</button>
@@ -5230,7 +5177,7 @@ select.typebutton option{
 										<!-- delete page knap - slut-->
 										<!-- Upload image knap -->
 										<div class="uploadimageknapcontainer">
-											<button type="button" onclick="" class="uploadimagebutton">
+											<button type="button" class="uploadimagebutton">
 											   <span>Upload image</span>
 											   <img class="settingsmenuicon" src="img/icons/image.svg" alt="arrowright-icon">
 											</button>
@@ -5238,7 +5185,7 @@ select.typebutton option{
 										<!-- Upload image knap - slut-->
 										<!-- next page -->
 										<div class="nextpagecontainer">
-											<button type="button" onclick="" class="nextbutton">
+											<button type="button" class="nextbutton">
 												<span>Next page</span>
 												<img class="settingsmenuicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
 											</button>
@@ -5413,8 +5360,8 @@ select.typebutton option{
 					</div>
 					<!-- upload template knap -->
 					<div class="uploadtemplateknap">
-						<p class="typetext">Upload template</p>
-						<button type="" onclick="" class="typebutton">
+						<span class="typetext">Upload template</span>
+						<button class="typebutton">
 							<span class="typebuttontext">Choose...</span>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
@@ -5422,12 +5369,12 @@ select.typebutton option{
 					<!-- upload template knap - slut-->
 					<!-- done knap -->
 					<div class="uploadpopuptextknapvenstre">
-						<button type="button" onclick="" class="button-g"> Done </button>
+						<button type="button" class="button-g"> Done </button>
 					</div>
 					<!-- done - slut-->
 					<!-- cancel knap -->
 					<div class="uploadpopuptextknaphøjre">
-						<button type="button" onclick="" class="button-w"> Cancel</button>
+						<button type="button" class="button-w"> Cancel</button>
 					</div>
 					<!-- cancel knap slut - slut-->
 				</div>
@@ -5454,8 +5401,8 @@ select.typebutton option{
 							</div>
 							<!-- upload template knap -->
 							<div class="uploadtemplateknap">
-								<p class="typetext">Upload template</p>
-								<button type="" onclick="" class="typebutton">
+								<span class="typetext">Upload template</span>
+								<button class="typebutton">
 									<span class="typebuttontext">Choose...</span>
 									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 								</button>
@@ -5463,12 +5410,12 @@ select.typebutton option{
 							<!-- upload template knap - slut-->
 							<!-- done knap -->
 							<div class="uploadpopuptextknapvenstre">
-								<button type="button" onclick="" class="button-g"> Done </button>
+								<button type="button" class="button-g"> Done </button>
 							</div>
 							<!-- done - slut-->
 							<!-- cancel knap -->
 							<div class="uploadpopuptextknaphøjre">
-								<button type="button" onclick="" class="button-w"> Cancel</button>
+								<button type="button" class="button-w"> Cancel</button>
 							</div>
 							<!-- cancel knap slut - slut-->
 						</div>
@@ -5554,8 +5501,8 @@ select.typebutton option{
 					</div>
 					<!-- upload template knap -->
 					<div class="uploadtemplateknap">
-						<p class="typetext">Upload image</p>
-						<button type="" onclick="" class="typebutton">
+						<span class="typetext">Upload image</span>
+						<button class="typebutton">
 								<span class="typebuttontext">Choose...</span>
 								<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
@@ -5563,12 +5510,12 @@ select.typebutton option{
 					<!-- upload template knap - slut-->
 					<!-- done knap -->
 					<div class="uploadpopuptextknapvenstre">
-						<button type="button" onclick="" class="button-g"> Done </button>
+						<button type="button" class="button-g"> Done </button>
 					</div>
 				   <!-- done - slut-->
 				   <!-- cancel knap -->
 					<div class="uploadpopuptextknaphøjre">
-						<button type="button" onclick="" class="button-w"> Cancel</button>
+						<button type="button" class="button-w"> Cancel</button>
 					</div>
 					<!-- cancel knap slut - slut-->
 				</div>
@@ -5594,8 +5541,8 @@ select.typebutton option{
 							</div>
 							<!-- upload template knap -->
 							<div class="uploadtemplateknap">
-								<p class="typetext">Upload image</p>
-								<button type="" onclick="" class="typebutton">
+								<span class="typetext">Upload image</span>
+								<button class="typebutton">
 										<span class="typebuttontext">Choose...</span>
 										<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 								</button>
@@ -5603,12 +5550,12 @@ select.typebutton option{
 							<!-- upload template knap - slut-->
 							<!-- done knap -->
 							<div class="uploadpopuptextknapvenstre">
-								<button type="button" onclick="" class="button-g"> Done </button>
+								<button type="button" class="button-g"> Done </button>
 							</div>
 						   <!-- done - slut-->
 						   <!-- cancel knap -->
 							<div class="uploadpopuptextknaphøjre">
-								<button type="button" onclick="" class="button-w"> Cancel</button>
+								<button type="button" class="button-w"> Cancel</button>
 							</div>
 							<!-- cancel knap slut - slut-->
 						</div>
@@ -5714,8 +5661,8 @@ select.typebutton option{
 					<!-- Choose printer knap - slut-->
 					<!-- Choose quantity knap -->
 					<div class="settingpopupknap">
-						<p class="typetext">Share to</p>
-						<button type="" onclick="" class="typebutton">
+						<span class="typetext">Share to</span>
+						<button class="typebutton">
 							<span class="typebuttontext">email@example.com</span>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
@@ -5723,8 +5670,8 @@ select.typebutton option{
 					<!-- Choose quantity knap - slut-->
 					<!-- Email knap -->
 					<div class="settingpopupknap">
-						<p class="typetext">Your email</p>
-						<button type="" onclick="" class="typebutton">
+						<span class="typetext">Your email</span>
+						<button class="typebutton">
 							<span class="typebuttontext">email@example.com</span>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
@@ -5733,19 +5680,19 @@ select.typebutton option{
 					<!-- message input -->
 					<div class="messageframe">
 						<div class="type">
-							<p class="typetext">Message</p>
+							<span class="typetext">Message</span>
 							<textarea rows="4" cols="50" name="comment" class="type-text-field" placeholder="Enter message here..."></textarea>
 						</div>
 					</div>
 					<!-- message input slut -->
 					<!-- cancel knap -->
 					<div class="popupcancelknap">
-						<button type="button" onclick="" class="button-w">Cancel</button>
+						<button type="button" class="button-w">Cancel</button>
 					</div>
 					<!-- cancel knap slut - slut-->
 					<!-- done knap -->
 					<div class="popupdoneknap">
-						<button type="button" onclick="" class="button-g">Done</button>
+						<button type="button" class="button-g">Done</button>
 					</div>
                 <!-- done - slut-->
 				</div>
@@ -5787,8 +5734,8 @@ select.typebutton option{
 								<!-- Choose printer knap - slut-->
 								<!-- Choose quantity knap -->
 								<div class="settingpopupknap">
-									<p class="typetext">Share to</p>
-									<button type="" onclick="" class="typebutton">
+									<span class="typetext">Share to</span>
+									<button class="typebutton">
 										<span class="typebuttontext">email@example.com</span>
 										<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 									</button>
@@ -5796,8 +5743,8 @@ select.typebutton option{
 								<!-- Choose quantity knap - slut-->
 								<!-- Email knap -->
 								<div class="settingpopupknap">
-									<p class="typetext">Your email</p>
-									<button type="" onclick="" class="typebutton">
+									<span class="typetext">Your email</span>
+									<button class="typebutton">
 										<span class="typebuttontext">email@example.com</span>
 										<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 									</button>
@@ -5806,19 +5753,19 @@ select.typebutton option{
 								<!-- message input -->
 								<div class="messageframe">
 									<div class="type">
-										<p class="typetext">Message</p>
+										<span class="typetext">Message</span>
 										<textarea rows="4" cols="50" name="comment" class="type-text-field" placeholder="Enter message here..."></textarea>
 									</div>
 								</div>
 								<!-- message input slut -->
 								<!-- cancel knap -->
 								<div class="popupcancelknap">
-									<button type="button" onclick="" class="button-w">Cancel</button>
+									<button type="button" class="button-w">Cancel</button>
 								</div>
 								<!-- cancel knap slut - slut-->
 								<!-- done knap -->
 								<div class="popupdoneknap">
-									<button type="button" onclick="" class="button-g">Done</button>
+									<button type="button" class="button-g">Done</button>
 								</div>
 							<!-- done - slut-->
 							</div>
@@ -6020,8 +5967,8 @@ select.typebutton option{
 					</div>
 					<!-- Type knap -->
 					<div class="settingpopupknap">
-						<p class="typetext">Type</p>
-						<button type="" onclick="" class="typebutton">
+						<span class="typetext">Type</span>
+						<button class="typebutton">
 							<span class="typebuttontext">Day of week</span>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
@@ -6029,16 +5976,16 @@ select.typebutton option{
 					<!-- Type knap - slut-->
 					<!-- Time knap -->
 					<div class="settingpopupknap">
-						<p class="typetext">Time</p>
-						<button type="" onclick="" class="timebutton">
+						<span class="typetext">Time</span>
+						<button class="timebutton">
 							<span class="typebuttontext">00:00</span>
 					  </button>
 					</div>
 					<!-- Time knap- slut-->
 					<!-- Email knap -->
 					<div class="settingpopupknap">
-						<p class="typetext">Your email</p>
-						<button type="" onclick="" class="typebutton">
+						<span class="typetext">Your email</span>
+						<button class="typebutton">
 							<span class="typebuttontext">email@example.com</span>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
@@ -6047,19 +5994,19 @@ select.typebutton option{
 					<!-- message input -->
 					<div class="messageframe">
 						<div class="type">
-							<p class="typetext">Message</p>
+							<soan class="typetext">Message</span>
 							<textarea rows="4" cols="50" name="comment" class="type-text-field" placeholder="Enter message here..."></textarea>
 						</div>
 					</div>
 					<!-- message input - slut -->
 					<!-- cancel knap -->
 					<div class="popupcancelknap">
-						<button type="button" onclick="" class="button-w">Cancel</button>
+						<button type="button" class="button-w">Cancel</button>
 					</div>
 					<!-- cancel knap slut - slut-->
 					<!-- done knap -->
 					<div class="popupdoneknap">
-						<button type="button" onclick="" class="button-g">Done</button>
+						<button type="button" class="button-g">Done</button>
 					</div>
 				</div>
 			<!-- SHCEDULE POP-UP ORGANISME - SLUT -->
@@ -6085,8 +6032,8 @@ select.typebutton option{
 							</div>
 							<!-- Type knap -->
 							<div class="settingpopupknap">
-								<p class="typetext">Type</p>
-								<button type="" onclick="" class="typebutton">
+								<span class="typetext">Type</span>
+								<button class="typebutton">
 									<span class="typebuttontext">Day of week</span>
 									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 								</button>
@@ -6094,16 +6041,16 @@ select.typebutton option{
 							<!-- Type knap - slut-->
 							<!-- Time knap -->
 							<div class="settingpopupknap">
-								<p class="typetext">Time</p>
-								<button type="" onclick="" class="timebutton">
+								<span class="typetext">Time</span>
+								<button class="timebutton">
 									<span class="typebuttontext">00:00</span>
 							  </button>
 							</div>
 							<!-- Time knap- slut-->
 							<!-- Email knap -->
 							<div class="settingpopupknap">
-								<p class="typetext">Your email</p>
-								<button type="" onclick="" class="typebutton">
+								<span class="typetext">Your email</span>
+								<button class="typebutton">
 									<span class="typebuttontext">email@example.com</span>
 									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 								</button>
@@ -6112,19 +6059,19 @@ select.typebutton option{
 							<!-- message input -->
 							<div class="messageframe">
 								<div class="type">
-									<p class="typetext">Message</p>
+									<span class="typetext">Message</span>
 									<textarea rows="4" cols="50" name="comment" class="type-text-field" placeholder="Enter message here..."></textarea>
 								</div>
 							</div>
 							<!-- message input - slut -->
 							<!-- cancel knap -->
 							<div class="popupcancelknap">
-								<button type="button" onclick="" class="button-w">Cancel</button>
+								<button type="button" class="button-w">Cancel</button>
 							</div>
 							<!-- cancel knap slut - slut-->
 							<!-- done knap -->
 							<div class="popupdoneknap">
-								<button type="button" onclick="" class="button-g">Done</button>
+								<button type="button" class="button-g">Done</button>
 							</div>
 						</div>
 					<!-- SHCEDULE POP-UP ORGANISME - SLUT -->
@@ -6325,8 +6272,8 @@ select.typebutton option{
 					</div>
 					<!-- Choose printer knap -->
 					<div class="settingpopupknap">
-						<p class="typetext">Save as</p>
-						<button type="" onclick="" class="typebutton">
+						<span class="typetext">Save as</span>
+						<button class="typebutton">
 							<span class="typebuttontext">PDF</span>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
@@ -6334,20 +6281,20 @@ select.typebutton option{
 					<!-- Choose printer knap - slut-->
 					<!-- Choose quantity knap -->
 					<div class="settingpopupknap">
-						<p class="typetext">Save to</p>
-						<button type="" onclick="" class="typebutton">
+						<span class="typetext">Save to</span>
+						<button class="typebutton">
 							<span class="typebuttontext">Choos location...</span>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
 					</div>
 					<!-- cancel knap -->
 					<div class="popupcancelknap1">
-						<button type="button" onclick="" class="button-w">Cancel</button>
+						<button type="button" class="button-w">Cancel</button>
 					</div>
 					<!-- cancel knap slut - slut-->
 					<!-- save knap -->
 					<div class="popsaveknap">
-						<button type="button" onclick="" class="button-w"> Save </button>
+						<button type="button" class="button-w"> Save </button>
 					</div>
 				</div>
 				<!-- SAVE AS-POP-UP ORGANISME - SLUT -->
@@ -6374,8 +6321,8 @@ select.typebutton option{
 							</div>
 							<!-- Choose printer knap -->
 							<div class="settingpopupknap">
-								<p class="typetext">Save as</p>
-								<button type="" onclick="" class="typebutton">
+								<span class="typetext">Save as</span>
+								<button class="typebutton">
 									<span class="typebuttontext">PDF</span>
 									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 								</button>
@@ -6383,20 +6330,20 @@ select.typebutton option{
 							<!-- Choose printer knap - slut-->
 							<!-- Choose quantity knap -->
 							<div class="settingpopupknap">
-								<p class="typetext">Save to</p>
-								<button type="" onclick="" class="typebutton">
+								<span class="typetext">Save to</span>
+								<button class="typebutton">
 									<span class="typebuttontext">Choos location...</span>
 									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 								</button>
 							</div>
 							<!-- cancel knap -->
 							<div class="popupcancelknap1">
-								<button type="button" onclick="" class="button-w">Cancel</button>
+								<button type="button" class="button-w">Cancel</button>
 							</div>
 							<!-- cancel knap slut - slut-->
 							<!-- save knap -->
 							<div class="popsaveknap">
-								<button type="button" onclick="" class="button-w"> Save </button>
+								<button type="button" class="button-w"> Save </button>
 							</div>
 						</div>
 						<!-- SAVE AS-POP-UP ORGANISME - SLUT -->
@@ -6596,29 +6543,29 @@ select.typebutton option{
 					</div>
 					<!-- Choose printer knap -->
 					<div class="settingpopupknap">
-					  <p class="typetext">Choose printer</p>
-						<button type="" onclick="" class="typebutton">
-						  <aspan class="typebuttontext">Choose...</aspan>
+						<span class="typetext">Choose printer</span>
+						<button class="typebutton">
+						  <span class="typebuttontext">Choose...</span>
 						  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
 					</div>
 					<!-- Choose printer knap - slut-->
 					<!-- Choose quantity knap -->
 					<div class="settingpopupknap">
-					  <p class="typetext">Choose quantity</p>
-						<button type="" onclick="" class="typebutton">
-						  <aspan class="typebuttontext">Choose...</aspan>
+						<span class="typetext">Choose quantity</span>
+						<button class="typebutton">
+						  <span class="typebuttontext">Choose...</span>
 						  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						</button>
 					</div>
 					<!-- cancel knap -->
 					<div class="popupcancelknap1">
-					   <button type="button" onclick="" class="button-w">Cancel</button>
+					   <button type="button" class="button-w">Cancel</button>
 					</div>
 					<!-- cancel knap slut - slut-->
 					<!-- print knap -->
 					<div class="popsaveknap">
-						<button type="button" onclick="" class="button-g"> Print </button>
+						<button type="button" class="button-g"> Print </button>
 					</div>
 					<!-- print knap - slet-->
 				</div>
@@ -6645,29 +6592,29 @@ select.typebutton option{
 							</div>
 							<!-- Choose printer knap -->
 							<div class="settingpopupknap">
-							  <p class="typetext">Choose printer</p>
-								<button type="" onclick="" class="typebutton">
-								  <aspan class="typebuttontext">Choose...</aspan>
+								<span class="typetext">Choose printer</span>
+								<button class="typebutton">
+								  <span class="typebuttontext">Choose...</span>
 								  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 								</button>
 							</div>
 							<!-- Choose printer knap - slut-->
 							<!-- Choose quantity knap -->
 							<div class="settingpopupknap">
-							  <p class="typetext">Choose quantity</p>
-								<button type="" onclick="" class="typebutton">
-								  <aspan class="typebuttontext">Choose...</aspan>
+								<span class="typetext">Choose quantity</span>
+								<button class="typebutton">
+								  <span class="typebuttontext">Choose...</span>
 								  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 								</button>
 							</div>
 							<!-- cancel knap -->
 							<div class="popupcancelknap1">
-							   <button type="button" onclick="" class="button-w">Cancel</button>
+							   <button type="button" class="button-w">Cancel</button>
 							</div>
 							<!-- cancel knap slut - slut-->
 							<!-- print knap -->
 							<div class="popsaveknap">
-								<button type="button" onclick="" class="button-g"> Print </button>
+								<button type="button" class="button-g"> Print </button>
 							</div>
 							<!-- print knap - slet-->
 						</div>
@@ -6880,52 +6827,52 @@ select.typebutton option{
 						<!-- DATE RANGE - slut-->
 						<!-- DATE TARGET knap -->
 						<div class="settingpopupknap">
-						  <p class="typetext">Date target</p>
-						  <button type="" onclick="" class="typebutton">
-							<aspan class="typebuttontext">Last edited</aspan>
+							<span class="typetext">Date target</span>
+							<button class="typebutton">
+								<span class="typebuttontext">Last edited</span>
 							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 						  </button>
 						</div>
 						<!-- DATE TARGET - slut-->
 						<!-- RESULAT knap -->
 						<div class="settingpopupknap">
-						  <p class="typetext">Result</p>
-							<button type="" onclick="" class="typebutton">
-							  <aspan class="typebuttontext">Not set</aspan>
+							<span class="typetext">Result</span>
+							<button class="typebutton">
+							  <span class="typebuttontext">Not set</span>
 							  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 							</button>
 						</div>
 						<!-- RESULT knap - slut-->
 						<!-- SCHEDULE knap -->
 						<div class="settingpopupknap">
-						  <p class="typetext">Schedule</p>
-							<button type="" onclick="" class="typebutton">
-							  <aspan class="typebuttontext">Not set</aspan>
+							<span class="typetext">Schedule</span>
+							<button class="typebutton">
+							  <span class="typebuttontext">Not set</span>
 							  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 							</button>
 						</div>
 						<!-- SCHEDULE knap - slut-->
 						<!-- FOLDER knap -->
 						<div class="settingpopupknap">
-						  <p class="typetext">Schedule</p>
-							<button type="" onclick="" class="typebutton">
-							  <aspan class="typebuttontext">Not set</aspan>
-							  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+							<span class="typetext">Schedule</span>
+							<button class="typebutton">
+								<span class="typebuttontext">Not set</span>
+								<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 							</button>
 						</div>
 						<!-- cancel knap -->
 						<div class="popupcancelknapfilter">
-						   <button type="button" onclick="" class="button-w">Cancel</button>
+						   <button type="button" class="button-w">Cancel</button>
 						</div>
 						<!-- cancel knap slut - slut-->
 						<!-- clear all knap -->
 						<div class="clearallfilterknap">
-						<button type="button" onclick="" class="button-w"> Clear all filter </button>
+						<button type="button" class="button-w"> Clear all filter </button>
 						</div>
 						<!-- clear knap slut - slut-->
 						<!-- done knap -->
 						<div class="popupdoneknapfilter">
-						   <button type="button" onclick="" class="button-g">Done</button>
+						   <button type="button" class="button-g">Done</button>
 						</div>
 					  </div>
 				<!-- SHCEDULE POP-UP ORGANISME - SLUT -->
@@ -6965,228 +6912,228 @@ select.typebutton option{
 								<!-- DATE RANGE - slut-->
 								<!-- DATE TARGET knap -->
 								<div class="settingpopupknap">
-								  <p class="typetext">Date target</p>
-								  <button type="" onclick="" class="typebutton">
-									<aspan class="typebuttontext">Last edited</aspan>
-									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-								  </button>
+									<soan class="typetext">Date target</span>
+									<button class="typebutton">
+										<span class="typebuttontext">Last edited</span>
+										<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+									</button>
 								</div>
 								<!-- DATE TARGET - slut-->
 								<!-- RESULAT knap -->
 								<div class="settingpopupknap">
-								  <p class="typetext">Result</p>
-									<button type="" onclick="" class="typebutton">
-									  <aspan class="typebuttontext">Not set</aspan>
-									  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+									<span class="typetext">Result</span>
+									<button class="typebutton">
+										<span class="typebuttontext">Not set</span>
+										<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 									</button>
 								</div>
 								<!-- RESULT knap - slut-->
 								<!-- SCHEDULE knap -->
 								<div class="settingpopupknap">
-								  <p class="typetext">Schedule</p>
-									<button type="" onclick="" class="typebutton">
-									  <aspan class="typebuttontext">Not set</aspan>
-									  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+									<span class="typetext">Schedule</span>
+									<button class="typebutton">
+										<span class="typebuttontext">Not set</span>
+										<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 									</button>
 								</div>
 								<!-- SCHEDULE knap - slut-->
 								<!-- FOLDER knap -->
 								<div class="settingpopupknap">
-								  <p class="typetext">Schedule</p>
-									<button type="" onclick="" class="typebutton">
-									  <aspan class="typebuttontext">Not set</aspan>
-									  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+									<span class="typetext">Schedule</span>
+									<button class="typebutton">
+										<span class="typebuttontext">Not set</span>
+										<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
 									</button>
 								</div>
 								<!-- cancel knap -->
 								<div class="popupcancelknapfilter">
-								   <button type="button" onclick="" class="button-w">Cancel</button>
+								   <button type="button" class="button-w">Cancel</button>
 								</div>
 								<!-- cancel knap slut - slut-->
 								<!-- clear all knap -->
 								<div class="clearallfilterknap">
-								<button type="button" onclick="" class="button-w"> Clear all filter </button>
+									<button type="button" class="button-w"> Clear all filter </button>
 								</div>
 								<!-- clear knap slut - slut-->
 								<!-- done knap -->
 								<div class="popupdoneknapfilter">
-								   <button type="button" onclick="" class="button-g">Done</button>
+								   <button type="button" class="button-g">Done</button>
 								</div>
 							  </div>
 						<!-- SHCEDULE POP-UP ORGANISME - SLUT -->
 					</td>
 					<!--CSS to copy-->
 					<td class="code">
-/*Styling for setting pop-up organismer*/
-.frameforsettingpopup {
-    position: absolute;
-    top: 10vh;
-    left: 0;
-	background-color: #222222;
-	width: 100%;
-	max-width: 450px;
-	height: 100vh;
-	max-height: 400px;
-	border-radius: 5px;
-	overflow-y: auto;
-}
+						/*Styling for setting pop-up organismer*/
+						.frameforsettingpopup {
+							position: absolute;
+							top: 10vh;
+							left: 0;
+							background-color: #222222;
+							width: 100%;
+							max-width: 450px;
+							height: 100vh;
+							max-height: 400px;
+							border-radius: 5px;
+							overflow-y: auto;
+						}
 
-@media (min-width:401px){
-    /* Calculate left position, when width is over 400px */
-    .frameforsettingpopup {
-        left: calc(50vw - 200px); /* Half of screen - element width */
-    }
-}
+						@media (min-width:401px){
+							/* Calculate left position, when width is over 400px */
+							.frameforsettingpopup {
+								left: calc(50vw - 200px); /* Half of screen - element width */
+							}
+						}
 
-.settingtitel {
-	color: white;
-	margin-top: -10px;
-	margin-left: 10px;
-}
+						.settingtitel {
+							color: white;
+							margin-top: -10px;
+							margin-left: 10px;
+						}
 
-.settingpopupicon, .settingpopupxicon {
-	width: 40px;
-	height: 40px;
-}
+						.settingpopupicon, .settingpopupxicon {
+							width: 40px;
+							height: 40px;
+						}
 
-.settingpopupxicon {
-	float: right;
-	margin-right: -200px;
-}
+						.settingpopupxicon {
+							float: right;
+							margin-right: -200px;
+						}
 
-.popuptitel, .settingpopupknap{
-	margin-top: 20px;
-	clear: right;
-}
+						.popuptitel, .settingpopupknap{
+							margin-top: 20px;
+							clear: right;
+						}
 
-.settingpopupknap,
-.settingpopupknap,
-.settingpopupknap,
-.messageframe {
-	width: calc(100% - 20px); /*100% width - 20px margin*/
-	clear: both;
-	margin-left: 10px;
-	margin-right: 10px;
-}
+						.settingpopupknap,
+						.settingpopupknap,
+						.settingpopupknap,
+						.messageframe {
+							width: calc(100% - 20px); /*100% width - 20px margin*/
+							clear: both;
+							margin-left: 10px;
+							margin-right: 10px;
+						}
 
-.popupcancelknap, .popupdoneknap {
-	margin-top: 20px;
-	margin-left: 10px;
-	margin-right: 10px;
-}
-	
-.popupcancelknap{
-	clear: left;
-}
+						.popupcancelknap, .popupdoneknap {
+							margin-top: 20px;
+							margin-left: 10px;
+							margin-right: 10px;
+						}
+							
+						.popupcancelknap{
+							clear: left;
+						}
 
-.popupdoneknap {
-	float: right;
-}
-/*Styling for setting pop-up organismer - SLUT*/
+						.popupdoneknap {
+							float: right;
+						}
+						/*Styling for setting pop-up organismer - SLUT*/
 
-/*ekstra style til share as pop-up*/
-.frameforshareaspopup {
-    position: absolute;
-    top: 10vh;
-    left: 0;
-	background-color: #222222;
-	width: 100%;
-	max-width: 440px;
-	height: 100vh;
-	max-height: 600px;
-	border-radius: 5px;
-	overflow-y: auto;
-}
+						/*ekstra style til share as pop-up*/
+						.frameforshareaspopup {
+							position: absolute;
+							top: 10vh;
+							left: 0;
+							background-color: #222222;
+							width: 100%;
+							max-width: 440px;
+							height: 100vh;
+							max-height: 600px;
+							border-radius: 5px;
+							overflow-y: auto;
+						}
 
-@media (min-width:441px){
-    /* Calculate left position, when width is over 400px */
-    .frameforshareaspopup {
-        left: calc(50vw - 220px); /* Half of screen - element width */
-    }
-}
+						@media (min-width:441px){
+							/* Calculate left position, when width is over 400px */
+							.frameforshareaspopup {
+								left: calc(50vw - 220px); /* Half of screen - element width */
+							}
+						}
 
-.textarea {
-	width: 100px;
-	height: 100px;
-}
-/*ekstra style til share as pop-up - SLUT*/
+						.textarea {
+							width: 100px;
+							height: 100px;
+						}
+						/*ekstra style til share as pop-up - SLUT*/
 
-/*ekstra style til schedule as pop-up*/
-.timebutton {
-	width: 80px;
-	border-radius: 10px;
-}
-/*ekstra style til schedule as pop-up - slut*/
+						/*ekstra style til schedule as pop-up*/
+						.timebutton {
+							width: 80px;
+							border-radius: 10px;
+						}
+						/*ekstra style til schedule as pop-up - slut*/
 
-/*ekstra style til save as as pop-up*/
-.frameforsavaspopup {
-    position: absolute;
-    top: calc(50% - 175px); /* Half of screen - half of element height */
-    left: 0;
-	background-color: #222222;
-	width: 100%;
-	max-width:420px;
-	height: 100vh;
-	max-height: 350px;
-	border-radius: 5px;
-	overflow-y: auto;
-}
+						/*ekstra style til save as as pop-up*/
+						.frameforsavaspopup {
+							position: absolute;
+							top: calc(50% - 175px); /* Half of screen - half of element height */
+							left: 0;
+							background-color: #222222;
+							width: 100%;
+							max-width:420px;
+							height: 100vh;
+							max-height: 350px;
+							border-radius: 5px;
+							overflow-y: auto;
+						}
 
-@media (min-width:401px){
-    /* Calculate left position, when width is over 400px */
-    .frameforsavaspopup {
-        left: calc(50vw - 210px); /* Half of screen - element width */
-    }
-}
+						@media (min-width:401px){
+							/* Calculate left position, when width is over 400px */
+							.frameforsavaspopup {
+								left: calc(50vw - 210px); /* Half of screen - element width */
+							}
+						}
 
-.popupcancelknap1 {
-	float: left;
-	margin-top: 20px;
-	margin-left: 10px;
-}
+						.popupcancelknap1 {
+							float: left;
+							margin-top: 20px;
+							margin-left: 10px;
+						}
 
-.popsaveknap {
-	float: right;
-	margin-top: 20px;
-	margin-right: 40px;
-}
-/*ekstra style til save pop-up - slut*/
+						.popsaveknap {
+							float: right;
+							margin-top: 20px;
+							margin-right: 40px;
+						}
+						/*ekstra style til save pop-up - slut*/
 
-/*ekstra style til filter pop-up*/
-.daterangecontainer {
-	background: grey;
-	float: left;
-}
-.daterangetitelinfilterpopup {
-	font-size: 10px;
-	float: left;
-	margin-left: 10px;
-}
-.popupcancelknapfilter{
-	float: left;
-	margin left: 10px;
-	margin-top: 20px;
-}
+						/*ekstra style til filter pop-up*/
+						.daterangecontainer {
+							background: grey;
+							float: left;
+						}
+						.daterangetitelinfilterpopup {
+							font-size: 10px;
+							float: left;
+							margin-left: 10px;
+						}
+						.popupcancelknapfilter{
+							float: left;
+							margin left: 10px;
+							margin-top: 20px;
+						}
 
-.clearallfilterknap {
-	float: left;
-	margin left: 10px;
-	margin-top: 20px;
-}
+						.clearallfilterknap {
+							float: left;
+							margin left: 10px;
+							margin-top: 20px;
+						}
 
-.popupdoneknapfilter{
-	float: right;
-	margin-top: 20px;
-	margin right: 30px;
-}
-/*ekstra style til filter pop-up - slut*/
+						.popupdoneknapfilter{
+							float: right;
+							margin-top: 20px;
+							margin right: 30px;
+						}
+						/*ekstra style til filter pop-up - slut*/
 
-/*ekstra style for create report pop up*/
-.frameforcreatenewreportpopup {
-	width: 420px;
-	height: 350px;
-}
-/*ekstra style for create report pop up - slut*/
+						/*ekstra style for create report pop up*/
+						.frameforcreatenewreportpopup {
+							width: 420px;
+							height: 350px;
+						}
+						/*ekstra style for create report pop up - slut*/
 					</td>
 					<!--Js to copy-->
 					<td class="empty"></td>
@@ -7195,99 +7142,6 @@ select.typebutton option{
 		<!--"POP UP FILTER ORGANISMER- SLUT-->
 		</div>
 	</article>
-	<!-- <article id="create-new-folder-pop-up" class="pop-up-article">
-		<div class="wrapper">
-			<h4 class="styleguide-title">POP-UP CREATE NEW FOLDER ORGANISME</h4>
-		</div>
-		<!--organisme for stor til at være i table --><!-- 
-		<div class="example">
-			<div class="wrapper">
-				<!-- CREATE NEW REPORT  POP-UP ORGANISME --><!-- 
-				  <div class="frameforcreatenewreportpopup">
-					<div class="popuptitel">
-						<img class="settingpopupicon" src="img/icons/folder-plus.svg" alt="">
-						<img class="settingpopupxiconblack" src="img/icons/x.svg" alt="">
-						<h1 class="settingtitel">Create new folder</h1>
-					</div>
-					<!-- Name knap --><!-- 
-					<div class="settingpopupknap">
-					  <p class="typetext">Choose name</p>
-						<button type="" onclick="" class="typebutton">
-						  <aspan class="typebuttontext">write name here...</aspan>
-						  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-						</button>
-					</div>
-					<!-- Name knap - slut-->
-					<!-- Save location knap --><!-- 
-					<div class="settingpopupknap">
-					  <p class="typetext">Location</p>
-						<button type="" onclick="" class="typebutton">
-						  <aspan class="typebuttontext">Choose...</aspan>
-						  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-						</button>
-					</div>
-					<!-- cancel knap --><!-- 
-					<div class="popupcancelknap1">
-					   <button type="button" onclick="" class="button-w">Cancel</button>
-					</div>
-					<!-- cancel knap slut - slut-->
-					<!-- create knap --><!-- 
-					<div class="popsaveknap">
-					  <button type="button" onclick="" class="button-g"> Create </button>
-					</div>
-					<!-- create knap  - slut--><!-- 
-				  </div>
-				<!-- CREATE NEW FOLDER POP-UP ORGANISME - SLUT --><!-- 
-			</div>
-		</div>
-		<div class="wrapper">
-			<!--"TABEL for pop-up --><!-- 
-			<table class="overvieworganimser">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<!--HTML to copy--><!-- 
-					<td class="code">
-					</td>
-					<!--CSS to copy--><!-- 
-					<td class="code">
-			 .settingtitel {
-				color: white;
-				margin-top: -10px;
-				margin-left: 10px;
-			 }
-
-			 .settingpopupicon, .settingpopupxicon {
-				width: 40px;
-				height: 40px;
-			 }
-
-			 .settingpopupxicon {
-				float: right;
-				margin-right: -200px;
-			 }
-
-			 .popuptitel, .settingpopupknap{
-				margin-top: 20px;
-				margin-left: 10px;
-				margin-right: 10px;
-			 }
-
-			 .frameforcreatenewreportpopup {
-				width: 420px;
-				height: 350px;
-			 }
-						</td>
-						<!--Js to copy--><!-- 
-						<td class="empty"></td>
-				</tr>
-			</table>
-				<!--"POP UP CREATE NEW REPORT ORGANISME- SLUT--><!-- 
-		</div>
-	</article>-->
 	<!--HIGHCHART-->
 	<div class="title-area">
 		<div class="wrapper">
@@ -8890,7 +8744,7 @@ select.typebutton option{
 								<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
 								<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
 								<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
-								<li><p class="channels">channels</p></li>
+								<li><span class="channels">channels</span></li>
 								<li class="selection">
 									<select class="channelselect">
 										<option>channelnames</option>
@@ -8939,7 +8793,7 @@ select.typebutton option{
 											<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
 											<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
 											<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
-											<li><p class="channels">channels</p></li>
+											<li><span class="channels">channels</span></li>
 											<li class="selection">
 												<select class="channelselect">
 													<option>channelnames</option>
@@ -9225,34 +9079,34 @@ select.typebutton option{
 				<div class="textTool">
 					<label>Text tool</label>
 					<button type="type" class="textToolImgButton"><img class="settingsicon" src="img/icons/type.svg" alt="Text tool"></button>
-					<button type="button" onclick="" class="helpbutton">
+					<button type="button" class="helpbutton">
     					<span>Help</span>
 					    <img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
 					</button>
 				</div>
 				<div class="textTool">
 					<label>Text edit</label>
-					<div class="textEditDiv"><label>Size</label><button type="" onclick="" class="texteditbutton"><span>Choose..</span><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
-					<div class="textEditDiv"><label>Weight</label><button type="" onclick="" class="texteditbutton"><span>Choose..</span><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+					<div class="textEditDiv"><label>Size</label><button class="texteditbutton"><span>Choose..</span><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+					<div class="textEditDiv"><label>Weight</label><button class="texteditbutton"><span>Choose..</span><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
 				</div>
 			</div>
 			<!--CODE EDITOR-->
 			<div id="codeEditorTab" class="hidden">
 				<div class="codeEditorOverDiv">
 					<div class="codeEditorButtons">
-						<button type="button" onclick="" class="showReport">
+						<button type="button" class="showReport">
 						    <span>Show report</span>
 						    <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon">
 						</button>
-						<button type="button" onclick="" class="showReport">
+						<button type="button" class="showReport">
 						    <span>Download</span>
 						    <img class="settingsmenuicon" src="img/icons/download.svg" alt="showicon">
 						</button>
-						<button type="button" onclick="" class="showReport">
+						<button type="button" class="showReport">
 						    <span>Upload</span>
 						    <img class="settingsmenuicon" src="img/icons/upload.svg" alt="showicon">
 						</button>
-						<button type="button" onclick="" class="helpbutton">
+						<button type="button" class="helpbutton">
     						<span>Help</span>
 						    <img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
 						</button>
@@ -9415,34 +9269,34 @@ select.typebutton option{
 				<div class="textTool">
 					<label>Text tool</label>
 					<button type="type" class="textToolImgButton"><img class="settingsicon" src="img/icons/type.svg" alt="Text tool"></button>
-					<button type="button" onclick="" class="helpbutton">
+					<button type="button" class="helpbutton">
     					<span>Help</span>
 					    <img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
 					</button>
 				</div>
 				<div class="textTool">
 					<label>Text edit</label>
-					<div class="textEditDiv"><label>Size</label><button type="" onclick="" class="texteditbutton"><span>Choose..</span><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
-					<div class="textEditDiv"><label>Weight</label><button type="" onclick="" class="texteditbutton"><span>Choose..</span><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+					<div class="textEditDiv"><label>Size</label><button class="texteditbutton"><span>Choose..</span><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+					<div class="textEditDiv"><label>Weight</label><button class="texteditbutton"><span>Choose..</span><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
 				</div>
 			</div>
 			<!--CODE EDITOR-->
 			<div id="codeEditorTab" class="hidden">
 				<div class="codeEditorOverDiv">
 					<div class="codeEditorButtons">
-						<button type="button" onclick="" class="showReport">
+						<button type="button" class="showReport">
 						    <span>Show report</span>
 						    <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon">
 						</button>
-						<button type="button" onclick="" class="showReport">
+						<button type="button" class="showReport">
 						    <span>Download</span>
 						    <img class="settingsmenuicon" src="img/icons/download.svg" alt="showicon">
 						</button>
-						<button type="button" onclick="" class="showReport">
+						<button type="button" class="showReport">
 						    <span>Upload</span>
 						    <img class="settingsmenuicon" src="img/icons/upload.svg" alt="showicon">
 						</button>
-						<button type="button" onclick="" class="helpbutton">
+						<button type="button" class="helpbutton">
     						<span>Help</span>
 						    <img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
 						</button>

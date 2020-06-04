@@ -302,6 +302,7 @@ h3 {
 /*Style til stherne prioriterings molekyle*/
 .star {
 	width: 26px;
+	cursor: pointer;
 }
 
 /*Here starts CSS code for settings button (kog img)*/
@@ -406,9 +407,7 @@ h3 {
 /*Here starts CSS code for type button*/
 .frame {
 	float: left; /* Added float to display height right */
-	background-color: black;
 	width: 100%;
-	/* width: 400px; *//* Did not scale with parrent */
 }
 
 .type {
@@ -487,46 +486,38 @@ select.typebutton option{
 	clear: both;
 }
 /*Here starts code for 'new report button'*/
-.newreportbutton{
-	border: none;
-	border-radius: 12px;
-	background-color: #00cd00;
-	width: 150px;
-	cursor: pointer;
-	display: grid;
-	grid-template-columns: auto auto;
-	align-content: center;
+.newreportbutton {
+	position: relative;
 	overflow: hidden;
-}
-.newreportspan{
-	font-size: 18px;
-	display: grid;
-}
-.plusimg{
-	display: grid;
-	margin: 0 0 0 auto;
-}
-/*Here starts CSS code for sort by by button*/
-.sortbydiv{
-	font-size: 19px;
-	float: left;
-}
-.sortbybutton{
-	background-color: #fff;
-	border-color: #000;
-	border-radius: 12px;
-	width: 150px;
+	padding-right: 29px;
+	padding-left: 62px;
+	border: none;
+	border-radius: 1000px; /* Forcing large size in pixels, will ensure rounded corners */
+	background-color: #00cd00;
 	cursor: pointer;
-	display: block;
-	float: right;
-}
-.sortbybutton span{
-    float: left;
-    color: #848484;
-    font-size: 19px;
-    margin-left: 7px;
 }
 
+.newreportbutton:hover {
+	background-color: #19d219;
+}
+
+.newreportbutton:active {
+	background-color: #00b800;
+}
+
+.newreportspan{
+	float: left;
+	font-size: 110%;
+}
+
+.plusimg{
+	position: absolute;
+	top: calc(50% - 12px); /* 50% of parrent height - half of element height*/
+	left: 26px;
+}
+
+
+/*Here starts CSS code for sort by by button*/
 .sort-by-select {
 	float: right;
 	width: 205px;
@@ -975,6 +966,15 @@ margin-left: 7px;
     display: inline-block;
 }
 
+.button-g:hover {
+	background-color: #19d219;
+}
+
+.button-g:active {
+	background-color: #00b800;
+}
+
+
 .button-b{
     min-width: 75px;
     width: auto;
@@ -985,6 +985,14 @@ margin-left: 7px;
     font-size: 16px;
     cursor: pointer;
     display: inline-block;
+}
+
+.button-b:hover {
+	background-color: #617fac;
+}
+
+.button-b:active {
+	background-color: #486592;
 }
 
 .button-r{
@@ -1000,17 +1008,34 @@ margin-left: 7px;
     display: inline-block;
 }
 
+.button-r:hover {
+	background-color: #e64840;
+}
+
+.button-r:active {
+	background-color: #cd2e26;
+}
+
 .button-w{
     min-width: 75px;
     width: auto;
     color: black;
-    border: solid 1px grey;
+    border: solid 1px #808080;
     border-radius: 10px;
-    background-color: white;
+    background-color: #fff;
     padding: 8px 20px;
     font-size: 16px;
     cursor: pointer;
     display: inline-block;
+}
+
+.button-w:hover {
+	border-color: #8c8c8c;
+}
+
+.button-w:active {
+	border-color: #737373;
+	background-color: #e5e5e5;
 }
 
 
