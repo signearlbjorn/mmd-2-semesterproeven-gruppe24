@@ -53,26 +53,46 @@ function selectText(element) {
     }
 }
 
-/* PRIORITY STAR / STJERNE PRIORITERING */
+/* PRIORITY STAR */
+// Change icon
+let star1 = document.getElementById("star1");
+
+let starArray = [star1];
+
+for(let i = 0; i < starArray.length; i++){
+	starArray[i].addEventListener("click", function(){changeImage(starArray[i])});
+}
+
 function changeImage(elem) {
-	console.log('changeImage function active.');
+	console.log('changeImage function active for ' + elem.id + '.'	);
 	// console.log(document.getElementById("imgClickAndChange").src.endsWith("img/icons/star.svg"));
-	elem = document.getElementById(elem);
+	//elem = document.getElementById(elem);
 	//if (document.getElementById("imgClickAndChange").src =="img/icons/star.svg") // Must use endsWith method instead of == when directory layout is uncertain
 	if (elem.src.endsWith("img/icons/star.svg")) // Must use endsWith method instead of == when directory layout is uncertain
 	{
-		console.log('changeImage if true.');
+		//console.log('changeImage if true.');
 		elem.src = "img/icons/starfull.svg";
 		// Prioritize graph/template
 	}
 	else
 	{
-		console.log('changeImage if false.');
+		//console.log('changeImage if false.');
 		elem.src = "img/icons/star.svg";
 		// Unprioritize graph/template
 	}
 }
 
+// Change priority
+/*
+1. Get all star parrents in category
+2. Insert all prioritized elements in priority category, sorted by initial position
+3. Remove prioritized content from regular content.
+4. Save priority settings to cookie
+*/
+//ToDo
+
+
+// Stylguide tables
 let rowOne = document.getElementsByClassName("row-one");
 for(let i=0; i<rowOne.length; i++){ // Loop all instanceses of rowOne.
 	// On click on row-one, expand or compress row-tow
