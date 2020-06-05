@@ -30,76 +30,244 @@ header {
 	width: 100%;
 	background-color: #222;
 }
+
+
 /* -- TEXT --  */
 * {
     font-size: 11px;
-    line-height: 16px;
+    line-height: 2;
     color: #000000;
-}
-
-th {
-	color: white;
 }
 
 @media (min-width:481px) {
     * {
         font-size: 2.287vw; /* ~11 px on 481px width */
-        line-height: 3.950vw; /* ~19 px on 481px width */
     }
 }
 
 @media (min-width:768px) {
     * {
         font-size: 16px;
-        line-height: 26px;
-    }
-}
-
-@media (min-width:1366px) {
-    * {
-        line-height: 30px;
     }
 }
 
 @media (min-width: 1920px) {
     * {
         font-size: 0.729vw; /* ~14px on 1920px width */
-        line-height: 1.719vw; /* ~33px on 1920px width */
     }
 }
 
 @media (min-width:3840px) {
     * {
         font-size: 0.729vw; /* ~28px on 3840px width */
-        line-height: 1.745vw; /* ~67x on 3840px width */
     }
 }
+
+
+/* -- h1 HEADING -- */
+h1 {
+	float: left;
+	display: block;
+	font-size: 22px;
+	font-weight: 400;
+	color: #000000;
+}
+
+@media (min-width:481px) {
+	h1 {
+		font-size: 4.574vw; /* ~22 px on 481px width */
+	}
+}
+
+@media (min-width:768px) {
+	h1 {
+		font-size: 32px;
+	}
+}
+
+
+@media (min-width: 1920px) {
+	h1 {
+		font-size: 1.616vw; /* ~32px on 1920px width */
+	}
+}
+
+@media (min-width:3840px) {
+	h1 {
+		font-size: 1.667vw; /* ~64px on 3840px width */
+	}
+}
+
+/* -- h2 HEADING -- */
+h2 {
+	float: left;
+	display: block;
+	font-size: 16px;
+	font-weight: 400;
+	color: #000000;
+}
+
+@media (min-width:481px) {
+	h2 {
+		font-size: 3.333vw; /* ~16 px on 481px width */
+	}
+}
+
+@media (min-width:768px) {
+	h2 {
+		font-size: 27px;
+	}
+}
+
+@media (min-width: 1920px) {
+	h2 {
+		font-size: 1.406vw; /* ~27px on 1920px width */
+	}
+}
+
+@media (min-width:3840px) {
+	h2 {
+		font-size: 1.146vw; /* ~44px on 3840px width */
+	}
+}
+
+/* -- h3 HEADING -- */
+h3 {
+	float: left;
+	display: block;
+	font-size: 13px;
+	font-weight: 400;
+	color: #000000;
+}
+
+@media (min-width:481px) {
+	h3 {
+		font-size: 2.703vw; /* ~13 px on 481px width */
+	}
+}
+
+@media (min-width:768px) {
+	h3 {
+		font-size: 21px;
+	}
+}
+
+@media (min-width: 1920px) {
+	h3 {
+		font-size: 1.061vw; /* ~21px on 1920px width */
+	}
+}
+
+@media (min-width:3840px) {
+	h3 {
+		font-size: 1.094vw; /* ~42px on 3840px width */
+	}
+}
+
 
 /* -- BUTTON AND LINKS -- */
 button {
 	cursor: pointer;
 	box-sizing: border-box;
+	background-color: transparent;
+	border: none;
 }
 
-.rounded-corners {
+.round-corners {
 	position: relative;
 	min-height: 1px;
 	min-width: 1px;
 	padding-left: 17px;
 	padding-right: 17px;
-	border-radius: 1000px;
+	border-radius: 1000px; /* Forcing large size in pixels, will ensure rounded corners */
 	border: none;
-}
-
-.white-button {
+	font-size: 120%;
 	background-color: #FFF;
 }
-.white-button:hover {
-    background-color: #e5e5e5;
+
+.rounded-corners {
+	position: relative;
+	min-height: 1px;
+    min-width: 150px;
+	padding: 2px 14px;
+	border-radius: 14px;
+	border: none;
+	font-size: 140%;
+	background-color: #FFF;
 }
 
-.white-button:active {
+.button-g{
+    background-color: #00CD00;
+}
+
+.button-g:hover {
+	background-color: #19d219;
+}
+
+.button-g:active {
+	background-color: #00b800;
+}
+
+.button-b{
+    background-color: #5071A3;
+}
+
+.button-b:hover {
+	background-color: #617fac;
+}
+
+.button-b:active {
+	background-color: #486592;
+}
+
+.button-r{
+    color: white;
+    background-color: #E4342B;
+}
+
+.button-r:hover {
+	background-color: #e64840;
+}
+
+.button-r:active {
+	background-color: #cd2e26;
+}
+
+.button-w{
+    color: #000;
+    background-color: #fff;
+}
+
+.button-w:hover {
+	background-color: #e5e5e5;
+}
+
+.button-w:active {
     background-color: #cccccc;
+}
+
+.buttongr {
+	position: relative;
+	width: 66px;
+	height: 66px;
+	padding: 15px;
+    border-radius: 8px;
+    background-color: #6F6F6F;
+}
+
+.buttongr:hover {
+	background-color: #7d7d7d;
+}
+
+.buttongr:active {
+    background-color: #636363;
+}
+
+.Ticon{
+	position: absolute;
+	top: calc(50% - 30px);
+	left: calc(50% - 30px);
+    width: 90%;
 }
 
 
@@ -178,138 +346,6 @@ button {
 	background-size: cover;
 }
 
-
-/* -- h1 HEADING -- */
-h1 {
-	float: left;
-	display: block;
-	font-size: 22px;
-	line-height: 35px;
-	font-weight: 400;
-	color: #000000;
-}
-
-@media (min-width:481px) {
-	h1 {
-		font-size: 4.574vw; /* ~22 px on 481px width */
-		line-height: 7.277vw; /* ~35 px on 481px width */
-	}
-}
-
-@media (min-width:768px) {
-	h1 {
-		font-size: 32px;
-		line-height: 52px;
-	}
-}
-
-@media (min-width:1366px) {
-	h1 {
-		line-height: 56px;
-	}
-}
-
-@media (min-width: 1920px) {
-	h1 {
-		font-size: 1.616vw; /* ~32px on 1920px width */
-		line-height: 3.073vw; /* ~59px on 1920px width */
-	}
-}
-
-@media (min-width:3840px) {
-	h1 {
-		font-size: 1.667vw; /* ~64px on 3840px width */
-		line-height: 3.099vw; /* ~119px on 3840px width */
-	}
-}
-
-/* -- h2 HEADING -- */
-h2 {
-	float: left;
-	display: block;
-	font-size: 16px;
-	line-height: 26px;
-	font-weight: 400;
-	color: #000000;
-}
-
-@media (min-width:481px) {
-	h2 {
-		font-size: 3.333vw; /* ~16 px on 481px width */
-		line-height: 5.417vw; /* ~26 px on 481px width */
-	}
-}
-
-@media (min-width:768px) {
-	h2 {
-		font-size: 27px;
-		line-height: 44px;
-	}
-}
-
-@media (min-width:1366px) {
-	h2 {
-		line-height: 49px;
-	}
-}
-
-@media (min-width: 1920px) {
-	h2 {
-		font-size: 1.406vw; /* ~27px on 1920px width */
-		line-height: 2.760vw; /* ~53px on 1920px width */
-	}
-}
-
-@media (min-width:3840px) {
-	h2 {
-		font-size: 1.146vw; /* ~44px on 3840px width */
-		line-height: 2.344vw; /* ~90px on 3840px width */
-	}
-}
-
-/* -- h3 HEADING -- */
-h3 {
-	float: left;
-	display: block;
-	font-size: 13px;
-	line-height: 22px;
-	font-weight: 400;
-	color: #000000;
-}
-
-@media (min-width:481px) {
-	h3 {
-		font-size: 2.703vw; /* ~13 px on 481px width */
-		line-height: 4.574vw; /* ~22 px on 481px width */
-	}
-}
-
-@media (min-width:768px) {
-	h3 {
-		font-size: 21px;
-		line-height: 36px;
-	}
-}
-
-@media (min-width:1366px) {
-	h3 {
-		line-height: 40px;
-	}
-}
-
-@media (min-width: 1920px) {
-	h3 {
-		font-size: 1.061vw; /* ~21px on 1920px width */
-		line-height: 2.292vw; /* ~44px on 1920px width */
-	}
-}
-
-@media (min-width:3840px) {
-	h3 {
-		font-size: 1.094vw; /* ~42px on 3840px width */
-		line-height: 2.057vw; /* ~79px on 3840px width */
-	}
-}
 
 /* --- MOLECULES ---*/
 
@@ -499,29 +535,18 @@ select.typebutton option{
 .save-to-select .select-wrapper {
 	clear: both;
 }
+
+
 /*Here starts code for 'new report button'*/
 .newreportbutton {
-	position: relative;
 	overflow: hidden;
 	padding-right: 29px;
 	padding-left: 62px;
-	border: none;
-	border-radius: 1000px; /* Forcing large size in pixels, will ensure rounded corners */
-	background-color: #00cd00;
-	cursor: pointer;
-}
-
-.newreportbutton:hover {
-	background-color: #19d219;
-}
-
-.newreportbutton:active {
-	background-color: #00b800;
 }
 
 .newreportspan{
 	float: left;
-	font-size: 110%;
+	font-size: 140%;
 }
 
 .plusimg{
@@ -629,10 +654,7 @@ select.typebutton option{
 
 /*Here starts CSS code for filter by button*/
 .filterbutton {
-	position: relative;
-	display: block;
-	padding-left: 19px;
-	padding-right: 54px;
+	padding-right: 52px;
 	border: none;
 	border-radius: 1000px;
 	background-color: #fff;
@@ -647,7 +669,7 @@ select.typebutton option{
 .filterbutton img {
 	position: absolute;
 	top: calc(50% - 10px);
-	right: 19px;
+	right: 17px;
 	width: 20px;
 	height: 20px;
 }
@@ -1035,120 +1057,6 @@ margin-left: 7px;
 
 /*Search input CSS ends*/
 
-/*Other buttons CSS*/
-
-.button-g{
-    min-width: 75px;
-    width: auto;
-    border: solid 1px #00CD00;
-    border-radius: 10px;
-    background-color: #00CD00;
-    padding: 8px 10px;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-block;
-}
-
-.button-g:hover {
-	background-color: #19d219;
-}
-
-.button-g:active {
-	background-color: #00b800;
-}
-
-
-.button-b{
-    min-width: 75px;
-    width: auto;
-    border: solid 1px #5071A3;
-    border-radius: 10px;
-    background-color: #5071A3;
-    padding: 8px 10px;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-block;
-}
-
-.button-b:hover {
-	background-color: #617fac;
-}
-
-.button-b:active {
-	background-color: #486592;
-}
-
-.button-r{
-    min-width: 75px;
-    width: auto;
-    color: white;
-    border: solid 1px #E4342B;
-    border-radius: 10px;
-    background-color: #E4342B;
-    padding: 8px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-block;
-}
-
-.button-r:hover {
-	background-color: #e64840;
-}
-
-.button-r:active {
-	background-color: #cd2e26;
-}
-
-.button-w{
-    min-width: 75px;
-    width: auto;
-    color: black;
-    border: solid 1px #808080;
-    border-radius: 10px;
-    background-color: #fff;
-    padding: 8px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-block;
-}
-
-.button-w:hover {
-	border-color: #8c8c8c;
-}
-
-.button-w:active {
-	border-color: #737373;
-	background-color: #e5e5e5;
-}
-
-
-
-.buttont{
-    border: solid 1px #5071A3;
-    border-radius: 10px;
-    background-color: #5071A3;
-    padding: 14px 28px;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-block;
-}
-
-.Ticon{
-    width: 200%;
-    margin-left:-47%;
-}
-
-.buttongr{
-    margin-top: 10px;
-    border: solid 1px #6F6F6F;
-    border-radius: 10px;
-    background-color: #6F6F6F;
-    padding: 8px 28px;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-block;
-}
-/*Other buttons CSS end*/
 
 /* --- ORGANISMS --- */
 /*Here starts CSS for header in editor*/
@@ -2540,7 +2448,7 @@ header .wrapper {
 }
 
 .row-two {
-    background-color: #6F6F6F;
+    background-color: #a5a5a5;
 }
 
 #styleguide table, #styleguide tbody {
@@ -2578,6 +2486,7 @@ header .wrapper {
 	padding-right: 10px;
 	padding-top: 10px;
 	padding-left: 10px;
+	color: #FFF;
 }
 
 #styleguide table tr td {
