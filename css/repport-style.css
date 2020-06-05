@@ -537,6 +537,28 @@ select.typebutton option{
 	}
 }
 
+
+/* FILTER OPTIONS */
+.filter-option {
+	float: left;
+	width: 100%;
+}
+
+.filter-option .select-span {
+	color: #FFF;
+}
+
+.filter-option .select-wrapper {
+	float: right;
+}
+
+.filter-option .select {
+	border-color: #707070;
+	font-style: normal;
+	color: #000;
+}
+
+
 /*Add and delete page button CSS*/
 
 .adddelete-button{
@@ -626,7 +648,28 @@ select.typebutton option{
 	background-color: transparent;
 	cursor: pointer;
 }
-.date-range-input:before {
+
+.date-range-input[type="date"]::-webkit-calendar-picker-indicator {
+	cursor: pointer;
+	color: #fff;
+	fill: #fff;
+	color: transparent;
+	background: none;
+	z-index: 1;
+}
+
+.date-range-input[type="date"]:before {
+	content: '';
+	position: absolute;
+	top: calc(50% - 12px);
+	right: 6px;
+	display: block;
+	width: 22px;
+	height: 24px;
+	background: url('../img/icons/calendar.svg');
+}
+
+.date-range-input:after {
 	content:"";
 	position: absolute;
 	left: 0;

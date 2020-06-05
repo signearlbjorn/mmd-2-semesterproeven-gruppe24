@@ -477,25 +477,147 @@
    <!-- Stjerne Prioritering - slut  -->
 	<div class="title-area">
 		<div class="wrapper">
-			<!--Delete pou-up's -->
-			<h3 id="knappermedtextogicon" class="styleguide-title">Knapper med text og icon</h3>
+			<h3 id="knappermedtextogicon" class="styleguide-title">Filtrering</h3>
 		</div>
 	</div>
+	<article id="date-range">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Date range</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<label class="date-range">
+					<span class="date-range-title">Date range</span>
+					<div class="date-range-date-wrapper">
+						<input type="date" id="date-range-start" name="date-range-start" placeholder="yyyy-mm-dd" class="date-range-input" />
+						<span class="date-range-start-end-split">-</span>
+						<input type="date" id="date-range-end" name="date-range-end" placeholder="yyyy-mm-dd" class="date-range-input" />
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML-->
+					<td class="code">
+						<label class="date-range">
+							<span class="date-range-title">Date range</span>
+							<div class="date-range-date-wrapper">
+								<input type="date" id="date-range-start" name="date-range-start" placeholder="yyyy-mm-dd" class="date-range-input" />
+								<span class="date-range-start-end-split">-</span>
+								<input type="date" id="date-range-end" name="date-range-end" placeholder="yyyy-mm-dd" class="date-range-input" />
+							</div>
+						</label>
+					</td>
+					<!--CSS-->
+					<td class="code">
+						/* -- DATE-RANGE --*/
+						.date-range {
+							float: left;
+							width: 100%;
+							cursor: pointer;
+						}
+
+						.date-range-title,
+						.date-range-input,
+						.date-range-start-end-split {
+							font-size: 135.71%;
+							line-height: 135.71%;
+							color: #FFF;
+						}
+
+						.date-range-title {
+							float: left;
+							clear: both;
+						}
+
+						.date-range-date-wrapper {
+							float: right;
+							clear: both;
+						}
+
+						.date-range-input {
+							position: relative;
+							display: block;
+							float: left;
+							clear: both;
+							border: none;
+							text-decoration: underline;
+							background-color: transparent;
+							cursor: pointer;
+						}
+						.date-range-input:before {
+							content:"";
+							position: absolute;
+							left: 0;
+							bottom: 0;
+							width: 65%;
+							height: 1px;
+							background-color: #FFF;
+						}
+
+						.date-range-input:placeholder {
+							text-decoration: underline;
+						}
+
+						.date-range-start-end-split {
+							display: none;
+							float: left;
+							margin: 0 10px;
+						}
+
+						@media (min-width:768px){
+							.date-range-title {
+								width: 30%;
+								clear: left;
+							}
+
+							.date-range-date-wrapper {
+								clear: right;
+							}
+
+							.date-range-input {
+								width: auto;
+								clear: none;
+							}
+						}
+
+						@media (min-width:1366px){
+							.date-range-start-end-split {
+								display: inline-block;
+							}
+						}
+					</td>
+					<!--JavaScript-->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
 	<article id="folder-knap-på-filter-pop-up">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Folder knap på filter pop-up</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<div class="frame">
-					<div class="type">
-						<span class="typetext">Folder</span>
-						<button class="typebutton">
-							<span class="typebuttontext">Name</span>
-							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-						</button>
+				<label class="select-label filter-option">
+					<span class="select-span">Folder</span>
+					<div class="select-wrapper">
+						<select name="filter-by-report-folder" class="select">
+							<option value="all" selected="">All folders</option>
+							<option value="none">No set folder</option>
+							<option value="folder-1">Folder 1</option>
+							<option value="folder-2">Folder 2</option>
+							<option value="folder-3">Folder 3</option>
+						</select>
 					</div>
-				</div>
+				</label>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -507,76 +629,123 @@
                   </tr>
 				<tr class="row-two">
 					<td class="code">
-						<div class="frame">
-							<div class="type">
-								<span class="typetext">Folder</span>
-								<button class="typebutton">
-									<span class="typebuttontext">Name</span>
-									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-								</button>
+						<label class="select-label filter-option">
+							<span class="select-span">Folder</span>
+							<div class="select-wrapper">
+								<select name="filter-by-report-folder" class="select">
+									<option value="all" selected="">All folders</option>
+									<option value="none">No set folder</option>
+									<option value="folder-1">Folder 1</option>
+									<option value="folder-2">Folder 2</option>
+									<option value="folder-3">Folder 3</option>
+								</select>
 							</div>
-						</div>
+						</label>
 					</td>
 					<td class="code">
-						/*Here starts CSS code for type button*/
-						.frame {
-							float: left; /* Added float to display height right */
-							background-color: black;
+						/* FILTER OPTIONS */
+						.filter-option {
+							float: left;
 							width: 100%;
-							/* width: 400px; *//* Did not scale with parrent */
 						}
 
-						.type {
-							width: calc(100% - 10px); /* 100% width -10px margin */
-							margin-left: 5px;
-							margin-right: 5px; /* Margin added */
+						.filter-option .select-span {
+							color: #FFF;
 						}
 
-						.typetext {
-							float: left; /* Added float to display height right */
-							color: white;
-							font-size: 110%; /* Must be larger on smaller screens */
+						.filter-option .select-wrapper {
+							float: right;
 						}
 
-						.typebutton {
-							float: left; /* Added float to display height right */
-							width: 100%;
-							border-radius: 10px;
-							font-size: 110%; /* Must be larger on smaller screens */
+						.filter-option .select {
+							border-color: #707070;
+							font-style: normal;
+							color: #000;
+						}
+						
+						
+						/* -- SELECT --*/
+						.select-label {
+							position: relative;
+							float: left;
+							overflow: hidden;
+							cursor: pointer;
 						}
 
-						select.typebutton {
+						.select-span {
+							float: left;
 							height: 37px;
+							margin-right: 12px;
+							font-size: 142.85%;
+							line-height: 37px;
+							color: #000;
+						}
+
+						@media (min-width:3200px) {
+							.select-span {
+								font-size: 32px;
+								line-height: 37px;
+							}
+						}
+
+						.select {
+							display: block;
+							padding-left: 10px;
+							padding-right: 28px;
+							border-radius: 19px;
+							font-size: 16px;
 							color: #7C7C7C;
 							font-style: italic;
-							border: solid 1px #707070;
-							padding:0 5px;
-							box-sizing: border-box;
+							-webkit-appearance: none;
+							-moz-appearance: none;
+							text-overflow: '';
+							border-color: #6F6F6F;
+							background-color: #fff;
 							cursor: pointer;
 						}
 
-						select.typebutton option{
-							color: #000;
+						.select option{
 							font-style: normal;
-							cursor: pointer;
 						}
 
-						.typebuttontext {
-							float: left;
-							font-style: italic;
-							color: grey;
-							margin-left: 5px;
-							font-size: 110%;
-						}
-
-						.chevronicon {
-							float: right;
-							margin-top: 5px;
-						}
-
-						@media (min-width:1366){
-							.typetext, .typebutton, .typebuttontext {
+						@media (min-width:786px) {
+							.select {
 								font-size: 100%;
+							}
+						}
+
+						.select-wrapper {
+							position: relative;
+						}
+
+						.select-wrapper:before {
+							content: "";
+							position: absolute;
+							top: calc(50% - 10px);
+							right: 10px;
+							width: 19px;
+							height: 13px;
+							background-image: url("../img/icons/chevron-down.svg");
+							background-repeat: no-repeat;
+							background-size: cover;
+						}
+
+						.sort-by-select {
+							float: right;
+							width: 205px;
+							height: 37px;
+							line-height: 37px;
+						}
+
+						@media (min-width:786px) {
+							.sort-by-select {
+								font-size: 15px;
+							}
+						}
+
+						@media (min-width:1920px) {
+							.sort-by-select {
+								font-size: 22px;
 							}
 						}
 					</td>
@@ -586,22 +755,24 @@
 			<!--Folder knap på filter pop-up - slut-->
 		</div>
 	</article>
-			<!--Schedule knap på filter pop-up-->
+	<!--Schedule knap på filter pop-up-->
  	<article id="schedule knap på filter pop-up">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Schedule knap på filter pop-up</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-                <div class="frame">
-					<div class="type">
-						<span class="typetext">Schedule</span>
-						<button class="typebutton">
-							<span class="typebuttontext">Not set</span>
-							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-						</button>
+				<label class="select-label filter-option">
+					<span class="select-span">Schedule</span>
+					<div class="select-wrapper">
+						<select name="filter-by-schedule" class="select">
+							<option value="all" selected="">Not set</option>
+							<option value="opcomming">Due date opcomming</option>
+							<option value="due-soon">Due date soon</option>
+							<option value="expired">Expired due date</option>
+						</select>
 					</div>
-                </div>
+				</label>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -613,78 +784,122 @@
                 </tr>
 				<tr class="row-two">
 					<td class="code">
-						<div class="wrapper">
-							<div class="frame">
-								<div class="type">
-									<span class="typetext">Schedule</span>
-									<button class="typebutton">
-										<span class="typebuttontext">Not set</span>
-										<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-									</button>
-								</div>
+						<label class="select-label filter-option">
+							<span class="select-span">Schedule</span>
+							<div class="select-wrapper">
+								<select name="filter-by-schedule" class="select">
+									<option value="all" selected="">Not set</option>
+									<option value="opcomming">Due date opcomming</option>
+									<option value="due-soon">Due date soon</option>
+									<option value="expired">Expired due date</option>
+								</select>
 							</div>
-						</div>
+						</label>
 					</td>
 					<td class="code">
-						/*Here starts CSS code for type button*/
-						.frame {
-							float: left; /* Added float to display height right */
-							background-color: black;
+						/* FILTER OPTIONS */
+						.filter-option {
+							float: left;
 							width: 100%;
-							/* width: 400px; *//* Did not scale with parrent */
 						}
 
-						.type {
-							width: calc(100% - 10px); /* 100% width -10px margin */
-							margin-left: 5px;
-							margin-right: 5px; /* Margin added */
+						.filter-option .select-span {
+							color: #FFF;
 						}
 
-						.typetext {
-							float: left; /* Added float to display height right */
-							color: white;
-							font-size: 110%; /* Must be larger on smaller screens */
+						.filter-option .select-wrapper {
+							float: right;
 						}
 
-						.typebutton {
-							float: left; /* Added float to display height right */
-							width: 100%;
-							border-radius: 10px;
-							font-size: 110%; /* Must be larger on smaller screens */
+						.filter-option .select {
+							border-color: #707070;
+							font-style: normal;
+							color: #000;
+						}
+						
+						
+						/* -- SELECT --*/
+						.select-label {
+							position: relative;
+							float: left;
+							overflow: hidden;
+							cursor: pointer;
 						}
 
-						select.typebutton {
+						.select-span {
+							float: left;
 							height: 37px;
+							margin-right: 12px;
+							font-size: 142.85%;
+							line-height: 37px;
+							color: #000;
+						}
+
+						@media (min-width:3200px) {
+							.select-span {
+								font-size: 32px;
+								line-height: 37px;
+							}
+						}
+
+						.select {
+							display: block;
+							padding-left: 10px;
+							padding-right: 28px;
+							border-radius: 19px;
+							font-size: 16px;
 							color: #7C7C7C;
 							font-style: italic;
-							border: solid 1px #707070;
-							padding:0 5px;
-							box-sizing: border-box;
+							-webkit-appearance: none;
+							-moz-appearance: none;
+							text-overflow: '';
+							border-color: #6F6F6F;
+							background-color: #fff;
 							cursor: pointer;
 						}
 
-						select.typebutton option{
-							color: #000;
+						.select option{
 							font-style: normal;
-							cursor: pointer;
 						}
 
-						.typebuttontext {
-							float: left;
-							font-style: italic;
-							color: grey;
-							margin-left: 5px;
-							font-size: 110%;
-						}
-
-						.chevronicon {
-							float: right;
-							margin-top: 5px;
-						}
-
-						@media (min-width:1366){
-							.typetext, .typebutton, .typebuttontext {
+						@media (min-width:786px) {
+							.select {
 								font-size: 100%;
+							}
+						}
+
+						.select-wrapper {
+							position: relative;
+						}
+
+						.select-wrapper:before {
+							content: "";
+							position: absolute;
+							top: calc(50% - 10px);
+							right: 10px;
+							width: 19px;
+							height: 13px;
+							background-image: url("../img/icons/chevron-down.svg");
+							background-repeat: no-repeat;
+							background-size: cover;
+						}
+
+						.sort-by-select {
+							float: right;
+							width: 205px;
+							height: 37px;
+							line-height: 37px;
+						}
+
+						@media (min-width:786px) {
+							.sort-by-select {
+								font-size: 15px;
+							}
+						}
+
+						@media (min-width:1920px) {
+							.sort-by-select {
+								font-size: 22px;
 							}
 						}
 					</td>
@@ -699,15 +914,16 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<div class="frame">
-					<div class="type">
-						<span class="typetext">Result</span>
-						<button class="typebutton">
-							<span class="typebuttontext">Not set</span>
-							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-						</button>
+				<label class="select-label filter-option">
+					<span class="select-span">Result</span>
+					<div class="select-wrapper">
+						<select name="filter-by-result" class="select">
+							<option value="all" selected="">Not set</option>
+							<option value="set">Result set</option>
+							<option value="not-set">Result not set</option>
+						</select>
 					</div>
-				</div>
+				</label>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -719,76 +935,121 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<div class="frame">
-							<div class="type">
-								<span class="typetext">Result</span>
-								<button class="typebutton">
-									<span class="typebuttontext">Not set</span>
-									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-								</button>
+						<label class="select-label filter-option">
+							<span class="select-span">Result</span>
+							<div class="select-wrapper">
+								<select name="filter-by-result" class="select">
+									<option value="all" selected="">Not set</option>
+									<option value="set">Result set</option>
+									<option value="not-set">Result not set</option>
+								</select>
 							</div>
-						</div>
+						</label>
 					</td>
 					<td class="code">
-						/*Here starts CSS code for type button*/
-						.frame {
-							float: left; /* Added float to display height right */
-							background-color: black;
+						/* FILTER OPTIONS */
+						.filter-option {
+							float: left;
 							width: 100%;
-							/* width: 400px; *//* Did not scale with parrent */
 						}
 
-						.type {
-							width: calc(100% - 10px); /* 100% width -10px margin */
-							margin-left: 5px;
-							margin-right: 5px; /* Margin added */
+						.filter-option .select-span {
+							color: #FFF;
 						}
 
-						.typetext {
-							float: left; /* Added float to display height right */
-							color: white;
-							font-size: 110%; /* Must be larger on smaller screens */
+						.filter-option .select-wrapper {
+							float: right;
 						}
 
-						.typebutton {
-							float: left; /* Added float to display height right */
-							width: 100%;
-							border-radius: 10px;
-							font-size: 110%; /* Must be larger on smaller screens */
+						.filter-option .select {
+							border-color: #707070;
+							font-style: normal;
+							color: #000;
+						}
+						
+						
+						/* -- SELECT --*/
+						.select-label {
+							position: relative;
+							float: left;
+							overflow: hidden;
+							cursor: pointer;
 						}
 
-						select.typebutton {
+						.select-span {
+							float: left;
 							height: 37px;
+							margin-right: 12px;
+							font-size: 142.85%;
+							line-height: 37px;
+							color: #000;
+						}
+
+						@media (min-width:3200px) {
+							.select-span {
+								font-size: 32px;
+								line-height: 37px;
+							}
+						}
+
+						.select {
+							display: block;
+							padding-left: 10px;
+							padding-right: 28px;
+							border-radius: 19px;
+							font-size: 16px;
 							color: #7C7C7C;
 							font-style: italic;
-							border: solid 1px #707070;
-							padding:0 5px;
-							box-sizing: border-box;
+							-webkit-appearance: none;
+							-moz-appearance: none;
+							text-overflow: '';
+							border-color: #6F6F6F;
+							background-color: #fff;
 							cursor: pointer;
 						}
 
-						select.typebutton option{
-							color: #000;
+						.select option{
 							font-style: normal;
-							cursor: pointer;
 						}
 
-						.typebuttontext {
-							float: left;
-							font-style: italic;
-							color: grey;
-							margin-left: 5px;
-							font-size: 110%;
-						}
-
-						.chevronicon {
-							float: right;
-							margin-top: 5px;
-						}
-
-						@media (min-width:1366){
-							.typetext, .typebutton, .typebuttontext {
+						@media (min-width:786px) {
+							.select {
 								font-size: 100%;
+							}
+						}
+
+						.select-wrapper {
+							position: relative;
+						}
+
+						.select-wrapper:before {
+							content: "";
+							position: absolute;
+							top: calc(50% - 10px);
+							right: 10px;
+							width: 19px;
+							height: 13px;
+							background-image: url("../img/icons/chevron-down.svg");
+							background-repeat: no-repeat;
+							background-size: cover;
+						}
+
+						.sort-by-select {
+							float: right;
+							width: 205px;
+							height: 37px;
+							line-height: 37px;
+						}
+
+						@media (min-width:786px) {
+							.sort-by-select {
+								font-size: 15px;
+							}
+						}
+
+						@media (min-width:1920px) {
+							.sort-by-select {
+								font-size: 22px;
 							}
 						}
 					</td>
@@ -804,15 +1065,16 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<div class="frame">
-					<div class="type">
-						<span class="typetext">Date target</span>
-						<button class="typebutton">
-							<span class="typebuttontext">Last edited</span>
-							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-						</button>
+				<label class="select-label filter-option">
+					<span class="select-span">Date target</span>
+					<div class="select-wrapper">
+						<select name="filter-target-for-date" class="select">
+							<option value="creation-date" selected="">Creation date</option>
+							<option value="last-edited">Last edited</option>
+							<option value="schedule">Schedule</option>
+						</select>
 					</div>
-				</div>
+				</label>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -824,76 +1086,121 @@
 				</tr>
                 <tr class="row-two">
 					<td class="code">
-						<div class="frame">
-							<div class="type">
-								<span class="typetext">Date target</span>
-								<button class="typebutton">
-									<span class="typebuttontext">Last edited</span>
-									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-								</button>
+						<label class="select-label filter-option">
+							<span class="select-span">Date target</span>
+							<div class="select-wrapper">
+								<select name="filter-target-for-date" class="select">
+									<option value="creation-date" selected="">Creation date</option>
+									<option value="last-edited">Last edited</option>
+									<option value="schedule">Schedule</option>
+								</select>
 							</div>
-						</div>
+						</label>
 					</td>
 					<td class="code">
-						/*Here starts CSS code for type button*/
-						.frame {
-							float: left; /* Added float to display height right */
-							background-color: black;
+						/* FILTER OPTIONS */
+						.filter-option {
+							float: left;
 							width: 100%;
-							/* width: 400px; *//* Did not scale with parrent */
 						}
 
-						.type {
-							width: calc(100% - 10px); /* 100% width -10px margin */
-							margin-left: 5px;
-							margin-right: 5px; /* Margin added */
+						.filter-option .select-span {
+							color: #FFF;
 						}
 
-						.typetext {
-							float: left; /* Added float to display height right */
-							color: white;
-							font-size: 110%; /* Must be larger on smaller screens */
+						.filter-option .select-wrapper {
+							float: right;
 						}
 
-						.typebutton {
-							float: left; /* Added float to display height right */
-							width: 100%;
-							border-radius: 10px;
-							font-size: 110%; /* Must be larger on smaller screens */
+						.filter-option .select {
+							border-color: #707070;
+							font-style: normal;
+							color: #000;
+						}
+						
+						
+						/* -- SELECT --*/
+						.select-label {
+							position: relative;
+							float: left;
+							overflow: hidden;
+							cursor: pointer;
 						}
 
-						select.typebutton {
+						.select-span {
+							float: left;
 							height: 37px;
+							margin-right: 12px;
+							font-size: 142.85%;
+							line-height: 37px;
+							color: #000;
+						}
+
+						@media (min-width:3200px) {
+							.select-span {
+								font-size: 32px;
+								line-height: 37px;
+							}
+						}
+
+						.select {
+							display: block;
+							padding-left: 10px;
+							padding-right: 28px;
+							border-radius: 19px;
+							font-size: 16px;
 							color: #7C7C7C;
 							font-style: italic;
-							border: solid 1px #707070;
-							padding:0 5px;
-							box-sizing: border-box;
+							-webkit-appearance: none;
+							-moz-appearance: none;
+							text-overflow: '';
+							border-color: #6F6F6F;
+							background-color: #fff;
 							cursor: pointer;
 						}
 
-						select.typebutton option{
-							color: #000;
+						.select option{
 							font-style: normal;
-							cursor: pointer;
 						}
 
-						.typebuttontext {
-							float: left;
-							font-style: italic;
-							color: grey;
-							margin-left: 5px;
-							font-size: 110%;
-						}
-
-						.chevronicon {
-							float: right;
-							margin-top: 5px;
-						}
-
-						@media (min-width:1366){
-							.typetext, .typebutton, .typebuttontext {
+						@media (min-width:786px) {
+							.select {
 								font-size: 100%;
+							}
+						}
+
+						.select-wrapper {
+							position: relative;
+						}
+
+						.select-wrapper:before {
+							content: "";
+							position: absolute;
+							top: calc(50% - 10px);
+							right: 10px;
+							width: 19px;
+							height: 13px;
+							background-image: url("../img/icons/chevron-down.svg");
+							background-repeat: no-repeat;
+							background-size: cover;
+						}
+
+						.sort-by-select {
+							float: right;
+							width: 205px;
+							height: 37px;
+							line-height: 37px;
+						}
+
+						@media (min-width:786px) {
+							.sort-by-select {
+								font-size: 15px;
+							}
+						}
+
+						@media (min-width:1920px) {
+							.sort-by-select {
+								font-size: 22px;
 							}
 						}
 					</td>
@@ -902,110 +1209,12 @@
 			</table>
 		</div>
 	</article>
-	<article id="type-knap-på-filter-pop-up">
+	<div class="title-area">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Type knap på filter pop-up</h4>
+			<!--Delete pou-up's -->
+			<h3 id="knappermedtextogicon" class="styleguide-title">Knapper med text og icon</h3>
 		</div>
-		<div class="example">
-			<div class="wrapper">
-                <div class="frame">
-					<div class="type">
-						<span class="typetext">Type</span>
-						<button class="typebutton">
-							<span class="typebuttontext">Day of week</span>
-							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-						</button>
-					</div>
-                </div>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="table-ref">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<td class="code">
-						<div class="frame">
-							<div class="type">
-								<span class="typetext">Type</span>
-								<button class="typebutton">
-									<span class="typebuttontext">Day of week</span>
-									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-								</button>
-							</div>
-						</div>
-					</td>
-					<td class="code">
-						/*Here starts CSS code for type button*/
-						.frame {
-							float: left; /* Added float to display height right */
-							background-color: black;
-							width: 100%;
-							/* width: 400px; *//* Did not scale with parrent */
-						}
-
-						.type {
-							width: calc(100% - 10px); /* 100% width -10px margin */
-							margin-left: 5px;
-							margin-right: 5px; /* Margin added */
-						}
-
-						.typetext {
-							float: left; /* Added float to display height right */
-							color: white;
-							font-size: 110%; /* Must be larger on smaller screens */
-						}
-
-						.typebutton {
-							float: left; /* Added float to display height right */
-							width: 100%;
-							border-radius: 10px;
-							font-size: 110%; /* Must be larger on smaller screens */
-						}
-
-						select.typebutton {
-							height: 37px;
-							color: #7C7C7C;
-							font-style: italic;
-							border: solid 1px #707070;
-							padding:0 5px;
-							box-sizing: border-box;
-							cursor: pointer;
-						}
-
-						select.typebutton option{
-							color: #000;
-							font-style: normal;
-							cursor: pointer;
-						}
-
-						.typebuttontext {
-							float: left;
-							font-style: italic;
-							color: grey;
-							margin-left: 5px;
-							font-size: 110%;
-						}
-
-						.chevronicon {
-							float: right;
-							margin-top: 5px;
-						}
-
-						@media (min-width:1366){
-							.typetext, .typebutton, .typebuttontext {
-								font-size: 100%;
-							}
-						}
-					</td>
-					<td class="empty"></td>
-				</tr>
-			</table>
-		</div>
-	</article>
+	</div>
 	<article id="folder-overview-knap">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Folder overview knap</h4>
@@ -1264,126 +1473,6 @@
 						@media (min-width:1920px) {
 							.sort-by-select {
 								font-size: 22px;
-							}
-						}
-					</td>
-					<!--JavaScript-->
-					<td class="empty"></td>
-				</tr>
-			</table>
-		</div>
-	</article>
-	<article id="date-range">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Date range</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<label class="date-range">
-					<span class="date-range-title">Date range</span>
-					<div class="date-range-date-wrapper">
-						<input type="date" id="date-range-start" name="date-range-start" placeholder="yyyy-mm-dd" class="date-range-input" />
-						<span class="date-range-start-end-split">-</span>
-						<input type="date" id="date-range-end" name="date-range-end" placeholder="yyyy-mm-dd" class="date-range-input" />
-					</div>
-				</label>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="overviewmolekyler">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<!--HTML-->
-					<td class="code">
-						<label class="date-range">
-							<span class="date-range-title">Date range</span>
-							<div class="date-range-date-wrapper">
-								<input type="date" id="date-range-start" name="date-range-start" placeholder="yyyy-mm-dd" class="date-range-input" />
-								<span class="date-range-start-end-split">-</span>
-								<input type="date" id="date-range-end" name="date-range-end" placeholder="yyyy-mm-dd" class="date-range-input" />
-							</div>
-						</label>
-					</td>
-					<!--CSS-->
-					<td class="code">
-						/* -- DATE-RANGE --*/
-						.date-range {
-							float: left;
-							width: 100%;
-							cursor: pointer;
-						}
-
-						.date-range-title,
-						.date-range-input,
-						.date-range-start-end-split {
-							font-size: 135.71%;
-							line-height: 135.71%;
-							color: #FFF;
-						}
-
-						.date-range-title {
-							float: left;
-							clear: both;
-						}
-
-						.date-range-date-wrapper {
-							float: right;
-							clear: both;
-						}
-
-						.date-range-input {
-							position: relative;
-							display: block;
-							float: left;
-							clear: both;
-							border: none;
-							text-decoration: underline;
-							background-color: transparent;
-							cursor: pointer;
-						}
-						.date-range-input:before {
-							content:"";
-							position: absolute;
-							left: 0;
-							bottom: 0;
-							width: 65%;
-							height: 1px;
-							background-color: #FFF;
-						}
-
-						.date-range-input:placeholder {
-							text-decoration: underline;
-						}
-
-						.date-range-start-end-split {
-							display: none;
-							float: left;
-							margin: 0 10px;
-						}
-
-						@media (min-width:768px){
-							.date-range-title {
-								width: 30%;
-								clear: left;
-							}
-
-							.date-range-date-wrapper {
-								clear: right;
-							}
-
-							.date-range-input {
-								width: auto;
-								clear: none;
-							}
-						}
-
-						@media (min-width:1366px){
-							.date-range-start-end-split {
-								display: inline-block;
 							}
 						}
 					</td>
