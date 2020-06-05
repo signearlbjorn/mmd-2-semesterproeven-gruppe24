@@ -1233,10 +1233,10 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" class="settingsmenubutton">
+				<a href="folder-view.html" class="folder-view-button disabled" title="Go to folder view">
 					<span>Folder overview</span>
-					<img class="settingsmenuicon" src="img/icons/folder.svg" alt="editicon">
-				</button>
+					<img src="img/icons/folder.svg" alt="Folder icon">
+				</a>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -1248,39 +1248,49 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" class="settingsmenubutton">
+						<a href="folder-view.html" class="folder-view-button" title="Go to folder view">
 							<span>Folder overview</span>
-							<img class="settingsmenuicon" src="img/icons/folder.svg" alt="editicon">
-						</button>
+							<img src="img/icons/folder.svg" alt="Folder icon">
+						</a>
 					</td>
 					<td class="code">
-						.settingsmenubutton{
-							display: block;
-							width: auto;
-							margin: 0 auto;
-							padding: 5px 17px;
-							text-align: center;
-							border: #000000;
-							border-radius: 12px;
-							cursor: pointer;
-						}
-
-						.settingsmenubutton:hover{
-							background-color: #adadad;
-						}
-
-						.settingsmenubutton span{
+						/* -- FOLDER OVERVIEW BUTTON -- */
+						.folder-view-button {
+							position: relative;
 							float: left;
-							margin-right: 15px;
-							color: #848484;
-							font-size: 19px;
+							padding-left: 17px;
+							padding-right: 63px;
+							border-radius: 1000px;
+							background-color: #FFF;
+							text-decoration: none;
 						}
-						.settingsmenuicon{
-							float: right;
-							width: 20px;
+
+						.folder-view-button:hover {
+							background-color: #e5e5e5;
+						}
+
+						.folder-view-button:active {
+							background-color: #cccccc;
+						}
+
+						.folder-view-button img {
+							position: absolute;
+							top: calc(50% - 13px);
+							right: 17px;
+							width: 31px;
+							height: 26px;
 						}
 					</td>
-					<td class="empty"></td>
+					<td class="code">
+						// DIABLE LINKS
+						let disabledLinks = document.getElementsByClassName("disabled");
+						for(let i=0; i < disabledLinks.length; i++){
+							disabledLinks[i].addEventListener("click", function(){
+								event.preventDefault();
+								return null;
+							});
+						}
+					</td>
 				</tr>
 			</table>
 		</div>
@@ -1343,7 +1353,9 @@
 							left: 26px;
 						}
 					</td>
-					<td class="empty"></td>
+					<td class="code">
+						// Open new report pop up
+					</td>
                 </tr>
 			</table>
 		</div>
@@ -1387,16 +1399,16 @@
 							<span class="select-span">Sort by</span>
 							<div class="select-wrapper">
 								<select name="sort-reports" class="sort-by-select select">
-									<option value="name-az" selected>name a-z</option>
-									<option value="name-za">name z-a</option>
-									<option value="creation-first">latest creation</option>
-									<option value="creation-last">last creation</option>
-									<option value="change-first">latest change</option>
-									<option value="change-last">last change</option>
-									<option value="id-acending">acending ID</option>
-									<option value="id-decending">decending ID </option>
-									<option value="group-az">group a-z</option>
-									<option value="group-za">group z-a</option>
+									<option value="name-az" selected>Name a-z</option>
+									<option value="name-za">Name z-a</option>
+									<option value="creation-first">Latest creation</option>
+									<option value="creation-last">Last creation</option>
+									<option value="change-first">Latest change</option>
+									<option value="change-last">Last change</option>
+									<option value="id-acending">Acending ID</option>
+									<option value="id-decending">Decending ID </option>
+									<option value="group-az">Group a-z</option>
+									<option value="group-za">Group z-a</option>
 								</select>
 							</div>
 						</label>

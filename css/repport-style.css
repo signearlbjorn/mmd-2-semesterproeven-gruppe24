@@ -596,6 +596,35 @@ select.typebutton option{
 
 /*Buttons with text and icon css end*/
 
+
+/* -- FOLDER OVERVIEW BUTTON -- */
+.folder-view-button {
+	position: relative;
+	float: left;
+	padding-left: 17px;
+	padding-right: 63px;
+	border-radius: 1000px;
+	background-color: #FFF;
+	text-decoration: none;
+}
+
+.folder-view-button:hover {
+	background-color: #e5e5e5;
+}
+
+.folder-view-button:active {
+	background-color: #cccccc;
+}
+
+.folder-view-button img {
+	position: absolute;
+	top: calc(50% - 13px);
+	right: 17px;
+	width: 31px;
+	height: 26px;
+}
+
+
 /*Here starts CSS code for filter by button*/
 .filterbutton {
 	background-color: #fff;
