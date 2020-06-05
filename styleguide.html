@@ -410,23 +410,55 @@
 			</table>
 		</div>
 	</article>
-</section>
-<!-- MOLEKYLER -->
-<section id="molecules">
-	<!-- molekyle tabeller for overview-siden -->
-	<div class="wrapper">
-		<h3 class="styleguide-title">Molekyler</h3>
-	</div>
+	<article id="rounded-button">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Rounded button</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<button class="rounded-corners">Text</button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="atomTable">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML -->
+					<td class="code">
+						<button class="rounded-corners">Text</button>
+					</td>
+					<!--CSS -->
+					<td class="code">
+						/* -- BUTTON AND LINKS -- */
+						button {
+							cursor: pointer;
+							box-sizing: border-box;
+						}
+
+						.rounded-corners {
+							position: relative;
+							min-height: 1px;
+							min-width: 1px;
+							padding-left: 17px;
+							padding-right: 17px;
+							border-radius: 1000px;
+							border: none;
+						}
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
 	<article id="stjerne-prioritering">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Stjerne Prioritering</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<span class="star">
-					<img alt="" src="img/icons/star.svg"
-					  style="height: 25px; width: 25px" id="star1">
-				</span>
+				<img src="img/icons/star.svg" id="star1" class="star" alt="Priority icon. A star">
 			</div>
 		</div>
 		<div class="wrapper">
@@ -438,10 +470,7 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<span class="star">
-							<img alt="" src="img/icons/star.svg"
-							  style="height: 25px; width: 25px" id="star1">
-						</span>
+						<img src="img/icons/star.svg" id="star1" class="star" alt="Priority icon. A star">
 					</td>
 					<td class="code">
 						.star {
@@ -487,6 +516,13 @@
  		</div>
 	</article>
    <!-- Stjerne Prioritering - slut  -->
+</section>
+<!-- MOLEKYLER -->
+<section id="molecules">
+	<!-- molekyle tabeller for overview-siden -->
+	<div class="wrapper">
+		<h3 class="styleguide-title">Molekyler</h3>
+	</div>
 	<div class="title-area">
 		<div class="wrapper">
 			<h3 id="knappermedtextogicon" class="styleguide-title">Filtrering</h3>
@@ -607,7 +643,10 @@
 						}
 					</td>
 					<!--JavaScript-->
-					<td class="empty"></td>
+					<td class="code">
+						// Filter reports in date range, based on date target
+						// ToDo
+					</td>
 				</tr>
 			</table>
 		</div>
@@ -761,7 +800,11 @@
 							}
 						}
 					</td>
-					<td class="empty"></td>
+					<!--JavaScript-->
+					<td class="code">
+						// Filter reports by folder
+						// ToDo
+					</td>
 				</tr>
 			</table>
 			<!--Folder knap på filter pop-up - slut-->
@@ -915,7 +958,11 @@
 							}
 						}
 					</td>
-					<td class="empty"></td>
+					<!--JavaScript-->
+					<td class="code">
+						// Filter reports by schedule
+						// ToDo
+					</td>
 				</tr>
 			</table>
 		</div>
@@ -1065,7 +1112,11 @@
 							}
 						}
 					</td>
-					<td class="empty"></td>
+					<!--JavaScript-->
+					<td class="code">
+						// Filter reports by result
+						// ToDo
+					</td>
 				</tr>
 			</table>
 			<p class="info">Warning eller info.</p>
@@ -1094,7 +1145,6 @@
 				<tr class="row-one">
 					<th>HTML</th>
 					<th>CSS</th>
-					<th>JavaScript</th>
 				</tr>
                 <tr class="row-two">
 					<td class="code">
@@ -1216,7 +1266,6 @@
 							}
 						}
 					</td>
-					<td class="empty"></td>
 				</tr>
 			</table>
 		</div>
@@ -1233,7 +1282,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<a href="folder-view.html" class="folder-view-button disabled" title="Go to folder view">
+				<a href="folder-view.html" class="folder-view-button white-button rounded-corners disabled" title="Go to folder view">
 					<span>Folder overview</span>
 					<img src="img/icons/folder.svg" alt="Folder icon">
 				</a>
@@ -1248,29 +1297,29 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<a href="folder-view.html" class="folder-view-button" title="Go to folder view">
+						<a href="folder-view.html" class="folder-view-button white-button disabled" title="Go to folder view">
 							<span>Folder overview</span>
 							<img src="img/icons/folder.svg" alt="Folder icon">
 						</a>
 					</td>
 					<td class="code">
-						/* -- FOLDER OVERVIEW BUTTON -- */
-						.folder-view-button {
-							position: relative;
-							float: left;
-							padding-left: 17px;
-							padding-right: 63px;
-							border-radius: 1000px;
+						/* -- BUTTON -- */
+						.white-button {
 							background-color: #FFF;
-							text-decoration: none;
 						}
-
-						.folder-view-button:hover {
+						.white-button:hover {
 							background-color: #e5e5e5;
 						}
 
-						.folder-view-button:active {
+						.white-button:active {
 							background-color: #cccccc;
+						}
+
+						/* -- FOLDER OVERVIEW BUTTON -- */
+						.folder-view-button {
+							float: left;
+							padding-right: 63px;
+							text-decoration: none;
 						}
 
 						.folder-view-button img {
@@ -1279,6 +1328,12 @@
 							right: 17px;
 							width: 31px;
 							height: 26px;
+						}
+						
+						/* - STYLEGUIDE DISABLED LINKS - */
+						.disabled{
+							color: #777;
+							cursor: not-allowed;
 						}
 					</td>
 					<td class="code">
@@ -1322,6 +1377,12 @@
 						</button>
 					</td>
 					<td class="code">
+						/* -- BUTTON -- */
+						button {
+							cursor: pointer;
+						}
+
+
 						/*Here starts code for 'new report button'*/
 						.newreportbutton {
 							position: relative;
@@ -1355,154 +1416,9 @@
 					</td>
 					<td class="code">
 						// Open new report pop up
+						// ToDo
 					</td>
                 </tr>
-			</table>
-		</div>
-	</article>
-	<article id="sort">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Sort</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<label class="select-label">
-					<span class="select-span">Sort by</span>
-					<div class="select-wrapper">
-						<select name="sort-reports" class="sort-by-select select">
-							<option value="name-az" selected>Name a-z</option>
-							<option value="name-za">Name z-a</option>
-							<option value="creation-first">Latest creation</option>
-							<option value="creation-last">Last creation</option>
-							<option value="change-first">Latest change</option>
-							<option value="change-last">Last change</option>
-							<option value="id-acending">Acending ID</option>
-							<option value="id-decending">Decending ID </option>
-							<option value="group-az">Group a-z</option>
-							<option value="group-za">Group z-a</option>
-						</select>
-					</div>
-				</label>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="overviewmolekyler">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<!--HTML-->
-					<td class="code">
-						<label class="select-label">
-							<span class="select-span">Sort by</span>
-							<div class="select-wrapper">
-								<select name="sort-reports" class="sort-by-select select">
-									<option value="name-az" selected>Name a-z</option>
-									<option value="name-za">Name z-a</option>
-									<option value="creation-first">Latest creation</option>
-									<option value="creation-last">Last creation</option>
-									<option value="change-first">Latest change</option>
-									<option value="change-last">Last change</option>
-									<option value="id-acending">Acending ID</option>
-									<option value="id-decending">Decending ID </option>
-									<option value="group-az">Group a-z</option>
-									<option value="group-za">Group z-a</option>
-								</select>
-							</div>
-						</label>
-					</td>
-					<!--CSS-->
-					<td class="code">
-						/* -- SELECT --*/
-						.select-label {
-							position: relative;
-							float: left;
-							overflow: hidden;
-							cursor: pointer;
-						}
-
-						.select-span {
-							float: left;
-							height: 37px;
-							margin-right: 12px;
-							font-size: 142.85%;
-							line-height: 37px;
-							color: #000;
-						}
-
-						@media (min-width:3200px) {
-							.select-span {
-								font-size: 32px;
-								line-height: 37px;
-							}
-						}
-
-						.select {
-							display: block;
-							padding-left: 10px;
-							padding-right: 28px;
-							border-radius: 19px;
-							font-size: 16px;
-							color: #7C7C7C;
-							font-style: italic;
-							-webkit-appearance: none;
-							-moz-appearance: none;
-							text-overflow: '';
-							border-color: #6F6F6F;
-							background-color: #fff;
-							cursor: pointer;
-						}
-
-						.select option{
-							font-style: normal;
-						}
-
-						@media (min-width:786px) {
-							.select {
-								font-size: 100%;
-							}
-						}
-
-						.select-wrapper {
-							position: relative;
-						}
-
-						.select-wrapper:before {
-							content: "";
-							position: absolute;
-							top: calc(50% - 10px);
-							right: 10px;
-							width: 19px;
-							height: 13px;
-							background-image: url("../img/icons/chevron-down.svg");
-							background-repeat: no-repeat;
-							background-size: cover;
-						}
-
-						.sort-by-select {
-							float: right;
-							width: 205px;
-							height: 37px;
-							line-height: 37px;
-						}
-
-						@media (min-width:786px) {
-							.sort-by-select {
-								font-size: 15px;
-							}
-						}
-
-						@media (min-width:1920px) {
-							.sort-by-select {
-								font-size: 22px;
-							}
-						}
-					</td>
-					<!--JavaScript-->
-					<td class="empty"></td>
-				</tr>
 			</table>
 		</div>
 	</article>
@@ -1512,9 +1428,9 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" class="filterbutton">
+				<button type="button" class="filterbutton white-button" title="Open filter options">
 					<span>Filter</span>
-					<img class="settingsmenuicon" src="img/icons/sliders.svg" alt="slider-icon">
+					<img src="img/icons/sliders.svg" alt="Slider icon">
 				</button>
 			</div>
 		</div>
@@ -1527,12 +1443,29 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" class="filterbutton">
+						<button type="button" class="filterbutton white-button" title="Open filter options">
 							<span>Filter</span>
-							<img class="settingsmenuicon" src="img/icons/sliders.svg" alt="slider-icon">
+							<img src="img/icons/sliders.svg" alt="Slider icon">
 						</button>
 					</td>
 					<td class="code">
+							/* -- BUTTON -- */
+							button {
+								cursor: pointer;
+							}
+
+							.white-button {
+								background-color: #FFF;
+							}
+							.white-button:hover {
+								background-color: #e5e5e5;
+							}
+
+							.white-button:active {
+								background-color: #cccccc;
+							}
+
+
 						/*Here starts CSS code for filter by button*/
 						.filterbutton {
 							background-color: #fff;
@@ -1550,7 +1483,10 @@
 							margin-right: 15px;
 						}
 					</td>
-					<td class="empty"></td>
+					<td class="code">
+						// Open filter pop up
+						// ToDo
+					</td>
                 </tr>
 			</table>
 		</div>
@@ -1600,7 +1536,9 @@
 							margin: 6px auto;
 						}
 					</td>
-					<td class="empty"></td>
+					<td class="code">
+						
+					</td>
                 </tr>
 			</table>
 		</div>
@@ -1653,7 +1591,6 @@
 			</table>
 		</div>
 	</article>
-
     <article id="adddelete-knap">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Add and delete page buttons</h4>
@@ -1878,6 +1815,165 @@
 			</table>
 		</div>
 	</article>
+	<div class="title-area">
+		<div class="wrapper">
+			<h3 class="styleguide-title">Selects</h3>
+		</div>
+	</div>
+	<article id="sort">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Sort</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<label class="select-label">
+					<span class="select-span">Sort by</span>
+					<div class="select-wrapper">
+						<select name="sort-reports" class="sort-by-select select">
+							<option value="name-az" selected>Name a-z</option>
+							<option value="name-za">Name z-a</option>
+							<option value="creation-first">Latest creation</option>
+							<option value="creation-last">Last creation</option>
+							<option value="change-first">Latest change</option>
+							<option value="change-last">Last change</option>
+							<option value="id-acending">Acending ID</option>
+							<option value="id-decending">Decending ID </option>
+							<option value="group-az">Group a-z</option>
+							<option value="group-za">Group z-a</option>
+						</select>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML-->
+					<td class="code">
+						<label class="select-label">
+							<span class="select-span">Sort by</span>
+							<div class="select-wrapper">
+								<select name="sort-reports" class="sort-by-select select">
+									<option value="name-az" selected>Name a-z</option>
+									<option value="name-za">Name z-a</option>
+									<option value="creation-first">Latest creation</option>
+									<option value="creation-last">Last creation</option>
+									<option value="change-first">Latest change</option>
+									<option value="change-last">Last change</option>
+									<option value="id-acending">Acending ID</option>
+									<option value="id-decending">Decending ID </option>
+									<option value="group-az">Group a-z</option>
+									<option value="group-za">Group z-a</option>
+								</select>
+							</div>
+						</label>
+					</td>
+					<!--CSS-->
+					<td class="code">
+						/* -- SELECT --*/
+						.select-label {
+							position: relative;
+							float: left;
+							overflow: hidden;
+							cursor: pointer;
+						}
+
+						.select-span {
+							float: left;
+							height: 37px;
+							margin-right: 12px;
+							font-size: 142.85%;
+							line-height: 37px;
+							color: #000;
+						}
+
+						@media (min-width:3200px) {
+							.select-span {
+								font-size: 32px;
+								line-height: 37px;
+							}
+						}
+
+						.select {
+							display: block;
+							padding-left: 10px;
+							padding-right: 28px;
+							border-radius: 19px;
+							font-size: 16px;
+							color: #7C7C7C;
+							font-style: italic;
+							-webkit-appearance: none;
+							-moz-appearance: none;
+							text-overflow: '';
+							border-color: #6F6F6F;
+							background-color: #fff;
+							cursor: pointer;
+						}
+
+						.select option{
+							font-style: normal;
+						}
+
+						@media (min-width:786px) {
+							.select {
+								font-size: 100%;
+							}
+						}
+
+						.select-wrapper {
+							position: relative;
+						}
+
+						.select-wrapper:before {
+							content: "";
+							position: absolute;
+							top: calc(50% - 10px);
+							right: 10px;
+							width: 19px;
+							height: 13px;
+							background-image: url("../img/icons/chevron-down.svg");
+							background-repeat: no-repeat;
+							background-size: cover;
+						}
+
+						.sort-by-select {
+							float: right;
+							width: 205px;
+							height: 37px;
+							line-height: 37px;
+						}
+
+						@media (min-width:786px) {
+							.sort-by-select {
+								font-size: 15px;
+							}
+						}
+
+						@media (min-width:1920px) {
+							.sort-by-select {
+								font-size: 22px;
+							}
+						}
+					</td>
+					<!--JavaScript-->
+					<td class="code">
+						// Sort reports
+						// ToDo
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<div class="title-area">
+		<div class="wrapper">
+			<h3 class="styleguide-title">Selects</h3>
+		</div>
+	</div>
 	<article id="burgerMenuKnap">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Burger menu knap</h4>
@@ -1937,144 +2033,6 @@
 						}
 						.burgerMenu:hover + .hiddenNav{
 							display: block;
-						}
-					</td>
-					<td class="code">
-						function burgerMenuChange(burgerMenu) {
-							burgerMenu.classList.toggle("change");
-						}
-
-					</td>
-                </tr>
-			</table>
-		</div>
-	</article>
-	<article id="burgerMenuKnapFunction">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Burger menu knap + function</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<div class="burgerMenu" onclick="burgerMenuChange(this)">
-					<div class="bar1"></div>
-					<div class="bar2"></div>
-					<div class="bar3"></div>
-				</div>
-				<nav class="smallnav hiddenNav">
-					<div class="branddiv">
-						<!--LOGO-->
-						<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
-			            <!--MAIN NAVIGATION-->
-						<ul>
-							<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
-							<li><a>Trendboards</a></li>
-							<li><a>Reports</a></li>
-							<li><a>Views</a></li>
-							<li><a>Feeds</a></li>
-							<li><a>Settings</a></li>
-							<li><a>Shares</a></li>
-						</ul>
-					</div>
-					<div>
-						<ul>
-							<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
-							<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
-							<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
-							<li><span class="channels">channels</span></li>
-							<li class="selection">
-								<select class="channelselect">
-									<option>channelnames</option>
-								</select></li>
-							<!--USERNAME-->
-							<li class="profiledropdown">
-								<a class="profiledropdown-a">
-									<span class="username">Profile P.</span>
-									<img class="profile-icon" src="img/icons/user.svg" alt="profile">
-								</a>
-							</li>
-						</ul>
-					</div>
-				</nav>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="table-ref">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<td class="code">
-						<div class="burgerMenu" onclick="burgerMenuChange(burgerMenu)">
-							<div class="bar1"></div>
-							<div class="bar2"></div>
-							<div class="bar3"></div>
-						</div>
-						<nav class="smallnav hiddenNav">
-							<div class="branddiv">
-								<!--LOGO-->
-								<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
-					            <!--MAIN NAVIGATION-->
-								<ul>
-									<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
-									<li><a>Trendboards</a></li>
-									<li><a>Reports</a></li>
-									<li><a>Views</a></li>
-									<li><a>Feeds</a></li>
-									<li><a>Settings</a></li>
-									<li><a>Shares</a></li>
-								</ul>
-							</div>
-							<div>
-								<ul>
-									<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
-									<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
-									<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
-									<li><span class="channels">channels</span></li>
-									<li class="selection">
-										<select class="channelselect">
-											<option>channelnames</option>
-										</select></li>
-									<!--USERNAME-->
-									<li class="profiledropdown">
-										<a class="profiledropdown-a">
-											<span class="username">Profile P.</span>
-											<img class="profile-icon" src="img/icons/user.svg" alt="profile">
-										</a>
-									</li>
-								</ul>
-							</div>
-						</nav>
-					</td>
-					<td class="code">
-						.burgerMenu{
-							display: inline-block;
-							cursor: pointer;
-							float: none;
-							width: 35px;
-						}
-
-						.bar1, .bar2, .bar3 {
-							width: 35px;
-							height: 5px;
-							background-color: #333;
-							margin: 3px 0;
-							transition: 0.4s;
-						}
-
-						.change .bar1 {
-							-webkit-transform: rotate(-45deg) translate(-9px, 6px);
-							transform: rotate(-45deg) translate(-9px, 6px);
-						}
-
-						.change .bar2 {
-							opacity: 0;
-						}
-
-						.change .bar3 {
-							-webkit-transform: rotate(45deg) translate(-8px, -8px);
-							transform: rotate(45deg) translate(-8px, -8px);
 						}
 					</td>
 					<td class="code">
@@ -4211,6 +4169,144 @@
 		</div>
 	</article>
 	<!-- organisme tabel for 'Navigation-Bar for smaller screens' - start-->
+	<article id="burgerMenuKnapFunction">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Burger menu knap + function</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="burgerMenu" onclick="burgerMenuChange(this)">
+					<div class="bar1"></div>
+					<div class="bar2"></div>
+					<div class="bar3"></div>
+				</div>
+				<nav class="smallnav hiddenNav">
+					<div class="branddiv">
+						<!--LOGO-->
+						<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
+			            <!--MAIN NAVIGATION-->
+						<ul>
+							<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
+							<li><a>Trendboards</a></li>
+							<li><a>Reports</a></li>
+							<li><a>Views</a></li>
+							<li><a>Feeds</a></li>
+							<li><a>Settings</a></li>
+							<li><a>Shares</a></li>
+						</ul>
+					</div>
+					<div>
+						<ul>
+							<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
+							<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
+							<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
+							<li><span class="channels">channels</span></li>
+							<li class="selection">
+								<select class="channelselect">
+									<option>channelnames</option>
+								</select></li>
+							<!--USERNAME-->
+							<li class="profiledropdown">
+								<a class="profiledropdown-a">
+									<span class="username">Profile P.</span>
+									<img class="profile-icon" src="img/icons/user.svg" alt="profile">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<div class="burgerMenu" onclick="burgerMenuChange(burgerMenu)">
+							<div class="bar1"></div>
+							<div class="bar2"></div>
+							<div class="bar3"></div>
+						</div>
+						<nav class="smallnav hiddenNav">
+							<div class="branddiv">
+								<!--LOGO-->
+								<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
+					            <!--MAIN NAVIGATION-->
+								<ul>
+									<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
+									<li><a>Trendboards</a></li>
+									<li><a>Reports</a></li>
+									<li><a>Views</a></li>
+									<li><a>Feeds</a></li>
+									<li><a>Settings</a></li>
+									<li><a>Shares</a></li>
+								</ul>
+							</div>
+							<div>
+								<ul>
+									<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
+									<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
+									<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
+									<li><span class="channels">channels</span></li>
+									<li class="selection">
+										<select class="channelselect">
+											<option>channelnames</option>
+										</select></li>
+									<!--USERNAME-->
+									<li class="profiledropdown">
+										<a class="profiledropdown-a">
+											<span class="username">Profile P.</span>
+											<img class="profile-icon" src="img/icons/user.svg" alt="profile">
+										</a>
+									</li>
+								</ul>
+							</div>
+						</nav>
+					</td>
+					<td class="code">
+						.burgerMenu{
+							display: inline-block;
+							cursor: pointer;
+							float: none;
+							width: 35px;
+						}
+
+						.bar1, .bar2, .bar3 {
+							width: 35px;
+							height: 5px;
+							background-color: #333;
+							margin: 3px 0;
+							transition: 0.4s;
+						}
+
+						.change .bar1 {
+							-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+							transform: rotate(-45deg) translate(-9px, 6px);
+						}
+
+						.change .bar2 {
+							opacity: 0;
+						}
+
+						.change .bar3 {
+							-webkit-transform: rotate(45deg) translate(-8px, -8px);
+							transform: rotate(45deg) translate(-8px, -8px);
+						}
+					</td>
+					<td class="code">
+						function burgerMenuChange(burgerMenu) {
+							burgerMenu.classList.toggle("change");
+						}
+
+					</td>
+                </tr>
+			</table>
+		</div>
+	</article>
 	<!--molecule for 'Tandhjul 1/kog' menu - start -->
 	<article id="tandhjul-menu-1">
 		<div class="wrapper">
@@ -8674,103 +8770,11 @@
                             } 
                         } 
                     }
-                   
-                                                       
-                                                       </td>
+				   </td>
 				</tr>
 			</table>
 		</div>
 	</article>
-	<!--<article id="highcharts-type-pie-element">
-		<div class="wrapper">
-			<h4 class="styleguide-title">List preview</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-
-			<div class="report-listbox">
-                <span class="rep-namelist">Report name</span>
-                <span class="rep-IDlist">ID</span>
-                 <button type="button" class="gear-iconlist">
-                <img class="gear-iconimglist" src="img/icons/tandhjul.svg" alt="gear">
-                </button>
-            </div>
-
-
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="overviewmolekyler">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<!--HTML--><!--
-					<td class="code">
-
-                <div class="report-listbox">
-                    <span class="rep-namelist">Report name</span>
-                    <span class="rep-IDlist">ID</span>
-                     <button type="button" class="gear-iconlist">
-                    <img class="gear-iconimglist" src="img/icons/tandhjul.svg" alt="gear">
-                    </button>
-                </div>
-
-					</td>
-					<!--CSS--><!--
-					<td class="code">
-                    .report-listbox{
-                        background-color: #6F6F6F;
-                        width: 80%;
-                        height: 4%;
-                        border-radius: 6px;
-                        display: inline-block;
-
-                    }
-
-                    .rep-namelist{
-                        color: black;
-                        font-size: 18px;
-                        display: inline-block;
-                        margin-left: 15px;
-                        margin-top: 1px;
-                    }
-
-                    .rep-IDlist{
-                        color: black;
-                        font-size: 18px;
-                        display: inline-block;
-                        margin-left: 15px;
-                        margin-top: 2px;
-                    }
-
-                    .gear-iconlist{
-                        background-color: transparent;
-                        border: none;
-                        cursor: pointer;
-                    }
-
-                    .gear-iconimglist{
-                        width: 2%;
-                        margin-left: 975px;
-                        display: block;
-                        margin-top: 2px;
-                        margin-bottom: 2px;
-                        margin-top: -21px;
-                    }
-
-
-                    </td>
-					<!--JavaScript--><!--
-					<td class="code">
-
-					</td>
-				</tr>
-			</table>
-		</div>
-	</article>-->
 </section>
 
 <!-- TEMPLATES -->

@@ -75,9 +75,38 @@ th {
     }
 }
 
-/* -- BUTTON -- */
+/* -- BUTTON AND LINKS -- */
 button {
 	cursor: pointer;
+	box-sizing: border-box;
+}
+
+.rounded-corners {
+	position: relative;
+	min-height: 1px;
+	min-width: 1px;
+	padding-left: 17px;
+	padding-right: 17px;
+	border-radius: 1000px;
+	border: none;
+}
+
+.white-button {
+	background-color: #FFF;
+}
+.white-button:hover {
+    background-color: #e5e5e5;
+}
+
+.white-button:active {
+    background-color: #cccccc;
+}
+
+
+/* - STYLEGUIDE DISABLED LINKS - */
+.disabled{
+	color: #777;
+	cursor: not-allowed;
 }
 
 
@@ -149,22 +178,7 @@ button {
 	background-size: cover;
 }
 
-/*Styleguide nav*/
-#atomicDesignNavigation{
-	align-content: center;
-	display: none;
-}
-#atomicDesignNavigation ul{
-	list-style: none;
-	margin: 0 auto;
-	display: grid;
-	grid-template-columns: auto auto auto auto auto;
-}
-@media (min-width:768px){
-	#atomicDesignNavigation{
-		display: grid;
-	}
-}
+
 /* -- h1 HEADING -- */
 h1 {
 	float: left;
@@ -599,21 +613,9 @@ select.typebutton option{
 
 /* -- FOLDER OVERVIEW BUTTON -- */
 .folder-view-button {
-	position: relative;
 	float: left;
-	padding-left: 17px;
 	padding-right: 63px;
-	border-radius: 1000px;
-	background-color: #FFF;
 	text-decoration: none;
-}
-
-.folder-view-button:hover {
-	background-color: #e5e5e5;
-}
-
-.folder-view-button:active {
-	background-color: #cccccc;
 }
 
 .folder-view-button img {
@@ -627,20 +629,29 @@ select.typebutton option{
 
 /*Here starts CSS code for filter by button*/
 .filterbutton {
-	background-color: #fff;
-	border: #000000;
-	border-radius: 12px;
-	width: auto;
-	padding: 5px 17px;
-	cursor: pointer;
+	position: relative;
 	display: block;
+	padding-left: 19px;
+	padding-right: 54px;
+	border: none;
+	border-radius: 1000px;
+	background-color: #fff;
 	text-align: center;
+	cursor: pointer;
 }
 
 .filterbutton span{
     color: #000;
-    margin-right: 15px;
 }
+
+.filterbutton img {
+	position: absolute;
+	top: calc(50% - 10px);
+	right: 19px;
+	width: 20px;
+	height: 20px;
+}
+
 
 /* -- DATE-RANGE --*/
 .date-range {
@@ -2830,11 +2841,25 @@ header .wrapper, #wrapper_header_example header .wrapper {
 }
 
 
-/* - STYLEGUIDE DISABLED LINKS - */
-.disabled{
-	color: #777;
-	cursor: not-allowed;
+/*Styleguide nav*/
+#atomicDesignNavigation{
+	align-content: center;
+	display: none;
 }
+
+#atomicDesignNavigation ul{
+	list-style: none;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+}
+
+@media (min-width:768px){
+	#atomicDesignNavigation{
+		display: grid;
+	}
+}
+
 
 /* OTHER BUTTONS */
 #styleguide #other-buttons button {
