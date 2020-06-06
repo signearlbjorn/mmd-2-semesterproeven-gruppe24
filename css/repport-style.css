@@ -450,8 +450,11 @@ button {
 }
 
 .settingsmenuicon{
-	float: right;
+	position: absolute;
+	top: calc(50% - 10px);
+	right: 17px;
 	width: 20px;
+	height: 20px;
 }
 
 /*Here starts CSS code for type button*/
@@ -577,7 +580,7 @@ select.typebutton option{
 }
 
 
-/* FILTER OPTIONS */
+/* -- FILTER OPTIONS -- */
 .filter-option {
 	float: left;
 	width: 100%;
@@ -598,42 +601,34 @@ select.typebutton option{
 }
 
 
-/*Add and delete page button CSS*/
-
+/* -- ADD AND DELETE NEW PAGES BUTTONS -- */
 .adddelete-button{
-    border-radius: 15px;
-    cursor: pointer;
+    border-radius: 100%;
 }
 
 .plusminus-iconimg{
     width: 100%;
     display: block;
-
-}
-
-/*Add and delete page button end*/
-
-
-
-/*Buttons with text and icon css*/
-
-.text-icon{
-    font-size: 20px;
 }
 
 
-.texticon-button{
-    background-color: transparent;
-    border:none;
-    display: inline-block;
+/*	-- SAVE, DELETE & CANCEL BUTTONS -- */
+.texticon-button {
+	position: relative;
+	padding-right: 49px; /* 40px image width + 5px margin*/
+}
+
+.texticon-button span {
+	font-size: 200%;
 }
 
 .texticon-iconimg{
-    width: 100%;
-    margin-bottom: -12px;
+	position: absolute;
+	top: calc(50% - 20px);
+	right: 0;
+    width: 40px;
+    height: 40px;
 }
-
-/*Buttons with text and icon css end*/
 
 
 /* -- FOLDER OVERVIEW BUTTON -- */
@@ -652,18 +647,9 @@ select.typebutton option{
 }
 
 
-/*Here starts CSS code for filter by button*/
+/* -- FILTER BUTTON -- */
 .filterbutton {
 	padding-right: 52px;
-	border: none;
-	border-radius: 1000px;
-	background-color: #fff;
-	text-align: center;
-	cursor: pointer;
-}
-
-.filterbutton span{
-    color: #000;
 }
 
 .filterbutton img {
@@ -782,65 +768,71 @@ select.typebutton option{
 	background-color: #fff;
 	border-color: #000;
 	border-radius: 12px;
-
 	cursor: pointer;
 	display: block;
 	float: right;
 }
+
 .quantitybutton span{
     float: left;
     color: #000;
     font-size: 19px;
     margin-left: 7px;
 }
-/*Here starts code for prevoíous button in editor*/
+
+
+/* -- PREVIOUS BUTTON -- */
 .previousbutton{
-	background-color: #fff;
-	border: none;
-	border-radius: 12px;
-	width: 100px;
-	cursor: pointer;
-	display: block;
+	min-width: 135px;
+	padding-left: 42px; /* 17px from padding, 20px from image and 5px margin from image to span */
 }
+
 .previousbutton span{
-    color: #000;
-    font-size: 10px;
-    margin-right: 6px;
 	float: right;
 }
-.previousbutton img{
-	margin: 6px auto;
+
+.previousbutton img {
+	position: absolute;
+	top: calc(50% - 10px);
+	left: 17px;
+	height: 20px;
+	width: 20px;
 }
-/*Here starts code for next button in editor*/
-.nextbutton{
-	background-color: #fff;
-	border: none;
-	border-radius: 12px;
-	width: 100px;
-	cursor: pointer;
-	display: block;
+
+.previousbutton.disabled {
+	background-color: #777;
 }
+
+/* -- NEXT BUTTON -- */
+.nextbutton {
+	min-width: 135px;
+	padding-right: 42px; /* 17px from padding, 20px from image and 5px margin from image to span */
+}
+
 .nextbutton span{
-    color: #000;
-    font-size: 10px;
+	float: left;
 }
+
 .nextbutton img{
-	margin: 6px auto;
+	position: absolute;
+	top: calc(50% - 10px);
+	right: 17px;
+	height: 20px;
+	width: 20px;
 }
-/*Here starts code for upload image in editor*/
-.uploadimagebutton{
-	min-height: 37px; /* Too small on small screens */
-	background-color: #fff;
-	border: none;
-	border-radius: 12px;
-	width: 120px;
+
+.nextbutton.disabled {
+	background-color: #777;
+}
+
+
+/* -- UPLOAD IMAGE BUTTON -- */
+.uploadimagebutton {
+	padding-right: 42px;
 	cursor: pointer;
-	display: block;
 }
-.uploadimagebutton span{
-	color: #000;
-    font-size: 12px;
-}
+
+
 /*Here starts code for uplad template button*/
 .upladtemplatebutton{
 	min-height: 37px; /* Too small on mobile and tablet */
@@ -2538,8 +2530,8 @@ header .wrapper {
 	clear: right;
 	display: block;
 	margin-bottom: 5px;
-	margin-left: 2em;
-	text-indent: -2em; /* A negative indent together with a positive margin with opisitite value, can imitate outdents. */
+	margin-left: 1.5em;
+	text-indent: -1.5em; /* A negative indent together with a positive margin with opisitite value, can imitate outdents. */
 	color: #000;
 	word-break: break-word;
 }

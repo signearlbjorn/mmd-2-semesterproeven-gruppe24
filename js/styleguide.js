@@ -581,38 +581,7 @@ function openWidowSize(elem) {
 } 
 
 
-//Pop up JS start
-
-
-function savedAlert() {
- alert("Report saved"); 
-}
-
-function closeEditor() {
-  let txt;
-  if (confirm("Are you sure you want to close?")) {
-    txt = "Editor closed";
-  } else{
-      txt = null
-  }
-  document.getElementById("closeconfirm").innerHTML = txt;
-}
-
-
-function deleteReport() {
-  let txt;
-  if (confirm("Are you sure you want to delete this report?")) {
-    txt = "Report deleted";
-  } else{
-      txt = null
-  }
-  document.getElementById("deleteconfirm").innerHTML = txt;
-}
-
-//pop up js slut
-
 //List search/filter funktion
-
 function search_report() { 
     let input = document.getElementById('myInput').value 
     input=input.toLowerCase(); 
@@ -627,5 +596,36 @@ function search_report() {
              
         } 
     } 
+	console.log("Search complete"); 
 } 
-console.log("Search complete"); 
+
+// -- UPLOAD IMAGES --
+let vallidImageFormats = ['webp', 'svg', 'png', 'jpg', 'jpeg', 'jfif', 'pjpeg', 'pjp', 'ico', 'cur', 'gif', 'bmp'];
+let uploadImage = document.getElementsByName("upload-image");
+
+for(let i = 0; i < uploadImage.length; i++) {
+	uploadImage[i].addEventListener("change", function(){validateImaage(uploadImage[i])});
+}
+
+function validateImaage(input){
+	let extentension = input.value;
+	extentension = extentension.split(".");
+	if(extentension.length-1 >= 0){
+		extentension = extentension[extentension.length-1];
+	} else {
+		alert("File extension missing. Please upload a valid file.");
+		return(false);
+	}
+	if((vallidImageFormats.indexOf(extentension) > -1)) { // Inpired by James and Black on https://stackoverflow.com/questions/6116474/how-to-find-if-an-array-contains-a-specific-string-in-javascript-jquery
+		alert("Valid format");
+		// Ajax add image upload to graph tab
+		// ToDo
+		return(true);
+	} else{
+		alert("Invalid format. Removing image.");
+		input.value = "";
+		//console.log(input.value);
+		return(false);
+	}
+	//console.log((vallidImageFormats.indexOf(extentension) > -1));
+}
