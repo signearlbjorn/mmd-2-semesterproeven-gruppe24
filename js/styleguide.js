@@ -622,10 +622,54 @@ function validateImaage(input){
 		// ToDo
 		return(true);
 	} else{
-		alert("Invalid format. Removing image.");
+		let validFormatsString = vallidImageFormats.join(' | ');
+		alert("Invalid format. Removing image.\nValid formats:\n" + validFormatsString);
 		input.value = "";
 		//console.log(input.value);
 		return(false);
 	}
 	//console.log((vallidImageFormats.indexOf(extentension) > -1));
+}
+
+
+// -- UPLOAD Template --
+let vallidTemplateFormats = ['html', 'htm'];
+let uploadTemplate = document.getElementsByName("upload-template");
+
+for(let i = 0; i < uploadTemplate.length; i++) {
+	uploadTemplate[i].addEventListener("change", function(){validateTemplate(uploadTemplate[i])});
+}
+
+function validateTemplate(input){
+	let extentension = input.value;
+	extentension = extentension.split(".");
+	if(extentension.length-1 >= 0){
+		extentension = extentension[extentension.length-1];
+	} else {
+		alert("File extension missing. Please upload a valid file.");
+		return(false);
+	}
+	if((vallidTemplateFormats.indexOf(extentension) > -1)) { // Inpired by James and Black on https://stackoverflow.com/questions/6116474/how-to-find-if-an-array-contains-a-specific-string-in-javascript-jquery
+		alert("Valid format");
+		// Ajax add template upload to template tab
+		// ToDo
+		return(true);
+	} else{
+		let validFormatsString = vallidTemplateFormats.join(' | ');
+		alert("Invalid format. Removing content.\nValid formats:\n" + validFormatsString);
+		input.value = "";
+		//console.log(input.value);
+		return(false);
+	}
+}
+
+// -- HELP BUTTON --
+let help = document.getElementsByClassName("help");
+
+for(let i = 0; i < help.length; i++) {
+	help[i].addEventListener("click", function(){helpTextDisplay(help[i].title)});
+}
+
+function helpTextDisplay(text) {
+	alert(text);
 }

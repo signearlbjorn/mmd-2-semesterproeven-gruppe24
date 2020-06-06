@@ -14,7 +14,7 @@ body {
 }
 
 /* --- ATOMS --- */
-*{
+* {
 	margin: 0;
 	padding: 0;
 	font-family: Arial, Helvetica, "Helvetica Neue", sans-serif; /* Defination af fonte: Første prioritet Arial, så Helvetica, Helvetica Neue og til sidst en browser valgt font med uden serif. */
@@ -185,6 +185,10 @@ button {
 	background-color: #FFF;
 }
 
+.round-corners b {
+	font-size: 100%;
+}
+
 .rounded-corners {
 	position: relative;
 	min-height: 1px;
@@ -194,6 +198,10 @@ button {
 	border: none;
 	font-size: 140%;
 	background-color: #FFF;
+}
+
+.rounded-corners b {
+	font-size: 100%;
 }
 
 .button-g{
@@ -246,6 +254,20 @@ button {
     background-color: #cccccc;
 }
 
+.button-n{
+    color: #000;
+    background-color: #D3D3D3;
+	border: solid 1px #6F6F6F;
+}
+
+.button-n:hover {
+	background-color: #d7d7d7;
+}
+
+.button-n:active {
+    background-color: #bdbdbd;
+}
+
 .buttongr {
 	position: relative;
 	width: 66px;
@@ -268,6 +290,61 @@ button {
 	top: calc(50% - 30px);
 	left: calc(50% - 30px);
     width: 90%;
+}
+
+/* - INPUT - */
+input {
+	float: left;
+}
+input.button-g:hover {
+	background-color: #00CD00;
+}
+
+input.button-g:active {
+	background-color: #00b800;
+}
+
+input.button-b:hover {
+	background-color: #5071A3;
+}
+
+input.button-b:active {
+	background-color: #486592;
+}
+
+input.button-r:hover {
+	background-color: #E4342B;
+}
+
+input.button-r:active {
+	background-color: #cd2e26;
+}
+
+input.button-w:hover {
+	background-color: #fff;
+}
+
+input.button-w:active {
+    background-color: #cccccc;
+}
+
+.text-input {
+	float: left;
+}
+
+.text-input span {
+	float: left;
+	max-width: 100%;
+	margin-right: 5px;
+	font-size: 142.85%;
+	overflow: hidden;
+}
+
+.text-input input {
+	float: left;
+	width: auto;
+	max-width: 100%;
+	font-size: 142.85%;
 }
 
 
@@ -828,11 +905,16 @@ select.typebutton option{
 
 
 /* -- UPLOAD IMAGE BUTTON -- */
-.uploadimagebutton {
+.upload-button {
 	padding-right: 42px;
 	cursor: pointer;
 }
 
+
+/* -- INPUTS -- */
+.editor-tab-input {
+	width: 50%;
+}
 
 /*Here starts code for uplad template button*/
 .upladtemplatebutton{

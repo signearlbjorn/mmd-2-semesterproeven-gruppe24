@@ -710,6 +710,60 @@
 			<p class="info">Neutral eller teritær handling handling.</p>
 		</div>
 	</article>
+	<article id="button-n">
+		<div class="wrapper">
+			<h4 class="styleguide-title">button-n</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+                <button type="button" class="button-n rounded-corners help" title="Explaining text">Help<b>?</b></button>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!-- HTML -->
+                    <td class="code">
+						<button type="button" class="button-n rounded-corners" title="Explaining text">Help?</button>
+                    </td>
+					<!-- CSS -->
+					<td class="code">
+						.button-n{
+							color: #000;
+							background-color: #D3D3D3;
+							border: solid 1px #6F6F6F;
+						}
+
+						.button-n:hover {
+							background-color: #d7d7d7;
+						}
+
+						.button-n:active {
+							background-color: #bdbdbd;
+						}
+                    </td>
+					<td class="code">
+						// -- HELP BUTTON --
+						let help = document.getElementsByClassName("help");
+
+						for(let i = 0; i < help.length; i++) {
+							help[i].addEventListener("click", function(){helpTextDisplay(help[i].title)});
+						}
+
+						function helpTextDisplay(text) {
+							alert(text);
+						}
+					</td>
+				</tr>
+			</table>
+			<p class="info">Neutral eller teritær handling handling.</p>
+		</div>
+	</article>
 	<article id="text-button-editor">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Text button in editor</h4>
@@ -2047,10 +2101,10 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<label class="uploadimagebutton rounded-corners button-w" title="Upload image to Graph tab">
+				<label class="upload-button rounded-corners button-w" title="Upload image to Graph tab">
 					<span>Upload image</span>
 					<img class="settingsmenuicon" src="img/icons/image.svg" alt="arrowright-icon">
-					<input type="file" class="uploadimagebutton rounded-corners button-w hidden" name="upload-image">
+					<input type="file" class="rounded-corners button-w hidden" name="upload-image">
 				</label>
 			</div>
 		</div>
@@ -2071,7 +2125,7 @@
 					</td>
 					<td class="code">
 						/* -- UPLOAD IMAGE BUTTON -- */
-						.uploadimagebutton {
+						.upload-button {
 							padding-right: 42px;
 							cursor: pointer;
 						}
@@ -2112,165 +2166,6 @@
 			</table>
 		</div>
 	</article>
-	<div class="title-area">
-		<div class="wrapper">
-			<h3 class="styleguide-title">Selects</h3>
-		</div>
-	</div>
-	<article id="sort">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Sort</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<label class="select-label" title="Select what to sort reports by">
-					<span class="select-span">Sort by</span>
-					<div class="select-wrapper">
-						<select name="sort-reports" class="sort-by-select select">
-							<option value="name-az" selected>Name a-z</option>
-							<option value="name-za">Name z-a</option>
-							<option value="creation-first">Latest creation</option>
-							<option value="creation-last">Last creation</option>
-							<option value="change-first">Latest change</option>
-							<option value="change-last">Last change</option>
-							<option value="id-acending">Acending ID</option>
-							<option value="id-decending">Decending ID </option>
-							<option value="group-az">Group a-z</option>
-							<option value="group-za">Group z-a</option>
-						</select>
-					</div>
-				</label>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="overviewmolekyler">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<!--HTML-->
-					<td class="code">
-						<label class="select-label" title="Select what to sort reports by">
-							<span class="select-span">Sort by</span>
-							<div class="select-wrapper">
-								<select name="sort-reports" class="sort-by-select select">
-									<option value="name-az" selected>Name a-z</option>
-									<option value="name-za">Name z-a</option>
-									<option value="creation-first">Latest creation</option>
-									<option value="creation-last">Last creation</option>
-									<option value="change-first">Latest change</option>
-									<option value="change-last">Last change</option>
-									<option value="id-acending">Acending ID</option>
-									<option value="id-decending">Decending ID </option>
-									<option value="group-az">Group a-z</option>
-									<option value="group-za">Group z-a</option>
-								</select>
-							</div>
-						</label>
-					</td>
-					<!--CSS-->
-					<td class="code">
-						/* -- SELECT --*/
-						.select-label {
-							position: relative;
-							float: left;
-							overflow: hidden;
-							cursor: pointer;
-						}
-
-						.select-span {
-							float: left;
-							height: 37px;
-							margin-right: 12px;
-							font-size: 142.85%;
-							line-height: 37px;
-							color: #000;
-						}
-
-						@media (min-width:3200px) {
-							.select-span {
-								font-size: 32px;
-								line-height: 37px;
-							}
-						}
-
-						.select {
-							display: block;
-							padding-left: 10px;
-							padding-right: 28px;
-							border-radius: 19px;
-							font-size: 16px;
-							color: #7C7C7C;
-							font-style: italic;
-							-webkit-appearance: none;
-							-moz-appearance: none;
-							text-overflow: '';
-							border-color: #6F6F6F;
-							background-color: #fff;
-							cursor: pointer;
-						}
-
-						.select option{
-							font-style: normal;
-						}
-
-						@media (min-width:786px) {
-							.select {
-								font-size: 100%;
-							}
-						}
-
-						.select-wrapper {
-							position: relative;
-						}
-
-						.select-wrapper:before {
-							content: "";
-							position: absolute;
-							top: calc(50% - 10px);
-							right: 10px;
-							width: 19px;
-							height: 13px;
-							background-image: url("../img/icons/chevron-down.svg");
-							background-repeat: no-repeat;
-							background-size: cover;
-						}
-
-						.sort-by-select {
-							float: right;
-							width: 205px;
-							height: 37px;
-							line-height: 37px;
-						}
-
-						@media (min-width:786px) {
-							.sort-by-select {
-								font-size: 15px;
-							}
-						}
-
-						@media (min-width:1920px) {
-							.sort-by-select {
-								font-size: 22px;
-							}
-						}
-					</td>
-					<!--JavaScript-->
-					<td class="code">
-						// Sort reports
-						// ToDo
-					</td>
-				</tr>
-			</table>
-		</div>
-	</article>
-	<div class="title-area">
-		<div class="wrapper">
-			<h3 class="styleguide-title">Selects</h3>
-		</div>
-	</div>
 	<article id="burgerMenuKnap">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Burger menu knap</h4>
@@ -2342,60 +2237,17 @@
 			</table>
 		</div>
 	</article>
-	<article id="chevron-right">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Chevron right</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<button type="button" class="settingbutton">
-					<img class="settingsicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
-				</button>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="table-ref">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<td class="code">
-						<button type="button" class="settingbutton">
-							<img class="settingsicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
-						</button>
-					</td>
-					<td class="code">
-						.nextbutton{
-							background-color: #fff;
-							border: none;
-							border-radius: 12px;
-							width: 100px;
-							cursor: pointer;
-							display: block;
-						}
-						.nextbutton span{
-							color: #000;
-							font-size: 14px;
-							margin-left: 16px;
-						}
-					</td>
-					<td class="empty"></td>
-                </tr>
-			</table>
-		</div>
-	</article>
 	<article id="upload-template">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Upload template</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" class="upladtemplatebutton">
+				<label class="upload-button rounded-corners button-w" title="Upload image to Graph tab">
 					<span>Upload template</span>
-					<img class="settingsicon" src="img/icons/upload.svg" alt="settings-icon">
-				</button>
+					<img class="settingsmenuicon" src="img/icons/image.svg" alt="arrowright-icon">
+					<input type="file" class="rounded-corners button-w hidden" name="upload-template">
+				</label>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -2432,189 +2284,42 @@
 							width:15px;
 						}
 					</td>
-					<td class="empty"></td>
-                </tr>
-			</table>
-		</div>
-	</article>
-	<article id="help-knap">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Help knap</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<button type="button" class="helpbutton">
-					<span>Help</span>
-					<img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
-				</button>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="table-ref">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
 					<td class="code">
-						<button type="button" class="helpbutton">
-							<span>Help</span>
-							<img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
-						</button>
-					</td>
-					<td class="code">
-						.helpbutton{
-							min-height: 37px; /* Too small on small screens */
-							background-color: #D3D3D3;
-							border: none;
-							border-radius: 12px;
-							width: 50px;
-							cursor: pointer;
-							display: block;
-						}
-						.helpbutton span{
-						    color: #000;
-						    font-size: 10px;
-							margin-left: 7px;
-							float: left;
-						}
-						.helpbutton img{
-							width:10px;
-							float: right;
-							margin: 9px 9px 0 0;
-						}
-					</td>
-					<td class="empty"></td>
-                </tr>
-			</table>
-		</div>
-	</article>
-	<!--Knapper til text i editor-->
-	<article id="size-knap">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Size knap</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<div class="texteditdiv">
-					Size
-					<button class="texteditbutton">
-						<span>Choose..</span>
-						<img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-					</button>
-				</div>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="table-ref">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<td class="code">
-						<div class="texteditdiv">
-							Size
-							<button class="texteditbutton">
-								<span>Choose..</span>
-								<img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-							</button>
-						</div>
-					</td>
-					<td class="code">
-						.texteditdiv{
-							float: left;
-							font-size: 20px;
-						}
-						.texteditdiv img{
-							float: right;
-						}
-						.texteditbutton{
-							background-color: #fff;
-							border-color: #000;
-							border-radius: 12px;
-							width: 200px;
-							cursor: pointer;
-							display: block;
-							float: right;
-						}
-						.texteditbutton span{
-							float: left;
-							color: #000;
-							font-size: 19px;
-							margin-left: 7px;
-						}
-					</td>
-					<td class="empty"></td>
-                </tr>
-			</table>
-		</div>
-	</article>
-	<article id="id">
-		<div class="wrapper">
-			<h4 class="styleguide-title">SnippetTittle</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<div class="texteditdiv">
-					Weight
-					<button class="texteditbutton">
-						<span>Choose..</span>
-						<img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-					</button>
-				</div>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="table-ref">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<td class="code">
-						<div class="texteditdiv">
-							Weight
-							<button class="texteditbutton">
-								<span>Choose..</span>
-								<img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-							</button>
-						</div>
-					</td>
-					<td class="code">
-						.texteditdiv{
-							float: left;
-							font-size: 20px;
-						}
-						.texteditdiv img{
-							float: right;
-						}
-						.texteditbutton{
-							background-color: #fff;
-							border-color: #000;
-							border-radius: 12px;
-							width: 200px;
-							cursor: pointer;
-							display: block;
-							float: right;
-						}
-						.texteditbutton span{
-							float: left;
-							color: #000;
-							font-size: 19px;
-							margin-left: 7px;
-						}
-					</td>
-					<td class="empty"></td>
-                </tr>
-			</table>
-		</div>
-	</article>
-	<!--Knapper til pop-up-->
+						// -- UPLOAD Template --
+						let vallidTemplateFormats = ['html', 'htm'];
+						let uploadTemplate = document.getElementsByName("upload-template");
 
+						for(let i = 0; i < uploadTemplate.length; i++) {
+							uploadTemplate[i].addEventListener("change", function(){validateTemplate(uploadTemplate[i])});
+						}
+
+						function validateTemplate(input){
+							let extentension = input.value;
+							extentension = extentension.split(".");
+							if(extentension.length-1 >= 0){
+								extentension = extentension[extentension.length-1];
+							} else {
+								alert("File extension missing. Please upload a valid file.");
+								return(false);
+							}
+							if((vallidTemplateFormats.indexOf(extentension) > -1)) { // Inpired by James and Black on https://stackoverflow.com/questions/6116474/how-to-find-if-an-array-contains-a-specific-string-in-javascript-jquery
+								alert("Valid format");
+								// Ajax add template upload to template tab
+								// ToDo
+								return(true);
+							} else{
+								let validFormatsString = vallidTemplateFormats.join(' | ');
+								alert("Invalid format. Removing content.\nValid formats:\n" + validFormatsString);
+								input.value = "";
+								//console.log(input.value);
+								return(false);
+							}
+						}
+					</td>
+                </tr>
+			</table>
+		</div>
+	</article>
 	<!--Knapper til dropdown tanhjul menu-->
 	<article id="edit-knap">
 		<div class="wrapper">
@@ -3025,6 +2730,330 @@
 						}
 					</td>
 					<td class="empty"></td>
+                </tr>
+			</table>
+		</div>
+	</article>
+	<div class="title-area">
+		<div class="wrapper">
+			<h3 class="styleguide-title">Selects</h3>
+		</div>
+	</div>
+	<article id="sort">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Sort</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<label class="select-label" title="Select what to sort reports by">
+					<span class="select-span">Sort by</span>
+					<div class="select-wrapper">
+						<select name="sort-reports" class="sort-by-select select">
+							<option value="name-az" selected>Name a-z</option>
+							<option value="name-za">Name z-a</option>
+							<option value="creation-first">Latest creation</option>
+							<option value="creation-last">Last creation</option>
+							<option value="change-first">Latest change</option>
+							<option value="change-last">Last change</option>
+							<option value="id-acending">Acending ID</option>
+							<option value="id-decending">Decending ID </option>
+							<option value="group-az">Group a-z</option>
+							<option value="group-za">Group z-a</option>
+						</select>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML-->
+					<td class="code">
+						<label class="select-label" title="Select what to sort reports by">
+							<span class="select-span">Sort by</span>
+							<div class="select-wrapper">
+								<select name="sort-reports" class="sort-by-select select">
+									<option value="name-az" selected>Name a-z</option>
+									<option value="name-za">Name z-a</option>
+									<option value="creation-first">Latest creation</option>
+									<option value="creation-last">Last creation</option>
+									<option value="change-first">Latest change</option>
+									<option value="change-last">Last change</option>
+									<option value="id-acending">Acending ID</option>
+									<option value="id-decending">Decending ID </option>
+									<option value="group-az">Group a-z</option>
+									<option value="group-za">Group z-a</option>
+								</select>
+							</div>
+						</label>
+					</td>
+					<!--CSS-->
+					<td class="code">
+						/* -- SELECT --*/
+						.select-label {
+							position: relative;
+							float: left;
+							overflow: hidden;
+							cursor: pointer;
+						}
+
+						.select-span {
+							float: left;
+							height: 37px;
+							margin-right: 12px;
+							font-size: 142.85%;
+							line-height: 37px;
+							color: #000;
+						}
+
+						@media (min-width:3200px) {
+							.select-span {
+								font-size: 32px;
+								line-height: 37px;
+							}
+						}
+
+						.select {
+							display: block;
+							padding-left: 10px;
+							padding-right: 28px;
+							border-radius: 19px;
+							font-size: 16px;
+							color: #7C7C7C;
+							font-style: italic;
+							-webkit-appearance: none;
+							-moz-appearance: none;
+							text-overflow: '';
+							border-color: #6F6F6F;
+							background-color: #fff;
+							cursor: pointer;
+						}
+
+						.select option{
+							font-style: normal;
+						}
+
+						@media (min-width:786px) {
+							.select {
+								font-size: 100%;
+							}
+						}
+
+						.select-wrapper {
+							position: relative;
+						}
+
+						.select-wrapper:before {
+							content: "";
+							position: absolute;
+							top: calc(50% - 10px);
+							right: 10px;
+							width: 19px;
+							height: 13px;
+							background-image: url("../img/icons/chevron-down.svg");
+							background-repeat: no-repeat;
+							background-size: cover;
+						}
+
+						.sort-by-select {
+							float: right;
+							width: 205px;
+							height: 37px;
+							line-height: 37px;
+						}
+
+						@media (min-width:786px) {
+							.sort-by-select {
+								font-size: 15px;
+							}
+						}
+
+						@media (min-width:1920px) {
+							.sort-by-select {
+								font-size: 22px;
+							}
+						}
+					</td>
+					<!--JavaScript-->
+					<td class="code">
+						// Sort reports
+						// ToDo
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<article id="weight-options">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Weight valg</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<label class="select-label editor-tab-input" title="Select text weight">
+					<span class="select-span">Weight</span>
+					<div class="select-wrapper">
+						<select name="editor-text-weight" class="sort-by-select select">
+							<option value="normal" selected>Normal</option>
+							<option value="bold">Bold</option>
+							<option value="thin">thin</option>
+						</select>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<label class="select-label editor-tab-input" title="Select text weight">
+							<span class="select-span">Weight</span>
+							<div class="select-wrapper">
+								<select name="editor-text-weight" class="sort-by-select select">
+									<option value="normal" selected>Normal</option>
+									<option value="bold">Bold</option>
+									<option value="thin">thin</option>
+								</select>
+							</div>
+						</label>
+					</td>
+					<td class="code">
+						.editor-tab-input {
+							width: 50%;
+						}
+						
+						/* -- SELECT --*/
+						.select-label {
+							position: relative;
+							float: left;
+							overflow: hidden;
+							cursor: pointer;
+						}
+
+						.select-span {
+							float: left;
+							height: 37px;
+							margin-right: 12px;
+							font-size: 142.85%;
+							line-height: 37px;
+							color: #000;
+						}
+
+						@media (min-width:3200px) {
+							.select-span {
+								font-size: 32px;
+								line-height: 37px;
+							}
+						}
+
+						.select {
+							display: block;
+							padding-left: 10px;
+							padding-right: 28px;
+							border-radius: 19px;
+							font-size: 16px;
+							color: #7C7C7C;
+							font-style: italic;
+							-webkit-appearance: none;
+							-moz-appearance: none;
+							text-overflow: '';
+							border-color: #6F6F6F;
+							background-color: #fff;
+							cursor: pointer;
+						}
+
+						.select option{
+							font-style: normal;
+						}
+
+						@media (min-width:786px) {
+							.select {
+								font-size: 100%;
+							}
+						}
+
+						.select-wrapper {
+							position: relative;
+						}
+
+						.select-wrapper:before {
+							content: "";
+							position: absolute;
+							top: calc(50% - 10px);
+							right: 10px;
+							width: 19px;
+							height: 13px;
+							background-image: url("../img/icons/chevron-down.svg");
+							background-repeat: no-repeat;
+							background-size: cover;
+						}
+
+						.sort-by-select {
+							float: right;
+							width: 205px;
+							height: 37px;
+							line-height: 37px;
+						}
+
+						@media (min-width:786px) {
+							.sort-by-select {
+								font-size: 15px;
+							}
+						}
+
+						@media (min-width:1920px) {
+							.sort-by-select {
+								font-size: 22px;
+							}
+						}
+					</td>
+                </tr>
+			</table>
+		</div>
+	</article>
+	<div class="title-area">
+		<div class="wrapper">
+			<h3 class="styleguide-title">Inputs</h3>
+		</div>
+	</div>
+	<article id="size-options">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Size valg</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<label class="text-input editor-tab-input" title="Choose size for text">
+					<span>Size</span>
+					<input type="text" name="editor-text-size" class="round-corners button-w" placeholder="Input size in pt">
+				</label>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<label class="text-input editor-tab-input" title="Choose size for text">
+							<span>Size</span>
+							<input type="text" name="editor-text-size" class="round-corners button-w" placeholder="Input size in pt">
+						</label>
+					</td>
+					<td class="code">
+						.editor-tab-input {
+							width: 50%;
+						}
+					</td>
                 </tr>
 			</table>
 		</div>
