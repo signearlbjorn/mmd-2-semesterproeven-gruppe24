@@ -714,7 +714,8 @@ select.typebutton option{
 	display: block;
 	width: 22px;
 	height: 24px;
-	background: url('../img/icons/calendar.svg');
+	background: url('../img/icons/calendargreen.svg');
+	/*background: url('../img/icons/calendar.svg');*/
 }
 
 .date-range-input:after {
