@@ -3123,417 +3123,7 @@
 			</table>
 		</div>
 	</article>
-	<div class="title-area">
-		<div class="wrapper">
-			<h3 class="styleguide-title">Inputs</h3>
-		</div>
-	</div>
-	<article id="size-options">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Size valg</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<label class="text-input editor-tab-input" title="Choose size for text">
-					<span>Size</span>
-					<input type="text" name="editor-text-size" class="round-corners button-w" placeholder="Input size in pt">
-				</label>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="table-ref">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-				</tr>
-				<tr class="row-two">
-					<td class="code">
-						<label class="text-input editor-tab-input" title="Choose size for text">
-							<span>Size</span>
-							<input type="text" name="editor-text-size" class="round-corners button-w" placeholder="Input size in pt">
-						</label>
-					</td>
-					<td class="code">
-						.editor-tab-input {
-							width: 50%;
-						}
-					</td>
-                </tr>
-			</table>
-		</div>
-	</article>
-    <!-- molekyle tabel for switch knapper -->
-	<div class="title-area">
-		<div class="wrapper">
-			<h3 id="switchknapper" class="styleguide-title">Switch Knapper</h3>
-		</div>
-	</div>
-	<article id="vertical-horisontal-switch">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Vertical/Horizontal Switch</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<div class="switch">
-					<input type="radio" class="switch-input" name="view3" value="week3" id="indsæt1" checked>
-					<label for="indsæt1" class="switch-label switch-label-off">Vertical</label>
-					<input type="radio" class="switch-input" name="view3" id="indsæt2">
-					<label for="indsæt2" class="switch-label switch-label-on">Horizontal</label>
-					<span class="switch-selection"></span>
-				</div>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="overviewmolekyler">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<td class="code">
-						<div class="switch">
-							<input type="radio" class="switch-input" name="view3" value="week3" id="indsæt1" checked>
-							<label for="indsæt1" class="switch-label switch-label-off">Vertical</label>
-							<input type="radio" class="switch-input" name="view3" id="indsæt2">
-							<label for="indsæt2" class="switch-label switch-label-on">Horizontal</label>
-							<span class="switch-selection"></span>
-						</div>
-					</td>
-					<td class="code">
-						.switch {
-							position: relative;
-							margin: 20px auto;
-							height: 26px;
-							width: 120px;
-							background: white;
-							border-radius: 15px;
-						}
-
-						.switch-label {
-							position: relative;
-							z-index: 2;
-							float: left;
-							width: 58px;
-							line-height: 26px;
-							font-size: 11px;
-							color: black;
-							text-align: center;
-							cursor: pointer;
-						}
-						.switch-label:active {
-							font-weight: regular;
-						}
-
-						.switch-label-off {
-							padding-left: 2px;
-						}
-
-						.switch-label-on {
-							padding-right: 2px;
-						}
-
-						.switch-input {
-							display: none;
-						}
-
-						.switch-input:checked + .switch-label {
-							font-weight: regular;
-							color: black;
-						}
-
-						.switch-input:checked + .switch-label-on ~ .switch-selection {
-							left: 60px;
-						}
-
-						.switch-selection {
-							display: block;
-							position: absolute;
-							z-index: 1;
-							top: 2px;
-							left: 2px;
-							width: 58px;
-							height: 22px;
-							background: #00CD00;
-							border-radius: 15px;
-						}
-					</td>
-					<td class="empty"></td>
-				</tr>
-			</table>
-		</div>
-	</article>
-    <!-- molekyle tabel for switch knapper- slut-->
-    <!-- molekyle tabel for MEGASWITCH-->
-	<article id="megaswitch">
-		<div class="wrapper">
-			<h4 class="styleguide-title">MEGASWITCH</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<div class="megaswitch">
-					<input type="radio" class="switch-input0" name="view4" id="a1" checked>
-					<label for="a1" class="switch-label0 switch-label-off0">A1</label>
-
-					<input type="radio" class="switch-input0" name="view4" id="a2">
-					<label for="a2" class="switch-label0 switch-label-on1">A2</label>
-
-					<input type="radio" class="switch-input0" name="view4" id="a3">
-					<label for="a3" class="switch-label0 switch-label-on2">A3</label>
-
-					<input type="radio" class="switch-input0" name="view4" id="a4">
-					<label for="a4" class="switch-label0 switch-label-on3">A4</label>
-
-					<span class="switch-selection0"></span>
-				</div>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="overviewmolekyler">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<td class="code">
-						<div class="megaswitch">
-							<input type="radio" class="switch-input0" name="view4" id="a1" checked>
-							<label for="a1" class="switch-label0 switch-label-off0">A1</label>
-
-							<input type="radio" class="switch-input0" name="view4" id="a2">
-							<label for="a2" class="switch-label0 switch-label-on1">A2</label>
-
-							<input type="radio" class="switch-input0" name="view4" id="a3">
-							<label for="a3" class="switch-label0 switch-label-on2">A3</label>
-
-							<input type="radio" class="switch-input0" name="view4" id="a4">
-							<label for="a4" class="switch-label0 switch-label-on3">A4</label>
-
-							<span class="switch-selection0"></span>
-						</div>
-					</td>
-					<td class="code">
-						.megaswitch {
-							position: relative;
-							height: 26px;
-							width: 240px;
-							background: white;
-							border-radius: 15px;
-						}
-						/*slut*/
-
-						/*style for labels*/
-						.switch-label0 {
-							position: relative;
-							z-index: 2;
-							float: left;
-							width: 58px;
-							line-height: 26px;
-							font-size: 11px;
-							color: black;
-							text-align: center;
-							cursor: pointer;
-						}
-						.switch-label0:active {
-							font-weight: regular;
-						}
-
-						.switch-label-off0 {
-							padding-left: 2px;
-						}
-
-						.switch-label-on0 {
-							padding-right: 2px;
-						}
-						/*slut*/
-
-						/*style for labels*/
-							.switch-input0 {
-							display: none;
-						}
-						/*slut*/
-
-						/*styling for hvor den runde grønne knap (.switch-selector) skal rykke sig hen alt efter hvilket hvilket label der bliver "checked" */
-						.switch-input0:checked + .switch-label0 {
-							font-weight: bold;
-							color: black;
-						}
-
-						.switch-input0:checked + .switch-label-on1 ~ .switch-selection0 {
-							left: 60px;
-						}
-
-						.switch-input0:checked + .switch-label-on2 ~ .switch-selection0 {
-							left: 120px;
-						}
-
-						.switch-input0:checked + .switch-label-on3 ~ .switch-selection0 {
-							left: 180px;
-						}
-						/*slut*/
-
-						/*style for den runde grønne knap der switcher fra højre til venstre*/
-						.switch-selection0 {
-							display: block;
-							position: absolute;
-							z-index: 1;
-							top: 2px;
-							left: 2px;
-							width: 58px;
-							height: 22px;
-							background: #00CD00;
-							border-radius: 15px;
-						}
-					</td>
-					<td class="empty"></td>
-				</tr>
-			</table>
-		</div>
-	</article>
-    <!-- molekyle tabel for MEGASWITCH - slut-->
-    <!-- molekyle tabel for 'søg'-->
-	<article id="soeg">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Søg</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-                <input type="text" class="searchInput"  placeholder="Search...">
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="overviewmolekyler">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<!-- HTML -->
-                    <td class="code">
-						<input type="text" class="searchInput"  placeholder="Search...">
-                    </td>
-					<!-- CSS -->
-					<td class="code">
-						.searchInput {
-							background-image: url('../img/icons/search.svg');
-							background-position: 10px 11px;
-							background-repeat: no-repeat;
-							width: 100%;
-							font-size: 16px;
-							padding: 10px 20px 5px 50px;
-							border: 1px solid #ddd;
-							border-radius: 10px;
-							box-sizing: border-box;
-                        }
-                    </td>
-					<!-- JavaScript -->
-					<td class="empty"></td>
-				</tr>
-			</table>
-		</div>
-	</article>
-	<!-- molekyle tabel for 'søg' - slut -->
-	<div class="title-area">
-		<div class="wrapper">
-			<h3 id="textinpytmolekyler" class="styleguide-title">Text inputs</h3>
-		</div>
-	</div>
-  <!-- molekyle tabel for 'email'-->
-	<article id="email-input">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Email-input knap</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<div class="frame">
-					<div class="type">
-						<span class="typetext">Email adress</span>
-						<button class="typebutton">
-							<span class="typebuttontext">example@email.com</span>
-							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="overviewmolekyler">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<!-- HTML -->
-					<td class="code">
-						<div class="frame">
-							<div class="type">
-								<span class="typetext">Email adress</span>
-								<button class="typebutton">
-									<span class="typebuttontext">example@email.com</span>
-									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-								</button>
-							</div>
-						</div>
-					</td>
-					<!-- CSS -->
-					<td class="code">
-						/*Here starts CSS code for type button*/
-						.frame {
-							float: left; /* Added float to display height right */
-							background-color: black;
-							width: 100%;
-							/* width: 400px; *//* Did not scale with parrent */
-						}
-
-						.type {
-							width: calc(100% - 10px); /* 100% width -10px margin */
-							margin-left: 5px;
-							margin-right: 5px; /* Margin added */
-						}
-
-						.typetext {
-							float: left; /* Added float to display height right */
-							color: white;
-							font-size: 110%; /* Must be larger on smaller screens */
-						}
-
-						.typebutton {
-							float: left; /* Added float to display height right */
-							width: 100%;
-							border-radius: 10px;
-							font-size: 110%; /* Must be larger on smaller screens */
-						}
-						
-						.typebuttontext {
-							float: left;
-							font-style: italic;
-							color: grey;
-							margin-left: 5px;
-							font-size: 110%;
-						}
-
-						.chevronicon {
-							float: right;
-							margin-top: 5px;
-						}
-
-						@media (min-width:1366){
-							.typetext, .typebutton, .typebuttontext {
-								font-size: 100%;
-							}
-						}
-					</td>
-					<!-- JavaScript -->
-					<td class="empty"></td>
-				</tr>
-			</table>
-		</div>
-	</article>
-	<!-- molekyle tabel for 'email-input' - slut -->
-	<!-- molekyle tabel for 'send with'-->
+	<!-- SEND WITH -->
 	<article id="send-with">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Send with</h4>
@@ -3625,177 +3215,6 @@
 			</table>
 		</div>
 	</article>
-	<!-- molekyle tabel for 'send with' - slut -->
-	<!-- molekyle tabel for 'time'-->
-	<article id="time">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Time</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<div class="frame">
-					<div class="type">
-						<span class="typetext">Time</span>
-						<button class="typebutton">
-							<span class="typebuttontext">00:00</span>
-							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-						</button>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="overviewmolekyler">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<!-- HTML -->
-					<td class="code">
-						<div class="frame">
-							<div class="type">
-								<span class="typetext">Time</span>
-								<button class="typebutton">
-									<span class="typebuttontext">00:00</span>
-									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-								</button>
-							</div>
-						</div>
-					</td>
-					<!-- CSS -->
-					<td class="code">
-						/*Here starts CSS code for type button*/
-						.frame {
-							float: left; /* Added float to display height right */
-							background-color: black;
-							width: 100%;
-							/* width: 400px; *//* Did not scale with parrent */
-						}
-
-						.type {
-							width: calc(100% - 10px); /* 100% width -10px margin */
-							margin-left: 5px;
-							margin-right: 5px; /* Margin added */
-						}
-
-						.typetext {
-							float: left; /* Added float to display height right */
-							color: white;
-							font-size: 110%; /* Must be larger on smaller screens */
-						}
-
-						.typebutton {
-							float: left; /* Added float to display height right */
-							width: 100%;
-							border-radius: 10px;
-							font-size: 110%; /* Must be larger on smaller screens */
-						}
-						
-						.typebuttontext {
-							float: left;
-							font-style: italic;
-							color: grey;
-							margin-left: 5px;
-							font-size: 110%;
-						}
-
-						.chevronicon {
-							float: right;
-							margin-top: 5px;
-						}
-
-						@media (min-width:1366){
-							.typetext, .typebutton, .typebuttontext {
-								font-size: 100%;
-							}
-						}
-					</td>
-					<!-- JavaScript -->
-					<td class="empty"></td>
-				</tr>
-			</table>
-		</div>
-	</article>
-	<!-- molekyle tabel for 'time' - slut -->
-	<!-- molekyle tabel for 'message'-->
-	<article id="message-textfield">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Message</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<div class="frame">
-					<div class="type">
-						<span class="typetext">Message</span>
-						<textarea rows="4" cols="50" name="comment" class="type-text-field" placeholder="Enter message here..."></textarea>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="overviewmolekyler">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<!-- HTML -->
-					<td class="code">
-						<div class="frame">
-							<div class="type">
-								<span class="typetext">Message</span>
-								<textarea rows="4" cols="50" name="comment" class="type-text-field" placeholder="Enter message here..."></textarea>
-							</div>
-						</div>
-					</td>
-					<!-- CSS -->
-					<td class="code">
-						.frame {
-							float: left; /* Added float to display height right */
-							background-color: black;
-							width: 100%;
-							/* width: 400px; *//* Did not scale with parrent */
-						}
-
-						.type {
-							width: calc(100% - 10px); /* 100% width -10px margin */
-							margin-left: 5px;
-							margin-right: 5px; /* Margin added */
-						}
-
-						.typetext {
-							float: left; /* Added float to display height right */
-							color: white;
-							font-size: 110%; /* Must be larger on smaller screens */
-						}
-
-						.type-text-field{
-							float: left;
-							width: 100%;
-							min-height: 165px;
-							padding: 5px;
-							border: solid 1px #707070;
-							border-radius: 6px;
-							resize: none;
-							box-sizing: border-box;
-						}
-
-						@media (min-width:1366){
-							.typetext, .typebutton, .typebuttontext {
-								font-size: 100%;
-							}
-						}
-					</td>
-					<!-- JavaScript -->
-					<td class="empty"></td>
-				</tr>
-			</table>
-		</div>
-	</article>
-	<!-- molekyle tabel for 'message' - slut -->
 	<article id="quantity">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Quanitity select</h4>
@@ -4031,6 +3450,575 @@
 						}
 					</td>
 					<!--JavaScript-->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<div class="title-area">
+		<div class="wrapper">
+			<h3 class="styleguide-title">Inputs</h3>
+		</div>
+	</div>
+	<article id="size-options">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Size valg</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<label class="text-input editor-tab-input" title="Choose size for text">
+					<span>Size</span>
+					<input type="text" name="editor-text-size" class="round-corners button-w" placeholder="Input size in pt">
+				</label>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="table-ref">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<label class="text-input editor-tab-input" title="Choose size for text">
+							<span>Size</span>
+							<input type="text" name="editor-text-size" class="round-corners button-w" placeholder="Input size in pt">
+						</label>
+					</td>
+					<td class="code">
+						.editor-tab-input {
+							width: 50%;
+						}
+					</td>
+                </tr>
+			</table>
+		</div>
+	</article>
+    <!-- SEARCH -->
+	<article id="soeg">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Søg</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+                <input type="text" class="searchInput"  placeholder="Search...">
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!-- HTML -->
+                    <td class="code">
+						<input type="text" class="searchInput"  placeholder="Search...">
+                    </td>
+					<!-- CSS -->
+					<td class="code">
+						.searchInput {
+							background-image: url('../img/icons/search.svg');
+							background-position: 10px 11px;
+							background-repeat: no-repeat;
+							width: 100%;
+							font-size: 16px;
+							padding: 10px 20px 5px 50px;
+							border: 1px solid #ddd;
+							border-radius: 10px;
+							box-sizing: border-box;
+                        }
+                    </td>
+					<!-- JavaScript -->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<!-- E-MAIL -->
+	<article id="email-input">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Email-input knap</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="frame">
+					<div class="type">
+						<span class="typetext">Email adress</span>
+						<button class="typebutton">
+							<span class="typebuttontext">example@email.com</span>
+							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!-- HTML -->
+					<td class="code">
+						<div class="frame">
+							<div class="type">
+								<span class="typetext">Email adress</span>
+								<button class="typebutton">
+									<span class="typebuttontext">example@email.com</span>
+									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+								</button>
+							</div>
+						</div>
+					</td>
+					<!-- CSS -->
+					<td class="code">
+						/*Here starts CSS code for type button*/
+						.frame {
+							float: left; /* Added float to display height right */
+							background-color: black;
+							width: 100%;
+							/* width: 400px; *//* Did not scale with parrent */
+						}
+
+						.type {
+							width: calc(100% - 10px); /* 100% width -10px margin */
+							margin-left: 5px;
+							margin-right: 5px; /* Margin added */
+						}
+
+						.typetext {
+							float: left; /* Added float to display height right */
+							color: white;
+							font-size: 110%; /* Must be larger on smaller screens */
+						}
+
+						.typebutton {
+							float: left; /* Added float to display height right */
+							width: 100%;
+							border-radius: 10px;
+							font-size: 110%; /* Must be larger on smaller screens */
+						}
+						
+						.typebuttontext {
+							float: left;
+							font-style: italic;
+							color: grey;
+							margin-left: 5px;
+							font-size: 110%;
+						}
+
+						.chevronicon {
+							float: right;
+							margin-top: 5px;
+						}
+
+						@media (min-width:1366){
+							.typetext, .typebutton, .typebuttontext {
+								font-size: 100%;
+							}
+						}
+					</td>
+					<!-- JavaScript -->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<!-- TIME -->
+	<article id="time">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Time</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="frame">
+					<div class="type">
+						<span class="typetext">Time</span>
+						<button class="typebutton">
+							<span class="typebuttontext">00:00</span>
+							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!-- HTML -->
+					<td class="code">
+						<div class="frame">
+							<div class="type">
+								<span class="typetext">Time</span>
+								<button class="typebutton">
+									<span class="typebuttontext">00:00</span>
+									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
+								</button>
+							</div>
+						</div>
+					</td>
+					<!-- CSS -->
+					<td class="code">
+						/*Here starts CSS code for type button*/
+						.frame {
+							float: left; /* Added float to display height right */
+							background-color: black;
+							width: 100%;
+							/* width: 400px; *//* Did not scale with parrent */
+						}
+
+						.type {
+							width: calc(100% - 10px); /* 100% width -10px margin */
+							margin-left: 5px;
+							margin-right: 5px; /* Margin added */
+						}
+
+						.typetext {
+							float: left; /* Added float to display height right */
+							color: white;
+							font-size: 110%; /* Must be larger on smaller screens */
+						}
+
+						.typebutton {
+							float: left; /* Added float to display height right */
+							width: 100%;
+							border-radius: 10px;
+							font-size: 110%; /* Must be larger on smaller screens */
+						}
+						
+						.typebuttontext {
+							float: left;
+							font-style: italic;
+							color: grey;
+							margin-left: 5px;
+							font-size: 110%;
+						}
+
+						.chevronicon {
+							float: right;
+							margin-top: 5px;
+						}
+
+						@media (min-width:1366){
+							.typetext, .typebutton, .typebuttontext {
+								font-size: 100%;
+							}
+						}
+					</td>
+					<!-- JavaScript -->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<!-- MESSAGE -->
+	<article id="message-textfield">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Message</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="frame">
+					<div class="type">
+						<span class="typetext">Message</span>
+						<textarea rows="4" cols="50" name="comment" class="type-text-field" placeholder="Enter message here..."></textarea>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!-- HTML -->
+					<td class="code">
+						<div class="frame">
+							<div class="type">
+								<span class="typetext">Message</span>
+								<textarea rows="4" cols="50" name="comment" class="type-text-field" placeholder="Enter message here..."></textarea>
+							</div>
+						</div>
+					</td>
+					<!-- CSS -->
+					<td class="code">
+						.frame {
+							float: left; /* Added float to display height right */
+							background-color: black;
+							width: 100%;
+							/* width: 400px; *//* Did not scale with parrent */
+						}
+
+						.type {
+							width: calc(100% - 10px); /* 100% width -10px margin */
+							margin-left: 5px;
+							margin-right: 5px; /* Margin added */
+						}
+
+						.typetext {
+							float: left; /* Added float to display height right */
+							color: white;
+							font-size: 110%; /* Must be larger on smaller screens */
+						}
+
+						.type-text-field{
+							float: left;
+							width: 100%;
+							min-height: 165px;
+							padding: 5px;
+							border: solid 1px #707070;
+							border-radius: 6px;
+							resize: none;
+							box-sizing: border-box;
+						}
+
+						@media (min-width:1366){
+							.typetext, .typebutton, .typebuttontext {
+								font-size: 100%;
+							}
+						}
+					</td>
+					<!-- JavaScript -->
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<div class="title-area">
+		<div class="wrapper">
+			<h3 id="switchknapper" class="styleguide-title">Switch Knapper</h3>
+		</div>
+	</div>
+    <!-- VERTICAL / HORISONTAL SWITCH -->
+	<article id="vertical-horisontal-switch">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Vertical/Horizontal Switch</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="switch">
+					<input type="radio" class="switch-input" name="view3" value="week3" id="indsæt1" checked>
+					<label for="indsæt1" class="switch-label switch-label-off">Vertical</label>
+					<input type="radio" class="switch-input" name="view3" id="indsæt2">
+					<label for="indsæt2" class="switch-label switch-label-on">Horizontal</label>
+					<span class="switch-selection"></span>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<div class="switch">
+							<input type="radio" class="switch-input" name="view3" value="week3" id="indsæt1" checked>
+							<label for="indsæt1" class="switch-label switch-label-off">Vertical</label>
+							<input type="radio" class="switch-input" name="view3" id="indsæt2">
+							<label for="indsæt2" class="switch-label switch-label-on">Horizontal</label>
+							<span class="switch-selection"></span>
+						</div>
+					</td>
+					<td class="code">
+						.switch {
+							position: relative;
+							margin: 20px auto;
+							height: 26px;
+							width: 120px;
+							background: white;
+							border-radius: 15px;
+						}
+
+						.switch-label {
+							position: relative;
+							z-index: 2;
+							float: left;
+							width: 58px;
+							line-height: 26px;
+							font-size: 11px;
+							color: black;
+							text-align: center;
+							cursor: pointer;
+						}
+						.switch-label:active {
+							font-weight: regular;
+						}
+
+						.switch-label-off {
+							padding-left: 2px;
+						}
+
+						.switch-label-on {
+							padding-right: 2px;
+						}
+
+						.switch-input {
+							display: none;
+						}
+
+						.switch-input:checked + .switch-label {
+							font-weight: regular;
+							color: black;
+						}
+
+						.switch-input:checked + .switch-label-on ~ .switch-selection {
+							left: 60px;
+						}
+
+						.switch-selection {
+							display: block;
+							position: absolute;
+							z-index: 1;
+							top: 2px;
+							left: 2px;
+							width: 58px;
+							height: 22px;
+							background: #00CD00;
+							border-radius: 15px;
+						}
+					</td>
+					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+    <!--  MEGASWITCH-->
+	<article id="megaswitch">
+		<div class="wrapper">
+			<h4 class="styleguide-title">MEGASWITCH</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="megaswitch">
+					<input type="radio" class="switch-input0" name="view4" id="a1" checked>
+					<label for="a1" class="switch-label0 switch-label-off0">A1</label>
+
+					<input type="radio" class="switch-input0" name="view4" id="a2">
+					<label for="a2" class="switch-label0 switch-label-on1">A2</label>
+
+					<input type="radio" class="switch-input0" name="view4" id="a3">
+					<label for="a3" class="switch-label0 switch-label-on2">A3</label>
+
+					<input type="radio" class="switch-input0" name="view4" id="a4">
+					<label for="a4" class="switch-label0 switch-label-on3">A4</label>
+
+					<span class="switch-selection0"></span>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<div class="megaswitch">
+							<input type="radio" class="switch-input0" name="view4" id="a1" checked>
+							<label for="a1" class="switch-label0 switch-label-off0">A1</label>
+
+							<input type="radio" class="switch-input0" name="view4" id="a2">
+							<label for="a2" class="switch-label0 switch-label-on1">A2</label>
+
+							<input type="radio" class="switch-input0" name="view4" id="a3">
+							<label for="a3" class="switch-label0 switch-label-on2">A3</label>
+
+							<input type="radio" class="switch-input0" name="view4" id="a4">
+							<label for="a4" class="switch-label0 switch-label-on3">A4</label>
+
+							<span class="switch-selection0"></span>
+						</div>
+					</td>
+					<td class="code">
+						.megaswitch {
+							position: relative;
+							height: 26px;
+							width: 240px;
+							background: white;
+							border-radius: 15px;
+						}
+						/*slut*/
+
+						/*style for labels*/
+						.switch-label0 {
+							position: relative;
+							z-index: 2;
+							float: left;
+							width: 58px;
+							line-height: 26px;
+							font-size: 11px;
+							color: black;
+							text-align: center;
+							cursor: pointer;
+						}
+						.switch-label0:active {
+							font-weight: regular;
+						}
+
+						.switch-label-off0 {
+							padding-left: 2px;
+						}
+
+						.switch-label-on0 {
+							padding-right: 2px;
+						}
+						/*slut*/
+
+						/*style for labels*/
+							.switch-input0 {
+							display: none;
+						}
+						/*slut*/
+
+						/*styling for hvor den runde grønne knap (.switch-selector) skal rykke sig hen alt efter hvilket hvilket label der bliver "checked" */
+						.switch-input0:checked + .switch-label0 {
+							font-weight: bold;
+							color: black;
+						}
+
+						.switch-input0:checked + .switch-label-on1 ~ .switch-selection0 {
+							left: 60px;
+						}
+
+						.switch-input0:checked + .switch-label-on2 ~ .switch-selection0 {
+							left: 120px;
+						}
+
+						.switch-input0:checked + .switch-label-on3 ~ .switch-selection0 {
+							left: 180px;
+						}
+						/*slut*/
+
+						/*style for den runde grønne knap der switcher fra højre til venstre*/
+						.switch-selection0 {
+							display: block;
+							position: absolute;
+							z-index: 1;
+							top: 2px;
+							left: 2px;
+							width: 58px;
+							height: 22px;
+							background: #00CD00;
+							border-radius: 15px;
+						}
+					</td>
 					<td class="empty"></td>
 				</tr>
 			</table>
