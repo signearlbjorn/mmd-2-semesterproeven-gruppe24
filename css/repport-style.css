@@ -351,7 +351,7 @@ input.button-w:active {
 /* - STYLEGUIDE DISABLED LINKS - */
 .disabled{
 	color: #777;
-	cursor: not-allowed;
+	cursor: not-allowed !important;
 }
 
 
@@ -442,7 +442,9 @@ input.button-w:active {
 	cursor: pointer;
 	background-color: transparent;
 }
-/*Here starts CSS code for settings menu*/
+
+
+/* -- SETTINGS MENU --*/
 .settingsmenu, .settingsmenu-dark {
 	width: 250px;
 	border-radius: 12px;
@@ -467,9 +469,11 @@ input.button-w:active {
 .settingsmenu{
 	background-color: #D3D3D3;
 }
+
 .settingsmenu-dark{
 	background-color: #222222;
 }
+
 .closesettingmenu{
 	display: block;
 	background-color: transparent;
@@ -477,11 +481,13 @@ input.button-w:active {
 	border: none;
 	cursor: pointer;
 }
+
 .closesettingmenuicon{
 	float: right;
 	width: 24px;
 	padding-right: 12px;
 }
+
 .closesettingmenu-dark{
 	display: block;
 	background-color: transparent;
@@ -490,40 +496,48 @@ input.button-w:active {
 	border: none;
 	cursor: pointer;
 }
+
 .closesettingmenuicon-dark{
 	float: left;
 	width: 24px;
 	padding-left: 12px;
 }
+
+
+/* - SETTINGS MENU BUTTON -*/
 .settingsmenu-dark .settingsmenubutton,
 .settingsmenu .settingsmenubutton {
-	width: 100%;
-	padding: 8px 17px;
-	border: solid 1px #707070;
 	margin-bottom: 5px;
-	box-sizing: border-box;
 }
 
 .settingsmenubutton {
+	float: left;
+	position: relative;
 	display: block;
-	width: auto;
+	width: 100%;
+	padding: 8px 17px;
+	border: solid 1px #707070;
+	border-radius: 1000px;
 	margin: 0 auto;
-	padding: 5px 17px;
+	box-sizing: border-box;
 	text-align: center;
-	border: #000000;
-	border-radius: 12px;
+	background-color: #fff;
 	cursor: pointer;
 }
 
 .settingsmenubutton:hover{
-	background-color: #adadad;
+	background-color: #e5e5e5;
+}
+
+.settingsmenubutton:active {
+    background-color: #cccccc;
 }
 
 .settingsmenubutton span{
 	float: left;
 	margin-right: 15px;
 	color: #848484;
-	font-size: 19px;
+	font-size: 140%;
 }
 
 .settingsmenuicon{
@@ -2859,3 +2873,24 @@ header .wrapper, #wrapper_header_example header .wrapper {
 
 /* --- ANITIONMER --- */
 /* No animations added yet */
+
+
+/* --- PRINT --- */
+@media print {
+	article, nav, section, section > div, #page-preview-in-editor > div:first-child, #page-preview-in-editor .example:before  {
+		display: none;
+	}
+	#styleguide section, #page-preview-in-editor, .page{
+		margin:0;
+	}
+	#page-preview-in-editor .example, .page {
+		padding:0;
+	}
+	#templates, #page-preview-in-editor, #page-preview-in-editor .example, .page {
+		display: block !important;
+	}
+	.page{
+		width:100%;
+		height: 100%;
+	}
+}

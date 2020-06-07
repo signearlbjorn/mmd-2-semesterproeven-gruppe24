@@ -2327,10 +2327,10 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" class="settingsmenubutton">
+				<a href="editor.html" class="settingsmenubutton" title="Edit report">
 					<span>Edit</span>
 					<img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon">
-				</button>
+				</a>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -2338,24 +2338,28 @@
 				<tr class="row-one">
 					<th>HTML</th>
 					<th>CSS</th>
-					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" class="settingsmenubutton">
+						<a href="editor.html" class="settingsmenubutton" title="Edit report">
 							<span>Edit</span>
 							<img class="settingsmenuicon" src="img/icons/edit.svg" alt="editicon">
-						</button>
+						</a>
 					</td>
 					<td class="code">
-						.settingsmenubutton{
+						/* - SETTINGS MENU BUTTON -*/
+						.settingsmenubutton {
+							float: left;
+							position: relative;
 							display: block;
-							width: auto;
+							width: 100%;
+							padding: 8px 17px;
+							border: solid 1px #707070;
+							border-radius: 1000px;
 							margin: 0 auto;
-							padding: 5px 17px;
+							box-sizing: border-box;
 							text-align: center;
-							border: #000000;
-							border-radius: 12px;
+							background-color: #fff;
 							cursor: pointer;
 						}
 
@@ -2367,15 +2371,17 @@
 							float: left;
 							margin-right: 15px;
 							color: #848484;
-							font-size: 19px;
+							font-size: 140%;
 						}
 
 						.settingsmenuicon{
-							float: right;
+							position: absolute;
+							top: calc(50% - 10px);
+							right: 17px;
 							width: 20px;
+							height: 20px;
 						}
 					</td>
-					<td class="empty"></td>
                 </tr>
 			</table>
 		</div>
@@ -2386,10 +2392,10 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" class="settingsmenubutton">
+				<a href="show.html" class="settingsmenubutton disabled" title="Åben rapport">
 					<span>Show</span>
 					<img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon">
-				</button>
+				</a>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -2397,24 +2403,28 @@
 				<tr class="row-one">
 					<th>HTML</th>
 					<th>CSS</th>
-					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" class="settingsmenubutton">
+						<a href="show.html" class="settingsmenubutton disabled" title="Åben rapport">
 							<span>Show</span>
 							<img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon">
-						</button>
+						</a>
 					</td>
 					<td class="code">
-						.settingsmenubutton{
+						/* - SETTINGS MENU BUTTON -*/
+						.settingsmenubutton {
+							float: left;
+							position: relative;
 							display: block;
-							width: auto;
+							width: 100%;
+							padding: 8px 17px;
+							border: solid 1px #707070;
+							border-radius: 1000px;
 							margin: 0 auto;
-							padding: 5px 17px;
+							box-sizing: border-box;
 							text-align: center;
-							border: #000000;
-							border-radius: 12px;
+							background-color: #fff;
 							cursor: pointer;
 						}
 
@@ -2426,15 +2436,17 @@
 							float: left;
 							margin-right: 15px;
 							color: #848484;
-							font-size: 19px;
+							font-size: 140%;
 						}
 
 						.settingsmenuicon{
-							float: right;
+							position: absolute;
+							top: calc(50% - 10px);
+							right: 17px;
 							width: 20px;
+							height: 20px;
 						}
 					</td>
-					<td class="empty"></td>
                 </tr>
 			</table>
 		</div>
@@ -2445,7 +2457,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" class="settingsmenubutton">
+				<button name="schedule-report" type="button" class="settingsmenubutton" title="Open schedule options for report">
 					<span>Schedule</span>
 					<img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon">
 				</button>
@@ -2460,20 +2472,25 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" class="settingsmenubutton">
+						<button name="schedule-report" type="button" class="settingsmenubutton" title="Open schedule options for report">
 							<span>Schedule</span>
 							<img class="settingsmenuicon" src="img/icons/calendar.svg" alt="scheduleicon">
 						</button>
 					</td>
 					<td class="code">
-						.settingsmenubutton{
+						/* - SETTINGS MENU BUTTON -*/
+						.settingsmenubutton {
+							float: left;
+							position: relative;
 							display: block;
-							width: auto;
+							width: 100%;
+							padding: 8px 17px;
+							border: solid 1px #707070;
+							border-radius: 1000px;
 							margin: 0 auto;
-							padding: 5px 17px;
+							box-sizing: border-box;
 							text-align: center;
-							border: #000000;
-							border-radius: 12px;
+							background-color: #fff;
 							cursor: pointer;
 						}
 
@@ -2485,15 +2502,21 @@
 							float: left;
 							margin-right: 15px;
 							color: #848484;
-							font-size: 19px;
+							font-size: 140%;
 						}
 
 						.settingsmenuicon{
-							float: right;
+							position: absolute;
+							top: calc(50% - 10px);
+							right: 17px;
 							width: 20px;
+							height: 20px;
 						}
 					</td>
-					<td class="empty"></td>
+					<td class="code">
+						// Open Schedule pop up
+						// ToDo
+					</td>
                 </tr>
 			</table>
 		</div>
@@ -2504,7 +2527,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" class="settingsmenubutton">
+				<button name="share-report" type="button" class="settingsmenubutton" title="Select how to share report">
 					<span>Share</span>
 					<img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon">
 				</button>
@@ -2519,20 +2542,25 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" class="settingsmenubutton">
+						<button name="share-report" type="button" class="settingsmenubutton" title="Select how to share report">
 							<span>Share</span>
 							<img class="settingsmenuicon" src="img/icons/share-2.svg" alt="shareicon">
 						</button>
 					</td>
 					<td class="code">
-						.settingsmenubutton{
+						/* - SETTINGS MENU BUTTON -*/
+						.settingsmenubutton {
+							float: left;
+							position: relative;
 							display: block;
-							width: auto;
+							width: 100%;
+							padding: 8px 17px;
+							border: solid 1px #707070;
+							border-radius: 1000px;
 							margin: 0 auto;
-							padding: 5px 17px;
+							box-sizing: border-box;
 							text-align: center;
-							border: #000000;
-							border-radius: 12px;
+							background-color: #fff;
 							cursor: pointer;
 						}
 
@@ -2544,15 +2572,21 @@
 							float: left;
 							margin-right: 15px;
 							color: #848484;
-							font-size: 19px;
+							font-size: 140%;
 						}
 
 						.settingsmenuicon{
-							float: right;
+							position: absolute;
+							top: calc(50% - 10px);
+							right: 17px;
 							width: 20px;
+							height: 20px;
 						}
 					</td>
-					<td class="empty"></td>
+					<td class="code">
+						// Open share pop up
+						// ToDo
+					</td>
                 </tr>
 			</table>
 		</div>
@@ -2563,7 +2597,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" class="settingsmenubutton">
+				<button name="save-report-as" type="button" class="settingsmenubutton" title="Select how to save report">
 					<span>Save as..</span>
 					<img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon">
 				</button>
@@ -2578,20 +2612,25 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" class="settingsmenubutton">
+						<button name="save-report-as" type="button" class="settingsmenubutton" title="Select how to save report">
 							<span>Save as..</span>
 							<img class="settingsmenuicon" src="img/icons/save.svg" alt="saveasicon">
 						</button>
 					</td>
 					<td class="code">
-						.settingsmenubutton{
+						/* - SETTINGS MENU BUTTON -*/
+						.settingsmenubutton {
+							float: left;
+							position: relative;
 							display: block;
-							width: auto;
+							width: 100%;
+							padding: 8px 17px;
+							border: solid 1px #707070;
+							border-radius: 1000px;
 							margin: 0 auto;
-							padding: 5px 17px;
+							box-sizing: border-box;
 							text-align: center;
-							border: #000000;
-							border-radius: 12px;
+							background-color: #fff;
 							cursor: pointer;
 						}
 
@@ -2603,15 +2642,21 @@
 							float: left;
 							margin-right: 15px;
 							color: #848484;
-							font-size: 19px;
+							font-size: 140%;
 						}
 
 						.settingsmenuicon{
-							float: right;
+							position: absolute;
+							top: calc(50% - 10px);
+							right: 17px;
 							width: 20px;
+							height: 20px;
 						}
 					</td>
-					<td class="empty"></td>
+					<td class="code">
+						// Open save report interface
+						// ToDo
+					</td>
                 </tr>
 			</table>
 		</div>
@@ -2622,7 +2667,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" class="settingsmenubutton">
+				<button name="print" type="button" class="settingsmenubutton">
 					<span>Print</span>
 					<img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon">
 				</button>
@@ -2637,20 +2682,25 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" class="settingsmenubutton">
+						<button name="print" type="button" class="settingsmenubutton">
 							<span>Print</span>
 							<img class="settingsmenuicon" src="img/icons/printer.svg" alt="printicon">
 						</button>
 					</td>
 					<td class="code">
-						.settingsmenubutton{
+						/* - SETTINGS MENU BUTTON -*/
+						.settingsmenubutton {
+							float: left;
+							position: relative;
 							display: block;
-							width: auto;
+							width: 100%;
+							padding: 8px 17px;
+							border: solid 1px #707070;
+							border-radius: 1000px;
 							margin: 0 auto;
-							padding: 5px 17px;
+							box-sizing: border-box;
 							text-align: center;
-							border: #000000;
-							border-radius: 12px;
+							background-color: #fff;
 							cursor: pointer;
 						}
 
@@ -2662,15 +2712,58 @@
 							float: left;
 							margin-right: 15px;
 							color: #848484;
-							font-size: 19px;
+							font-size: 140%;
 						}
 
 						.settingsmenuicon{
-							float: right;
+							position: absolute;
+							top: calc(50% - 10px);
+							right: 17px;
 							width: 20px;
+							height: 20px;
+						}
+						
+						/* --- PRINT --- */
+						@media print {
+							article, nav, section, section > div, #page-preview-in-editor > div:first-child, #page-preview-in-editor .example:before  {
+								display: none;
+							}
+							#styleguide section, #page-preview-in-editor, .page{
+								margin:0;
+							}
+							#page-preview-in-editor .example, .page {
+								padding:0;
+							}
+							#templates, #page-preview-in-editor, #page-preview-in-editor .example, .page {
+								display: block !important;
+							}
+							.page{
+								width:100%;
+								height: 100%;
+							}
 						}
 					</td>
-					<td class="empty"></td>
+					<td class="code">
+						// -- PRINT BUTTON --
+						let printButton = document.getElementsByName("print");
+						for(let i = 0; i < printButton.length; i++) {
+							printButton[i].addEventListener("click", function(){printReport()});
+						}
+
+						function printReport(){
+							// Find parrent id, and get corresponding report, if used on overview
+							// ToDo
+							// Save scroll postion, as the page size changes while printing, and might be disoriented after print
+							let y = window.pageYOffset;
+							let x = window.pageXOffset;
+							// Print report
+							window.print();
+							// Scroll user to previous position
+							window.scrollTo(x, y);
+							// Unload report, if on overview
+							// ToDo
+						}
+					</td>
                 </tr>
 			</table>
 		</div>
@@ -2681,9 +2774,9 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" class="settingsmenubutton">
+				<button name="delete-report" type="button" class="settingsmenubutton disabled" title="delete report">
 					<span>Delete</span>
-					<img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon">
+					<img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="delete icon">
 				</button>
 			</div>
 		</div>
@@ -2696,20 +2789,25 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" class="settingsmenubutton">
+						<button name="delete-report" type="button" class="settingsmenubutton disabled" title="delete report">
 							<span>Delete</span>
-							<img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="deleteicon">
+							<img class="settingsmenuicon" src="img/icons/trash-2.svg" alt="delete icon">
 						</button>
 					</td>
 					<td class="code">
-						.settingsmenubutton{
+						/* - SETTINGS MENU BUTTON -*/
+						.settingsmenubutton {
+							float: left;
+							position: relative;
 							display: block;
-							width: auto;
+							width: 100%;
+							padding: 8px 17px;
+							border: solid 1px #707070;
+							border-radius: 1000px;
 							margin: 0 auto;
-							padding: 5px 17px;
+							box-sizing: border-box;
 							text-align: center;
-							border: #000000;
-							border-radius: 12px;
+							background-color: #fff;
 							cursor: pointer;
 						}
 
@@ -2721,15 +2819,21 @@
 							float: left;
 							margin-right: 15px;
 							color: #848484;
-							font-size: 19px;
+							font-size: 140%;
 						}
 
 						.settingsmenuicon{
-							float: right;
+							position: absolute;
+							top: calc(50% - 10px);
+							right: 17px;
 							width: 20px;
+							height: 20px;
 						}
 					</td>
-					<td class="empty"></td>
+					<td class="code">
+						// Ajax Delete report
+						// ToDo
+					</td>
                 </tr>
 			</table>
 		</div>
@@ -3058,40 +3162,6 @@
 			</table>
 		</div>
 	</article>
-    <!-- molekyle tabel for 'Opret ny rapport'-->
-	<!--<article id="opret-ny-mappe">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Opret ny mappe / Create new folder</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<button title="">
-					<img src="placeholder" alt="placeholder">
-				</button>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="overviewmolekyler">
-                <tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-                </tr>
-				<tr class="row-two">
-					<td class="code">
-						<button title="">
-							<img src="placeholder" alt="placeholder">
-						</button>
-					</td>
-					<!-- CSS --><!--
-					<td class="empty"></td>
-					<!-- JavaScript --><!--
-					<td class="empty"></td>
-				</tr>
-			</table>
-		</div>
-	</article>-->
-	<!-- molekyle tabel for 'Opret ny mappe / create new folder' - slut-->
     <!-- molekyle tabel for switch knapper -->
 	<div class="title-area">
 		<div class="wrapper">

@@ -673,3 +673,24 @@ for(let i = 0; i < help.length; i++) {
 function helpTextDisplay(text) {
 	alert(text);
 }
+
+// -- PRINT BUTTON --
+let printButton = document.getElementsByName("print");
+for(let i = 0; i < printButton.length; i++) {
+	printButton[i].addEventListener("click", function(){printReport()});
+}
+
+function printReport(){
+	// Find parrent id, and get corresponding report, if used on overview
+	// ToDo
+	// Save scroll postion, as the page size changes while printing, and might be disoriented after print
+	let y = window.pageYOffset;
+	let x = window.pageXOffset;
+	// Print report
+	window.print();
+	// Scroll user to previous position
+	window.scrollTo(x, y);
+	// Unload report, if on overview
+	// ToDo
+}
+
