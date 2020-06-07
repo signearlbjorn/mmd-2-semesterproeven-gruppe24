@@ -1131,20 +1131,18 @@ margin-left: 7px;
 /*STYLING FOR MEGASWITCH - SLUT*/
 
 
-/*Here starts CSS for search input*/
+/* SEARCH INPUT */
 .searchInput {
-    background-image: url('../img/icons/search.svg'); /* Add a search icon to input */
-    background-position: 10px 11px; /* Position the search icon */
-    background-repeat: no-repeat; /* Do not repeat the icon image */
-    width: 100%;
-    font-size: 16px; /* Increase font-size */
-    padding: 10px 20px 5px 50px; /* Add some padding */
+	width: 314px;
+    max-width: 100%;
+	padding-left: 47px;
     border: 1px solid #ddd; /* Add a grey border */
-    border-radius: 10px; /*round corners*/
 	box-sizing: border-box;
+    font-size: 142.85%; /* Increase font-size */
+    background-image: url('../img/icons/search.svg'); /* Add a search icon to input */
+    background-position: 17px 50%; /* Position the search icon */
+    background-repeat: no-repeat; /* Do not repeat the icon image */
 }
-
-/*Search input CSS ends*/
 
 
 /* --- ORGANISMS --- */
@@ -2359,20 +2357,6 @@ nav a:hover{
 
 /*List view css start*/
 
-.searchInput {
-    background-image: url('../img/icons/search.svg'); 
-    background-position: 10px 5px;
-    background-repeat: no-repeat;
-    width: 50%;
-    font-size: 16px;
-    padding: 10px 20px 5px 50px;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    box-sizing: border-box;
-    margin-bottom: 10px; 
-}
-
-
 /*List view*/
 
 #reportUL {
@@ -2381,7 +2365,6 @@ nav a:hover{
   padding: 0;
   margin: 0;
 }
-
 
 
 .report-listbox{
@@ -2402,9 +2385,6 @@ nav a:hover{
     margin-top: 1px; 
    
 }
-
-
-/*List view css end*/
 
 
 /* --- ORGANISMER SLUT --- */

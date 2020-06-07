@@ -814,6 +814,34 @@
 			</table>
 		</div>
 	</article>
+    <!-- input -->
+	<article id="text-input">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Text input</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+                <input type="text" class="round-corners button-w"  placeholder="Search...">
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+				</tr>
+				<tr class="row-two">
+					<!-- HTML -->
+                    <td class="code">
+						<input type="text" name="search" class="searchInput round-corners button-w"  placeholder="Search...">
+                    </td>
+					<!-- CSS -->
+					<td class="empty">
+                    </td>
+				</tr>
+			</table>
+		</div>
+	</article>
 </section>
 <!-- MOLEKYLER -->
 <section id="molecules">
@@ -3124,21 +3152,22 @@
 		</div>
 	</article>
 	<!-- SEND WITH -->
-	<article id="send-with">
+	<article id="send-with-select">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Send with</h4>
+			<h4 class="styleguide-title">Send with select</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<div class="frame">
-					<div class="type">
-						<span class="typetext">Send with</span>
-						<button class="typebutton">
-							<span class="typebuttontext">email</span>
-							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-						</button>
+				<label class="select-label save-to-select">
+					<span class="select-span">Attach as...</span>
+					<div class="select-wrapper">
+						<select name="attach-report-as" class="select">
+							<option value="link" selected="">Link</option>
+							<option value="pdf">PDF</option>
+							<option value="image">Image</option>
+						</select>
 					</div>
-				</div>
+				</label>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -3146,71 +3175,95 @@
 				<tr class="row-one">
 					<th>HTML</th>
 					<th>CSS</th>
-					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
 					<!-- HTML -->
 					<td class="code">
-						<div class="frame">
-							<div class="type">
-								<span class="typetext">Send with</span>
-								<button class="typebutton">
-									<span class="typebuttontext">email</span>
-									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-								</button>
+						<label class="select-label save-to-select">
+							<span class="select-span">Attach as...</span>
+							<div class="select-wrapper">
+								<select name="attach-report-as" class="select">
+									<option value="link" selected="">Link</option>
+									<option value="pdf">PDF</option>
+									<option value="image">Image</option>
+								</select>
 							</div>
-						</div>
+						</label>
 					</td>
 					<!-- CSS -->
 					<td class="code">
-						/*Here starts CSS code for type button*/
-						.frame {
-							float: left; /* Added float to display height right */
-							background-color: black;
-							width: 100%;
-							/* width: 400px; *//* Did not scale with parrent */
-						}
-
-						.type {
-							width: calc(100% - 10px); /* 100% width -10px margin */
-							margin-left: 5px;
-							margin-right: 5px; /* Margin added */
-						}
-
-						.typetext {
-							float: left; /* Added float to display height right */
-							color: white;
-							font-size: 110%; /* Must be larger on smaller screens */
-						}
-
-						.typebutton {
-							float: left; /* Added float to display height right */
-							width: 100%;
-							border-radius: 10px;
-							font-size: 110%; /* Must be larger on smaller screens */
-						}
-						
-						.typebuttontext {
+						/* save-to-select */
+						.save-to-select {
+							display: block;
 							float: left;
+						}
+
+						/* -- SELECT --*/
+						.select-label {
+							position: relative;
+							float: left;
+							overflow: hidden;
+							cursor: pointer;
+						}
+
+						.select-span {
+							float: left;
+							height: 37px;
+							margin-right: 12px;
+							font-size: 142.85%;
+							line-height: 37px;
+							color: #000;
+						}
+
+						@media (min-width:3200px) {
+							.select-span {
+								font-size: 32px;
+								line-height: 37px;
+							}
+						}
+
+						.select {
+							display: block;
+							padding-left: 10px;
+							padding-right: 28px;
+							border-radius: 19px;
+							font-size: 16px;
+							color: #7C7C7C;
 							font-style: italic;
-							color: grey;
-							margin-left: 5px;
-							font-size: 110%;
+							-webkit-appearance: none;
+							-moz-appearance: none;
+							text-overflow: '';
+							border-color: #6F6F6F;
+							background-color: #fff;
+							cursor: pointer;
 						}
 
-						.chevronicon {
-							float: right;
-							margin-top: 5px;
+						.select option{
+							font-style: normal;
 						}
 
-						@media (min-width:1366){
-							.typetext, .typebutton, .typebuttontext {
+						@media (min-width:786px) {
+							.select {
 								font-size: 100%;
 							}
 						}
+
+						.select-wrapper {
+							position: relative;
+						}
+
+						.select-wrapper:before {
+							content: "";
+							position: absolute;
+							top: calc(50% - 10px);
+							right: 10px;
+							width: 19px;
+							height: 13px;
+							background-image: url("../img/icons/chevron-down.svg");
+							background-repeat: no-repeat;
+							background-size: cover;
+						}
 					</td>
-					<!-- JavaScript -->
-					<td class="empty"></td>
 				</tr>
 			</table>
 		</div>
@@ -3334,7 +3387,7 @@
 			</table>
 		</div>
 	</article>
-	<article id="save-to">
+	<article id="save-to-select">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Save to select</h4>
 		</div>
@@ -3501,7 +3554,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-                <input type="text" class="searchInput"  placeholder="Search...">
+                <input type="text" name="search" class="searchInput round-corners button-w"  placeholder="Search...">
 			</div>
 		</div>
 		<div class="wrapper">
@@ -3509,29 +3562,27 @@
 				<tr class="row-one">
 					<th>HTML</th>
 					<th>CSS</th>
-					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
 					<!-- HTML -->
                     <td class="code">
-						<input type="text" class="searchInput"  placeholder="Search...">
+						<input type="text" name="search" class="searchInput round-corners button-w"  placeholder="Search...">
                     </td>
 					<!-- CSS -->
 					<td class="code">
+						/* SEARCH INPUT */
 						.searchInput {
-							background-image: url('../img/icons/search.svg');
-							background-position: 10px 11px;
-							background-repeat: no-repeat;
-							width: 100%;
-							font-size: 16px;
-							padding: 10px 20px 5px 50px;
-							border: 1px solid #ddd;
-							border-radius: 10px;
+							width: 314px;
+							max-width: 100%;
+							padding-left: 47px;
+							border: 1px solid #ddd; /* Add a grey border */
 							box-sizing: border-box;
-                        }
+							font-size: 142.85%; /* Increase font-size */
+							background-image: url('../img/icons/search.svg'); /* Add a search icon to input */
+							background-position: 17px 50%; /* Position the search icon */
+							background-repeat: no-repeat; /* Do not repeat the icon image */
+						}
                     </td>
-					<!-- JavaScript -->
-					<td class="empty"></td>
 				</tr>
 			</table>
 		</div>
