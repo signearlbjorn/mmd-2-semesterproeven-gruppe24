@@ -163,6 +163,10 @@ h3 {
 		font-size: 1.094vw; /* ~42px on 3840px width */
 	}
 }
+/* -- LABEL -- */
+label{
+	cursor: pointer;
+}
 
 
 /* -- BUTTON AND LINKS -- */
@@ -295,7 +299,12 @@ button {
 /* - INPUT - */
 input {
 	float: left;
+	box-sizing: border-box;
 }
+input:placeholder{
+	font-style: italic;
+}
+
 input.button-g:hover {
 	background-color: #00CD00;
 }
@@ -342,7 +351,6 @@ input.button-w:active {
 
 .text-input input {
 	float: left;
-	width: auto;
 	max-width: 100%;
 	font-size: 142.85%;
 }
@@ -355,7 +363,7 @@ input.button-w:active {
 }
 
 
-/* -- SELECT --*/
+/* -- SELECT -- */
 .select-label {
 	position: relative;
 	float: left;
@@ -423,6 +431,14 @@ input.button-w:active {
 	background-size: cover;
 }
 
+/* -- GENERAL USE -- */
+.clear-both{
+	clear: both;
+}
+
+.full-width, .full-width .select-wrapper, .full-width .select-wrapper select {
+	width: 100%;
+}
 
 /* --- MOLECULES ---*/
 
@@ -928,13 +944,6 @@ select.typebutton option{
 /* -- INPUTS -- */
 .editor-tab-input {
 	width: 50%;
-}
-
-
-/* -- SELECT MOLECULES -- */
-/* - ATTACH REPORT AS - */
-.attach-report-as, .attach-report-as .select-wrapper, .attach-report-as .select-wrapper select {
-	width: 100%;
 }
 
 

@@ -694,3 +694,56 @@ function printReport(){
 	// ToDo
 }
 
+// --- VALIDATE SCHEDULE ---
+// -- VALIDATE E-MAIL --
+let scheduleEmail = document.getElementsByName('email-schedule');
+
+for(let i = 0; i < scheduleEmail.length; i++) {
+	let email = scheduleEmail[i];
+	
+	// Fjern error på click på email
+	email.addEventListener("click", function(){
+		removeErrorClass(email);
+	});
+	
+	// Fjern error på focus på email
+	email.addEventListener("focus", function(){
+		removeErrorClass(email);
+	});
+	
+	// Trim og kør validering når man trykker ud af email. Primær
+	email.addEventListener("blur", function(){
+		email.value = email.value.trim();
+		emailValidate(email);
+	});
+	
+	// Trim og kør validering når man trykker ud af email. Sekundær.
+	email.addEventListener("focusout", function(){
+		email.value = email.value.trim();
+		emailValidate(email);
+	});
+}
+
+
+function emailValidate(email) {
+	console.log('E-mail blev valideret.');
+	if(!email.value){
+		addErrorClass(email);
+		return(false);
+	} else if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)){
+		addErrorClass(email);
+		return(false);
+	} else{
+		removeErrorClass(email);
+		return(true);
+	}
+}
+
+function addErrorClass(element) {
+	element.classList.add("error");
+}
+
+function removeErrorClass(element) {
+	element.classList.remove("error");
+}
+
