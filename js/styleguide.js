@@ -1,8 +1,10 @@
 // ----- STYLEGUIDE JAVASCRIPT -----
 
+// --- STYLEGUIDE SPECIFIC CODE ---
 console.log('styleguide.js loaded.');
 
-// --- Format coding sections as copy friendly code, without use of pre ---
+
+// -- FORMAT CODING SECTIONS AS COPY FRIENDLY CODE, WITHOUT USE OF PRE --
 /*
 What is does:
 	This code will find all intances with the class code, and then replace < with '&lt;, linebreaks with code wrapprings, and tabs with 4 spaces.
@@ -13,7 +15,6 @@ Why:
 How to use:
 	give a html element the class of code, and this code will run
 */
-
 let codeSections = document.getElementsByClassName('code'); // Find all elements with the class code.
 for(let i=0; i<codeSections.length; i++){ // Loop all instanceses of code.
 	let currentSection = codeSections[i].innerHTML; // Get inner html.
@@ -27,6 +28,9 @@ for(let i=0; i<codeSections.length; i++){ // Loop all instanceses of code.
 
 	codeSections[i].addEventListener("dblclick", function(){selectText(codeSections[i])}); // Add eventlistner on doubleclick for selectText.
 }
+
+
+// -- INSERT EXPLAINING BOX ABOVE TABLES --
 function activateTableExplainer() {
 	let tableExplainer = document.getElementsByClassName('tableExplainer'); // Find all elements with the class tableExplainer.
 	for(let i=0; i<tableExplainer.length; i++){ // Loop all instanceses of tableExplainer.
@@ -42,6 +46,9 @@ function activateTableExplainer() {
 		}); // Add eventlistner on click for tableExplainerButton, and when fired, remove tableExplainer instance from dom.
 	}
 }
+
+
+// -- TABLE SELECTION --
 function selectText(element) {
 	// Based on: https://stackoverflow.com/questions/1173194/select-all-div-text-with-single-mouse-click
 	// IE kode removed, as we do not attempt to support the platform, and the function is not a critical part of the experience.
@@ -53,46 +60,8 @@ function selectText(element) {
     }
 }
 
-/* PRIORITY STAR */
-// Change icon
-let star1 = document.getElementById("star1");
 
-let starArray = [star1];
-
-for(let i = 0; i < starArray.length; i++){
-	starArray[i].addEventListener("click", function(){changeImage(starArray[i])});
-}
-
-function changeImage(elem) {
-	console.log('changeImage function active for ' + elem.id + '.'	);
-	// console.log(document.getElementById("imgClickAndChange").src.endsWith("img/icons/star.svg"));
-	//elem = document.getElementById(elem);
-	//if (document.getElementById("imgClickAndChange").src =="img/icons/star.svg") // Must use endsWith method instead of == when directory layout is uncertain
-	if (elem.src.endsWith("img/icons/star.svg")) // Must use endsWith method instead of == when directory layout is uncertain
-	{
-		//console.log('changeImage if true.');
-		elem.src = "img/icons/starfull.svg";
-		// Prioritize graph/template
-	}
-	else
-	{
-		//console.log('changeImage if false.');
-		elem.src = "img/icons/star.svg";
-		// Unprioritize graph/template
-	}
-}
-
-// Change priority
-/*
-1. Get all star parrents in category
-2. Insert all prioritized elements in priority category, sorted by initial position
-3. Remove prioritized content from regular content.
-4. Save priority settings to cookie
-*/
-//ToDo
-
-
-// Stylguide tables
+// -- STYLEGUIDE TABLES --
 let rowOne = document.getElementsByClassName("row-one");
 for(let i=0; i<rowOne.length; i++){ // Loop all instanceses of rowOne.
 	// On click on row-one, expand or compress row-tow
@@ -119,7 +88,7 @@ function expandOrCompress(element) {
 	}
 }
 
-/* -- Highcharts graphs -- */
+/* --- HIGHCHARTS GRAPHS --- */
 Highcharts.setOptions({
 	colors:  ['#F05440', '#192440', '#F05440', '#337AB7', '#F0AD4E', '#00CD00', '#FF0000'],
     chart: {
@@ -511,7 +480,7 @@ document.addEventListener('DOMContentLoaded', function () {
 	});
 });
 
-/*Cookie code*/
+/* --- COOKIES --- */
 /*Code based on https://www.w3schools.com/js/js_cookies.asp*/
 function getTableExplainerCookie() {
     //console.log('Getting cookies')
@@ -543,16 +512,8 @@ function burgerMenuChange(burgerMenu) {
   burgerMenu.classList.toggle("change");
 }
 
-// DIABLE LINKS
-let disabledLinks = document.getElementsByClassName("disabled");
-for(let i=0; i < disabledLinks.length; i++){
-	disabledLinks[i].addEventListener("click", function(){
-		event.preventDefault();
-		return null;
-	});
-}
 
-// WINDOW SIZES
+// --- WINDOW SIZES ---
 let previewPage = document.getElementById("preview-page");
 previewPage.addEventListener("change", function(){openWidowSize(previewPage)});
 
@@ -578,91 +539,10 @@ function openWidowSize(elem) {
 		default:
 			return false
 	}
-} 
-
-
-//List search/filter funktion
-function search_report() { 
-    let input = document.getElementById('myInput').value 
-    input=input.toLowerCase(); 
-    let repList = document.getElementsByClassName('rep-namelist'); 
-      
-    for (i = 0; i < repList.length; i++) {  
-        if (!repList[i].innerHTML.toLowerCase().includes(input)) { 
-            repList[i].style.display="none"; 
-        } 
-        else { 
-            repList[i].style.display="list-item";
-             
-        } 
-    } 
-	console.log("Search complete"); 
-} 
-
-// -- UPLOAD IMAGES --
-let vallidImageFormats = ['webp', 'svg', 'png', 'jpg', 'jpeg', 'jfif', 'pjpeg', 'pjp', 'ico', 'cur', 'gif', 'bmp'];
-let uploadImage = document.getElementsByName("upload-image");
-
-for(let i = 0; i < uploadImage.length; i++) {
-	uploadImage[i].addEventListener("change", function(){validateImaage(uploadImage[i])});
-}
-
-function validateImaage(input){
-	let extentension = input.value;
-	extentension = extentension.split(".");
-	if(extentension.length-1 >= 0){
-		extentension = extentension[extentension.length-1];
-	} else {
-		alert("File extension missing. Please upload a valid file.");
-		return(false);
-	}
-	if((vallidImageFormats.indexOf(extentension) > -1)) { // Inpired by James and Black on https://stackoverflow.com/questions/6116474/how-to-find-if-an-array-contains-a-specific-string-in-javascript-jquery
-		alert("Valid format");
-		// Ajax add image upload to graph tab
-		// ToDo
-		return(true);
-	} else{
-		let validFormatsString = vallidImageFormats.join(' | ');
-		alert("Invalid format. Removing image.\nValid formats:\n" + validFormatsString);
-		input.value = "";
-		//console.log(input.value);
-		return(false);
-	}
-	//console.log((vallidImageFormats.indexOf(extentension) > -1));
 }
 
 
-// -- UPLOAD Template --
-let vallidTemplateFormats = ['html', 'htm'];
-let uploadTemplate = document.getElementsByName("upload-template");
-
-for(let i = 0; i < uploadTemplate.length; i++) {
-	uploadTemplate[i].addEventListener("change", function(){validateTemplate(uploadTemplate[i])});
-}
-
-function validateTemplate(input){
-	let extentension = input.value;
-	extentension = extentension.split(".");
-	if(extentension.length-1 >= 0){
-		extentension = extentension[extentension.length-1];
-	} else {
-		alert("File extension missing. Please upload a valid file.");
-		return(false);
-	}
-	if((vallidTemplateFormats.indexOf(extentension) > -1)) { // Inpired by James and Black on https://stackoverflow.com/questions/6116474/how-to-find-if-an-array-contains-a-specific-string-in-javascript-jquery
-		alert("Valid format");
-		// Ajax add template upload to template tab
-		// ToDo
-		return(true);
-	} else{
-		let validFormatsString = vallidTemplateFormats.join(' | ');
-		alert("Invalid format. Removing content.\nValid formats:\n" + validFormatsString);
-		input.value = "";
-		//console.log(input.value);
-		return(false);
-	}
-}
-
+// --- BUTTON LINKS AND INPUT ---
 // -- HELP BUTTON --
 let help = document.getElementsByClassName("help");
 
@@ -673,6 +553,7 @@ for(let i = 0; i < help.length; i++) {
 function helpTextDisplay(text) {
 	alert(text);
 }
+
 
 // -- PRINT BUTTON --
 let printButton = document.getElementsByName("print");
@@ -694,7 +575,86 @@ function printReport(){
 	// ToDo
 }
 
-// --- VALIDATE SCHEDULE ---
+
+/* -- PRIORITY STAR -- */
+// Change icon
+let star1 = document.getElementById("star1");
+
+let starArray = [star1];
+
+for(let i = 0; i < starArray.length; i++){
+	starArray[i].addEventListener("click", function(){changeImage(starArray[i])});
+}
+
+function changeImage(elem) {
+	console.log('changeImage function active for ' + elem.id + '.'	);
+	// console.log(document.getElementById("imgClickAndChange").src.endsWith("img/icons/star.svg"));
+	//elem = document.getElementById(elem);
+	//if (document.getElementById("imgClickAndChange").src =="img/icons/star.svg") // Must use endsWith method instead of == when directory layout is uncertain
+	if (elem.src.endsWith("img/icons/star.svg")) // Must use endsWith method instead of == when directory layout is uncertain
+	{
+		//console.log('changeImage if true.');
+		elem.src = "img/icons/starfull.svg";
+		// Prioritize graph/template
+	}
+	else
+	{
+		//console.log('changeImage if false.');
+		elem.src = "img/icons/star.svg";
+		// Unprioritize graph/template
+	}
+}
+
+// Change priority
+/*
+1. Get all star parrents in category
+2. Insert all prioritized elements in priority category, sorted by initial position
+3. Remove prioritized content from regular content.
+4. Save priority settings to cookie
+*/
+//ToDo
+
+
+// --- SEARCH ---
+function search_report() { 
+    let input = document.getElementById('myInput').value 
+    input=input.toLowerCase(); 
+    let repList = document.getElementsByClassName('rep-namelist'); 
+      
+    for (i = 0; i < repList.length; i++) {  
+        if (!repList[i].innerHTML.toLowerCase().includes(input)) { 
+            repList[i].style.display="none"; 
+        } 
+        else { 
+            repList[i].style.display="list-item";
+             
+        } 
+    } 
+	console.log("Search complete"); 
+} 
+
+
+// -- DIABLELING --
+let disabledLinks = document.getElementsByClassName("disabled");
+for(let i=0; i < disabledLinks.length; i++){
+	disabledLinks[i].addEventListener("click", function(){
+		event.preventDefault();
+		return null;
+	});
+}
+
+
+// --- VALIDATION ---
+// -- GENERIC FUNCTIONS FOR VALIDATION USE --
+function addErrorClass(element) {
+	element.classList.add("error");
+}
+
+function removeErrorClass(element) {
+	element.classList.remove("error");
+}
+
+
 // -- VALIDATE E-MAIL --
 let scheduleEmail = document.getElementsByName('email-schedule');
 
@@ -729,21 +689,279 @@ function emailValidate(email) {
 	console.log('E-mail blev valideret.');
 	if(!email.value){
 		addErrorClass(email);
+		email.title="E-mail cannot be empty";
 		return(false);
 	} else if(!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)){
 		addErrorClass(email);
+		email.title="Invallid e-mail";
 		return(false);
 	} else{
 		removeErrorClass(email);
+		email.title="Valid e-mail ^:^";
 		return(true);
 	}
 }
 
-function addErrorClass(element) {
-	element.classList.add("error");
+
+// -- UPLOADS --
+// - UPLOAD IMAGES -
+let vallidImageFormats = ['webp', 'svg', 'png', 'jpg', 'jpeg', 'jfif', 'pjpeg', 'pjp', 'ico', 'cur', 'gif', 'bmp'];
+let uploadImage = document.getElementsByName("upload-image");
+
+for(let i = 0; i < uploadImage.length; i++) {
+	uploadImage[i].addEventListener("change", function(){validateImaage(uploadImage[i])});
 }
 
-function removeErrorClass(element) {
-	element.classList.remove("error");
+function validateImaage(input){
+	let extentension = input.value;
+	extentension = extentension.split(".");
+	if(extentension.length-1 >= 0){
+		extentension = extentension[extentension.length-1];
+	} else {
+		alert("File extension missing. Please upload a valid file.");
+		return(false);
+	}
+	if((vallidImageFormats.indexOf(extentension) > -1)) { // Inpired by James and Black on https://stackoverflow.com/questions/6116474/how-to-find-if-an-array-contains-a-specific-string-in-javascript-jquery
+		alert("Valid format");
+		// Ajax add image upload to graph tab
+		// ToDo
+		return(true);
+	} else{
+		let validFormatsString = vallidImageFormats.join(' | ');
+		alert("Invalid format. Removing image.\nValid formats:\n" + validFormatsString);
+		input.value = "";
+		//console.log(input.value);
+		return(false);
+	}
+	//console.log((vallidImageFormats.indexOf(extentension) > -1));
 }
 
+
+// - UPLOAD TEMPLATE -
+let vallidTemplateFormats = ['html', 'htm'];
+let uploadTemplate = document.getElementsByName("upload-template");
+
+for(let i = 0; i < uploadTemplate.length; i++) {
+	uploadTemplate[i].addEventListener("change", function(){validateTemplate(uploadTemplate[i])});
+}
+
+function validateTemplate(input){
+	let extentension = input.value;
+	extentension = extentension.split(".");
+	if(extentension.length-1 >= 0){
+		extentension = extentension[extentension.length-1];
+	} else {
+		alert("File extension missing. Please upload a valid file.");
+		return(false);
+	}
+	if((vallidTemplateFormats.indexOf(extentension) > -1)) { // Inpired by James and Black on https://stackoverflow.com/questions/6116474/how-to-find-if-an-array-contains-a-specific-string-in-javascript-jquery
+		alert("Valid format");
+		// Ajax add template upload to template tab
+		// ToDo
+		return(true);
+	} else{
+		let validFormatsString = vallidTemplateFormats.join(' | ');
+		alert("Invalid format. Removing content.\nValid formats:\n" + validFormatsString);
+		input.value = "";
+		//console.log(input.value);
+		return(false);
+	}
+}
+
+// -- VALIDATE DATES AND TIME --
+// - VALIDATE DATE AND TIME FUNCTIONS -
+function isValidDate(dateString) { // Based on solution from Goblinlord via. https://stackoverflow.com/questions/18758772/how-do-i-validate-a-date-in-this-format-yyyy-mm-dd-using-jquery
+	dateString = dateString.toString().replace(/\-|\.|\:/g, '');
+	let regEx = /^\d{4}\d{2}\d{2}$/;
+	if(!dateString.match(regEx)){
+		return(false);
+	}
+	//console.log(dateString);
+	// Remove already placed chars
+	dateString = dateString.slice(0, 6) + '-' + dateString.slice(6);
+	dateString = dateString.slice(0, 4) + '-' + dateString.slice(4);
+	//console.log(dateString);
+	let d = new Date(dateString);
+	let dNum = d.getTime();
+	//console.log(dNum);
+	if(!dNum && dNum !== 0){
+		return(false); // NaN value, Invalid date
+	}
+	//console.log(d);
+	// Match format check 2
+	if(d.toISOString().slice(0,10) !== dateString){
+		return(false); // Not exact format
+	}
+	// Valid - return formatted date
+	return (dateString);
+}
+
+function isValidTime(timeString) {
+	timeString = timeString.toString().replace(/\-|\.|\:/g, '');
+	let regEx = /^\d{2}\d{2}$/;
+	//console.log(timeString);
+	if(!timeString.match(regEx)){
+		return(false);
+	}
+	// Remove already placed chars
+	timeString = timeString.slice(0, 2) + ':' + timeString.slice(2);
+	// Valid - return formatted time
+	return (timeString);
+}
+
+function dateValidate(date) {
+	console.log(date.name + ' blev valideret.');
+	let formattedDate = isValidDate(date.value);
+	if(!date.value) {
+		// Empty
+		addErrorClass(date);
+		date.title="Cannot be empty";
+		return(false);
+	}
+	if(!formattedDate) {
+		// Incorret format
+		addErrorClass(date);
+		date.title="Incorect format. Required format: yyyy-mm-dd";
+		return(false);
+	} else {
+		// No errors
+		date.value = formattedDate;
+		removeErrorClass(date);
+		date.title="Valid date :-)";
+		return(true);
+	}
+}
+
+function dateTimeValidate(dateTime) {
+	console.log(dateTime.name + ' blev valideret.');
+	dateTime.value = dateTime.value.trim();
+	if(!dateTime.value) {
+		// Empty
+		addErrorClass(dateTime);
+		dateTime.title="Cannot be empty";
+		return(false);
+	}
+	if(dateTime.value.match(/T/g)){
+		var method = 'T';
+		var splitDateTime = dateTime.value.split('T');
+	} else if(dateTime.value.match(/\s/g)) {
+		var method = ' ';
+		var splitDateTime = dateTime.value.split(' ');
+	} else {
+		addErrorClass(dateTime);
+		dateTime.title="Missing splits (space) between date and time";
+		return(false); // Missing space between date and time
+	}
+	//console.log(splitDateTime);
+	if(splitDateTime.length > 2){
+		addErrorClass(dateTime);
+		dateTime.title="To many splits in date and time";
+		return(false); // To many spaces
+	}
+	let splitDate = splitDateTime[0];
+	let splitTime = splitDateTime[1];
+	// Validate date
+	let formattedDate = isValidDate(splitDate);
+	if(!formattedDate) {
+		// Incorret format
+		addErrorClass(dateTime);
+		dateTime.title="Incorect date format. Required format: yyyy-mm-dd";
+		return(false);
+	}
+	// Validate time
+	let formattedTime = isValidTime(splitTime);
+	if(!formattedTime) {
+		// Incorret format
+		addErrorClass(dateTime);
+		dateTime.title="Incorect time format. Required format: HH:MM";
+		return(false);
+	}
+	// Splice Date and time together
+	let FormattedDateTime = formattedDate + method + formattedTime;
+	// No errors
+	dateTime.value = FormattedDateTime;
+	removeErrorClass(dateTime);
+	dateTime.title="Valid date and time :-)";
+	return(true);
+}
+
+// - DATE RANGE  -
+let DateRangeStart = document.getElementsByName('date-range-start');
+let DateRangeEnd = document.getElementsByName('date-range-end');
+
+for(let i = 0; i < DateRangeStart.length; i++) {	
+	// Fjern error på click på DateRangeStart[i]
+	DateRangeStart[i].addEventListener("click", function(){
+		removeErrorClass(DateRangeStart[i]);
+	});
+	
+	// Fjern error på focus på DateRangeStart[i]
+	DateRangeStart[i].addEventListener("focus", function(){
+		removeErrorClass(DateRangeStart[i]);
+	});
+	
+	// Trim og kør validering når man trykker ud af DateRangeStart[i]. Primær
+	DateRangeStart[i].addEventListener("blur", function(){
+		DateRangeStart[i].value = DateRangeStart[i].value.trim();
+		dateValidate(DateRangeStart[i]);
+		if(DateRangeEnd[i].value &&
+		DateRangeStart[i].value &&
+		DateRangeStart[i].value > DateRangeEnd[i].value) {
+			addErrorClass(DateRangeEnd[i]);
+			DateRangeEnd[i].title="End date must be higher than start date";
+		} else if(DateRangeEnd[i].value &&
+		DateRangeStart[i].value &&
+		DateRangeStart[i].value <= DateRangeEnd[i].value) {
+			removeErrorClass(DateRangeEnd[i]);
+		}
+	});
+}
+
+for(let i = 0; i < DateRangeEnd.length; i++) {	
+	// Fjern error på click på DateRangeEnd[i]
+	DateRangeEnd[i].addEventListener("click", function(){
+		removeErrorClass(DateRangeEnd[i]);
+	});
+	
+	// Fjern error på focus på DateRangeEnd[i]
+	DateRangeEnd[i].addEventListener("focus", function(){
+		removeErrorClass(DateRangeEnd[i]);
+	});
+	
+	// Trim og kør validering når man trykker ud af DateRangeEnd[i]
+	DateRangeEnd[i].addEventListener("blur", function(){
+		DateRangeEnd[i].value = DateRangeEnd[i].value.trim();
+		dateValidate(DateRangeEnd[i]);
+		if(DateRangeEnd[i].value &&
+		DateRangeStart[i].value &&
+		DateRangeStart[i].value > DateRangeEnd[i].value) {
+			addErrorClass(DateRangeEnd[i]);
+			DateRangeEnd[i].title="End date must be higher than start date";
+		} else if(DateRangeEnd[i].value &&
+		DateRangeStart[i].value &&
+		DateRangeStart[i].value <= DateRangeEnd[i].value) {
+			removeErrorClass(DateRangeEnd[i]);
+		}
+	});
+}
+
+
+// - SCHEDULE DATETIME  -
+let scheduleDateTime = document.getElementsByName('schedule-datetime');
+
+for(let i = 0; i < scheduleDateTime.length; i++) {	
+	// Fjern error på click på scheduleDateTime[i]
+	scheduleDateTime[i].addEventListener("click", function(){
+		removeErrorClass(scheduleDateTime[i]);
+	});
+	
+	// Fjern error på focus på scheduleDateTime[i]
+	scheduleDateTime[i].addEventListener("focus", function(){
+		removeErrorClass(scheduleDateTime[i]);
+	});
+	
+	// Trim og kør validering når man trykker ud af scheduleDateTime[i]
+	scheduleDateTime[i].addEventListener("blur", function(){		
+		dateTimeValidate(scheduleDateTime[i]);
+	});
+}

@@ -337,6 +337,13 @@ input.button-w:active {
     background-color: #cccccc;
 }
 
+input[type="text"].error,
+input[type="email"].error,
+input[type="datetime-local"].error {
+	border: solid 1px #cc3300;
+	color: #cc3300;
+}
+
 .text-input {
 	float: left;
 }
@@ -353,6 +360,36 @@ input.button-w:active {
 	float: left;
 	max-width: 100%;
 	font-size: 142.85%;
+}
+
+
+input[type="date"],
+input[type="datetime-local"] {
+	cursor: text;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+	cursor: pointer;
+	color: #fff;
+	fill: #fff;
+	color: transparent;
+	background: none;
+	z-index: 1;
+}
+
+input[type="date"]:before,
+input[type="datetime-local"]:before {
+	content: '';
+	position: absolute;
+	top: calc(50% - 12px);
+	right: 17px;
+	display: block;
+	width: 22px;
+	height: 23px;
+	background: url('../img/icons/calendargreen.svg');
+	background-repeat: none;
+	/*background: url('../img/icons/calendar.svg');*/
 }
 
 
@@ -772,7 +809,6 @@ select.typebutton option{
 .date-range {
 	float: left;
 	width: 100%;
-	cursor: pointer;
 }
 
 .date-range-title,
@@ -786,6 +822,7 @@ select.typebutton option{
 .date-range-title {
 	float: left;
 	clear: both;
+	cursor: pointer;
 }
 
 .date-range-date-wrapper {
@@ -801,28 +838,14 @@ select.typebutton option{
 	border: none;
 	text-decoration: underline;
 	background-color: transparent;
-	cursor: pointer;
 }
 
-.date-range-input[type="date"]::-webkit-calendar-picker-indicator {
-	cursor: pointer;
-	color: #fff;
-	fill: #fff;
-	color: transparent;
-	background: none;
-	z-index: 1;
-}
-
-.date-range-input[type="date"]:before {
-	content: '';
-	position: absolute;
-	top: calc(50% - 12px);
+.date-range-input:before {
 	right: 6px;
-	display: block;
-	width: 22px;
-	height: 24px;
-	background: url('../img/icons/calendargreen.svg');
-	/*background: url('../img/icons/calendar.svg');*/
+}
+
+.date-range-input.error {
+	color: #cc3300;
 }
 
 .date-range-input:after {
@@ -833,6 +856,10 @@ select.typebutton option{
 	width: 65%;
 	height: 1px;
 	background-color: #FFF;
+}
+
+.date-range-input.error:after {
+	background-color: #cc3300;
 }
 
 .date-range-input:placeholder {

@@ -877,7 +877,14 @@
 						input.button-w:active {
 							background-color: #cccccc;
 						}
-                    </td>
+						
+						input[type="text"].error,
+						input[type="email"].error,
+						input[type="datetime-local"].error {
+							border: solid 1px #cc3300;
+							color: #cc3300;
+						}
+                   </td>
 				</tr>
 			</table>
 		</div>
@@ -900,8 +907,8 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<label class="date-range" title="Filter by date range">
-					<span class="date-range-title">Date range</span>
+				<label class="date-range">
+					<span class="date-range-title" title="Filter by date range">Date range</span>
 					<div class="date-range-date-wrapper">
 						<input type="date" id="date-range-start" name="date-range-start" placeholder="yyyy-mm-dd" class="date-range-input" />
 						<span class="date-range-start-end-split">-</span>
@@ -920,8 +927,8 @@
 				<tr class="row-two">
 					<!--HTML-->
 					<td class="code">
-						<label class="date-range" title="Filter by date range">
-							<span class="date-range-title">Date range</span>
+						<label class="date-range">
+							<span class="date-range-title" title="Filter by date range">Date range</span>
 							<div class="date-range-date-wrapper">
 								<input type="date" id="date-range-start" name="date-range-start" placeholder="yyyy-mm-dd" class="date-range-input" />
 								<span class="date-range-start-end-split">-</span>
@@ -931,11 +938,38 @@
 					</td>
 					<!--CSS-->
 					<td class="code">
+						input[type="date"],
+						input[type="datetime-local"] {
+							cursor: text;
+						}
+
+						input[type="date"]::-webkit-calendar-picker-indicator,
+						input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+							cursor: pointer;
+							color: #fff;
+							fill: #fff;
+							color: transparent;
+							background: none;
+							z-index: 1;
+						}
+
+						input[type="date"]::-webkit-calendar-picker-indicator,
+						input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+							content: '';
+							position: absolute;
+							top: calc(50% - 12px);
+							right: 6px;
+							display: block;
+							width: 22px;
+							height: 24px;
+							background: url('../img/icons/calendargreen.svg');
+							/*background: url('../img/icons/calendar.svg');*/
+						}
+
 						/* -- DATE-RANGE --*/
 						.date-range {
 							float: left;
 							width: 100%;
-							cursor: pointer;
 						}
 
 						.date-range-title,
@@ -949,6 +983,7 @@
 						.date-range-title {
 							float: left;
 							clear: both;
+							cursor: pointer;
 						}
 
 						.date-range-date-wrapper {
@@ -964,9 +999,17 @@
 							border: none;
 							text-decoration: underline;
 							background-color: transparent;
-							cursor: pointer;
 						}
+						
 						.date-range-input:before {
+							right: 6px;
+						}
+
+						.date-range-input.error {
+							color: #cc3300;
+						}
+
+						.date-range-input:after {
 							content:"";
 							position: absolute;
 							left: 0;
@@ -974,6 +1017,10 @@
 							width: 65%;
 							height: 1px;
 							background-color: #FFF;
+						}
+
+						.date-range-input.error:after {
+							background-color: #cc3300;
 						}
 
 						.date-range-input:placeholder {
@@ -1010,8 +1057,114 @@
 					</td>
 					<!--JavaScript-->
 					<td class="code">
-						// Filter reports in date range, based on date target
-						// ToDo
+						// -- VALIDATE DATES --
+						let DateRangeStart = document.getElementsByName('date-range-start');
+						let DateRangeEnd = document.getElementsByName('date-range-end');
+
+						for(let i = 0; i < DateRangeStart.length; i++) {	
+							// Fjern error på click på DateRangeStart[i]
+							DateRangeStart[i].addEventListener("click", function(){
+								removeErrorClass(DateRangeStart[i]);
+							});
+							
+							// Fjern error på focus på DateRangeStart[i]
+							DateRangeStart[i].addEventListener("focus", function(){
+								removeErrorClass(DateRangeStart[i]);
+							});
+							
+							// Trim og kør validering når man trykker ud af DateRangeStart[i]. Primær
+							DateRangeStart[i].addEventListener("blur", function(){
+								DateRangeStart[i].value = DateRangeStart[i].value.trim();
+								dateValidate(DateRangeStart[i]);
+								if(DateRangeEnd[i].value &&
+								DateRangeStart[i].value &&
+								DateRangeStart[i].value > DateRangeEnd[i].value) {
+									addErrorClass(DateRangeEnd[i]);
+									DateRangeEnd[i].title="End date must be higher than start date";
+								} else if(DateRangeEnd[i].value &&
+								DateRangeStart[i].value &&
+								DateRangeStart[i].value <= DateRangeEnd[i].value) {
+									removeErrorClass(DateRangeEnd[i]);
+								}
+							});
+						}
+
+						for(let i = 0; i < DateRangeEnd.length; i++) {	
+							// Fjern error på click på DateRangeEnd[i]
+							DateRangeEnd[i].addEventListener("click", function(){
+								removeErrorClass(DateRangeEnd[i]);
+							});
+							
+							// Fjern error på focus på DateRangeEnd[i]
+							DateRangeEnd[i].addEventListener("focus", function(){
+								removeErrorClass(DateRangeEnd[i]);
+							});
+							
+							// Trim og kør validering når man trykker ud af DateRangeEnd[i]. Primær
+							DateRangeEnd[i].addEventListener("blur", function(){
+								DateRangeEnd[i].value = DateRangeEnd[i].value.trim();
+								dateValidate(DateRangeEnd[i]);
+								if(DateRangeEnd[i].value &&
+								DateRangeStart[i].value &&
+								DateRangeStart[i].value > DateRangeEnd[i].value) {
+									addErrorClass(DateRangeEnd[i]);
+									DateRangeEnd[i].title="End date must be higher than start date";
+								} else if(DateRangeEnd[i].value &&
+								DateRangeStart[i].value &&
+								DateRangeStart[i].value <= DateRangeEnd[i].value) {
+									removeErrorClass(DateRangeEnd[i]);
+								}
+							});
+						}
+
+						function dateValidate(date) {
+							console.log(date.name + ' blev valideret.');
+							let formattedDate = isValidDate(date.value);
+							if(!date.value) {
+								// Empty
+								RemoveErrorClass(date);
+								date.title="";
+								return(false);
+							}
+							if(!formattedDate) {
+								// Incorret format
+								addErrorClass(date);
+								date.title="Incorect format. Required format: yyyy-mm-dd";
+								return(false);
+							} else {
+								// No errors
+								date.value = formattedDate;
+								removeErrorClass(date);
+								date.title="Valid date :-)";
+								return(true);
+							}
+						}	
+
+						function isValidDate(dateString) { // Based on solution from Goblinlord via. https://stackoverflow.com/questions/18758772/how-do-i-validate-a-date-in-this-format-yyyy-mm-dd-using-jquery
+							dateString = dateString.toString().replace(/\-|\.\:/g, '');
+							let regEx = /^\d{4}\d{2}\d{2}$/;
+							if(!dateString.match(regEx)){
+								return(false);
+							}
+							//console.log(dateString);
+							// Remove already placed chars
+							dateString = dateString.slice(0, 6) + '-' + dateString.slice(6);
+							dateString = dateString.slice(0, 4) + '-' + dateString.slice(4);
+							//console.log(dateString);
+							let d = new Date(dateString);
+							let dNum = d.getTime();
+							//console.log(dNum);
+							if(!dNum && dNum !== 0){
+								return(false); // NaN value, Invalid date
+							}
+							//console.log(d);
+							// Match format check 2
+							if(d.toISOString().slice(0,10) !== dateString){
+								return(false); // Not exact format
+							}
+							// Valid - return formatted date
+							return (dateString);
+						}
 					</td>
 				</tr>
 			</table>
@@ -1485,7 +1638,6 @@
 					</td>
 				</tr>
 			</table>
-			<p class="info">Warning eller info.</p>
 		</div>
 	</article>
 	<article id="date-target-knap-på-filter-pop-up">
@@ -3662,9 +3814,9 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<label class="text-input full-width" title="Input your e-mail">
-					<span class="clear-both">E-mail adress</span>
-					<input type="email" name="email-schedule" class="round-corners button-w clear-both full-width" placeholder="example@email.com">
+				<label class="text-input full-width">
+					<span class="clear-both" title="Input your e-mail">E-mail adress</span>
+					<input type="email" name="email-schedule" class="rounded-corners button-w clear-both full-width" placeholder="example@email.com">
 				</label>
 			</div>
 		</div>
@@ -3680,7 +3832,7 @@
 					<td class="code">
 						<label class="text-input full-width" title="Input your e-mail">
 							<span class="clear-both">E-mail adress</span>
-							<input type="email" name="email-schedule" class="round-corners button-w clear-both full-width" placeholder="example@email.com">
+							<input type="email" name="email-schedule" class="rounded-corners button-w clear-both full-width" placeholder="example@email.com">
 						</label>
 					</td>
 					<!-- CSS -->
@@ -3769,21 +3921,16 @@
 		</div>
 	</article>
 	<!-- TIME -->
-	<article id="time">
+	<article id="schedule-date-and-time-input">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Time</h4>
+			<h4 class="styleguide-title">Schedule date and time input</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<div class="frame">
-					<div class="type">
-						<span class="typetext">Time</span>
-						<button class="typebutton">
-							<span class="typebuttontext">00:00</span>
-							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-						</button>
-					</div>
-				</div>
+				<label class="text-input full-width">
+					<span class="clear-both" title="Input date and time for schedule, format: dd-mm-yyyy HH:MM">Date and time</span>
+					<input type="datetime-local" name="schedule-datetime" class="rounded-corners button-w clear-both full-width" placeholder="dd-mm-yyyy HH:MM">
+				</label>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -3808,50 +3955,27 @@
 					</td>
 					<!-- CSS -->
 					<td class="code">
-						/*Here starts CSS code for type button*/
-						.frame {
-							float: left; /* Added float to display height right */
-							background-color: black;
-							width: 100%;
-							/* width: 400px; *//* Did not scale with parrent */
+						input[type="date"]::-webkit-calendar-picker-indicator,
+						input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+							cursor: pointer;
+							color: #fff;
+							fill: #fff;
+							color: transparent;
+							background: none;
+							z-index: 1;
 						}
 
-						.type {
-							width: calc(100% - 10px); /* 100% width -10px margin */
-							margin-left: 5px;
-							margin-right: 5px; /* Margin added */
-						}
-
-						.typetext {
-							float: left; /* Added float to display height right */
-							color: white;
-							font-size: 110%; /* Must be larger on smaller screens */
-						}
-
-						.typebutton {
-							float: left; /* Added float to display height right */
-							width: 100%;
-							border-radius: 10px;
-							font-size: 110%; /* Must be larger on smaller screens */
-						}
-						
-						.typebuttontext {
-							float: left;
-							font-style: italic;
-							color: grey;
-							margin-left: 5px;
-							font-size: 110%;
-						}
-
-						.chevronicon {
-							float: right;
-							margin-top: 5px;
-						}
-
-						@media (min-width:1366){
-							.typetext, .typebutton, .typebuttontext {
-								font-size: 100%;
-							}
+						input[type="date"]::-webkit-calendar-picker-indicator,
+						input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+							content: '';
+							position: absolute;
+							top: calc(50% - 12px);
+							right: 6px;
+							display: block;
+							width: 22px;
+							height: 24px;
+							background: url('../img/icons/calendargreen.svg');
+							/*background: url('../img/icons/calendar.svg');*/
 						}
 					</td>
 					<!-- JavaScript -->
