@@ -939,12 +939,14 @@
 					<!--CSS-->
 					<td class="code">
 						input[type="date"],
-						input[type="datetime-local"] {
+						input[type="datetime-local"],
+						input[type="text"] {
 							cursor: text;
 						}
 
 						input[type="date"]::-webkit-calendar-picker-indicator,
-						input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+						input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+						input[type="time"]::-webkit-calendar-picker-indicator {
 							cursor: pointer;
 							color: #fff;
 							fill: #fff;
@@ -953,15 +955,21 @@
 							z-index: 1;
 						}
 
-						input[type="date"]::-webkit-calendar-picker-indicator,
-						input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+						input[type="date"]:before,
+						input[type="datetime-local"]:before,
+						input[type="time"]:before {
 							content: '';
 							position: absolute;
 							top: calc(50% - 12px);
-							right: 6px;
+							right: 17px;
 							display: block;
+							background-repeat: no-repeat;
+						}
+
+						input[type="date"]:before,
+						input[type="datetime-local"]:before {
 							width: 22px;
-							height: 24px;
+							height: 23px;
 							background: url('../img/icons/calendargreen.svg');
 							/*background: url('../img/icons/calendar.svg');*/
 						}
@@ -3920,7 +3928,7 @@
 			</table>
 		</div>
 	</article>
-	<!-- TIME -->
+	<!-- DATETIME -->
 	<article id="schedule-date-and-time-input">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Schedule date and time input</h4>
@@ -3943,18 +3951,64 @@
 				<tr class="row-two">
 					<!-- HTML -->
 					<td class="code">
-						<div class="frame">
-							<div class="type">
-								<span class="typetext">Time</span>
-								<button class="typebutton">
-									<span class="typebuttontext">00:00</span>
-									<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-								</button>
-							</div>
-						</div>
+						<label class="text-input full-width">
+							<span class="clear-both" title="Input date and time for schedule, format: dd-mm-yyyy HH:MM">Date and time</span>
+							<input type="datetime-local" name="schedule-datetime" class="rounded-corners button-w clear-both full-width" placeholder="dd-mm-yyyy HH:MM">
+						</label>
 					</td>
 					<!-- CSS -->
 					<td class="code">
+						.text-input {
+							float: left;
+						}
+
+						.text-input span {
+							float: left;
+							max-width: 100%;
+							margin-right: 5px;
+							font-size: 142.85%;
+							overflow: hidden;
+						}
+
+						.text-input input {
+							float: left;
+							max-width: 100%;
+							font-size: 142.85%;
+						}
+
+						.clear-both{
+							clear: both;
+						}
+
+						.full-width, .full-width .select-wrapper, .full-width .select-wrapper select {
+							width: 100%;
+						}
+						.rounded-corners {
+							position: relative;
+							min-height: 1px;
+							min-width: 150px;
+							padding: 2px 14px;
+							border-radius: 14px;
+							border: none;
+							font-size: 140%;
+							background-color: #FFF;
+						}
+
+						.rounded-corners b {
+							font-size: 100%;
+						}
+						.button-w{
+							color: #000;
+							background-color: #fff;
+						}
+
+						.button-w:hover {
+							background-color: #e5e5e5;
+						}
+
+						.button-w:active {
+							background-color: #cccccc;
+						}
 						input[type="date"]::-webkit-calendar-picker-indicator,
 						input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 							cursor: pointer;
@@ -3979,7 +4033,247 @@
 						}
 					</td>
 					<!-- JavaScript -->
-					<td class="empty"></td>
+					<td class="code">
+						// - VALIDATE DATE AND TIME FUNCTIONS -
+						function isValidDate(dateString) { // Based on solution from Goblinlord via. https://stackoverflow.com/questions/18758772/how-do-i-validate-a-date-in-this-format-yyyy-mm-dd-using-jquery
+							dateString = dateString.toString().replace(/\-|\.|\:/g, '');
+							let regEx = /^\d{4}\d{2}\d{2}$/;
+							if(!dateString.match(regEx)){
+								return(false);
+							}
+							//console.log(dateString);
+							// Remove already placed chars
+							dateString = dateString.slice(0, 6) + '-' + dateString.slice(6);
+							dateString = dateString.slice(0, 4) + '-' + dateString.slice(4);
+							//console.log(dateString);
+							let d = new Date(dateString);
+							let dNum = d.getTime();
+							//console.log(dNum);
+							if(!dNum && dNum !== 0){
+								return(false); // NaN value, Invalid date
+							}
+							//console.log(d);
+							// Match format check 2
+							if(d.toISOString().slice(0,10) !== dateString){
+								return(false); // Not exact format
+							}
+							// Valid - return formatted date
+							return (dateString);
+						}
+
+						function isValidTime(timeString) {
+							timeString = timeString.toString().replace(/\-|\.|\:/g, '');
+							let regEx = /^\d{2}\d{2}$/;
+							//console.log(timeString);
+							if(!timeString.match(regEx)){
+								return(false);
+							}
+							// Remove already placed chars
+							timeString = timeString.slice(0, 2) + ':' + timeString.slice(2);
+							// Valid - return formatted time
+							return (timeString);
+						}
+						// - SCHEDULE DATETIME  -
+						let scheduleDateTime = document.getElementsByName('schedule-datetime');
+
+						for(let i = 0; i < scheduleDateTime.length; i++) {	
+							// Fjern error på click på scheduleDateTime[i]
+							scheduleDateTime[i].addEventListener("click", function(){
+								removeErrorClass(scheduleDateTime[i]);
+							});
+							
+							// Fjern error på focus på scheduleDateTime[i]
+							scheduleDateTime[i].addEventListener("focus", function(){
+								removeErrorClass(scheduleDateTime[i]);
+							});
+							
+							// Trim og kør validering når man trykker ud af scheduleDateTime[i]
+							scheduleDateTime[i].addEventListener("blur", function(){		
+								dateTimeValidate(scheduleDateTime[i]);
+							});
+						}
+						function dateTimeValidate(dateTime) {
+							console.log(dateTime.name + ' blev valideret.');
+							dateTime.value = dateTime.value.trim();
+							if(!dateTime.value) {
+								// Empty
+								addErrorClass(dateTime);
+								dateTime.title="Cannot be empty";
+								return(false);
+							}
+							if(dateTime.value.match(/T/g)){
+								var method = 'T';
+								var splitDateTime = dateTime.value.split('T');
+							} else if(dateTime.value.match(/\s/g)) {
+								var method = ' ';
+								var splitDateTime = dateTime.value.split(' ');
+							} else {
+								addErrorClass(dateTime);
+								dateTime.title="Missing splits (space) between date and time";
+								return(false); // Missing space between date and time
+							}
+							//console.log(splitDateTime);
+							if(splitDateTime.length > 2){
+								addErrorClass(dateTime);
+								dateTime.title="To many splits in date and time";
+								return(false); // To many spaces
+							}
+							let splitDate = splitDateTime[0];
+							let splitTime = splitDateTime[1];
+							// Validate date
+							let formattedDate = isValidDate(splitDate);
+							if(!formattedDate) {
+								// Incorret format
+								addErrorClass(dateTime);
+								dateTime.title="Incorect date format. Required format: yyyy-mm-dd";
+								return(false);
+							}
+							// Validate time
+							let formattedTime = isValidTime(splitTime);
+							if(!formattedTime) {
+								// Incorret format
+								addErrorClass(dateTime);
+								dateTime.title="Incorect time format. Required format: HH:MM";
+								return(false);
+							}
+							// Splice Date and time together
+							let FormattedDateTime = formattedDate + method + formattedTime;
+							// No errors
+							dateTime.value = FormattedDateTime;
+							removeErrorClass(dateTime);
+							dateTime.title="Valid date and time :-)";
+							return(true);
+						}
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<!-- TIME -->
+	<article id="schedule-time-input">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Schedule time input</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<label class="text-input">
+					<span class="clear-both" title="Input time for schedule, format: HH:MM">Time</span>
+					<input type="time" name="schedule-time" class="rounded-corners button-w clear-both" placeholder="HH:MM">
+				</label>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!-- HTML -->
+					<td class="code">
+						<label class="text-input">
+							<span class="clear-both" title="Input time for schedule, format: HH:MM">Time</span>
+							<input type="time" name="schedule-time" class="rounded-corners button-w clear-both" placeholder="HH:MM">
+						</label>
+					</td>
+					<!-- CSS -->
+					<td class="code">
+						input[type="date"],
+						input[type="datetime-local"],
+						input[type="time"] {
+							cursor: text;
+						}
+						
+						input[type="text"].error,
+						input[type="email"].error,
+						input[type="time"].error,
+						input[type="datetime-local"].error {
+							border: solid 1px #cc3300;
+							color: #cc3300;
+						}
+
+						input[type="date"]::-webkit-calendar-picker-indicator,
+						input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+						input[type="time"]::-webkit-calendar-picker-indicator {
+							cursor: pointer;
+							color: #fff;
+							fill: #fff;
+							color: transparent;
+							background: none;
+							z-index: 1;
+						}
+
+						input[type="date"]:before,
+						input[type="datetime-local"]:before,
+						input[type="time"]:before {
+							content: '';
+							position: absolute;
+							top: calc(50% - 12px);
+							right: 17px;
+							display: block;
+							background-repeat: no-repeat;
+						}
+
+						input[type="time"]:before {
+							width: 23px;
+							height: 23px;
+							background: url('../img/icons/clock.svg');
+						}
+
+						
+						.text-input {
+							float: left;
+						}
+
+						.text-input span {
+							float: left;
+							max-width: 100%;
+							margin-right: 5px;
+							font-size: 142.85%;
+							overflow: hidden;
+						}
+
+						.text-input input {
+							float: left;
+							max-width: 100%;
+							font-size: 142.85%;
+						}
+
+						.clear-both{
+							clear: both;
+						}
+
+						.rounded-corners {
+							position: relative;
+							min-height: 1px;
+							min-width: 150px;
+							padding: 2px 14px;
+							border-radius: 14px;
+							border: none;
+							font-size: 140%;
+							background-color: #FFF;
+						}
+
+						.rounded-corners b {
+							font-size: 100%;
+						}
+						.button-w{
+							color: #000;
+							background-color: #fff;
+						}
+
+						.button-w:hover {
+							background-color: #e5e5e5;
+						}
+
+						.button-w:active {
+							background-color: #cccccc;
+						}
+					</td>
+					<!-- JavaScript -->
+					<td class="code">
+					</td>
 				</tr>
 			</table>
 		</div>
@@ -4284,6 +4578,45 @@
 						}
 					</td>
 					<td class="empty"></td>
+				</tr>
+			</table>
+		</div>
+	</article>
+    <!--  WEEKDAY SWITCH -->
+	<article id="weekday-switch">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Weekday switch for schedule report</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="megaswitch">
+					<input type="radio" class="switch-input0" name="view4" id="a1" checked>
+					<label for="a1" class="switch-label0 switch-label-off0">A1</label>
+
+					<input type="radio" class="switch-input0" name="view4" id="a2">
+					<label for="a2" class="switch-label0 switch-label-on1">A2</label>
+
+					<input type="radio" class="switch-input0" name="view4" id="a3">
+					<label for="a3" class="switch-label0 switch-label-on2">A3</label>
+
+					<input type="radio" class="switch-input0" name="view4" id="a4">
+					<label for="a4" class="switch-label0 switch-label-on3">A4</label>
+
+					<span class="switch-selection0"></span>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+					</td>
+					<td class="code">
+					</td>
 				</tr>
 			</table>
 		</div>

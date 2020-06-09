@@ -885,6 +885,29 @@ function dateTimeValidate(dateTime) {
 	return(true);
 }
 
+function timeValidate(time) {
+	console.log(time.name + ' blev valideret.');
+	time.value = time.value.trim();
+	if(!time.value) {
+		// Empty
+		time.value = '00:00';
+	}
+	
+	// Validate time
+	let formattedTime = isValidTime(time.value);
+	if(!formattedTime) {
+		// Incorret format
+		addErrorClass(time);
+		time.title="Incorect time format. Required format: HH:MM";
+		return(false);
+	}
+	// No errors
+	time.value = formattedTime;
+	removeErrorClass(time);
+	time.title="Valid time :-)";
+	return(true);
+}
+
 // - DATE RANGE  -
 let DateRangeStart = document.getElementsByName('date-range-start');
 let DateRangeEnd = document.getElementsByName('date-range-end');
@@ -965,3 +988,24 @@ for(let i = 0; i < scheduleDateTime.length; i++) {
 		dateTimeValidate(scheduleDateTime[i]);
 	});
 }
+
+// - SCHEDULE TIME -
+let scheduleTime = document.getElementsByName('schedule-time');
+
+for(let i = 0; i < scheduleTime.length; i++) {	
+	// Fjern error på click på scheduleTime[i]
+	scheduleTime[i].addEventListener("click", function(){
+		removeErrorClass(scheduleTime[i]);
+	});
+	
+	// Fjern error på focus på scheduleTime[i]
+	scheduleTime[i].addEventListener("focus", function(){
+		removeErrorClass(scheduleTime[i]);
+	});
+	
+	// Trim og kør validering når man trykker ud af scheduleTime[i]
+	scheduleTime[i].addEventListener("blur", function(){		
+		timeValidate(scheduleTime[i]);
+	});
+}
+

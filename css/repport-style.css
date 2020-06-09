@@ -339,6 +339,7 @@ input.button-w:active {
 
 input[type="text"].error,
 input[type="email"].error,
+input[type="time"].error,
 input[type="datetime-local"].error {
 	border: solid 1px #cc3300;
 	color: #cc3300;
@@ -364,12 +365,14 @@ input[type="datetime-local"].error {
 
 
 input[type="date"],
-input[type="datetime-local"] {
+input[type="datetime-local"],
+input[type="time"] {
 	cursor: text;
 }
 
 input[type="date"]::-webkit-calendar-picker-indicator,
-input[type="datetime-local"]::-webkit-calendar-picker-indicator {
+input[type="datetime-local"]::-webkit-calendar-picker-indicator,
+input[type="time"]::-webkit-calendar-picker-indicator {
 	cursor: pointer;
 	color: #fff;
 	fill: #fff;
@@ -379,17 +382,28 @@ input[type="datetime-local"]::-webkit-calendar-picker-indicator {
 }
 
 input[type="date"]:before,
-input[type="datetime-local"]:before {
+input[type="datetime-local"]:before,
+input[type="time"]:before {
 	content: '';
 	position: absolute;
 	top: calc(50% - 12px);
 	right: 17px;
 	display: block;
+	background-repeat: no-repeat;
+}
+
+input[type="date"]:before,
+input[type="datetime-local"]:before {
 	width: 22px;
 	height: 23px;
 	background: url('../img/icons/calendargreen.svg');
-	background-repeat: none;
 	/*background: url('../img/icons/calendar.svg');*/
+}
+
+input[type="time"]:before {
+	width: 23px;
+	height: 23px;
+	background: url('../img/icons/clock.svg');
 }
 
 
