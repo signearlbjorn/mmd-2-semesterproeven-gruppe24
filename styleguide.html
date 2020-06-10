@@ -3718,6 +3718,258 @@
 			</table>
 		</div>
 	</article>
+	<!-- SHARE AS SELECT -->
+	<article id="share-as-select">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Share as select</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<label class="select-label save-to-select full-width">
+					<span class="select-span">Share as...</span>
+					<div class="select-wrapper">
+						<select name="share-report-as" class="select full-width">
+							<option value="pdf" selected="">PDF</option>
+							<option value="qr">QR-code</option>
+							<option value="link">Link</option>
+						</select>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML-->
+					<td class="code">
+						<label class="select-label save-to-select full-width">
+							<span class="select-span">Share as...</span>
+							<div class="select-wrapper">
+								<select name="share-report-as" class="select full-width">
+									<option value="pdf" selected="">PDF</option>
+									<option value="qr">QR-code</option>
+									<option value="link">Link</option>
+								</select>
+							</div>
+						</label>
+					</td>
+					<!--CSS-->
+					<td class="code">
+						/* save-to-select */
+						.save-to-select {
+							display: block;
+							float: left;
+						}
+
+						/* -- SELECT --*/
+						.select-label {
+							position: relative;
+							float: left;
+							overflow: hidden;
+							cursor: pointer;
+						}
+
+						.select-span {
+							float: left;
+							height: 37px;
+							margin-right: 12px;
+							font-size: 142.85%;
+							line-height: 37px;
+							color: #000;
+						}
+
+						@media (min-width:3200px) {
+							.select-span {
+								font-size: 32px;
+								line-height: 37px;
+							}
+						}
+
+						.select {
+							display: block;
+							padding-left: 10px;
+							padding-right: 28px;
+							border-radius: 19px;
+							font-size: 16px;
+							color: #7C7C7C;
+							font-style: italic;
+							-webkit-appearance: none;
+							-moz-appearance: none;
+							text-overflow: '';
+							border-color: #6F6F6F;
+							background-color: #fff;
+							cursor: pointer;
+						}
+
+						.select option{
+							font-style: normal;
+						}
+
+						@media (min-width:786px) {
+							.select {
+								font-size: 100%;
+							}
+						}
+
+						.select-wrapper {
+							position: relative;
+						}
+
+						.select-wrapper:before {
+							content: "";
+							position: absolute;
+							top: calc(50% - 10px);
+							right: 10px;
+							width: 19px;
+							height: 13px;
+							background-image: url("../img/icons/chevron-down.svg");
+							background-repeat: no-repeat;
+							background-size: cover;
+						}
+						
+						/* - FULL WIDTH SELECT - */
+						.full-width, .full-width .select-wrapper, .full-width .select-wrapper select {
+							width: 100%;
+						}
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<!-- SHARE WITH SELECT -->
+	<article id="share-as-select">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Share WITH</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<label class="select-label save-to-select full-width">
+					<span class="select-span">Share with...</span>
+					<div class="select-wrapper">
+						<select name="share-report-as" class="select full-width disabled">
+							<option value="email" selected="">E-mail</option>
+							<option value="mms">MMS</option>
+							<option value="linkedin">LinkedIn</option>
+							<option value="facebook">Facebook</option>
+							<option value="twitter">Twitter</option>
+						</select>
+					</div>
+				</label>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML-->
+					<td class="code">
+						<label class="select-label save-to-select full-width">
+							<span class="select-span">Share as...</span>
+							<div class="select-wrapper">
+								<select name="share-report-as" class="select full-width">
+									<option value="pdf" selected="">PDF</option>
+									<option value="qr">QR-code</option>
+									<option value="link">Link</option>
+								</select>
+							</div>
+						</label>
+					</td>
+					<!--CSS-->
+					<td class="code">
+						/* save-to-select */
+						.save-to-select {
+							display: block;
+							float: left;
+						}
+
+						/* -- SELECT --*/
+						.select-label {
+							position: relative;
+							float: left;
+							overflow: hidden;
+							cursor: pointer;
+						}
+
+						.select-span {
+							float: left;
+							height: 37px;
+							margin-right: 12px;
+							font-size: 142.85%;
+							line-height: 37px;
+							color: #000;
+						}
+
+						@media (min-width:3200px) {
+							.select-span {
+								font-size: 32px;
+								line-height: 37px;
+							}
+						}
+
+						.select {
+							display: block;
+							padding-left: 10px;
+							padding-right: 28px;
+							border-radius: 19px;
+							font-size: 16px;
+							color: #7C7C7C;
+							font-style: italic;
+							-webkit-appearance: none;
+							-moz-appearance: none;
+							text-overflow: '';
+							border-color: #6F6F6F;
+							background-color: #fff;
+							cursor: pointer;
+						}
+
+						.select option{
+							font-style: normal;
+						}
+
+						@media (min-width:786px) {
+							.select {
+								font-size: 100%;
+							}
+						}
+
+						.select-wrapper {
+							position: relative;
+						}
+
+						.select-wrapper:before {
+							content: "";
+							position: absolute;
+							top: calc(50% - 10px);
+							right: 10px;
+							width: 19px;
+							height: 13px;
+							background-image: url("../img/icons/chevron-down.svg");
+							background-repeat: no-repeat;
+							background-size: cover;
+						}
+						
+						/* - FULL WIDTH SELECT - */
+						.full-width, .full-width .select-wrapper, .full-width .select-wrapper select {
+							width: 100%;
+						}
+					</td>
+					<!-- JavaScript -->
+					<td class="code">
+						// Change secondary action inputs to fit method
+						// ToDo
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
 	<div class="title-area">
 		<div class="wrapper">
 			<h3 class="styleguide-title">Inputs</h3>
@@ -4286,10 +4538,10 @@
 		<div class="example">
 			<div class="wrapper">
 				<div class="frame">
-					<div class="type">
-						<span class="typetext">Message</span>
+					<label class="text-input full-width">
+						<span title="Message to attach">Message</span>
 						<textarea rows="4" cols="50" name="comment" class="type-text-field" placeholder="Enter message here..."></textarea>
-					</div>
+					</label>
 				</div>
 			</div>
 		</div>
@@ -4298,58 +4550,51 @@
 				<tr class="row-one">
 					<th>HTML</th>
 					<th>CSS</th>
-					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
 					<!-- HTML -->
 					<td class="code">
 						<div class="frame">
-							<div class="type">
-								<span class="typetext">Message</span>
-								<textarea rows="4" cols="50" name="comment" class="type-text-field" placeholder="Enter message here..."></textarea>
-							</div>
+							<label class="text-input full-width">
+								<span class="clear-both" title="Message to attach">Message</span>
+								<textarea rows="5" cols="50" name="comment" class="type-text-field clear-both" placeholder="Enter message here..."></textarea>
+							</label>
 						</div>
 					</td>
 					<!-- CSS -->
 					<td class="code">
-						.frame {
-							float: left; /* Added float to display height right */
-							background-color: black;
+						.text-input {
+							float: left;
+						}
+						
+						.full-width, .full-width .select-wrapper, .full-width .select-wrapper select {
 							width: 100%;
-							/* width: 400px; *//* Did not scale with parrent */
+						}
+												
+						.clear-both{
+							clear: both;
 						}
 
-						.type {
-							width: calc(100% - 10px); /* 100% width -10px margin */
-							margin-left: 5px;
-							margin-right: 5px; /* Margin added */
-						}
-
-						.typetext {
-							float: left; /* Added float to display height right */
-							color: white;
-							font-size: 110%; /* Must be larger on smaller screens */
+						.text-input span {
+							float: left;
+							max-width: 100%;
+							margin-right: 5px;
+							font-size: 142.85%;
+							overflow: hidden;
 						}
 
 						.type-text-field{
 							float: left;
 							width: 100%;
-							min-height: 165px;
+							min-height: 136px;
 							padding: 5px;
 							border: solid 1px #707070;
 							border-radius: 6px;
 							resize: none;
 							box-sizing: border-box;
-						}
-
-						@media (min-width:1366){
-							.typetext, .typebutton, .typebuttontext {
-								font-size: 100%;
-							}
+							font-size: 142.85%;
 						}
 					</td>
-					<!-- JavaScript -->
-					<td class="empty"></td>
 				</tr>
 			</table>
 		</div>

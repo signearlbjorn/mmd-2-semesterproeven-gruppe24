@@ -667,12 +667,13 @@ select.typebutton option{
 .type-text-field{
 	float: left;
 	width: 100%;
-	min-height: 165px;
+	min-height: 136px;
 	padding: 5px;
 	border: solid 1px #707070;
 	border-radius: 6px;
 	resize: none;
 	box-sizing: border-box;
+	font-size: 142.85%;
 }
 
 .chevronicon {
