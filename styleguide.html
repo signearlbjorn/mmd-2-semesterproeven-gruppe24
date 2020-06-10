@@ -4525,6 +4525,61 @@
 					</td>
 					<!-- JavaScript -->
 					<td class="code">
+						function isValidTime(timeString) {
+							timeString = timeString.toString().replace(/\-|\.|\:/g, '');
+							let regEx = /^\d{2}\d{2}$/;
+							//console.log(timeString);
+							if(!timeString.match(regEx)){
+								return(false);
+							}
+							// Remove already placed chars
+							timeString = timeString.slice(0, 2) + ':' + timeString.slice(2);
+							// Valid - return formatted time
+							return (timeString);
+						}
+
+						function timeValidate(time) {
+							console.log(time.name + ' blev valideret.');
+							time.value = time.value.trim();
+							if(!time.value) {
+								// Empty
+								time.value = '00:00';
+							}
+							
+							// Validate time
+							let formattedTime = isValidTime(time.value);
+							if(!formattedTime) {
+								// Incorret format
+								addErrorClass(time);
+								time.title="Incorect time format. Required format: HH:MM";
+								return(false);
+							}
+							// No errors
+							time.value = formattedTime;
+							removeErrorClass(time);
+							time.title="Valid time :-)";
+							return(true);
+						}
+
+						// - SCHEDULE TIME -
+						let scheduleTime = document.getElementsByName('schedule-time');
+
+						for(let i = 0; i < scheduleTime.length; i++) {	
+							// Fjern error på click på scheduleTime[i]
+							scheduleTime[i].addEventListener("click", function(){
+								removeErrorClass(scheduleTime[i]);
+							});
+							
+							// Fjern error på focus på scheduleTime[i]
+							scheduleTime[i].addEventListener("focus", function(){
+								removeErrorClass(scheduleTime[i]);
+							});
+							
+							// Trim og kør validering når man trykker ud af scheduleTime[i]
+							scheduleTime[i].addEventListener("blur", function(){		
+								timeValidate(scheduleTime[i]);
+							});
+						}
 					</td>
 				</tr>
 			</table>
