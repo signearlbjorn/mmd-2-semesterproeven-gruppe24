@@ -821,7 +821,82 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<input type="text" name="example" class="round-corners button-w"  placeholder="Search...">
+				<input type="text" name="example" class="round-corners button-w"  placeholder="Placeholder">
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+				</tr>
+				<tr class="row-two">
+					<!-- HTML -->
+                    <td class="code">
+						<input type="text" name="example" class="round-corners button-w"  placeholder="Placeholder">
+                    </td>
+					<!-- CSS -->
+					<td class="code">
+						/* - INPUT - */
+						input {
+							float: left;
+							box-sizing: border-box;
+						}
+						input:placeholder{
+							font-style: italic;
+						}
+
+						input.button-g:hover {
+							background-color: #00CD00;
+						}
+
+						input.button-g:active {
+							background-color: #00b800;
+						}
+
+						input.button-b:hover {
+							background-color: #5071A3;
+						}
+
+						input.button-b:active {
+							background-color: #486592;
+						}
+
+						input.button-r:hover {
+							background-color: #E4342B;
+						}
+
+						input.button-r:active {
+							background-color: #cd2e26;
+						}
+
+						input.button-w:hover {
+							background-color: #fff;
+						}
+
+						input.button-w:active {
+							background-color: #cccccc;
+						}
+						
+						input[type="text"].error,
+						input[type="email"].error,
+						input[type="datetime-local"].error {
+							border: solid 1px #cc3300;
+							color: #cc3300;
+						}
+                   </td>
+				</tr>
+			</table>
+		</div>
+	</article>
+    <!-- TEXTAREA -->
+	<article id="text-area">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Textarea</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<textarea rows="5" cols="50" name="texarea" placeholder="Enter message here..."></textarea>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -4592,12 +4667,10 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<div class="frame">
-					<label class="text-input full-width">
-						<span title="Message to attach">Message</span>
-						<textarea rows="4" cols="50" name="comment" class="type-text-field" placeholder="Enter message here..."></textarea>
-					</label>
-				</div>
+				<label class="text-input full-width">
+					<span title="Message to attach">Message</span>
+					<textarea rows="4" cols="50" name="comment" class="type-text-field" placeholder="Enter message here..."></textarea>
+				</label>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -4609,12 +4682,10 @@
 				<tr class="row-two">
 					<!-- HTML -->
 					<td class="code">
-						<div class="frame">
-							<label class="text-input full-width">
-								<span class="clear-both" title="Message to attach">Message</span>
-								<textarea rows="5" cols="50" name="comment" class="type-text-field clear-both" placeholder="Enter message here..."></textarea>
-							</label>
-						</div>
+						<label class="text-input full-width">
+							<span class="clear-both" title="Message to attach">Message</span>
+							<textarea rows="5" cols="50" name="comment" class="type-text-field clear-both" placeholder="Enter message here..."></textarea>
+						</label>
 					</td>
 					<!-- CSS -->
 					<td class="code">
@@ -4667,11 +4738,16 @@
 		<div class="example">
 			<div class="wrapper">
 				<div class="switch">
-					<input type="radio" class="switch-input" name="view3" value="week3" id="indsæt1" checked>
-					<label for="indsæt1" class="switch-label switch-label-off">Vertical</label>
-					<input type="radio" class="switch-input" name="view3" id="indsæt2">
-					<label for="indsæt2" class="switch-label switch-label-on">Horizontal</label>
-					<span class="switch-selection"></span>
+					<div class="switch-content">
+						<label class="switch-label">
+							<span title="Vertical">Vertical</span>
+							<input type="radio" class="switch-input" name="view-direction" value="vertical" checked>
+						</label>
+						<label class="switch-label">
+							<span title="Horizontal">Horizontal</span>
+							<input type="radio" class="switch-input" name="view-direction" value="horisontal">
+						</label>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -4685,97 +4761,103 @@
 				<tr class="row-two">
 					<td class="code">
 						<div class="switch">
-							<input type="radio" class="switch-input" name="view3" value="week3" id="indsæt1" checked>
-							<label for="indsæt1" class="switch-label switch-label-off">Vertical</label>
-							<input type="radio" class="switch-input" name="view3" id="indsæt2">
-							<label for="indsæt2" class="switch-label switch-label-on">Horizontal</label>
-							<span class="switch-selection"></span>
+							<div class="switch-content">
+								<label class="switch-label">
+									<span title="Vertical">Vertical</span>
+									<input type="radio" class="switch-input" name="view-direction" value="vertical" checked>
+								</label>
+								<label class="switch-label">
+									<span title="Horizontal">Horizontal</span>
+									<input type="radio" class="switch-input" name="view-direction" value="horisontal">
+								</label>
+							</div>
 						</div>
 					</td>
 					<td class="code">
+						/*  - SWITCH - */
 						.switch {
 							position: relative;
-							margin: 20px auto;
-							height: 26px;
-							width: 120px;
-							background: white;
-							border-radius: 15px;
+							overflow: auto;
+							overflow-y: hidden;
+							max-height: 2.8em;
+							max-width: 100%;
+							border-radius: 1000px;
+							background-color: #fff;
+							white-space: nowrap;
 						}
 
-						.switch-label {
+						.switch-content {
+							width: 100%;
+							height: 2.8em;
+						}
+
+						.switch label {
 							position: relative;
-							z-index: 2;
-							float: left;
-							width: 58px;
-							line-height: 26px;
-							font-size: 11px;
-							color: black;
+							width: 95px;
+							max-width: 95px;
+							padding: 0 17px;
 							text-align: center;
 							cursor: pointer;
-						}
-						.switch-label:active {
-							font-weight: regular;
-						}
-
-						.switch-label-off {
-							padding-left: 2px;
+							overflow: hidden;
+							text-overflow: ellipsis; 
+							display: inline-block;
 						}
 
-						.switch-label-on {
-							padding-right: 2px;
-						}
-
-						.switch-input {
-							display: none;
-						}
-
-						.switch-input:checked + .switch-label {
-							font-weight: regular;
+						.switch label span {
+							position: relative;
+							z-index: 2;
+							font-size: 142.85%;
 							color: black;
 						}
 
-						.switch-input:checked + .switch-label-on ~ .switch-selection {
-							left: 60px;
+						.switch input[type="radio"] {
+							visibility: hidden;
+							width: 0;
+							height: 0;
 						}
 
-						.switch-selection {
-							display: block;
+						.switch input[type="radio"]:checked:before {
+							content:"";
 							position: absolute;
+							visibility: visible;
+							top: 0;
+							left: 0;
 							z-index: 1;
-							top: 2px;
-							left: 2px;
-							width: 58px;
-							height: 22px;
+							width: 100%;
+							height: 100%;
+							border-radius: 1000px;
 							background: #00CD00;
-							border-radius: 15px;
 						}
 					</td>
-					<td class="empty"></td>
+					<td class="code">
+						// On load get page direction of page 1, and check corresponding switch
+						// ToDo
+						// Switch Page to Vertical When Vertical is Checked
+						// ToDo
+						// Switch Page to Horisontal When Vertical is Pressed
+						// ToDo
+					</td>
 				</tr>
 			</table>
+			<p class="info">A bug causes the checked value, not to apply on load on the styleguide, but should work if copied.</p>
 		</div>
 	</article>
-    <!--  MEGASWITCH-->
-	<article id="megaswitch">
+    <!-- PREVIEW / TABLE SWITCH -->
+	<article id="preview-table-switch">
 		<div class="wrapper">
-			<h4 class="styleguide-title">MEGASWITCH</h4>
+			<h4 class="styleguide-title">Preview/Table Switch</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<div class="megaswitch">
-					<input type="radio" class="switch-input0" name="view4" id="a1" checked>
-					<label for="a1" class="switch-label0 switch-label-off0">A1</label>
-
-					<input type="radio" class="switch-input0" name="view4" id="a2">
-					<label for="a2" class="switch-label0 switch-label-on1">A2</label>
-
-					<input type="radio" class="switch-input0" name="view4" id="a3">
-					<label for="a3" class="switch-label0 switch-label-on2">A3</label>
-
-					<input type="radio" class="switch-input0" name="view4" id="a4">
-					<label for="a4" class="switch-label0 switch-label-on3">A4</label>
-
-					<span class="switch-selection0"></span>
+				<div class="switch">
+					<label class="switch-label">
+						<span title="Preview">Preview</span>
+						<input type="radio" class="switch-input" name="report-display" value="preview" checked>
+					</label>
+					<label class="switch-label">
+						<span title="Table">Table</span>
+						<input type="radio" class="switch-input" name="report-display" value="table">
+					</label>
 				</div>
 			</div>
 		</div>
@@ -4788,98 +4870,353 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<div class="megaswitch">
-							<input type="radio" class="switch-input0" name="view4" id="a1" checked>
-							<label for="a1" class="switch-label0 switch-label-off0">A1</label>
-
-							<input type="radio" class="switch-input0" name="view4" id="a2">
-							<label for="a2" class="switch-label0 switch-label-on1">A2</label>
-
-							<input type="radio" class="switch-input0" name="view4" id="a3">
-							<label for="a3" class="switch-label0 switch-label-on2">A3</label>
-
-							<input type="radio" class="switch-input0" name="view4" id="a4">
-							<label for="a4" class="switch-label0 switch-label-on3">A4</label>
-
-							<span class="switch-selection0"></span>
+						<div class="switch">
+							<div class="switch-content">
+								<label class="switch-label">
+									<span title="Preview">Preview</span>
+									<input type="radio" class="switch-input" name="report-display" value="preview" checked>
+								</label>
+								<label class="switch-label">
+									<span title="Table">Table</span>
+									<input type="radio" class="switch-input" name="report-display" value="table">
+								</label>
+							</div>
 						</div>
 					</td>
 					<td class="code">
-						.megaswitch {
+						/*  - SWITCH - */
+						.switch {
 							position: relative;
-							height: 26px;
-							width: 240px;
-							background: white;
-							border-radius: 15px;
+							overflow: auto;
+							overflow-y: hidden;
+							max-height: 2.8em;
+							max-width: 100%;
+							border-radius: 1000px;
+							background-color: #fff;
+							white-space: nowrap;
 						}
-						/*slut*/
 
-						/*style for labels*/
-						.switch-label0 {
+						.switch-content {
+							width: 100%;
+							height: 2.8em;
+						}
+
+						.switch label {
 							position: relative;
-							z-index: 2;
-							float: left;
-							width: 58px;
-							line-height: 26px;
-							font-size: 11px;
-							color: black;
+							width: 95px;
+							max-width: 95px;
+							padding: 0 17px;
 							text-align: center;
 							cursor: pointer;
-						}
-						.switch-label0:active {
-							font-weight: regular;
-						}
-
-						.switch-label-off0 {
-							padding-left: 2px;
+							overflow: hidden;
+							text-overflow: ellipsis; 
+							display: inline-block;
 						}
 
-						.switch-label-on0 {
-							padding-right: 2px;
-						}
-						/*slut*/
-
-						/*style for labels*/
-							.switch-input0 {
-							display: none;
-						}
-						/*slut*/
-
-						/*styling for hvor den runde grønne knap (.switch-selector) skal rykke sig hen alt efter hvilket hvilket label der bliver "checked" */
-						.switch-input0:checked + .switch-label0 {
-							font-weight: bold;
+						.switch label span {
+							position: relative;
+							z-index: 2;
+							font-size: 142.85%;
 							color: black;
 						}
 
-						.switch-input0:checked + .switch-label-on1 ~ .switch-selection0 {
-							left: 60px;
+						.switch input[type="radio"] {
+							visibility: hidden;
+							width: 0;
+							height: 0;
 						}
 
-						.switch-input0:checked + .switch-label-on2 ~ .switch-selection0 {
-							left: 120px;
-						}
-
-						.switch-input0:checked + .switch-label-on3 ~ .switch-selection0 {
-							left: 180px;
-						}
-						/*slut*/
-
-						/*style for den runde grønne knap der switcher fra højre til venstre*/
-						.switch-selection0 {
-							display: block;
+						.switch input[type="radio"]:checked:before {
+							content:"";
 							position: absolute;
+							visibility: visible;
+							top: 0;
+							left: 0;
 							z-index: 1;
-							top: 2px;
-							left: 2px;
-							width: 58px;
-							height: 22px;
+							width: 100%;
+							height: 100%;
+							border-radius: 1000px;
 							background: #00CD00;
-							border-radius: 15px;
 						}
 					</td>
-					<td class="empty"></td>
+					<td class="code">
+						// Switch report display to preview style when preview is checked
+						// ToDo
+						// Switch report display to table style when table is checked
+						// ToDo
+					</td>
 				</tr>
 			</table>
+			<p class="info">A bug causes the checked value, not to apply on load on the styleguide, but should work if copied.</p>
+		</div>
+	</article>
+    <!-- SINGLE & MULTIPLE PAGE DISPLAY SWITCH -->
+	<article id="single-and-multiple-page-display-switch">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Single or multiple page display switch</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="switch">
+					<div class="switch-content">
+						<label class="switch-label">
+							<span title="View single page">Single</span>
+							<input type="radio" class="switch-input" name="page-display" value="single" checked>
+						</label>
+						<label class="switch-label">
+							<span title="View multiple pages">Multiple</span>
+							<input type="radio" class="switch-input" name="page-display" value="multiple">
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<div class="switch">
+							<div class="switch-content">
+								<label class="switch-label">
+									<span title="View single page">Single</span>
+									<input type="radio" class="switch-input" name="page-display" value="single" checked>
+								</label>
+								<label class="switch-label">
+									<span title="View multiple pages">Multiple</span>
+									<input type="radio" class="switch-input" name="page-display" value="multiple">
+								</label>
+							</div>
+						</div>
+					</td>
+					<td class="code">
+						/*  - SWITCH - */
+						.switch {
+							position: relative;
+							overflow: auto;
+							overflow-y: hidden;
+							max-height: 2.8em;
+							max-width: 100%;
+							border-radius: 1000px;
+							background-color: #fff;
+							white-space: nowrap;
+						}
+
+						.switch-content {
+							width: 100%;
+							height: 2.8em;
+						}
+
+						.switch label {
+							position: relative;
+							width: 95px;
+							max-width: 95px;
+							padding: 0 17px;
+							text-align: center;
+							cursor: pointer;
+							overflow: hidden;
+							text-overflow: ellipsis; 
+							display: inline-block;
+						}
+
+						.switch label span {
+							position: relative;
+							z-index: 2;
+							font-size: 142.85%;
+							color: black;
+						}
+
+						.switch input[type="radio"] {
+							visibility: hidden;
+							width: 0;
+							height: 0;
+						}
+
+						.switch input[type="radio"]:checked:before {
+							content:"";
+							position: absolute;
+							visibility: visible;
+							top: 0;
+							left: 0;
+							z-index: 1;
+							width: 100%;
+							height: 100%;
+							border-radius: 1000px;
+							background: #00CD00;
+						}
+					</td>
+					<td class="code">
+						// Switch display method to single page view when single is Checked
+						/* Enable:
+							- previous page button
+							- Vertical or horisontal switch
+							- Add page
+							- Delete page
+							- next page button
+							- Page size switch
+						/*
+						// ToDo
+						// Switch display method to multiple page view when multiple is Checked
+						/* Disable:
+							- previous page button
+							- Vertical or horisontal switch
+							- Add page
+							- Delete page
+							- next page button
+							- Page size switch
+						/*
+						// ToDo
+					</td>
+				</tr>
+			</table>
+			<p class="info">A bug causes the checked value, not to apply on load on the styleguide, but should work if copied.</p>
+		</div>
+	</article>
+    <!--  PAGE SIZE SWITCH -->
+	<article id="page-size-switch">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Page size switch</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div class="switch">
+					<div class="switch-content">
+						<label class="switch-label">
+							<span title="A1">A1</span>
+							<input type="radio" class="switch-input" name="page-size" value="a1">
+						</label>
+						<label class="switch-label">
+							<span title="A2">A2</span>
+							<input type="radio" class="switch-input" name="page-size" value="a2">
+						</label>
+						<label class="switch-label">
+							<span title="A3">A3</span>
+							<input type="radio" class="switch-input" name="page-size" value="a3">
+						</label>
+						<label class="switch-label">
+							<span title="A4">A4</span>
+							<input type="radio" class="switch-input" name="page-size" value="a4" checked>
+						</label>
+						<label class="switch-label">
+							<span title="16:9">16:9</span>
+							<input type="radio" class="switch-input" name="page-size" value="w16h9">
+						</label>
+						<label class="switch-label">
+							<span title="4:3">4:3</span>
+							<input type="radio" class="switch-input" name="page-size" value="w4h3">
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<td class="code">
+						<div class="switch">
+							<div class="switch-content">
+								<label class="switch-label">
+									<span title="A1">A1</span>
+									<input type="radio" class="switch-input" name="page-size" value="a1">
+								</label>
+								<label class="switch-label">
+									<span title="A2">A2</span>
+									<input type="radio" class="switch-input" name="page-size" value="a2">
+								</label>
+								<label class="switch-label">
+									<span title="A3">A3</span>
+									<input type="radio" class="switch-input" name="page-size" value="a3">
+								</label>
+								<label class="switch-label">
+									<span title="A4">A4</span>
+									<input type="radio" class="switch-input" name="page-size" value="a4" checked>
+								</label>
+								<label class="switch-label">
+									<span title="16:9">16:9</span>
+									<input type="radio" class="switch-input" name="page-size" value="w16h9">
+								</label>
+								<label class="switch-label">
+									<span title="4:3">4:3</span>
+									<input type="radio" class="switch-input" name="page-size" value="w4h3">
+								</label>
+							</div>
+						</div>
+					</td>
+					<td class="code">
+						/*  - SWITCH - */
+						.switch {
+							position: relative;
+							overflow: auto;
+							overflow-y: hidden;
+							max-height: 2.8em;
+							max-width: 100%;
+							border-radius: 1000px;
+							background-color: #fff;
+							white-space: nowrap;
+						}
+
+						.switch-content {
+							width: 100%;
+							height: 2.8em;
+						}
+
+						.switch label {
+							position: relative;
+							width: 95px;
+							max-width: 95px;
+							padding: 0 17px;
+							text-align: center;
+							cursor: pointer;
+							overflow: hidden;
+							text-overflow: ellipsis; 
+							display: inline-block;
+						}
+
+						.switch label span {
+							position: relative;
+							z-index: 2;
+							font-size: 142.85%;
+							color: black;
+						}
+
+						.switch input[type="radio"] {
+							visibility: hidden;
+							width: 0;
+							height: 0;
+						}
+
+						.switch input[type="radio"]:checked:before {
+							content:"";
+							position: absolute;
+							visibility: visible;
+							top: 0;
+							left: 0;
+							z-index: 1;
+							width: 100%;
+							height: 100%;
+							border-radius: 1000px;
+							background: #00CD00;
+						}
+					</td>
+					<!-- JavaScript -->
+					<td class="code">
+						// On load, get page size, and check corosponding checkbox
+						// ToDo
+						// On press on size, apply corrosonding size
+						// ToDo
+					</td>
+				</tr>
+			</table>
+			<p class="info">A bug causes the checked value, not to apply on load on the styleguide, but should work if copied.</p>
 		</div>
 	</article>
     <!--  WEEKDAY SWITCH -->
@@ -4889,20 +5226,37 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<div class="megaswitch">
-					<input type="radio" class="switch-input0" name="view4" id="a1" checked>
-					<label for="a1" class="switch-label0 switch-label-off0">A1</label>
-
-					<input type="radio" class="switch-input0" name="view4" id="a2">
-					<label for="a2" class="switch-label0 switch-label-on1">A2</label>
-
-					<input type="radio" class="switch-input0" name="view4" id="a3">
-					<label for="a3" class="switch-label0 switch-label-on2">A3</label>
-
-					<input type="radio" class="switch-input0" name="view4" id="a4">
-					<label for="a4" class="switch-label0 switch-label-on3">A4</label>
-
-					<span class="switch-selection0"></span>
+				<div class="switch">
+					<div class="switch-content">
+						<label class="switch-label">
+							<span title="Monday">Monday</span>
+							<input type="checkbox" class="switch-input" name="schedule-weekday-monday">
+						</label>
+						<label class="switch-label">
+							<span title="Tuesday">Tuesday</span>
+							<input type="checkbox" class="switch-input" name="schedule-weekday-tuesday">
+						</label>
+						<label class="switch-label">
+							<span title="Wednesday">Wednesday</span>
+							<input type="checkbox" class="switch-input" name="schedule-weekday-wednesday">
+						</label>
+						<label class="switch-label">
+							<span title="Thursday">Thursday</span>
+							<input type="checkbox" class="switch-input" name="schedule-weekday-thursday">
+						</label>
+						<label class="switch-label">
+							<span title="Friday">Friday</span>
+							<input type="checkbox" class="switch-input" name="schedule-weekday-friday">
+						</label>
+						<label class="switch-label">
+							<span title="Saturday">Saturday</span>
+							<input type="checkbox" class="switch-input" name="schedule-weekday-saturday">
+						</label>
+						<label class="switch-label">
+							<span title="Sunday">Sunday</span>
+							<input type="checkbox" class="switch-input" name="schedule-weekday-sunday">
+						</label>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -4914,8 +5268,92 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
+						<div class="switch">
+							<div class="switch-content">
+								<label class="switch-label">
+									<span title="Monday">Monday</span>
+									<input type="checkbox" class="switch-input" name="schedule-weekday-monday">
+								</label>
+								<label class="switch-label">
+									<span title="Tuesday">Tuesday</span>
+									<input type="checkbox" class="switch-input" name="schedule-weekday-tuesday">
+								</label>
+								<label class="switch-label">
+									<span title="Wednesday">Wednesday</span>
+									<input type="checkbox" class="switch-input" name="schedule-weekday-wednesday">
+								</label>
+								<label class="switch-label">
+									<span title="Thursday">Thursday</span>
+									<input type="checkbox" class="switch-input" name="schedule-weekday-thursday">
+								</label>
+								<label class="switch-label">
+									<span title="Friday">Friday</span>
+									<input type="checkbox" class="switch-input" name="schedule-weekday-friday">
+								</label>
+								<label class="switch-label">
+									<span title="Saturday">Saturday</span>
+									<input type="checkbox" class="switch-input" name="schedule-weekday-saturday">
+								</label>
+								<label class="switch-label">
+									<span title="Sunday">Sunday</span>
+									<input type="checkbox" class="switch-input" name="schedule-weekday-sunday">
+								</label>
+							</div>
+						</div>
 					</td>
 					<td class="code">
+						/*  - SWITCH - */
+						.switch {
+							position: relative;
+							overflow: auto;
+							overflow-y: hidden;
+							max-height: 2.8em;
+							max-width: 100%;
+							border-radius: 1000px;
+							background-color: #fff;
+							white-space: nowrap;
+						}
+
+						.switch-content {
+							width: 100%;
+							height: 2.8em;
+						}
+
+						.switch label {
+							position: relative;
+							width: 95px;
+							max-width: 95px;
+							padding: 0 17px;
+							text-align: center;
+							cursor: pointer;
+							overflow: hidden;
+							text-overflow: ellipsis; 
+							display: inline-block;
+						}
+
+						.switch label span {
+							position: relative;
+							z-index: 2;
+							font-size: 142.85%;
+							color: black;
+						}
+
+						.switch input[type="checkbox"] {
+							width: 0;
+							height: 0;
+						}
+
+						.switch input[type="checkbox"]:checked:before {
+							content:"";
+							position: absolute;
+							visibility: visible;
+							top: 0;
+							left: 17px;
+							z-index: 1;
+							width: calc(100% - 34px);
+							height: 100%;
+							background: #00CD00;
+						}
 					</td>
 				</tr>
 			</table>
