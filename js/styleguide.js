@@ -507,9 +507,22 @@ function saveCookieTableExplainer() {
     document.cookie = "tableExplainer" + "=" + 1 + ";" + cookieExpire + ";path=/";
     console.log('Cookie - tableExplainer - is saved.')
 }
-/*Js for burgermenu change*/
+
+/* -- BURGER MENU -- */
+let burgerMenu = document.getElementsByClassName("burger-menu");
+let mainNavigation = document.getElementById("main-navigation");
+
+for(let i = 0; i < burgerMenu.length; i++) {
+	burgerMenu[i].addEventListener("click", function(){burgerMenuChange(burgerMenu[i])});
+	burgerMenu[i].addEventListener("click", function(){hiddenToggle(mainNavigation)});
+}
+
 function burgerMenuChange(burgerMenu) {
-  burgerMenu.classList.toggle("change");
+	burgerMenu.classList.toggle("change");
+}
+
+function hiddenToggle(element) {
+	element.classList.toggle("hidden");
 }
 
 

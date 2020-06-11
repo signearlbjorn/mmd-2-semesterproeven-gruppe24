@@ -2477,7 +2477,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<div class="burgerMenu" onclick="burgerMenuChange(this)">
+				<div class="burger-menu">
 					<div class="bar1"></div>
 					<div class="bar2"></div>
 					<div class="bar3"></div>
@@ -2493,14 +2493,14 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<div class="burgerMenu" onclick="burgerMenuChange(burgerMenu)">
+						<div class="burger-menu">
 							<div class="bar1"></div>
 							<div class="bar2"></div>
 							<div class="bar3"></div>
 						</div>
 					</td>
 					<td class="code">
-						.burgerMenu{
+						.burger-menu{
 							display: inline-block;
 							cursor: pointer;
 							float: left;
@@ -2528,7 +2528,7 @@
 							-webkit-transform: rotate(45deg) translate(-8px, -8px);
 							transform: rotate(45deg) translate(-8px, -8px);
 						}
-						.burgerMenu:hover + .hiddenNav{
+						.burger-menu:hover + .hiddenNav{
 							display: block;
 						}
 					</td>
@@ -5376,7 +5376,12 @@
 		<div class="example">
 			<header id="main-header">
 				<div class="wrapper">
-					<nav id="main-navigation">
+					<div class="burger-menu">
+						<div class="bar1"></div>
+						<div class="bar2"></div>
+						<div class="bar3"></div>
+					</div>
+					<nav id="main-navigation" class="hidden">
 						<!--LOGO-->
 						<a href="index.html" class="disabled">
 							<img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io">
@@ -5429,485 +5434,260 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<nav>
-							<div class="branddiv">
-								<!--LOGO-->
-								<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
-								<!--MAIN NAVIGATION-->
-								<ul class="navbarulleft">
-									<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
-									<li><a>Trendboards</a></li>
-									<li><a>Reports</a></li>
-									<li><a>Views</a></li>
-									<li><a>Feeds</a></li>
-									<li><a>Settings</a></li>
-									<li><a>Shares</a></li>
-								</ul>
+						<header id="main-header">
+							<div class="wrapper">
+								<div class="burger-menu">
+									<div class="bar1"></div>
+									<div class="bar2"></div>
+									<div class="bar3"></div>
+								</div>
+								<nav id="main-navigation" class="hidden">
+									<!--LOGO-->
+									<a href="index.html" class="disabled">
+										<img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io">
+									</a>
+									<ul class="navbarulleft">
+										<li>
+											<a href="#" class="disabled"><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
+										<li><a href="#" class="disabled">Trendboards</a></li>
+										<li><a href="overview.html" title="Reports module - see, schedule and setup reports">Reports</a></li>
+										<li><a href="#" class="disabled">Views</a></li>
+										<li><a href="#" class="disabled">Feeds</a></li>
+										<li><a href="#" class="disabled">Settings</a></li>
+										<li><a href="#" class="disabled">Shares</a></li>
+									</ul>
+									<ul class="navbarulright" style="float: right;">
+										<li><a href="#" class="disabled"><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
+										<li><a href="#" class="disabled"><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
+										<li><a href="#" class="disabled"><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
+										<li>
+											<form action="/" method="get" class="disabled">
+												<label>
+													<span class="channels">Channels</span>
+													<select class="channelselect round-corners disabled">
+														<option value="channel-1">Channel 1</option>
+														<option value="channel-2">Channel 2</option>
+														<option value="channel-3">Channel 3</option>
+														<option value="channel-4">Channel 4</option>
+													</select>
+												</label>
+											</form>
+										</li>
+										<!--USERNAME-->
+										<li class="profiledropdown">
+											<a href="#" class="disabled profiledropdown-a">
+												<span class="username">Profile P.</span>
+												<img class="profile-icon" src="img/icons/user.svg" alt="profile">
+											</a>
+										</li>
+									</ul>
+								</nav>
 							</div>
-							<div class="profilediv">
-								<ul class="navbarulright" style="float: right;">
-									<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
-									<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
-									<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
-									<li><span class="channels">channels</span></li>
-									<li class="selection">
-										<select class="channelselect">
-											<option>channelnames</option>
-										</select>
-									</li>
-									<!--USERNAME-->
-									<li class="profiledropdown">
-										<a class="profiledropdown-a">
-											<span class="username">Profile P.</span>
-											<img class="profile-icon" src="img/icons/user.svg" alt="profile">
-										</a>
-									</li>
-								</ul>
-							</div>
-						</nav>
+						</header>
 					</td>
 					<!--CSS to copy-->
 					<td class="code">
-						nav{
+						/* --- MAIN NAVIGATION --- */
+						#main-navigation {
+							display: block;
+							float: left;
 							width: 100%;
-							float: left;
 							background-color: #222;
-							display: block;
 						}
-						nav div{
+
+						#main-navigation.hidden {
 							display: block;
+							height: 0;
+							min-height: 0;
+							overflow: hidden;
+						}
+
+						#main-navigation ul {
+							list-style: none;
+						}
+
+						#main-navigation ul,
+						#main-navigation ul li,
+						#main-navigation ul li a,
+						#main-navigation ul li img,
+						#main-navigation ul li span,
+						#main-navigation ul li form,
+						#main-navigation ul li form label,
+						#main-navigation ul li form label span {
 							float: left;
+							line-height: 51px;	
 						}
+
+						#main-navigation ul,
+						#main-navigation ul li,
+						#main-navigation ul li form,
+						#main-navigation ul li form label{
+							width: 100%;
+						}
+
+						#main-navigation ul li,
+						.brandidentity {
+							margin-bottom: 5px;
+						}
+
+						#main-navigation ul li form label span {
+							width: auto;
+						}
+
+						#main-navigation > a,
+						#main-navigation ul li a{
+							float: left;
+							padding: 0;
+							margin: 0;
+							font-size: 100%;
+							font-weight: bold;
+							color: #ffffff;
+							text-decoration: none;
+						}
+
+						#main-navigation ul li img {
+							width: 21px;
+							height: 21px;
+							margin: 0 5px;
+						}
+
 						.navbarulleft {
 							list-style: none;
 							float: left;
 						}
-						.navbarulleft li{
-							float: left;
-						}
-						.navbarulleft a{
-							font-weight: bold;
-							font-size: 14px;
-							color: #ffffff;
-							float: left;
-							padding: 15px;
-							text-decoration: none;
-						}
-						.profilediv{
-							float: right;
+
+						.brandidentity {
+							width: 130px;
+							height: 21px;
 						}
 
 						.navbarulright {
-							list-style: none;
 							float: right;
 						}
-						.navbarulright li{
-							float: left;
-						}
-						img.icon{
-							display: block;
-							width: 14px;
-						}
-						.brandidentity{
-							width: 130px;
-							padding: 0px 7.75px;
-							margin-bottom: -8px;
-						}
-						nav a{
-							font-weight: bold;
-							font-size: 14px;
-							color: #ffffff;
-							float: left;
-							padding: 15px;
-							text-decoration: none;
-						}
-						nav a:hover{
+
+						#main-navigation a:hover{
 							background: #444;
 						}
-						.selection{
-							margin-top: 6px;
-						}
+
 						.channels{
-							color: #9d9d9d;
-							font-size: 14px;
-							font-weight: 100;
 							float: left;
-							padding: 15px;
-						 }
+							margin-right:15px;
+							color: #9d9d9d;
+							font-size: 100%;
+							font-weight: normal;
+						}
+
 						.channelselect{
+							float: left;
 							display: block;
-							width: 100%;
-							height: 34px;
-							padding: 6px 12px;
-							font-size: 14px;
-							line-height: 1.42857143;
+							height: 31px;
+							max-width: 285px;
+							margin: 10px 0;
+							font-size: 100%;
 							color: #555;
 							background-color: #fff;
-							background-image: none;
-							border: 1px solid #ccc;
-							border-radius: 4px;
-							-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-							box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-							-webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-							-o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-							transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 						}
-						.profiledropdown-a{
-							width: 80%;
-						}
-						.profiledropdown{
-							width: 200px;
-							float: right;
-						}
+
 						.username{
-							float: left;
-							font-weight: bold;
-							font-size: 14px;
-							color: #ffffff;
+							margin-right: 5px;
+							color: #fff;
 						}
-						.profile-icon{
-							display: block;
-							width: 14px;
-							float: right;
-							margin-right: 30px;
+
+						@media (min-width: 1366px) {
+							#main-navigation {
+								display: block;
+								min-height: 51px;
+							}
+							
+							#main-navigation.hidden {
+								height: auto;
+								min-height: 51px;
+							}
+							
+							header .burger-menu{
+								display: none;
+							}
+							
+							#main-navigation ul,
+							#main-navigation ul li,
+							#main-navigation ul li a,
+							#main-navigation ul li img,
+							#main-navigation ul li span,
+							#main-navigation ul li form,
+							#main-navigation ul li form label,
+							#main-navigation ul li form label span {
+								line-height: 51px;	
+							}
+							
+							#main-navigation ul,
+							#main-navigation ul li,
+							#main-navigation ul li form,
+							#main-navigation ul li form label,
+							#main-navigation ul li form label span {
+								width: auto;
+							}
+							
+							#main-navigation ul li,
+							.brandidentity {
+								margin-bottom: 0;
+							}
+							
+							#main-navigation > a,
+							#main-navigation ul li a{
+								padding: 0 12px;
+								margin: 0 3px;
+							}
+
+							#main-navigation ul li img {
+								margin: 15px 0;
+							}
+
+							.brandidentity {
+								margin: 15px 0;
+							}
+						}
+
+						@media (min-width: 3840px) {
+							#main-navigation ul,
+							#main-navigation ul li,
+							#main-navigation ul li a,
+							#main-navigation ul li img,
+							#main-navigation ul li span,
+							#main-navigation ul li form,
+							#main-navigation ul li form label,
+							#main-navigation ul li form label span {
+								line-height: 102px;	
+							}
+
+							#main-navigation ul li img {
+								margin: 30px 0;
+							}
+
+							.brandidentity {
+								margin: 30px 0;
+							}
 						}
 					</td>
 					<!--Js to copy-->
-					<td class="empty"></td>
-				</tr>
-			</table>
-		</div>
-	</article>
-	<!-- organisme tabel for 'Navigation-Bar' - slut -->
-	<!-- organisme tabel for 'Navigation-Bar for smaller screens' - start-->
-	<article id="navbar-bar-small-screens">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Navigations-Bar smaller screens</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<nav class="smallnav">
-					<div class="branddiv">
-						<!--LOGO-->
-						<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
-						<!--MAIN NAVIGATION-->
-						<ul>
-							<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
-							<li><a>Trendboards</a></li>
-							<li><a>Reports</a></li>
-							<li><a>Views</a></li>
-							<li><a>Feeds</a></li>
-							<li><a>Settings</a></li>
-							<li><a>Shares</a></li>
-						</ul>
-					</div>
-					<div>
-						<ul>
-							<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
-							<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
-							<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
-							<li><span class="channels">channels</span></li>
-							<li class="selection">
-								<select class="channelselect">
-									<option>channelnames</option>
-								</select></li>
-							<!--USERNAME-->
-							<li class="profiledropdown">
-								<a class="profiledropdown-a">
-									<span class="username">Profile P.</span>
-									<img class="profile-icon" src="img/icons/user.svg" alt="profile">
-								</a>
-							</li>
-						</ul>
-					</div>
-				</nav>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="overvieworganimser">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
 					<td class="code">
-						<nav class="smallnav">
-							<div class="branddiv">
-								<!--LOGO-->
-								<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
-								<!--MAIN NAVIGATION-->
-								<ul>
-									<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
-									<li><a>Trendboards</a></li>
-									<li><a>Reports</a></li>
-									<li><a>Views</a></li>
-									<li><a>Feeds</a></li>
-									<li><a>Settings</a></li>
-									<li><a>Shares</a></li>
-								</ul>
-							</div>
-							<div>
-								<ul>
-									<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
-									<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
-									<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
-									<li><span class="channels">channels</span></li>
-									<li class="selection">
-										<select class="channelselect">
-											<option>channelnames</option>
-										</select></li>
-									<!--USERNAME-->
-									<li class="profiledropdown">
-										<a class="profiledropdown-a">
-											<span class="username">Profile P.</span>
-											<img class="profile-icon" src="img/icons/user.svg" alt="profile">
-										</a>
-									</li>
-								</ul>
-							</div>
-						</nav>
-					</td>
-					<!--CSS to copy-->
-					<td class="code">
-						.smallnav{
-							position: absolute;
-							top: 0;
-							left: 0;
-							float: left;
-							background-color: #222;
-							display: block;
-							width: 100%;
-							height: 100vh;
-							overflow-y: auto;
-						}
-						.smallnav div{
-							display: block;
-							float: le	ft;
-							width: 100%;
+						/* -- BURGER MENU -- */
+						let burgerMenu = document.getElementsByClassName("burger-menu");
+						let mainNavigation = document.getElementById("main-navigation");
+
+						for(let i = 0; i < burgerMenu.length; i++) {
+							burgerMenu[i].addEventListener("click", function(){burgerMenuChange(burgerMenu[i])});
+							burgerMenu[i].addEventListener("click", function(){hiddenToggle(mainNavigation)});
 						}
 
-						.smallnav div ul {
-							list-style: none;
-							float: left;
-							width: 100%;
-						}
-						.smallnav div ul li{
-							width: 100%;
-						}
-						.smallnav div ul li a{
-							font-weight: bold;
-						}
-
-						.smallnav img.icon{
-							display: block;
-							width: 14px;
-						}
-
-						.smallnav a{
-							font-weight: bold;
-							color: #ffffff;
-							float: left;
-							padding: 15px;
-							text-decoration: none;
-							width: 100%;
-							box-sizing: border-box;
-							cursor: pointer;
-						}
-						.smallnav a:hover{
-							background: #444;
-						}
-
-						.selection{
-							margin-top: 6px;
-						}
-
-						.smallnav .channels{
-							color: #9d9d9d;
-							font-size: 14px;
-							font-weight: 100;
-							padding: 15px;
-						 }
-
-						.smallnav .channelselect{
-						    display: block;
-						    width: calc(100% - 30px); /* 100% width - 30px margin*/
-						    height: 34px;
-						    padding: 6px 12px;
-							margin: 0 15px;
-						    color: #555;
-						    background-color: #fff;
-						    background-image: none;
-						    border: 1px solid #ccc;
-						    border-radius: 4px;
-						    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-						    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-						    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-						    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-						    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-						}
-
-						.smallnav.profiledropdown-a{
-							width: 80%;
-						}
-						.smallnav.profiledropdown{
-							width: 200px;
-						}
-
-						.smallnav.username{
-							float: left;
-							font-weight: bold;
-							font-size: 14px;
-							color: #ffffff;
-						}
-						.smallnav.profile-icon{
-							display: block;
-							width: 14px;
-							float: right;
-						}
-					</td>
-					<!--Js to copy-->
-					<td class="empty"></td>
-				</tr>
-			</table>
-		</div>
-	</article>
-	<!-- organisme tabel for 'Navigation-Bar for smaller screens' - start-->
-	<article id="burgerMenuKnapFunction">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Burger menu knap + function</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<div class="burgerMenu" onclick="burgerMenuChange(this)">
-					<div class="bar1"></div>
-					<div class="bar2"></div>
-					<div class="bar3"></div>
-				</div>
-				<nav class="smallnav hiddenNav">
-					<div class="branddiv">
-						<!--LOGO-->
-						<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
-			            <!--MAIN NAVIGATION-->
-						<ul>
-							<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
-							<li><a>Trendboards</a></li>
-							<li><a>Reports</a></li>
-							<li><a>Views</a></li>
-							<li><a>Feeds</a></li>
-							<li><a>Settings</a></li>
-							<li><a>Shares</a></li>
-						</ul>
-					</div>
-					<div>
-						<ul>
-							<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
-							<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
-							<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
-							<li><span class="channels">channels</span></li>
-							<li class="selection">
-								<select class="channelselect">
-									<option>channelnames</option>
-								</select></li>
-							<!--USERNAME-->
-							<li class="profiledropdown">
-								<a class="profiledropdown-a">
-									<span class="username">Profile P.</span>
-									<img class="profile-icon" src="img/icons/user.svg" alt="profile">
-								</a>
-							</li>
-						</ul>
-					</div>
-				</nav>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="table-ref">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<td class="code">
-						<div class="burgerMenu" onclick="burgerMenuChange(burgerMenu)">
-							<div class="bar1"></div>
-							<div class="bar2"></div>
-							<div class="bar3"></div>
-						</div>
-						<nav class="smallnav hiddenNav">
-							<div class="branddiv">
-								<!--LOGO-->
-								<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
-					            <!--MAIN NAVIGATION-->
-								<ul>
-									<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
-									<li><a>Trendboards</a></li>
-									<li><a>Reports</a></li>
-									<li><a>Views</a></li>
-									<li><a>Feeds</a></li>
-									<li><a>Settings</a></li>
-									<li><a>Shares</a></li>
-								</ul>
-							</div>
-							<div>
-								<ul>
-									<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
-									<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
-									<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
-									<li><span class="channels">channels</span></li>
-									<li class="selection">
-										<select class="channelselect">
-											<option>channelnames</option>
-										</select></li>
-									<!--USERNAME-->
-									<li class="profiledropdown">
-										<a class="profiledropdown-a">
-											<span class="username">Profile P.</span>
-											<img class="profile-icon" src="img/icons/user.svg" alt="profile">
-										</a>
-									</li>
-								</ul>
-							</div>
-						</nav>
-					</td>
-					<td class="code">
-						.burgerMenu{
-							display: inline-block;
-							cursor: pointer;
-							float: none;
-							width: 35px;
-						}
-
-						.bar1, .bar2, .bar3 {
-							width: 35px;
-							height: 5px;
-							background-color: #333;
-							margin: 3px 0;
-							transition: 0.4s;
-						}
-
-						.change .bar1 {
-							-webkit-transform: rotate(-45deg) translate(-9px, 6px);
-							transform: rotate(-45deg) translate(-9px, 6px);
-						}
-
-						.change .bar2 {
-							opacity: 0;
-						}
-
-						.change .bar3 {
-							-webkit-transform: rotate(45deg) translate(-8px, -8px);
-							transform: rotate(45deg) translate(-8px, -8px);
-						}
-					</td>
-					<td class="code">
 						function burgerMenuChange(burgerMenu) {
 							burgerMenu.classList.toggle("change");
 						}
 
+						function hiddenToggle(element) {
+							element.classList.toggle("hidden");
+						}
 					</td>
-                </tr>
+				</tr>
 			</table>
 		</div>
 	</article>
