@@ -98,6 +98,7 @@ h1 {
 	}
 }
 
+
 /* -- h2 HEADING -- */
 h2 {
 	float: left;
@@ -130,6 +131,7 @@ h2 {
 		font-size: 1.146vw; /* ~44px on 3840px width */
 	}
 }
+
 
 /* -- h3 HEADING -- */
 h3 {
@@ -296,6 +298,20 @@ button {
     width: 90%;
 }
 
+
+/* - CLOSE BUTTON -- */
+.close-menu {
+	clear: both;
+	float: right;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+
+.close-menu-icon {
+	width: 24px;
+}
+
+
 /* - INPUT - */
 input {
 	float: left;
@@ -362,7 +378,6 @@ input[type="datetime-local"].error {
 	max-width: 100%;
 	font-size: 142.85%;
 }
-
 
 input[type="date"],
 input[type="datetime-local"],
@@ -510,14 +525,47 @@ textarea{
 	display: none;
 }
 
+.right {
+	float: right;
+}
+
+/* - SAME HEIGHT AS TEXT WIDTH LINE-HEIGHT -  */
+.font-height {
+    height: 11px;
+	margin-top: 5px;
+	margin-bottom: 6px;
+}
+
+@media (min-width:481px) {
+	.font-height {
+		height: 2.287vw;
+		margin: 1.1435vw 0;
+    }
+}
+
+@media (min-width:768px) {
+	.font-height {
+		height: 16px;
+		margin: 8px 0;
+    }
+}
+
+@media (min-width: 1920px) {
+	.font-height {
+        height: 0.729vw;
+		margin: 0.3645vw 0;
+    }
+}
+
 
 /* ----- MOLECULES -----*/
-
-/*Style til stherne prioriterings molekyle*/
+/* --- BUTTONS --- */
+/* -- STAR PRIORITY BUTTON -- */
 .star {
 	width: 26px;
 	cursor: pointer;
 }
+
 
 /*Here starts CSS code for settings button (kog img)*/
 .settingsicon{
@@ -531,73 +579,13 @@ textarea{
 }
 
 
-/* -- SETTINGS MENU --*/
-.settingsmenu, .settingsmenu-dark {
-	width: 250px;
-	border-radius: 12px;
-	padding-right: 12px;
-	padding-left: 12px;
-	padding-top: 10px;
-	padding-bottom: 25px;
-	border-sizing: border-box;
-}
-
-.settingsmenu-dark .settingsmenubutton:last-child,
-.settingsmenu .settingsmenubutton:last-child {
-	margin-bottom: 0;
-}
-
-.settingsmenu-dark .settingsmenubutton span,
-.settingsmenu .settingsmenubutton span {
-	font-size: 16px;
-	line-height: 20px;
-}
-
-.settingsmenu {
-	background-color: #D3D3D3;
-}
-
-.settingsmenu-dark {
-	background-color: #222222;
-}
-
-.closesettingmenu {
-	display: block;
-	background-color: transparent;
-	float: right;
-	border: none;
-	cursor: pointer;
-}
-
-.closesettingmenuicon {
-	float: right;
-	width: 24px;
-	padding-right: 12px;
-}
-
-.closesettingmenu-dark {
-	display: block;
-	background-color: transparent;
-	float: right;
-	width: 100%;
-	border: none;
-	cursor: pointer;
-}
-
-.closesettingmenuicon-dark{
-	float: left;
-	width: 24px;
-	padding-left: 12px;
-}
-
-
-/* - SETTINGS MENU BUTTON -*/
-.settingsmenu-dark .settingsmenubutton,
-.settingsmenu .settingsmenubutton {
+/* -- SETTINGS MENU BUTTON -- */
+.settings-menu-dark .settings-menu-button,
+.settings-menu .settings-menu-button {
 	margin-bottom: 5px;
 }
 
-.settingsmenubutton {
+.settings-menu-button {
 	float: left;
 	position: relative;
 	display: block;
@@ -612,22 +600,22 @@ textarea{
 	cursor: pointer;
 }
 
-.settingsmenubutton:hover {
+.settings-menu-button:hover {
 	background-color: #e5e5e5;
 }
 
-.settingsmenubutton:active {
+.settings-menu-button:active {
     background-color: #cccccc;
 }
 
-.settingsmenubutton span{
+.settings-menu-button span{
 	float: left;
 	margin-right: 15px;
 	color: #848484;
 	font-size: 140%;
 }
 
-.settingsmenuicon{
+.settings-menu-icon{
 	position: absolute;
 	top: calc(50% - 10px);
 	right: 17px;
@@ -968,6 +956,7 @@ textarea{
 	width: 50%;
 }
 
+
 /*  - SWITCH - */
 .switch {
 	position: relative;
@@ -1056,6 +1045,39 @@ textarea{
 
 
 /* ----- ORGANISMS ----- */
+/* -- SETTINGS MENU --*/
+.settings-menu, .settings-menu-dark {
+	overflow-y: auto;
+	max-height: 100vh;
+	width: 300px;
+	max-width: 100%;
+	padding-right: 12px;
+	padding-left: 12px;
+	padding-top: 10px;
+	padding-bottom: 25px;
+	border-radius: 12px;
+	box-sizing: border-box;
+}
+
+.settings-menu-dark .settings-menu-button:last-child,
+.settings-menu .settings-menu-button:last-child {
+	margin-bottom: 0;
+}
+
+.settings-menu-dark .settings-menu-button span,
+.settings-menu .settings-menu-button span {
+	line-height: 1;
+}
+
+.settings-menu {
+	background-color: #D3D3D3;
+}
+
+.settings-menu-dark {
+	background-color: #222222;
+}
+
+
 /*Here starts CSS for header in editor*/
 .editorHeader {
 	background-color: #BBBBBB;
@@ -1279,14 +1301,15 @@ textarea{
 	display: block;
 	float: left;
 	width: 100%;
+	max-height: 100vh;
 	background-color: #222;
+	transition: max-height 0.3s ease-in;
+	overflow: auto;
 }
 
 #main-navigation.hidden {
 	display: block;
-	height: 0;
-	min-height: 0;
-	overflow: hidden;
+	max-height: 0;
 }
 
 #main-navigation ul {
@@ -1451,61 +1474,93 @@ textarea{
 }
 
 
-/*Here starts CSS for pop up delete*/
-.popupdelete {
-	position: absolute;
-	top: calc(50% - 110px); /* Half of screen - half of element height */
-	left: 0;
-	background-color: #262626;
-	text-align: center;
-	width: 100%;
-	max-width: 400px;
-	height: 220px;
-	border-radius: 12px;
+/* --- POP UP --- */
+.pop-up {
+	position: fixed;
+	top: 20%;
+	left: 10%;
+	overflow: auto;
+	max-height: 80%;
+	width: 80%;
+	max-width: 650px;
+	background-color: #D3D3D3;
+    border-radius: 12px;
+	z-index: 1000;
+	box-sizing: border-box;
 }
 
-@media (min-width:401px){
-	/* Calculate left position, when width is over 400px */
-	.popupdelete {
-		left: calc(50vw - 200px); /* Half of screen - element width */
+@media (min-width: 813px){
+	.pop-up {
+        left: calc(50% - 325px); /* Half of screen - element width */
+		max-width: 650px;
 	}
 }
 
-.popupdelete span{
-	color: #fff;
-	margin: 50px auto;
-	display: block;
-}
-
-.popupdeletebuttons{
-	display: grid;
-	grid-template-columns: auto auto;
-	float: none;
+.pop-up-title-area {
 	width: 100%;
-	margin: 0 auto;
+	padding: 15px;
+	border-bottom: solid 1px #707070;
+	box-sizing: border-box;
 }
 
-.cancel{
-	background-color: #fff;
-	text-align: center;
-	border: none;
-	border-radius: 12px;
-	margin: 0 auto;
-	width: 100px;
-	height: 50px;
-	cursor: pointer;
+.pop-up-title-image {
+	margin-right: 15px;
 }
 
-.delete{
-	background-color: #DF5539;
-	color: #fff;
-	text-align: center;
-	border: none;
-	border-radius: 12px;
-	margin: 0 auto;
-	width: 100px;
-	height: 50px;
-	cursor: pointer;
+.pop-up-title-area .font-height {
+    height: 24px;
+	margin-top: 12px;
+	margin-bottom: 12px;
+}
+
+@media (min-width:481px) {
+	.pop-up-title-area .font-height {
+		height: 5.0314vw;
+		margin-top: 2.5157vw;
+		margin-bottom: 2.5157vw;
+    }
+}
+
+@media (min-width:768px) {
+	.pop-up-title-area .font-height {
+		height: 35px;
+		margin-top: 17px;
+		margin-bottom: 18px;
+    }
+}
+
+@media (min-width: 1920px) {
+	.pop-up-title-area .font-height {
+        height: 1.6038vw;
+		margin-top: 0.8019vw;
+		margin-bottom: 0.8019vw;
+    }
+}
+
+.pop-up-title {
+	font-size: 220%;
+}
+
+.pop-up-content-area {
+	width: 100%;
+	padding: 15px;
+	border-top: solid 1px #FFF;
+	box-sizing: border-box;	
+}
+
+.pop-up-content-area-molecule {
+	width: 100%;
+	clear: both;
+}
+
+.pop-up-content-area-molecule input {
+	border: solid 1px #707070;
+}
+
+.pop-up-buttons {
+	width: 100%;
+	padding: 15px;
+	box-sizing: border-box;	
 }
 
 
@@ -1600,7 +1655,7 @@ textarea{
 	float: left;
 }
 
-.folderoverviewcontainer .settingsmenubutton span,
+.folderoverviewcontainer .settings-menu-button span,
 .filtercontainer .filterbutton span,
 .sortbycontainer .select-span {
 	display: none;
@@ -1632,7 +1687,7 @@ textarea{
 		margin-right: 34px;
 	}
 	
-	.folderoverviewcontainer .settingsmenubutton span,
+	.folderoverviewcontainer .settings-menu-button span,
 	.filtercontainer .filterbutton span,
 	.sortbycontainer .select-span {
 		display: inline-block;
@@ -1745,7 +1800,7 @@ textarea{
 		margin-right: 34px;
 	}
 	
-	.folderoverviewcontainer .settingsmenubutton span,
+	.folderoverviewcontainer .settings-menu-button span,
 	.filtercontainer .filterbutton span,
 	.sortbycontainer .select-span {
 		display: inline-block;
@@ -1759,234 +1814,6 @@ textarea{
 	.searchcontainer {
 		float: right;
 	}
-}
-
-
-/* Styling for Upload pop-up ORAGBISME*/
-.frameforuploadpopup {
-    position: absolute;
-    top: calc(50% - 110px); /* Half of screen - half of element height */
-    left: 0;
-	background-color: #D3D3D3;
-    width: 100%;
-    max-width: 425px;
-	height: 100vh;
-	max-height: 220px;
-    border-radius: 12px;
-	overflow-y: auto;
-}
-
-@media (min-width:401px){
-    /* Calculate left position, when width is over 400px */
-    .frameforuploadpopup {
-        left: calc(50vw - 212px); /* Half of screen - element width */
-    }
-}
-
-.x1 {
-	float: right;
-	margin-right: -110px;
-}
-
-.x2{
-	float: right;
-	margin-right: -170px;
-}
-
-.uploadtemplate {
-	margin-top: -10px;
-}
-
-.uploadpopuptitelwrap {
-	margin-top: 15px;
-}
-
-.uploadpopuptitelwrap, .uploadtemplateknap{
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-.uploadpopuptextknaphøjre {
-	float: right;
-	margin-top: 10px;
-	margin-right: 10px;
-}
-
-.uploadpopuptextknapvenstre {
-	float: left;
-	margin-top: 10px;
-	margin-left: 10px;
-}
-
-
-/*Styling for setting pop-up organismer*/
-.frameforsettingpopup {
-    position: absolute;
-    top: 10vh;
-    left: 0;
-	background-color: #222222;
-	width: 100%;
-	max-width: 450px;
-	height: 100vh;
-	max-height: 400px;
-	border-radius: 5px;
-	overflow-y: auto;
-}
-
-@media (min-width:401px){
-    /* Calculate left position, when width is over 400px */
-    .frameforsettingpopup {
-        left: calc(50vw - 200px); /* Half of screen - element width */
-    }
-}
-
-.settingtitel {
-	color: white;
-	margin-top: -10px;
-	margin-left: 10px;
-}
-
-.settingpopupicon, .settingpopupxicon {
-	width: 40px;
-	height: 40px;
-}
-
-.settingpopupxicon {
-	float: right;
-	margin-right: -200px;
-}
-
-.popuptitel, .settingpopupknap{
-	margin-top: 20px;
-	clear: right;
-}
-
-.settingpopupknap,
-.settingpopupknap,
-.settingpopupknap,
-.messageframe {
-	width: calc(100% - 20px); /*100% width - 20px margin*/
-	clear: both;
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-.popupcancelknap, .popupdoneknap {
-	margin-top: 20px;
-	margin-left: 10px;
-	margin-right: 10px;
-}
-	
-.popupcancelknap{
-	clear: left;
-}
-
-.popupdoneknap {
-	float: right;
-}
-
-
-/*ekstra style til share as pop-up*/
-.frameforshareaspopup {
-    position: absolute;
-    top: 10vh;
-    left: 0;
-	background-color: #222222;
-	width: 100%;
-	max-width: 440px;
-	height: 100vh;
-	max-height: 600px;
-	border-radius: 5px;
-	overflow-y: auto;
-}
-
-@media (min-width:441px){
-    /* Calculate left position, when width is over 400px */
-    .frameforshareaspopup {
-        left: calc(50vw - 220px); /* Half of screen - element width */
-    }
-}
-
-.textarea {
-	width: 100px;
-	height: 100px;
-}
-
-
-/*ekstra style til schedule as pop-up*/
-.timebutton {
-	width: 80px;
-	border-radius: 10px;
-}
-
-
-/*ekstra style til save as as pop-up*/
-.frameforsavaspopup {
-    position: absolute;
-    top: calc(50% - 175px); /* Half of screen - half of element height */
-    left: 0;
-	background-color: #222222;
-	width: 100%;
-	max-width:420px;
-	height: 100vh;
-	max-height: 350px;
-	border-radius: 5px;
-	overflow-y: auto;
-}
-
-@media (min-width:401px){
-    /* Calculate left position, when width is over 400px */
-    .frameforsavaspopup {
-        left: calc(50vw - 210px); /* Half of screen - element width */
-    }
-}
-
-.popupcancelknap1 {
-	float: left;
-	margin-top: 20px;
-	margin-left: 10px;
-}
-
-.popsaveknap {
-	float: right;
-	margin-top: 20px;
-	margin-right: 40px;
-}
-
-
-/*ekstra style til filter pop-up*/
-.daterangecontainer {
-	background: grey;
-	float: left;
-}
-.daterangetitelinfilterpopup {
-	font-size: 10px;
-	float: left;
-	margin-left: 10px;
-}
-.popupcancelknapfilter{
-	float: left;
-	margin left: 10px;
-	margin-top: 20px;
-}
-
-.clearallfilterknap {
-	float: left;
-	margin left: 10px;
-	margin-top: 20px;
-}
-
-.popupdoneknapfilter{
-	float: right;
-	margin-top: 20px;
-	margin right: 30px;
-}
-
-
-/*ekstra style for create report pop up*/
-.frameforcreatenewreportpopup {
-	width: 420px;
-	height: 350px;
 }
 
 
@@ -2317,7 +2144,7 @@ header .wrapper {
 	overflow: auto;
 }
 
-.preview-outbox .settingsmenu{
+.preview-outbox .settings-menu{
 	position: absolute;
 	margin-top: -35px;
 }
@@ -2615,6 +2442,12 @@ header .wrapper, #main-header .wrapper, #wrapper_header_example header .wrapper 
 	}
 }
 
+/* -- POP UP -- */
+#styleguide .pop-up {
+	position: absolute;
+}
+
+
 /* -- SECTIONER -- */
 #styleguide section,
 #styleguide > section > article {
@@ -2735,10 +2568,6 @@ header .wrapper, #main-header .wrapper, #wrapper_header_example header .wrapper 
 #styleguide #other-buttons button:last-child {
 	margin-bottom: 0;
 }
-
-
-/* ----- ANITIONMER ----- */
-/* No animations added yet */
 
 
 /* ----- PRINT ----- */

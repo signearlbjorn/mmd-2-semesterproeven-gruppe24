@@ -3,6 +3,24 @@
 // --- STYLEGUIDE SPECIFIC CODE ---
 console.log('styleguide.js loaded.');
 
+// --- GENERIC FUNCTIONS ---
+function hideParrent(child) {
+	let parrent = child.parentNode;
+	if(!parrent.classList.contains("menu")) {
+		while(!parrent.classList.contains("menu")) {
+			parrent = parrent.parentNode;
+			if(parrent.tagName == "body"){
+				alert('Could not close parrent.\nSorry for the inconvinience.\nPlease contact a developer to fix this issue\nThe button is placed in an invallid position.');
+				return(false);
+			} else if(parrent.classList.contains("example")){
+				alert('Could not close parrent.\nExample has no target to close.');
+				return(false);
+			}
+		}
+	}
+	parrent.classList.add("hidden");
+}
+
 
 // -- FORMAT CODING SECTIONS AS COPY FRIENDLY CODE, WITHOUT USE OF PRE --
 /*
@@ -26,7 +44,7 @@ for(let i=0; i<codeSections.length; i++){ // Loop all instanceses of code.
 	newCodeSectionText = newCodeSectionText.replace(/\t/g, '&nbsp;&nbsp;&nbsp;&nbsp;'); // repace tabs with 4 space;
 	codeSections[i].innerHTML = '<code>' + newCodeSectionText + '</code>'; // update element, and add leading <code> and trailing </code>
 
-	codeSections[i].addEventListener("dblclick", function(){selectText(codeSections[i])}); // Add eventlistner on doubleclick for selectText.
+	codeSections[i].addEventListener("dblclick", function(){ selectText(codeSections[i]) }); // Add eventlistner on doubleclick for selectText.
 }
 
 
@@ -37,13 +55,13 @@ function activateTableExplainer() {
 		let tableExplainerInstance = tableExplainer[i];
 		let tableExplainerButton = tableExplainerInstance.getElementsByClassName('tableExplainerButton'); // Find elements with the class tableExplainerButton in tableExplainer
 		tableExplainerButton = tableExplainerButton[0]; // Always set to first instance.
-		tableExplainerButton.addEventListener("click", function(){
+		tableExplainerButton.addEventListener("click", function(){ 
 			for(let j=tableExplainer.length-1; j>=0; j--) {
 				// console.log("Intance: " + j);
 				tableExplainer[j].parentNode.removeChild(tableExplainer[j]);
 			}
 			saveCookieTableExplainer();
-		}); // Add eventlistner on click for tableExplainerButton, and when fired, remove tableExplainer instance from dom.
+		 }); // Add eventlistner on click for tableExplainerButton, and when fired, remove tableExplainer instance from dom.
 	}
 }
 
@@ -65,7 +83,7 @@ function selectText(element) {
 let rowOne = document.getElementsByClassName("row-one");
 for(let i=0; i<rowOne.length; i++){ // Loop all instanceses of rowOne.
 	// On click on row-one, expand or compress row-tow
-	rowOne[i].addEventListener("click", function(){expandOrCompress(rowOne[i])});
+	rowOne[i].addEventListener("click", function(){ expandOrCompress(rowOne[i]) });
 	
 	// Insert info section before tables.
 	if(!getTableExplainerCookie()){
@@ -77,6 +95,7 @@ for(let i=0; i<rowOne.length; i++){ // Loop all instanceses of rowOne.
 		activateTableExplainer();
 	}
 }
+
 function expandOrCompress(element) {
 	let parrent = element.parentNode; // Få fat i parrent node (tbody)
 	let rowTwo = parrent.getElementsByClassName("row-two");
@@ -97,7 +116,7 @@ Highcharts.setOptions({
         plotShadow: false,
 		plotBorderWidth: 0
     }
-});
+ });
 
 //window.onload.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function () {
@@ -157,7 +176,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			// 3 of caregoy 2
 			// 5 of caregoy 3
 		}]
-	});
+	 });
 	// console.log('med')
 	// #highcharts-type-bar-element-example
 	var typeBarElementExample = new Highcharts.chart('highcharts-type-bar-element-example', {
@@ -191,7 +210,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			// 3 of caregoy 2
 			// 5 of caregoy 3
 		}]
-	});
+	 });
 	// console.log('dig')
 	
 	// #highcharts-type-column-element-preview	
@@ -249,7 +268,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			// 3 of caregoy 2
 			// 5 of caregoy 3
 		}]
-	});
+	 });
 	// console.log('min')
 	
 	// #highcharts-type-column-element-example
@@ -284,7 +303,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			// 3 of caregoy 2
 			// 5 of caregoy 3
 		}]
-	});
+	 });
 	// console.log('ven')
 	// #highcharts-type-line-element-preview	
 	var typelinePreviewExample = new Highcharts.chart('highcharts-type-line-preview-example', {
@@ -341,7 +360,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			// 3 of caregoy 2
 			// 5 of caregoy 3
 		}]
-	});
+	 });
 	// console.log('finder du')
 	// #highcharts-type-line-element-example
 	var typelineElementExample = new Highcharts.chart('highcharts-type-line-element-example', {
@@ -375,7 +394,7 @@ document.addEventListener('DOMContentLoaded', function () {
 			// 3 of caregoy 2
 			// 5 of caregoy 3
 		}]
-	});
+	 });
 	// console.log('fejl')
 	// #highcharts-type-pie-element-preview	
 	var typepiePreviewExample = new Highcharts.chart('highcharts-type-pie-preview-example', {
@@ -439,7 +458,7 @@ document.addEventListener('DOMContentLoaded', function () {
 				y: 1
 			}]
 		}]
-	});
+	 });
 	// console.log('igen?')
 	// #highcharts-type-pie-element-example
 	var typepieElementExample = new Highcharts.chart('highcharts-type-pie-element-example', {
@@ -508,27 +527,9 @@ function saveCookieTableExplainer() {
     console.log('Cookie - tableExplainer - is saved.')
 }
 
-/* -- BURGER MENU -- */
-let burgerMenu = document.getElementsByClassName("burger-menu");
-let mainNavigation = document.getElementById("main-navigation");
-
-for(let i = 0; i < burgerMenu.length; i++) {
-	burgerMenu[i].addEventListener("click", function(){burgerMenuChange(burgerMenu[i])});
-	burgerMenu[i].addEventListener("click", function(){hiddenToggle(mainNavigation)});
-}
-
-function burgerMenuChange(burgerMenu) {
-	burgerMenu.classList.toggle("change");
-}
-
-function hiddenToggle(element) {
-	element.classList.toggle("hidden");
-}
-
-
 // --- WINDOW SIZES ---
 let previewPage = document.getElementById("preview-page");
-previewPage.addEventListener("change", function(){openWidowSize(previewPage)});
+previewPage.addEventListener("change", function(){ openWidowSize(previewPage) });
 
 function openWidowSize(elem) {
 	//console.log(elem);
@@ -560,7 +561,7 @@ function openWidowSize(elem) {
 let help = document.getElementsByClassName("help");
 
 for(let i = 0; i < help.length; i++) {
-	help[i].addEventListener("click", function(){helpTextDisplay(help[i].title)});
+	help[i].addEventListener("click", function(){ helpTextDisplay(help[i].title) });
 }
 
 function helpTextDisplay(text) {
@@ -571,7 +572,7 @@ function helpTextDisplay(text) {
 // -- PRINT BUTTON --
 let printButton = document.getElementsByName("print");
 for(let i = 0; i < printButton.length; i++) {
-	printButton[i].addEventListener("click", function(){printReport()});
+	printButton[i].addEventListener("click", function(){ printReport() });
 }
 
 function printReport(){
@@ -589,14 +590,14 @@ function printReport(){
 }
 
 
-/* -- PRIORITY STAR -- */
+// -- PRIORITY STAR --
 // Change icon
 let star1 = document.getElementById("star1");
 
 let starArray = [star1];
 
 for(let i = 0; i < starArray.length; i++){
-	starArray[i].addEventListener("click", function(){changeImage(starArray[i])});
+	starArray[i].addEventListener("click", function(){ changeImage(starArray[i]) });
 }
 
 function changeImage(elem) {
@@ -628,6 +629,30 @@ function changeImage(elem) {
 //ToDo
 
 
+// -- BURGER MENU --
+let burgerMenu = document.getElementsByClassName("burger-menu");
+let mainNavigation = document.getElementById("main-navigation");
+
+for(let i = 0; i < burgerMenu.length; i++) {
+	burgerMenu[i].addEventListener("click", function(){ burgerMenuChange(burgerMenu[i]) });
+	burgerMenu[i].addEventListener("click", function(){ hiddenToggle(mainNavigation) });
+}
+
+function burgerMenuChange(burgerMenu) {
+	burgerMenu.classList.toggle("change");
+}
+
+function hiddenToggle(element) {
+	element.classList.toggle("hidden");
+}
+
+// -- CLOSE BUTTON --
+let closeButton = document.getElementsByClassName("close");
+
+for(let i = 0; i < closeButton.length; i++) {
+	closeButton[i].addEventListener("click", function(){ hideParrent(closeButton[i]) });
+}
+
 // --- SEARCH ---
 function search_report() { 
     let input = document.getElementById('myInput').value 
@@ -650,10 +675,10 @@ function search_report() {
 // -- DIABLELING --
 let disabledLinks = document.getElementsByClassName("disabled");
 for(let i=0; i < disabledLinks.length; i++){
-	disabledLinks[i].addEventListener("click", function(){
+	disabledLinks[i].addEventListener("click", function(){ 
 		event.preventDefault();
 		return null;
-	});
+	 });
 }
 
 
@@ -675,28 +700,27 @@ for(let i = 0; i < scheduleEmail.length; i++) {
 	let email = scheduleEmail[i];
 	
 	// Fjern error på click på email
-	email.addEventListener("click", function(){
+	email.addEventListener("click", function(){ 
 		removeErrorClass(email);
-	});
+	 });
 	
 	// Fjern error på focus på email
-	email.addEventListener("focus", function(){
+	email.addEventListener("focus", function(){ 
 		removeErrorClass(email);
-	});
+	 });
 	
 	// Trim og kør validering når man trykker ud af email. Primær
-	email.addEventListener("blur", function(){
+	email.addEventListener("blur", function(){ 
 		email.value = email.value.trim();
 		emailValidate(email);
-	});
+	 });
 	
 	// Trim og kør validering når man trykker ud af email. Sekundær.
-	email.addEventListener("focusout", function(){
+	email.addEventListener("focusout", function(){ 
 		email.value = email.value.trim();
 		emailValidate(email);
-	});
+	 });
 }
-
 
 function emailValidate(email) {
 	console.log('E-mail blev valideret.');
@@ -722,7 +746,7 @@ let vallidImageFormats = ['webp', 'svg', 'png', 'jpg', 'jpeg', 'jfif', 'pjpeg', 
 let uploadImage = document.getElementsByName("upload-image");
 
 for(let i = 0; i < uploadImage.length; i++) {
-	uploadImage[i].addEventListener("change", function(){validateImaage(uploadImage[i])});
+	uploadImage[i].addEventListener("change", function(){ validateImaage(uploadImage[i]) });
 }
 
 function validateImaage(input){
@@ -755,7 +779,7 @@ let vallidTemplateFormats = ['html', 'htm'];
 let uploadTemplate = document.getElementsByName("upload-template");
 
 for(let i = 0; i < uploadTemplate.length; i++) {
-	uploadTemplate[i].addEventListener("change", function(){validateTemplate(uploadTemplate[i])});
+	uploadTemplate[i].addEventListener("change", function(){ validateTemplate(uploadTemplate[i]) });
 }
 
 function validateTemplate(input){
@@ -927,17 +951,17 @@ let DateRangeEnd = document.getElementsByName('date-range-end');
 
 for(let i = 0; i < DateRangeStart.length; i++) {	
 	// Fjern error på click på DateRangeStart[i]
-	DateRangeStart[i].addEventListener("click", function(){
+	DateRangeStart[i].addEventListener("click", function(){ 
 		removeErrorClass(DateRangeStart[i]);
-	});
+	 });
 	
 	// Fjern error på focus på DateRangeStart[i]
-	DateRangeStart[i].addEventListener("focus", function(){
+	DateRangeStart[i].addEventListener("focus", function(){ 
 		removeErrorClass(DateRangeStart[i]);
-	});
+	 });
 	
 	// Trim og kør validering når man trykker ud af DateRangeStart[i]. Primær
-	DateRangeStart[i].addEventListener("blur", function(){
+	DateRangeStart[i].addEventListener("blur", function(){ 
 		DateRangeStart[i].value = DateRangeStart[i].value.trim();
 		dateValidate(DateRangeStart[i]);
 		if(DateRangeEnd[i].value &&
@@ -950,22 +974,22 @@ for(let i = 0; i < DateRangeStart.length; i++) {
 		DateRangeStart[i].value <= DateRangeEnd[i].value) {
 			removeErrorClass(DateRangeEnd[i]);
 		}
-	});
+	 });
 }
 
 for(let i = 0; i < DateRangeEnd.length; i++) {	
 	// Fjern error på click på DateRangeEnd[i]
-	DateRangeEnd[i].addEventListener("click", function(){
+	DateRangeEnd[i].addEventListener("click", function(){ 
 		removeErrorClass(DateRangeEnd[i]);
-	});
+	 });
 	
 	// Fjern error på focus på DateRangeEnd[i]
-	DateRangeEnd[i].addEventListener("focus", function(){
+	DateRangeEnd[i].addEventListener("focus", function(){ 
 		removeErrorClass(DateRangeEnd[i]);
-	});
+	 });
 	
 	// Trim og kør validering når man trykker ud af DateRangeEnd[i]
-	DateRangeEnd[i].addEventListener("blur", function(){
+	DateRangeEnd[i].addEventListener("blur", function(){ 
 		DateRangeEnd[i].value = DateRangeEnd[i].value.trim();
 		dateValidate(DateRangeEnd[i]);
 		if(DateRangeEnd[i].value &&
@@ -978,7 +1002,7 @@ for(let i = 0; i < DateRangeEnd.length; i++) {
 		DateRangeStart[i].value <= DateRangeEnd[i].value) {
 			removeErrorClass(DateRangeEnd[i]);
 		}
-	});
+	 });
 }
 
 
@@ -987,19 +1011,19 @@ let scheduleDateTime = document.getElementsByName('schedule-datetime');
 
 for(let i = 0; i < scheduleDateTime.length; i++) {	
 	// Fjern error på click på scheduleDateTime[i]
-	scheduleDateTime[i].addEventListener("click", function(){
+	scheduleDateTime[i].addEventListener("click", function(){ 
 		removeErrorClass(scheduleDateTime[i]);
-	});
+	 });
 	
 	// Fjern error på focus på scheduleDateTime[i]
-	scheduleDateTime[i].addEventListener("focus", function(){
+	scheduleDateTime[i].addEventListener("focus", function(){ 
 		removeErrorClass(scheduleDateTime[i]);
-	});
+	 });
 	
 	// Trim og kør validering når man trykker ud af scheduleDateTime[i]
-	scheduleDateTime[i].addEventListener("blur", function(){		
+	scheduleDateTime[i].addEventListener("blur", function(){ 		
 		dateTimeValidate(scheduleDateTime[i]);
-	});
+	 });
 }
 
 // - SCHEDULE TIME -
@@ -1007,18 +1031,18 @@ let scheduleTime = document.getElementsByName('schedule-time');
 
 for(let i = 0; i < scheduleTime.length; i++) {	
 	// Fjern error på click på scheduleTime[i]
-	scheduleTime[i].addEventListener("click", function(){
+	scheduleTime[i].addEventListener("click", function(){ 
 		removeErrorClass(scheduleTime[i]);
-	});
+	 });
 	
 	// Fjern error på focus på scheduleTime[i]
-	scheduleTime[i].addEventListener("focus", function(){
+	scheduleTime[i].addEventListener("focus", function(){ 
 		removeErrorClass(scheduleTime[i]);
-	});
+	 });
 	
 	// Trim og kør validering når man trykker ud af scheduleTime[i]
-	scheduleTime[i].addEventListener("blur", function(){		
+	scheduleTime[i].addEventListener("blur", function(){ 		
 		timeValidate(scheduleTime[i]);
-	});
+	 });
 }
 
