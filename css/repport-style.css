@@ -1313,6 +1313,7 @@ textarea{
 	float: left;
     display: block;
 	height: 31px;
+	max-width: 285px;
 	margin: 10px 0;
     font-size: 100%;
     color: #555;
