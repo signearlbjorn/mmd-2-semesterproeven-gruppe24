@@ -57,13 +57,15 @@
 </section>
 <!-- struktur for løsning slut -->
 <nav id="atomicDesignNavigation">
-	<ul>
-		<li><a href="#atoms">Atomer</a></li>
-		<li><a href="#molecules">Molekyler</a></li>
-		<li><a href="#organisms">Organismer</a></li>
-		<li><a href="#templates">Templates</a></li>
-		<li><a href="#pages">Pages</a></li>
-	</ul>
+	<div class="wrapper">
+		<ul>
+			<li><a href="#atoms">Atomer</a></li>
+			<li><a href="#molecules">Molekyler</a></li>
+			<li><a href="#organisms">Organismer</a></li>
+			<li><a href="#templates">Templates</a></li>
+			<li><a href="#pages">Pages</a></li>
+		</ul>
+	</div>
 </nav>
 
 <!-- ATOMS -->
@@ -5362,52 +5364,58 @@
 </section>
 <!-- Molekyler - SLUT -->
 <!-- ORGANISMER -->
+<!--MAIN NAVIGATION-->
 <section id="organisms">
 	<div class="wrapper">
 		<h3 class="styleguide-title">Organsimer</h3>
 	</div>
-	<!-- organisme tabel for 'Navigation-Bar' - start-->
 	<article id="navigation-bar">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Navigation-Bar</h4>
 		</div>
 		<div class="example">
-			<nav>
-				<div class="branddiv">
-					<!--LOGO-->
-					<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
-					<!--MAIN NAVIGATION-->
-					<ul class="navbarulleft">
-						<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
-						<li><a>Trendboards</a></li>
-						<li><a>Reports</a></li>
-						<li><a>Views</a></li>
-						<li><a>Feeds</a></li>
-						<li><a>Settings</a></li>
-						<li><a>Shares</a></li>
-					</ul>
+			<header id="main-header">
+				<div class="wrapper">
+					<nav id="main-navigation">
+						<!--LOGO-->
+						<a href="index.html" class="disabled">
+							<img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io">
+						</a>
+						<ul class="navbarulleft">
+							<li>
+								<a href="#" class="disabled"><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
+							<li><a href="#" class="disabled">Trendboards</a></li>
+							<li><a href="overview.html" title="Reports module - see, schedule and setup reports">Reports</a></li>
+							<li><a href="#" class="disabled">Views</a></li>
+							<li><a href="#" class="disabled">Feeds</a></li>
+							<li><a href="#" class="disabled">Settings</a></li>
+							<li><a href="#" class="disabled">Shares</a></li>
+						</ul>
+						<ul class="navbarulright" style="float: right;">
+							<li><a href="#" class="disabled"><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
+							<li><a href="#" class="disabled"><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
+							<li><a href="#" class="disabled"><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
+							<li>
+								<form action="/" method="get" class="disabled">
+									<label>
+										<span class="channels">Channels</span>
+										<select class="channelselect round-corners disabled">
+											<option>channelnames</option>
+										</select>
+									</label>
+								</form>
+							</li>
+							<!--USERNAME-->
+							<li class="profiledropdown">
+								<a href="#" class="disabled profiledropdown-a">
+									<span class="username">Profile P.</span>
+									<img class="profile-icon" src="img/icons/user.svg" alt="profile">
+								</a>
+							</li>
+						</ul>
+					</nav>
 				</div>
-				<div class="profilediv">
-					<ul class="navbarulright" style="float: right;">
-						<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
-						<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
-						<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
-						<li><span class="channels">channels</span></li>
-						<li class="selection">
-							<select class="channelselect">
-								<option>channelnames</option>
-							</select>
-						</li>
-						<!--USERNAME-->
-						<li class="profiledropdown">
-							<a class="profiledropdown-a">
-								<span class="username">Profile P.</span>
-								<img class="profile-icon" src="img/icons/user.svg" alt="profile">
-							</a>
-						</li>
-					</ul>
-				</div>
-			</nav>
+			</header>
 		</div>
 		<div class="wrapper">
 			<table class="overvieworganimser">

@@ -1240,119 +1240,88 @@ textarea{
 }
 
 
-/*Here starts CSS code for Navbar  - big screen*/
-nav{
+/* --- MAIN NAVIGATION --- */
+#main-navigation {
+	display: block;
+	float: left;
 	width: 100%;
-	float: left;
+	min-height: 51px;
 	background-color: #222;
-	display: block;
 }
-nav div{
-	display: block;
+
+#main-navigation ul {
+	list-style: none;
+}
+
+#main-navigation ul,
+#main-navigation ul li,
+#main-navigation ul li a,
+#main-navigation ul li img,
+#main-navigation ul li span,
+#main-navigation ul li form,
+#main-navigation ul li form label,
+#main-navigation ul li form label span {
 	float: left;
+	line-height: 51px;	
+}
+
+#main-navigation > a,
+#main-navigation ul li a{
+	float: left;
+	padding: 0 12px;
+	margin: 0 3px;
+	font-size: 100%;
+	font-weight: bold;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+#main-navigation ul li img {
+	width: 21px;
+	height: 21px;
+	margin: 15px 0;
 }
 
 .navbarulleft {
 	list-style: none;
 	float: left;
 }
-.navbarulleft li{
-	float: left;
-}
-.navbarulleft a{
-	font-weight: bold;
-	font-size: 14px;
-	color: #ffffff;
-	float: left;
-	padding: 15px;
-	text-decoration: none;
-}
 
-.profilediv{
-	float: right;
+.brandidentity {
+	width: 130px;
+	height: 21px;
+	margin: 15px 0;
 }
 
 .navbarulright {
-	list-style: none;
 	float: right;
 }
-.navbarulright li{
-	float: left;
-}
 
-img.icon{
-	display: block;
-	width: 14px;
-}
-
-.brandidentity{
-	width: 130px;
-	padding: 0px 7.75px;
-	margin-bottom: -8px;
-}
-
-nav a{
-	font-weight: bold;
-	font-size: 14px;
-	color: #ffffff;
-	float: left;
-	padding: 15px;
-	text-decoration: none;
-}
-nav a:hover{
+#main-navigation a:hover{
 	background: #444;
 }
 
-.selection{
-	margin-top: 6px;
-}
-
 .channels{
-	color: #9d9d9d;
-	font-size: 14px;
-	font-weight: 100;
 	float: left;
-	padding: 15px;
+	margin: 0 15px;
+	color: #9d9d9d;
+	font-size: 100%;
+	font-weight: normal;
 }
 
 .channelselect{
+	float: left;
     display: block;
-    width: 100%;
-    height: 34px;
-    padding: 6px 12px;
-    font-size: 14px;
-    line-height: 1.42857143;
+	height: 31px;
+	margin: 10px 0;
+    font-size: 100%;
     color: #555;
     background-color: #fff;
-    background-image: none;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-}
-
-.profiledropdown-a{
-	width: 80%;
-}
-.profiledropdown{
-	width: 200px;
-	float: right;
 }
 
 .username{
-	float: left;
-	font-weight: bold;
-	font-size: 14px;
-	color: #ffffff;
-}
-.profile-icon{
-	display: block;
-	width: 14px;
-	float: right;
-	margin-right: 30px;
+	margin-right: 5px;
+	color: #fff;
 }
 
 
@@ -2655,12 +2624,12 @@ header .wrapper {
 	}
 }
 
-header .wrapper, #wrapper_header_example header .wrapper {
+header .wrapper, #main-header .wrapper, #wrapper_header_example header .wrapper {
 	width: 100%;
 }
 
 @media (min-width:1920px) {
-	header .wrapper, #wrapper_header_example header .wrapper {
+	header .wrapper, #main-header .wrapper, #wrapper_header_example header .wrapper {
 		width: 75%;
 	}
 }
@@ -2733,21 +2702,44 @@ header .wrapper, #wrapper_header_example header .wrapper {
 
 
 /* --- STYLEGUIDE NAVIAGTION --- */
-#atomicDesignNavigation{
+#atomicDesignNavigation {
+	float: left;
 	align-content: center;
-	display: none;
+	display: block;
+	width:100%;
+	background-color: #222;
 }
 
 #atomicDesignNavigation ul{
+	float: left;
+	width: 100%;
 	list-style: none;
 	margin: 0 auto;
-	display: grid;
-	grid-template-columns: auto auto auto auto auto;
+	display: block;
+}
+
+#atomicDesignNavigation ul li {
+	clear: both;
+	float: left;
+	width: 100%;
+}
+
+#atomicDesignNavigation ul li a {
+	float: left;
+	padding: 10px;
+	text-decoration: none;
+	color: #FFF;
+	font-weight: bold;
+}
+
+#atomicDesignNavigation ul li a:hover {
+	color: #CCC;
 }
 
 @media (min-width:768px){
-	#atomicDesignNavigation{
-		display: grid;
+	#atomicDesignNavigation ul li{
+		width: auto;
+		clear: none;
 	}
 }
 
