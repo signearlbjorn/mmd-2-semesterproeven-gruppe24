@@ -63,6 +63,9 @@ header {
     }
 }
 
+b{
+	font-size: 100%;
+}
 
 /* -- h1 HEADING -- */
 h1 {
@@ -181,6 +184,7 @@ button {
 
 .round-corners {
 	position: relative;
+	float: left;
 	min-height: 1px;
 	min-width: 1px;
 	padding-left: 17px;
@@ -188,6 +192,7 @@ button {
 	border-radius: 1000px; /* Forcing large size in pixels, will ensure rounded corners */
 	border: none;
 	font-size: 120%;
+	text-decoration: none;
 	background-color: #FFF;
 }
 
@@ -197,13 +202,20 @@ button {
 
 .rounded-corners {
 	position: relative;
+	float: left;
 	min-height: 1px;
     min-width: 150px;
 	padding: 2px 14px;
 	border-radius: 14px;
 	border: none;
 	font-size: 140%;
+	text-decoration: none;
 	background-color: #FFF;
+}
+
+a.round-corners,
+a.rounded-corners {
+	text-align: center;
 }
 
 .rounded-corners b {
@@ -405,6 +417,9 @@ input[type="time"]:before {
 	right: 17px;
 	display: block;
 	background-repeat: no-repeat;
+}
+input.date-range-input:before {
+	right: 0;
 }
 
 input[type="date"]:before,
@@ -624,17 +639,6 @@ textarea{
 }
 
 
-/* -- SAVE TO SELECT -- */
-.save-to-select {
-	display: block;
-	float: left;
-}
-.save-to-select .select-span,
-.save-to-select .select-wrapper {
-	clear: both;
-}
-
-
 /* -- SORT SELECT -- */
 .sort-by-select {
 	float: right;
@@ -682,7 +686,7 @@ textarea{
 }
 
 .filter-option .select-span {
-	color: #FFF;
+	color: inherit;
 }
 
 .filter-option .select-wrapper {
@@ -767,7 +771,7 @@ textarea{
 .date-range-start-end-split {
 	font-size: 135.71%;
 	line-height: 135.71%;
-	color: #FFF;
+	color: inherit;
 }
 
 .date-range-title {
@@ -806,7 +810,7 @@ textarea{
 	bottom: 0;
 	width: 65%;
 	height: 1px;
-	background-color: #FFF;
+	background-color: #000;
 }
 
 .date-range-input.error:after {
@@ -962,16 +966,15 @@ textarea{
 	position: relative;
 	overflow: auto;
     overflow-y: hidden;
-	max-height: 2.8em;
 	max-width: 100%;
-	border-radius: 1000px;
-	background-color: #fff;
 	white-space: nowrap;
 }
 
 .switch-content {
-	width: 100%;
 	height: 2.8em;
+	max-height: 2.8em;
+	border-radius: 1000px;
+	background-color: #fff;
 }
 
 .switch label {
@@ -1477,7 +1480,7 @@ textarea{
 /* --- POP UP --- */
 .pop-up {
 	position: fixed;
-	top: 20%;
+	top: 10%;
 	left: 10%;
 	overflow: auto;
 	max-height: 80%;
@@ -1504,6 +1507,8 @@ textarea{
 }
 
 .pop-up-title-image {
+	clear: left;
+	float: left;
 	margin-right: 15px;
 }
 
@@ -1538,7 +1543,13 @@ textarea{
 }
 
 .pop-up-title {
+	float: left;
 	font-size: 220%;
+}
+
+.pop-up-idenfification {
+	float: left;
+	clear: both;
 }
 
 .pop-up-content-area {
@@ -1551,16 +1562,44 @@ textarea{
 .pop-up-content-area-molecule {
 	width: 100%;
 	clear: both;
+	margin-bottom: 15px;
 }
 
-.pop-up-content-area-molecule input {
+.pop-up-content-area-molecule input[type="email"] {
 	border: solid 1px #707070;
+}
+
+.pop-up-content-area-molecule:last-child {
+	margin-bottom: 0;
 }
 
 .pop-up-buttons {
 	width: 100%;
 	padding: 15px;
 	box-sizing: border-box;	
+}
+
+.pop-up-buttons .rounded-corners {
+	margin-right: 15px;
+}
+
+.pop-up-buttons .rounded-corners:last-child {
+	margin-right: 0;
+}
+
+
+/* -- POP UP OVERLAY --*/
+#overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	min-width: 1px;
+	height: 100vh;
+	min-height: 1px;
+	overflow: hidden;
+	background: transparent;
+	z-index: 999;
 }
 
 
@@ -2443,7 +2482,8 @@ header .wrapper, #main-header .wrapper, #wrapper_header_example header .wrapper 
 }
 
 /* -- POP UP -- */
-#styleguide .pop-up {
+#styleguide .pop-up,
+#styleguide #overlay {
 	position: absolute;
 }
 
@@ -2486,6 +2526,7 @@ header .wrapper, #main-header .wrapper, #wrapper_header_example header .wrapper 
 #styleguide .pop-up-article .example{
 	min-height: 300px;
 	overflow-y: auto;
+	overflow-x: hidden;
 }
 
 

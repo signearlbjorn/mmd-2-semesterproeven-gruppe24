@@ -41,7 +41,7 @@
 		<h2 id="styleguideundertitel" class="styleguide-title"> af gruppe 24 </h2>
 		<!-- struktur for løsning -->
 		<h2 id="strukturtitel" class="styleguide-title">Struktur for interaktiv løsning</h2>
-		<label class="select-label save-to-select" title="ÅBen styleguide i predefineret visningstørrelse">
+		<label class="select-label" title="ÅBen styleguide i predefineret visningstørrelse">
 			<span class="select-span">Preview styleguide:</span>
 			<div class="select-wrapper">
 				<select id="preview-page" name="preview-page" class="select">
@@ -1414,15 +1414,15 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<label class="select-label filter-option" title="Filter by folder">
-					<span class="select-span">Folder</span>
+				<label class="select-label filter-option" title="Filter by group">
+					<span class="select-span">Group</span>
 					<div class="select-wrapper">
 						<select name="filter-by-report-folder" class="select">
-							<option value="all" selected="">All folders</option>
-							<option value="none">No set folder</option>
-							<option value="folder-1">Folder 1</option>
-							<option value="folder-2">Folder 2</option>
-							<option value="folder-3">Folder 3</option>
+							<option value="all" selected="">All groups</option>
+							<option value="none">No set group</option>
+							<option value="group-1">Group 1</option>
+							<option value="group-2">Group 2</option>
+							<option value="group-3">Group 3</option>
 						</select>
 					</div>
 				</label>
@@ -1437,15 +1437,15 @@
                   </tr>
 				<tr class="row-two">
 					<td class="code">
-						<label class="select-label filter-option" title="Filter by folder">
-							<span class="select-span">Folder</span>
+						<label class="select-label filter-option" title="Filter by group">
+							<span class="select-span">Group</span>
 							<div class="select-wrapper">
 								<select name="filter-by-report-folder" class="select">
-									<option value="all" selected="">All folders</option>
-									<option value="none">No set folder</option>
-									<option value="folder-1">Folder 1</option>
-									<option value="folder-2">Folder 2</option>
-									<option value="folder-3">Folder 3</option>
+									<option value="all" selected="">All groups</option>
+									<option value="none">No set group</option>
+									<option value="group-1">Group 1</option>
+									<option value="group-2">Group 2</option>
+									<option value="group-3">Group 3</option>
 								</select>
 							</div>
 						</label>
@@ -3588,7 +3588,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<label class="select-label save-to-select full-width" title="Choose what to attach report as">
+				<label class="select-label full-width" title="Choose what to attach report as">
 					<span class="select-span">Attach as...</span>
 					<div class="select-wrapper">
 						<select name="full-width" class="select">
@@ -3609,7 +3609,7 @@
 				<tr class="row-two">
 					<!-- HTML -->
 					<td class="code">
-						<label class="select-label save-to-select full-width" title="Choose what to attach report as>
+						<label class="select-label full-width" title="Choose what to attach report as>
 							<span class="select-span">Attach as...</span>
 							<div class="select-wrapper">
 								<select name="full-width" class="select">
@@ -3622,12 +3622,6 @@
 					</td>
 					<!-- CSS -->
 					<td class="code">
-						/* save-to-select */
-						.save-to-select {
-							display: block;
-							float: left;
-						}
-
 						/* -- SELECT --*/
 						.select-label {
 							position: relative;
@@ -3825,14 +3819,15 @@
 			</table>
 		</div>
 	</article>
-	<article id="save-to-select">
+	<!-- GROUP SELECT -->
+	<article id="group-select">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Save to select</h4>
+			<h4 class="styleguide-title">Group select</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<label class="select-label save-to-select full-width">
-					<span class="select-span">Save to</span>
+				<label class="select-label full-width">
+					<span class="select-span">Group</span>
 					<div class="select-wrapper">
 						<select name="save-to-location" class="select">
 							<option value="overview" selected="">Overview</option>
@@ -3853,8 +3848,8 @@
 				<tr class="row-two">
 					<!--HTML-->
 					<td class="code">
-						<label class="select-label save-to-select full-width">
-							<span class="select-span">Save to</span>
+						<label class="select-label full-width">
+							<span class="select-span">Group</span>
 							<div class="select-wrapper">
 								<select name="save-to-location" class="select">
 									<option value="overview" selected="">Overview</option>
@@ -3867,12 +3862,6 @@
 					</td>
 					<!--CSS-->
 					<td class="code">
-						/* save-to-select */
-						.save-to-select {
-							display: block;
-							float: left;
-						}
-
 						/* -- SELECT --*/
 						.select-label {
 							position: relative;
@@ -3955,7 +3944,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<label class="select-label save-to-select full-width">
+				<label class="select-label full-width">
 					<span class="select-span">Share as...</span>
 					<div class="select-wrapper">
 						<select name="share-report-as" class="select full-width">
@@ -3976,7 +3965,7 @@
 				<tr class="row-two">
 					<!--HTML-->
 					<td class="code">
-						<label class="select-label save-to-select full-width">
+						<label class="select-label full-width">
 							<span class="select-span">Share as...</span>
 							<div class="select-wrapper">
 								<select name="share-report-as" class="select full-width">
@@ -3989,12 +3978,6 @@
 					</td>
 					<!--CSS-->
 					<td class="code">
-						/* save-to-select */
-						.save-to-select {
-							display: block;
-							float: left;
-						}
-
 						/* -- SELECT --*/
 						.select-label {
 							position: relative;
@@ -4073,15 +4056,16 @@
 	<!-- SHARE WITH SELECT -->
 	<article id="share-as-select">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Share WITH</h4>
+			<h4 class="styleguide-title">Share with</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<label class="select-label save-to-select full-width">
+				<label class="select-label full-width">
 					<span class="select-span">Share with...</span>
 					<div class="select-wrapper">
 						<select name="share-report-as" class="select full-width disabled">
-							<option value="email" selected="">E-mail</option>
+							<option value="email" selected="">E-mail server</option>
+							<option value="email">E-mail klient</option>
 							<option value="mms">MMS</option>
 							<option value="linkedin">LinkedIn</option>
 							<option value="facebook">Facebook</option>
@@ -4101,11 +4085,12 @@
 				<tr class="row-two">
 					<!--HTML-->
 					<td class="code">
-						<label class="select-label save-to-select full-width">
+						<label class="select-label full-width">
 							<span class="select-span">Share with...</span>
 							<div class="select-wrapper">
 								<select name="share-report-as" class="select full-width disabled">
-									<option value="email" selected="">E-mail</option>
+									<option value="email" selected="">E-mail server</option>
+									<option value="email">E-mail klient</option>
 									<option value="mms">MMS</option>
 									<option value="linkedin">LinkedIn</option>
 									<option value="facebook">Facebook</option>
@@ -4116,12 +4101,6 @@
 					</td>
 					<!--CSS-->
 					<td class="code">
-						/* save-to-select */
-						.save-to-select {
-							display: block;
-							float: left;
-						}
-
 						/* -- SELECT --*/
 						.select-label {
 							position: relative;
@@ -4299,7 +4278,7 @@
 			</table>
 		</div>
 	</article>
-	<!-- E-MAIL -->
+	<!-- E-MAIL INPUT -->
 	<article id="email-input">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Email-input knap</h4>
@@ -4406,6 +4385,64 @@
 
 						function removeErrorClass(element) {
 							element.classList.remove("error");
+						}
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<!-- REPORT NAME INPUT -->
+	<article id="report-name-input">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Report name input</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<label class="text-input full-width">
+					<span class="clear-both" title="Input your e-mail">Report name</span>
+					<input type="email" name="report-name" class="rounded-corners button-w clear-both full-width" placeholder="Report name" value="Report name #id" required>
+				</label>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overviewmolekyler">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+				</tr>
+				<tr class="row-two">
+					<!-- HTML -->
+					<td class="code">
+						<label class="text-input full-width">
+							<span class="clear-both" title="Input your e-mail">Report name</span>
+							<input type="email" name="report-name" class="rounded-corners button-w clear-both full-width" placeholder="Report name" value="Report name #id" required>
+						</label>
+					</td>
+					<!-- CSS -->
+					<td class="code">
+						.clear-both{
+							clear: both;
+						}
+						.full-width, .full-width .select-wrapper, .full-width .select-wrapper select {
+							width: 100%;
+						}
+						
+						.text-input {
+							float: left;
+						}
+
+						.text-input span {
+							float: left;
+							max-width: 100%;
+							margin-right: 5px;
+							font-size: 142.85%;
+							overflow: hidden;
+						}
+
+						.text-input input {
+							float: left;
+							max-width: 100%;
+							font-size: 142.85%;
 						}
 					</td>
 				</tr>
@@ -5930,40 +5967,7 @@
 					</td>
 					<!--CSS to copy-->
 					<td class="code">
-						/* -- SETTINGS MENU --*/
-						.settings-menu, .settings-menu-dark {
-							overflow-y: auto;
-							max-height: 100vh;
-							width: 300px;
-							max-width: 100%;
-							padding-right: 12px;
-							padding-left: 12px;
-							padding-top: 10px;
-							padding-bottom: 25px;
-							border-radius: 12px;
-							box-sizing: border-box;
-						}
-
-						.settings-menu-dark .settings-menu-button:last-child,
-						.settings-menu .settings-menu-button:last-child {
-							margin-bottom: 0;
-						}
-
-						.settings-menu-dark .settings-menu-button span,
-						.settings-menu .settings-menu-button span {
-							line-height: 1;
-						}
-
-						.settings-menu {
-							background-color: #D3D3D3;
-						}
-
-						.settings-menu-dark {
-							background-color: #222222;
-						}
-
-
-						/* - SETTINGS MENU BUTTON -*/
+						/* -- SETTINGS MENU BUTTON -- */
 						.settings-menu-dark .settings-menu-button,
 						.settings-menu .settings-menu-button {
 							margin-bottom: 5px;
@@ -6047,87 +6051,6 @@
 					</td>
 					<!--CSS to copy-->
 					<td class="code">
-						/* --- POP UP --- */
-						.pop-up {
-							position: fixed;
-							top: 20%;
-							left: 10%;
-							overflow: auto;
-							max-height: 80%;
-							width: 80%;
-							max-width: 650px;
-							background-color: #D3D3D3;
-							border-radius: 12px;
-							z-index: 1000;
-							box-sizing: border-box;
-						}
-
-						@media (min-width: 813px){
-							.pop-up {
-								left: calc(50% - 325px); /* Half of screen - element width */
-								max-width: 650px;
-							}
-						}
-
-						.pop-up p {
-							margin: 50px auto;
-							display: block;
-						}
-
-						.pop-up-buttons {
-							width: 100%;
-						}
-
-						.pop-up-title-area {
-							width: 100%;
-							padding: 15px;
-							border-bottom: solid 1px #707070;
-							box-sizing: border-box;
-						}
-
-						.pop-up-title-image {
-							margin-right: 15px;
-						}
-
-						.pop-up-title-area .font-height {
-							height: 24px;
-							margin-top: 12px;
-							margin-bottom: 12px;
-						}
-
-						@media (min-width:481px) {
-							.pop-up-title-area .font-height {
-								height: 5.0314vw;
-								margin-top: 2.5157vw;
-								margin-bottom: 2.5157vw;
-							}
-						}
-
-						@media (min-width:768px) {
-							.pop-up-title-area .font-height {
-								height: 35px;
-								margin-top: 17px;
-								margin-bottom: 18px;
-							}
-						}
-
-						@media (min-width: 1920px) {
-							.pop-up-title-area .font-height {
-								height: 1.6038vw;
-								margin-top: 0.8019vw;
-								margin-bottom: 0.8019vw;
-							}
-						}
-
-						.pop-up-title {
-							font-size: 220%;
-						}
-
-						.pop-up-content-area {
-							width: 100%;
-							padding: 15px;
-							box-sizing: border-box;	
-						}
 					</td>
 					<td class="code">
 						// Delete group
@@ -6145,16 +6068,80 @@
 			<h3 id="sidetitlerogsettingsbar" class="styleguide-title">Pop up</h3>
 		</div>
 	</div>
+	<!-- GENERIC POP UP -->
+	<article id="pop-up-styleguide" class="pop-up-article">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Pop up</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<div id="overlay"></div>
+				<form action="" method="get" id="pop-up" class="pop-up menu">
+					<div class="pop-up-title-area">
+						<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+						<img class="pop-up-title-image font-height" src="img/icons/edit.svg" alt="Example icon">
+						<span class="pop-up-title">Title</span>
+						<span class="pop-up-idenfification">Report name; #id</span>
+					</div>
+					<div class="pop-up-content-area">
+						<!-- MOLECULE -->
+						<div class="pop-up-content-area-molecule">
+						</div>
+					</div>
+					<div class="pop-up-buttons">
+						<button type="button" class="button-w rounded-corners close" title="Close">Cancel</button>
+						<button type="submit" class="button-g rounded-corners disabled right" title="Share report">Confirm</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table>
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML to copy-->
+					<td class="code">
+						<div id="overlay"></div>
+						<form action="" method="get" id="pop-up" class="pop-up menu">
+							<div class="pop-up-title-area">
+								<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+								<img class="pop-up-title-image font-height" src="img/icons/edit.svg" alt="Example icon">
+								<span class="pop-up-title">Title</span>
+								<span class="pop-up-idenfification">Report name; #id</span>
+							</div>
+							<div class="pop-up-content-area">
+								<!-- MOLECULE -->
+								<div class="pop-up-content-area-molecule">
+								</div>
+							</div>
+							<div class="pop-up-buttons">
+								<button type="button" class="button-w rounded-corners close" title="Close">Cancel</button>
+								<button type="submit" class="button-g rounded-corners disabled right" title="Share report">Confirm</button>
+							</div>
+						</form>
+					</td>
+					<!--CSS to copy-->
+					<td class="code">
+					</td>
+				</tr>
+			</table>
+			<p class="info">Overlay should only be copied once when pop ups are used. All subsecuent pop up's should not use it.</p>
+		</div>
+	</article>
 	<!-- DELETE REPORT POP UP -->
-	<article id="delete-report-pop-up" class="pop-up-article">
+	<article id="delete-report-pop-up-styleguide" class="pop-up-article">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Pop ud delete report</h4>
 		</div>
 		<div class="example">
-			<form action="" method="get" class="pop-up menu">
+			<form action="" method="get" id="delete-report-pop-up" class="pop-up menu">
 				<div class="pop-up-title-area">
 					<img class="pop-up-title-image font-height" src="img/icons/trash-2.svg" alt="Delete icon">
 					<span class="pop-up-title">Delete report</span>
+					<span class="pop-up-idenfification">Report name; #id</span>
 				</div>
 				<div class="pop-up-content-area">
 					<p>Are you sure you want to delete "<b>Report Name</b>" <b>#ID</b>?</p>
@@ -6169,12 +6156,12 @@
 			<table class="overvieworganimser">
 				<tr class="row-one">
 					<th>HTML</th>
-					<th>CSS</th>
+					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
 					<!--HTML to copy-->
 					<td class="code">
-						<form action="" method="get" class="pop-up menu">
+						<form action="" method="get" id="delete-report-pop-up" class="pop-up menu">
 							<div class="pop-up-title-area">
 								<img class="pop-up-title-image font-height" src="img/icons/trash-2.svg" alt="Delete icon">
 								<span class="pop-up-title">Delete report</span>
@@ -6188,23 +6175,28 @@
 							</div>
 						</form>
 					</td>
-					<!--CSS to copy-->
+					<!--Js to copy-->
 					<td class="code">
+						let deleteReportPopUp = document.getElementById("delete-report-pop-up");
+						// Ajax delete report
+						// ToDo
 					</td>
+				</tr>
 				</tr>
 			</table>
 		</div>
 	</article>
 	<!-- DELETE GROUP POP UP -->
-	<article id="delete-folder-pop-up" class="pop-up-article">
+	<article id="delete-folder-pop-up-styleguide" class="pop-up-article">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Pop ud delete - group</h4>
 		</div>
 		<div class="example">
-			<form action="" method="get" class="pop-up menu">
+			<form action="" method="get" id="delete-group-pop-up" class="pop-up menu">
 				<div class="pop-up-title-area">
 					<img class="pop-up-title-image font-height" src="img/icons/trash-2.svg" alt="Delete icon">
 					<span class="pop-up-title">Delete group</span>
+					<span class="pop-up-idenfification">Group name; #id</span>
 				</div>
 				<div class="pop-up-content-area">
 					<p>Are you sure you want to delete "<b>Folder Name</b>" <b>#goupID</b>?</p>
@@ -6219,15 +6211,16 @@
 			<table class="overvieworganimser">
 				<tr class="row-one">
 					<th>HTML</th>
-					<th>CSS</th>
+					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
 					<!--HTML to copy-->
 					<td class="code">
-						<form action="" method="get" class="pop-up menu">
+						<form action="" method="get" id="delete-group-pop-up" class="pop-up menu">
 							<div class="pop-up-title-area">
 								<img class="pop-up-title-image font-height" src="img/icons/trash-2.svg" alt="Delete icon">
 								<span class="pop-up-title">Delete group</span>
+								<span class="pop-up-idenfification">Group name; #id</span>
 							</div>
 							<div class="pop-up-content-area">
 								<p>Are you sure you want to delete "<b>Folder Name</b>" <b>#goupID</b>?</p>
@@ -6238,30 +6231,34 @@
 							</div>
 						</form>
 					</td>
-					<!--CSS to copy-->
+					<!--Js to copy-->
 					<td class="code">
+						let deleteGroupPopUp = document.getElementById("delete-group-pop-up");
+						// Ajax delete folder
+						// ToDo
 					</td>
 				</tr>
 			</table>
 		</div>
 	</article>
 	<!-- SHARE AS POP UP -->
-	<article id="share-as-pop-up" class="pop-up-article">
+	<article id="share-as-pop-up-styleguide" class="pop-up-article">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Share as pop up</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<form action="" method="get" class="pop-up menu">
+				<form action="" method="get" id="share-as-pop-up" class="pop-up menu">
 					<div class="pop-up-title-area">
 						<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
 						<img class="pop-up-title-image font-height" src="img/icons/sharegreen.svg" alt="Share icon">
 						<span class="pop-up-title">Share as...</span>
+						<span class="pop-up-idenfification">Report name; #id</span>
 					</div>
 					<div class="pop-up-content-area">
 						<!-- SHARE AS SELECT -->
 						<div class="pop-up-content-area-molecule">
-							<label class="select-label save-to-select full-width">
+							<label class="select-label full-width">
 								<span class="select-span">Share as...</span>
 								<div class="select-wrapper">
 									<select name="share-report-as" class="select full-width disabled">
@@ -6274,11 +6271,12 @@
 						</div>
 						<!-- SHARE WITH SELECT -->
 						<div class="pop-up-content-area-molecule">
-							<label class="select-label save-to-select full-width">
+							<label class="select-label full-width">
 								<span class="select-span">Share with...</span>
 								<div class="select-wrapper">
 									<select name="share-report-as" class="select full-width disabled">
-										<option value="email" selected="">E-mail</option>
+										<option value="email" selected="">E-mail klient</option>
+										<option value="email" selected="">E-mail through server</option>
 										<option value="mms">MMS</option>
 										<option value="linkedin">LinkedIn</option>
 										<option value="facebook">Facebook</option>
@@ -6303,8 +6301,8 @@
 						</div>
 					</div>
 					<div class="pop-up-buttons">
-						<button type="button" class="button-w rounded-corners close" title="Close">Cancel</button>
-						<button type="submit" class="button-g rounded-corners disabled right" title="Share report" value="groupID">Done</button>
+						<button type="button" class="button-w rounded-corners close" title="Close">Close</button>
+						<button type="submit" class="button-g rounded-corners disabled right" title="Share report">Done</button>
 					</div>
 				</form>
 			</div>
@@ -6314,570 +6312,707 @@
 			<table>
 				<tr class="row-one">
 					<th>HTML</th>
-					<th>CSS</th>
 					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
 					<!--HTML to copy-->
 					<td class="code">
-					</td>
-					<!--CSS to copy-->
-					<td class="code">
+						<form action="" method="get" id="share-as-pop-up" class="pop-up menu">
+							<div class="pop-up-title-area">
+								<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+								<img class="pop-up-title-image font-height" src="img/icons/sharegreen.svg" alt="Share icon">
+								<span class="pop-up-title">Share as...</span>
+								<span class="pop-up-idenfification">Report name; #id</span>
+							</div>
+							<div class="pop-up-content-area">
+								<!-- SHARE AS SELECT -->
+								<div class="pop-up-content-area-molecule">
+									<label class="select-label full-width">
+										<span class="select-span">Share as...</span>
+										<div class="select-wrapper">
+											<select name="share-report-as" class="select full-width disabled">
+												<option value="pdf" selected="">PDF</option>
+												<option value="qr">QR-code</option>
+												<option value="link">Link</option>
+											</select>
+										</div>
+									</label>
+								</div>
+								<!-- SHARE WITH SELECT -->
+								<div class="pop-up-content-area-molecule">
+									<label class="select-label full-width">
+										<span class="select-span">Share with...</span>
+										<div class="select-wrapper">
+											<select name="share-report-as" class="select full-width disabled">
+												<option value="email" selected="">E-mail klient</option>
+												<option value="email" selected="">E-mail through server</option>
+												<option value="mms">MMS</option>
+												<option value="linkedin">LinkedIn</option>
+												<option value="facebook">Facebook</option>
+												<option value="twitter">Twitter</option>
+											</select>
+										</div>
+									</label>
+								</div>
+								<!-- E-MAIL INPUT -->
+								<div class="pop-up-content-area-molecule">
+									<label class="text-input full-width" title="Input your e-mail">
+										<span class="clear-both">E-mail adress</span>
+										<input type="email" name="email-schedule" class="rounded-corners button-w clear-both full-width" placeholder="example@email.com">
+									</label>
+								</div>
+								<!-- TEXTAREA -->
+								<div class="pop-up-content-area-molecule">
+									<label class="text-input full-width">
+										<span class="clear-both" title="Message to attach">Message</span>
+										<textarea rows="5" cols="50" name="comment" class="type-text-field clear-both" placeholder="Enter message here..."></textarea>
+									</label>
+								</div>
+							</div>
+							<div class="pop-up-buttons">
+								<button type="button" class="button-w rounded-corners close" title="Close">Close</button>
+								<button type="submit" class="button-g rounded-corners disabled right" title="Share report">Done</button>
+							</div>
+						</form>
 					</td>
 					<!--Js to copy-->
-					<td class="empty"></td>
+					<td class="code">
+						let shareAsPopUp = document.getElementById("share-as-pop-up");
+						// Open e-mail klient filled out
+						// ToDo
+						// Ajax call to send e-mail - Close report after action completion
+						// ToDo
+						// Integrate API for social media, and share through those
+						// ToDo
+						// Send MMS through server
+						// ToDo
+					</td>
 				</tr>
 			</table>
 		</div>
 	</article>
-	<!--"POP UP SHARE AS ORGANISMER- SLUT-->
-	<article id="upload-schedule-pop-up" class="pop-up-article">
+	<!-- SHCHEDULE POP-UP -->
+	<article id="schedule-pop-up-styleguide" class="pop-up-article">
 		<div class="wrapper">
-			<h4 class="styleguide-title">POP-UP SCHEDULE</h4>
+			<h4 class="styleguide-title">Schedule pop up</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<!-- SHCHEDULE POP-UP ORGANISME -->
-				<div class="frameforshareaspopup">
-					<div class="popuptitel">
-						<img class="settingpopupicon" src="img/icons/calendargreen.svg" alt="">
-						<img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
-						<h1 class="settingtitel">Schedule</h1>
+				<form action="" method="get" id="schedule-pop-up" class="pop-up menu">
+					<div class="pop-up-title-area">
+						<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+						<img class="pop-up-title-image font-height" src="img/icons/calendargreen.svg" alt="Calendar icon">
+						<span class="pop-up-title">Schedule report</span>
+						<span class="pop-up-idenfification">Report name; #id</span>
 					</div>
-					<!-- Type knap -->
-					<div class="pop-up-content-area-molecule">
-						<span class="typetext">Type</span>
-						<button class="typebutton">
-							<span class="typebuttontext">Day of week</span>
-							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-						</button>
-					</div>
-					<!-- Type knap - slut-->
-					<!-- Time knap -->
-					<div class="pop-up-content-area-molecule">
-						<span class="typetext">Time</span>
-						<button class="timebutton">
-							<span class="typebuttontext">00:00</span>
-					  </button>
-					</div>
-					<!-- Time knap- slut-->
-					<!-- Email knap -->
-					<div class="pop-up-content-area-molecule">
-						<span class="typetext">Your email</span>
-						<button class="typebutton">
-							<span class="typebuttontext">email@example.com</span>
-							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-						</button>
-					</div>
-					<!-- Email knap - slut-->
-					<!-- message input -->
-					<div class="messageframe">
-						<div class="type">
-							<soan class="typetext">Message</span>
-							<textarea rows="4" cols="50" name="comment" class="type-text-field" placeholder="Enter message here..."></textarea>
+					<div class="pop-up-content-area">
+						<!-- WEEKDAY SWITCH FOR SCHEDULE REPORT -->
+						<div class="pop-up-content-area-molecule">
+							<div class="switch">
+								<div class="switch-content">
+									<label class="switch-label">
+										<span title="Monday">Monday</span>
+										<input type="checkbox" class="switch-input" name="schedule-weekday-monday">
+									</label>
+									<label class="switch-label">
+										<span title="Tuesday">Tuesday</span>
+										<input type="checkbox" class="switch-input" name="schedule-weekday-tuesday">
+									</label>
+									<label class="switch-label">
+										<span title="Wednesday">Wednesday</span>
+										<input type="checkbox" class="switch-input" name="schedule-weekday-wednesday">
+									</label>
+									<label class="switch-label">
+										<span title="Thursday">Thursday</span>
+										<input type="checkbox" class="switch-input" name="schedule-weekday-thursday">
+									</label>
+									<label class="switch-label">
+										<span title="Friday">Friday</span>
+										<input type="checkbox" class="switch-input" name="schedule-weekday-friday">
+									</label>
+									<label class="switch-label">
+										<span title="Saturday">Saturday</span>
+										<input type="checkbox" class="switch-input" name="schedule-weekday-saturday">
+									</label>
+									<label class="switch-label">
+										<span title="Sunday">Sunday</span>
+										<input type="checkbox" class="switch-input" name="schedule-weekday-sunday">
+									</label>
+								</div>
+							</div>
+						</div>
+						<!-- SCHEDULE TIME INPUT -->
+						<div class="pop-up-content-area-molecule">
+							<label class="text-input">
+								<span class="clear-both" title="Input time for schedule, format: HH:MM">Time</span>
+								<input type="time" name="schedule-time" class="rounded-corners button-w clear-both" placeholder="HH:MM">
+							</label>
+						</div>
+						<!-- SHARE WITH -->
+						<div class="pop-up-content-area-molecule">
+							<label class="select-label full-width">
+								<span class="select-span">Shedule through...</span>
+								<div class="select-wrapper">
+									<select name="share-report-as" class="select full-width disabled">
+										<option value="email" selected="">E-mail</option>
+										<option value="mms">MMS</option>
+										<option value="linkedin">LinkedIn</option>
+										<option value="facebook">Facebook</option>
+										<option value="twitter">Twitter</option>
+									</select>
+								</div>
+							</label>
+						</div>
+						<!-- EMAIL-INPUT BUTTON -->
+						<div class="pop-up-content-area-molecule">
+							<label class="text-input full-width" title="Input your e-mail">
+								<span class="clear-both">E-mail adress</span>
+								<input type="email" name="email-schedule" class="rounded-corners button-w clear-both full-width" placeholder="example@email.com">
+							</label>
+						</div>
+						<!-- MESSAGE -->
+						<div class="pop-up-content-area-molecule">
+							<label class="text-input full-width">
+								<span class="clear-both" title="Message to attach">Message</span>
+								<textarea rows="5" cols="50" name="comment" class="type-text-field clear-both" placeholder="Enter message here..."></textarea>
+							</label>
 						</div>
 					</div>
-					<!-- message input - slut -->
-					<!-- cancel knap -->
-					<div class="popupcancelknap">
-						<button type="button" class="button-w">Cancel</button>
+					<div class="pop-up-buttons">
+						<button type="button" class="button-w rounded-corners close" title="Close">Close</button>
+						<button type="submit" class="button-g rounded-corners disabled right" title="Share report">Done</button>
 					</div>
-					<!-- cancel knap slut - slut-->
-					<!-- done knap -->
-					<div class="popupdoneknap">
-						<button type="button" class="button-g">Done</button>
-					</div>
-				</div>
-			<!-- SHCEDULE POP-UP ORGANISME - SLUT -->
+				</form>
 			</div>
 		</div>
 		<div class="wrapper">
 			<table>
 				<tr class="row-one">
 					<th>HTML</th>
-					<th>CSS</th>
 					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
 					<!--HTML to copy-->
 					<td class="code">
-					</td>
-					<!--CSS to copy-->
-					<td class="code">
+						<form action="" method="get" id="schedule-pop-up" class="pop-up menu">
+							<div class="pop-up-title-area">
+								<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+								<img class="pop-up-title-image font-height" src="img/icons/calendargreen.svg" alt="Calendar icon">
+								<span class="pop-up-title">Schedule report</span>
+								<span class="pop-up-idenfification">Report name; #id</span>
+							</div>
+							<div class="pop-up-content-area">
+								<!-- WEEKDAY SWITCH FOR SCHEDULE REPORT -->
+								<div class="pop-up-content-area-molecule">
+									<div class="switch">
+										<div class="switch-content">
+											<label class="switch-label">
+												<span title="Monday">Monday</span>
+												<input type="checkbox" class="switch-input" name="schedule-weekday-monday">
+											</label>
+											<label class="switch-label">
+												<span title="Tuesday">Tuesday</span>
+												<input type="checkbox" class="switch-input" name="schedule-weekday-tuesday">
+											</label>
+											<label class="switch-label">
+												<span title="Wednesday">Wednesday</span>
+												<input type="checkbox" class="switch-input" name="schedule-weekday-wednesday">
+											</label>
+											<label class="switch-label">
+												<span title="Thursday">Thursday</span>
+												<input type="checkbox" class="switch-input" name="schedule-weekday-thursday">
+											</label>
+											<label class="switch-label">
+												<span title="Friday">Friday</span>
+												<input type="checkbox" class="switch-input" name="schedule-weekday-friday">
+											</label>
+											<label class="switch-label">
+												<span title="Saturday">Saturday</span>
+												<input type="checkbox" class="switch-input" name="schedule-weekday-saturday">
+											</label>
+											<label class="switch-label">
+												<span title="Sunday">Sunday</span>
+												<input type="checkbox" class="switch-input" name="schedule-weekday-sunday">
+											</label>
+										</div>
+									</div>
+								</div>
+								<!-- SCHEDULE TIME INPUT -->
+								<div class="pop-up-content-area-molecule">
+									<label class="text-input">
+										<span class="clear-both" title="Input time for schedule, format: HH:MM">Time</span>
+										<input type="time" name="schedule-time" class="rounded-corners button-w clear-both" placeholder="HH:MM">
+									</label>
+								</div>
+								<!-- SHARE WITH -->
+								<div class="pop-up-content-area-molecule">
+									<label class="select-label full-width">
+										<span class="select-span">Shedule through...</span>
+										<div class="select-wrapper">
+											<select name="share-report-as" class="select full-width disabled">
+												<option value="email" selected="">E-mail</option>
+												<option value="mms">MMS</option>
+												<option value="linkedin">LinkedIn</option>
+												<option value="facebook">Facebook</option>
+												<option value="twitter">Twitter</option>
+											</select>
+										</div>
+									</label>
+								</div>
+								<!-- EMAIL-INPUT BUTTON -->
+								<div class="pop-up-content-area-molecule">
+									<label class="text-input full-width" title="Input your e-mail">
+										<span class="clear-both">E-mail adress</span>
+										<input type="email" name="email-schedule" class="rounded-corners button-w clear-both full-width" placeholder="example@email.com">
+									</label>
+								</div>
+								<!-- MESSAGE -->
+								<div class="pop-up-content-area-molecule">
+									<label class="text-input full-width">
+										<span class="clear-both" title="Message to attach">Message</span>
+										<textarea rows="5" cols="50" name="comment" class="type-text-field clear-both" placeholder="Enter message here..."></textarea>
+									</label>
+								</div>
+							</div>
+							<div class="pop-up-buttons">
+								<button type="button" class="button-w rounded-corners close" title="Close">Close</button>
+								<button type="submit" class="button-g rounded-corners disabled right" title="Share report">Done</button>
+							</div>
+						</form>
 					</td>
 					<!--Js to copy-->
-					<td class="empty"></td>
-				</tr>
+					<td class="code">
+						let schedulePopUp = document.getElementById("schedule-pop-up");
+						// Ajax setup schedule
+						// ToDo
+					</td>
+				</tr>	
 			</table>
-			<!--"POP UP SCHEDULE ORGANISMER- SLUT-->
 		</div>
 	</article>
-	<article id="save-pop-up" class="pop-up-article">
+	<!-- SAVE AS POP-UP -->
+	<article id="save-pop-up-styleguide" class="pop-up-article">
 		<div class="wrapper">
-			<h4 class="styleguide-title">POP-UP SAVE AS ORGANISME</h4>
+			<h4 class="styleguide-title">Save pop up</h4>
 		</div>
 		<div class="example">
-			<div class="wrapper">
-				<!-- SAVE AS-POP-UP ORGANISME -->
-				<div class="frameforsavaspopup">
-					<div class="popuptitel">
-						<img class="settingpopupicon" src="img/icons/savegreen.svg" alt="">
-						<img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
-						<h1 class="settingtitel">Save as</h1>
-					</div>
-					<!-- Choose printer knap -->
+			<form action="" method="get" id="save-pop-up" class="pop-up menu">
+				<input type="hidden" name="target" value="reportID">
+				<div class="pop-up-title-area">
+					<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+					<img class="pop-up-title-image font-height" src="img/icons/savegreen.svg" alt="Save icon">
+					<span class="pop-up-title">Save as...</span>
+					<span class="pop-up-idenfification">Report name; #id</span>
+				</div>
+				<div class="pop-up-content-area">
+					<!-- SHARE AS SELECT -->
 					<div class="pop-up-content-area-molecule">
-						<span class="typetext">Save as</span>
-						<button class="typebutton">
-							<span class="typebuttontext">PDF</span>
-							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-						</button>
-					</div>
-					<!-- Choose printer knap - slut-->
-					<!-- Choose quantity knap -->
-					<div class="pop-up-content-area-molecule">
-						<span class="typetext">Save to</span>
-						<button class="typebutton">
-							<span class="typebuttontext">Choos location...</span>
-							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-						</button>
-					</div>
-					<!-- cancel knap -->
-					<div class="popupcancelknap1">
-						<button type="button" class="button-w">Cancel</button>
-					</div>
-					<!-- cancel knap slut - slut-->
-					<!-- save knap -->
-					<div class="popsaveknap">
-						<button type="button" class="button-w"> Save </button>
+					<label class="select-label full-width">
+						<span class="select-span">Save as...</span>
+						<div class="select-wrapper">
+							<select name="save-report-as" class="select full-width disabled">
+								<option value="pdf" selected="">Webpage</option>
+								<option value="pdf">PDF</option>
+								<option value="qr">QR-code</option>
+								<option value="link">Link</option>
+							</select>
+						</div>
+					</label>
 					</div>
 				</div>
-				<!-- SAVE AS-POP-UP ORGANISME - SLUT -->
-			</div>
+				<div class="pop-up-buttons">
+					<button type="button" class="button-w rounded-corners close" title="Close">Cancel</button>
+					<a href="test-report.html" class="button-g rounded-corners right" title="Save report" download>Save</a>
+				</div>
+			</form>
 		</div>
-		<!--"POP-UP EKSEMPEL - SLUT-->
 		<div class="wrapper">
 			<table>
 				<tr class="row-one">
 					<th>HTML</th>
-					<th>CSS</th>
 					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
 					<!--HTML to copy-->
 					<td class="code">
-					</td>
-					<!--CSS to copy-->
-					<td class="code">
+						<form action="" method="get" id="save-pop-up" class="pop-up menu">
+							<input type="hidden" name="target" value="reportID">
+							<div class="pop-up-title-area">
+								<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+								<img class="pop-up-title-image font-height" src="img/icons/savegreen.svg" alt="Save icon">
+								<span class="pop-up-title">Save as...</span>
+								<span class="pop-up-idenfification">Report name; #id</span>
+							</div>
+							<div class="pop-up-content-area">
+								<!-- SHARE AS SELECT -->
+								<div class="pop-up-content-area-molecule">
+								<label class="select-label full-width">
+									<span class="select-span">Save as...</span>
+									<div class="select-wrapper">
+										<select name="save-report-as" class="select full-width disabled">
+											<option value="pdf" selected="">Webpage</option>
+											<option value="pdf">PDF</option>
+											<option value="qr">QR-code</option>
+											<option value="link">Link</option>
+										</select>
+									</div>
+								</label>
+								</div>
+							</div>
+							<div class="pop-up-buttons">
+								<button type="button" class="button-w rounded-corners close" title="Close">Cancel</button>
+								<a href="test-report.html" class="button-g rounded-corners right" title="Save report" download>Save</a>
+							</div>
+						</form>
 					</td>
 					<!--Js to copy-->
-					<td class="empty"></td>
+					<td class="code">
+						let savePopUp = document.getElementById("save-pop-up");
+						// On load and on change, set target to corosponding report
+					</td>
 				</tr>
 			</table>
 		</div>
 	</article>
-	<article id="save-pop-up" class="pop-up-article">
+	<!-- FILTER POP-UP -->
+	<article id="filter-pop-up-styleguide" class="pop-up-article">
 		<div class="wrapper">
-			<h4 class="styleguide-title">POP-UP PRINT ORGANISME</h4>
+			<h4 class="styleguide-title">Filter pop up</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<!-- PRINTER-POP-UP ORGANISME -->
-				<div class="frameforsavaspopup">
-					<div class="popuptitel">
-						<img class="settingpopupicon" src="img/icons/printergreen.svg" alt="">
-						<img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
-						<h1 class="settingtitel">Print report</h1>
+				<form action="" method="get" id="filter-pop-up" class="pop-up menu">
+					<div class="pop-up-title-area">
+						<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+						<img class="pop-up-title-image font-height" src="img/icons/slidersgreen.svg" alt="Slider icon">
+						<span class="pop-up-title">Filter</span>
 					</div>
-					<!-- Choose printer knap -->
-					<div class="pop-up-content-area-molecule">
-						<span class="typetext">Choose printer</span>
-						<button class="typebutton">
-						  <span class="typebuttontext">Choose...</span>
-						  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-						</button>
+					<div class="pop-up-content-area">
+						<!-- DATE RANGE -->
+						<div class="pop-up-content-area-molecule">
+							<label class="date-range">
+								<span class="date-range-title" title="Filter by date range">Date range</span>
+								<div class="date-range-date-wrapper">
+									<input type="date" id="date-range-start" name="date-range-start" placeholder="yyyy-mm-dd" class="date-range-input">
+									<span class="date-range-start-end-split">-</span>
+									<input type="date" id="date-range-end" name="date-range-end" placeholder="yyyy-mm-dd" class="date-range-input">
+								</div>
+							</label>
+						</div>
+						<!-- DATE TARGET SELECT -->
+						<div class="pop-up-content-area-molecule">
+							<label class="select-label filter-option" title="Set target for date range">
+								<span class="select-span">Date target</span>
+								<div class="select-wrapper">
+									<select name="filter-target-for-date" class="select">
+										<option value="creation-date" selected="">Creation date</option>
+										<option value="last-edited">Last edited</option>
+										<option value="schedule">Schedule</option>
+									</select>
+								</div>
+							</label>
+						</div>
+						<!-- RESULT SELECT -->
+						<div class="pop-up-content-area-molecule">
+							<label class="select-label filter-option" title="Filter by result">
+								<span class="select-span">Result</span>
+								<div class="select-wrapper">
+									<select name="filter-by-result" class="select">
+										<option value="all" selected="">Not set</option>
+										<option value="set">Result set</option>
+										<option value="not-set">Result not set</option>
+									</select>
+								</div>
+							</label>
+						</div>
+						<!-- SCHEDULE SELECT -->
+						<div class="pop-up-content-area-molecule">
+							<label class="select-label filter-option" title="Filter by schedule">
+								<span class="select-span">Schedule</span>
+								<div class="select-wrapper">
+									<select name="filter-by-schedule" class="select">
+										<option value="all" selected="">Not set</option>
+										<option value="opcomming">Due date opcomming</option>
+										<option value="due-soon">Due date soon</option>
+										<option value="expired">Expired due date</option>
+									</select>
+								</div>
+							</label>
+						</div>
+						<!-- GROUP SELECT -->
+						<div class="pop-up-content-area-molecule">
+							<label class="select-label filter-option" title="Filter by group">
+								<span class="select-span">Group</span>
+								<div class="select-wrapper">
+									<select name="filter-by-report-folder" class="select">
+										<option value="all" selected="">All groups</option>
+										<option value="none">No set group</option>
+										<option value="group-1">Group 1</option>
+										<option value="group-2">Group 2</option>
+										<option value="group-3">Group 3</option>
+									</select>
+								</div>
+							</label>
+						</div>
 					</div>
-					<!-- Choose printer knap - slut-->
-					<!-- Choose quantity knap -->
-					<div class="pop-up-content-area-molecule">
-						<span class="typetext">Choose quantity</span>
-						<button class="typebutton">
-						  <span class="typebuttontext">Choose...</span>
-						  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-						</button>
+					<div class="pop-up-buttons">
+						<button type="button" class="button-w rounded-corners close" title="Close">Cancel</button>
+						<button type="button" class="button-w rounded-corners clear-filter disabled" title="Clear filters">Clear filters</button>
+						<button type="submit" class="button-g rounded-corners disabled right" title="Apply filters">Apply</button>
 					</div>
-					<!-- cancel knap -->
-					<div class="popupcancelknap1">
-					   <button type="button" class="button-w">Cancel</button>
-					</div>
-					<!-- cancel knap slut - slut-->
-					<!-- print knap -->
-					<div class="popsaveknap">
-						<button type="button" class="button-g"> Print </button>
-					</div>
-					<!-- print knap - slet-->
-				</div>
-			<!-- wrapper knap - slet-->
+				</form>
 			</div>
 		</div>
 		<div class="wrapper">
-			<table>
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<!--HTML to copy-->
-					<td class="code">
-					</td>
-					<!--CSS to copy-->
-					<td class="code">
-					</td>
-					<!--Js to copy-->
-					<td class="empty"></td>
-				</tr>
-			</table>
-		</div>
-	</article>
-	<article id="filter-pop-up" class="pop-up-article">
-		<div class="wrapper">
-			<h4 class="styleguide-title">POP-UP FILTER ORGANISME</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<!-- FILTER POP-UP ORGANISME -->
-					  <div class="frameforshareaspopup">
-
-						<div class="popuptitel">
-							<img class="settingpopupicon" src="img/icons/slidersgreen.svg" alt="">
-							<img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
-							<h1 class="settingtitel">Filter</h1>
-						</div>
-						<!-- DATE RANGE knap -->
-						<div class="daterangecontainer">
-						  <label class="date-range">
-							  <span id="daterangetitelinfilterpopup"class="date-range-title">Date range</span>
-							  <div class="date-range-date-wrapper">
-								  <input type="date" id="date-range-start" name="date-range-start" placeholder="yyyy-mm-dd" class="date-range-input">
-								  <span class="date-range-start-end-split">-</span>
-								  <input type="date" id="date-range-end" name="date-range-end" placeholder="yyyy-mm-dd" class="date-range-input">
-							  </div>
-						  </label>
-						</div>
-						<!-- DATE RANGE - slut-->
-						<!-- DATE TARGET knap -->
-						<div class="pop-up-content-area-molecule">
-							<span class="typetext">Date target</span>
-							<button class="typebutton">
-								<span class="typebuttontext">Last edited</span>
-							<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-						  </button>
-						</div>
-						<!-- DATE TARGET - slut-->
-						<!-- RESULAT knap -->
-						<div class="pop-up-content-area-molecule">
-							<span class="typetext">Result</span>
-							<button class="typebutton">
-							  <span class="typebuttontext">Not set</span>
-							  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-							</button>
-						</div>
-						<!-- RESULT knap - slut-->
-						<!-- SCHEDULE knap -->
-						<div class="pop-up-content-area-molecule">
-							<span class="typetext">Schedule</span>
-							<button class="typebutton">
-							  <span class="typebuttontext">Not set</span>
-							  <img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-							</button>
-						</div>
-						<!-- SCHEDULE knap - slut-->
-						<!-- FOLDER knap -->
-						<div class="pop-up-content-area-molecule">
-							<span class="typetext">Schedule</span>
-							<button class="typebutton">
-								<span class="typebuttontext">Not set</span>
-								<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-							</button>
-						</div>
-						<!-- cancel knap -->
-						<div class="popupcancelknapfilter">
-						   <button type="button" class="button-w">Cancel</button>
-						</div>
-						<!-- cancel knap slut - slut-->
-						<!-- clear all knap -->
-						<div class="clearallfilterknap">
-						<button type="button" class="button-w"> Clear all filter </button>
-						</div>
-						<!-- clear knap slut - slut-->
-						<!-- done knap -->
-						<div class="popupdoneknapfilter">
-						   <button type="button" class="button-g">Done</button>
-						</div>
-					  </div>
-				<!-- SHCEDULE POP-UP ORGANISME - SLUT -->
-			</div>
-		</div>
-		<!--"POP-UP EKSEMPEL - SLUT-->
-		<div class="wrapper">
-			<!--"TABEL for pop-up -->
 			<table class="overvieworganimser">
 				<tr class="row-one">
 					<th>HTML</th>
-					<th>CSS</th>
 					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
 					<!--HTML to copy-->
 					<td class="code">
-						<!-- FILTER POP-UP ORGANISME -->
-							  <div class="frameforshareaspopup">
-
-								<div class="popuptitel">
-									<img class="settingpopupicon" src="img/icons/slidersgreen.svg" alt="">
-									<img class="settingpopupxicon" src="img/icons/xwhite.svg" alt="">
-									<h1 class="settingtitel">Filter</h1>
-								</div>
-								<!-- DATE RANGE knap -->
-								<div class="daterangecontainer">
-								  <label class="date-range">
-									  <span id="daterangetitelinfilterpopup"class="date-range-title">Date range</span>
-									  <div class="date-range-date-wrapper">
-										  <input type="date" id="date-range-start" name="date-range-start" placeholder="yyyy-mm-dd" class="date-range-input">
-										  <span class="date-range-start-end-split">-</span>
-										  <input type="date" id="date-range-end" name="date-range-end" placeholder="yyyy-mm-dd" class="date-range-input">
-									  </div>
-								  </label>
-								</div>
-								<!-- DATE RANGE - slut-->
-								<!-- DATE TARGET knap -->
+						<form action="" method="get" id="filter-pop-up" class="pop-up menu">
+							<div class="pop-up-title-area">
+								<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+								<img class="pop-up-title-image font-height" src="img/icons/slidersgreen.svg" alt="Slider icon">
+								<span class="pop-up-title">Filter</span>
+							</div>
+							<div class="pop-up-content-area">
+								<!-- DATE RANGE -->
 								<div class="pop-up-content-area-molecule">
-									<soan class="typetext">Date target</span>
-									<button class="typebutton">
-										<span class="typebuttontext">Last edited</span>
-										<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-									</button>
+									<label class="date-range">
+										<span class="date-range-title" title="Filter by date range">Date range</span>
+										<div class="date-range-date-wrapper">
+											<input type="date" id="date-range-start" name="date-range-start" placeholder="yyyy-mm-dd" class="date-range-input">
+											<span class="date-range-start-end-split">-</span>
+											<input type="date" id="date-range-end" name="date-range-end" placeholder="yyyy-mm-dd" class="date-range-input">
+										</div>
+									</label>
 								</div>
-								<!-- DATE TARGET - slut-->
-								<!-- RESULAT knap -->
+								<!-- DATE TARGET SELECT -->
 								<div class="pop-up-content-area-molecule">
-									<span class="typetext">Result</span>
-									<button class="typebutton">
-										<span class="typebuttontext">Not set</span>
-										<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-									</button>
+									<label class="select-label filter-option" title="Set target for date range">
+										<span class="select-span">Date target</span>
+										<div class="select-wrapper">
+											<select name="filter-target-for-date" class="select">
+												<option value="creation-date" selected="">Creation date</option>
+												<option value="last-edited">Last edited</option>
+												<option value="schedule">Schedule</option>
+											</select>
+										</div>
+									</label>
 								</div>
-								<!-- RESULT knap - slut-->
-								<!-- SCHEDULE knap -->
+								<!-- RESULT SELECT -->
 								<div class="pop-up-content-area-molecule">
-									<span class="typetext">Schedule</span>
-									<button class="typebutton">
-										<span class="typebuttontext">Not set</span>
-										<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-									</button>
+									<label class="select-label filter-option" title="Filter by result">
+										<span class="select-span">Result</span>
+										<div class="select-wrapper">
+											<select name="filter-by-result" class="select">
+												<option value="all" selected="">Not set</option>
+												<option value="set">Result set</option>
+												<option value="not-set">Result not set</option>
+											</select>
+										</div>
+									</label>
 								</div>
-								<!-- SCHEDULE knap - slut-->
-								<!-- FOLDER knap -->
+								<!-- SCHEDULE SELECT -->
 								<div class="pop-up-content-area-molecule">
-									<span class="typetext">Schedule</span>
-									<button class="typebutton">
-										<span class="typebuttontext">Not set</span>
-										<img class="chevronicon" src="img/icons/chevron-down.svg" alt="settings-icon">
-									</button>
+									<label class="select-label filter-option" title="Filter by schedule">
+										<span class="select-span">Schedule</span>
+										<div class="select-wrapper">
+											<select name="filter-by-schedule" class="select">
+												<option value="all" selected="">Not set</option>
+												<option value="opcomming">Due date opcomming</option>
+												<option value="due-soon">Due date soon</option>
+												<option value="expired">Expired due date</option>
+											</select>
+										</div>
+									</label>
 								</div>
-								<!-- cancel knap -->
-								<div class="popupcancelknapfilter">
-								   <button type="button" class="button-w">Cancel</button>
+								<!-- GROUP SELECT -->
+								<div class="pop-up-content-area-molecule">
+									<label class="select-label filter-option" title="Filter by group">
+										<span class="select-span">Group</span>
+										<div class="select-wrapper">
+											<select name="filter-by-report-folder" class="select">
+												<option value="all" selected="">All groups</option>
+												<option value="none">No set group</option>
+												<option value="group-1">Group 1</option>
+												<option value="group-2">Group 2</option>
+												<option value="group-3">Group 3</option>
+											</select>
+										</div>
+									</label>
 								</div>
-								<!-- cancel knap slut - slut-->
-								<!-- clear all knap -->
-								<div class="clearallfilterknap">
-									<button type="button" class="button-w"> Clear all filter </button>
-								</div>
-								<!-- clear knap slut - slut-->
-								<!-- done knap -->
-								<div class="popupdoneknapfilter">
-								   <button type="button" class="button-g">Done</button>
-								</div>
-							  </div>
-						<!-- SHCEDULE POP-UP ORGANISME - SLUT -->
-					</td>
-					<!--CSS to copy-->
-					<td class="code">
-						/*Styling for setting pop-up organismer*/
-						.frameforsettingpopup {
-							position: absolute;
-							top: 10vh;
-							left: 0;
-							background-color: #222222;
-							width: 100%;
-							max-width: 450px;
-							height: 100vh;
-							max-height: 400px;
-							border-radius: 5px;
-							overflow-y: auto;
-						}
-
-						@media (min-width:401px){
-							/* Calculate left position, when width is over 400px */
-							.frameforsettingpopup {
-								left: calc(50vw - 200px); /* Half of screen - element width */
-							}
-						}
-
-						.settingtitel {
-							color: white;
-							margin-top: -10px;
-							margin-left: 10px;
-						}
-
-						.settingpopupicon, .settingpopupxicon {
-							width: 40px;
-							height: 40px;
-						}
-
-						.settingpopupxicon {
-							float: right;
-							margin-right: -200px;
-						}
-
-						.popuptitel, .pop-up-content-area-molecule{
-							margin-top: 20px;
-							clear: right;
-						}
-
-						.pop-up-content-area-molecule,
-						.pop-up-content-area-molecule,
-						.pop-up-content-area-molecule,
-						.messageframe {
-							width: calc(100% - 20px); /*100% width - 20px margin*/
-							clear: both;
-							margin-left: 10px;
-							margin-right: 10px;
-						}
-
-						.popupcancelknap, .popupdoneknap {
-							margin-top: 20px;
-							margin-left: 10px;
-							margin-right: 10px;
-						}
-							
-						.popupcancelknap{
-							clear: left;
-						}
-
-						.popupdoneknap {
-							float: right;
-						}
-						/*Styling for setting pop-up organismer - SLUT*/
-
-						/*ekstra style til share as pop-up*/
-						.frameforshareaspopup {
-							position: absolute;
-							top: 10vh;
-							left: 0;
-							background-color: #222222;
-							width: 100%;
-							max-width: 440px;
-							height: 100vh;
-							max-height: 600px;
-							border-radius: 5px;
-							overflow-y: auto;
-						}
-
-						@media (min-width:441px){
-							/* Calculate left position, when width is over 400px */
-							.frameforshareaspopup {
-								left: calc(50vw - 220px); /* Half of screen - element width */
-							}
-						}
-
-						.textarea {
-							width: 100px;
-							height: 100px;
-						}
-						/*ekstra style til share as pop-up - SLUT*/
-
-						/*ekstra style til schedule as pop-up*/
-						.timebutton {
-							width: 80px;
-							border-radius: 10px;
-						}
-						/*ekstra style til schedule as pop-up - slut*/
-
-						/*ekstra style til save as as pop-up*/
-						.frameforsavaspopup {
-							position: absolute;
-							top: calc(50% - 175px); /* Half of screen - half of element height */
-							left: 0;
-							background-color: #222222;
-							width: 100%;
-							max-width:420px;
-							height: 100vh;
-							max-height: 350px;
-							border-radius: 5px;
-							overflow-y: auto;
-						}
-
-						@media (min-width:401px){
-							/* Calculate left position, when width is over 400px */
-							.frameforsavaspopup {
-								left: calc(50vw - 210px); /* Half of screen - element width */
-							}
-						}
-
-						.popupcancelknap1 {
-							float: left;
-							margin-top: 20px;
-							margin-left: 10px;
-						}
-
-						.popsaveknap {
-							float: right;
-							margin-top: 20px;
-							margin-right: 40px;
-						}
-						/*ekstra style til save pop-up - slut*/
-
-						/*ekstra style til filter pop-up*/
-						.daterangecontainer {
-							background: grey;
-							float: left;
-						}
-						.daterangetitelinfilterpopup {
-							font-size: 10px;
-							float: left;
-							margin-left: 10px;
-						}
-						.popupcancelknapfilter{
-							float: left;
-							margin left: 10px;
-							margin-top: 20px;
-						}
-
-						.clearallfilterknap {
-							float: left;
-							margin left: 10px;
-							margin-top: 20px;
-						}
-
-						.popupdoneknapfilter{
-							float: right;
-							margin-top: 20px;
-							margin right: 30px;
-						}
-						/*ekstra style til filter pop-up - slut*/
-
-						/*ekstra style for create report pop up*/
-						.frameforcreatenewreportpopup {
-							width: 420px;
-							height: 350px;
-						}
-						/*ekstra style for create report pop up - slut*/
+							</div>
+							<div class="pop-up-buttons">
+								<button type="button" class="button-w rounded-corners close" title="Close">Cancel</button>
+								<button type="button" class="button-w rounded-corners clear-filter disabled" title="Clear filters">Clear filters</button>
+								<button type="submit" class="button-g rounded-corners disabled right" title="Apply filters">Apply</button>
+							</div>
+						</form>
 					</td>
 					<!--Js to copy-->
-					<td class="empty"></td>
+					<td class="code">
+						let filterPopUp = document.getElementById("filter-pop-up");
+						// Ajax filter reports when apply is pressed
+						// ToDo
+						// When clear filters is clicked, set all filters to load values
+						// ToDo
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<!-- CREATE NEW REPORT POP-UP -->
+	<article id="create-new-pop-up-styleguide" class="pop-up-article">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Create new pop up</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<form action="" method="get" id="create-new-pop-up" class="pop-up menu">
+					<div class="pop-up-title-area">
+						<img class="pop-up-title-image font-height" src="img/icons/plus.svg" alt="Plus icon">
+						<span class="pop-up-title">Create new report</span>
+					</div>
+					<div class="pop-up-content-area">
+						<!-- REPORT NAME -->
+						<div class="pop-up-content-area-molecule">
+							<label class="text-input full-width">
+								<span class="clear-both" title="Input your e-mail">Report name</span>
+								<input type="email" name="report-name" class="rounded-corners button-w clear-both full-width" placeholder="Report name" value="Report name #id" required="">
+							</label>
+						</div>
+						<!-- REPORT GROUP -->
+						<div class="pop-up-content-area-molecule">
+							<label class="select-label full-width">
+								<span class="select-span">Group</span>
+								<div class="select-wrapper">
+									<select name="save-to-location" class="select">
+										<option value="overview" selected="">Overview</option>
+										<option value="2020">2020</option>
+										<option value="for-seo">for CEO</option>
+										<option value="production">production</option>
+									</select>
+								</div>
+							</label>
+						</div>
+					</div>
+					<div class="pop-up-buttons">
+						<button type="button" class="button-w rounded-corners close" title="Close">Cancel</button>
+						<button type="submit" class="button-g rounded-corners disabled right" title="Create new report">Create</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overvieworganimser">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML to copy-->
+					<td class="code">
+						<form action="" method="get" id="create-new-pop-up" class="pop-up menu">
+							<div class="pop-up-title-area">
+								<img class="pop-up-title-image font-height" src="img/icons/plus.svg" alt="Plus icon">
+								<span class="pop-up-title">Create new report</span>
+							</div>
+							<div class="pop-up-content-area">
+								<!-- REPORT NAME -->
+								<div class="pop-up-content-area-molecule">
+									<label class="text-input full-width">
+										<span class="clear-both" title="Input your e-mail">Report name</span>
+										<input type="email" name="report-name" class="rounded-corners button-w clear-both full-width" placeholder="Report name" value="Report name #id" required="">
+									</label>
+								</div>
+								<!-- REPORT GROUP -->
+								<div class="pop-up-content-area-molecule">
+									<label class="select-label full-width">
+										<span class="select-span">Group</span>
+										<div class="select-wrapper">
+											<select name="save-to-location" class="select">
+												<option value="overview" selected="">Overview</option>
+												<option value="2020">2020</option>
+												<option value="for-seo">for CEO</option>
+												<option value="production">production</option>
+											</select>
+										</div>
+									</label>
+								</div>
+							</div>
+							<div class="pop-up-buttons">
+								<button type="button" class="button-w rounded-corners close" title="Close">Cancel</button>
+								<button type="submit" class="button-g rounded-corners disabled right" title="Create new report">Create</button>
+							</div>
+						</form>
+					</td>
+					<!--Js to copy-->
+					<td class="code">
+						let createNewPopUp = document.getElementById("create-new-pop-up");
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<!-- CLOSE WITHOUT SAVING POP-UP -->
+	<article id="close-without-saving-pop-up-styleguide" class="pop-up-article">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Close without saving pop up</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<form action="" method="get" id="close-without-saving-pop-up" class="pop-up menu">
+					<div class="pop-up-title-area">
+						<img class="pop-up-title-image font-height" src="img/icons/questionmark.svg" alt="?">
+						<span class="pop-up-title">Quit without saving?</span>
+					</div>
+					<div class="pop-up-content-area">
+						<div class="pop-up-content-area-molecule">
+							<p>Are you shure you want to quit Editor mode, without saving?</p>
+						</div>
+					</div>
+					<div class="pop-up-buttons">
+						<button type="button" class="button-w rounded-corners close" title="Close">Cancel</button>
+						<a href="overview.html" class="button-r rounded-corners close" title="Close editor">Close</a>
+						<button type="submit" class="button-g rounded-corners disabled right" title="Create new report">Save & close</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="overvieworganimser">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>JavaScript</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML to copy-->
+					<td class="code">
+						<form action="" method="get" id="close-without-saving-pop-up" class="pop-up menu">
+							<div class="pop-up-title-area">
+								<img class="pop-up-title-image font-height" src="img/icons/questionmark.svg" alt="?">
+								<span class="pop-up-title">Quit without saving?</span>
+							</div>
+							<div class="pop-up-content-area">
+								<div class="pop-up-content-area-molecule">
+									<p>Are you shure you want to quit Editor mode, without saving?</p>
+								</div>
+							</div>
+							<div class="pop-up-buttons">
+								<button type="button" class="button-w rounded-corners close" title="Close">Cancel</button>
+								<a href="overview.html" class="button-r rounded-corners close" title="Close editor">Close</a>
+								<button type="submit" class="button-g rounded-corners disabled right" title="Create new report">Save & close</button>
+							</div>
+						</form>
+					</td>
+					<!--Js to copy-->
+					<td class="code">
+						let closeWithoutSavingPopUp = document.getElementById("close-without-saving-pop-up");
+					</td>
 				</tr>
 			</table>
 		</div>

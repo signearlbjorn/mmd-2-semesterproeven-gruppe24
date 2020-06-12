@@ -682,6 +682,22 @@ for(let i=0; i < disabledLinks.length; i++){
 }
 
 
+// -- POP UP --
+// - POP UP ELEMENTS -
+let deleteReportPopUp = document.getElementById("delete-report-pop-up");
+let deleteGroupPopUp = document.getElementById("delete-group-pop-up");
+let shareAsPopUp = document.getElementById("share-as-pop-up");
+let schedulePopUp = document.getElementById("schedule-pop-up");
+let savePopUp = document.getElementById("save-pop-up");
+let filterPopUp = document.getElementById("filter-pop-up");
+let createNewPopUp = document.getElementById("create-new-pop-up");
+let closeWithoutSavingPopUp = document.getElementById("close-without-saving-pop-up");
+
+
+// - OPEN POP UP BUTTONS -
+
+
+
 // --- VALIDATION ---
 // -- GENERIC FUNCTIONS FOR VALIDATION USE --
 function addErrorClass(element) {
@@ -1045,4 +1061,3 @@ for(let i = 0; i < scheduleTime.length; i++) {
 		timeValidate(scheduleTime[i]);
 	 });
 }
-
