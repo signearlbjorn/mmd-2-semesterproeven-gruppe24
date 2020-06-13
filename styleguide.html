@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="da" dir="ltr">
+<html lang="en-US" dir="ltr">
 <head>
 	<!-- META DESCRIPTIONS -->
-    <title>Styleguide - ineteraktiv løsning 2. semstereksamen</title>
+    <title>Styleguide - interactive solution for 2. semester exam</title>
 	<meta name="Author" content="Max Festersen Hansen, Signe Arlbjørn, Konrad Sarna & Michala Gjøl">
 	<meta name="description" content="Style guide for app.trendlog.io report module. Developed as part of 2. semester test for OEAMM19EDF, UCL University College, Multimediadesign, Start year 19,Class A-C.">
 
@@ -34,13 +34,11 @@
 <body id="styleguide">
 <!-- HIGHCHART - Best to load after opening body tag -->
 <script src="https://code.highcharts.com/highcharts.js"></script>
-<!-- Titel på styleguide -->
+<!-- TITLE AREA -->
 <section id="titles" class="titler">
 	<div class="wrapper">
-		<h1 id="styleguidetitel" class="styleguide-title"> Styleguide til Re-design af rapport modul for app.trendlog.io </h1>
-		<h2 id="styleguideundertitel" class="styleguide-title"> af gruppe 24 </h2>
-		<!-- struktur for løsning -->
-		<h2 id="strukturtitel" class="styleguide-title">Struktur for interaktiv løsning</h2>
+		<h1 id="styleguidetitel" class="styleguide-title"> Styleguide for Re-design of report module at app.trendlog.io </h1>
+		<h2 id="styleguideundertitel" class="styleguide-title">Created by group 24, OEAMM19EDF</h2>
 		<label class="select-label" title="ÅBen styleguide i predefineret visningstørrelse">
 			<span class="select-span">Preview styleguide:</span>
 			<div class="select-wrapper">
@@ -55,13 +53,14 @@
 		</label>
 	</div>
 </section>
-<!-- struktur for løsning slut -->
+
+<!-- NAVIGATION -->
 <nav id="atomicDesignNavigation">
 	<div class="wrapper">
 		<ul>
-			<li><a href="#atoms">Atomer</a></li>
-			<li><a href="#molecules">Molekyler</a></li>
-			<li><a href="#organisms">Organismer</a></li>
+			<li><a href="#atoms">Atoms</a></li>
+			<li><a href="#molecules">Molecules</a></li>
+			<li><a href="#organisms">Organisms</a></li>
 			<li><a href="#templates">Templates</a></li>
 			<li><a href="#pages">Pages</a></li>
 		</ul>
@@ -71,8 +70,9 @@
 <!-- ATOMS -->
 <section id="atoms">
 	<div class="wrapper">
-		<h3 class="styleguide-title">Atomer</h3>
+		<h3 class="styleguide-title">Atoms</h3>
 	</div>
+    <!-- META DATA -->
 	<article id="meta-data">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Meta data</h4>
@@ -81,13 +81,12 @@
 			<table class="atomTable">
 				<tr class="row-one">
 					<th>HTML</th>
-					<th>CSS</th>
 				</tr>
 				<tr class="row-two">
 					<!--HTML -->
 					<td class="code">
 						<!-- META DESCRIPTIONS -->
-						<title>Styleguide - ineteraktiv løsning 2. semstereksamen</title>
+						<title>Title</title>
 						<meta name="Author" content="Max Festersen Hansen, Signe Arlbjørn, Konrad Sarna & Michala Gjøl">
 						<meta name="description" content="Style guide for app.trendlog.io report module. Developed as part of 2. semester test for OEAMM19EDF, UCL University College, Multimediadesign, Start year 19,Class A-C.">
 
@@ -118,15 +117,12 @@
 						<!-- Block indexing of site -->
 						<meta name="robots" content="noindex" />
 					</td>
-					<!--CSS -->
-					<td class="empty">
-						<!-- No CSS -->
-					</td>
 				</tr>
 			</table>
-			<p class="info">Vær opmærksom på at <b>ROBOTS</b>-sektionen stopper indeksering af siden.</p>
+			<p class="info"><b>ROBOTS</b> affects SEO.</p>
 		</div>
 	</article>
+    <!-- TEXT -->
 	<article id="text">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Text</h4>
@@ -184,9 +180,10 @@
 					</td>
 				</tr>
 			</table>
-			<p class="info">Vær opmærksom på at <b>*</b> påvirker alt indhold.</p>
+			<p class="info"><b>*</b> affects all HTML elements.</p>
 		</div>
 	</article>
+    <!-- H1 -->
 	<article id="h1">
 		<div class="wrapper">
 			<h4 class="styleguide-title">h1 - title</h4>
@@ -247,6 +244,7 @@
 			</table>
 		</div>
 	</article>
+    <!-- H2 -->
 	<article id="h2">
 		<div class="wrapper">
 			<h4 class="styleguide-title">h2 - report titles</h4>
@@ -306,6 +304,7 @@
 			</table>
 		</div>
 	</article>
+    <!-- H3 -->
 	<article id="h3">
 		<div class="wrapper">
 			<h4 class="styleguide-title">h3 - tab titles</h4>
@@ -365,6 +364,7 @@
 			</table>
 		</div>
 	</article>
+    <!-- BUTTON -->
 	<article id="button">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Button</h4>
@@ -400,6 +400,7 @@
 			</table>
 		</div>
 	</article>
+    <!-- ROUND BUTTON -->
 	<article id="round-button">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Round button</h4>
@@ -445,6 +446,7 @@
 			</table>
 		</div>
 	</article>
+    <!-- ROUNDED BUTTON -->
 	<article id="rounded-button">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Rounded button</h4>
@@ -491,9 +493,10 @@
 			</table>
 		</div>
 	</article>
-	<article id="stjerne-prioritering">
+    <!-- STAR PRIORITY -->
+	<article id="star-priority">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Stjerne Prioritering</h4>
+			<h4 class="styleguide-title">Star priority</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -550,10 +553,10 @@
 					</td>
 				</tr>
             </table>
-			<p class="info">Hver stjerne skal i HTML have et unikt id, som skal reffere til parrent.</p>
-			<p class="info">Hver stjerne skal i JavaScript defineres som en variabel og tilføjes til starArray, så der kan defineres en event listener på click.</p>
+			<p class="info">Requires unique ID. Must have a varibale in JavaScript. Add varibale to starArray.</p>
  		</div>
 	</article>
+    <!-- BUTTON G -->
 	<article id="button-g">
 		<div class="wrapper">
 			<h4 class="styleguide-title">button-g</h4>
@@ -590,9 +593,10 @@
                     </td>
 				</tr>
 			</table>
-			<p class="info">Primær bekræftende handling.</p>
+			<p class="info">Primary action or confirmation.</p>
 		</div>
 	</article>
+    <!-- BUTTON R -->
 	<article id="button-r">
 		<div class="wrapper">
 			<h4 class="styleguide-title">button-r</h4>
@@ -630,9 +634,10 @@
                     </td>
 				</tr>
 			</table>
-			<p class="info">Destruktiv handling.</p>
+			<p class="info">Destructive action.</p>
 		</div>
 	</article>
+    <!-- BUTTON B -->
 	<article id="button-b">
 		<div class="wrapper">
 			<h4 class="styleguide-title">button-b</h4>
@@ -669,9 +674,10 @@
                     </td>
 				</tr>
 			</table>
-			<p class="info">Sekundær handling.</p>
+			<p class="info">Secondary action.</p>
 		</div>
 	</article>
+    <!-- BUTTON W -->
 	<article id="button-w">
 		<div class="wrapper">
 			<h4 class="styleguide-title">button-w</h4>
@@ -709,9 +715,10 @@
                     </td>
 				</tr>
 			</table>
-			<p class="info">Neutral eller teritær handling handling.</p>
+			<p class="info">Neutral action.</p>
 		</div>
 	</article>
+    <!-- BUTTON N -->
 	<article id="button-n">
 		<div class="wrapper">
 			<h4 class="styleguide-title">button-n</h4>
@@ -751,9 +758,9 @@
                     </td>
 				</tr>
 			</table>
-			<p class="info">Neutral eller teritær handling handling.</p>
 		</div>
 	</article>
+    <!-- CLOSE BUTTON -->
 	<article id="close-button">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Close button</h4>
@@ -818,6 +825,7 @@
 			</table>
 		</div>
 	</article>
+    <!-- CANCEL BUTTON -->
 	<article id="cancel-button">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Cancel button</h4>
@@ -866,6 +874,7 @@
 			</table>
 		</div>
 	</article>
+    <!-- HELP BUTTON -->
 	<article id="help-button">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Help button</h4>
@@ -919,6 +928,7 @@
 			</table>
 		</div>
 	</article>
+    <!-- TEXT BUTTON IN EDITOR -->
 	<article id="text-button-editor">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Text button in editor</h4>
@@ -969,7 +979,7 @@
 			</table>
 		</div>
 	</article>
-    <!-- input -->
+    <!-- INPUT -->
 	<article id="text-input">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Text input</h4>
@@ -1120,17 +1130,17 @@
 		</div>
 	</article>
 </section>
-<!-- MOLEKYLER -->
+<!-- MOLECULES -->
 <section id="molecules">
-	<!-- molekyle tabeller for overview-siden -->
 	<div class="wrapper">
-		<h3 class="styleguide-title">Molekyler</h3>
+		<h3 class="styleguide-title">Molecules</h3>
 	</div>
 	<div class="title-area">
 		<div class="wrapper">
-			<h3 id="knappermedtextogicon" class="styleguide-title">Filtrering</h3>
+			<h3 id="buttonpermedtextogicon" class="styleguide-title">Filtering</h3>
 		</div>
 	</div>
+    <!-- DATE RANGE -->
 	<article id="date-range">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Date range</h4>
@@ -1408,16 +1418,17 @@
 			</table>
 		</div>
 	</article>
-	<article id="folder-knap-på-filter-pop-up">
+    <!-- GROUP SELECT -->
+	<article id="group-select">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Folder knap på filter pop-up</h4>
+			<h4 class="styleguide-title">Group select</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
 				<label class="select-label filter-option" title="Filter by group">
 					<span class="select-span">Group</span>
 					<div class="select-wrapper">
-						<select name="filter-by-report-folder" class="select">
+						<select name="filter-by-report-group" class="select">
 							<option value="all" selected="">All groups</option>
 							<option value="none">No set group</option>
 							<option value="group-1">Group 1</option>
@@ -1440,7 +1451,7 @@
 						<label class="select-label filter-option" title="Filter by group">
 							<span class="select-span">Group</span>
 							<div class="select-wrapper">
-								<select name="filter-by-report-folder" class="select">
+								<select name="filter-by-report-group" class="select">
 									<option value="all" selected="">All groups</option>
 									<option value="none">No set group</option>
 									<option value="group-1">Group 1</option>
@@ -1559,18 +1570,17 @@
 					</td>
 					<!--JavaScript-->
 					<td class="code">
-						// Filter reports by folder
+						// Filter reports by group
 						// ToDo
 					</td>
 				</tr>
 			</table>
-			<!--Folder knap på filter pop-up - slut-->
 		</div>
 	</article>
-	<!--Schedule knap på filter pop-up-->
- 	<article id="schedule knap på filter pop-up">
+	<!-- SCHEDULE SELECT -->
+ 	<article id="schedule-select">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Schedule knap på filter pop-up</h4>
+			<h4 class="styleguide-title">Schedule select</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -1724,9 +1734,10 @@
 			</table>
 		</div>
 	</article>
-	<article id="result-knap-på-filter-pop-up">
+    <!-- RESULT SELECT -->
+	<article id="result-select">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Result knap på filter pop-up</h4>
+			<h4 class="styleguide-title">Result select</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -1878,9 +1889,10 @@
 			</table>
 		</div>
 	</article>
-	<article id="date-target-knap-på-filter-pop-up">
+    <!-- DATE TARGET SELECT -->
+	<article id="date-target-select">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Date target knap på filter pop-up</h4>
+			<h4 class="styleguide-title">Date target select</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -2029,17 +2041,18 @@
 	<div class="title-area">
 		<div class="wrapper">
 			<!--Delete pou-up's -->
-			<h3 id="knappermedtextogicon" class="styleguide-title">Knapper med tekst og ikon(er)</h3>
+			<h3 id="buttonpermedtextogicon" class="styleguide-title">Buttons</h3>
 		</div>
 	</div>
-	<article id="folder-overview-knap">
+	<!-- GROUP OVERVIEW BUTTON -->
+	<article id="group-overview-button">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Folder overview knap</h4>
+			<h4 class="styleguide-title">Group overview button</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<a href="folder-view.html" class="folder-view-button button-w rounded-corners disabled" title="Go to folder view">
-					<span>Folder overview</span>
+				<a href="group-view.html" class="group-view-button button-w rounded-corners disabled" title="Go to gtoup-view">
+					<span>Group overview</span>
 					<img src="img/icons/folder.svg" alt="Folder icon">
 				</a>
 			</div>
@@ -2053,20 +2066,20 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<a href="folder-view.html" class="folder-view-button rounded-corners button-w disabled" title="Go to folder view">
-							<span>Folder overview</span>
+						<a href="group-view.html" class="group-view-button button-w rounded-corners disabled" title="Go to gtoup-view">
+							<span>Group overview</span>
 							<img src="img/icons/folder.svg" alt="Folder icon">
 						</a>
 					</td>
 					<td class="code">
-						/* -- FOLDER OVERVIEW BUTTON -- */
-						.folder-view-button {
+						/* -- GROUP OVERVIEW BUTTON -- */
+						.group-view-button {
 							float: left;
 							padding-right: 63px;
 							text-decoration: none;
 						}
 
-						.folder-view-button img {
+						.group-view-button img {
 							position: absolute;
 							top: calc(50% - 13px);
 							right: 17px;
@@ -2094,15 +2107,16 @@
 			</table>
 		</div>
 	</article>
-	<article id="new-report-knap">
+    <!-- NEW REPORT BUTTON -->
+	<article id="new-report-button">
 		<div class="wrapper">
-			<h4 class="styleguide-title">New report knap</h4>
+			<h4 class="styleguide-title">New report button</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" class="newreportbutton round-corners button-g" title="Initiate creation of a new report.">
-					<img class="plusimg" src="img/icons/plus.svg" alt="new report img">
-					<span class="newreportspan">New report</span>
+				<button type="button" class="new-report-button round-corners button-g" title="Initiate creation of a new report.">
+					<img class="plus-img" src="img/icons/plus.svg" alt="+">
+					<span class="new-report-span">New report</span>
 				</button>
 			</div>
 		</div>
@@ -2115,45 +2129,52 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" class="newreportbutton round-corners button-g" title="Initiate creation of a new report.">
-							<img class="plusimg" src="img/icons/plus.svg" alt="new report img">
-							<span class="newreportspan">New report</span>
+						<button type="button" class="new-report-button round-corners button-g" title="Initiate creation of a new report.">
+							<img class="plus-img" src="img/icons/plus.svg" alt="+">
+							<span class="new-report-span">New report</span>
 						</button>
 					</td>
 					<td class="code">
-						/*Here starts code for 'new report button'*/
-						.newreportbutton {
+						/* -- NEW REPORT BUTTON --*/
+						.new-report-button {
 							overflow: hidden;
 							padding-right: 29px;
 							padding-left: 62px;
 						}
 
-						.newreportspan{
+						.new-report-span {
 							float: left;
 							font-size: 140%;
 						}
 
-						.plusimg{
+						.plus-img {
 							position: absolute;
 							top: calc(50% - 12px); /* 50% of parrent height - half of element height*/
 							left: 26px;
 						}
 					</td>
 					<td class="code">
-						// Open new report pop up
-						// ToDo
+						let newReportButton = document.getElementsByClassName("new-report-button");
+
+						for(let i = 0; i < newReportButton.length; i++) {
+							newReportButton[i].addEventListener("click", function(){
+								showElement(createNewPopUp);
+								showElement(overlay);
+							});
+						}
 					</td>
                 </tr>
 			</table>
 		</div>
 	</article>
-	<article id="filter-knap">
+    <!-- FILTER BUTTON -->
+	<article id="filter-button">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Filter knap</h4>
+			<h4 class="styleguide-title">Filter button</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" class="filterbutton button-w round-corners" title="Open filter options">
+				<button type="button" class="filter-button button-w round-corners" title="Open filter options">
 					<span>Filter</span>
 					<img src="img/icons/sliders.svg" alt="Slider icon">
 				</button>
@@ -2168,18 +2189,18 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" class="filterbutton button-w round-corners" title="Open filter options">
+						<button type="button" class="filter-button button-w round-corners" title="Open filter options">
 							<span>Filter</span>
 							<img src="img/icons/sliders.svg" alt="Slider icon">
 						</button>
 					</td>
 					<td class="code">
 						/* -- FILTER BUTTON -- */
-						.filterbutton {
+						.filter-button {
 							padding-right: 52px;
 						}
 
-						.filterbutton img {
+						.filter-button img {
 							position: absolute;
 							top: calc(50% - 10px);
 							right: 17px;
@@ -2188,16 +2209,23 @@
 						}
 					</td>
 					<td class="code">
-						// Open filter pop up
-						// ToDo
+						let filterButton = document.getElementsByClassName("filter-button");
+
+						for(let i = 0; i < filterButton.length; i++) {
+							filterButton[i].addEventListener("click", function(){
+								showElement(filterPopUp);
+								showElement(overlay);
+							});
+						}
 					</td>
                 </tr>
 			</table>
 		</div>
 	</article>
-	<article id="forrige-knap">
+    <!-- PREVIOUS BUTTON -->
+	<article id="previous-button">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Forrige-knap</h4>
+			<h4 class="styleguide-title">Previous button</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -2257,9 +2285,10 @@
 			</table>
 		</div>
 	</article>
-	<article id="naeste-knap">
+    <!-- NEXT BUTTON -->
+	<article id="next-button">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Næste-knap</h4>
+			<h4 class="styleguide-title">Next button</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -2316,9 +2345,10 @@
 			</table>
 		</div>
 	</article>
-    <article id="add-knap">
+    <!-- ADD PAGE BUTTON -->
+    <article id="add-button">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Add page knap</h4>
+			<h4 class="styleguide-title">Add page button</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -2359,9 +2389,10 @@
 			</table>
 		</div>
 	</article>
-    <article id="delete-knap">
+    <!-- DELETE PAGE BUTTON -->
+    <article id="delete-button">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Delete page knap</h4>
+			<h4 class="styleguide-title">Delete page button</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -2405,9 +2436,10 @@
 			</table>
 		</div>
 	</article>
+    <!-- SAVE REPORT BUTTON -->
     <article id="save-report-button">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Save report knap</h4>
+			<h4 class="styleguide-title">Save report button</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -2454,9 +2486,10 @@
 			</table>
 		</div>
 	</article>
+    <!-- CLOSE EDITOR BUTTON -->
     <article id="close-editor-button">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Close editor knap</h4>
+			<h4 class="styleguide-title">Close editor button</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -2504,9 +2537,10 @@
 			</table>
 		</div>
 	</article>
-    <article id="buttonswithtextandicons">
+    <!-- DELETE REPORT BUTTON -->
+    <article id="delete-report-button">
 		<div class="wrapper">
-			<h4 class="styleguide-title"></h4>
+			<h4 class="styleguide-title">Delete report button</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -2553,9 +2587,10 @@
 			</table>
 		</div>
 	</article>
+    <!-- UPLOAD IMAGE BUTTON -->
 	<article id="upload-image-button">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Upload image knap</h4>
+			<h4 class="styleguide-title">Upload image button</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -2624,9 +2659,10 @@
 			</table>
 		</div>
 	</article>
-	<article id="burgerMenuKnap">
+    <!-- BURGER MENU BUTTON -->
+	<article id="burger-menu-button">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Burger menu knap</h4>
+			<h4 class="styleguide-title">Burger menu button</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -2695,9 +2731,10 @@
 			</table>
 		</div>
 	</article>
+    <!-- UPLOAD TEMPLATE BUTTON -->
 	<article id="upload-template">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Upload template</h4>
+			<h4 class="styleguide-title">Upload template button</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -2778,10 +2815,10 @@
 			</table>
 		</div>
 	</article>
-	<!--Knapper til dropdown tanhjul menu-->
-	<article id="edit-knap">
+	<!-- EDIT BUTTON -->
+	<article id="edit-button">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Edit knap</h4>
+			<h4 class="styleguide-title">Edit button</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -2844,9 +2881,10 @@
 			</table>
 		</div>
 	</article>
-	<article id="show-knap">
+    <!-- SHOW BUTTON -->
+	<article id="show-button">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Show knap</h4>
+			<h4 class="styleguide-title">Show button</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -2909,9 +2947,10 @@
 			</table>
 		</div>
 	</article>
-	<article id="schedule-knap">
+    <!-- SCHEDULE BUTTON -->
+	<article id="schedule-button">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Schedule knap</h4>
+			<h4 class="styleguide-title">Schedule button</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -2979,9 +3018,10 @@
 			</table>
 		</div>
 	</article>
-	<article id="share-knap">
+    <!-- SHARE BUTTON -->
+	<article id="share-button">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Share knap</h4>
+			<h4 class="styleguide-title">Share button</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -3049,9 +3089,10 @@
 			</table>
 		</div>
 	</article>
-	<article id="save-as-knap">
+    <!-- SAVE AS BUTTON -->
+	<article id="save-as-button">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Save as.. knap</h4>
+			<h4 class="styleguide-title">Save as.. button</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -3119,9 +3160,10 @@
 			</table>
 		</div>
 	</article>
-	<article id="print-knap">
+    <!-- PRINT BUTTON -->
+	<article id="print-button">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Print knap</h4>
+			<h4 class="styleguide-title">Print button</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -3226,9 +3268,10 @@
 			</table>
 		</div>
 	</article>
-	<article id="delete-knap">
+    <!-- DELETE BUTTON -->
+	<article id="delete-button">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Delete knap</h4>
+			<h4 class="styleguide-title">Delete button</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -3301,9 +3344,10 @@
 			<h3 class="styleguide-title">Selects</h3>
 		</div>
 	</div>
-	<article id="sort">
+    <!-- SORT SELECT -->
+	<article id="sort-select">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Sort</h4>
+			<h4 class="styleguide-title">Sort select</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -3450,9 +3494,10 @@
 			</table>
 		</div>
 	</article>
-	<article id="weight-options">
+    <!-- WEIGHT SELECT -->
+	<article id="weight-select">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Weight valg</h4>
+			<h4 class="styleguide-title">Weight select</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -3581,7 +3626,7 @@
 			</table>
 		</div>
 	</article>
-	<!-- SEND WITH -->
+	<!-- SEND WITH SELECT -->
 	<article id="send-with-select">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Send with select</h4>
@@ -3697,7 +3742,8 @@
 			</table>
 		</div>
 	</article>
-	<article id="quantity">
+    <!-- QUANTITY SELECT -->
+	<article id="quantity-select">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Quanitity select</h4>
 		</div>
@@ -4054,7 +4100,7 @@
 		</div>
 	</article>
 	<!-- SHARE WITH SELECT -->
-	<article id="share-as-select">
+	<article id="share-with-select">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Share with</h4>
 		</div>
@@ -4186,9 +4232,10 @@
 			<h3 class="styleguide-title">Inputs</h3>
 		</div>
 	</div>
-	<article id="size-options">
+    <!-- SIZE INPUT -->
+	<article id="size-input">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Size valg</h4>
+			<h4 class="styleguide-title">Size input</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -4239,13 +4286,13 @@
 		</div>
 	</article>
     <!-- SEARCH -->
-	<article id="soeg">
+	<article id="search">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Søg</h4>
+			<h4 class="styleguide-title">Search</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-                <input type="text" name="search" class="searchInput round-corners button-w" placeholder="Search..." title="Search for reports, by name, id, folder, date (dd.mm.yyyy) or category">
+                <input type="text" name="search" class="searchInput round-corners button-w" placeholder="Search..." title="Search for reports, by name, id, group, date (dd.mm.yyyy) or category">
 			</div>
 		</div>
 		<div class="wrapper">
@@ -4257,7 +4304,7 @@
 				<tr class="row-two">
 					<!-- HTML -->
                     <td class="code">
-						<input type="text" name="search" class="searchInput round-corners button-w" placeholder="Search..." title="Search for reports, by name, id, folder, date (dd.mm.yyyy) or category">
+						<input type="text" name="search" class="searchInput round-corners button-w" placeholder="Search..." title="Search for reports, by name, id, group, date (dd.mm.yyyy) or category">
                     </td>
 					<!-- CSS -->
 					<td class="code">
@@ -4281,7 +4328,7 @@
 	<!-- E-MAIL INPUT -->
 	<article id="email-input">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Email-input knap</h4>
+			<h4 class="styleguide-title">E-mail input</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -4670,7 +4717,7 @@
 			</table>
 		</div>
 	</article>
-	<!-- TIME -->
+	<!-- TIME INPUT -->
 	<article id="schedule-time-input">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Schedule time input</h4>
@@ -4921,7 +4968,7 @@
 	</article>
 	<div class="title-area">
 		<div class="wrapper">
-			<h3 id="switchknapper" class="styleguide-title">Switch Knapper</h3>
+			<h3 id="switchbuttonper" class="styleguide-title">Switch buttonper</h3>
 		</div>
 	</div>
     <!-- VERTICAL / HORISONTAL SWITCH -->
@@ -5682,7 +5729,7 @@
 							</div>
 						</header>
 					</td>
-					<!--CSS to copy-->
+					<!-- CSS -->
 					<td class="code">
 						/* --- MAIN NAVIGATION --- */
 						#main-navigation {
@@ -5931,7 +5978,7 @@
 					<th>CSS</th>
 				</tr>
                 <tr class="row-two">
-					<!--HTML to copy-->
+					<!-- HTML -->
 					<td class="code">
 						<div class="settings-menu menu">
 							<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
@@ -5965,7 +6012,7 @@
 							</button>
 						</div>
 					</td>
-					<!--CSS to copy-->
+					<!-- CSS -->
 					<td class="code">
 						/* -- SETTINGS MENU BUTTON -- */
 						.settings-menu-dark .settings-menu-button,
@@ -6015,10 +6062,10 @@
 			</table>
 		</div>
 	</article>
-	<!-- MENU FOR GROUPS/FOLDER -->
+	<!-- MENU FOR GROUP -->
  	<article id="group-menu">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Menu for mapper (grouping)</h4>
+			<h4 class="styleguide-title">Menu for groups</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
@@ -6039,7 +6086,7 @@
                     <th>JavaScript</th>
                   </tr>
                 <tr class="row-two">
-					<!--HTML to copy-->
+					<!-- HTML -->
 					<td class="code">
 						<div class="settings-menu menu">
 							<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
@@ -6049,7 +6096,7 @@
 							</button>
 						</div>
 					</td>
-					<!--CSS to copy-->
+					<!-- CSS -->
 					<td class="code">
 					</td>
 					<td class="code">
@@ -6100,9 +6147,10 @@
 				<tr class="row-one">
 					<th>HTML</th>
 					<th>CSS</th>
+					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
-					<!--HTML to copy-->
+					<!-- HTML -->
 					<td class="code">
 						<div id="overlay"></div>
 						<form action="" method="get" id="pop-up" class="pop-up menu">
@@ -6123,8 +6171,13 @@
 							</div>
 						</form>
 					</td>
-					<!--CSS to copy-->
+					<!-- CSS -->
 					<td class="code">
+					</td>
+					<!-- JavaScript -->
+					<td class="code">
+						// - OVERLAY -
+						let overlay = document.getElementById("overlay");
 					</td>
 				</tr>
 			</table>
@@ -6159,7 +6212,7 @@
 					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
-					<!--HTML to copy-->
+					<!-- HTML -->
 					<td class="code">
 						<form action="" method="get" id="delete-report-pop-up" class="pop-up menu">
 							<div class="pop-up-title-area">
@@ -6187,7 +6240,7 @@
 		</div>
 	</article>
 	<!-- DELETE GROUP POP UP -->
-	<article id="delete-folder-pop-up-styleguide" class="pop-up-article">
+	<article id="delete-group-pop-up-styleguide" class="pop-up-article">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Pop ud delete - group</h4>
 		</div>
@@ -6199,11 +6252,11 @@
 					<span class="pop-up-idenfification">Group name; #id</span>
 				</div>
 				<div class="pop-up-content-area">
-					<p>Are you sure you want to delete "<b>Folder Name</b>" <b>#goupID</b>?</p>
+					<p>Are you sure you want to delete "<b>group-name</b>" <b>#goupID</b>?</p>
 				</div>
 				<div class="pop-up-buttons">
 					<button type="button" class="button-w rounded-corners close" title="Close">Cancel</button>
-					<button type="submit" class="button-r rounded-corners disabled right" title="Delete folder" value="groupID">Delete</button>
+					<button type="submit" class="button-r rounded-corners disabled right" title="Delete group" value="groupID">Delete</button>
 				</div>
 			</form>
 		</div>
@@ -6214,7 +6267,7 @@
 					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
-					<!--HTML to copy-->
+					<!-- HTML -->
 					<td class="code">
 						<form action="" method="get" id="delete-group-pop-up" class="pop-up menu">
 							<div class="pop-up-title-area">
@@ -6223,18 +6276,18 @@
 								<span class="pop-up-idenfification">Group name; #id</span>
 							</div>
 							<div class="pop-up-content-area">
-								<p>Are you sure you want to delete "<b>Folder Name</b>" <b>#goupID</b>?</p>
+								<p>Are you sure you want to delete "<b>group-name</b>" <b>#goupID</b>?</p>
 							</div>
 							<div class="pop-up-buttons">
 								<button type="button" class="button-w rounded-corners close" title="Close">Cancel</button>
-								<button type="submit" class="button-r rounded-corners disabled right" title="Delete folder" value="groupID">Delete</button>
+								<button type="submit" class="button-r rounded-corners disabled right" title="Delete group" value="groupID">Delete</button>
 							</div>
 						</form>
 					</td>
 					<!--Js to copy-->
 					<td class="code">
 						let deleteGroupPopUp = document.getElementById("delete-group-pop-up");
-						// Ajax delete folder
+						// Ajax delete group
 						// ToDo
 					</td>
 				</tr>
@@ -6315,7 +6368,7 @@
 					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
-					<!--HTML to copy-->
+					<!-- HTML -->
 					<td class="code">
 						<form action="" method="get" id="share-as-pop-up" class="pop-up menu">
 							<div class="pop-up-title-area">
@@ -6492,7 +6545,7 @@
 					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
-					<!--HTML to copy-->
+					<!-- HTML -->
 					<td class="code">
 						<form action="" method="get" id="schedule-pop-up" class="pop-up menu">
 							<div class="pop-up-title-area">
@@ -6633,7 +6686,7 @@
 					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
-					<!--HTML to copy-->
+					<!-- HTML -->
 					<td class="code">
 						<form action="" method="get" id="save-pop-up" class="pop-up menu">
 							<input type="hidden" name="target" value="reportID">
@@ -6744,7 +6797,7 @@
 							<label class="select-label filter-option" title="Filter by group">
 								<span class="select-span">Group</span>
 								<div class="select-wrapper">
-									<select name="filter-by-report-folder" class="select">
+									<select name="filter-by-report-group" class="select">
 										<option value="all" selected="">All groups</option>
 										<option value="none">No set group</option>
 										<option value="group-1">Group 1</option>
@@ -6770,7 +6823,7 @@
 					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
-					<!--HTML to copy-->
+					<!-- HTML -->
 					<td class="code">
 						<form action="" method="get" id="filter-pop-up" class="pop-up menu">
 							<div class="pop-up-title-area">
@@ -6835,7 +6888,7 @@
 									<label class="select-label filter-option" title="Filter by group">
 										<span class="select-span">Group</span>
 										<div class="select-wrapper">
-											<select name="filter-by-report-folder" class="select">
+											<select name="filter-by-report-group" class="select">
 												<option value="all" selected="">All groups</option>
 												<option value="none">No set group</option>
 												<option value="group-1">Group 1</option>
@@ -6914,7 +6967,7 @@
 					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
-					<!--HTML to copy-->
+					<!-- HTML -->
 					<td class="code">
 						<form action="" method="get" id="create-new-pop-up" class="pop-up menu">
 							<div class="pop-up-title-area">
@@ -6990,7 +7043,7 @@
 					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
-					<!--HTML to copy-->
+					<!-- HTML -->
 					<td class="code">
 						<form action="" method="get" id="close-without-saving-pop-up" class="pop-up menu">
 							<div class="pop-up-title-area">
@@ -7023,7 +7076,7 @@
 			<h3 id="sidetitlerogsettingsbar" class="styleguide-title"> Side titler og settings bar</h3>
 		</div>
 	</div>
-  	<!--"SIDE TITEL OG SETTINGS BAR" for overview-->
+  	<!-- TOP SECTION OVERVIEW -->
 	<article id="side-titel-og-settings-bar-for-overview-side">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Side titel og settings bar for overview-side</h4>
@@ -7040,14 +7093,14 @@
 									<h1>Report overview</h1>
 								</div>
 								<!-- side titel - slut-->
-								<!-- opret ny rapport knap -->
+								<!-- opret ny rapport button -->
 								<div class="opretnyrapportcontainer">
-									<button type="button" class="newreportbutton" title="Initiate creation of a new report.">
-										<img class="plusimg" src="img/icons/plus.svg" alt="new report img">
-										<span class="newreportspan">New report</span>
+									<button type="button" class="new-report-button" title="Initiate creation of a new report.">
+										<img class="plus-img" src="img/icons/plus.svg" alt="new report img">
+										<span class="new-report-span">New report</span>
 									</button>
 								</div>
-								<!-- opret ny rapport knap - slut-->
+								<!-- opret ny rapport button - slut-->
 							</div>
 							<div class="bottomEditorHeader">
 								<!-- quantity molekyle -->
@@ -7069,7 +7122,7 @@
 									</div>
 								</div>
 								<!-- quantity molekyle - slut-->
-								<!-- switch knap preview/list -->
+								<!-- switch button preview/list -->
 								<div class="switch-preview-list-container">
 									<div class="switch">
 										<input type="radio" class="switch-input" name="view" id="preview" checked>
@@ -7079,24 +7132,24 @@
 										<span class="switch-selection"></span>
 									</div>
 								</div>
-								<!-- switch knap preview/list - slut-->
-								<!-- folder-overview knap -->
+								<!-- switch button preview/list - slut-->
+								<!-- folder-overview button -->
 								<div class="folderoverviewcontainer">
 									<button type="button" class="settings-menu-button">
 										<span>Folder overview</span>
 										<img class="settings-menu-icon" src="img/icons/folder.svg" alt="editicon">
 									</button>
 								</div>
-								<!-- folder-overview knap - slut-->
-								<!-- filter knap -->
+								<!-- folder-overview button - slut-->
+								<!-- filter button -->
 								<div class="filtercontainer">
-									<button type="button" class="filterbutton">
+									<button type="button" class="filter-button">
 										<span>Filter</span>
 										<img class="settings-menu-icon" src="img/icons/sliders.svg" alt="slider-icon">
 									</button>
 								</div>
 								<!-- filter - slut-->
-								<!-- sort by knap -->
+								<!-- sort by button -->
 								<div class="sortbycontainer">
 									<label class="select-label">
 										<span class="select-span">Sort by</span>
@@ -7117,11 +7170,11 @@
 									</label>
 								</div>
 								<!-- sort by - slut-->
-								<!-- search knap -->
+								<!-- search button -->
 								<div class="searchcontainer">
 									<input type="text" class="searchInput" placeholder="Search...">
 								</div>
-								<!-- search knap - slut-->
+								<!-- search button - slut-->
 							</div>
 						</div>
 					</div>
@@ -7136,7 +7189,7 @@
 					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
-					<!--HTML to copy-->
+					<!-- HTML -->
 					<td class="code">
 						<div class="frameforsidetitelogsettingsbar">
 							<div class="wrapper">
@@ -7147,14 +7200,14 @@
 											<h1>Report overview</h1>
 										</div>
 										<!-- side titel - slut-->
-										<!-- opret ny rapport knap -->
+										<!-- opret ny rapport button -->
 										<div class="opretnyrapportcontainer">
-											<button type="button" class="newreportbutton" title="Initiate creation of a new report.">
-												<img class="plusimg" src="img/icons/plus.svg" alt="new report img">
-												<span class="newreportspan">New report</span>
+											<button type="button" class="new-report-button" title="Initiate creation of a new report.">
+												<img class="plus-img" src="img/icons/plus.svg" alt="new report img">
+												<span class="new-report-span">New report</span>
 											</button>
 										</div>
-										<!-- opret ny rapport knap - slut-->
+										<!-- opret ny rapport button - slut-->
 									</div>
 									<div class="bottomEditorHeader">
 										<!-- quantity molekyle -->
@@ -7176,7 +7229,7 @@
 											</div>
 										</div>
 										<!-- quantity molekyle - slut-->
-										<!-- switch knap preview/list -->
+										<!-- switch button preview/list -->
 										<div class="switch-preview-list-container">
 											<div class="switch">
 												<input type="radio" class="switch-input" name="view" id="preview" checked>
@@ -7186,24 +7239,24 @@
 												<span class="switch-selection"></span>
 											</div>
 										</div>
-										<!-- switch knap preview/list - slut-->
-										<!-- folder-overview knap -->
+										<!-- switch button preview/list - slut-->
+										<!-- folder-overview button -->
 										<div class="folderoverviewcontainer">
 											<button type="button" class="settings-menu-button">
 												<span>Folder overview</span>
 												<img class="settings-menu-icon" src="img/icons/folder.svg" alt="editicon">
 											</button>
 										</div>
-										<!-- folder-overview knap - slut-->
-										<!-- filter knap -->
+										<!-- folder-overview button - slut-->
+										<!-- filter button -->
 										<div class="filtercontainer">
-											<button type="button" class="filterbutton">
+											<button type="button" class="filter-button">
 												<span>Filter</span>
 												<img class="settings-menu-icon" src="img/icons/sliders.svg" alt="slider-icon">
 											</button>
 										</div>
 										<!-- filter - slut-->
-										<!-- sort by knap -->
+										<!-- sort by button -->
 										<div class="sortbycontainer">
 											<label class="select-label">
 												<span class="select-span">Sort by</span>
@@ -7224,17 +7277,17 @@
 											</label>
 										</div>
 										<!-- sort by - slut-->
-										<!-- search knap -->
+										<!-- search button -->
 										<div class="searchcontainer">
 											<input type="text" class="searchInput" placeholder="Search...">
 										</div>
-										<!-- search knap - slut-->
+										<!-- search button - slut-->
 									</div>
 								</div>
 							</div>
 						</div>
 					</td>
-					<!--CSS to copy-->
+					<!-- CSS -->
 					<td class="code">
 						/* Styling for SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN ORAGBISME */
 						.frameforsidetitelogsettingsbar {
@@ -7326,7 +7379,7 @@
 						}
 
 						.folderoverviewcontainer .settings-menu-button span,
-						.filtercontainer .filterbutton span,
+						.filtercontainer .filter-button span,
 						.sortbycontainer .select-span {
 							display: none;
 						}
@@ -7358,7 +7411,7 @@
 							}
 							
 							.folderoverviewcontainer .settings-menu-button span,
-							.filtercontainer .filterbutton span,
+							.filtercontainer .filter-button span,
 							.sortbycontainer .select-span {
 								display: inline-block;
 							}
@@ -7380,7 +7433,7 @@
 			</table>
 		</div>
 	</article>
-	<!--"SIDE TITEL OG SETTINGS BAR" FOR EDITOR SIDEN ORAGBISME -->
+  	<!-- TOP SECTION EDITOR -->
 	<article id="side-titel-og-settings-bar-for-editor-side">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Side titel og settings bar for editor-side</h4>
@@ -7439,7 +7492,7 @@
 									</button>
 								</div>
 								<!-- previous page  - slut-->
-								<!-- switch knap multiple/singular-->
+								<!-- switch button multiple/singular-->
 								<div class="switch-multiple-singular-container">
 									<div class="switch">
 										<input type="radio" class="switch-input" name="view3" value="week3" id="multiple" checked="">
@@ -7449,8 +7502,8 @@
 										<span class="switch-selection"></span>
 									</div>
 								</div>
-								<!-- switch knap multiple/singular - slut-->
-								<!-- switch knap horizontal/vertical -->
+								<!-- switch button multiple/singular - slut-->
+								<!-- switch button horizontal/vertical -->
 								<div class="switch-horizontal-vertical-container">
 									<div class="switch">
 										<input type="radio" class="switch-input" name="view4" value="1" id="v" checked="">
@@ -7460,29 +7513,29 @@
 										<span class="switch-selection"></span>
 									</div>
 								</div>
-								<!-- switch knap horizontal/vertical - slut-->
-								<!-- add page knap -->
-								<div class="addpageknapcontainer">
+								<!-- switch button horizontal/vertical - slut-->
+								<!-- add page button -->
+								<div class="addpagebuttoncontainer">
 									<button type="button" class="adddelete-button">
 										<img class="plusminus-iconimg" src="img/icons/plus.svg" alt="plus icon">
 									</button>
 								</div>
-								<!-- add page knap - slut-->
-								<!-- delete page knap -->
-								<div class="deletepageknapcontainer">
+								<!-- add page button - slut-->
+								<!-- delete page button -->
+								<div class="deletepagebuttoncontainer">
 									<button type="button" class="adddelete-button">
 										<img class="plusminus-iconimg" src="img/icons/minus.svg" alt="plus icon">
 									</button>
 								</div>
-								<!-- delete page knap - slut-->
-								<!-- Upload image knap -->
-								<div class="uploadimageknapcontainer">
+								<!-- delete page button - slut-->
+								<!-- Upload image button -->
+								<div class="uploadimagebuttoncontainer">
 									<button type="button" class="uploadimagebutton">
 									   <span>Upload image</span>
 									   <img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
 									</button>
 								</div>
-								<!-- Upload image knap - slut-->
+								<!-- Upload image button - slut-->
 								<!-- next page -->
 								<div class="nextpagecontainer">
 									<button type="button" class="nextbutton">
@@ -7526,7 +7579,7 @@
 					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
-					<!--HTML to copy-->
+					<!-- HTML -->
 					<td class="code">
 						<div class="frameforsidetitelogsettingsbar">
 							<div class="wrapper">
@@ -7580,7 +7633,7 @@
 											</button>
 										</div>
 										<!-- previous page  - slut-->
-										<!-- switch knap multiple/singular-->
+										<!-- switch button multiple/singular-->
 										<div class="switch-multiple-singular-container">
 											<div class="switch">
 												<input type="radio" class="switch-input" name="view3" value="week3" id="multiple" checked="">
@@ -7590,8 +7643,8 @@
 												<span class="switch-selection"></span>
 											</div>
 										</div>
-										<!-- switch knap multiple/singular - slut-->
-										<!-- switch knap horizontal/vertical -->
+										<!-- switch button multiple/singular - slut-->
+										<!-- switch button horizontal/vertical -->
 										<div class="switch-horizontal-vertical-container">
 											<div class="switch">
 												<input type="radio" class="switch-input" name="view4" value="1" id="v" checked="">
@@ -7601,29 +7654,29 @@
 												<span class="switch-selection"></span>
 											</div>
 										</div>
-										<!-- switch knap horizontal/vertical - slut-->
-										<!-- add page knap -->
-										<div class="addpageknapcontainer">
+										<!-- switch button horizontal/vertical - slut-->
+										<!-- add page button -->
+										<div class="addpagebuttoncontainer">
 											<button type="button" class="adddelete-button">
 												<img class="plusminus-iconimg" src="img/icons/plus.svg" alt="plus icon">
 											</button>
 										</div>
-										<!-- add page knap - slut-->
-										<!-- delete page knap -->
-										<div class="deletepageknapcontainer">
+										<!-- add page button - slut-->
+										<!-- delete page button -->
+										<div class="deletepagebuttoncontainer">
 											<button type="button" class="adddelete-button">
 												<img class="plusminus-iconimg" src="img/icons/minus.svg" alt="plus icon">
 											</button>
 										</div>
-										<!-- delete page knap - slut-->
-										<!-- Upload image knap -->
-										<div class="uploadimageknapcontainer">
+										<!-- delete page button - slut-->
+										<!-- Upload image button -->
+										<div class="uploadimagebuttoncontainer">
 											<button type="button" class="uploadimagebutton">
 											   <span>Upload image</span>
 											   <img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
 											</button>
 										</div>
-										<!-- Upload image knap - slut-->
+										<!-- Upload image button - slut-->
 										<!-- next page -->
 										<div class="nextpagecontainer">
 											<button type="button" class="nextbutton">
@@ -7656,7 +7709,7 @@
 							</div>
 						</div>
 					</td>
-					<!--CSS to copy-->
+					<!-- CSS -->
 					<td class="code">
 						/* Styling for SIDE TITEL OG SETTINGS BAR" FOR EDITOR SIDEN ORAGBISME */
 						/*PLACERING / POSITIONER*/
@@ -7703,9 +7756,9 @@
 						.deletecontainer,
 						.switch-multiple-singular-container,
 						.switch-horizontal-vertical-container,
-						.addpageknapcontainer,
-						.deletepageknapcontainer,
-						.uploadimageknapcontainer,
+						.addpagebuttoncontainer,
+						.deletepagebuttoncontainer,
+						.uploadimagebuttoncontainer,
 						.nextpagecontainer {
 							margin-right: 1vw;
 						}
@@ -7722,15 +7775,15 @@
 							float: left;
 						}
 
-						.addpageknapcontainer {
+						.addpagebuttoncontainer {
 							float: left;
 						}
 
-						.deletepageknapcontainer {
+						.deletepagebuttoncontainer {
 							float: left;
 						}
 
-						.uploadimageknapcontainer {
+						.uploadimagebuttoncontainer {
 							float: left;
 						}
 
@@ -7748,15 +7801,15 @@
 							.deletecontainer,
 							.switch-multiple-singular-container,
 							.switch-horizontal-vertical-container,
-							.addpageknapcontainer,
-							.deletepageknapcontainer,
-							.uploadimageknapcontainer,
+							.addpagebuttoncontainer,
+							.deletepagebuttoncontainer,
+							.uploadimagebuttoncontainer,
 							.nextpagecontainer {
 								margin-right: 34px;
 							}
 							
 							.folderoverviewcontainer .settings-menu-button span,
-							.filtercontainer .filterbutton span,
+							.filtercontainer .filter-button span,
 							.sortbycontainer .select-span {
 								display: inline-block;
 							}
@@ -7778,12 +7831,13 @@
 			</table>
 		</div>
 	</article>
-	<!--HIGHCHART-->
+	<!-- HIGHCHART -->
 	<div class="title-area">
 		<div class="wrapper">
-			<h3 class="styleguide-title">Highcharts indhold</h3>
+			<h3 class="styleguide-title">Highcharts</h3>
 		</div>
 	</div>
+  	<!-- HIGHCHART INITIATION -->
 	<article id="highcharts-initiation">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Highcharts initiation</h4>
@@ -7833,6 +7887,7 @@
 			</table>
 		</div>
 	</article>
+  	<!-- HIGHCHART BAR -->
 	<article id="highcharts-type-bar-preview">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Highcharts type: bar - preview</h4>
@@ -7982,6 +8037,7 @@
 			</table>
 		</div>
 	</article>
+  	<!-- HIGHCHART BAR PAGE ELEMENT -->
 	<article id="highcharts-type-bar-element">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Highcharts type: bar - page element</h4>
@@ -8048,6 +8104,7 @@
 			</table>
 		</div>
 	</article>
+  	<!-- HIGHCHART COLUMN PREVIEW -->
 	<article id="highcharts-type-column-preview">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Highcharts type: column - preview</h4>
@@ -8198,6 +8255,7 @@
 			</table>
 		</div>
 	</article>
+  	<!-- HIGHCHART COLUMN PAGE ELEMENT  -->
 	<article id="highcharts-type-column-element">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Highcharts type: column - page element</h4>
@@ -8264,6 +8322,7 @@
 			</table>
 		</div>
 	</article>
+  	<!-- HIGHCHART LINE PREVIEW -->
 	<article id="highcharts-type-line-preview">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Highcharts type: line - preview</h4>
@@ -8414,6 +8473,7 @@
 			</table>
 		</div>
 	</article>
+  	<!-- HIGHCHART LINE PAGE ELEMENT¨ -->
 	<article id="highcharts-type-line-element">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Highcharts type: line - page element</h4>
@@ -8480,6 +8540,7 @@
 			</table>
 		</div>
 	</article>
+  	<!-- HIGHCHART PIE PREVIEW -->
 	<article id="highcharts-type-pie-preview">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Highcharts type: pie - preview</h4>
@@ -8637,6 +8698,7 @@
 			</table>
 		</div>
 	</article>
+  	<!-- HIGHCHART PIE PAGE ELEMENT -->
 	<article id="highcharts-type-pie-element">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Highcharts type: pie - page element</h4>
@@ -8706,93 +8768,7 @@
 			</table>
 		</div>
 	</article>
-	<article id="infobox-pop-up" class="pop-up-article">
-		<div class="wrapper">
-			<h4 class="styleguide-title">Popup infobox</h4>
-		</div>
-		<div class="example">
-			<div class="wrapper">
-				<div class="popupinfobox">
-                    <button type="button" class="close-icon">
-                    <img class="X-icon" src="img/icons/x.svg" alt="Close-X">
-                    </button>
-                        <span>Placeholder text</span>
-                </div>
-			</div>
-		</div>
-		<div class="wrapper">
-			<table class="overviewmolekyler">
-				<tr class="row-one">
-					<th>HTML</th>
-					<th>CSS</th>
-					<th>JavaScript</th>
-				</tr>
-				<tr class="row-two">
-					<!--HTML-->
-					<td class="code">
-						<div class="popupinfobox">
-							<button type="button" class="close-icon">
-							<img class="X-icon" src="img/icons/x.svg" alt="Close-X">
-							</button>
-								<span>Placeholder text</span>
-						</div>
-					</td>
-					<!--CSS-->
-					<td class="code">
-						/* popup infobox css*/
-						.popupinfobox{
-							position: absolute;
-							top: 10vh;
-							left: 0;
-							background-color: #D3D3D3;
-							text-align: center;
-							width: 100%;
-							max-width: 400px;
-							height: 100vh;
-							max-height: 220px;
-							border-radius: 12px;
-						}
-
-						@media (min-width:401px){
-							/* Calculate left position, when width is over 400px */
-							.popupinfobox {
-								left: calc(50vw - 200px); /* Half of screen - element width */
-							}
-						}
-
-						.popupinfobox span {
-							color: black;
-							font-size: 30px;
-							display:inline-block;
-							margin-top: 65px;
-						}
-
-						.popupinfobox .close-icon,
-						.popupinfobox .close-icon .X-icon {
-							float: right;
-							margin-left: 0;
-						}
-
-						.close-icon{
-							background-color: transparent;
-							border: none;
-							cursor: pointer;
-							display: grid;
-
-						}
-
-						.X-icon{
-							margin-left: 365px;
-							margin-top: 2px;
-						}
-						/*popup infobox css slut*/
-                    </td>
-					<!--JavaScript-->
-					<td class="empty"></td>
-				</tr>
-			</table>
-		</div>
-	</article>
+  	<!-- REPORT PREVIEW -->
 	<article id="report-preview">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Report preview</h4>
@@ -8894,6 +8870,7 @@
 			</table>
 		</div>
 	</article>
+  	<!-- TEMPLATE PREVIEW -->
 	<article id="template-preview">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Template preview</h4>
@@ -9000,70 +8977,54 @@
 			</table>
 		</div>
 	</article>
-    
-    
-<article id="infobox-pop-up" class="pop-up-article">
+  	<!-- SEARCH FUNCTION EXAMPLE -->
+	<article id="report-search-function">
 		<div class="wrapper">
 			<h4 class="styleguide-title">Report list search funktion</h4>
 		</div>
 		<div class="example">
 			<div class="wrapper">
-        <input type="text" id="myInput" class="searchInput" onkeyup="search_report()" placeholder="Search...">
+				<input type="text" id="myInput" class="searchInput" onkeyup="search_report()" placeholder="Search...">
+				<ul id="reportUL">
+					<li class="report-listbox">    
+						<a href="" class="rep-namelist">Day report</a> 
+					</li>
+					<li class="report-listbox">    
+						<a href="" class="rep-namelist">Data from machine 1</a>
+					</li>
+					<li class="report-listbox">    
+						<a href="" class="rep-namelist">For CEO</a>
 
+					</li>
+					<li class="report-listbox">    
+						<a href="" class="rep-namelist">For buyers</a>
 
-                <ul id="reportUL">
+					</li>
+					<li class="report-listbox">    
+						<a href="" class="rep-namelist">Data from week 40</a>
 
+					</li>
+					<li class="report-listbox">    
+						<a href="" class="rep-namelist">Data from week 12</a>
 
-                <li class="report-listbox">    
-                    <a href="" class="rep-namelist">Day report</a> 
-                </li>
+					</li>
+					<li class="report-listbox">    
+						<a href="" class="rep-namelist">Data from week 6</a>
 
-                <li class="report-listbox">    
-                    <a href="" class="rep-namelist">Data from machine 1</a>
-                </li>
+					</li>
+					<li class="report-listbox">    
+						<a href="" class="rep-namelist">Robot 12</a>
 
-                <li class="report-listbox">    
-                    <a href="" class="rep-namelist">For CEO</a>
+					</li>
+					<li class="report-listbox">    
+						<a href="" class="rep-namelist">Robot 20</a>
 
-                </li>
+					</li>
+					<li class="report-listbox">    
+						<a href="" class="rep-namelist">Robot 4</a>
 
-                <li class="report-listbox">    
-                    <a href="" class="rep-namelist">For buyers</a>
-
-                </li>
-
-                <li class="report-listbox">    
-                    <a href="" class="rep-namelist">Data from week 40</a>
-
-                </li>
-
-                <li class="report-listbox">    
-                    <a href="" class="rep-namelist">Data from week 12</a>
-
-                </li>
-
-                <li class="report-listbox">    
-                    <a href="" class="rep-namelist">Data from week 6</a>
-
-                </li>
-
-                <li class="report-listbox">    
-                    <a href="" class="rep-namelist">Robot 12</a>
-
-                </li>
-
-                <li class="report-listbox">    
-                    <a href="" class="rep-namelist">Robot 20</a>
-
-                </li>
-
-                <li class="report-listbox">    
-                    <a href="" class="rep-namelist">Robot 4</a>
-
-                </li>
-
-                </ul>    
-    
+					</li>
+				</ul>    
 			</div>
 		</div>
 		<div class="wrapper">
@@ -10069,11 +10030,10 @@
 	<div class="wrapper">
 		<h3 class="styleguide-title">Pages</h3>
 		<ul>
-			<li><a href="overview.html" title="Se WIP af overview siden." >Overview</a></li>
-			<!--<li><a href="overview.html" title="Se overview siden, hvor du kan få overblik over rapporter.">Overview</a></li>-->
-			<li><a href="editor.html" title="Se edit siden, hvor du kan se og redigere i en rapport.">Edit</a></li>
-			<li><a href="" class="disabled" title="Endnu ikke tilgængelig." disabled>Show</a></li>
-			<li><a href="" class="disabled" title="Endnu ikke tilgængelig." disabled>Folder view</a></li>
+			<li><a href="overview.html" title="Overview of reports.">Overview</a></li>
+			<li><a href="editor.html" title="Edit reports.">Edit</a></li>
+			<li><a href="" class="disabled" title="Not ready.">Show</a></li>
+			<li><a href="" class="disabled" title="Not ready.">Group view</a></li>
 		</ul>
 	</div>
 </section>

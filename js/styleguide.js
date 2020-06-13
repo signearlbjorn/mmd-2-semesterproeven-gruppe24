@@ -4,7 +4,15 @@
 console.log('styleguide.js loaded.');
 
 // --- GENERIC FUNCTIONS ---
-function hideParrent(child) {
+function showElement(element) {
+	element.classList.remove("hidden");
+}
+
+function hideElement(element) {
+	element.classList.add("hidden");
+}
+
+function hideParrent(child, overlay) {
 	let parrent = child.parentNode;
 	if(!parrent.classList.contains("menu")) {
 		while(!parrent.classList.contains("menu")) {
@@ -19,7 +27,26 @@ function hideParrent(child) {
 		}
 	}
 	parrent.classList.add("hidden");
+	if(overlay !== undefined) {
+		hideElement(overlay);
+	}
 }
+
+function blurArray(arr) {
+	for(let i = 0; i < arr.length; i++) {
+		arr[i].classList.add('blur');
+	}
+}
+
+function blurArrayRemove(arr) {
+	for(let i = 0; i < arr.length; i++) {
+		arr[i].classList.remove('blur');
+	}
+}
+
+
+// --- GENERIC VARIABLES ---
+let sections = document.getElementsByTagName("section");
 
 
 // -- FORMAT CODING SECTIONS AS COPY FRIENDLY CODE, WITHOUT USE OF PRE --
@@ -650,7 +677,7 @@ function hiddenToggle(element) {
 let closeButton = document.getElementsByClassName("close");
 
 for(let i = 0; i < closeButton.length; i++) {
-	closeButton[i].addEventListener("click", function(){ hideParrent(closeButton[i]) });
+	closeButton[i].addEventListener("click", function(){ hideParrent(closeButton[i], overlay) });
 }
 
 // --- SEARCH ---
@@ -694,8 +721,30 @@ let createNewPopUp = document.getElementById("create-new-pop-up");
 let closeWithoutSavingPopUp = document.getElementById("close-without-saving-pop-up");
 
 
-// - OPEN POP UP BUTTONS -
+// - OVERLAY -
+let overlay = document.getElementById("overlay");
 
+
+// - OPEN POP UP BUTTONS -
+let newReportButton = document.getElementsByClassName("new-report-button");
+
+for(let i = 0; i < newReportButton.length; i++) {
+	newReportButton[i].addEventListener("click", function(){
+		showElement(createNewPopUp);
+		showElement(overlay);
+		blurArray(sections);
+	});
+}
+
+let filterButton = document.getElementsByClassName("filter-button");
+
+for(let i = 0; i < filterButton.length; i++) {
+	filterButton[i].addEventListener("click", function(){
+		showElement(filterPopUp);
+		showElement(overlay);
+		blurArray(sections);
+	});
+}
 
 
 // --- VALIDATION ---

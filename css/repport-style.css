@@ -323,6 +323,10 @@ a.rounded-corners {
 	width: 24px;
 }
 
+/* - HELP BUTTON - */
+.help {
+	cursor: help;
+}
 
 /* - INPUT - */
 input {
@@ -661,18 +665,18 @@ textarea{
 
 
 /* -- NEW REPORT BUTTON --*/
-.newreportbutton {
+.new-report-button {
 	overflow: hidden;
 	padding-right: 29px;
 	padding-left: 62px;
 }
 
-.newreportspan {
+.new-report-span {
 	float: left;
 	font-size: 140%;
 }
 
-.plusimg {
+.plus-img {
 	position: absolute;
 	top: calc(50% - 12px); /* 50% of parrent height - half of element height*/
 	left: 26px;
@@ -730,14 +734,14 @@ textarea{
 }
 
 
-/* -- FOLDER OVERVIEW BUTTON -- */
-.folder-view-button {
+/* -- GROUP OVERVIEW BUTTON -- */
+.group-view-button {
 	float: left;
 	padding-right: 63px;
 	text-decoration: none;
 }
 
-.folder-view-button img {
+.group-view-button img {
 	position: absolute;
 	top: calc(50% - 13px);
 	right: 17px;
@@ -747,11 +751,11 @@ textarea{
 
 
 /* -- FILTER BUTTON -- */
-.filterbutton {
+.filter-button {
 	padding-right: 52px;
 }
 
-.filterbutton img {
+.filter-button img {
 	position: absolute;
 	top: calc(50% - 10px);
 	right: 17px;
@@ -1602,6 +1606,9 @@ textarea{
 	z-index: 999;
 }
 
+.blur {
+	filter: blur(2px);
+}
 
 /* Styling for SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN ORAGBISME */
 .frameforsidetitelogsettingsbar {
@@ -1695,7 +1702,7 @@ textarea{
 }
 
 .folderoverviewcontainer .settings-menu-button span,
-.filtercontainer .filterbutton span,
+.filtercontainer .filter-button span,
 .sortbycontainer .select-span {
 	display: none;
 }
@@ -1727,7 +1734,7 @@ textarea{
 	}
 	
 	.folderoverviewcontainer .settings-menu-button span,
-	.filtercontainer .filterbutton span,
+	.filtercontainer .filter-button span,
 	.sortbycontainer .select-span {
 		display: inline-block;
 	}
@@ -1840,7 +1847,7 @@ textarea{
 	}
 	
 	.folderoverviewcontainer .settings-menu-button span,
-	.filtercontainer .filterbutton span,
+	.filtercontainer .filter-button span,
 	.sortbycontainer .select-span {
 		display: inline-block;
 	}
@@ -2421,7 +2428,7 @@ header .wrapper {
 }
 
 .example:before {
-	content:"Eksempel:";
+	content:"Example:";
 	display: none;
 	position: absolute;
 	top: -25px;
