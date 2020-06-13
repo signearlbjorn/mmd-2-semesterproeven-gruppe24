@@ -2154,12 +2154,14 @@
 						}
 					</td>
 					<td class="code">
+						// - NEW REPORT
 						let newReportButton = document.getElementsByClassName("new-report-button");
 
 						for(let i = 0; i < newReportButton.length; i++) {
 							newReportButton[i].addEventListener("click", function(){
 								showElement(createNewPopUp);
 								showElement(overlay);
+								blurArray(sections);
 							});
 						}
 					</td>
@@ -2209,12 +2211,14 @@
 						}
 					</td>
 					<td class="code">
+						// FILTER BUTTON
 						let filterButton = document.getElementsByClassName("filter-button");
 
 						for(let i = 0; i < filterButton.length; i++) {
 							filterButton[i].addEventListener("click", function(){
 								showElement(filterPopUp);
 								showElement(overlay);
+								blurArray(sections);
 							});
 						}
 					</td>
@@ -2493,7 +2497,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" class="texticon-button" title="Close editor">
+				<button type="button" name="close-editor" class="texticon-button" title="Close editor">
 					<span>Close editor</span>
 					<img class="texticon-iconimg" src="img/icons/x.svg" alt="X-icon">
 				</button>
@@ -2508,7 +2512,7 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" class="texticon-button" title="Close editor">
+						<button type="button" name="close-editor" class="texticon-button" title="Close editor">
 							<span>Close editor</span>
 							<img class="texticon-iconimg" src="img/icons/x.svg" alt="X-icon">
 						</button>
@@ -2530,8 +2534,20 @@
 					</td>
 					<td class="code">
 						// Close editor, if no changes are made from last saved version
-						// Open close editor pop up, if changes are made since last saved version
 						// ToDo
+						// Open close editor pop up, if changes are made since last saved version
+						// CLOSE WITHOUT SAVING POP UP
+						let closeEditorrButton = document.getElementsByName("close-editor");
+
+						for(let i = 0; i < closeEditorrButton.length; i++) {
+							closeEditorrButton[i].addEventListener("click", function(){
+								// Check for changes
+								// ToDo
+								showElement(closeWithoutSavingPopUp);
+								showElement(overlay);
+								blurArray(sections);
+							});
+						}
                     </td>
                 </tr>
 			</table>
@@ -2544,7 +2560,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" onclick="deleteReport()" class="texticon-button" title="Delete report">
+				<button type="button" name="delete-report" class="texticon-button" title="Delete report">
 					<span>Delete report</span>
 					<img class="texticon-iconimg" src="img/icons/trash.svg" alt="X-icon">
 				</button>
@@ -2559,7 +2575,7 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" class="texticon-button" title="Delete report">
+						<button type="button" name="delete-report" class="texticon-button" title="Delete report">
 							<span>Delete report</span>
 							<img class="texticon-iconimg" src="img/icons/trash.svg" alt="X-icon">
 						</button>
@@ -2581,7 +2597,18 @@
 					</td>
 					<td class="code">
 						// Open delete report interface.
-						// ToDo
+						// DELETE REPORT
+						let deleteReportButton = document.getElementsByName("delete-report");
+
+						for(let i = 0; i < deleteReportButton.length; i++) {
+							deleteReportButton[i].addEventListener("click", function(){
+								// Check for changes
+								// ToDo
+								showElement(deleteReportPopUp);
+								showElement(overlay);
+								blurArray(sections);
+							});
+						}
                     </td>
                 </tr>
 			</table>
@@ -3012,7 +3039,18 @@
 					</td>
 					<td class="code">
 						// Open Schedule pop up
-						// ToDo
+						// SCHEDULE REPORT
+						let scheduleReportButton = document.getElementsByName("schedule-report");
+
+						for(let i = 0; i < scheduleReportButton.length; i++) {
+							scheduleReportButton[i].addEventListener("click", function(){
+								// Check for changes
+								// ToDo
+								showElement(schedulePopUp);
+								showElement(overlay);
+								blurArray(sections);
+							});
+						}
 					</td>
                 </tr>
 			</table>
@@ -3083,7 +3121,18 @@
 					</td>
 					<td class="code">
 						// Open share pop up
-						// ToDo
+						// SCHEDULE REPORT
+						let shareReportButton = document.getElementsByName("share-report");
+
+						for(let i = 0; i < shareReportButton.length; i++) {
+							shareReportButton[i].addEventListener("click", function(){
+								// Check for changes
+								// ToDo
+								showElement(shareAsPopUp);
+								showElement(overlay);
+								blurArray(sections);
+							});
+						}
 					</td>
                 </tr>
 			</table>
@@ -3332,8 +3381,16 @@
 						}
 					</td>
 					<td class="code">
-						// Ajax Delete report
-						// ToDo
+						// DELETE REPORT
+						let deleteReportButton = document.getElementsByName("delete-report");
+
+						for(let i = 0; i < deleteReportButton.length; i++) {
+							deleteReportButton[i].addEventListener("click", function(){
+								showElement(deleteReportPopUp);
+								showElement(overlay);
+								blurArray(sections);
+							});
+						}
 					</td>
                 </tr>
 			</table>
@@ -6122,8 +6179,8 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<div id="overlay"></div>
-				<form action="" method="get" id="pop-up" class="pop-up menu">
+				<div id="overlay" class="hidden"></div>
+				<form action="" method="get" id="pop-up" class="pop-up menu hidden">
 					<div class="pop-up-title-area">
 						<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
 						<img class="pop-up-title-image font-height" src="img/icons/edit.svg" alt="Example icon">
@@ -6153,7 +6210,7 @@
 					<!-- HTML -->
 					<td class="code">
 						<div id="overlay"></div>
-						<form action="" method="get" id="pop-up" class="pop-up menu">
+						<form action="" method="get" id="pop-up" class="pop-up menu hidden">
 							<div class="pop-up-title-area">
 								<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
 								<img class="pop-up-title-image font-height" src="img/icons/edit.svg" alt="Example icon">
@@ -6182,6 +6239,7 @@
 				</tr>
 			</table>
 			<p class="info">Overlay should only be copied once when pop ups are used. All subsecuent pop up's should not use it.</p>
+			<p class="info">Pop up's must be placed after body start, but not inside any section.</p>
 		</div>
 	</article>
 	<!-- DELETE REPORT POP UP -->
@@ -6190,7 +6248,7 @@
 			<h4 class="styleguide-title">Pop ud delete report</h4>
 		</div>
 		<div class="example">
-			<form action="" method="get" id="delete-report-pop-up" class="pop-up menu">
+			<form action="" method="get" id="delete-report-pop-up" class="pop-up menu hidden">
 				<div class="pop-up-title-area">
 					<img class="pop-up-title-image font-height" src="img/icons/trash-2.svg" alt="Delete icon">
 					<span class="pop-up-title">Delete report</span>
@@ -6214,7 +6272,7 @@
 				<tr class="row-two">
 					<!-- HTML -->
 					<td class="code">
-						<form action="" method="get" id="delete-report-pop-up" class="pop-up menu">
+						<form action="" method="get" id="delete-report-pop-up" class="pop-up menu hidden">
 							<div class="pop-up-title-area">
 								<img class="pop-up-title-image font-height" src="img/icons/trash-2.svg" alt="Delete icon">
 								<span class="pop-up-title">Delete report</span>
@@ -6245,7 +6303,7 @@
 			<h4 class="styleguide-title">Pop ud delete - group</h4>
 		</div>
 		<div class="example">
-			<form action="" method="get" id="delete-group-pop-up" class="pop-up menu">
+			<form action="" method="get" id="delete-group-pop-up" class="pop-up menu hidden">
 				<div class="pop-up-title-area">
 					<img class="pop-up-title-image font-height" src="img/icons/trash-2.svg" alt="Delete icon">
 					<span class="pop-up-title">Delete group</span>
@@ -6269,7 +6327,7 @@
 				<tr class="row-two">
 					<!-- HTML -->
 					<td class="code">
-						<form action="" method="get" id="delete-group-pop-up" class="pop-up menu">
+						<form action="" method="get" id="delete-group-pop-up" class="pop-up menu hidden">
 							<div class="pop-up-title-area">
 								<img class="pop-up-title-image font-height" src="img/icons/trash-2.svg" alt="Delete icon">
 								<span class="pop-up-title">Delete group</span>
@@ -6301,7 +6359,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<form action="" method="get" id="share-as-pop-up" class="pop-up menu">
+				<form action="" method="get" id="share-as-pop-up" class="pop-up menu hidden">
 					<div class="pop-up-title-area">
 						<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
 						<img class="pop-up-title-image font-height" src="img/icons/sharegreen.svg" alt="Share icon">
@@ -6370,7 +6428,7 @@
 				<tr class="row-two">
 					<!-- HTML -->
 					<td class="code">
-						<form action="" method="get" id="share-as-pop-up" class="pop-up menu">
+						<form action="" method="get" id="share-as-pop-up" class="pop-up menu hidden">
 							<div class="pop-up-title-area">
 								<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
 								<img class="pop-up-title-image font-height" src="img/icons/sharegreen.svg" alt="Share icon">
@@ -6451,7 +6509,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<form action="" method="get" id="schedule-pop-up" class="pop-up menu">
+				<form action="" method="get" id="schedule-pop-up" class="pop-up menu hidden">
 					<div class="pop-up-title-area">
 						<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
 						<img class="pop-up-title-image font-height" src="img/icons/calendargreen.svg" alt="Calendar icon">
@@ -6547,7 +6605,7 @@
 				<tr class="row-two">
 					<!-- HTML -->
 					<td class="code">
-						<form action="" method="get" id="schedule-pop-up" class="pop-up menu">
+						<form action="" method="get" id="schedule-pop-up" class="pop-up menu hidden">
 							<div class="pop-up-title-area">
 								<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
 								<img class="pop-up-title-image font-height" src="img/icons/calendargreen.svg" alt="Calendar icon">
@@ -6649,7 +6707,7 @@
 			<h4 class="styleguide-title">Save pop up</h4>
 		</div>
 		<div class="example">
-			<form action="" method="get" id="save-pop-up" class="pop-up menu">
+			<form action="" method="get" id="save-pop-up" class="pop-up menu hidden">
 				<input type="hidden" name="target" value="reportID">
 				<div class="pop-up-title-area">
 					<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
@@ -6688,7 +6746,7 @@
 				<tr class="row-two">
 					<!-- HTML -->
 					<td class="code">
-						<form action="" method="get" id="save-pop-up" class="pop-up menu">
+						<form action="" method="get" id="save-pop-up" class="pop-up menu hidden">
 							<input type="hidden" name="target" value="reportID">
 							<div class="pop-up-title-area">
 								<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
@@ -6734,7 +6792,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<form action="" method="get" id="filter-pop-up" class="pop-up menu">
+				<form action="" method="get" id="filter-pop-up" class="pop-up menu hidden">
 					<div class="pop-up-title-area">
 						<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
 						<img class="pop-up-title-image font-height" src="img/icons/slidersgreen.svg" alt="Slider icon">
@@ -6825,7 +6883,7 @@
 				<tr class="row-two">
 					<!-- HTML -->
 					<td class="code">
-						<form action="" method="get" id="filter-pop-up" class="pop-up menu">
+						<form action="" method="get" id="filter-pop-up" class="pop-up menu hidden">
 							<div class="pop-up-title-area">
 								<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
 								<img class="pop-up-title-image font-height" src="img/icons/slidersgreen.svg" alt="Slider icon">
@@ -6925,7 +6983,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<form action="" method="get" id="create-new-pop-up" class="pop-up menu">
+				<form action="" method="get" id="create-new-pop-up" class="pop-up menu hidden">
 					<div class="pop-up-title-area">
 						<img class="pop-up-title-image font-height" src="img/icons/plus.svg" alt="Plus icon">
 						<span class="pop-up-title">Create new report</span>
@@ -6969,7 +7027,7 @@
 				<tr class="row-two">
 					<!-- HTML -->
 					<td class="code">
-						<form action="" method="get" id="create-new-pop-up" class="pop-up menu">
+						<form action="" method="get" id="create-new-pop-up" class="pop-up menu hidden">
 							<div class="pop-up-title-area">
 								<img class="pop-up-title-image font-height" src="img/icons/plus.svg" alt="Plus icon">
 								<span class="pop-up-title">Create new report</span>
@@ -7018,7 +7076,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<form action="" method="get" id="close-without-saving-pop-up" class="pop-up menu">
+				<form action="" method="get" id="close-without-saving-pop-up" class="pop-up menu hidden">
 					<div class="pop-up-title-area">
 						<img class="pop-up-title-image font-height" src="img/icons/questionmark.svg" alt="?">
 						<span class="pop-up-title">Quit without saving?</span>
@@ -7045,7 +7103,7 @@
 				<tr class="row-two">
 					<!-- HTML -->
 					<td class="code">
-						<form action="" method="get" id="close-without-saving-pop-up" class="pop-up menu">
+						<form action="" method="get" id="close-without-saving-pop-up" class="pop-up menu hidden">
 							<div class="pop-up-title-area">
 								<img class="pop-up-title-image font-height" src="img/icons/questionmark.svg" alt="?">
 								<span class="pop-up-title">Quit without saving?</span>

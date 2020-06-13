@@ -12,7 +12,7 @@ function hideElement(element) {
 	element.classList.add("hidden");
 }
 
-function hideParrent(child, overlay) {
+function hideParrent(child) {
 	let parrent = child.parentNode;
 	if(!parrent.classList.contains("menu")) {
 		while(!parrent.classList.contains("menu")) {
@@ -27,9 +27,6 @@ function hideParrent(child, overlay) {
 		}
 	}
 	parrent.classList.add("hidden");
-	if(overlay !== undefined) {
-		hideElement(overlay);
-	}
 }
 
 function blurArray(arr) {
@@ -677,7 +674,11 @@ function hiddenToggle(element) {
 let closeButton = document.getElementsByClassName("close");
 
 for(let i = 0; i < closeButton.length; i++) {
-	closeButton[i].addEventListener("click", function(){ hideParrent(closeButton[i], overlay) });
+	closeButton[i].addEventListener("click", function(){
+		hideParrent(closeButton[i]);
+		hideElement(overlay);
+		blurArrayRemove(sections);
+	});
 }
 
 // --- SEARCH ---
@@ -726,6 +727,7 @@ let overlay = document.getElementById("overlay");
 
 
 // - OPEN POP UP BUTTONS -
+// - NEW REPORT
 let newReportButton = document.getElementsByClassName("new-report-button");
 
 for(let i = 0; i < newReportButton.length; i++) {
@@ -736,11 +738,74 @@ for(let i = 0; i < newReportButton.length; i++) {
 	});
 }
 
+
+// FILTER BUTTON
 let filterButton = document.getElementsByClassName("filter-button");
 
 for(let i = 0; i < filterButton.length; i++) {
 	filterButton[i].addEventListener("click", function(){
 		showElement(filterPopUp);
+		showElement(overlay);
+		blurArray(sections);
+	});
+}
+
+
+// CLOSE WITHOUT SAVING POP UP
+let closeEditorrButton = document.getElementsByName("close-editor");
+
+for(let i = 0; i < closeEditorrButton.length; i++) {
+	closeEditorrButton[i].addEventListener("click", function(){
+		// Check for changes
+		// ToDo
+		showElement(closeWithoutSavingPopUp);
+		showElement(overlay);
+		blurArray(sections);
+	});
+}
+
+
+// DELETE REPORT
+let deleteReportButton = document.getElementsByName("delete-report");
+
+for(let i = 0; i < deleteReportButton.length; i++) {
+	deleteReportButton[i].addEventListener("click", function(){
+		showElement(deleteReportPopUp);
+		showElement(overlay);
+		blurArray(sections);
+	});
+}
+
+
+// SCHEDULE REPORT
+let scheduleReportButton = document.getElementsByName("schedule-report");
+
+for(let i = 0; i < scheduleReportButton.length; i++) {
+	scheduleReportButton[i].addEventListener("click", function(){
+		showElement(schedulePopUp);
+		showElement(overlay);
+		blurArray(sections);
+	});
+}
+
+// SHARE REPORT
+let shareReportButton = document.getElementsByName("share-report");
+
+for(let i = 0; i < shareReportButton.length; i++) {
+	shareReportButton[i].addEventListener("click", function(){
+		showElement(shareAsPopUp);
+		showElement(overlay);
+		blurArray(sections);
+	});
+}
+
+
+// SAVE REPORT AS
+let saveReportAsButton = document.getElementsByName("save-report-as");
+
+for(let i = 0; i < saveReportAsButton.length; i++) {
+	saveReportAsButton[i].addEventListener("click", function(){
+		showElement(savePopUp);
 		showElement(overlay);
 		blurArray(sections);
 	});

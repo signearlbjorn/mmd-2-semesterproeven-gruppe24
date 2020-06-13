@@ -1602,13 +1602,14 @@ textarea{
 	height: 100vh;
 	min-height: 1px;
 	overflow: hidden;
-	background: transparent;
+	background: rgba(0,0,0,0.5);
 	z-index: 999;
 }
 
 .blur {
 	filter: blur(2px);
 }
+
 
 /* Styling for SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN ORAGBISME */
 .frameforsidetitelogsettingsbar {
@@ -2489,11 +2490,27 @@ header .wrapper, #main-header .wrapper, #wrapper_header_example header .wrapper 
 }
 
 /* -- POP UP -- */
-#styleguide .pop-up,
-#styleguide #overlay {
+#styleguide .pop-up.hidden,
+#styleguide #overlay.hidden {
+	display: block;
 	position: absolute;
 }
 
+#styleguide section.blur {
+	position: relative;
+	filter: none;
+}
+
+#styleguide section.blur:before {
+	content:"";
+	position: absolute;
+	filter: blur(2px);
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	
+}
 
 /* -- SECTIONER -- */
 #styleguide section,
