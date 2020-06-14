@@ -1459,6 +1459,11 @@ textarea{
 }
 
 @media (min-width: 3840px) {
+	#main-navigation,
+	#main-navigation.hidden {
+		min-height: 102px;
+	}
+	
 	#main-navigation ul,
 	#main-navigation ul li,
 	#main-navigation ul li a,
@@ -1484,7 +1489,7 @@ textarea{
 /* --- POP UP --- */
 .pop-up {
 	position: fixed;
-	top: 10%;
+	top: calc(10% + 33px);
 	left: 10%;
 	overflow: auto;
 	max-height: 80%;
@@ -1496,10 +1501,22 @@ textarea{
 	box-sizing: border-box;
 }
 
+@media (min-width: 768px){
+	.pop-up {
+		top: calc(10% + 51px);
+	}
+}
+
 @media (min-width: 813px){
 	.pop-up {
         left: calc(50% - 325px); /* Half of screen - element width */
 		max-width: 650px;
+	}
+}
+
+@media (min-width: 3840px){
+	.pop-up {
+		top: calc(10% + 102px);
 	}
 }
 
@@ -1595,7 +1612,7 @@ textarea{
 /* -- POP UP OVERLAY --*/
 #overlay{
 	position: fixed;
-	top: 0;
+	top: 51px;
 	left: 0;
 	width: 100vw;
 	min-width: 1px;
@@ -1608,6 +1625,12 @@ textarea{
 
 .blur {
 	filter: blur(2px);
+}
+
+.scroll-lock {
+	overflow: hidden;
+	overflow-y: hidden;
+	overflow-x: hidden;
 }
 
 

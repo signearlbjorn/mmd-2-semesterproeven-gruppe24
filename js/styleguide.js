@@ -41,9 +41,19 @@ function blurArrayRemove(arr) {
 	}
 }
 
+function scrollLock() {
+	document.body.classList.add('scroll-lock');
+}
+
+function scrollLockRemove() {
+	document.body.classList.remove('scroll-lock');
+}
+
 
 // --- GENERIC VARIABLES ---
 let sections = document.getElementsByTagName("section");
+let body = document.getElementsByTagName("body");
+body = body[0];
 
 
 // -- FORMAT CODING SECTIONS AS COPY FRIENDLY CODE, WITHOUT USE OF PRE --
@@ -678,6 +688,7 @@ for(let i = 0; i < closeButton.length; i++) {
 		hideParrent(closeButton[i]);
 		hideElement(overlay);
 		blurArrayRemove(sections);
+		scrollLockRemove();
 	});
 }
 
@@ -735,6 +746,7 @@ for(let i = 0; i < newReportButton.length; i++) {
 		showElement(createNewPopUp);
 		showElement(overlay);
 		blurArray(sections);
+		scrollLock();
 	});
 }
 
@@ -747,6 +759,7 @@ for(let i = 0; i < filterButton.length; i++) {
 		showElement(filterPopUp);
 		showElement(overlay);
 		blurArray(sections);
+		scrollLock();
 	});
 }
 
@@ -761,6 +774,7 @@ for(let i = 0; i < closeEditorrButton.length; i++) {
 		showElement(closeWithoutSavingPopUp);
 		showElement(overlay);
 		blurArray(sections);
+		scrollLock();
 	});
 }
 
@@ -773,6 +787,7 @@ for(let i = 0; i < deleteReportButton.length; i++) {
 		showElement(deleteReportPopUp);
 		showElement(overlay);
 		blurArray(sections);
+		scrollLock();
 	});
 }
 
@@ -785,6 +800,7 @@ for(let i = 0; i < scheduleReportButton.length; i++) {
 		showElement(schedulePopUp);
 		showElement(overlay);
 		blurArray(sections);
+		scrollLock();
 	});
 }
 
@@ -796,6 +812,7 @@ for(let i = 0; i < shareReportButton.length; i++) {
 		showElement(shareAsPopUp);
 		showElement(overlay);
 		blurArray(sections);
+		scrollLock();
 	});
 }
 
@@ -808,6 +825,7 @@ for(let i = 0; i < saveReportAsButton.length; i++) {
 		showElement(savePopUp);
 		showElement(overlay);
 		blurArray(sections);
+		scrollLock();
 	});
 }
 
