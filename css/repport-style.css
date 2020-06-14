@@ -1610,7 +1610,7 @@ textarea{
 
 
 /* -- POP UP OVERLAY --*/
-#overlay{
+#overlay {
 	position: fixed;
 	top: 51px;
 	left: 0;
@@ -1633,6 +1633,10 @@ textarea{
 	overflow-x: hidden;
 }
 
+.past-top,
+#overlay.past-top {
+	top: 0 !important;
+}
 
 /* Styling for SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN ORAGBISME */
 .frameforsidetitelogsettingsbar {

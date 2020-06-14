@@ -737,6 +737,24 @@ let closeWithoutSavingPopUp = document.getElementById("close-without-saving-pop-
 let overlay = document.getElementById("overlay");
 
 
+window.addEventListener("scroll", function(){overlayPosition()});
+
+function overlayPosition (){
+	if(document.body.scrollTop > 51 && window.screen.width < 3840 || document.documentElement.scrollTop > 51 && window.screen.width < 3840 || document.body.scrollTop > 102 && window.screen.width >= 3840 || document.documentElement.scrollTop > 102 && window.screen.width >= 3840) {
+		overlay.classList.add("past-top");
+	} else {
+		overlay.classList.remove("past-top");
+		if(document.body.scrollTop != 0) {
+			var newSize = 51 - document.body.scrollTop;
+		} else {
+			var newSize = 51 - document.documentElement.scrollTop;
+		}
+		overlay.style.top = newSize + "px";
+	}
+	console.log(51 - document.documentElement.scrollTop);
+}
+
+
 // - OPEN POP UP BUTTONS -
 // - NEW REPORT
 let newReportButton = document.getElementsByClassName("new-report-button");
