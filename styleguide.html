@@ -2233,7 +2233,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<button type="button" class="previousbutton button-w round-corners" title="Go to previous page">
+				<button type="button" class="previous-page-button button-w round-corners" title="Go to previous page">
 					<span>Previous page</span>
 					<img class="settings-menu-icon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
 				</button>
@@ -2248,23 +2248,23 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<button type="button" class="previousbutton button-w round-corners" title="Go to previous page">
+						<button type="button" class="previous-page-button button-w round-corners" title="Go to previous page">
 							<span>Previous page</span>
 							<img class="settings-menu-icon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
 						</button>
 					</td>
 					<td class="code">
 						/* -- PREVIOUS BUTTON -- */
-						.previousbutton{
+						.previous-page-button{
 							min-width: 135px;
 							padding-left: 42px; /* 17px from padding, 20px from image and 5px margin from image to span */
 						}
 
-						.previousbutton span{
+						.previous-page-button span{
 							float: right;
 						}
 
-						.previousbutton img {
+						.previous-page-button img {
 							position: absolute;
 							top: calc(50% - 10px);
 							left: 17px;
@@ -2272,7 +2272,7 @@
 							width: 20px;
 						}
 						
-						.previousbutton.disabled {
+						.previous-page-button.disabled {
 							background-color: #777;
 						}
 						.settings-menu-icon{
@@ -2624,7 +2624,7 @@
 				<label class="upload-button rounded-corners button-w" title="Upload image to Graph tab">
 					<span>Upload image</span>
 					<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
-					<input type="file" class="rounded-corners button-w hidden" name="upload-image">
+					<input type="file" class="round-corners button-w hidden" name="upload-image">
 				</label>
 			</div>
 		</div>
@@ -6529,7 +6529,7 @@
 					<div class="pop-up-content-area">
 						<!-- WEEKDAY SWITCH FOR SCHEDULE REPORT -->
 						<div class="pop-up-content-area-molecule">
-							<form action="" method="get" class="switch">
+							<div action="" method="get" class="switch">
 								<div class="switch-content">
 									<label class="switch-label">
 										<span title="Monday">Monday</span>
@@ -7155,7 +7155,7 @@
 						<div class="top-section-wrapper">
 							<div class="top-section-top">
 								<!-- H1 -->
-								<div class="sidetitelcontainer">
+								<div class="sidetitel-container">
 									<h1>Report overview</h1>
 								</div>
 								<!-- NEW REPORT BUTTON -->
@@ -7255,149 +7255,435 @@
 				<tr class="row-two">
 					<!-- HTML -->
 					<td class="code">
+						<section class="top-section">
+							<div class="wrapper">
+								<div class="top-section-wrapper">
+									<div class="top-section-top">
+										<!-- H1 -->
+										<div class="sidetitel-container">
+											<h1>Report overview</h1>
+										</div>
+										<!-- NEW REPORT BUTTON -->
+										<div class="new-report-button-container">
+											<button type="button" class="new-report-button round-corners button-g" title="Initiate creation of a new report.">
+												<img class="plus-img" src="img/icons/plus.svg" alt="+">
+												<span class="new-report-span">New report</span>
+											</button>
+										</div>
+									</div>
+									<div class="top-section-bottom">
+										<!-- QUANTITY SELECT -->
+										<div class="quantity-select-container">
+											<form action="" method="get">
+												<label class="select-label">
+													<span class="select-span">Quantity</span>
+													<div class="select-wrapper">
+														<select name="reports-shown" class="select" title="Number of reports to show">
+															<option value="8" selected="">8</option>
+															<option value="16">16</option>
+															<option value="24">24</option>
+															<option value="32">32</option>
+															<option value="40">40</option>
+															<option value="80">80</option>
+														</select>
+													</div>
+												</label>
+											</form>
+										</div>
+										<!-- SWITCH PREVIEW/TABLE -->
+										<div class="switch-preview-list-container">
+											<form action="" method="get" class="switch">
+												<div class="switch-content">
+													<label class="switch-label">
+														<span title="Preview">Preview</span>
+														<input type="radio" class="switch-input" name="report-display" value="preview" checked="">
+													</label>
+													<label class="switch-label">
+														<span title="Table">Table</span>
+														<input type="radio" class="switch-input" name="report-display" value="table">
+													</label>
+												</div>
+											</form>
+										</div>
+										<!-- GROUP OVERVIEW BUTTON -->
+										<div class="group-view-button-container">
+											<a href="group-view.html" class="group-view-button button-w round-corners disabled" title="Go to gtoup-view">
+												<span>Group overview</span>
+												<img src="img/icons/folder.svg" alt="Folder icon">
+											</a>
+										</div>
+										<!-- FILTER BUTTON -->
+										<div class="filter-button-container">
+											<button type="button" class="filter-button button-w round-corners" title="Open filter options">
+												<span>Filter</span>
+												<img src="img/icons/sliders.svg" alt="Slider icon">
+											</button>
+										</div>
+										<!-- SORT BY SELECT -->
+										<div class="sort-reports-select-container">
+											<form action="" method="get">
+												<label class="select-label" title="Select what to sort reports by">
+													<span class="select-span">Sort by</span>
+													<div class="select-wrapper">
+														<select name="sort-reports" class="sort-by-select select">
+															<option value="name-az" selected>Name a-z</option>
+															<option value="name-za">Name z-a</option>
+															<option value="creation-first">Latest creation</option>
+															<option value="creation-last">Last creation</option>
+															<option value="change-first">Latest change</option>
+															<option value="change-last">Last change</option>
+															<option value="id-acending">Acending ID</option>
+															<option value="id-decending">Decending ID </option>
+															<option value="group-az">Group a-z</option>
+															<option value="group-za">Group z-a</option>
+														</select>
+													</div>
+												</label>
+											</form>
+										</div>
+										<!-- SEARCH -->
+										<div class="search-input-container">
+											<input type="text" name="search" class="search-input round-corners button-w" placeholder="Search..." title="Search for reports, by name, id, group, date (dd.mm.yyyy) or category">
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
 					</td>
 					<!-- CSS -->
 					<td class="code">
+						/* -- TOP SECTION -- */
+						.top-section {
+							width: 100%;
+							background-color: inherit;
+						}
+
+						.top-section-wrapper {
+							width: 100%;
+							padding-top: 20px;
+						}
+
+						.top-section-top{
+							width: 100%;
+						}
+
+						.top-section-bottom{
+							width: 100%;
+							margin-top: 18px;
+						}
+
+						/* - OVERVIEW TOP SECTION - */
+						#overview .top-section .wrapper,
+						.overview .top-section .wrapper {
+							float: none !important;
+							width: 95% !important;
+							margin: 0 auto !important;
+							overflow: auto !important;
+						}
+
+						@media (min-width:1366px) {
+							#overview .top-section .wrapper,
+							.overview .top-section .wrapper {
+								width: 75% !important;
+							}
+						}
+
+						.sidetitel-container, .quantity-select-container  {
+						  float: left;
+						}
+
+						.new-report-button-container {
+							float: right;
+							height: 44px;
+							overflow: hidden;
+						}
+
+						.new-report-button-container button {
+							clear: right;
+							margin-top: 7px;
+						}
+
+						@media (min-width:481px) {
+							.new-report-button-container {
+								height: 9.148vw;
+							}
+							
+							.new-report-button-container button {
+								margin-top:  1.3722vw;
+							}
+						}
+
+						@media (min-width:768px) {
+							.new-report-button-container {
+								height: 64px;
+							}
+							
+							.new-report-button-container button {
+								margin-top:  10px;
+							}
+						}
+
+						@media (min-width: 1920px) {
+							.new-report-button-container {
+								height: 3.232vw;
+							}
+							
+							.new-report-button-container button {
+								margin-top: 0.5954vw;
+							}
+						}
+
+						@media (min-width:3840px) {
+							.new-report-button-container {
+								height: 3.334vw;
+							}
+							
+							.new-report-button-container button {
+								margin-top: 0.6464vw;
+							}
+						}
+
+						.quantity-select-container,
+						.switch-preview-list-container,
+						.group-view-button-container,
+						.filter-button-container,
+						.sort-reports-select-container {
+							margin-top: 1px;
+							margin-right: 1vw;
+						}
+
+						.switch-preview-list-container {
+							margin-top: 2px;
+						}
+
+						.quantity-select-container {
+							clear: left;
+						}
+
+						.switch-preview-list-container {
+							float: left;
+						}
+
+						.group-view-button-container {
+							float: left;
+						}
+
+						.group-view-button-container .group-view-button span,
+						.group-view-button-container .settings-menu-button span,
+						.filter-button-container .filter-button span,
+						.sort-reports-select-container .select-span {
+							display: none;
+						}
+
+						.filter-button-container .filter-button,
+						.group-view-button-container .group-view-button {
+							min-height: 38px; 
+						}
+
+						.sort-reports-select-container .sort-by-select,
+						.search-input-container .search-input {
+							max-width: 108px;
+						}
+
+						.filter-button-container {
+							float: left;
+						}
+
+						.sort-reports-select-container {
+							float: left;
+						}
+
+						.switch-preview-list-container .switch-label {
+							max-width: 35px;
+						}
+
+
+						.search-input-container {
+							float: right;
+						}
+
+						@media (min-width:1366px) {
+							.quantity-select-container,
+							.switch-preview-list-container,
+							.group-view-button-container,
+							.filter-button-container,
+							.sort-reports-select-container {
+								margin-right: 15px;
+							}
+
+								
+							.search-input-container {
+								float: right;
+							}
+							
+							.switch-preview-list-container .switch-label {
+								max-width: 95px;
+							}
+						}
+
+						@media (min-width:1920px) {
+							.group-view-button-container .group-view-button span,
+							.group-view-button-container .settings-menu-button span,
+							.filter-button-container .filter-button span,
+							.sort-reports-select-container .select-span {
+								display: inline-block;
+							}
+							
+							.sort-reports-select-container .sort-by-select,
+							.search-input-container .search-input {
+								max-width: 100%;
+							}
+							.switch-preview-list-container {
+								margin-top: 4px;
+							}
+						}
 					</td>
 				</tr>
 			</table>
 		</div>
 	</article>
   	<!-- TOP SECTION EDITOR -->
-	<article id="side-titel-og-settings-bar-for-editor-side">
+	<article id="top-section-editor">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Side titel og settings bar for editor-side</h4>
+			<h4 class="styleguide-title">Editor top section</h4>
 		</div>
 		<div class="example">
 			<div class="editor">
-				<div class="top-section">
+				<section class="top-section">
 					<div class="wrapper">
 						<div class="top-section-wrapper">
 							<div class="top-section-top">
-								<!-- side titel -->
-								<div class="sidetitelcontainer">
+								<!-- H1 -->
+								<div class="sidetitel-container">
 									<h1>Report editor</h1>
 								</div>
-								<!-- side titel - slut-->
-								<!-- Close editor -->
-								<div class="closecontainer">
-									<div class="text-icon">
-										<span>Close editor
-											<button type="button" class="texticon-button">
-												<img class="texticon-iconimg" src="img/icons/x.svg" alt="X-icon">
-											</button>
-										</span>
+								<div class="top-section-top-buttons">
+									<!-- SAVE REPORT BUTTON -->
+									<div class="save-button-container">
+										<button type="button" class="texticon-button disabled" title="Save report">
+											<span>Save report</span>
+											<img class="texticon-iconimg" src="img/icons/save.svg" alt="X-icon">
+										</button>
+									</div>
+									<!-- DELETE REPORT BUTTON -->
+									<div class="delete-button-container">
+										<button type="button" name="delete-report" class="texticon-button" title="Delete report">
+											<span>Delete report</span>
+											<img class="texticon-iconimg" src="img/icons/trash.svg" alt="X-icon">
+										</button>
+									</div>
+										<!-- CLOSE BUTTON  BUTTON -->
+									<div class="close-button-container">
+										<button type="button" name="close-editor" class="texticon-button" title="Close editor">
+											<span>Close editor</span>
+											<img class="texticon-iconimg" src="img/icons/x.svg" alt="X-icon">
+										</button>
 									</div>
 								</div>
-								<!-- Close editor - slut-->
-								<!-- slet rapport -->
-								<div class="deletecontainer">
-									<div class="text-icon">
-										<span>Delete report
-											<button type="button" class="texticon-button">
-												<img class="texticon-iconimg" src="img/icons/trash.svg" alt="X-icon">
-											</button>
-										</span>
-									</div>
-								</div>
-								<!-- slet rapport - slut-->
-								<!-- gem rapport -->
-								<div class="savecontainer">
-									<div class="text-icon">
-										<span>Save report
-											<button type="button" class="texticon-button">
-												<img class="texticon-iconimg" src="img/icons/save.svg" alt="X-icon">
-											</button>
-										</span>
-									</div>
-								</div>
-								<!-- gem rapport - slut-->
 							</div>
 							<div class="top-section-bottom">
-								<!-- previous page -->
-								<div class="previouspagecontainer">
-									<button type="button" class="previousbutton">
-									   <span>Previous page</span>
-									   <img class="settings-menu-icon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
+								<!-- PREVIUOS PAGE BUTTON -->
+								<div class="previous-page-button-container">
+									<button type="button" class="previous-page-button button-w round-corners" title="Go to previous page">
+										<span>Previous page</span>
+										<img class="settings-menu-icon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
 									</button>
 								</div>
-								<!-- previous page  - slut-->
-								<!-- switch button multiple/singular-->
+								<!-- SINGLE OR MULTIPLE PAGE DISPLAY SWITCH -->
 								<div class="switch-multiple-singular-container">
 									<form action="" method="get" class="switch">
-										<input type="radio" class="switch-input" name="view3" value="week3" id="multiple" checked="">
-										<label for="multiple" class="switch-label switch-label-off">Multiple</label>
-										<input type="radio" class="switch-input" name="view3" id="singular">
-										<label for="singular" class="switch-label switch-label-on">Vertical</label>
-										<span class="switch-selection"></span>
-									</div>
+										<div class="switch-content">
+											<label class="switch-label">
+												<span title="View single page">Single</span>
+												<input type="radio" class="switch-input" name="page-display" value="single" checked="">
+											</label>
+											<label class="switch-label">
+												<span title="View multiple pages">Multiple</span>
+												<input type="radio" class="switch-input" name="page-display" value="multiple">
+											</label>
+										</div>
+									</form>
 								</div>
-								<!-- switch button horizontal/vertical -->
+								<!-- SINGLE OR MULTIPLE PAGE DISPLAY SWITCH -->
 								<div class="switch-horizontal-vertical-container">
 									<form action="" method="get" class="switch">
-										<input type="radio" class="switch-input" name="view4" value="1" id="v" checked="">
-										<label for="v" class="switch-label switch-label-off">Horizontal</label>
-										<input type="radio" class="switch-input" name="view4" id="h" value="2">
-										<label for="h" class="switch-label switch-label-on">Vertical</label>
-										<span class="switch-selection"></span>
-									</div>
+										<div class="switch-content">
+											<label class="switch-label">
+												<span title="View single page">Single</span>
+												<input type="radio" class="switch-input" name="page-display" value="single" checked="">
+											</label>
+											<label class="switch-label">
+												<span title="View multiple pages">Multiple</span>
+												<input type="radio" class="switch-input" name="page-display" value="multiple">
+											</label>
+										</div>
+									</form>
 								</div>
-								<!-- add page button -->
-								<div class="addpagebuttoncontainer">
-									<button type="button" class="adddelete-button">
+								<!-- ADD PAGE BUTTON -->
+								<div class="add-page-button-container">
+									<button type="button" class="adddelete-button add-page button-w" title="Add new page after current page">
 										<img class="plusminus-iconimg" src="img/icons/plus.svg" alt="plus icon">
 									</button>
 								</div>
-								<!-- add page button - slut-->
-								<!-- delete page button -->
-								<div class="deletepagebuttoncontainer">
-									<button type="button" class="adddelete-button">
+								<!-- DELETE PAGE BUTTON -->
+								<div class="delete-page-button-container">
+									<button type="button" class="adddelete-button delete-page button-w" title="Remove current page">
 										<img class="plusminus-iconimg" src="img/icons/minus.svg" alt="plus icon">
 									</button>
 								</div>
-								<!-- delete page button - slut-->
-								<!-- Upload image button -->
-								<div class="uploadimagebuttoncontainer">
-									<button type="button" class="uploadimagebutton">
-									   <span>Upload image</span>
-									   <img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
-									</button>
+								<!-- UPLOAD IMAGE BUTTON -->
+								<div class="upload-button-container">
+									<label class="upload-button round-corners button-w" title="Upload image to Graph tab">
+										<span>Upload image</span>
+										<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
+										<input type="file" class="round-corners button-w hidden" name="upload-image">
+									</label>
 								</div>
-								<!-- Upload image button - slut-->
-								<!-- next page -->
-								<div class="nextpagecontainer">
-									<button type="button" class="nextbutton">
+								<!-- NEXT PAGE BUTTON -->
+								<div class="next-page-container">
+									<button type="button" class="nextbutton button-w round-corners" title="Go to next page">
 										<span>Next page</span>
 										<img class="settings-menu-icon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
 									</button>
 								</div>
-								<!-- next page  - slut-->
-								<!-- MEGA SWITCH -->
-								<div class="megaswitchcontainer">
-									<div class="megaswitch">
-										<input type="radio" class="switch-input0" name="view4" id="a1" checked="">
-										<label for="a1" class="switch-label0 switch-label-off0">A1</label>
-
-										<input type="radio" class="switch-input0" name="view4" id="a2">
-										<label for="a2" class="switch-label0 switch-label-on1">A2</label>
-
-										<input type="radio" class="switch-input0" name="view4" id="a3">
-										<label for="a3" class="switch-label0 switch-label-on2">A3</label>
-
-										<input type="radio" class="switch-input0" name="view4" id="a4">
-										<label for="a4" class="switch-label0 switch-label-on3">A4</label>
-
-										<span class="switch-selection0"></span>
-									</div>
+								<!-- PAGE SIZE SWITCH -->
+								<div class="page-size-switch-container">
+									<form action="" method="get" class="switch">
+										<div class="switch-content">
+											<label class="switch-label disabled	">
+												<span title="A1">A1</span>
+												<input type="radio" class="switch-input disabled" name="page-size" value="a1">
+											</label>
+											<label class="switch-label disabled">
+												<span title="A2">A2</span>
+												<input type="radio" class="switch-input disabled" name="page-size" value="a2">
+											</label>
+											<label class="switch-label disabled">
+												<span title="A3">A3</span>
+												<input type="radio" class="switch-input disabled" name="page-size" value="a3">
+											</label>
+											<label class="switch-label">
+												<span title="A4">A4</span>
+												<input type="radio" class="switch-input" name="page-size" value="a4" checked="">
+											</label>
+											<label class="switch-label disabled">
+												<span title="16:9">16:9</span>
+												<input type="radio" class="switch-input disabled" name="page-size" value="w16h9">
+											</label>
+											<label class="switch-label disabled">
+												<span title="4:3">4:3</span>
+												<input type="radio" class="switch-input disabled" name="page-size" value="w4h3">
+											</label>
+										</div>
+									</form>
 								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 			</div>
 		</div>
 		<div class="wrapper">
-			<!--"SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN TABEL -->
 			<table class="overvieworganimser">
 				<tr class="row-one">
 					<th>HTML</th>
@@ -7406,10 +7692,225 @@
 				<tr class="row-two">
 					<!-- HTML -->
 					<td class="code">
-						<div class="top-section">
+						<section class="top-section">
+							<div class="wrapper">
+								<div class="top-section-wrapper">
+									<div class="top-section-top">
+										<!-- H1 -->
+										<div class="sidetitel-container">
+											<h1>Report editor</h1>
+										</div>
+										<div class="top-section-top-buttons">
+											<!-- SAVE REPORT BUTTON -->
+											<div class="save-button-container">
+												<button type="button" class="texticon-button disabled" title="Save report">
+													<span>Save report</span>
+													<img class="texticon-iconimg" src="img/icons/save.svg" alt="X-icon">
+												</button>
+											</div>
+											<!-- DELETE REPORT BUTTON -->
+											<div class="delete-button-container">
+												<button type="button" name="delete-report" class="texticon-button" title="Delete report">
+													<span>Delete report</span>
+													<img class="texticon-iconimg" src="img/icons/trash.svg" alt="X-icon">
+												</button>
+											</div>
+												<!-- CLOSE BUTTON  BUTTON -->
+											<div class="close-button-container">
+												<button type="button" name="close-editor" class="texticon-button" title="Close editor">
+													<span>Close editor</span>
+													<img class="texticon-iconimg" src="img/icons/x.svg" alt="X-icon">
+												</button>
+											</div>
+										</div>
+									</div>
+									<div class="top-section-bottom">
+										<!-- PREVIUOS PAGE BUTTON -->
+										<div class="previous-page-button-container">
+											<button type="button" class="previous-page-button button-w round-corners" title="Go to previous page">
+												<span>Previous page</span>
+												<img class="settings-menu-icon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
+											</button>
+										</div>
+										<!-- SINGLE OR MULTIPLE PAGE DISPLAY SWITCH -->
+										<div class="switch-multiple-singular-container">
+											<form action="" method="get" class="switch">
+												<div class="switch-content">
+													<label class="switch-label">
+														<span title="View single page">Single</span>
+														<input type="radio" class="switch-input" name="page-display" value="single" checked="">
+													</label>
+													<label class="switch-label">
+														<span title="View multiple pages">Multiple</span>
+														<input type="radio" class="switch-input" name="page-display" value="multiple">
+													</label>
+												</div>
+											</form>
+										</div>
+										<!-- SINGLE OR MULTIPLE PAGE DISPLAY SWITCH -->
+										<div class="switch-horizontal-vertical-container">
+											<form action="" method="get" class="switch">
+												<div class="switch-content">
+													<label class="switch-label">
+														<span title="View single page">Single</span>
+														<input type="radio" class="switch-input" name="page-display" value="single" checked="">
+													</label>
+													<label class="switch-label">
+														<span title="View multiple pages">Multiple</span>
+														<input type="radio" class="switch-input" name="page-display" value="multiple">
+													</label>
+												</div>
+											</form>
+										</div>
+										<!-- ADD PAGE BUTTON -->
+										<div class="add-page-button-container">
+											<button type="button" class="adddelete-button add-page button-w" title="Add new page after current page">
+												<img class="plusminus-iconimg" src="img/icons/plus.svg" alt="plus icon">
+											</button>
+										</div>
+										<!-- DELETE PAGE BUTTON -->
+										<div class="delete-page-button-container">
+											<button type="button" class="adddelete-button delete-page button-w" title="Remove current page">
+												<img class="plusminus-iconimg" src="img/icons/minus.svg" alt="plus icon">
+											</button>
+										</div>
+										<!-- UPLOAD IMAGE BUTTON -->
+										<div class="upload-button-container">
+											<label class="upload-button round-corners button-w" title="Upload image to Graph tab">
+												<span>Upload image</span>
+												<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
+												<input type="file" class="round-corners button-w hidden" name="upload-image">
+											</label>
+										</div>
+										<!-- NEXT PAGE BUTTON -->
+										<div class="next-page-container">
+											<button type="button" class="nextbutton button-w round-corners" title="Go to next page">
+												<span>Next page</span>
+												<img class="settings-menu-icon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
+											</button>
+										</div>
+										<!-- PAGE SIZE SWITCH -->
+										<div class="page-size-switch-container">
+											<form action="" method="get" class="switch">
+												<div class="switch-content">
+													<label class="switch-label disabled	">
+														<span title="A1">A1</span>
+														<input type="radio" class="switch-input disabled" name="page-size" value="a1">
+													</label>
+													<label class="switch-label disabled">
+														<span title="A2">A2</span>
+														<input type="radio" class="switch-input disabled" name="page-size" value="a2">
+													</label>
+													<label class="switch-label disabled">
+														<span title="A3">A3</span>
+														<input type="radio" class="switch-input disabled" name="page-size" value="a3">
+													</label>
+													<label class="switch-label">
+														<span title="A4">A4</span>
+														<input type="radio" class="switch-input" name="page-size" value="a4" checked="">
+													</label>
+													<label class="switch-label disabled">
+														<span title="16:9">16:9</span>
+														<input type="radio" class="switch-input disabled" name="page-size" value="w16h9">
+													</label>
+													<label class="switch-label disabled">
+														<span title="4:3">4:3</span>
+														<input type="radio" class="switch-input disabled" name="page-size" value="w4h3">
+													</label>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
 					</td>
 					<!-- CSS -->
 					<td class="code">
+						.editor .top-section .wrapper,
+						#editor .top-section .wrapper {
+							width: 100% !important;
+						}
+
+						@media (min-width:1920px) {
+							.editor .top-section .wrapper,
+							#editor .top-section .wrapper {
+								width: calc(100% - 24px) !important;
+							}
+						}
+
+						/* - EDTITOR TOP SECTION - */
+						.editor .top-section ,
+						#editor .top-section {
+							background-color: #D3D3D3;
+						}
+
+						.close-button-container, .save-button-container, .delete-button-container {
+							float: left;
+						}
+
+						.previous-page-button-container,
+						.save-button-container,
+						.delete-button-container,
+						.switch-multiple-singular-container,
+						.switch-horizontal-vertical-container,
+						.add-page-button-container,
+						.delete-page-button-container,
+						.upload-button-container,
+						.next-page-container {
+							margin-right: 1vw;
+						}
+
+						.previous-page-button-container button,
+						.upload-button-container label,
+						.next-page-container button {
+							min-height: 37px;
+							min-width: 1px;
+						}
+
+						.previous-page-button-container span,
+						.upload-button-container span,
+						.next-page-container span {
+							display: none;
+						}
+
+						.page-size-switch-container {
+							clear: both;
+							margin-top: 15px;
+						}
+
+						@media (min-width:1366px) {
+							.previous-page-button-container,
+							.save-button-container,
+							.delete-button-container,
+							.switch-multiple-singular-container,
+							.switch-horizontal-vertical-container,
+							.add-page-button-container,
+							.delete-page-button-container,
+							.upload-button-container,
+							.next-page-container {
+								margin-right: 15px;
+							}
+						}
+
+						@media (min-width:1920px) {
+							.previous-page-button-container button,
+							.upload-button-container label,
+							.next-page-container button {
+								min-height: auto;
+							}
+
+							.previous-page-button-container span,
+							.upload-button-container span,
+							.next-page-container span {
+								display: inline-block;
+							}
+							.page-size-switch-container {
+								clear: right;
+								float: right;
+								margin-top: 0;
+							}
+						}
 					</td>
 				</tr>
 			</table>
@@ -7435,9 +7936,8 @@
 				</tr>
 				<tr class="row-two">
 					<!--HTML-->
-					<td class="code">
-						<!-- HIGHCHART - Best to load after opening body tag -->
-						<script src="https://code.highcharts.com/highcharts.js"></script>
+					<td>
+						<code>&lt;script src="https://code.highcharts.com/highcharts.js"&gt;&lt;/script&gt;</code>
 					</td>
 					<!--CSS-->
 					<td class="code">
@@ -7469,6 +7969,7 @@
 					</td>
 				</tr>
 			</table>
+			<p class="info">HIGHCHART is best to load after opening body tag.</p>
 		</div>
 	</article>
   	<!-- HIGHCHART BAR -->

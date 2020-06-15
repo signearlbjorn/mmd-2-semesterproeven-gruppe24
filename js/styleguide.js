@@ -751,7 +751,7 @@ function overlayPosition (){
 		}
 		overlay.style.top = newSize + "px";
 	}
-	console.log(51 - document.documentElement.scrollTop);
+	//console.log(51 - document.documentElement.scrollTop);
 }
 
 
