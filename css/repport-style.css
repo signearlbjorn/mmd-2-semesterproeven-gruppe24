@@ -589,6 +589,7 @@ textarea{
 /* --- BUTTONS --- */
 /* -- STAR PRIORITY BUTTON -- */
 .star {
+	float: right;
 	width: 26px;
 	cursor: pointer;
 }
@@ -607,11 +608,6 @@ textarea{
 
 
 /* -- SETTINGS MENU BUTTON -- */
-.settings-menu-dark .settings-menu-button,
-.settings-menu .settings-menu-button {
-	margin-bottom: 5px;
-}
-
 .settings-menu-button {
 	float: left;
 	position: relative;
@@ -915,26 +911,9 @@ textarea{
 }
 
 
-/* -- UPLOAD TEMPLATE BUTTON -- */
-.upladtemplatebutton {
-	min-height: 37px; /* Too small on mobile and tablet */
-	background-color: #D3D3D3;
-	border: none;
-	border-radius: 12px;
-	width: 100px;
-	cursor: pointer;
-	display: block;
-}
-
-.upladtemplatebutton span {
-    color: #000;
-    font-size: 10px;
-	margin-left: 7px;
-	float: left;
-}
-
-.upladtemplatebutton img {
-	width:15px;
+/* -- SAVE TEMPLATE BUTTON -- */
+.save-template-button {
+	padding-right: 42px;
 }
 
 
@@ -969,7 +948,7 @@ textarea{
 
 
 /* -- INPUTS -- */
-.editor-tab-input {
+.editor-tab-content-input {
 	width: 50%;
 }
 
@@ -1075,6 +1054,9 @@ textarea{
 /* ----- ORGANISMS ----- */
 /* -- SETTINGS MENU --*/
 .settings-menu, .settings-menu-dark {
+	position: absolute;
+	top: 0;
+	right: 0;
 	overflow-y: auto;
 	max-height: 100vh;
 	width: 300px;
@@ -1084,7 +1066,13 @@ textarea{
 	padding-top: 10px;
 	padding-bottom: 25px;
 	border-radius: 12px;
+	z-index: 998;
 	box-sizing: border-box;
+}
+
+.settings-menu-dark .settings-menu-button,
+.settings-menu .settings-menu-button {
+    margin-bottom: 5px;
 }
 
 .settings-menu-dark .settings-menu-button:last-child,
@@ -1132,34 +1120,43 @@ textarea{
 	box-sizing: border-box;
 }
 
-.pagediv {
-	margin: 0 auto;
+/* -- REPORTS -- */
+.single-page-display .page-wrapper .page {
+	display: none;
 }
 
+.single-page-display .page-wrapper .current-page {
+	display: block;
+}
 
-/*CSS for the A4 page in report preview in editor*/
 .page {
+	position: relative;
 	/* Styles for better appearance on screens only -- are reset to defaults in print styles later */
 
 	/* Reflect the paper width in the screen rendering (must match size from @page rule) */
 	width: 21cm;
 	/* Reflect the paper height in the screen rendering (must match size from @page rule) */
-	min-height: 29.7cm;
+	height: 29.7cm;
 
 	/* Reflect the actual page margin/padding on paper in the screen rendering (must match margin from @page rule) */
 	padding-left: 2cm;
 	padding-top: 2cm;
 	padding-right: 2cm;
 	padding-bottom: 2cm;
+	margin: 1cm auto;
+	background: #fff;
+	overflow: hidden;
+	outline: 0;
+	box-shadow: 0 4px 5px rgba(75, 75, 75, 0.2);
 }			
-	
+
 .pageHorizontal {
 	/* Styles for better appearance on screens only -- are reset to defaults in print styles later */
 
 	/* Reflect the paper width in the screen rendering (must match size from @page rule) */
 	width: 25.839cm;
 	/* Reflect the paper height in the screen rendering (must match size from @page rule) */
-	min-height: 18.27cm;
+	height: 18.27cm;
 
 	/* Reflect the actual page margin/padding on paper in the screen rendering (must match margin from @page rule) */
 	padding-left: 2cm;
@@ -1168,59 +1165,121 @@ textarea{
 	padding-bottom: 2cm;
 }
 
-.page, .pageHorizontal {
-	/* Styles for better appearance on screens only -- are reset to defaults in print styles later */
+.report-page-section {
+	float: left;
+	width: 50%;
+	height: calc(25% - 1cm);
+}
 
-	/* Divide single pages with some space and center all pages horizontally */
-	margin: 1cm auto;
-	/* Define a white paper background that sticks out from the darker overall background */
-	background: #fff;
-	/* Show a drop shadow beneath each page */
-	box-shadow: 0 4px 5px rgba(75, 75, 75, 0.2);
-	/* Override outline from user agent stylesheets */
-	outline: 0;
+.page header,
+.page footer {
+	float: left;
+	left: 2cm;
+	height: 2cm;
+	width: 100%;
+	line-height: 2cm;
+	overflow: hidden;
+}
+
+.page header{
+	top: 2cm;
+	border-bottom: solid 1px #000;
+	background-color: transparent;
+}
+
+.page footer{
+	bottom: 2cm;
+	border-top: solid 1px #000;
 }
 
 
-/*Here starts CSS for editor tabs*/
-.editor {
+/* - EDITOR TABS - */
+.editor-aside {
 	float: right;
 	width: 100%;
 	height: 100%;
 	background-color: #404040;
 }
 
-.editornav {
+.editor-aside-nav {
 	width: 100%;
 	display: grid;
 	grid-template-columns: auto auto auto auto;
+	align-items: center;
+	justify-items: center;
+	grid-gap: 2px;
 }
 
-.tabsnavbubtton {
+.editor-aside-nav-button {
 	display: grid;
+	align-items: center;
+	justify-items: center;
 	margin: 0 auto;
 	width: 100%;
 	height: 50px;
 	text-align: center;
-}
-
-.tabsnavbubtton a {
-	text-decoration: none;
 	color: #fff;
-	font-size: 24px;
-	margin: auto;
-	cursor: pointer;
-}
-
-.lightbg {
 	background-color: #6F6F6F;
 }
 
-.editortabs {
+.editor-aside-nav-button.current {
+	background-color: transparent;
+}
+
+.editor-tab-content {
+	float: left;
+	width: 100%;
+	max-height: 100vh;
+	overflow-y: auto;
+}
+
+.editor-tab-content-wrapper {
 	margin: 20px 10px 0;
-	background-color: #505050;
 	width: calc(100% - 20px); /* 100% width - 20px margin */
 }
+
+
+.editor-tab-content h3 {
+	color: #FFF;
+}
+
+
+/* TEMPLATE TAB */
+.templates-content-wrapper {
+	width: 100%;
+	margin: 15px 0;
+}
+
+.templates-content-wrapper > button, .templates-content-wrapper > label {
+	float: right;
+	font-size: 100%;
+	min-width: 1px;
+	margin-left: 15px;
+}
+.templates-content-wrapper > label{
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+.templates-content-wrapper > button span {
+	float: left;
+	font-size: 110%;
+}
+
+.template-to-choose {
+	width: 100%; 
+	display: grid; 
+	grid-template-columns: auto auto auto;
+	grid-gap: 15px;
+	margin-top: 15px;
+}
+
+@media (min-width:1366px) {
+	.templates-content-wrapper {
+		grid-template-columns: auto auto;
+	}
+}
+
 
 .graphsOverDiv {
 	display: grid;
@@ -1228,23 +1287,8 @@ textarea{
 	width: 100%;
 }
 
-.graphs1 {
-	width: 98%;
-	display: grid;
-}
 
-.templates-overDiv {
-	width: 100%; 
-	display: grid; 
-	grid-template-columns: auto;
-}
-
-@media (min-width:1366px) {
-	.templates-overDiv {
-		grid-template-columns: auto auto;
-	}
-}
-
+/* CODE TAB */
 #codeEditorTab, #text, #graphs, #templates {
 	width: 99%;
 }
@@ -1720,15 +1764,14 @@ textarea{
 
 .highcart-preview {
 	position: relative;
-	width: 98%;
-	margin: 10px auto 0;
+	width: 100%;
 }
 
 .highcart-preview h4 {
 	float: left;
 	cursor: pointer;
 	font-weight: 400;
-	font-size: 112,5%;
+	font-size: 112.5%;
 	line-height: 25px;
 	color: #fff;
 }
@@ -1764,172 +1807,115 @@ textarea{
 	border: none;
 	border-radius: 5px;
 	background-color: #6F6F6F;
-	border-sizing: border-box;
+	box-sizing: border-box;
 }
 
 
-/*ekstra style til create new report pop-up*/
-.frameforcreatenewreportpopup {
-	background-color: #6F6F6F;
-	width:450px;
-	height: 400px;
-	border-radius: 5px;
-}
-
-.settingpopupxiconblack {
-	float: right;
-	margin-right: -80px;
-	width: 40px;
-	height: 40px;
-}
-
-
-/* popup infobox css*/
-.popupinfobox{
-    position: absolute;
-    top: 10vh;
-    left: 0;
-	background-color: #D3D3D3;
-    text-align: center;
+/* -- REPORT PREVIEW -- */
+.report-preview-outbox {
+	position: relative;
     width: 100%;
-    max-width: 400px;
-    height: 100vh;
-    max-height: 220px;
-    border-radius: 12px;
+    border-radius: 5px;
 }
 
-@media (min-width:401px){
-    /* Calculate left position, when width is over 400px */
-    .popupinfobox {
-        left: calc(50vw - 200px); /* Half of screen - element width */
-    }
+.report-preview-content {
+	position: absolute;
+	top: 0;
+    left: 0;
+    float: left;
+    clear: both;
+	width: 100%;
+	height: 100%;
+	padding: 15px;
+	border: none;
+	border-radius: 5px;
+	font-size: 100%;
+	background-color: #6F6F6F;
+	box-sizing: border-box;
+	overflow: auto;
 }
 
-.popupinfobox span {
-    color: black;
-    font-size: 30px;
-    display:inline-block;
-    margin-top: 65px;
-}
-
-.popupinfobox .close-icon,
-.popupinfobox .close-icon .X-icon {
-	float: right;
-	margin-left: 0;
-}
-
-.close-icon{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    display: grid;
-
-}
-
-.X-icon{
-    margin-left: 365px;
-    margin-top: 2px;
-}
-
-
-/*Preview css start*/
-.preview-outbox{
-    background-color: #404040;
-    width: 300px;
-    height: 342px;
-    border-radius: 8px;
-    margin: 10px auto 0;
-}
-
-.preview-outbox p{
-	float: right;
-	margin-top: 14px;
-	margin-right: 10px;
-}
-
-.rep-name{
-    color: white;
-    font-size: 20px;
+.rep-name,
+.report-id {
     display: inline-block;
-    margin-top: 40px;
-    margin-left: 18px;
+    color: #FFF;
+	text-overflow: ellipsis;
+	font-weight: 400;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.rep-name {
+	float: left;
+	max-width: calc(100% - 2em);
+    color: #FFF;
+	font-size: 112.5%;
+	box-sizing: border-box;
+}
+
+.report-id {
+    color: #6F6F6F;
+	font-size: 100%;
+	font-style: italic;
 }
 
 
-.gear-icon{
+.report-options {
+	float: right;
+	width: 2em;
     background-color: transparent;
     border: none;
     cursor: pointer;
 }
 
-.gear-iconimg{
-    width: 9%;
-    margin-left: 250px;
-    display: block;
-    margin-top: -24px;
-    margin-bottom: 12
+.report-options-img {
+	width: 2em;
 }
 
+.report-preview-meta {
+	clear: both;
+}
+
+.report-preview-meta > span {
+	float: left;
+	margin-right: 15px;
+	color: #FFF;
+}
+
+.report-preview-meta > span:last-child {
+	margin-right: 0;
+}
+
+.report-preview-meta-green {
+	color: #00CD00;
+}
+
+.report-preview-meta-red {
+	color: #E4342B;
+}
 
 .preview-inbox{
+	position: relative;
     background-color: #6F6F6F;
-    width: 276px;
-    height: 250px;
-    border-radius: 6px;
-    display: inline-block;
-    margin-left: 12px;
-    margin-right: 12px;
-    margin-bottom: 12px;
-    margin-top: 0px;
+    width: 100%;
+    height: 100%;
 }
 
 .preview-img{
-    width: 90%;
-    display: inline-block;
-    margin-top: 29px;
-    margin-bottom: 29px;
-    margin-left: 14px;
-    margin-right: 14px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+    width: 100%;
+    display: block;
+	box-sizing: border-box;
 }
-
 
 .temp-name{
+	float: left;
     color: white;
     font-size: 20px;
     display: inline-block;
-    margin-top: 10px;
-    margin-left: 18px;
-}
-
-.favstar-icon{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-}
-
-.favstar-iconimg{
-    width: 9%;
-    margin-left: 250px;
-    display: block;
-    margin-top: -24px;
-    margin-bottom: 12
-}
-
-.graph-name{
-    color: white;
-    font-size: 20px;
-    display: inline-block;
-    margin-top: 40px;
-    margin-left: 18px;
-}
-
-.graph-img{
-    width: 80%;
-    display: inline-block;
-    margin-top: 22px;
-    margin-bottom: 22px;
-    margin-left: 28px;
-    margin-right: 28px;
 }
 
 
@@ -2174,11 +2160,6 @@ header .wrapper {
 	display: grid;
 	grid-template-columns: auto auto auto auto;
 	overflow: auto;
-}
-
-.preview-outbox .settings-menu{
-	position: absolute;
-	margin-top: -35px;
 }
 
 
@@ -2611,7 +2592,7 @@ header .wrapper, #main-header .wrapper, #wrapper_header_example header .wrapper 
 	min-height: 100vh;
 }
 
-#styleguide .pop-up-article .example{
+#styleguide .article-with-absolute-content .example{
 	min-height: 300px;
 	overflow-y: auto;
 	overflow-x: hidden;
@@ -2698,23 +2679,37 @@ header .wrapper, #main-header .wrapper, #wrapper_header_example header .wrapper 
 	margin-bottom: 0;
 }
 
-
-/* ----- PRINT ----- */
+/* - PRINT - */
 @media print {
-	article, nav, section, section > div, #page-preview-in-editor > div:first-child, #page-preview-in-editor .example:before  {
-		display: none;
+	article, nav,
+	section, section > div,
+	#page-preview-in-editor > div:first-child,
+	#page-preview-in-editor .example:before,
+	#atomicDesignNavigation {
+		display: none !important;
 	}
+	
 	#styleguide section, #page-preview-in-editor, .page{
 		margin:0;
 	}
+	
 	#page-preview-in-editor .example, .page {
-		padding:0;
+		padding: 0;
 	}
-	#templates, #page-preview-in-editor, #page-preview-in-editor .example, .page {
+	
+	#organisms,
+	#page-preview-in-editor,
+	#page-preview-in-editor .example,
+	.page,
+	.page header,
+	.page footer,
+	.page .report-page-section {
 		display: block !important;
 	}
+	
 	.page{
-		width:100%;
+		width: 100%;
 		height: 100%;
 	}
 }
+

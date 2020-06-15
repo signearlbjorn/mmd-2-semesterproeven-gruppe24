@@ -626,16 +626,14 @@ function printReport(){
 
 // -- PRIORITY STAR --
 // Change icon
-let star1 = document.getElementById("star1");
+let star = document.getElementsByClassName("star");
 
-let starArray = [star1];
-
-for(let i = 0; i < starArray.length; i++){
-	starArray[i].addEventListener("click", function(){ changeImage(starArray[i]) });
+for(let i = 0; i < star.length; i++){
+	star[i].addEventListener("click", function(){ changeImage(star[i]) });
 }
 
 function changeImage(elem) {
-	console.log('changeImage function active for ' + elem.id + '.'	);
+	console.log('changeImage function active.'	);
 	// console.log(document.getElementById("imgClickAndChange").src.endsWith("img/icons/star.svg"));
 	//elem = document.getElementById(elem);
 	//if (document.getElementById("imgClickAndChange").src =="img/icons/star.svg") // Must use endsWith method instead of == when directory layout is uncertain
@@ -643,12 +641,14 @@ function changeImage(elem) {
 	{
 		//console.log('changeImage if true.');
 		elem.src = "img/icons/starfull.svg";
+		elem.alt = "Filled star";
 		// Prioritize graph/template
 	}
 	else
 	{
 		//console.log('changeImage if false.');
 		elem.src = "img/icons/star.svg";
+		elem.alt = "Empty star";
 		// Unprioritize graph/template
 	}
 }
@@ -720,6 +720,24 @@ for(let i=0; i < disabledLinks.length; i++){
 	 });
 }
 
+// -- OPTIONS --
+let reportOptions = document.getElementsByClassName("report-options");
+
+for(let i=0; i < reportOptions.length; i++){
+	reportOptions[i].addEventListener("click", function(){
+		let parrent = reportOptions[i].parentNode;
+		if(parrent.classList.contains("report-preview-outbox")) {
+			let optionsMenu = parrent.getElementsByClassName("settings-menu");
+			optionsMenu = optionsMenu[0];
+			console.log(optionsMenu);
+			optionsMenu.classList.remove("hidden");
+			return(true);
+		} else{
+			alert("Invallid button position.");
+			return(false);
+		}
+	 });
+}
 
 // -- POP UP --
 // - POP UP ELEMENTS -
@@ -783,10 +801,10 @@ for(let i = 0; i < filterButton.length; i++) {
 
 
 // CLOSE WITHOUT SAVING POP UP
-let closeEditorrButton = document.getElementsByName("close-editor");
+let closeEditorButton = document.getElementsByName("close-editor");
 
-for(let i = 0; i < closeEditorrButton.length; i++) {
-	closeEditorrButton[i].addEventListener("click", function(){
+for(let i = 0; i < closeEditorButton.length; i++) {
+	closeEditorButton[i].addEventListener("click", function(){
 		// Check for changes
 		// ToDo
 		showElement(closeWithoutSavingPopUp);
@@ -844,6 +862,32 @@ for(let i = 0; i < saveReportAsButton.length; i++) {
 		showElement(overlay);
 		blurArray(sections);
 		scrollLock();
+	});
+}
+
+
+// -- EDITOR TAB --
+/*let templateTab = document.getElementById("template-tab");
+let graphsTab = document.getElementById("graphs-tab");
+let textTab = document.getElementById("text-tab");
+let codeTab = document.getElementById("code-tab");*/
+let editorAsideNavButton = document.getElementsByClassName("editor-aside-nav-button");
+let editorTabContent = document.getElementsByClassName("editor-tab-content");
+
+for(let i= 0; i < editorAsideNavButton.length; i++) {
+	editorAsideNavButton[i].addEventListener("click", function(){
+		for(let i= 0; i < editorAsideNavButton.length; i++) {
+			editorAsideNavButton[i].classList.remove("current");
+		}
+		editorAsideNavButton[i].classList.add("current");
+		for(let i= 0; i < editorTabContent.length; i++) {
+			editorTabContent[i].classList.remove("current");
+			editorTabContent[i].classList.add("hidden");
+		}
+		let content = document.getElementById(editorAsideNavButton[i].value);
+		content.classList.add("current");
+		content.classList.remove("hidden");
+		//console.log(content);
 	});
 }
 
@@ -1112,61 +1156,61 @@ function timeValidate(time) {
 }
 
 // - DATE RANGE  -
-let DateRangeStart = document.getElementsByName('date-range-start');
-let DateRangeEnd = document.getElementsByName('date-range-end');
+let dateRangeStart = document.getElementsByName('date-range-start');
+let dateRangeEnd = document.getElementsByName('date-range-end');
 
-for(let i = 0; i < DateRangeStart.length; i++) {	
-	// Fjern error på click på DateRangeStart[i]
-	DateRangeStart[i].addEventListener("click", function(){ 
-		removeErrorClass(DateRangeStart[i]);
+for(let i = 0; i < dateRangeStart.length; i++) {	
+	// Fjern error på click på dateRangeStart[i]
+	dateRangeStart[i].addEventListener("click", function(){ 
+		removeErrorClass(dateRangeStart[i]);
 	 });
 	
-	// Fjern error på focus på DateRangeStart[i]
-	DateRangeStart[i].addEventListener("focus", function(){ 
-		removeErrorClass(DateRangeStart[i]);
+	// Fjern error på focus på dateRangeStart[i]
+	dateRangeStart[i].addEventListener("focus", function(){ 
+		removeErrorClass(dateRangeStart[i]);
 	 });
 	
-	// Trim og kør validering når man trykker ud af DateRangeStart[i]. Primær
-	DateRangeStart[i].addEventListener("blur", function(){ 
-		DateRangeStart[i].value = DateRangeStart[i].value.trim();
-		dateValidate(DateRangeStart[i]);
-		if(DateRangeEnd[i].value &&
-		DateRangeStart[i].value &&
-		DateRangeStart[i].value > DateRangeEnd[i].value) {
-			addErrorClass(DateRangeEnd[i]);
-			DateRangeEnd[i].title="End date must be higher than start date";
-		} else if(DateRangeEnd[i].value &&
-		DateRangeStart[i].value &&
-		DateRangeStart[i].value <= DateRangeEnd[i].value) {
-			removeErrorClass(DateRangeEnd[i]);
+	// Trim og kør validering når man trykker ud af dateRangeStart[i]. Primær
+	dateRangeStart[i].addEventListener("blur", function(){ 
+		dateRangeStart[i].value = dateRangeStart[i].value.trim();
+		dateValidate(dateRangeStart[i]);
+		if(dateRangeEnd[i].value &&
+		dateRangeStart[i].value &&
+		dateRangeStart[i].value > dateRangeEnd[i].value) {
+			addErrorClass(dateRangeEnd[i]);
+			dateRangeEnd[i].title="End date must be higher than start date";
+		} else if(dateRangeEnd[i].value &&
+		dateRangeStart[i].value &&
+		dateRangeStart[i].value <= dateRangeEnd[i].value) {
+			removeErrorClass(dateRangeEnd[i]);
 		}
 	 });
 }
 
-for(let i = 0; i < DateRangeEnd.length; i++) {	
-	// Fjern error på click på DateRangeEnd[i]
-	DateRangeEnd[i].addEventListener("click", function(){ 
-		removeErrorClass(DateRangeEnd[i]);
+for(let i = 0; i < dateRangeEnd.length; i++) {	
+	// Fjern error på click på dateRangeEnd[i]
+	dateRangeEnd[i].addEventListener("click", function(){ 
+		removeErrorClass(dateRangeEnd[i]);
 	 });
 	
-	// Fjern error på focus på DateRangeEnd[i]
-	DateRangeEnd[i].addEventListener("focus", function(){ 
-		removeErrorClass(DateRangeEnd[i]);
+	// Fjern error på focus på dateRangeEnd[i]
+	dateRangeEnd[i].addEventListener("focus", function(){ 
+		removeErrorClass(dateRangeEnd[i]);
 	 });
 	
-	// Trim og kør validering når man trykker ud af DateRangeEnd[i]
-	DateRangeEnd[i].addEventListener("blur", function(){ 
-		DateRangeEnd[i].value = DateRangeEnd[i].value.trim();
-		dateValidate(DateRangeEnd[i]);
-		if(DateRangeEnd[i].value &&
-		DateRangeStart[i].value &&
-		DateRangeStart[i].value > DateRangeEnd[i].value) {
-			addErrorClass(DateRangeEnd[i]);
-			DateRangeEnd[i].title="End date must be higher than start date";
-		} else if(DateRangeEnd[i].value &&
-		DateRangeStart[i].value &&
-		DateRangeStart[i].value <= DateRangeEnd[i].value) {
-			removeErrorClass(DateRangeEnd[i]);
+	// Trim og kør validering når man trykker ud af dateRangeEnd[i]
+	dateRangeEnd[i].addEventListener("blur", function(){ 
+		dateRangeEnd[i].value = dateRangeEnd[i].value.trim();
+		dateValidate(dateRangeEnd[i]);
+		if(dateRangeEnd[i].value &&
+		dateRangeStart[i].value &&
+		dateRangeStart[i].value > dateRangeEnd[i].value) {
+			addErrorClass(dateRangeEnd[i]);
+			dateRangeEnd[i].title="End date must be higher than start date";
+		} else if(dateRangeEnd[i].value &&
+		dateRangeStart[i].value &&
+		dateRangeStart[i].value <= dateRangeEnd[i].value) {
+			removeErrorClass(dateRangeEnd[i]);
 		}
 	 });
 }
