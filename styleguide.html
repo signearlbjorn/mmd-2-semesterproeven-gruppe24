@@ -2051,7 +2051,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<a href="group-view.html" class="group-view-button button-w rounded-corners disabled" title="Go to gtoup-view">
+				<a href="group-view.html" class="group-view-button button-w round-corners disabled" title="Go to gtoup-view">
 					<span>Group overview</span>
 					<img src="img/icons/folder.svg" alt="Folder icon">
 				</a>
@@ -2066,7 +2066,7 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<a href="group-view.html" class="group-view-button button-w rounded-corners disabled" title="Go to gtoup-view">
+						<a href="group-view.html" class="group-view-button button-w round-corners disabled" title="Go to gtoup-view">
 							<span>Group overview</span>
 							<img src="img/icons/folder.svg" alt="Folder icon">
 						</a>
@@ -3408,23 +3408,25 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<label class="select-label" title="Select what to sort reports by">
-					<span class="select-span">Sort by</span>
-					<div class="select-wrapper">
-						<select name="sort-reports" class="sort-by-select select">
-							<option value="name-az" selected>Name a-z</option>
-							<option value="name-za">Name z-a</option>
-							<option value="creation-first">Latest creation</option>
-							<option value="creation-last">Last creation</option>
-							<option value="change-first">Latest change</option>
-							<option value="change-last">Last change</option>
-							<option value="id-acending">Acending ID</option>
-							<option value="id-decending">Decending ID </option>
-							<option value="group-az">Group a-z</option>
-							<option value="group-za">Group z-a</option>
-						</select>
-					</div>
-				</label>
+				<form action="" method="get">
+					<label class="select-label" title="Select what to sort reports by">
+						<span class="select-span">Sort by</span>
+						<div class="select-wrapper">
+							<select name="sort-reports" class="sort-by-select select">
+								<option value="name-az" selected>Name a-z</option>
+								<option value="name-za">Name z-a</option>
+								<option value="creation-first">Latest creation</option>
+								<option value="creation-last">Last creation</option>
+								<option value="change-first">Latest change</option>
+								<option value="change-last">Last change</option>
+								<option value="id-acending">Acending ID</option>
+								<option value="id-decending">Decending ID </option>
+								<option value="group-az">Group a-z</option>
+								<option value="group-za">Group z-a</option>
+							</select>
+						</div>
+					</label>
+				</form>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -3437,23 +3439,25 @@
 				<tr class="row-two">
 					<!--HTML-->
 					<td class="code">
-						<label class="select-label" title="Select what to sort reports by">
-							<span class="select-span">Sort by</span>
-							<div class="select-wrapper">
-								<select name="sort-reports" class="sort-by-select select">
-									<option value="name-az" selected>Name a-z</option>
-									<option value="name-za">Name z-a</option>
-									<option value="creation-first">Latest creation</option>
-									<option value="creation-last">Last creation</option>
-									<option value="change-first">Latest change</option>
-									<option value="change-last">Last change</option>
-									<option value="id-acending">Acending ID</option>
-									<option value="id-decending">Decending ID </option>
-									<option value="group-az">Group a-z</option>
-									<option value="group-za">Group z-a</option>
-								</select>
-							</div>
-						</label>
+						<form action="" method="get">
+							<label class="select-label" title="Select what to sort reports by">
+								<span class="select-span">Sort by</span>
+								<div class="select-wrapper">
+									<select name="sort-reports" class="sort-by-select select">
+										<option value="name-az" selected>Name a-z</option>
+										<option value="name-za">Name z-a</option>
+										<option value="creation-first">Latest creation</option>
+										<option value="creation-last">Last creation</option>
+										<option value="change-first">Latest change</option>
+										<option value="change-last">Last change</option>
+										<option value="id-acending">Acending ID</option>
+										<option value="id-decending">Decending ID </option>
+										<option value="group-az">Group a-z</option>
+										<option value="group-za">Group z-a</option>
+									</select>
+								</div>
+							</label>
+						</form>
 					</td>
 					<!--CSS-->
 					<td class="code">
@@ -3806,19 +3810,21 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<label class="select-label">
-					<span class="select-span">Quantity</span>
-					<div class="select-wrapper">
-						<select name="reports-shown" class="select" title="Number of reports to show">
-							<option value="8" selected="">8</option>
-							<option value="16">16</option>
-							<option value="24">24</option>
-							<option value="32">32</option>
-							<option value="40">40</option>
-							<option value="80">80</option>
-						</select>
-					</div>
-				</label>
+				<form action="" method="get">
+					<label class="select-label">
+						<span class="select-span">Quantity</span>
+						<div class="select-wrapper">
+							<select name="reports-shown" class="select" title="Number of reports to show">
+								<option value="8" selected="">8</option>
+								<option value="16">16</option>
+								<option value="24">24</option>
+								<option value="32">32</option>
+								<option value="40">40</option>
+								<option value="80">80</option>
+							</select>
+						</div>
+					</label>
+				</form>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -3831,19 +3837,21 @@
 				<tr class="row-two">
 					<!--HTML-->
 					<td class="code">
-						<label class="select-label">
-							<span class="select-span">Quantity</span>
-							<div class="select-wrapper">
-								<select name="reports-shown" class="select" title="Number of reports to show">
-									<option value="8" selected="">8</option>
-									<option value="16">16</option>
-									<option value="24">24</option>
-									<option value="32">32</option>
-									<option value="40">40</option>
-									<option value="80">80</option>
-								</select>
-							</div>
-						</label>
+						<form action="" method="get">
+							<label class="select-label">
+								<span class="select-span">Quantity</span>
+								<div class="select-wrapper">
+									<select name="reports-shown" class="select" title="Number of reports to show">
+										<option value="8" selected="">8</option>
+										<option value="16">16</option>
+										<option value="24">24</option>
+										<option value="32">32</option>
+										<option value="40">40</option>
+										<option value="80">80</option>
+									</select>
+								</div>
+							</label>
+						</form>
 					</td>
 					<!--CSS-->
 					<td class="code">
@@ -4349,7 +4357,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-                <input type="text" name="search" class="searchInput round-corners button-w" placeholder="Search..." title="Search for reports, by name, id, group, date (dd.mm.yyyy) or category">
+                <input type="text" name="search" class="search-input round-corners button-w" placeholder="Search..." title="Search for reports, by name, id, group, date (dd.mm.yyyy) or category">
 			</div>
 		</div>
 		<div class="wrapper">
@@ -4361,12 +4369,12 @@
 				<tr class="row-two">
 					<!-- HTML -->
                     <td class="code">
-						<input type="text" name="search" class="searchInput round-corners button-w" placeholder="Search..." title="Search for reports, by name, id, group, date (dd.mm.yyyy) or category">
+						<input type="text" name="search" class="search-input round-corners button-w" placeholder="Search..." title="Search for reports, by name, id, group, date (dd.mm.yyyy) or category">
                     </td>
 					<!-- CSS -->
 					<td class="code">
 						/* SEARCH INPUT */
-						.searchInput {
+						.search-input {
 							width: 314px;
 							max-width: 100%;
 							padding-left: 47px;
@@ -5025,7 +5033,7 @@
 	</article>
 	<div class="title-area">
 		<div class="wrapper">
-			<h3 id="switchbuttonper" class="styleguide-title">Switch buttonper</h3>
+			<h3 id="switchbuttonper" class="styleguide-title">Switches</h3>
 		</div>
 	</div>
     <!-- VERTICAL / HORISONTAL SWITCH -->
@@ -5035,7 +5043,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<div class="switch">
+				<form action="" method="get" class="switch">
 					<div class="switch-content">
 						<label class="switch-label">
 							<span title="Vertical">Vertical</span>
@@ -5046,7 +5054,7 @@
 							<input type="radio" class="switch-input" name="view-direction" value="horisontal">
 						</label>
 					</div>
-				</div>
+				</form>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -5058,7 +5066,7 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<div class="switch">
+						<form action="" method="get" class="switch">
 							<div class="switch-content">
 								<label class="switch-label">
 									<span title="Vertical">Vertical</span>
@@ -5069,7 +5077,7 @@
 									<input type="radio" class="switch-input" name="view-direction" value="horisontal">
 								</label>
 							</div>
-						</div>
+						</form>
 					</td>
 					<td class="code">
 						/*  - SWITCH - */
@@ -5147,16 +5155,18 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<div class="switch">
-					<label class="switch-label">
-						<span title="Preview">Preview</span>
-						<input type="radio" class="switch-input" name="report-display" value="preview" checked>
-					</label>
-					<label class="switch-label">
-						<span title="Table">Table</span>
-						<input type="radio" class="switch-input" name="report-display" value="table">
-					</label>
-				</div>
+				<form action="" method="get" class="switch">
+					<div class="switch-content">
+						<label class="switch-label">
+							<span title="Preview">Preview</span>
+							<input type="radio" class="switch-input" name="report-display" value="preview" checked>
+						</label>
+						<label class="switch-label">
+							<span title="Table">Table</span>
+							<input type="radio" class="switch-input" name="report-display" value="table">
+						</label>
+					</div>
+				</form>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -5168,7 +5178,7 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<div class="switch">
+						<form action="" method="get" class="switch">
 							<div class="switch-content">
 								<label class="switch-label">
 									<span title="Preview">Preview</span>
@@ -5179,7 +5189,7 @@
 									<input type="radio" class="switch-input" name="report-display" value="table">
 								</label>
 							</div>
-						</div>
+						</form>
 					</td>
 					<td class="code">
 						/*  - SWITCH - */
@@ -5255,7 +5265,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<div class="switch">
+				<form action="" method="get" class="switch">
 					<div class="switch-content">
 						<label class="switch-label">
 							<span title="View single page">Single</span>
@@ -5266,7 +5276,7 @@
 							<input type="radio" class="switch-input" name="page-display" value="multiple">
 						</label>
 					</div>
-				</div>
+				</form>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -5278,7 +5288,7 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<div class="switch">
+						<form action="" method="get" class="switch">
 							<div class="switch-content">
 								<label class="switch-label">
 									<span title="View single page">Single</span>
@@ -5289,7 +5299,7 @@
 									<input type="radio" class="switch-input" name="page-display" value="multiple">
 								</label>
 							</div>
-						</div>
+						</form>
 					</td>
 					<td class="code">
 						/*  - SWITCH - */
@@ -5381,7 +5391,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<div class="switch">
+				<form action="" method="get" class="switch">
 					<div class="switch-content">
 						<label class="switch-label">
 							<span title="A1">A1</span>
@@ -5409,7 +5419,7 @@
 						</label>
 					</div>
 				</div>
-			</div>
+			</form>
 		</div>
 		<div class="wrapper">
 			<table class="overviewmolekyler">
@@ -5420,7 +5430,7 @@
 				</tr>
 				<tr class="row-two">
 					<td class="code">
-						<div class="switch">
+						<form action="" method="get" class="switch">
 							<div class="switch-content">
 								<label class="switch-label">
 									<span title="A1">A1</span>
@@ -5447,7 +5457,7 @@
 									<input type="radio" class="switch-input" name="page-size" value="w4h3">
 								</label>
 							</div>
-						</div>
+						</form>
 					</td>
 					<td class="code">
 						/*  - SWITCH - */
@@ -6519,7 +6529,7 @@
 					<div class="pop-up-content-area">
 						<!-- WEEKDAY SWITCH FOR SCHEDULE REPORT -->
 						<div class="pop-up-content-area-molecule">
-							<div class="switch">
+							<form action="" method="get" class="switch">
 								<div class="switch-content">
 									<label class="switch-label">
 										<span title="Monday">Monday</span>
@@ -6615,7 +6625,7 @@
 							<div class="pop-up-content-area">
 								<!-- WEEKDAY SWITCH FOR SCHEDULE REPORT -->
 								<div class="pop-up-content-area-molecule">
-									<div class="switch">
+									<form action="" method="get" class="switch">
 										<div class="switch-content">
 											<label class="switch-label">
 												<span title="Monday">Monday</span>
@@ -7130,43 +7140,40 @@
 	</article>
 	<div class="title-area">
 		<div class="wrapper">
-			<!--"SIDE TITEL OG SETTINGS BAR"-->
-			<h3 id="sidetitlerogsettingsbar" class="styleguide-title"> Side titler og settings bar</h3>
+			<h3 id="sidetitlerogsettingsbar" class="styleguide-title">Top section</h3>
 		</div>
 	</div>
   	<!-- TOP SECTION OVERVIEW -->
 	<article id="side-titel-og-settings-bar-for-overview-side">
 		<div class="wrapper">
-			<h4 class="styleguide-title">Side titel og settings bar for overview-side</h4>
+			<h4 class="styleguide-title">Overview top section</h4>
 		</div>
 		<div class="example">
 			<div class="overview">
-				<div class="frameforsidetitelogsettingsbar">
+				<section class="top-section">
 					<div class="wrapper">
-						<div class="sidetitelogsettingswrap">
-							<div class="topEditorHeader">
-								<!-- side titel -->
+						<div class="top-section-wrapper">
+							<div class="top-section-top">
+								<!-- H1 -->
 								<div class="sidetitelcontainer">
 									<h1>Report overview</h1>
 								</div>
-								<!-- side titel - slut-->
-								<!-- opret ny rapport button -->
-								<div class="opretnyrapportcontainer">
-									<button type="button" class="new-report-button" title="Initiate creation of a new report.">
-										<img class="plus-img" src="img/icons/plus.svg" alt="new report img">
+								<!-- NEW REPORT BUTTON -->
+								<div class="new-report-button-container">
+									<button type="button" class="new-report-button round-corners button-g" title="Initiate creation of a new report.">
+										<img class="plus-img" src="img/icons/plus.svg" alt="+">
 										<span class="new-report-span">New report</span>
 									</button>
 								</div>
-								<!-- opret ny rapport button - slut-->
 							</div>
-							<div class="bottomEditorHeader">
-								<!-- quantity molekyle -->
-								<div class="quantitycontainer">
-									<div class="quantitydiv">
+							<div class="top-section-bottom">
+								<!-- QUANTITY SELECT -->
+								<div class="quantity-select-container">
+									<form action="" method="get">
 										<label class="select-label">
 											<span class="select-span">Quantity</span>
 											<div class="select-wrapper">
-												<select name="reports-shown" class="select">
+												<select name="reports-shown" class="select" title="Number of reports to show">
 													<option value="8" selected="">8</option>
 													<option value="16">16</option>
 													<option value="24">24</option>
@@ -7176,66 +7183,67 @@
 												</select>
 											</div>
 										</label>
-									</div>
+									</form>
 								</div>
-								<!-- quantity molekyle - slut-->
-								<!-- switch button preview/list -->
+								<!-- SWITCH PREVIEW/TABLE -->
 								<div class="switch-preview-list-container">
-									<div class="switch">
-										<input type="radio" class="switch-input" name="view" id="preview" checked>
-										<label for="preview" class="switch-label switch-label-off">Preview</label>
-										<input type="radio" class="switch-input" name="view" id="list">
-										<label for="list" class="switch-label switch-label-on">List</label>
-										<span class="switch-selection"></span>
-									</div>
-								</div>
-								<!-- switch button preview/list - slut-->
-								<!-- folder-overview button -->
-								<div class="folderoverviewcontainer">
-									<button type="button" class="settings-menu-button">
-										<span>Folder overview</span>
-										<img class="settings-menu-icon" src="img/icons/folder.svg" alt="editicon">
-									</button>
-								</div>
-								<!-- folder-overview button - slut-->
-								<!-- filter button -->
-								<div class="filtercontainer">
-									<button type="button" class="filter-button">
-										<span>Filter</span>
-										<img class="settings-menu-icon" src="img/icons/sliders.svg" alt="slider-icon">
-									</button>
-								</div>
-								<!-- filter - slut-->
-								<!-- sort by button -->
-								<div class="sortbycontainer">
-									<label class="select-label">
-										<span class="select-span">Sort by</span>
-										<div class="select-wrapper">
-											<select name="sort-reports" class="sort-by-select select">
-												<option value="name-az" selected="">name a-z</option>
-												<option value="name-za">name z-a</option>
-												<option value="creation-first">latest creation</option>
-												<option value="creation-last">last creation</option>
-												<option value="change-first">latest change</option>
-												<option value="change-last">last change</option>
-												<option value="id-acending">acending ID</option>
-												<option value="id-decending">decending ID </option>
-												<option value="group-az">group a-z</option>
-												<option value="group-za">group z-a</option>
-											</select>
+									<form action="" method="get" class="switch">
+										<div class="switch-content">
+											<label class="switch-label">
+												<span title="Preview">Preview</span>
+												<input type="radio" class="switch-input" name="report-display" value="preview" checked="">
+											</label>
+											<label class="switch-label">
+												<span title="Table">Table</span>
+												<input type="radio" class="switch-input" name="report-display" value="table">
+											</label>
 										</div>
-									</label>
+									</form>
 								</div>
-								<!-- sort by - slut-->
-								<!-- search button -->
-								<div class="searchcontainer">
-									<input type="text" class="searchInput" placeholder="Search...">
+								<!-- GROUP OVERVIEW BUTTON -->
+								<div class="group-view-button-container">
+									<a href="group-view.html" class="group-view-button button-w round-corners disabled" title="Go to gtoup-view">
+										<span>Group overview</span>
+										<img src="img/icons/folder.svg" alt="Folder icon">
+									</a>
 								</div>
-								<!-- search button - slut-->
+								<!-- FILTER BUTTON -->
+								<div class="filter-button-container">
+									<button type="button" class="filter-button button-w round-corners" title="Open filter options">
+										<span>Filter</span>
+										<img src="img/icons/sliders.svg" alt="Slider icon">
+									</button>
+								</div>
+								<!-- SORT BY SELECT -->
+								<div class="sort-reports-select-container">
+									<form action="" method="get">
+										<label class="select-label" title="Select what to sort reports by">
+											<span class="select-span">Sort by</span>
+											<div class="select-wrapper">
+												<select name="sort-reports" class="sort-by-select select">
+													<option value="name-az" selected>Name a-z</option>
+													<option value="name-za">Name z-a</option>
+													<option value="creation-first">Latest creation</option>
+													<option value="creation-last">Last creation</option>
+													<option value="change-first">Latest change</option>
+													<option value="change-last">Last change</option>
+													<option value="id-acending">Acending ID</option>
+													<option value="id-decending">Decending ID </option>
+													<option value="group-az">Group a-z</option>
+													<option value="group-za">Group z-a</option>
+												</select>
+											</div>
+										</label>
+									</form>
+								</div>
+								<!-- SEARCH -->
+								<div class="search-input-container">
+									<input type="text" name="search" class="search-input round-corners button-w" placeholder="Search..." title="Search for reports, by name, id, group, date (dd.mm.yyyy) or category">
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
+				</section>
 			</div>
 		</div>
 		<div class="wrapper">
@@ -7243,249 +7251,14 @@
 				<tr class="row-one">
 					<th>HTML</th>
 					<th>CSS</th>
-					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
 					<!-- HTML -->
 					<td class="code">
-						<div class="frameforsidetitelogsettingsbar">
-							<div class="wrapper">
-								<div class="sidetitelogsettingswrap">
-									<div class="topEditorHeader">
-										<!-- side titel -->
-										<div class="sidetitelcontainer">
-											<h1>Report overview</h1>
-										</div>
-										<!-- side titel - slut-->
-										<!-- opret ny rapport button -->
-										<div class="opretnyrapportcontainer">
-											<button type="button" class="new-report-button" title="Initiate creation of a new report.">
-												<img class="plus-img" src="img/icons/plus.svg" alt="new report img">
-												<span class="new-report-span">New report</span>
-											</button>
-										</div>
-										<!-- opret ny rapport button - slut-->
-									</div>
-									<div class="bottomEditorHeader">
-										<!-- quantity molekyle -->
-										<div class="quantitycontainer">
-											<div class="quantitydiv">
-												<label class="select-label">
-													<span class="select-span">Quantity</span>
-													<div class="select-wrapper">
-														<select name="reports-shown" class="select">
-															<option value="8" selected="">8</option>
-															<option value="16">16</option>
-															<option value="24">24</option>
-															<option value="32">32</option>
-															<option value="40">40</option>
-															<option value="80">80</option>
-														</select>
-													</div>
-												</label>
-											</div>
-										</div>
-										<!-- quantity molekyle - slut-->
-										<!-- switch button preview/list -->
-										<div class="switch-preview-list-container">
-											<div class="switch">
-												<input type="radio" class="switch-input" name="view" id="preview" checked>
-												<label for="preview" class="switch-label switch-label-off">Preview</label>
-												<input type="radio" class="switch-input" name="view" id="list">
-												<label for="list" class="switch-label switch-label-on">List</label>
-												<span class="switch-selection"></span>
-											</div>
-										</div>
-										<!-- switch button preview/list - slut-->
-										<!-- folder-overview button -->
-										<div class="folderoverviewcontainer">
-											<button type="button" class="settings-menu-button">
-												<span>Folder overview</span>
-												<img class="settings-menu-icon" src="img/icons/folder.svg" alt="editicon">
-											</button>
-										</div>
-										<!-- folder-overview button - slut-->
-										<!-- filter button -->
-										<div class="filtercontainer">
-											<button type="button" class="filter-button">
-												<span>Filter</span>
-												<img class="settings-menu-icon" src="img/icons/sliders.svg" alt="slider-icon">
-											</button>
-										</div>
-										<!-- filter - slut-->
-										<!-- sort by button -->
-										<div class="sortbycontainer">
-											<label class="select-label">
-												<span class="select-span">Sort by</span>
-												<div class="select-wrapper">
-													<select name="sort-reports" class="sort-by-select select">
-														<option value="name-az" selected="">name a-z</option>
-														<option value="name-za">name z-a</option>
-														<option value="creation-first">latest creation</option>
-														<option value="creation-last">last creation</option>
-														<option value="change-first">latest change</option>
-														<option value="change-last">last change</option>
-														<option value="id-acending">acending ID</option>
-														<option value="id-decending">decending ID </option>
-														<option value="group-az">group a-z</option>
-														<option value="group-za">group z-a</option>
-													</select>
-												</div>
-											</label>
-										</div>
-										<!-- sort by - slut-->
-										<!-- search button -->
-										<div class="searchcontainer">
-											<input type="text" class="searchInput" placeholder="Search...">
-										</div>
-										<!-- search button - slut-->
-									</div>
-								</div>
-							</div>
-						</div>
 					</td>
 					<!-- CSS -->
 					<td class="code">
-						/* Styling for SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN ORAGBISME */
-						.frameforsidetitelogsettingsbar {
-							width: 100%;
-							min-height: 150px;
-							background-color: #D3D3D3;
-						}
-
-						/*PLACERING / POSITIONER*/
-						.sidetitelogsettingswrap {
-							width: 100%;
-							padding-top: 20px;
-						}
-
-						.topEditorHeader{
-							width: 100%;
-						}
-						.bottomEditorHeader{
-							width: 100%;
-							margin-top: 18px;
-						}
-
-						.sidetitelcontainer, .quantitycontainer  {
-						  float: left;
-						}
-
-						.opretnyrapportcontainer {
-							position: relative;
-							float: right;
-							height: 16px;
-							width: 150px;
-						}
-
-						.opretnyrapportcontainer button {
-							position: absolute;
-							top: 50%;
-							transform: translateY(-50%);
-							clear: right;
-						}
-
-						@media (min-width:481px) {
-							.opretnyrapportcontainer {
-								height: 7.277vw;
-							}
-						}
-
-						@media (min-width:768px) {
-							.opretnyrapportcontainer {
-								height: 52px;
-							}
-						}
-
-						@media (min-width:1366px) {
-							.opretnyrapportcontainer {
-								height: 56px;
-							}
-						}
-
-						@media (min-width: 1920px) {
-							.opretnyrapportcontainer {
-								height: 3.073vw; /* ~59px on 1920px width */
-							}
-						}
-
-						@media (min-width:3840px) {
-							.opretnyrapportcontainer {
-								height: 3.099vw; /* ~119px on 3840px width */
-							}
-						}
-
-						.quantitycontainer,
-						.switch-preview-list-container,
-						.folderoverviewcontainer,
-						.filtercontainer,
-						.sortbycontainer {
-							margin-right: 1vw;
-						}
-
-						.quantitycontainer {
-							clear: left;
-						}
-
-						.switch-preview-list-container {
-							float: left;
-						}
-
-						.folderoverviewcontainer {
-							float: left;
-						}
-
-						.folderoverviewcontainer .settings-menu-button span,
-						.filtercontainer .filter-button span,
-						.sortbycontainer .select-span {
-							display: none;
-						}
-
-						.sortbycontainer .sort-by-select,
-						.searchcontainer .searchInput {
-							max-width: 108px;
-						}
-
-						.filtercontainer {
-							float: left;
-						}
-
-						.sortbycontainer {
-							float: left;
-						}
-
-						.searchcontainer {
-							float: right;
-						}
-
-						@media (min-width:1366px) {
-							.quantitycontainer,
-							.switch-preview-list-container,
-							.folderoverviewcontainer,
-							.filtercontainer,
-							.sortbycontainer {
-								margin-right: 34px;
-							}
-							
-							.folderoverviewcontainer .settings-menu-button span,
-							.filtercontainer .filter-button span,
-							.sortbycontainer .select-span {
-								display: inline-block;
-							}
-							
-							.sortbycontainer .sort-by-select,
-							.searchcontainer .searchInput {
-								max-width: 100%;
-							}
-							
-							.searchcontainer {
-								float: right;
-							}
-						}
-						/* Styling for SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN ORAGBISME - SLUT */
 					</td>
-					<!--Js to copy-->
-					<td class="empty"></td>
 				</tr>
 			</table>
 		</div>
@@ -7497,10 +7270,10 @@
 		</div>
 		<div class="example">
 			<div class="editor">
-				<div class="frameforsidetitelogsettingsbar">
+				<div class="top-section">
 					<div class="wrapper">
-						<div class="sidetitelogsettingswrap">
-							<div class="topEditorHeader">
+						<div class="top-section-wrapper">
+							<div class="top-section-top">
 								<!-- side titel -->
 								<div class="sidetitelcontainer">
 									<h1>Report editor</h1>
@@ -7540,7 +7313,7 @@
 								</div>
 								<!-- gem rapport - slut-->
 							</div>
-							<div class="bottomEditorHeader">
+							<div class="top-section-bottom">
 								<!-- previous page -->
 								<div class="previouspagecontainer">
 									<button type="button" class="previousbutton">
@@ -7551,7 +7324,7 @@
 								<!-- previous page  - slut-->
 								<!-- switch button multiple/singular-->
 								<div class="switch-multiple-singular-container">
-									<div class="switch">
+									<form action="" method="get" class="switch">
 										<input type="radio" class="switch-input" name="view3" value="week3" id="multiple" checked="">
 										<label for="multiple" class="switch-label switch-label-off">Multiple</label>
 										<input type="radio" class="switch-input" name="view3" id="singular">
@@ -7559,10 +7332,9 @@
 										<span class="switch-selection"></span>
 									</div>
 								</div>
-								<!-- switch button multiple/singular - slut-->
 								<!-- switch button horizontal/vertical -->
 								<div class="switch-horizontal-vertical-container">
-									<div class="switch">
+									<form action="" method="get" class="switch">
 										<input type="radio" class="switch-input" name="view4" value="1" id="v" checked="">
 										<label for="v" class="switch-label switch-label-off">Horizontal</label>
 										<input type="radio" class="switch-input" name="view4" id="h" value="2">
@@ -7570,7 +7342,6 @@
 										<span class="switch-selection"></span>
 									</div>
 								</div>
-								<!-- switch button horizontal/vertical - slut-->
 								<!-- add page button -->
 								<div class="addpagebuttoncontainer">
 									<button type="button" class="adddelete-button">
@@ -7619,13 +7390,11 @@
 										<span class="switch-selection0"></span>
 									</div>
 								</div>
-								<!-- MEGA SWITCH - slut-->
 							</div>
 						</div>
 					</div>
 				</div>
 			</div>
-			<!--eksempel lukke div-->
 		</div>
 		<div class="wrapper">
 			<!--"SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN TABEL -->
@@ -7633,257 +7402,15 @@
 				<tr class="row-one">
 					<th>HTML</th>
 					<th>CSS</th>
-					<th>JavaScript</th>
 				</tr>
 				<tr class="row-two">
 					<!-- HTML -->
 					<td class="code">
-						<div class="frameforsidetitelogsettingsbar">
-							<div class="wrapper">
-								<div class="sidetitelogsettingswrap">
-									<div class="topEditorHeader">
-										<!-- side titel -->
-										<div class="sidetitelcontainer">
-											<h1>Report editor</h1>
-										</div>
-										<!-- side titel - slut-->
-										<!-- Close editor -->
-										<div class="closecontainer">
-											<div class="text-icon">
-												<span>Close editor
-													<button type="button" class="texticon-button">
-														<img class="texticon-iconimg" src="img/icons/x.svg" alt="X-icon">
-													</button>
-												</span>
-											</div>
-										</div>
-										<!-- Close editor - slut-->
-										<!-- slet rapport -->
-										<div class="deletecontainer">
-											<div class="text-icon">
-												<span>Delete report
-													<button type="button" class="texticon-button">
-														<img class="texticon-iconimg" src="img/icons/trash.svg" alt="X-icon">
-													</button>
-												</span>
-											</div>
-										</div>
-										<!-- slet rapport - slut-->
-										<!-- gem rapport -->
-										<div class="savecontainer">
-											<div class="text-icon">
-												<span>Save report
-													<button type="button" class="texticon-button">
-														<img class="texticon-iconimg" src="img/icons/save.svg" alt="X-icon">
-													</button>
-												</span>
-											</div>
-										</div>
-										<!-- gem rapport - slut-->
-									</div>
-									<div class="bottomEditorHeader">
-										<!-- previous page -->
-										<div class="previouspagecontainer">
-											<button type="button" class="previousbutton">
-											   <span>Previous page</span>
-											   <img class="settings-menu-icon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
-											</button>
-										</div>
-										<!-- previous page  - slut-->
-										<!-- switch button multiple/singular-->
-										<div class="switch-multiple-singular-container">
-											<div class="switch">
-												<input type="radio" class="switch-input" name="view3" value="week3" id="multiple" checked="">
-												<label for="multiple" class="switch-label switch-label-off">Multiple</label>
-												<input type="radio" class="switch-input" name="view3" id="singular">
-												<label for="singular" class="switch-label switch-label-on">Vertical</label>
-												<span class="switch-selection"></span>
-											</div>
-										</div>
-										<!-- switch button multiple/singular - slut-->
-										<!-- switch button horizontal/vertical -->
-										<div class="switch-horizontal-vertical-container">
-											<div class="switch">
-												<input type="radio" class="switch-input" name="view4" value="1" id="v" checked="">
-												<label for="v" class="switch-label switch-label-off">Horizontal</label>
-												<input type="radio" class="switch-input" name="view4" id="h" value="2">
-												<label for="h" class="switch-label switch-label-on">Vertical</label>
-												<span class="switch-selection"></span>
-											</div>
-										</div>
-										<!-- switch button horizontal/vertical - slut-->
-										<!-- add page button -->
-										<div class="addpagebuttoncontainer">
-											<button type="button" class="adddelete-button">
-												<img class="plusminus-iconimg" src="img/icons/plus.svg" alt="plus icon">
-											</button>
-										</div>
-										<!-- add page button - slut-->
-										<!-- delete page button -->
-										<div class="deletepagebuttoncontainer">
-											<button type="button" class="adddelete-button">
-												<img class="plusminus-iconimg" src="img/icons/minus.svg" alt="plus icon">
-											</button>
-										</div>
-										<!-- delete page button - slut-->
-										<!-- Upload image button -->
-										<div class="uploadimagebuttoncontainer">
-											<button type="button" class="uploadimagebutton">
-											   <span>Upload image</span>
-											   <img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
-											</button>
-										</div>
-										<!-- Upload image button - slut-->
-										<!-- next page -->
-										<div class="nextpagecontainer">
-											<button type="button" class="nextbutton">
-												<span>Next page</span>
-												<img class="settings-menu-icon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
-											</button>
-										</div>
-										<!-- next page  - slut-->
-										<!-- MEGA SWITCH -->
-										<div class="megaswitchcontainer">
-											<div class="megaswitch">
-												<input type="radio" class="switch-input0" name="view4" id="a1" checked="">
-												<label for="a1" class="switch-label0 switch-label-off0">A1</label>
-
-												<input type="radio" class="switch-input0" name="view4" id="a2">
-												<label for="a2" class="switch-label0 switch-label-on1">A2</label>
-
-												<input type="radio" class="switch-input0" name="view4" id="a3">
-												<label for="a3" class="switch-label0 switch-label-on2">A3</label>
-
-												<input type="radio" class="switch-input0" name="view4" id="a4">
-												<label for="a4" class="switch-label0 switch-label-on3">A4</label>
-
-												<span class="switch-selection0"></span>
-											</div>
-										</div>
-										<!-- MEGA SWITCH - slut-->
-									</div>
-								</div>
-							</div>
-						</div>
+						<div class="top-section">
 					</td>
 					<!-- CSS -->
 					<td class="code">
-						/* Styling for SIDE TITEL OG SETTINGS BAR" FOR EDITOR SIDEN ORAGBISME */
-						/*PLACERING / POSITIONER*/
-						.closecontainer, .savecontainer, .deletecontainer {
-							float: right;
-						}
-
-						@media (min-width:481px) {
-							.closecontainer, .savecontainer, .deletecontainer {
-								height: 7.277vw;
-							}
-						}
-
-						@media (min-width:768px) {
-							.closecontainer, .savecontainer, .deletecontainer {
-								height: 52px;
-							}
-						}
-
-						@media (min-width:1366px) {
-							.closecontainer, .savecontainer, .deletecontainer {
-								height: 56px;
-							}
-						}
-
-						@media (min-width: 1920px) {
-							.closecontainer, .savecontainer, .deletecontainer {
-								height: 3.073vw; /* ~59px on 1920px width */
-							}
-						}
-
-						@media (min-width:3840px) {
-							.closecontainer, .savecontainer, .deletecontainer {
-								height: 3.099vw; /* ~119px on 3840px width */
-							}
-						}
-
-						.sidetitelcontainer, .previouspagecontainer {
-						  float: left;
-						}
-
-						.previouspagecontainer,
-						.savecontainer,
-						.deletecontainer,
-						.switch-multiple-singular-container,
-						.switch-horizontal-vertical-container,
-						.addpagebuttoncontainer,
-						.deletepagebuttoncontainer,
-						.uploadimagebuttoncontainer,
-						.nextpagecontainer {
-							margin-right: 1vw;
-						}
-
-						.closecontainer .text-icon, .savecontainer .text-icon, .deletecontainer .text-icon {
-							transform: translateY(50%);
-						}
-
-						.switch-multiple-singular-container {
-							float: left;
-						}
-
-						.switch-horizontal-vertical-container{
-							float: left;
-						}
-
-						.addpagebuttoncontainer {
-							float: left;
-						}
-
-						.deletepagebuttoncontainer {
-							float: left;
-						}
-
-						.uploadimagebuttoncontainer {
-							float: left;
-						}
-
-						.nextpagecontainer {
-							float: left;
-						}
-
-						.megaswitchcontainer {
-							float: right;
-						}
-
-						@media (min-width:1366px) {
-							.previouspagecontainer,
-							.savecontainer,
-							.deletecontainer,
-							.switch-multiple-singular-container,
-							.switch-horizontal-vertical-container,
-							.addpagebuttoncontainer,
-							.deletepagebuttoncontainer,
-							.uploadimagebuttoncontainer,
-							.nextpagecontainer {
-								margin-right: 34px;
-							}
-							
-							.folderoverviewcontainer .settings-menu-button span,
-							.filtercontainer .filter-button span,
-							.sortbycontainer .select-span {
-								display: inline-block;
-							}
-							
-							.sortbycontainer .sort-by-select,
-							.searchcontainer .searchInput {
-								max-width: 100%;
-							}
-							
-							.searchcontainer {
-								float: right;
-							}
-						}
-						/* Styling for SIDE TITEL OG SETTINGS BAR" FOR EDITOR SIDEN ORAGBISME - SLUT */
 					</td>
-					<!--Js to copy-->
-					<td class="empty"></td>
 				</tr>
 			</table>
 		</div>
@@ -9041,7 +8568,7 @@
 		</div>
 		<div class="example">
 			<div class="wrapper">
-				<input type="text" id="myInput" class="searchInput" onkeyup="search_report()" placeholder="Search...">
+				<input type="text" id="myInput" class="search-input" onkeyup="search_report()" placeholder="Search...">
 				<ul id="reportUL">
 					<li class="report-listbox">    
 						<a href="" class="rep-namelist">Day report</a> 
@@ -9094,7 +8621,7 @@
 				<tr class="row-two">
 					<!--HTML-->
 					<td class="code">
-                <input type="text" id="myInput" class="searchInput" onkeyup="search_report()" placeholder="Search...">
+                <input type="text" id="myInput" class="search-input" onkeyup="search_report()" placeholder="Search...">
 
 
                     <ul id="reportUL">
@@ -9153,7 +8680,7 @@
 					</td>
 					<!--CSS-->
 					<td class="code">
-                        .searchInput {
+                        .search-input {
                             background-image: url('search.svg');
                             background-position: 10px 5px;
                             background-repeat: no-repeat;

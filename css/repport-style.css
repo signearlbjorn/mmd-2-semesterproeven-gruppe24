@@ -173,6 +173,10 @@ label{
 	cursor: pointer;
 }
 
+/* -- FORM -- */
+form {
+	overflow: auto;
+}
 
 /* -- BUTTON AND LINKS -- */
 button {
@@ -216,6 +220,10 @@ button {
 a.round-corners,
 a.rounded-corners {
 	text-align: center;
+}
+.round-corners span,
+.rounded-corners span {
+	font-size: 100%;
 }
 
 .rounded-corners b {
@@ -975,8 +983,8 @@ textarea{
 }
 
 .switch-content {
-	height: 2.8em;
-	max-height: 2.8em;
+	height: 2.4em;
+	max-height: 2.4em;
 	border-radius: 1000px;
 	background-color: #fff;
 }
@@ -996,7 +1004,7 @@ textarea{
 .switch label span {
 	position: relative;
 	z-index: 2;
-	font-size: 142.85%;
+	font-size: 120%;
 	color: black;
 }
 
@@ -1038,16 +1046,22 @@ textarea{
 
 
 /* - SEARCH INPUT - */
-.searchInput {
+.search-input {
 	width: 314px;
     max-width: 100%;
 	padding-left: 47px;
+	padding-top:1px;
+	padding-bottom: 1px;
     border: 1px solid #ddd; /* Add a grey border */
 	box-sizing: border-box;
-    font-size: 142.85%; /* Increase font-size */
+    font-size: 120%; /* Increase font-size */
     background-image: url('../img/icons/search.svg'); /* Add a search icon to input */
     background-position: 17px 50%; /* Position the search icon */
     background-repeat: no-repeat; /* Do not repeat the icon image */
+}
+
+.search-input::placeholder {
+	font-style: italic;
 }
 
 
@@ -1638,86 +1652,95 @@ textarea{
 	top: 0 !important;
 }
 
-/* Styling for SIDE TITEL OG SETTINGS BAR" FOR OVERVIEW SIDEN ORAGBISME */
-.frameforsidetitelogsettingsbar {
+/* TOP SECTIONS */
+.top-section {
 	width: 100%;
-	min-height: 150px;
-	background-color: #D3D3D3;
+	background-color: inherit;
 }
 
-
-/*PLACERING / POSITIONER*/
-.sidetitelogsettingswrap {
+.top-section-wrapper {
 	width: 100%;
 	padding-top: 20px;
 }
 
-.topEditorHeader{
+.top-section-top{
 	width: 100%;
 }
 
-.bottomEditorHeader{
+.top-section-bottom{
 	width: 100%;
 	margin-top: 18px;
 }
 
-.sidetitelcontainer, .quantitycontainer  {
+.sidetitelcontainer, .quantity-select-container  {
   float: left;
 }
 
-.opretnyrapportcontainer {
-	position: relative;
+.new-report-button-container {
 	float: right;
-	height: 16px;
-	width: 150px;
+	height: 44px;
+	overflow: hidden;
 }
 
-.opretnyrapportcontainer button {
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
+.new-report-button-container button {
 	clear: right;
+	margin-top: 7px;
 }
 
 @media (min-width:481px) {
-	.opretnyrapportcontainer {
-		height: 7.277vw;
+	.new-report-button-container {
+		height: 9.148vw;
+	}
+	
+	.new-report-button-container button {
+		margin-top:  1.3722vw;
 	}
 }
 
 @media (min-width:768px) {
-	.opretnyrapportcontainer {
-		height: 52px;
+	.new-report-button-container {
+		height: 64px;
 	}
-}
-
-@media (min-width:1366px) {
-	.opretnyrapportcontainer {
-		height: 56px;
+	
+	.new-report-button-container button {
+		margin-top:  10px;
 	}
 }
 
 @media (min-width: 1920px) {
-	.opretnyrapportcontainer {
-		height: 3.073vw; /* ~59px on 1920px width */
+	.new-report-button-container {
+		height: 3.232vw;
+	}
+	
+	.new-report-button-container button {
+		margin-top: 0.5954vw;
 	}
 }
 
 @media (min-width:3840px) {
-	.opretnyrapportcontainer {
-		height: 3.099vw; /* ~119px on 3840px width */
+	.new-report-button-container {
+		height: 3.334vw;
+	}
+	
+	.new-report-button-container button {
+		margin-top: 0.6464vw;
 	}
 }
 
-.quantitycontainer,
+.quantity-select-container,
 .switch-preview-list-container,
-.folderoverviewcontainer,
-.filtercontainer,
-.sortbycontainer {
+.group-view-button-container,
+.filter-button-container,
+.sort-reports-select-container {
+	margin-top: 1px;
 	margin-right: 1vw;
 }
 
-.quantitycontainer {
+.switch-preview-list-container {
+	margin-top: 2px;
+}
+
+.quantity-select-container {
 	clear: left;
 }
 
@@ -1725,57 +1748,80 @@ textarea{
 	float: left;
 }
 
-.folderoverviewcontainer {
+.group-view-button-container {
 	float: left;
 }
 
-.folderoverviewcontainer .settings-menu-button span,
-.filtercontainer .filter-button span,
-.sortbycontainer .select-span {
+.group-view-button-container .group-view-button span,
+.group-view-button-container .settings-menu-button span,
+.filter-button-container .filter-button span,
+.sort-reports-select-container .select-span {
 	display: none;
 }
 
-.sortbycontainer .sort-by-select,
-.searchcontainer .searchInput {
+.filter-button-container .filter-button,
+.group-view-button-container .group-view-button {
+	min-height: 38px; 
+}
+
+.sort-reports-select-container .sort-by-select,
+.search-input-container .search-input {
 	max-width: 108px;
 }
 
-.filtercontainer {
+.filter-button-container {
 	float: left;
 }
 
-.sortbycontainer {
+.sort-reports-select-container {
 	float: left;
 }
 
-.searchcontainer {
+.switch-preview-list-container .switch-label {
+	max-width: 35px;
+}
+
+
+.search-input-container {
 	float: right;
 }
 
 @media (min-width:1366px) {
-	.quantitycontainer,
+	.quantity-select-container,
 	.switch-preview-list-container,
-	.folderoverviewcontainer,
-	.filtercontainer,
-	.sortbycontainer {
-		margin-right: 34px;
+	.group-view-button-container,
+	.filter-button-container,
+	.sort-reports-select-container {
+		margin-right: 15px;
+	}
+
+		
+	.search-input-container {
+		float: right;
 	}
 	
-	.folderoverviewcontainer .settings-menu-button span,
-	.filtercontainer .filter-button span,
-	.sortbycontainer .select-span {
+	.switch-preview-list-container .switch-label {
+		max-width: 95px;
+	}
+}
+
+@media (min-width:1920px) {
+	.group-view-button-container .group-view-button span,
+	.group-view-button-container .settings-menu-button span,
+	.filter-button-container .filter-button span,
+	.sort-reports-select-container .select-span {
 		display: inline-block;
 	}
 	
-	.sortbycontainer .sort-by-select,
-	.searchcontainer .searchInput {
+	.sort-reports-select-container .sort-by-select,
+	.search-input-container .search-input {
 		max-width: 100%;
 	}
-	
-	.searchcontainer {
-		float: right;
+	.switch-preview-list-container {
+		margin-top: 4px;
 	}
 }
+
 
 /* Styling for SIDE TITEL OG SETTINGS BAR" FOR EDITOR SIDEN ORAGBISME */
 /*PLACERING / POSITIONER*/
@@ -1874,18 +1920,13 @@ textarea{
 		margin-right: 34px;
 	}
 	
-	.folderoverviewcontainer .settings-menu-button span,
-	.filtercontainer .filter-button span,
-	.sortbycontainer .select-span {
+	.group-view-button-container .settings-menu-button span,
+	.filter-button-container .filter-button span,
+	.sort-reports-select-container .select-span {
 		display: inline-block;
 	}
-	
-	.sortbycontainer .sort-by-select,
-	.searchcontainer .searchInput {
-		max-width: 100%;
-	}
-	
-	.searchcontainer {
+		
+	.search-input-container {
 		float: right;
 	}
 }
@@ -2192,8 +2233,8 @@ header .wrapper {
 	width: 100%;
 }
 
-#overview .frameforsidetitelogsettingsbar .wrapper,
-.overview .frameforsidetitelogsettingsbar .wrapper {
+#overview .top-section .wrapper,
+.overview .top-section .wrapper {
 	float: none !important;
 	width: 95% !important;
 	margin: 0 auto !important;
@@ -2201,8 +2242,8 @@ header .wrapper {
 }
 
 @media (min-width:1366px) {
-	#overview .frameforsidetitelogsettingsbar .wrapper,
-	.overview .frameforsidetitelogsettingsbar .wrapper {
+	#overview .top-section .wrapper,
+	.overview .top-section .wrapper {
 		width: 75% !important;
 	}
 }
@@ -2252,14 +2293,14 @@ header .wrapper {
 
 
 /* - WRAPPER - */
-.editor .frameforsidetitelogsettingsbar .wrapper,
-#editor .frameforsidetitelogsettingsbar .wrapper {
+.editor .top-section .wrapper,
+#editor .top-section .wrapper {
 	width: 100% !important;
 }
 
 @media (min-width:1920px) {
-	.editor .frameforsidetitelogsettingsbar .wrapper,
-	#editor .frameforsidetitelogsettingsbar .wrapper {
+	.editor .top-section .wrapper,
+	#editor .top-section .wrapper {
 		width: 75% !important;
 	}
 }
