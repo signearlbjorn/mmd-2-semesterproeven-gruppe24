@@ -1177,14 +1177,16 @@ textarea{
 	float: left;
 	width: 50%;
 	height: calc(25% - 1cm);
+	padding: 2%;
 }
 
 .page header,
 .page footer {
 	float: left;
 	left: 2cm;
-	height: 2cm;
 	width: 100%;
+	height: 2cm;
+	padding: 2%;
 	line-height: 2cm;
 	overflow: hidden;
 }
@@ -1239,7 +1241,6 @@ textarea{
 	overflow-y: auto;
 	float: left;
 	width: 100%;
-	max-height: 100vh;
 	padding: 15px;
     box-sizing: border-box;
 }
@@ -2313,6 +2314,20 @@ header .wrapper {
 	}
 }
 
+
+/* - EDITOR ASIDE AND PAGE - */
+#editor .report-preview,
+#editor .editor-aside {
+	max-height: 100vh;
+	overflow-y: auto;
+}
+#editor .report-page-section {
+	overflow: hidden;
+}
+#editor .report-page-section * {
+	max-width: 100% !important;
+	max-height: 100% !important;
+}
 
 /* -- FOLDER OVERVIEW -- */
 

@@ -34,7 +34,7 @@
 	<!-- Block indexing of site -->
 	<meta name="robots" content="noindex">
 </head>
-<body class="editor">
+<body id="editor">
 	<script src="https://code.highcharts.com/highcharts.js"></script>
 	<!-- MAIN NAVIGATION -->
 	<header id="main-header">
@@ -46,22 +46,22 @@
 			</div>
 			<nav id="main-navigation" class="hidden">
 				<!--LOGO-->
-				<a href="index.html" class="disabled">
+				<a href="index.html" class="disabled" draggable="false">
 					<img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io">
 				</a>
 				<ul class="navbarulleft">
-					<li><a href="#" class="disabled"><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
-					<li><a href="#" class="disabled">Trendboards</a></li>
-					<li><a href="overview.html" title="Reports module - see, schedule and setup reports">Reports</a></li>
-					<li><a href="#" class="disabled">Views</a></li>
-					<li><a href="#" class="disabled">Feeds</a></li>
-					<li><a href="#" class="disabled">Settings</a></li>
-					<li><a href="#" class="disabled">Shares</a></li>
+					<li><a href="#" class="disabled" draggable="false"><img class="icon" src="img/icons/home.svg" alt="home-icon" draggable="false"></a></li>
+					<li><a href="#" class="disabled" draggable="false">Trendboards</a></li>
+					<li><a href="overview.html" title="Reports module - see, schedule and setup reports" draggable="false">Reports</a></li>
+					<li><a href="#" class="disabled" draggable="false">Views</a></li>
+					<li><a href="#" class="disabled" draggable="false">Feeds</a></li>
+					<li><a href="#" class="disabled" draggable="false">Settings</a></li>
+					<li><a href="#" class="disabled" draggable="false">Shares</a></li>
 				</ul>
 				<ul class="navbarulright" style="float: right;">
-					<li><a href="#" class="disabled"><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
-					<li><a href="#" class="disabled"><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
-					<li><a href="#" class="disabled"><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
+					<li><a href="#" class="disabled" draggable="false"><img class="icon" src="img/icons/wrench.svg" alt="maitenance" draggable="false"></a></li>
+					<li><a href="#" class="disabled" draggable="false"><img class="icon" src="img/icons/eye-off.svg" alt="unfollow" draggable="false"></a></li>
+					<li><a href="#" class="disabled" draggable="false"><img class="icon" src="img/icons/bell.svg" alt="alarms" draggable="false"></a></li>
 					<li>
 						<form action="/" method="get" class="disabled">
 							<label>
@@ -77,9 +77,9 @@
 					</li>
 					<!--USERNAME-->
 					<li class="profiledropdown">
-						<a href="#" class="disabled profiledropdown-a">
+						<a href="#" class="disabled profiledropdown-a" draggable="false">
 							<span class="username">Profile P.</span>
-							<img class="profile-icon" src="img/icons/user.svg" alt="profile">
+							<img class="profile-icon" src="img/icons/user.svg" alt="profile" draggable="false">
 						</a>
 					</li>
 				</ul>
@@ -100,21 +100,21 @@
 						<div class="save-button-container">
 							<button type="button" class="texticon-button disabled" title="Save report">
 								<span>Save report</span>
-								<img class="texticon-iconimg" src="img/icons/save.svg" alt="X">
+								<img class="texticon-iconimg" src="img/icons/save.svg" alt="Save icon" draggable="false">
 							</button>
 						</div>
 						<!-- DELETE REPORT BUTTON -->
 						<div class="delete-button-container">
 							<button type="button" name="delete-report" class="texticon-button" title="Delete report">
 								<span>Delete report</span>
-								<img class="texticon-iconimg" src="img/icons/trash.svg" alt="X">
+								<img class="texticon-iconimg" src="img/icons/trash.svg" alt="Delete icon" draggable="false">
 							</button>
 						</div>
 						<!-- CLOSE BUTTON BUTTON -->
 						<div class="close-button-container">
 							<button type="button" name="close-editor" class="texticon-button" title="Close editor">
 								<span>Close editor</span>
-								<img class="texticon-iconimg" src="img/icons/x.svg" alt="X">
+								<img class="texticon-iconimg" src="img/icons/x.svg" alt="X" draggable="false">
 							</button>
 						</div>
 					</div>
@@ -124,7 +124,7 @@
 					<div class="previous-page-button-container">
 						<button type="button" class="previous-page-button button-w round-corners" title="Go to previous page">
 							<span>Previous page</span>
-							<img class="settings-menu-icon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
+							<img class="settings-menu-icon" src="img/icons/chevron-left.svg" alt="arrowleft-icon" draggable="false">
 						</button>
 					</div>
 					<!-- SINGLE OR MULTIPLE PAGE DISPLAY SWITCH -->
@@ -160,35 +160,27 @@
 					<!-- ADD PAGE BUTTON -->
 					<div class="add-page-button-container">
 						<button type="button" class="adddelete-button add-page button-w" title="Add new page after current page">
-							<img class="plusminus-iconimg" src="img/icons/plus.svg" alt="plus icon">
+							<img class="plusminus-iconimg" src="img/icons/plus.svg" alt="plus icon" draggable="false">
 						</button>
 					</div>
 					<!-- DELETE PAGE BUTTON -->
 					<div class="delete-page-button-container">
 						<button type="button" class="adddelete-button delete-page button-w" title="Remove current page">
-							<img class="plusminus-iconimg" src="img/icons/minus.svg" alt="plus icon">
+							<img class="plusminus-iconimg" src="img/icons/minus.svg" alt="plus icon" draggable="false">
 						</button>
-					</div>
-					<!-- UPLOAD IMAGE BUTTON -->
-					<div class="upload-button-container">
-						<label class="upload-button round-corners button-w" title="Upload image to Graph tab">
-							<span>Upload image</span>
-							<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
-							<input type="file" class="round-corners button-w hidden" name="upload-image">
-						</label>
 					</div>
 					<!-- NEXT PAGE BUTTON -->
 					<div class="next-page-container">
 							<button type="button" class="nextbutton button-w round-corners" title="Go to next page">
 							<span>Next page</span>
-							<img class="settings-menu-icon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
+							<img class="settings-menu-icon" src="img/icons/chevron-right.svg" alt="arrowright-icon" draggable="false">
 						</button>
 					</div>
 					<!-- PAGE SIZE SWITCH -->
 					<div class="page-size-switch-container">
 						<form action="" method="get" class="switch">
 							<div class="switch-content">
-								<label class="switch-label disabled    ">
+								<label class="switch-label disabled">
 									<span title="A1">A1</span>
 									<input type="radio" class="switch-input disabled" name="page-size" value="a1">
 								</label>
@@ -256,11 +248,11 @@
 							</button>
 							<button type="button" class="save-template-button rounded-corners button-w disabled">
 								<span>Save as template</span>
-								<img class="settings-menu-icon" src="img/icons/save.svg" alt="Save icon">
+								<img class="settings-menu-icon" src="img/icons/save.svg" alt="Save icon" draggable="false">
 							</button>
 							<label class="upload-button rounded-corners button-w" title="Upload image to Graph tab">
 								<span>Upload template</span>
-								<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
+								<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon" draggable="false">
 								<input type="file" class="rounded-corners button-w hidden" name="upload-template">
 							</label>
 						</div>
@@ -268,33 +260,33 @@
 						<div class="editor-aside-grid favorites">
 							<button class="report-preview-outbox" value="1">
 								<span class="temp-name">Template 1</span>
-								<img class="star" src="img/icons/starfull.svg" alt="Filled star">
+								<img class="star" src="img/icons/starfull.svg" alt="Filled star" draggable="false">
 								<div class="aspect-one-to-one">
 									<div class="report-preview-content disabled">
 										<div class="preview-inbox">
-											<img class="preview-img" src="img/previewreport.png">
+											<img class="preview-img" src="img/previewreport.png" draggable="false">
 										</div>
 									</div>
 								</div>
 							</button>
 							<button class="report-preview-outbox" value="1">
 								<span class="temp-name">Template 4</span>
-								<img class="star" src="img/icons/starfull.svg" alt="Filled star">
+								<img class="star" src="img/icons/starfull.svg" alt="Filled star" draggable="false">
 								<div class="aspect-one-to-one">
 									<div class="report-preview-content disabled">
 										<div class="preview-inbox">
-											<img class="preview-img" src="img/previewreport.png">
+											<img class="preview-img" src="img/previewreport.png" draggable="false">
 										</div>
 									</div>
 								</div>
 							</button>
 							<button class="report-preview-outbox" value="6">
 								<span class="temp-name">Template 6</span>
-								<img class="star" src="img/icons/starfull.svg" alt="Filled star">
+								<img class="star" src="img/icons/starfull.svg" alt="Filled star" draggable="false">
 								<div class="aspect-one-to-one">
 									<div class="report-preview-content disabled">
 										<div class="preview-inbox">
-											<img class="preview-img" src="img/previewreport.png">
+											<img class="preview-img" src="img/previewreport.png" draggable="false">
 										</div>
 									</div>
 								</div>
@@ -304,33 +296,33 @@
 						<div class="editor-aside-grid">
 							<button class="report-preview-outbox" value="2">
 								<span class="temp-name">Template 2</span>
-								<img class="star" src="img/icons/star.svg" alt="Empty star">
+								<img class="star" src="img/icons/star.svg" alt="Empty star" draggable="false">
 								<div class="aspect-one-to-one">
 									<div class="report-preview-content disabled">
 										<div class="preview-inbox">
-											<img class="preview-img" src="img/previewreport.png">
+											<img class="preview-img" src="img/previewreport.png" draggable="false">
 										</div>
 									</div>
 								</div>
 							</button>
 							<button class="report-preview-outbox" value="3">
 								<span class="temp-name">Template 3</span>
-								<img class="star" src="img/icons/star.svg" alt="Empty star">
+								<img class="star" src="img/icons/star.svg" alt="Empty star" draggable="false">
 								<div class="aspect-one-to-one">
 									<div class="report-preview-content disabled">
 										<div class="preview-inbox">
-											<img class="preview-img" src="img/previewreport.png">
+											<img class="preview-img" src="img/previewreport.png" draggable="false">
 										</div>
 									</div>
 								</div>
 							</button>
 							<button class="report-preview-outbox" value="5">
 								<span class="temp-name">Template 5</span>
-								<img class="star" src="img/icons/star.svg" alt="Empty star">
+								<img class="star" src="img/icons/star.svg" alt="Empty star" draggable="false">
 								<div class="aspect-one-to-one">
 									<div class="report-preview-content disabled">
 										<div class="preview-inbox">
-											<img class="preview-img" src="img/previewreport.png">
+											<img class="preview-img" src="img/previewreport.png" draggable="false">
 										</div>
 									</div>
 								</div>
@@ -346,7 +338,7 @@
 						</button>
 						<label class="uploadimagebutton rounded-corners button-w" title="Upload image to Graph tab">
 							<span>Upload image</span>
-							<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
+							<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon" draggable="false">
 							<input type="file" class="uploadimagebutton rounded-corners button-w hidden" name="upload-image">
 						</label>
 					</div>
@@ -355,9 +347,9 @@
 						<!-- Highcharts type: bar -->
 						<article class="highcart-preview">
 							<h4>Bar</h4>
-							<img src="img/icons/star.svg" class="star" alt="Priority icon. A star">
+							<img src="img/icons/star.svg" class="star" alt="Empty star" draggable="false">
 							<div class="aspect-one-to-one">
-								<button class="highchart-button" title="indsæt graf">
+								<button class="highchart-button" title="indsæt graf" draggable="true">
 									<div id="highcharts-type-bar-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
 								</button>
 							</div>
@@ -365,29 +357,29 @@
 						<!-- Highcharts type: column -->
 						<article class="highcart-preview">
 							<h4>Column</h4>
-							<img src="img/icons/star.svg" class="star" alt="Priority icon. A star">
+							<img src="img/icons/star.svg" class="star" alt="Empty star" draggable="false">
 							<div class="aspect-one-to-one">
-								<button class="highchart-button" title="indsæt graf">
+								<button class="highchart-button" title="indsæt graf" draggable="true">
 									<div id="highcharts-type-column-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
 								</button>
 							</div>
 						</article>
 						<!-- Highcharts type: line -->
 						<article class="highcart-preview">
-							<h4>line</h4>
-							<img src="img/icons/star.svg" class="star" alt="Priority icon. A star">
+							<h4>Line</h4>
+							<img src="img/icons/star.svg" class="star" alt="Empty star" draggable="false">
 							<div class="aspect-one-to-one">
-								<button class="highchart-button" title="indsæt graf">
+								<button class="highchart-button" title="indsæt graf" draggable="true">
 									<div id="highcharts-type-line-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
 								</button>
 							</div>
 						</article>
 						<!-- Highcharts type: pie -->
 						<article class="highcart-preview">
-							<h4>pie</h4>
-							<img src="img/icons/star.svg" class="star" alt="Priority icon. A star">
+							<h4>Pie</h4>
+							<img src="img/icons/star.svg" class="star" alt="Empty star" draggable="false">
 							<div class="aspect-one-to-one">
-								<button class="highchart-button" title="indsæt graf">
+								<button class="highchart-button" title="indsæt graf" draggable="true">
 									<div id="highcharts-type-pie-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
 								</button>
 							</div>
@@ -404,7 +396,7 @@
 					</div>
 					<h3>Text tool</h3>
 					<div class="textTool">
-						<button type="button" class="buttongr"><img class="Ticon" src="img/icons/type.svg" alt="text-icon"></button>
+						<button type="button" class="buttongr"><img class="Ticon" src="img/icons/type.svg" alt="text-icon" draggable="true"></button>
 					</div>
 					<h3 class="clear-both">Text options</h3>
 					<div class="textTool">
@@ -430,17 +422,17 @@
 						<button type="button" class="button-n rounded-corners help" title="Edit report code in the textfield. You can download the report with save, edit it, then upload with Upload.">
 							<span>Help<b>?</b></span>
 						</button>
-						<a href="show.html" class="group-view-button button-w rounded-corners disabled" title="Go to report preview">
+						<a href="show.html" class="group-view-button button-w rounded-corners disabled" title="Go to report preview" draggable="false">
 							<span>Preview</span>
-							<img src="img/icons/eye.svg" alt="Eye icon">
+							<img src="img/icons/eye.svg" alt="Eye icon" draggable="false">
 						</a>
-						<a href="test-report.html" class="group-view-button button-w rounded-corners" title="Download report file" download="">
+						<a href="test-report.html" class="group-view-button button-w rounded-corners" title="Download report file" download="" draggable="false">
 							<span>Save</span>
-							<img src="img/icons/save.svg" alt="Save icon">
+							<img src="img/icons/save.svg" alt="Save icon" draggable="false">
 						</a>
 						<label class="upload-button rounded-corners button-w" title="Upload template">
 							<span>Upload</span>
-							<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
+							<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon" draggable="false">
 							<input type="file" class="rounded-corners button-w hidden" name="upload-template">
 						</label>
 					</div>
@@ -471,7 +463,7 @@
 	<!-- POP UPS -->
 	<form action="" method="get" id="delete-report-pop-up" class="pop-up menu hidden">
 		<div class="pop-up-title-area">
-			<img class="pop-up-title-image font-height" src="img/icons/trash-2.svg" alt="Delete icon">
+			<img class="pop-up-title-image font-height" src="img/icons/trash-2.svg" alt="Delete icon" draggable="false">
 			<span class="pop-up-title">Delete report</span>
 		</div>
 		<div class="pop-up-content-area">
@@ -485,8 +477,8 @@
 	<form action="" method="get" id="save-pop-up" class="pop-up menu hidden">
 		<input type="hidden" name="target" value="reportID">
 		<div class="pop-up-title-area">
-			<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
-			<img class="pop-up-title-image font-height" src="img/icons/savegreen.svg" alt="Save icon">
+			<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon" draggable="false"></button>
+			<img class="pop-up-title-image font-height" src="img/icons/savegreen.svg" alt="Save icon" draggable="false">
 			<span class="pop-up-title">Save as...</span>
 			<span class="pop-up-idenfification">Report name; #id</span>
 		</div>
@@ -508,12 +500,12 @@
 		</div>
 		<div class="pop-up-buttons">
 			<button type="button" class="button-w rounded-corners close" title="Close">Cancel</button>
-			<a href="test-report.html" class="button-g rounded-corners right" title="Save report" download="">Save</a>
+			<a href="test-report.html" class="button-g rounded-corners right" title="Save report" download="" draggable="false">Save</a>
 		</div>
 	</form>
 	<form action="" method="get" id="close-without-saving-pop-up" class="pop-up menu hidden">
 		<div class="pop-up-title-area">
-			<img class="pop-up-title-image font-height" src="img/icons/questionmark.svg" alt="?">
+			<img class="pop-up-title-image font-height" src="img/icons/questionmark.svg" alt="?" draggable="false">
 			<span class="pop-up-title">Quit without saving?</span>
 		</div>
 		<div class="pop-up-content-area">
@@ -523,7 +515,7 @@
 		</div>
 		<div class="pop-up-buttons">
 			<button type="button" class="button-w rounded-corners close" title="Close">Cancel</button>
-			<a href="overview.html" class="button-r rounded-corners close" title="Close editor">Close</a>
+			<a href="overview.html" class="button-r rounded-corners close" title="Close editor" draggable="false">Close</a>
 			<button type="submit" class="button-g rounded-corners disabled right" title="Create new report">Save & close</button>
 		</div>
 	</form>
