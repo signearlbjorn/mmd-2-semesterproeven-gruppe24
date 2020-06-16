@@ -867,10 +867,10 @@ for(let i = 0; i < saveReportAsButton.length; i++) {
 
 
 // -- EDITOR TAB --
-/*let templateTab = document.getElementById("template-tab");
+let templateTab = document.getElementById("template-tab");
 let graphsTab = document.getElementById("graphs-tab");
 let textTab = document.getElementById("text-tab");
-let codeTab = document.getElementById("code-tab");*/
+let codeTab = document.getElementById("code-tab");
 let editorAsideNavButton = document.getElementsByClassName("editor-aside-nav-button");
 let editorTabContent = document.getElementsByClassName("editor-tab-content");
 

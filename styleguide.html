@@ -9384,7 +9384,7 @@
 		<div class="wrapper">
 			<h4 class="styleguide-title">Editor Tabs</h4>
 		</div>
-		<div id="wrapper_header_example" class="example">
+		<div class="example">
 			<aside class="editor-aside">
 				<!-- EDITOR NAVIGATION -->
 				<div class="editor-aside-nav">
@@ -9397,20 +9397,22 @@
 					<!--TEMPLATES-->
 					<article id="template-tab-content" class="editor-tab-content">
 						<div class="templates-content-wrapper">
-							<button type="button" class="button-n rounded-corners help" title="Click on a template to load it. Use 'Save as template' to save template. Use 'Upload template' to choose a HTML file to upload as a template to use.">
-								<span>Help<b>?</b></span>
-							</button>
-							<button type="button" class="save-template-button rounded-corners button-w disabled">
-								<span>Save as template</span>
-								<img class="settings-menu-icon" src="img/icons/save.svg" alt="Save icon">
-							</button>
-							<label class="upload-button rounded-corners button-w" title="Upload image to Graph tab">
-								<span>Upload template</span>
-								<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
-								<input type="file" class="rounded-corners button-w hidden" name="upload-template">
-							</label>
+							<div class="editor-aside-tab-content-top">
+								<button type="button" class="button-n rounded-corners help" title="Click on a template to load it. Use 'Save as template' to save template. Use 'Upload template' to choose a HTML file to upload as a template to use.">
+									<span>Help<b>?</b></span>
+								</button>
+								<button type="button" class="save-template-button rounded-corners button-w disabled">
+									<span>Save as template</span>
+									<img class="settings-menu-icon" src="img/icons/save.svg" alt="Save icon">
+								</button>
+								<label class="upload-button rounded-corners button-w" title="Upload image to Graph tab">
+									<span>Upload template</span>
+									<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
+									<input type="file" class="rounded-corners button-w hidden" name="upload-template">
+								</label>
+							</div>
 							<h3>Favorite templates</h3>
-							<div class="template-to-choose favorites">
+							<div class="editor-aside-grid favorites">
 								<button class="report-preview-outbox" value="1">
 									<span class="temp-name">Template 1</span>
 									<img class="star" src="img/icons/starfull.svg" alt="Filled star">
@@ -9446,7 +9448,7 @@
 								</button>
 							</div>
 							<h3>Templates</h3>
-							<div class="template-to-choose">
+							<div class="editor-aside-grid">
 								<button class="report-preview-outbox" value="2">
 									<span class="temp-name">Template 2</span>
 									<img class="star" src="img/icons/star.svg" alt="Empty star">
@@ -9485,9 +9487,18 @@
 					</article>
 					<!--GRPAHS-->
 					<article id="graphs-tab-content" class="hidden editor-tab-content">
-						<div class="graphsOverDiv">
+						<div class="editor-aside-tab-content-top">
+							<button type="button" class="button-n rounded-corners help" title="Click on a graph or image and choose where to insert on page, or drag'n drop it onto the page.">
+								<span>Help<b>?</b></span>
+							</button>
+							<label class="uploadimagebutton rounded-corners button-w" title="Upload image to Graph tab">
+								<span>Upload image</span>
+								<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
+								<input type="file" class="uploadimagebutton rounded-corners button-w hidden" name="upload-image">
+							</label>
+						</div>
+						<div class="editor-aside-grid">
 							<!-- Highcharts type: bar -->
-							<button type="button" class="button-n rounded-corners help" title="Click on a template and choose where to insert on page, or drag'n drop it onto the page">Help<b>?</b></button>
 							<article class="highcart-preview">
 								<h4>Bar</h4>
 								<img src="img/icons/star.svg" class="star" alt="Priority icon. A star">
@@ -9531,44 +9542,70 @@
 					</article>
 					<!--TEXT EDITOR-->
 					<article id="text-tab-content" class="hidden editor-tab-content">
-						<div class="textTool">
-							<label>Text tool</label>
-							<button type="type" class="textToolImgButton"><img class="settingsicon" src="img/icons/type.svg" alt="Text tool"></button>
-							<button type="button" class="helpbutton">
-								<span>Help</span>
-								<img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
+						<div class="editor-aside-tab-content-top">
+							<button type="button" class="button-n rounded-corners help" title="Click on a T and choose where to insert on page, or drag'n drop it onto the page. When text is highligted, you can edit text settings in text tab.">
+								<span>Help<b>?</b></span>
 							</button>
 						</div>
+						<h3>Text tool</h3>
 						<div class="textTool">
-							<label>Text edit</label>
-							<div class="textEditDiv"><label>Size</label><button class="texteditbutton"><span>Choose..</span><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
-							<div class="textEditDiv"><label>Weight</label><button class="texteditbutton"><span>Choose..</span><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
+							<button type="button" class="buttongr"><img class="Ticon" src="img/icons/type.svg" alt="text-icon"></button>
+						</div>
+						<h3 class="clear-both">Text options</h3>
+						<div class="textTool">
+							<label class="text-input editor-tab-content-input" title="Choose size for text">
+								<span>Size</span>
+								<input type="text" name="editor-text-size" class="round-corners button-w" placeholder="Input size in pt">
+							</label>
+							<label class="select-label editor-tab-content-input" title="Select text weight">
+								<span class="select-span">Weight</span>
+								<div class="select-wrapper">
+									<select name="editor-text-weight" class="sort-by-select select">
+										<option value="normal" selected="">Normal</option>
+										<option value="bold">Bold</option>
+										<option value="thin">thin</option>
+									</select>
+								</div>
+							</label>
 						</div>
 					</article>
 					<!--CODE EDITOR-->
 					<article id="code-tab-content"  class="editor-tab-content hidden">
+						<div class="editor-aside-tab-content-top">
+							<button type="button" class="button-n rounded-corners help" title="Edit report code in the textfield. You can download the report with save, edit it, then upload with Upload.">
+								<span>Help<b>?</b></span>
+							</button>
+							<a href="show.html" class="group-view-button button-w rounded-corners disabled" title="Go to report preview">
+								<span>Preview</span>
+								<img src="img/icons/eye.svg" alt="Eye icon">
+							</a>
+							<a href="test-report.html" class="group-view-button button-w rounded-corners" title="Download report file" download="">
+								<span>Save</span>
+								<img src="img/icons/save.svg" alt="Save icon">
+							</a>
+							<label class="upload-button rounded-corners button-w" title="Upload image to Graph tab">
+								<span>Upload</span>
+								<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
+								<input type="file" class="rounded-corners button-w hidden" name="upload-template">
+							</label>
+						</div>
 						<div class="codeEditorOverDiv">
-							<div class="codeEditorButtons">
-								<button type="button" class="showReport">
-									<span>Show report</span>
-									<img class="settings-menu-icon" src="img/icons/eye.svg" alt="showicon">
-								</button>
-								<button type="button" class="showReport">
-									<span>Download</span>
-									<img class="settings-menu-icon" src="img/icons/download.svg" alt="showicon">
-								</button>
-								<button type="button" class="showReport">
-									<span>Upload</span>
-									<img class="settings-menu-icon" src="img/icons/upload.svg" alt="showicon">
-								</button>
-								<button type="button" class="helpbutton">
-									<span>Help</span>
-									<img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
-								</button>
-							</div>
-							<div class="codeEditor" contenteditable="true">
-								<code><p>Code place holder</p></code>
-							</div>
+							<textarea class="editor-tab-code-editor"><div class="report-preview single-page-display">
+    <div class="page-wrapper">
+        <div class="page">
+            <header contenteditable="true">hea</header>
+            <div class="report-page-section box-number-1" contenteditable="true"></div>
+            <div class="report-page-section box-number-2" contenteditable="true"></div>
+            <div class="report-page-section box-number-3" contenteditable="true"></div>
+            <div class="report-page-section box-number-4" contenteditable="true"></div>
+            <div class="report-page-section box-number-5" contenteditable="true"></div>
+            <div class="report-page-section box-number-6" contenteditable="true"></div>
+            <div class="report-page-section box-number-7" contenteditable="true"></div>
+            <div class="report-page-section box-number-8" contenteditable="true"></div>
+            <footer contenteditable="true">foo</footer>
+        </div>
+    </div>
+</div></textarea>
 						</div>
 					</article>
 				</div>
@@ -9584,34 +9621,426 @@
 				<tr class="row-two">
 					<!--HTML -->
 					<td class="code">
+						<aside class="editor-aside">
+							<!-- EDITOR NAVIGATION -->
+							<div class="editor-aside-nav">
+								<button type="button" id="template-tab" class="editor-aside-nav-button current" value="template-tab-content">Templates</button>
+								<button type="button" id="graphs-tab" class="editor-aside-nav-button" value="graphs-tab-content">Graphs</button>
+								<button type="button" id="text-tab" class="editor-aside-nav-button" value="text-tab-content">Text</button>
+								<button type="button" id="code-tab" class="editor-aside-nav-button" value="code-tab-content">Code</button>
+							</div>
+							<div class="editor-tab-content-wrapper">
+								<!--TEMPLATES-->
+								<article id="template-tab-content" class="editor-tab-content">
+									<div class="templates-content-wrapper">
+										<div class="editor-aside-tab-content-top">
+											<button type="button" class="button-n rounded-corners help" title="Click on a template to load it. Use 'Save as template' to save template. Use 'Upload template' to choose a HTML file to upload as a template to use.">
+												<span>Help<b>?</b></span>
+											</button>
+											<button type="button" class="save-template-button rounded-corners button-w disabled">
+												<span>Save as template</span>
+												<img class="settings-menu-icon" src="img/icons/save.svg" alt="Save icon">
+											</button>
+											<label class="upload-button rounded-corners button-w" title="Upload image to Graph tab">
+												<span>Upload template</span>
+												<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
+												<input type="file" class="rounded-corners button-w hidden" name="upload-template">
+											</label>
+										</div>
+										<h3>Favorite templates</h3>
+										<div class="editor-aside-grid favorites">
+											<button class="report-preview-outbox" value="1">
+												<span class="temp-name">Template 1</span>
+												<img class="star" src="img/icons/starfull.svg" alt="Filled star">
+												<div class="aspect-one-to-one">
+													<div class="report-preview-content disabled">
+														<div class="preview-inbox">
+															<img class="preview-img" src="img/previewreport.png">
+														</div>
+													</div>
+												</div>
+											</button>
+											<button class="report-preview-outbox" value="1">
+												<span class="temp-name">Template 4</span>
+												<img class="star" src="img/icons/starfull.svg" alt="Filled star">
+												<div class="aspect-one-to-one">
+													<div class="report-preview-content disabled">
+														<div class="preview-inbox">
+															<img class="preview-img" src="img/previewreport.png">
+														</div>
+													</div>
+												</div>
+											</button>
+											<button class="report-preview-outbox" value="6">
+												<span class="temp-name">Template 6</span>
+												<img class="star" src="img/icons/starfull.svg" alt="Filled star">
+												<div class="aspect-one-to-one">
+													<div class="report-preview-content disabled">
+														<div class="preview-inbox">
+															<img class="preview-img" src="img/previewreport.png">
+														</div>
+													</div>
+												</div>
+											</button>
+										</div>
+										<h3>Templates</h3>
+										<div class="editor-aside-grid">
+											<button class="report-preview-outbox" value="2">
+												<span class="temp-name">Template 2</span>
+												<img class="star" src="img/icons/star.svg" alt="Empty star">
+												<div class="aspect-one-to-one">
+													<div class="report-preview-content disabled">
+														<div class="preview-inbox">
+															<img class="preview-img" src="img/previewreport.png">
+														</div>
+													</div>
+												</div>
+											</button>
+											<button class="report-preview-outbox" value="3">
+												<span class="temp-name">Template 3</span>
+												<img class="star" src="img/icons/star.svg" alt="Empty star">
+												<div class="aspect-one-to-one">
+													<div class="report-preview-content disabled">
+														<div class="preview-inbox">
+															<img class="preview-img" src="img/previewreport.png">
+														</div>
+													</div>
+												</div>
+											</button>
+											<button class="report-preview-outbox" value="5">
+												<span class="temp-name">Template 5</span>
+												<img class="star" src="img/icons/star.svg" alt="Empty star">
+												<div class="aspect-one-to-one">
+													<div class="report-preview-content disabled">
+														<div class="preview-inbox">
+															<img class="preview-img" src="img/previewreport.png">
+														</div>
+													</div>
+												</div>
+											</button>
+										</div>
+									</div>
+								</article>
+								<!--GRPAHS-->
+								<article id="graphs-tab-content" class="hidden editor-tab-content">
+									<div class="editor-aside-tab-content-top">
+										<button type="button" class="button-n rounded-corners help" title="Click on a graph or image and choose where to insert on page, or drag'n drop it onto the page.">
+											<span>Help<b>?</b></span>
+										</button>
+										<label class="uploadimagebutton rounded-corners button-w" title="Upload image to Graph tab">
+											<span>Upload image</span>
+											<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
+											<input type="file" class="uploadimagebutton rounded-corners button-w hidden" name="upload-image">
+										</label>
+									</div>
+									<div class="editor-aside-grid">
+										<!-- Highcharts type: bar -->
+										<article class="highcart-preview">
+											<h4>Bar</h4>
+											<img src="img/icons/star.svg" class="star" alt="Priority icon. A star">
+											<div class="aspect-one-to-one">
+												<button class="highchart-button" title="indsæt graf">
+													<div id="highcharts-type-bar-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+												</button>
+											</div>
+										</article>
+										<!-- Highcharts type: column -->
+										<article class="highcart-preview">
+											<h4>Column</h4>
+											<img src="img/icons/star.svg" class="star" alt="Priority icon. A star">
+											<div class="aspect-one-to-one">
+												<button class="highchart-button" title="indsæt graf">
+													<div id="highcharts-type-column-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+												</button>
+											</div>
+										</article>
+										<!-- Highcharts type: line -->
+										<article class="highcart-preview">
+											<h4>line</h4>
+											<img src="img/icons/star.svg" class="star" alt="Priority icon. A star">
+											<div class="aspect-one-to-one">
+												<button class="highchart-button" title="indsæt graf">
+													<div id="highcharts-type-line-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+												</button>
+											</div>
+										</article>
+										<!-- Highcharts type: pie -->
+										<article class="highcart-preview">
+											<h4>pie</h4>
+											<img src="img/icons/star.svg" class="star" alt="Priority icon. A star">
+											<div class="aspect-one-to-one">
+												<button class="highchart-button" title="indsæt graf">
+													<div id="highcharts-type-pie-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+												</button>
+											</div>
+										</article>
+									</div>
+								</article>
+								<!--TEXT EDITOR-->
+								<article id="text-tab-content" class="hidden editor-tab-content">
+									<div class="editor-aside-tab-content-top">
+										<button type="button" class="button-n rounded-corners help" title="Click on a T and choose where to insert on page, or drag'n drop it onto the page. When text is highligted, you can edit text settings in text tab.">
+											<span>Help<b>?</b></span>
+										</button>
+									</div>
+									<h3>Text tool</h3>
+									<div class="textTool">
+										<button type="button" class="buttongr"><img class="Ticon" src="img/icons/type.svg" alt="text-icon"></button>
+									</div>
+									<h3 class="clear-both">Text options</h3>
+									<div class="textTool">
+										<label class="text-input editor-tab-content-input" title="Choose size for text">
+											<span>Size</span>
+											<input type="text" name="editor-text-size" class="round-corners button-w" placeholder="Input size in pt">
+										</label>
+										<label class="select-label editor-tab-content-input" title="Select text weight">
+											<span class="select-span">Weight</span>
+											<div class="select-wrapper">
+												<select name="editor-text-weight" class="sort-by-select select">
+													<option value="normal" selected="">Normal</option>
+													<option value="bold">Bold</option>
+													<option value="thin">thin</option>
+												</select>
+											</div>
+										</label>
+									</div>
+								</article>
+								<!--CODE EDITOR-->
+								<article id="code-tab-content"  class="editor-tab-content hidden">
+									<div class="editor-aside-tab-content-top">
+										<button type="button" class="button-n rounded-corners help" title="Edit report code in the textfield. You can download the report with save, edit it, then upload with Upload.">
+											<span>Help<b>?</b></span>
+										</button>
+										<a href="show.html" class="group-view-button button-w rounded-corners disabled" title="Go to report preview">
+											<span>Preview</span>
+											<img src="img/icons/eye.svg" alt="Eye icon">
+										</a>
+										<a href="test-report.html" class="group-view-button button-w rounded-corners" title="Download report file" download="">
+											<span>Save</span>
+											<img src="img/icons/save.svg" alt="Save icon">
+										</a>
+										<label class="upload-button rounded-corners button-w" title="Upload image to Graph tab">
+											<span>Upload</span>
+											<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
+											<input type="file" class="rounded-corners button-w hidden" name="upload-template">
+										</label>
+									</div>
+									<div class="codeEditorOverDiv">
+										<textarea class="editor-tab-code-editor"><div class="report-preview single-page-display">
+	<div class="page-wrapper">
+        <div class="page">
+            <header contenteditable="true">hea</header>
+            <div class="report-page-section box-number-1" contenteditable="true"></div>
+            <div class="report-page-section box-number-2" contenteditable="true"></div>
+            <div class="report-page-section box-number-3" contenteditable="true"></div>
+            <div class="report-page-section box-number-4" contenteditable="true"></div>
+            <div class="report-page-section box-number-5" contenteditable="true"></div>
+            <div class="report-page-section box-number-6" contenteditable="true"></div>
+            <div class="report-page-section box-number-7" contenteditable="true"></div>
+            <div class="report-page-section box-number-8" contenteditable="true"></div>
+            <footer contenteditable="true">foo</footer>
+        </div>
+    </div>
+</div></textarea>
+									</div>
+								</article>
+							</div>
+						</aside>
 					</td>
 					<!--CSS -->
 					<td class="code">
-					</td>
-					<!--Java Script-->
-					<td class="code">
-						/*Disse to funktioner lader brugeren skifte mellem editor tabs*/
-						function switchedit(switcheditpage) {
-							let editpage = ["graphs", "text", "templates", "codeEditorTab"];
-							for(i = 0; i < editpage.length; i++){
-								if(switcheditpage == editpage[i]){
-									document.getElementById(editpage[i]).classList.remove("hidden");
-								}
-								else{
-									document.getElementById(editpage[i]).classList.add("hidden");
-								}
-							}
+						/* - EDITOR TABS - */
+						.editor-aside {
+							float: right;
+							width: 100%;
+							height: 100%;
+							background-color: #404040;
 						}
-						function switcheditbg(editbgswitch) {
-							let editbg = ["graphs-tab", "text-tab", "template-tab", "code-tab"];
-							for(i = 0; i < editbg.length; i++){
-								if(editbgswitch == editbg[i]){
-									document.getElementById(editbg[i]).classList.remove("lightbg");
+
+						.editor-aside-nav {
+							width: 100%;
+							display: grid;
+							grid-template-columns: auto auto auto auto;
+							align-items: center;
+							justify-items: center;
+							grid-gap: 2px;
+						}
+
+						.editor-aside-nav-button {
+							display: grid;
+							align-items: center;
+							justify-items: center;
+							margin: 0 auto;
+							width: 100%;
+							height: 50px;
+							text-align: center;
+							color: #fff;
+							background-color: #6F6F6F;
+						}
+
+						.editor-aside-nav-button.current {
+							background-color: transparent;
+						}
+
+						.editor-tab-content {
+							overflow-y: auto;
+							float: left;
+							width: 100%;
+							max-height: 100vh;
+							padding: 15px;
+							box-sizing: border-box;
+						}
+
+						.editor-tab-content-wrapper {
+							margin: 20px 10px 0;
+							width: calc(100% - 20px); /* 100% width - 20px margin */
+						}
+
+
+						.editor-tab-content h3 {
+							color: #FFF;
+						}
+
+						.editor-aside-grid {
+							width: 100%; 
+							display: grid; 
+							grid-template-columns: 32% 32% 32%;
+							grid-gap: 2%;
+							margin-top: 15px;
+						}
+
+						.editor-aside-tab-content-top {
+							float: right;
+						}
+
+						.editor-aside-tab-content-top > button,
+						.editor-aside-tab-content-top > a,
+						.editor-aside-tab-content-top > label {
+							float: right;
+							font-size: 100%;
+							min-width: 1px;
+							margin-left: 15px;
+						}
+
+						.editor-aside-tab-content-top > label{
+							padding-top: 4px;
+							padding-bottom: 4px;
+							padding-right: 42px;
+						}
+
+						.editor-aside-tab-content-top > button span
+						.editor-aside-tab-content-top > a span {
+							float: left;
+							font-size: 110%;
+						}
+
+
+
+						/* TEMPLATE TAB */
+						.templates-content-wrapper {
+							width: 100%;
+						}
+
+
+						/* TEXT TAB */
+						.textTool {
+							width: 100%;
+							margin: 15px 0;
+						}
+
+						.textTool label {
+							max-width: 100%;
+							font-size: 100%;
+							clear: none;
+							overflow: hidden;
+							padding-right: 15px;
+							box-sizing: border-box;
+						}
+						.textTool label:last-child {
+							padding-right: 0;
+						}
+
+						.textTool label input,
+						.textTool label select {
+							font-size: 142.85%;
+						}
+
+						.textTool label input,
+						.textTool label .select-wrapper,
+						.textTool label select {
+							float: right;
+							max-width: 100%;
+						}
+
+						.textTool label span {
+							color: #FFF;
+						}
+						.textTool .select-span {
+							line-height: 2em;
+							color: #FFF;
+						}
+
+						.textToolImgButton {
+							background-color: #303030;
+							border: none;
+							border-radius: 12px;
+							width: 40px;
+							height: 40px;
+							float: left;
+							cursor: pointer;
+						}
+
+						.textToolImgButton img {
+							margin: 5px;
+							width: 30px;
+							float: none;
+						}
+
+						.textEditDiv {
+							color: #fff;
+							margin-right: 30px;
+						}
+
+						.textEditDiv label {
+							margin-right: 50px;
+							width: auto;
+						}
+
+						/* CODE TAB */
+						.codeEditorOverDiv {
+							width: 100%;
+							margin-top: 15px;
+						}
+
+						.editor-tab-code-editor {
+							min-height: 50vh;
+						}
+					</td>
+					<!--JavaScript-->
+					<td class="code">
+						// -- EDITOR TAB --
+						let templateTab = document.getElementById("template-tab");
+						let graphsTab = document.getElementById("graphs-tab");
+						let textTab = document.getElementById("text-tab");
+						let codeTab = document.getElementById("code-tab");
+						let editorAsideNavButton = document.getElementsByClassName("editor-aside-nav-button");
+						let editorTabContent = document.getElementsByClassName("editor-tab-content");
+
+						for(let i= 0; i < editorAsideNavButton.length; i++) {
+							editorAsideNavButton[i].addEventListener("click", function(){
+								for(let i= 0; i < editorAsideNavButton.length; i++) {
+									editorAsideNavButton[i].classList.remove("current");
 								}
-								else{
-									document.getElementById(editbg[i]).classList.add("lightbg");
+								editorAsideNavButton[i].classList.add("current");
+								for(let i= 0; i < editorTabContent.length; i++) {
+									editorTabContent[i].classList.remove("current");
+									editorTabContent[i].classList.add("hidden");
 								}
-							}
+								let content = document.getElementById(editorAsideNavButton[i].value);
+								content.classList.add("current");
+								content.classList.remove("hidden");
+								//console.log(content);
+							});
 						}
 					</td>
 				</tr>
@@ -9626,7 +10055,9 @@
 		<h3 class="styleguide-title">Templates</h3>
 	</div>
 	<article id="xd4">
-		<a href="https://xd.adobe.com/view/8781178e-5436-4d15-4637-6a91f2145d3a-f1b0/screen/d091af41-00aa-47f2-8bf8-52ccf19b1a9f/Editor-horizontal-report-multiple-1">Prototype 4</a>
+		<div class="wrapper">
+			<a href="https://xd.adobe.com/view/8781178e-5436-4d15-4637-6a91f2145d3a-f1b0/screen/d091af41-00aa-47f2-8bf8-52ccf19b1a9f/Editor-horizontal-report-multiple-1">Prototype 4</a>
+		</div>
 	</article>
 </section>
 
