@@ -9316,7 +9316,7 @@
 		<div class="wrapper">
 			<h4 class="styleguide-title">Report preview; horisontal preview</h4>
 		</div>
-		<div id="wrapper_header_example" class="example">
+		<div class="example">
 			<div class="report-preview single-page-display">
 				<div class="page-wrapper">
 					<div class="page pageHorizontal current-page">
@@ -9497,6 +9497,7 @@
 								<input type="file" class="uploadimagebutton rounded-corners button-w hidden" name="upload-image">
 							</label>
 						</div>
+						<h3>Graphs</h3>
 						<div class="editor-aside-grid">
 							<!-- Highcharts type: bar -->
 							<article class="highcart-preview">
@@ -9539,6 +9540,7 @@
 								</div>
 							</article>
 						</div>
+						<h3 class="clear-both">Images</h3>
 					</article>
 					<!--TEXT EDITOR-->
 					<article id="text-tab-content" class="hidden editor-tab-content">
@@ -9733,6 +9735,7 @@
 											<input type="file" class="uploadimagebutton rounded-corners button-w hidden" name="upload-image">
 										</label>
 									</div>
+									<h3>Graphs</h3>
 									<div class="editor-aside-grid">
 										<!-- Highcharts type: bar -->
 										<article class="highcart-preview">
@@ -9775,6 +9778,7 @@
 											</div>
 										</article>
 									</div>
+									<h3 class="clear-both">Images</h3>
 								</article>
 								<!--TEXT EDITOR-->
 								<article id="text-tab-content" class="hidden editor-tab-content">
@@ -9827,7 +9831,7 @@
 									</div>
 									<div class="codeEditorOverDiv">
 										<textarea class="editor-tab-code-editor"><div class="report-preview single-page-display">
-	<div class="page-wrapper">
+    <div class="page-wrapper">
         <div class="page">
             <header contenteditable="true">hea</header>
             <div class="report-page-section box-number-1" contenteditable="true"></div>
@@ -10041,6 +10045,825 @@
 								content.classList.remove("hidden");
 								//console.log(content);
 							});
+						}
+					</td>
+				</tr>
+			</table>
+		</div>
+	</article>
+	<!-- REPORT PREVIEW SECTION -->
+	<article id="report-preview-section">
+		<div class="wrapper">
+			<h4 class="styleguide-title">Report preview; horisontal preview</h4>
+		</div>
+		<div class="example">
+			<div class="wrapper">
+				<section class="report-preview-section">
+					<div class="report-preview-section-grid">
+						<article id="report-1" class="report-preview-outbox">
+							<a href="show.html" class="rep-name disabled" title="Report name #1">Report name <span class="report-id">#1</span></a>
+							<button type="button" class="report-options">
+								<img class="report-options-img" src="img/icons/tandhjul.svg" alt="gear">
+							</button>
+							<div class="settings-menu menu hidden">
+								<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+								<a href="editor.html" class="settings-menu-button" title="Edit report">
+									<span>Edit</span>
+									<img class="settings-menu-icon" src="img/icons/edit.svg" alt="editicon">
+								</a>
+								<a href="show.html" class="settings-menu-button disabled" title="Open report">
+									<span>Show</span>
+									<img class="settings-menu-icon" src="img/icons/eye.svg" alt="showicon">
+								</a>
+								<button name="schedule-report" type="button" class="settings-menu-button" title="Open schedule options for report">
+									<span>Schedule</span>
+									<img class="settings-menu-icon" src="img/icons/calendar.svg" alt="scheduleicon">
+								</button>
+								<button name="share-report" type="button" class="settings-menu-button" title="Select how to share report">
+									<span>Share</span>
+									<img class="settings-menu-icon" src="img/icons/share-2.svg" alt="shareicon">
+								</button>
+								<button name="save-report-as" type="button" class="settings-menu-button" title="Select how to save report">
+									<span>Save as..</span>
+									<img class="settings-menu-icon" src="img/icons/save.svg" alt="saveasicon">
+								</button>
+								<button name="print" type="button" class="settings-menu-button" title="Print report">
+									<span>Print</span>
+									<img class="settings-menu-icon" src="img/icons/printer.svg" alt="printicon">
+								</button>
+								<button name="delete-report" type="button" class="settings-menu-button disabled" title="Delete report">
+									<span>Delete</span>
+									<img class="settings-menu-icon" src="img/icons/trash-2.svg" alt="delete icon">
+								</button>
+							</div>
+							<div class="report-preview-meta">
+								<span class="report-preview-meta-schedule">Sheduled: <span class="report-preview-meta-green">Delivered</span></span>
+								<span class="report-preview-meta-result">Result: <span class="report-preview-meta-red">Failed</span></span>
+							</div>
+							<div class="aspect-one-to-one">
+								<a href="show.html" class="report-preview-content disabled">
+									<div class="preview-inbox">
+										<img class="preview-img" src="img/previewreport.png">
+									</div>
+								</a>
+							</div>
+						</article>
+						<article id="report-2" class="report-preview-outbox">
+							<a href="show.html" class="rep-name disabled" title="Report name #2">Report name <span class="report-id">#2</span></a>
+							<button type="button" class="report-options">
+								<img class="report-options-img" src="img/icons/tandhjul.svg" alt="gear">
+							</button>
+							<div class="settings-menu menu hidden">
+								<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+								<a href="editor.html" class="settings-menu-button" title="Edit report">
+									<span>Edit</span>
+									<img class="settings-menu-icon" src="img/icons/edit.svg" alt="editicon">
+								</a>
+								<a href="show.html" class="settings-menu-button disabled" title="Open report">
+									<span>Show</span>
+									<img class="settings-menu-icon" src="img/icons/eye.svg" alt="showicon">
+								</a>
+								<button name="schedule-report" type="button" class="settings-menu-button" title="Open schedule options for report">
+									<span>Schedule</span>
+									<img class="settings-menu-icon" src="img/icons/calendar.svg" alt="scheduleicon">
+								</button>
+								<button name="share-report" type="button" class="settings-menu-button" title="Select how to share report">
+									<span>Share</span>
+									<img class="settings-menu-icon" src="img/icons/share-2.svg" alt="shareicon">
+								</button>
+								<button name="save-report-as" type="button" class="settings-menu-button" title="Select how to save report">
+									<span>Save as..</span>
+									<img class="settings-menu-icon" src="img/icons/save.svg" alt="saveasicon">
+								</button>
+								<button name="print" type="button" class="settings-menu-button" title="Print report">
+									<span>Print</span>
+									<img class="settings-menu-icon" src="img/icons/printer.svg" alt="printicon">
+								</button>
+								<button name="delete-report" type="button" class="settings-menu-button disabled" title="Delete report">
+									<span>Delete</span>
+									<img class="settings-menu-icon" src="img/icons/trash-2.svg" alt="delete icon">
+								</button>
+							</div>
+							<div class="report-preview-meta">
+								<span class="report-preview-meta-schedule">Sheduled: <span class="report-preview-meta-green">Delivered</span></span>
+								<span class="report-preview-meta-result">Result: <span class="report-preview-meta-red">Failed</span></span>
+							</div>
+							<div class="aspect-one-to-one">
+								<a href="show.html" class="report-preview-content disabled">
+									<div class="preview-inbox">
+										<img class="preview-img" src="img/previewreport.png">
+									</div>
+								</a>
+							</div>
+						</article>
+						<article id="report-3" class="report-preview-outbox">
+							<a href="show.html" class="rep-name disabled" title="Report name #3">Report name <span class="report-id">#3</span></a>
+							<button type="button" class="report-options">
+								<img class="report-options-img" src="img/icons/tandhjul.svg" alt="gear">
+							</button>
+							<div class="settings-menu menu hidden">
+								<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+								<a href="editor.html" class="settings-menu-button" title="Edit report">
+									<span>Edit</span>
+									<img class="settings-menu-icon" src="img/icons/edit.svg" alt="editicon">
+								</a>
+								<a href="show.html" class="settings-menu-button disabled" title="Open report">
+									<span>Show</span>
+									<img class="settings-menu-icon" src="img/icons/eye.svg" alt="showicon">
+								</a>
+								<button name="schedule-report" type="button" class="settings-menu-button" title="Open schedule options for report">
+									<span>Schedule</span>
+									<img class="settings-menu-icon" src="img/icons/calendar.svg" alt="scheduleicon">
+								</button>
+								<button name="share-report" type="button" class="settings-menu-button" title="Select how to share report">
+									<span>Share</span>
+									<img class="settings-menu-icon" src="img/icons/share-2.svg" alt="shareicon">
+								</button>
+								<button name="save-report-as" type="button" class="settings-menu-button" title="Select how to save report">
+									<span>Save as..</span>
+									<img class="settings-menu-icon" src="img/icons/save.svg" alt="saveasicon">
+								</button>
+								<button name="print" type="button" class="settings-menu-button" title="Print report">
+									<span>Print</span>
+									<img class="settings-menu-icon" src="img/icons/printer.svg" alt="printicon">
+								</button>
+								<button name="delete-report" type="button" class="settings-menu-button disabled" title="Delete report">
+									<span>Delete</span>
+									<img class="settings-menu-icon" src="img/icons/trash-2.svg" alt="delete icon">
+								</button>
+							</div>
+							<div class="report-preview-meta">
+								<span class="report-preview-meta-schedule">Sheduled: <span class="report-preview-meta-green">Delivered</span></span>
+								<span class="report-preview-meta-result">Result: <span class="report-preview-meta-red">Failed</span></span>
+							</div>
+							<div class="aspect-one-to-one">
+								<a href="show.html" class="report-preview-content disabled">
+									<div class="preview-inbox">
+										<img class="preview-img" src="img/previewreport.png">
+									</div>
+								</a>
+							</div>
+						</article>
+						<article id="report-4" class="report-preview-outbox">
+							<a href="show.html" class="rep-name disabled" title="Report name #5">Report name <span class="report-id">#4</span></a>
+							<button type="button" class="report-options">
+								<img class="report-options-img" src="img/icons/tandhjul.svg" alt="gear">
+							</button>
+							<div class="settings-menu menu hidden">
+								<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+								<a href="editor.html" class="settings-menu-button" title="Edit report">
+									<span>Edit</span>
+									<img class="settings-menu-icon" src="img/icons/edit.svg" alt="editicon">
+								</a>
+								<a href="show.html" class="settings-menu-button disabled" title="Open report">
+									<span>Show</span>
+									<img class="settings-menu-icon" src="img/icons/eye.svg" alt="showicon">
+								</a>
+								<button name="schedule-report" type="button" class="settings-menu-button" title="Open schedule options for report">
+									<span>Schedule</span>
+									<img class="settings-menu-icon" src="img/icons/calendar.svg" alt="scheduleicon">
+								</button>
+								<button name="share-report" type="button" class="settings-menu-button" title="Select how to share report">
+									<span>Share</span>
+									<img class="settings-menu-icon" src="img/icons/share-2.svg" alt="shareicon">
+								</button>
+								<button name="save-report-as" type="button" class="settings-menu-button" title="Select how to save report">
+									<span>Save as..</span>
+									<img class="settings-menu-icon" src="img/icons/save.svg" alt="saveasicon">
+								</button>
+								<button name="print" type="button" class="settings-menu-button" title="Print report">
+									<span>Print</span>
+									<img class="settings-menu-icon" src="img/icons/printer.svg" alt="printicon">
+								</button>
+								<button name="delete-report" type="button" class="settings-menu-button disabled" title="Delete report">
+									<span>Delete</span>
+									<img class="settings-menu-icon" src="img/icons/trash-2.svg" alt="delete icon">
+								</button>
+							</div>
+							<div class="report-preview-meta">
+								<span class="report-preview-meta-schedule">Sheduled: <span class="report-preview-meta-green">Delivered</span></span>
+								<span class="report-preview-meta-result">Result: <span class="report-preview-meta-red">Failed</span></span>
+							</div>
+							<div class="aspect-one-to-one">
+								<a href="show.html" class="report-preview-content disabled">
+									<div class="preview-inbox">
+										<img class="preview-img" src="img/previewreport.png">
+									</div>
+								</a>
+							</div>
+						</article>
+						<article id="report-5" class="report-preview-outbox">
+							<a href="show.html" class="rep-name disabled" title="Report name #5">Report name <span class="report-id">#5</span></a>
+							<button type="button" class="report-options">
+								<img class="report-options-img" src="img/icons/tandhjul.svg" alt="gear">
+							</button>
+							<div class="settings-menu menu hidden">
+								<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+								<a href="editor.html" class="settings-menu-button" title="Edit report">
+									<span>Edit</span>
+									<img class="settings-menu-icon" src="img/icons/edit.svg" alt="editicon">
+								</a>
+								<a href="show.html" class="settings-menu-button disabled" title="Open report">
+									<span>Show</span>
+									<img class="settings-menu-icon" src="img/icons/eye.svg" alt="showicon">
+								</a>
+								<button name="schedule-report" type="button" class="settings-menu-button" title="Open schedule options for report">
+									<span>Schedule</span>
+									<img class="settings-menu-icon" src="img/icons/calendar.svg" alt="scheduleicon">
+								</button>
+								<button name="share-report" type="button" class="settings-menu-button" title="Select how to share report">
+									<span>Share</span>
+									<img class="settings-menu-icon" src="img/icons/share-2.svg" alt="shareicon">
+								</button>
+								<button name="save-report-as" type="button" class="settings-menu-button" title="Select how to save report">
+									<span>Save as..</span>
+									<img class="settings-menu-icon" src="img/icons/save.svg" alt="saveasicon">
+								</button>
+								<button name="print" type="button" class="settings-menu-button" title="Print report">
+									<span>Print</span>
+									<img class="settings-menu-icon" src="img/icons/printer.svg" alt="printicon">
+								</button>
+								<button name="delete-report" type="button" class="settings-menu-button disabled" title="Delete report">
+									<span>Delete</span>
+									<img class="settings-menu-icon" src="img/icons/trash-2.svg" alt="delete icon">
+								</button>
+							</div>
+							<div class="report-preview-meta">
+								<span class="report-preview-meta-schedule">Sheduled: <span class="report-preview-meta-green">Delivered</span></span>
+								<span class="report-preview-meta-result">Result: <span class="report-preview-meta-red">Failed</span></span>
+							</div>
+							<div class="aspect-one-to-one">
+								<a href="show.html" class="report-preview-content disabled">
+									<div class="preview-inbox">
+										<img class="preview-img" src="img/previewreport.png">
+									</div>
+								</a>
+							</div>
+						</article>
+						<article id="report-6" class="report-preview-outbox">
+							<a href="show.html" class="rep-name disabled" title="Report name #6">Report name <span class="report-id">#6</span></a>
+							<button type="button" class="report-options">
+								<img class="report-options-img" src="img/icons/tandhjul.svg" alt="gear">
+							</button>
+							<div class="settings-menu menu hidden">
+								<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+								<a href="editor.html" class="settings-menu-button" title="Edit report">
+									<span>Edit</span>
+									<img class="settings-menu-icon" src="img/icons/edit.svg" alt="editicon">
+								</a>
+								<a href="show.html" class="settings-menu-button disabled" title="Open report">
+									<span>Show</span>
+									<img class="settings-menu-icon" src="img/icons/eye.svg" alt="showicon">
+								</a>
+								<button name="schedule-report" type="button" class="settings-menu-button" title="Open schedule options for report">
+									<span>Schedule</span>
+									<img class="settings-menu-icon" src="img/icons/calendar.svg" alt="scheduleicon">
+								</button>
+								<button name="share-report" type="button" class="settings-menu-button" title="Select how to share report">
+									<span>Share</span>
+									<img class="settings-menu-icon" src="img/icons/share-2.svg" alt="shareicon">
+								</button>
+								<button name="save-report-as" type="button" class="settings-menu-button" title="Select how to save report">
+									<span>Save as..</span>
+									<img class="settings-menu-icon" src="img/icons/save.svg" alt="saveasicon">
+								</button>
+								<button name="print" type="button" class="settings-menu-button" title="Print report">
+									<span>Print</span>
+									<img class="settings-menu-icon" src="img/icons/printer.svg" alt="printicon">
+								</button>
+								<button name="delete-report" type="button" class="settings-menu-button disabled" title="Delete report">
+									<span>Delete</span>
+									<img class="settings-menu-icon" src="img/icons/trash-2.svg" alt="delete icon">
+								</button>
+							</div>
+							<div class="report-preview-meta">
+								<span class="report-preview-meta-schedule">Sheduled: <span class="report-preview-meta-green">Delivered</span></span>
+								<span class="report-preview-meta-result">Result: <span class="report-preview-meta-red">Failed</span></span>
+							</div>
+							<div class="aspect-one-to-one">
+								<a href="show.html" class="report-preview-content disabled">
+									<div class="preview-inbox">
+										<img class="preview-img" src="img/previewreport.png">
+									</div>
+								</a>
+							</div>
+						</article>
+						<article id="report-7" class="report-preview-outbox">
+							<a href="show.html" class="rep-name disabled" title="Report name #7">Report name <span class="report-id">#7</span></a>
+							<button type="button" class="report-options">
+								<img class="report-options-img" src="img/icons/tandhjul.svg" alt="gear">
+							</button>
+							<div class="settings-menu menu hidden">
+								<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+								<a href="editor.html" class="settings-menu-button" title="Edit report">
+									<span>Edit</span>
+									<img class="settings-menu-icon" src="img/icons/edit.svg" alt="editicon">
+								</a>
+								<a href="show.html" class="settings-menu-button disabled" title="Open report">
+									<span>Show</span>
+									<img class="settings-menu-icon" src="img/icons/eye.svg" alt="showicon">
+								</a>
+								<button name="schedule-report" type="button" class="settings-menu-button" title="Open schedule options for report">
+									<span>Schedule</span>
+									<img class="settings-menu-icon" src="img/icons/calendar.svg" alt="scheduleicon">
+								</button>
+								<button name="share-report" type="button" class="settings-menu-button" title="Select how to share report">
+									<span>Share</span>
+									<img class="settings-menu-icon" src="img/icons/share-2.svg" alt="shareicon">
+								</button>
+								<button name="save-report-as" type="button" class="settings-menu-button" title="Select how to save report">
+									<span>Save as..</span>
+									<img class="settings-menu-icon" src="img/icons/save.svg" alt="saveasicon">
+								</button>
+								<button name="print" type="button" class="settings-menu-button" title="Print report">
+									<span>Print</span>
+									<img class="settings-menu-icon" src="img/icons/printer.svg" alt="printicon">
+								</button>
+								<button name="delete-report" type="button" class="settings-menu-button disabled" title="Delete report">
+									<span>Delete</span>
+									<img class="settings-menu-icon" src="img/icons/trash-2.svg" alt="delete icon">
+								</button>
+							</div>
+							<div class="report-preview-meta">
+								<span class="report-preview-meta-schedule">Sheduled: <span class="report-preview-meta-green">Delivered</span></span>
+								<span class="report-preview-meta-result">Result: <span class="report-preview-meta-red">Failed</span></span>
+							</div>
+							<div class="aspect-one-to-one">
+								<a href="show.html" class="report-preview-content disabled">
+									<div class="preview-inbox">
+										<img class="preview-img" src="img/previewreport.png">
+									</div>
+								</a>
+							</div>
+						</article>
+						<article id="report-8" class="report-preview-outbox">
+							<a href="show.html" class="rep-name disabled" title="Report name #8">Report name <span class="report-id">#8</span></a>
+							<button type="button" class="report-options">
+								<img class="report-options-img" src="img/icons/tandhjul.svg" alt="gear">
+							</button>
+							<div class="settings-menu menu hidden">
+								<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+								<a href="editor.html" class="settings-menu-button" title="Edit report">
+									<span>Edit</span>
+									<img class="settings-menu-icon" src="img/icons/edit.svg" alt="editicon">
+								</a>
+								<a href="show.html" class="settings-menu-button disabled" title="Open report">
+									<span>Show</span>
+									<img class="settings-menu-icon" src="img/icons/eye.svg" alt="showicon">
+								</a>
+								<button name="schedule-report" type="button" class="settings-menu-button" title="Open schedule options for report">
+									<span>Schedule</span>
+									<img class="settings-menu-icon" src="img/icons/calendar.svg" alt="scheduleicon">
+								</button>
+								<button name="share-report" type="button" class="settings-menu-button" title="Select how to share report">
+									<span>Share</span>
+									<img class="settings-menu-icon" src="img/icons/share-2.svg" alt="shareicon">
+								</button>
+								<button name="save-report-as" type="button" class="settings-menu-button" title="Select how to save report">
+									<span>Save as..</span>
+									<img class="settings-menu-icon" src="img/icons/save.svg" alt="saveasicon">
+								</button>
+								<button name="print" type="button" class="settings-menu-button" title="Print report">
+									<span>Print</span>
+									<img class="settings-menu-icon" src="img/icons/printer.svg" alt="printicon">
+								</button>
+								<button name="delete-report" type="button" class="settings-menu-button disabled" title="Delete report">
+									<span>Delete</span>
+									<img class="settings-menu-icon" src="img/icons/trash-2.svg" alt="delete icon">
+								</button>
+							</div>
+							<div class="report-preview-meta">
+								<span class="report-preview-meta-schedule">Sheduled: <span class="report-preview-meta-green">Delivered</span></span>
+								<span class="report-preview-meta-result">Result: <span class="report-preview-meta-red">Failed</span></span>
+							</div>
+							<div class="aspect-one-to-one">
+								<a href="show.html" class="report-preview-content disabled">
+									<div class="preview-inbox">
+										<img class="preview-img" src="img/previewreport.png">
+									</div>
+								</a>
+							</div>
+						</article>
+					</div>
+				</section>
+			</div>
+		</div>
+		<div class="wrapper">
+			<table class="templateTable">
+				<tr class="row-one">
+					<th>HTML</th>
+					<th>CSS</th>
+				</tr>
+				<tr class="row-two">
+					<!--HTML -->
+					<td class="code">
+						<section class="report-preview-section">
+							<div class="report-preview-section-grid">
+								<article id="report-1" class="report-preview-outbox">
+									<a href="show.html" class="rep-name disabled" title="Report name #1">Report name <span class="report-id">#1</span></a>
+									<button type="button" class="report-options">
+										<img class="report-options-img" src="img/icons/tandhjul.svg" alt="gear">
+									</button>
+									<div class="settings-menu menu hidden">
+										<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+										<a href="editor.html" class="settings-menu-button" title="Edit report">
+											<span>Edit</span>
+											<img class="settings-menu-icon" src="img/icons/edit.svg" alt="editicon">
+										</a>
+										<a href="show.html" class="settings-menu-button disabled" title="Open report">
+											<span>Show</span>
+											<img class="settings-menu-icon" src="img/icons/eye.svg" alt="showicon">
+										</a>
+										<button name="schedule-report" type="button" class="settings-menu-button" title="Open schedule options for report">
+											<span>Schedule</span>
+											<img class="settings-menu-icon" src="img/icons/calendar.svg" alt="scheduleicon">
+										</button>
+										<button name="share-report" type="button" class="settings-menu-button" title="Select how to share report">
+											<span>Share</span>
+											<img class="settings-menu-icon" src="img/icons/share-2.svg" alt="shareicon">
+										</button>
+										<button name="save-report-as" type="button" class="settings-menu-button" title="Select how to save report">
+											<span>Save as..</span>
+											<img class="settings-menu-icon" src="img/icons/save.svg" alt="saveasicon">
+										</button>
+										<button name="print" type="button" class="settings-menu-button" title="Print report">
+											<span>Print</span>
+											<img class="settings-menu-icon" src="img/icons/printer.svg" alt="printicon">
+										</button>
+										<button name="delete-report" type="button" class="settings-menu-button disabled" title="Delete report">
+											<span>Delete</span>
+											<img class="settings-menu-icon" src="img/icons/trash-2.svg" alt="delete icon">
+										</button>
+									</div>
+									<div class="report-preview-meta">
+										<span class="report-preview-meta-schedule">Sheduled: <span class="report-preview-meta-green">Delivered</span></span>
+										<span class="report-preview-meta-result">Result: <span class="report-preview-meta-red">Failed</span></span>
+									</div>
+									<div class="aspect-one-to-one">
+										<a href="show.html" class="report-preview-content disabled">
+											<div class="preview-inbox">
+												<img class="preview-img" src="img/previewreport.png">
+											</div>
+										</a>
+									</div>
+								</article>
+								<article id="report-2" class="report-preview-outbox">
+									<a href="show.html" class="rep-name disabled" title="Report name #2">Report name <span class="report-id">#2</span></a>
+									<button type="button" class="report-options">
+										<img class="report-options-img" src="img/icons/tandhjul.svg" alt="gear">
+									</button>
+									<div class="settings-menu menu hidden">
+										<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+										<a href="editor.html" class="settings-menu-button" title="Edit report">
+											<span>Edit</span>
+											<img class="settings-menu-icon" src="img/icons/edit.svg" alt="editicon">
+										</a>
+										<a href="show.html" class="settings-menu-button disabled" title="Open report">
+											<span>Show</span>
+											<img class="settings-menu-icon" src="img/icons/eye.svg" alt="showicon">
+										</a>
+										<button name="schedule-report" type="button" class="settings-menu-button" title="Open schedule options for report">
+											<span>Schedule</span>
+											<img class="settings-menu-icon" src="img/icons/calendar.svg" alt="scheduleicon">
+										</button>
+										<button name="share-report" type="button" class="settings-menu-button" title="Select how to share report">
+											<span>Share</span>
+											<img class="settings-menu-icon" src="img/icons/share-2.svg" alt="shareicon">
+										</button>
+										<button name="save-report-as" type="button" class="settings-menu-button" title="Select how to save report">
+											<span>Save as..</span>
+											<img class="settings-menu-icon" src="img/icons/save.svg" alt="saveasicon">
+										</button>
+										<button name="print" type="button" class="settings-menu-button" title="Print report">
+											<span>Print</span>
+											<img class="settings-menu-icon" src="img/icons/printer.svg" alt="printicon">
+										</button>
+										<button name="delete-report" type="button" class="settings-menu-button disabled" title="Delete report">
+											<span>Delete</span>
+											<img class="settings-menu-icon" src="img/icons/trash-2.svg" alt="delete icon">
+										</button>
+									</div>
+									<div class="report-preview-meta">
+										<span class="report-preview-meta-schedule">Sheduled: <span class="report-preview-meta-green">Delivered</span></span>
+										<span class="report-preview-meta-result">Result: <span class="report-preview-meta-red">Failed</span></span>
+									</div>
+									<div class="aspect-one-to-one">
+										<a href="show.html" class="report-preview-content disabled">
+											<div class="preview-inbox">
+												<img class="preview-img" src="img/previewreport.png">
+											</div>
+										</a>
+									</div>
+								</article>
+								<article id="report-3" class="report-preview-outbox">
+									<a href="show.html" class="rep-name disabled" title="Report name #3">Report name <span class="report-id">#3</span></a>
+									<button type="button" class="report-options">
+										<img class="report-options-img" src="img/icons/tandhjul.svg" alt="gear">
+									</button>
+									<div class="settings-menu menu hidden">
+										<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+										<a href="editor.html" class="settings-menu-button" title="Edit report">
+											<span>Edit</span>
+											<img class="settings-menu-icon" src="img/icons/edit.svg" alt="editicon">
+										</a>
+										<a href="show.html" class="settings-menu-button disabled" title="Open report">
+											<span>Show</span>
+											<img class="settings-menu-icon" src="img/icons/eye.svg" alt="showicon">
+										</a>
+										<button name="schedule-report" type="button" class="settings-menu-button" title="Open schedule options for report">
+											<span>Schedule</span>
+											<img class="settings-menu-icon" src="img/icons/calendar.svg" alt="scheduleicon">
+										</button>
+										<button name="share-report" type="button" class="settings-menu-button" title="Select how to share report">
+											<span>Share</span>
+											<img class="settings-menu-icon" src="img/icons/share-2.svg" alt="shareicon">
+										</button>
+										<button name="save-report-as" type="button" class="settings-menu-button" title="Select how to save report">
+											<span>Save as..</span>
+											<img class="settings-menu-icon" src="img/icons/save.svg" alt="saveasicon">
+										</button>
+										<button name="print" type="button" class="settings-menu-button" title="Print report">
+											<span>Print</span>
+											<img class="settings-menu-icon" src="img/icons/printer.svg" alt="printicon">
+										</button>
+										<button name="delete-report" type="button" class="settings-menu-button disabled" title="Delete report">
+											<span>Delete</span>
+											<img class="settings-menu-icon" src="img/icons/trash-2.svg" alt="delete icon">
+										</button>
+									</div>
+									<div class="report-preview-meta">
+										<span class="report-preview-meta-schedule">Sheduled: <span class="report-preview-meta-green">Delivered</span></span>
+										<span class="report-preview-meta-result">Result: <span class="report-preview-meta-red">Failed</span></span>
+									</div>
+									<div class="aspect-one-to-one">
+										<a href="show.html" class="report-preview-content disabled">
+											<div class="preview-inbox">
+												<img class="preview-img" src="img/previewreport.png">
+											</div>
+										</a>
+									</div>
+								</article>
+								<article id="report-4" class="report-preview-outbox">
+									<a href="show.html" class="rep-name disabled" title="Report name #5">Report name <span class="report-id">#4</span></a>
+									<button type="button" class="report-options">
+										<img class="report-options-img" src="img/icons/tandhjul.svg" alt="gear">
+									</button>
+									<div class="settings-menu menu hidden">
+										<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+										<a href="editor.html" class="settings-menu-button" title="Edit report">
+											<span>Edit</span>
+											<img class="settings-menu-icon" src="img/icons/edit.svg" alt="editicon">
+										</a>
+										<a href="show.html" class="settings-menu-button disabled" title="Open report">
+											<span>Show</span>
+											<img class="settings-menu-icon" src="img/icons/eye.svg" alt="showicon">
+										</a>
+										<button name="schedule-report" type="button" class="settings-menu-button" title="Open schedule options for report">
+											<span>Schedule</span>
+											<img class="settings-menu-icon" src="img/icons/calendar.svg" alt="scheduleicon">
+										</button>
+										<button name="share-report" type="button" class="settings-menu-button" title="Select how to share report">
+											<span>Share</span>
+											<img class="settings-menu-icon" src="img/icons/share-2.svg" alt="shareicon">
+										</button>
+										<button name="save-report-as" type="button" class="settings-menu-button" title="Select how to save report">
+											<span>Save as..</span>
+											<img class="settings-menu-icon" src="img/icons/save.svg" alt="saveasicon">
+										</button>
+										<button name="print" type="button" class="settings-menu-button" title="Print report">
+											<span>Print</span>
+											<img class="settings-menu-icon" src="img/icons/printer.svg" alt="printicon">
+										</button>
+										<button name="delete-report" type="button" class="settings-menu-button disabled" title="Delete report">
+											<span>Delete</span>
+											<img class="settings-menu-icon" src="img/icons/trash-2.svg" alt="delete icon">
+										</button>
+									</div>
+									<div class="report-preview-meta">
+										<span class="report-preview-meta-schedule">Sheduled: <span class="report-preview-meta-green">Delivered</span></span>
+										<span class="report-preview-meta-result">Result: <span class="report-preview-meta-red">Failed</span></span>
+									</div>
+									<div class="aspect-one-to-one">
+										<a href="show.html" class="report-preview-content disabled">
+											<div class="preview-inbox">
+												<img class="preview-img" src="img/previewreport.png">
+											</div>
+										</a>
+									</div>
+								</article>
+								<article id="report-5" class="report-preview-outbox">
+									<a href="show.html" class="rep-name disabled" title="Report name #5">Report name <span class="report-id">#5</span></a>
+									<button type="button" class="report-options">
+										<img class="report-options-img" src="img/icons/tandhjul.svg" alt="gear">
+									</button>
+									<div class="settings-menu menu hidden">
+										<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+										<a href="editor.html" class="settings-menu-button" title="Edit report">
+											<span>Edit</span>
+											<img class="settings-menu-icon" src="img/icons/edit.svg" alt="editicon">
+										</a>
+										<a href="show.html" class="settings-menu-button disabled" title="Open report">
+											<span>Show</span>
+											<img class="settings-menu-icon" src="img/icons/eye.svg" alt="showicon">
+										</a>
+										<button name="schedule-report" type="button" class="settings-menu-button" title="Open schedule options for report">
+											<span>Schedule</span>
+											<img class="settings-menu-icon" src="img/icons/calendar.svg" alt="scheduleicon">
+										</button>
+										<button name="share-report" type="button" class="settings-menu-button" title="Select how to share report">
+											<span>Share</span>
+											<img class="settings-menu-icon" src="img/icons/share-2.svg" alt="shareicon">
+										</button>
+										<button name="save-report-as" type="button" class="settings-menu-button" title="Select how to save report">
+											<span>Save as..</span>
+											<img class="settings-menu-icon" src="img/icons/save.svg" alt="saveasicon">
+										</button>
+										<button name="print" type="button" class="settings-menu-button" title="Print report">
+											<span>Print</span>
+											<img class="settings-menu-icon" src="img/icons/printer.svg" alt="printicon">
+										</button>
+										<button name="delete-report" type="button" class="settings-menu-button disabled" title="Delete report">
+											<span>Delete</span>
+											<img class="settings-menu-icon" src="img/icons/trash-2.svg" alt="delete icon">
+										</button>
+									</div>
+									<div class="report-preview-meta">
+										<span class="report-preview-meta-schedule">Sheduled: <span class="report-preview-meta-green">Delivered</span></span>
+										<span class="report-preview-meta-result">Result: <span class="report-preview-meta-red">Failed</span></span>
+									</div>
+									<div class="aspect-one-to-one">
+										<a href="show.html" class="report-preview-content disabled">
+											<div class="preview-inbox">
+												<img class="preview-img" src="img/previewreport.png">
+											</div>
+										</a>
+									</div>
+								</article>
+								<article id="report-6" class="report-preview-outbox">
+									<a href="show.html" class="rep-name disabled" title="Report name #6">Report name <span class="report-id">#6</span></a>
+									<button type="button" class="report-options">
+										<img class="report-options-img" src="img/icons/tandhjul.svg" alt="gear">
+									</button>
+									<div class="settings-menu menu hidden">
+										<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+										<a href="editor.html" class="settings-menu-button" title="Edit report">
+											<span>Edit</span>
+											<img class="settings-menu-icon" src="img/icons/edit.svg" alt="editicon">
+										</a>
+										<a href="show.html" class="settings-menu-button disabled" title="Open report">
+											<span>Show</span>
+											<img class="settings-menu-icon" src="img/icons/eye.svg" alt="showicon">
+										</a>
+										<button name="schedule-report" type="button" class="settings-menu-button" title="Open schedule options for report">
+											<span>Schedule</span>
+											<img class="settings-menu-icon" src="img/icons/calendar.svg" alt="scheduleicon">
+										</button>
+										<button name="share-report" type="button" class="settings-menu-button" title="Select how to share report">
+											<span>Share</span>
+											<img class="settings-menu-icon" src="img/icons/share-2.svg" alt="shareicon">
+										</button>
+										<button name="save-report-as" type="button" class="settings-menu-button" title="Select how to save report">
+											<span>Save as..</span>
+											<img class="settings-menu-icon" src="img/icons/save.svg" alt="saveasicon">
+										</button>
+										<button name="print" type="button" class="settings-menu-button" title="Print report">
+											<span>Print</span>
+											<img class="settings-menu-icon" src="img/icons/printer.svg" alt="printicon">
+										</button>
+										<button name="delete-report" type="button" class="settings-menu-button disabled" title="Delete report">
+											<span>Delete</span>
+											<img class="settings-menu-icon" src="img/icons/trash-2.svg" alt="delete icon">
+										</button>
+									</div>
+									<div class="report-preview-meta">
+										<span class="report-preview-meta-schedule">Sheduled: <span class="report-preview-meta-green">Delivered</span></span>
+										<span class="report-preview-meta-result">Result: <span class="report-preview-meta-red">Failed</span></span>
+									</div>
+									<div class="aspect-one-to-one">
+										<a href="show.html" class="report-preview-content disabled">
+											<div class="preview-inbox">
+												<img class="preview-img" src="img/previewreport.png">
+											</div>
+										</a>
+									</div>
+								</article>
+								<article id="report-7" class="report-preview-outbox">
+									<a href="show.html" class="rep-name disabled" title="Report name #7">Report name <span class="report-id">#7</span></a>
+									<button type="button" class="report-options">
+										<img class="report-options-img" src="img/icons/tandhjul.svg" alt="gear">
+									</button>
+									<div class="settings-menu menu hidden">
+										<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+										<a href="editor.html" class="settings-menu-button" title="Edit report">
+											<span>Edit</span>
+											<img class="settings-menu-icon" src="img/icons/edit.svg" alt="editicon">
+										</a>
+										<a href="show.html" class="settings-menu-button disabled" title="Open report">
+											<span>Show</span>
+											<img class="settings-menu-icon" src="img/icons/eye.svg" alt="showicon">
+										</a>
+										<button name="schedule-report" type="button" class="settings-menu-button" title="Open schedule options for report">
+											<span>Schedule</span>
+											<img class="settings-menu-icon" src="img/icons/calendar.svg" alt="scheduleicon">
+										</button>
+										<button name="share-report" type="button" class="settings-menu-button" title="Select how to share report">
+											<span>Share</span>
+											<img class="settings-menu-icon" src="img/icons/share-2.svg" alt="shareicon">
+										</button>
+										<button name="save-report-as" type="button" class="settings-menu-button" title="Select how to save report">
+											<span>Save as..</span>
+											<img class="settings-menu-icon" src="img/icons/save.svg" alt="saveasicon">
+										</button>
+										<button name="print" type="button" class="settings-menu-button" title="Print report">
+											<span>Print</span>
+											<img class="settings-menu-icon" src="img/icons/printer.svg" alt="printicon">
+										</button>
+										<button name="delete-report" type="button" class="settings-menu-button disabled" title="Delete report">
+											<span>Delete</span>
+											<img class="settings-menu-icon" src="img/icons/trash-2.svg" alt="delete icon">
+										</button>
+									</div>
+									<div class="report-preview-meta">
+										<span class="report-preview-meta-schedule">Sheduled: <span class="report-preview-meta-green">Delivered</span></span>
+										<span class="report-preview-meta-result">Result: <span class="report-preview-meta-red">Failed</span></span>
+									</div>
+									<div class="aspect-one-to-one">
+										<a href="show.html" class="report-preview-content disabled">
+											<div class="preview-inbox">
+												<img class="preview-img" src="img/previewreport.png">
+											</div>
+										</a>
+									</div>
+								</article>
+								<article id="report-8" class="report-preview-outbox">
+									<a href="show.html" class="rep-name disabled" title="Report name #8">Report name <span class="report-id">#8</span></a>
+									<button type="button" class="report-options">
+										<img class="report-options-img" src="img/icons/tandhjul.svg" alt="gear">
+									</button>
+									<div class="settings-menu menu hidden">
+										<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+										<a href="editor.html" class="settings-menu-button" title="Edit report">
+											<span>Edit</span>
+											<img class="settings-menu-icon" src="img/icons/edit.svg" alt="editicon">
+										</a>
+										<a href="show.html" class="settings-menu-button disabled" title="Open report">
+											<span>Show</span>
+											<img class="settings-menu-icon" src="img/icons/eye.svg" alt="showicon">
+										</a>
+										<button name="schedule-report" type="button" class="settings-menu-button" title="Open schedule options for report">
+											<span>Schedule</span>
+											<img class="settings-menu-icon" src="img/icons/calendar.svg" alt="scheduleicon">
+										</button>
+										<button name="share-report" type="button" class="settings-menu-button" title="Select how to share report">
+											<span>Share</span>
+											<img class="settings-menu-icon" src="img/icons/share-2.svg" alt="shareicon">
+										</button>
+										<button name="save-report-as" type="button" class="settings-menu-button" title="Select how to save report">
+											<span>Save as..</span>
+											<img class="settings-menu-icon" src="img/icons/save.svg" alt="saveasicon">
+										</button>
+										<button name="print" type="button" class="settings-menu-button" title="Print report">
+											<span>Print</span>
+											<img class="settings-menu-icon" src="img/icons/printer.svg" alt="printicon">
+										</button>
+										<button name="delete-report" type="button" class="settings-menu-button disabled" title="Delete report">
+											<span>Delete</span>
+											<img class="settings-menu-icon" src="img/icons/trash-2.svg" alt="delete icon">
+										</button>
+									</div>
+									<div class="report-preview-meta">
+										<span class="report-preview-meta-schedule">Sheduled: <span class="report-preview-meta-green">Delivered</span></span>
+										<span class="report-preview-meta-result">Result: <span class="report-preview-meta-red">Failed</span></span>
+									</div>
+									<div class="aspect-one-to-one">
+										<a href="show.html" class="report-preview-content disabled">
+											<div class="preview-inbox">
+												<img class="preview-img" src="img/previewreport.png">
+											</div>
+										</a>
+									</div>
+								</article>
+							</div>
+						</section>
+					</td>
+					<!--CSS -->
+					<td class="code">
+						/* -- REPORT OVERVIEW SECTION -- */
+						.report-preview-section {
+							overflow: auto;
+							clear: both;
+							width: 100%;
+							padding: 15px 15px 160px 15px;
+							background-color: #404040;
+							box-sizing: border-box;
+						}
+						.report-preview-section-grid{
+							display: grid; 
+							grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
+							grid-gap: 2%;
+							clear: both;
+							width: 100%;
+							padding-bottom: 15px; /*Visual glitch removes padding from bottom row from element size*/
 						}
 					</td>
 				</tr>

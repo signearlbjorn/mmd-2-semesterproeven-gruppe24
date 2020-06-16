@@ -636,6 +636,10 @@ textarea{
 	margin-right: 15px;
 	color: #848484;
 	font-size: 140%;
+    word-break: break-all;
+    overflow: hidden;
+    height: 1em;
+    text-overflow: ellipsis;
 }
 
 .settings-menu-icon{
@@ -1251,6 +1255,7 @@ textarea{
 	grid-template-columns: 32% 32% 32%;
 	grid-gap: 2%;
 	margin-top: 15px;
+	margin-bottom: 15px;
 }
 
 .editor-aside-tab-content-top {
@@ -1358,6 +1363,28 @@ textarea{
 
 .editor-tab-code-editor {
 	min-height: 50vh;
+}
+
+
+/* -- REPORT OVERVIEW SECTION -- */
+.report-preview-section {
+	overflow: auto;
+	clear: both;
+	width: 100%;
+	min-height: 1px;
+	padding: 15px 15px 160px 15px;
+	background-color: #404040;
+	box-sizing: border-box;
+}
+
+.report-preview-section-grid{
+	display: grid; 
+	grid-template-columns: 23.5% 23.5% 23.5% 23.5%;
+	grid-gap: 2%;
+	clear: both;
+	width: 100%;
+	min-height: 1px;
+	padding-bottom: 15px; /*Visual glitch removes padding from bottom row from element size*/
 }
 
 
