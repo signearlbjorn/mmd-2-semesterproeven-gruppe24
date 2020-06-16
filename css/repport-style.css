@@ -2321,13 +2321,32 @@ header .wrapper {
 	max-height: 100vh;
 	overflow-y: auto;
 }
-#editor .report-page-section {
+#editor .report-page-section,
+#editor .page header,
+#editor .page footer {
 	overflow: hidden;
+	font-size: 14pt;
 }
-#editor .report-page-section * {
+
+#editor .report-page-section *,
+#editor .page header *,
+#editor .page footer * {
 	max-width: 100% !important;
 	max-height: 100% !important;
+	font-size: 14pt;
 }
+
+.text-tool-input {
+	margin-bottom: 15px;
+}
+
+#text-tool-span-area {
+	width: 100%;
+	padding: 15px;
+	margin: 15px 0;
+	background-color: #FFF;
+}
+
 
 /* -- FOLDER OVERVIEW -- */
 

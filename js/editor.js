@@ -928,3 +928,59 @@ for(let i = 0; i < scheduleTime.length; i++) {
 		timeValidate(scheduleTime[i]);
 	 });
 }
+
+//textool
+let textTool = document.getElementsByName("text-tool");
+textTool = textTool[0];
+let textToolInput = document.getElementsByName("text-tool-input");
+textToolInput = textToolInput[0];
+let editorTextSize = document.getElementsByName("editor-text-size");
+editorTextSize = editorTextSize[0];
+let editorTextWeight = document.getElementsByName("editor-text-weight");
+editorTextWeight = editorTextWeight[0];
+let textToolSpanArea = document.getElementById("text-tool-span-area");
+let textToolTargetSpan = textToolSpanArea.getElementsByTagName("span");
+textToolTargetSpan = textToolTargetSpan[0];
+
+document.addEventListener("drag", function(event) {
+
+}, false);
+
+document.addEventListener("dragstart", function(event) {
+  // store a ref. on the dragged elem
+  dragged = event.target;
+  // make it half transparent
+}, false);
+
+textTool.addEventListener("click", function(){
+	textToolTargetSpan.innerHTML = textToolInput.value;
+	textToolTargetSpan.style.fontSize = editorTextSize.value + "pt";
+	textToolTargetSpan.style.fontWeight = editorTextWeight.value;
+});
+
+textToolTargetSpan.addEventListener("drag", function(){
+	event.dataTransfer.setData("Text", event.target);
+	//console.log(event.target.id);
+});
+
+let drop = document.getElementsByClassName("drop");
+
+for(let i = 0; i < drop.length; i++) {	
+	// Fjern error på click på scheduleTime[i]
+	drop[i].addEventListener("dragover", function(event) {
+		event.preventDefault();
+	});
+	
+	drop[i].addEventListener("drop", function(event) {
+		event.preventDefault();
+		console.log(dragged);
+		//dragged.parentNode.removeChild( dragged );
+		let newNode = document.createElement(dragged.tagName);
+		newNode.style.fontWeight = dragged.style.fontWeight;
+		newNode.style.fontSize = dragged.style.fontSize;
+		newNode.src = dragged.src;
+		newNode.value = dragged.value;
+		newNode.innerHTML = dragged.innerHTML;
+		event.target.appendChild( newNode );
+	});
+}

@@ -216,16 +216,16 @@
 		<div class="report-preview single-page-display">
 			<div class="page-wrapper">
 				<div class="page current-page">
-					<header contenteditable="true">hea</header>
-					<div class="report-page-section box-number-1" contenteditable="true"></div>
-					<div class="report-page-section box-number-2" contenteditable="true"></div>
-					<div class="report-page-section box-number-3" contenteditable="true"></div>
-					<div class="report-page-section box-number-4" contenteditable="true"></div>
-					<div class="report-page-section box-number-5" contenteditable="true"></div>
-					<div class="report-page-section box-number-6" contenteditable="true"></div>
-					<div class="report-page-section box-number-7" contenteditable="true"></div>
-					<div class="report-page-section box-number-8" contenteditable="true"></div>
-					<footer contenteditable="true">foo</footer>
+					<header class="drop" contenteditable="true">hea</header>
+					<div class="drop report-page-section box-number-1" contenteditable="true"></div>
+					<div class="drop report-page-section box-number-2" contenteditable="true"></div>
+					<div class="drop report-page-section box-number-3" contenteditable="true"></div>
+					<div class="drop report-page-section box-number-4" contenteditable="true"></div>
+					<div class="drop report-page-section box-number-5" contenteditable="true"></div>
+					<div class="drop report-page-section box-number-6" contenteditable="true"></div>
+					<div class="drop report-page-section box-number-7" contenteditable="true"></div>
+					<div class="drop report-page-section box-number-8" contenteditable="true"></div>
+					<footer class="drop" contenteditable="true">foo</footer>
 				</div>
 			</div>
 		</div>
@@ -389,32 +389,39 @@
 				</article>
 				<!--TEXT EDITOR-->
 				<article id="text-tab-content" class="hidden editor-tab-content">
-					<div class="editor-aside-tab-content-top">
-						<button type="button" class="button-n rounded-corners help" title="Click on a T and choose where to insert on page, or drag'n drop it onto the page. When text is highligted, you can edit text settings in text tab.">
-							<span>Help<b>?</b></span>
-						</button>
-					</div>
-					<h3>Text tool</h3>
-					<div class="textTool">
-						<button type="button" class="buttongr"><img class="Ticon" src="img/icons/type.svg" alt="text-icon" draggable="true"></button>
-					</div>
-					<h3 class="clear-both">Text options</h3>
-					<div class="textTool">
-						<label class="text-input editor-tab-content-input" title="Choose size for text">
-							<span>Size</span>
-							<input type="text" name="editor-text-size" class="round-corners button-w" placeholder="Input size in pt">
-						</label>
-						<label class="select-label editor-tab-content-input" title="Select text weight">
-							<span class="select-span">Weight</span>
-							<div class="select-wrapper">
-								<select name="editor-text-weight" class="sort-by-select select">
-									<option value="normal" selected="">Normal</option>
-									<option value="bold">Bold</option>
-									<option value="thin">thin</option>
-								</select>
-							</div>
-						</label>
-					</div>
+					<form action="" method="get">
+						<div class="editor-aside-tab-content-top">
+							<button type="button" class="button-n rounded-corners help" title="Click on a T and choose where to insert on page, or drag'n drop it onto the page. When text is highligted, you can edit text settings in text tab.">
+								<span>Help<b>?</b></span>
+							</button>
+						</div>
+						<h3>Text tool</h3>
+						<div class="textTool">
+							<button type="button" class="buttongr" name="text-tool" title="Aplly stylling to custom text element"><img class="Ticon" src="img/icons/type.svg" alt="text-icon" draggable="false"></button>
+						</div>
+						<h3 class="clear-both">Text options</h3>
+						<div class="textTool">
+							<input type="text" name="text-tool-input" class="text-tool-input button-w round-corners full-width" placeholder="Custom text">
+							<label class="text-input editor-tab-content-input" title="Choose size for text">
+								<span>Size</span>
+								<input type="number" min="1" max="100" name="editor-text-size" class="round-corners button-w" placeholder="Input size in pt">
+							</label>
+							<label class="select-label editor-tab-content-input" title="Select text weight">
+								<span class="select-span">Weight</span>
+								<div class="select-wrapper">
+									<select name="editor-text-weight" class="sort-by-select select">
+										<option value="normal" selected="">Normal</option>
+										<option value="bold">Bold</option>
+										<option value="lighter">Lighter</option>
+									</select>
+								</div>
+							</label>
+						</div>
+						<h3 class="clear-both">Custom text element</h3>
+						<div id="text-tool-span-area">
+							<span draggable="true">dis</span>
+						</div>
+					</form>
 				</article>
 				<!--CODE EDITOR-->
 				<article id="code-tab-content" class="editor-tab-content hidden">
