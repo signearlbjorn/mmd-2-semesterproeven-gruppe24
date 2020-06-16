@@ -31,7 +31,9 @@ function hideParrent(child) {
 
 function blurArray(arr) {
 	for(let i = 0; i < arr.length; i++) {
-		arr[i].classList.add('blur');
+		if(arr[i].id != "main-header"){
+			arr[i].classList.add('blur');
+		}
 	}
 }
 
@@ -52,6 +54,9 @@ function scrollLockRemove() {
 
 // --- GENERIC VARIABLES ---
 let sections = document.getElementsByTagName("section");
+let header = document.getElementsByTagName("header");
+let main = document.getElementsByTagName("main");
+let aside = document.getElementsByTagName("aside");
 let body = document.getElementsByTagName("body");
 body = body[0];
 
@@ -687,7 +692,18 @@ for(let i = 0; i < closeButton.length; i++) {
 	closeButton[i].addEventListener("click", function(){
 		hideParrent(closeButton[i]);
 		hideElement(overlay);
-		blurArrayRemove(sections);
+		if(sections) {
+			blurArrayRemove(sections);
+		}
+		if(header) {
+			blurArrayRemove(header);
+		}
+		if(main) {
+			blurArrayRemove(main);
+		}
+		if(aside) {
+			blurArrayRemove(aside);
+		}
 		scrollLockRemove();
 	});
 }
@@ -729,7 +745,7 @@ for(let i=0; i < reportOptions.length; i++){
 		if(parrent.classList.contains("report-preview-outbox")) {
 			let optionsMenu = parrent.getElementsByClassName("settings-menu");
 			optionsMenu = optionsMenu[0];
-			console.log(optionsMenu);
+			//console.log(optionsMenu);
 			optionsMenu.classList.remove("hidden");
 			return(true);
 		} else{
@@ -781,7 +797,18 @@ for(let i = 0; i < newReportButton.length; i++) {
 	newReportButton[i].addEventListener("click", function(){
 		showElement(createNewPopUp);
 		showElement(overlay);
-		blurArray(sections);
+		if(sections) {
+			blurArray(sections);
+		}
+		if(header) {
+			blurArray(header);
+		}
+		if(main) {
+			blurArray(main);
+		}
+		if(aside) {
+			blurArray(aside);
+		}
 		scrollLock();
 	});
 }
@@ -794,7 +821,18 @@ for(let i = 0; i < filterButton.length; i++) {
 	filterButton[i].addEventListener("click", function(){
 		showElement(filterPopUp);
 		showElement(overlay);
-		blurArray(sections);
+		if(sections) {
+			blurArray(sections);
+		}
+		if(header) {
+			blurArray(header);
+		}
+		if(main) {
+			blurArray(main);
+		}
+		if(aside) {
+			blurArray(aside);
+		}
 		scrollLock();
 	});
 }
@@ -809,7 +847,18 @@ for(let i = 0; i < closeEditorButton.length; i++) {
 		// ToDo
 		showElement(closeWithoutSavingPopUp);
 		showElement(overlay);
-		blurArray(sections);
+		if(sections) {
+			blurArray(sections);
+		}
+		if(header) {
+			blurArray(header);
+		}
+		if(main) {
+			blurArray(main);
+		}
+		if(aside) {
+			blurArray(aside);
+		}
 		scrollLock();
 	});
 }
@@ -822,7 +871,18 @@ for(let i = 0; i < deleteReportButton.length; i++) {
 	deleteReportButton[i].addEventListener("click", function(){
 		showElement(deleteReportPopUp);
 		showElement(overlay);
-		blurArray(sections);
+		if(sections) {
+			blurArray(sections);
+		}
+		if(header) {
+			blurArray(header);
+		}
+		if(main) {
+			blurArray(main);
+		}
+		if(aside) {
+			blurArray(aside);
+		}
 		scrollLock();
 	});
 }
@@ -835,7 +895,18 @@ for(let i = 0; i < scheduleReportButton.length; i++) {
 	scheduleReportButton[i].addEventListener("click", function(){
 		showElement(schedulePopUp);
 		showElement(overlay);
-		blurArray(sections);
+		if(sections) {
+			blurArray(sections);
+		}
+		if(header) {
+			blurArray(header);
+		}
+		if(main) {
+			blurArray(main);
+		}
+		if(aside) {
+			blurArray(aside);
+		}
 		scrollLock();
 	});
 }
@@ -847,7 +918,18 @@ for(let i = 0; i < shareReportButton.length; i++) {
 	shareReportButton[i].addEventListener("click", function(){
 		showElement(shareAsPopUp);
 		showElement(overlay);
-		blurArray(sections);
+		if(sections) {
+			blurArray(sections);
+		}
+		if(header) {
+			blurArray(header);
+		}
+		if(main) {
+			blurArray(main);
+		}
+		if(aside) {
+			blurArray(aside);
+		}
 		scrollLock();
 	});
 }
@@ -860,7 +942,18 @@ for(let i = 0; i < saveReportAsButton.length; i++) {
 	saveReportAsButton[i].addEventListener("click", function(){
 		showElement(savePopUp);
 		showElement(overlay);
-		blurArray(sections);
+		if(sections) {
+			blurArray(sections);
+		}
+		if(header) {
+			blurArray(header);
+		}
+		if(main) {
+			blurArray(main);
+		}
+		if(aside) {
+			blurArray(aside);
+		}
 		scrollLock();
 	});
 }

@@ -639,6 +639,7 @@ textarea{
     word-break: break-all;
     overflow: hidden;
     height: 1em;
+	line-height: 1em;
     text-overflow: ellipsis;
 }
 
@@ -928,6 +929,8 @@ textarea{
 	cursor: pointer;
 	float: right;
 	width: 35px;
+	padding-top: 9px;
+	padding-bottom: 9px;
 }
 
 .bar1, .bar2, .bar3 {
@@ -1111,6 +1114,7 @@ textarea{
 .mainEditor {
 	display: grid;
 	grid-template-columns: 55% 45%;
+	width: 100%;
 }
 
 
@@ -1203,6 +1207,7 @@ textarea{
 	width: 100%;
 	height: 100%;
 	background-color: #404040;
+    border-left: 1px solid #404040;
 }
 
 .editor-aside-nav {
@@ -1494,7 +1499,7 @@ textarea{
 		display: block;
 		min-height: 51px;
 	}
-	
+		
 	#main-navigation.hidden {
 		height: auto;
 		min-height: 51px;
@@ -1533,7 +1538,7 @@ textarea{
 		padding: 0 12px;
 		margin: 0 3px;
 	}
-
+	
 	#main-navigation img {
 		margin: 15px 0;
 	}
@@ -1543,6 +1548,11 @@ textarea{
 	}
 }
 
+@media (min-width: 1920px) {
+	#main-navigation > a {
+		padding-left:0;
+	}
+}	
 @media (min-width: 3840px) {
 	#main-navigation,
 	#main-navigation.hidden {
@@ -1731,7 +1741,8 @@ textarea{
 
 .top-section-wrapper {
 	width: 100%;
-	padding-top: 20px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 
 .top-section-top {
@@ -1934,7 +1945,6 @@ textarea{
 .temp-name{
 	float: left;
     color: white;
-    font-size: 20px;
     display: inline-block;
 }
 

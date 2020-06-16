@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US" dir="ltr">
 <head>
 	<!-- META DESCRIPTIONS -->
-	<title>Editor - ineteraktiv løsning 2. semstereksamen</title>
+	<title>Editor</title>
 	<meta name="Author" content="Max Festersen Hansen, Signe Arlbjørn, Konrad Sarna & Michala Gjøl">
 	<meta name="description" content="Editor for reports for app.trendlog.io report module. Developed as part of 2. semester test for OEAMM19EDF, UCL University College, Multimediadesign, Start year 19,Class A-C.">
 
@@ -36,357 +36,499 @@
 </head>
 <body>
 	<script src="https://code.highcharts.com/highcharts.js"></script>
-	<!--nav is coded in image of trendog.io's navbar-->
-	<nav>
-		<div class="branddiv">
-			<!--LOGO-->
-			<a><img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io" style="width: 130px;"></a>
-			<!--MAIN NAVIGATION-->
-			<ul class="navbarulleft">
-				<li><a><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
-				<li><a>Trendboards</a></li>
-				<li><a>Reports</a></li>
-				<li><a>Views</a></li>
-				<li><a>Feeds</a></li>
-				<li><a>Settings</a></li>
-				<li><a>Shares</a></li>
-			</ul>
+	<!-- MAIN NAVIGATION -->
+	<header id="main-header">
+		<div class="wrapper">
+			<div class="burger-menu">
+				<div class="bar1"></div>
+				<div class="bar2"></div>
+				<div class="bar3"></div>
+			</div>
+			<nav id="main-navigation" class="hidden">
+				<!--LOGO-->
+				<a href="index.html" class="disabled">
+					<img class="brandidentity" src="img/icons/trendlog.io-logo-white.svg" alt="trendlog.io">
+				</a>
+				<ul class="navbarulleft">
+					<li><a href="#" class="disabled"><img class="icon" src="img/icons/home.svg" alt="home-icon"></a></li>
+					<li><a href="#" class="disabled">Trendboards</a></li>
+					<li><a href="overview.html" title="Reports module - see, schedule and setup reports">Reports</a></li>
+					<li><a href="#" class="disabled">Views</a></li>
+					<li><a href="#" class="disabled">Feeds</a></li>
+					<li><a href="#" class="disabled">Settings</a></li>
+					<li><a href="#" class="disabled">Shares</a></li>
+				</ul>
+				<ul class="navbarulright" style="float: right;">
+					<li><a href="#" class="disabled"><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
+					<li><a href="#" class="disabled"><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
+					<li><a href="#" class="disabled"><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
+					<li>
+						<form action="/" method="get" class="disabled">
+							<label>
+								<span class="channels">Channels</span>
+								<select class="channelselect round-corners disabled">
+									<option value="channel-1">Channel 1</option>
+									<option value="channel-2">Channel 2</option>
+									<option value="channel-3">Channel 3</option>
+									<option value="channel-4">Channel 4</option>
+								</select>
+							</label>
+						</form>
+					</li>
+					<!--USERNAME-->
+					<li class="profiledropdown">
+						<a href="#" class="disabled profiledropdown-a">
+							<span class="username">Profile P.</span>
+							<img class="profile-icon" src="img/icons/user.svg" alt="profile">
+						</a>
+					</li>
+				</ul>
+			</nav>
 		</div>
-		<div class="profilediv">
-			<ul class="navbarulright" style="float: right;">
-				<li><a><img class="icon" src="img/icons/wrench.svg" alt="maitenance"></a></li>
-				<li><a><img class="icon" src="img/icons/eye-off.svg" alt="unfollow"></a></li>
-				<li><a><img class="icon" src="img/icons/bell.svg" alt="alarms"></a></li>
-				<li><p class="channels">channels</p></li>
-				<li class="selection">
-					<select class="channelselect">
-						<option>channelnames</option>
-					</select></li>
-				<!--USERNAME-->
-				<li class="profiledropdown">
-					<a class="profiledropdown-a">
-						<span class="username">Profile P.</span>
-						<img class="profile-icon" src="img/icons/user.svg" alt="profile">
-					</a>
-				</li>
-			</ul>
-		</div>
-	</nav>
-	<header class="editorHeader">
-		<!--TITLE-->
-		<div class="frameforsidetitelogsettingsbar">
-    <div class="wrapper">
-        <div class="sidetitelogsettingswrap">
-            <div class="topEditorHeader">
-                <!-- side titel -->
-                <div class="sidetitelcontainer">
-                    <h1>Report editor</h1>
-                </div>
-                <!-- side titel - slut-->
-                <!-- Close editor -->
-                <div class="closecontainer">
-                    <div class="text-icon">
-						<span>Close editor
-						    <button type="button" onclick="closeEditor()" class="texticon-button">
-						        <img class="texticon-iconimg" src="img/icons/x.svg" alt="X-icon">
-						    </button>
-						</span>
-                    </div>
-					<span id="closeconfirm"></span>
-                </div>
-
-                <!-- Close editor - slut-->
-                <!-- slet rapport -->
-                <div class="deletecontainer">
-                    <div class="text-icon">
-						<span>Delete report
-						    <button type="button" onclick="deleteReport()" class="texticon-button">
-						        <img class="texticon-iconimg" src="img/icons/trash.svg" alt="X-icon">
-						    </button>
-						</span>
-                    </div>
-					<span id="deleteconfirm"></span>
-                </div>
-
-                <!-- slet rapport - slut-->
-                <!-- gem rapport -->
-                <div class="savecontainer">
-                    <div class="text-icon">
-						<span>Save report
-						    <button type="button" onclick="savedAlert()" class="texticon-button">
-						        <img class="texticon-iconimg" src="img/icons/save.svg" alt="X-icon">
-						    </button>
-						</span>
-                    </div>
-                </div>
-                <!-- gem rapport - slut-->
-            </div>
-            <div class="bottomEditorHeader">
-                <!-- previous page -->
-                <div class="previouspagecontainer">
-                    <button type="button" onclick="" class="previousbutton">
-                     <span>Previous page</span>
-                     <img class="settingsmenuicon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
-                    </button>
-                </div>
-                <!-- previous page - slut-->
-                <!-- switch knap multiple/singular-->
-                <div class="switch-multiple-singular-container">
-                    <div class="switch">
-<input type="radio" class="switch-input" name="view3" value="week3" id="multiple" checked="">
-<label for="multiple" class="switch-label switch-label-off">Multiple</label>
-<input type="radio" class="switch-input" name="view3" id="singular">
-<label for="singular" class="switch-label switch-label-on">Vertical</label>
-<span class="switch-selection"></span>
-                    </div>
-                </div>
-                <!-- switch knap multiple/singular - slut-->
-                <!-- switch knap horizontal/vertical -->
-                <div class="switch-horizontal-vertical-container">
-                    <div class="switch">
-<input type="radio" class="switch-input" name="view4" value="1" id="v" checked="">
-<label for="v" class="switch-label switch-label-off">Horizontal</label>
-<input type="radio" class="switch-input" name="view4" id="h" value="2">
-<label for="h" class="switch-label switch-label-on">Vertical</label>
-<span class="switch-selection"></span>
-                    </div>
-                </div>
-                <!-- switch knap horizontal/vertical - slut-->
-                <!-- add page knap -->
-                <div class="addpageknapcontainer">
-                    <button type="button" class="adddelete-button">
-<img class="plusminus-iconimg" src="img/icons/plus.svg" alt="plus icon">
-                    </button>
-                </div>
-                <!-- add page knap - slut-->
-                <!-- delete page knap -->
-                <div class="deletepageknapcontainer">
-                    <button type="button" class="adddelete-button">
-<img class="plusminus-iconimg" src="img/icons/minus.svg" alt="plus icon">
-                    </button>
-                </div>
-                <!-- delete page knap - slut-->
-                <!-- Upload image knap -->
-                <div class="uploadimageknapcontainer">
-                    <button type="button" onclick="" class="uploadimagebutton">
-                     <span>Upload image</span>
-                     <img class="settingsmenuicon" src="img/icons/image.svg" alt="arrowright-icon">
-                    </button>
-                </div>
-                <!-- Upload image knap - slut-->
-                <!-- next page -->
-                <div class="nextpagecontainer">
-                    <button type="button" onclick="" class="nextbutton">
-<span>Next page</span>
-<img class="settingsmenuicon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
-                    </button>
-                </div>
-                <!-- next page - slut-->
-                <!-- MEGA SWITCH -->
-                <div class="megaswitchcontainer">
-                    <div class="megaswitch">
-<input type="radio" class="switch-input0" name="view4" id="a1" checked="">
-<label for="a1" class="switch-label0 switch-label-off0">A1</label>
-
-<input type="radio" class="switch-input0" name="view4" id="a2">
-<label for="a2" class="switch-label0 switch-label-on1">A2</label>
-
-<input type="radio" class="switch-input0" name="view4" id="a3">
-<label for="a3" class="switch-label0 switch-label-on2">A3</label>
-
-<input type="radio" class="switch-input0" name="view4" id="a4">
-<label for="a4" class="switch-label0 switch-label-on3">A4</label>
-
-<span class="switch-selection0"></span>
-                    </div>
-                </div>
-                <!-- MEGA SWITCH - slut-->
-            </div>
-        </div>
-    </div>
-</div>
 	</header>
-	<main class="mainEditor" style="width: 100%;">
-		<!--REPORT PAGE PREVIEW-->
-		<div class="report-preview">
-			<div id="pageVertical" class="pagediv hidden">
-				<div class="page" contenteditable="true">
-					<p>First <code>.page</code> element</p>
-					<p><b>This page is the actual size of an A4 page</b></p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-					<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
+	<!-- TOP SECTION -->
+	<header class="top-section">
+		<div class="wrapper">
+			<div class="top-section-wrapper">
+				<div class="top-section-top">
+					<!-- H1 -->
+					<div class="sidetitel-container">
+						<h1>Report editor</h1>
+					</div>
+					<div class="top-section-top-buttons">
+						<!-- SAVE REPORT BUTTON -->
+						<div class="save-button-container">
+							<button type="button" class="texticon-button disabled" title="Save report">
+								<span>Save report</span>
+								<img class="texticon-iconimg" src="img/icons/save.svg" alt="X">
+							</button>
+						</div>
+						<!-- DELETE REPORT BUTTON -->
+						<div class="delete-button-container">
+							<button type="button" name="delete-report" class="texticon-button" title="Delete report">
+								<span>Delete report</span>
+								<img class="texticon-iconimg" src="img/icons/trash.svg" alt="X">
+							</button>
+						</div>
+						<!-- CLOSE BUTTON BUTTON -->
+						<div class="close-button-container">
+							<button type="button" name="close-editor" class="texticon-button" title="Close editor">
+								<span>Close editor</span>
+								<img class="texticon-iconimg" src="img/icons/x.svg" alt="X">
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="top-section-bottom">
+					<!-- PREVIUOS PAGE BUTTON -->
+					<div class="previous-page-button-container">
+						<button type="button" class="previous-page-button button-w round-corners" title="Go to previous page">
+							<span>Previous page</span>
+							<img class="settings-menu-icon" src="img/icons/chevron-left.svg" alt="arrowleft-icon">
+						</button>
+					</div>
+					<!-- SINGLE OR MULTIPLE PAGE DISPLAY SWITCH -->
+					<div class="switch-multiple-singular-container">
+						<form action="" method="get" class="switch">
+							<div class="switch-content">
+								<label class="switch-label">
+									<span title="View single page">Single</span>
+									<input type="radio" class="switch-input" name="page-display" value="single" checked="">
+								</label>
+								<label class="switch-label">
+									<span title="View multiple pages">Multiple</span>
+									<input type="radio" class="switch-input" name="page-display" value="multiple">
+								</label>
+							</div>
+						</form>
+					</div>
+					<!-- SINGLE OR MULTIPLE PAGE DISPLAY SWITCH -->
+					<div class="switch-horizontal-vertical-container">
+						<form action="" method="get" class="switch">
+							<div class="switch-content">
+								<label class="switch-label">
+									<span title="View single page">Single</span>
+									<input type="radio" class="switch-input" name="page-display" value="single" checked="">
+								</label>
+								<label class="switch-label">
+									<span title="View multiple pages">Multiple</span>
+									<input type="radio" class="switch-input" name="page-display" value="multiple">
+								</label>
+							</div>
+						</form>
+					</div>
+					<!-- ADD PAGE BUTTON -->
+					<div class="add-page-button-container">
+						<button type="button" class="adddelete-button add-page button-w" title="Add new page after current page">
+							<img class="plusminus-iconimg" src="img/icons/plus.svg" alt="plus icon">
+						</button>
+					</div>
+					<!-- DELETE PAGE BUTTON -->
+					<div class="delete-page-button-container">
+						<button type="button" class="adddelete-button delete-page button-w" title="Remove current page">
+							<img class="plusminus-iconimg" src="img/icons/minus.svg" alt="plus icon">
+						</button>
+					</div>
+					<!-- UPLOAD IMAGE BUTTON -->
+					<div class="upload-button-container">
+						<label class="upload-button round-corners button-w" title="Upload image to Graph tab">
+							<span>Upload image</span>
+							<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
+							<input type="file" class="round-corners button-w hidden" name="upload-image">
+						</label>
+					</div>
+					<!-- NEXT PAGE BUTTON -->
+					<div class="next-page-container">
+							<button type="button" class="nextbutton button-w round-corners" title="Go to next page">
+							<span>Next page</span>
+							<img class="settings-menu-icon" src="img/icons/chevron-right.svg" alt="arrowright-icon">
+						</button>
+					</div>
+					<!-- PAGE SIZE SWITCH -->
+					<div class="page-size-switch-container">
+						<form action="" method="get" class="switch">
+							<div class="switch-content">
+								<label class="switch-label disabled    ">
+									<span title="A1">A1</span>
+									<input type="radio" class="switch-input disabled" name="page-size" value="a1">
+								</label>
+								<label class="switch-label disabled">
+									<span title="A2">A2</span>
+									<input type="radio" class="switch-input disabled" name="page-size" value="a2">
+								</label>
+								<label class="switch-label disabled">
+									<span title="A3">A3</span>
+									<input type="radio" class="switch-input disabled" name="page-size" value="a3">
+								</label>
+								<label class="switch-label">
+									<span title="A4">A4</span>
+									<input type="radio" class="switch-input" name="page-size" value="a4" checked="">
+								</label>
+								<label class="switch-label disabled">
+									<span title="16:9">16:9</span>
+									<input type="radio" class="switch-input disabled" name="page-size" value="w16h9">
+								</label>
+								<label class="switch-label disabled">
+									<span title="4:3">4:3</span>
+									<input type="radio" class="switch-input disabled" name="page-size" value="w4h3">
+								</label>
+							</div>
+						</form>
+					</div>
 				</div>
 			</div>
-			<div id="pageHorizontal" class="pagediv">
-				<div class="pageHorizontal" contenteditable="true">
-					<p>Second <code>.page</code> element</p>
-					<p><b>This page is scaled down, so it'll fit into the editor preview</b></p>
-					<p>Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-					<p>Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.</p>
-					<p>Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
-					<p>Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+		</div>
+	</header>
+	<main class="mainEditor">
+		<!--REPORT PAGE PREVIEW-->
+		<div class="report-preview single-page-display">
+			<div class="page-wrapper">
+				<div class="page current-page">
+					<header contenteditable="true">hea</header>
+					<div class="report-page-section box-number-1" contenteditable="true"></div>
+					<div class="report-page-section box-number-2" contenteditable="true"></div>
+					<div class="report-page-section box-number-3" contenteditable="true"></div>
+					<div class="report-page-section box-number-4" contenteditable="true"></div>
+					<div class="report-page-section box-number-5" contenteditable="true"></div>
+					<div class="report-page-section box-number-6" contenteditable="true"></div>
+					<div class="report-page-section box-number-7" contenteditable="true"></div>
+					<div class="report-page-section box-number-8" contenteditable="true"></div>
+					<footer contenteditable="true">foo</footer>
 				</div>
 			</div>
 		</div>
 		<!--EDITOR-->
-		<div  class="editor">
-			<!--EDITOR NAVIGATION BAR-->
-			<div class="editornav">
-				<div id="templatesDiv" class="tabsnavbubtton"><a onClick="switchedit('templates'); switcheditbg('templatesDiv');">Templates</a></div>
-				<div id="graphsDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('graphs'); switcheditbg('graphsDiv');">Graphs</a></div>
-				<div id="textDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('text'); switcheditbg('textDiv');">Text</a></div>
-				<div id="codeDiv" class="tabsnavbubtton lightbg"><a onClick="switchedit('codeEditorTab'); switcheditbg('codeDiv');">Code</a></div>
+		<aside class="editor-aside">
+			<!-- EDITOR NAVIGATION -->
+			<div class="editor-aside-nav">
+				<button type="button" id="template-tab" class="editor-aside-nav-button current" value="template-tab-content">Templates</button>
+				<button type="button" id="graphs-tab" class="editor-aside-nav-button" value="graphs-tab-content">Graphs</button>
+				<button type="button" id="text-tab" class="editor-aside-nav-button" value="text-tab-content">Text</button>
+				<button type="button" id="code-tab" class="editor-aside-nav-button" value="code-tab-content">Code</button>
 			</div>
-			<div class="editortabs">
-			<!--TEMPLATES-->
-			<div id="templates" class="">
-				<div class="templates-overDiv">
-					<div class="graphs1">
-					<div class="preview-outbox">
-						<span class="temp-name">Template name</span>
-							<p class="star">
-							    <img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="star1" onclick="changeImage(this.id)">
-							</p>
-							<div class="preview-inbox">
-								<img class="preview-img" src="img/temppic.png" alt="template-example">
-							</div>
+			<div class="editor-tab-content-wrapper">
+				<!--TEMPLATES-->
+				<article id="template-tab-content" class="editor-tab-content">
+					<div class="templates-content-wrapper">
+						<div class="editor-aside-tab-content-top">
+							<button type="button" class="button-n rounded-corners help" title="Click on a template to load it. Use 'Save as template' to save template. Use 'Upload template' to choose a HTML file to upload as a template to use.">
+								<span>Help<b>?</b></span>
+							</button>
+							<button type="button" class="save-template-button rounded-corners button-w disabled">
+								<span>Save as template</span>
+								<img class="settings-menu-icon" src="img/icons/save.svg" alt="Save icon">
+							</button>
+							<label class="upload-button rounded-corners button-w" title="Upload image to Graph tab">
+								<span>Upload template</span>
+								<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
+								<input type="file" class="rounded-corners button-w hidden" name="upload-template">
+							</label>
+						</div>
+						<h3>Favorite templates</h3>
+						<div class="editor-aside-grid favorites">
+							<button class="report-preview-outbox" value="1">
+								<span class="temp-name">Template 1</span>
+								<img class="star" src="img/icons/starfull.svg" alt="Filled star">
+								<div class="aspect-one-to-one">
+									<div class="report-preview-content disabled">
+										<div class="preview-inbox">
+											<img class="preview-img" src="img/previewreport.png">
+										</div>
+									</div>
+								</div>
+							</button>
+							<button class="report-preview-outbox" value="1">
+								<span class="temp-name">Template 4</span>
+								<img class="star" src="img/icons/starfull.svg" alt="Filled star">
+								<div class="aspect-one-to-one">
+									<div class="report-preview-content disabled">
+										<div class="preview-inbox">
+											<img class="preview-img" src="img/previewreport.png">
+										</div>
+									</div>
+								</div>
+							</button>
+							<button class="report-preview-outbox" value="6">
+								<span class="temp-name">Template 6</span>
+								<img class="star" src="img/icons/starfull.svg" alt="Filled star">
+								<div class="aspect-one-to-one">
+									<div class="report-preview-content disabled">
+										<div class="preview-inbox">
+											<img class="preview-img" src="img/previewreport.png">
+										</div>
+									</div>
+								</div>
+							</button>
+						</div>
+						<h3>Templates</h3>
+						<div class="editor-aside-grid">
+							<button class="report-preview-outbox" value="2">
+								<span class="temp-name">Template 2</span>
+								<img class="star" src="img/icons/star.svg" alt="Empty star">
+								<div class="aspect-one-to-one">
+									<div class="report-preview-content disabled">
+										<div class="preview-inbox">
+											<img class="preview-img" src="img/previewreport.png">
+										</div>
+									</div>
+								</div>
+							</button>
+							<button class="report-preview-outbox" value="3">
+								<span class="temp-name">Template 3</span>
+								<img class="star" src="img/icons/star.svg" alt="Empty star">
+								<div class="aspect-one-to-one">
+									<div class="report-preview-content disabled">
+										<div class="preview-inbox">
+											<img class="preview-img" src="img/previewreport.png">
+										</div>
+									</div>
+								</div>
+							</button>
+							<button class="report-preview-outbox" value="5">
+								<span class="temp-name">Template 5</span>
+								<img class="star" src="img/icons/star.svg" alt="Empty star">
+								<div class="aspect-one-to-one">
+									<div class="report-preview-content disabled">
+										<div class="preview-inbox">
+											<img class="preview-img" src="img/previewreport.png">
+										</div>
+									</div>
+								</div>
+							</button>
 						</div>
 					</div>
-					<div class="graphs1">
-					<div class="preview-outbox">
-						<span class="temp-name">Template name</span>
-							<p class="star">
-							    <img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="star2" onclick="changeImage(this.id)">
-							</p>
-							<div class="preview-inbox">
-								<img class="preview-img" src="img/temppic.png" alt="template-example">
+				</article>
+				<!--GRPAHS-->
+				<article id="graphs-tab-content" class="hidden editor-tab-content">
+					<div class="editor-aside-tab-content-top">
+						<button type="button" class="button-n rounded-corners help" title="Click on a graph or image and choose where to insert on page, or drag'n drop it onto the page.">
+							<span>Help<b>?</b></span>
+						</button>
+						<label class="uploadimagebutton rounded-corners button-w" title="Upload image to Graph tab">
+							<span>Upload image</span>
+							<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
+							<input type="file" class="uploadimagebutton rounded-corners button-w hidden" name="upload-image">
+						</label>
+					</div>
+					<h3>Graphs</h3>
+					<div class="editor-aside-grid">
+						<!-- Highcharts type: bar -->
+						<article class="highcart-preview">
+							<h4>Bar</h4>
+							<img src="img/icons/star.svg" class="star" alt="Priority icon. A star">
+							<div class="aspect-one-to-one">
+								<button class="highchart-button" title="indsæt graf">
+									<div id="highcharts-type-bar-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+								</button>
 							</div>
-						</div>
-					</div>
-					<div class="graphs1">
-					<div class="preview-outbox">
-						<span class="temp-name">Template name</span>
-							<p class="star">
-							    <img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="star3" onclick="changeImage(this.id)">
-							</p>
-							<div class="preview-inbox">
-								<img class="preview-img" src="img/temppic.png" alt="template-example">
+						</article>
+						<!-- Highcharts type: column -->
+						<article class="highcart-preview">
+							<h4>Column</h4>
+							<img src="img/icons/star.svg" class="star" alt="Priority icon. A star">
+							<div class="aspect-one-to-one">
+								<button class="highchart-button" title="indsæt graf">
+									<div id="highcharts-type-column-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+								</button>
 							</div>
-						</div>
-					</div>
-					<div class="graphs1">
-					<div class="preview-outbox">
-						<span class="temp-name">Template name</span>
-							<p class="star">
-							    <img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="star4" onclick="changeImage(this.id)">
-							</p>
-							<div class="preview-inbox">
-								<img class="preview-img" src="img/temppic.png" alt="template-example">
+						</article>
+						<!-- Highcharts type: line -->
+						<article class="highcart-preview">
+							<h4>line</h4>
+							<img src="img/icons/star.svg" class="star" alt="Priority icon. A star">
+							<div class="aspect-one-to-one">
+								<button class="highchart-button" title="indsæt graf">
+									<div id="highcharts-type-line-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+								</button>
 							</div>
-						</div>
+						</article>
+						<!-- Highcharts type: pie -->
+						<article class="highcart-preview">
+							<h4>pie</h4>
+							<img src="img/icons/star.svg" class="star" alt="Priority icon. A star">
+							<div class="aspect-one-to-one">
+								<button class="highchart-button" title="indsæt graf">
+									<div id="highcharts-type-pie-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
+								</button>
+							</div>
+						</article>
 					</div>
-				</div>
-			</div>
-			<!--GRPAHS-->
-			<div id="graphs" class="hidden">
-				<div class="graphsOverDiv">
-					<!-- Highcharts type: bar -->
-					<article class="highcart-preview">
-					    <h4>Bar</h4>
-					    <p class="star">
-						    <img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="star5" onclick="changeImage(this.id)">
-						</p>
-					    <div class="aspect-one-to-one">
-					        <button class="highchart-button" title="indsæt graf">
-					            <div id="highcharts-type-bar-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
-					        </button>
-					    </div>
-					</article>
-					<!-- Highcharts type: column -->
-					<article class="highcart-preview">
-					    <h4>Column</h4>
-					    <p class="star">
-						    <img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="star6" onclick="changeImage(this.id)">
-						</p>
-					    <div class="aspect-one-to-one">
-					        <button class="highchart-button" title="indsæt graf">
-					            <div id="highcharts-type-column-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
-					        </button>
-					    </div>
-					</article>
-					<!-- Highcharts type: line -->
-					<article class="highcart-preview">
-					    <h4>line</h4>
-					    <p class="star">
-						    <img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="star7" onclick="changeImage(this.id)">
-						</p>
-					    <div class="aspect-one-to-one">
-					        <button class="highchart-button" title="indsæt graf">
-					            <div id="highcharts-type-line-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
-					        </button>
-					    </div>
-					</article>
-					<!-- Highcharts type: pie -->
-					<article class="highcart-preview">
-					    <h4>pie</h4>
-					    <p class="star">
-						    <img alt="" src="img/icons/star.svg" style="height: 25px; width: 25px" id="star8" onclick="changeImage(this.id)">
-						</p>
-					    <div class="aspect-one-to-one">
-					        <button class="highchart-button" title="indsæt graf">
-					            <div id="highcharts-type-pie-preview-example" style="width:100%; height:100%;" class="highcharts highcharts-preview"></div>
-					        </button>
-					    </div>
-					</article>
-				</div>
-			</div>
-			<!--TEXT EDITOR-->
-			<div id="text" class="hidden">
-				<div class="textTool">
-					<label>Text tool</label>
-					<button type="type" class="textToolImgButton"><img class="settingsicon" src="img/icons/type.svg" alt="Text tool"></button>
-					<button type="button" onclick="" class="helpbutton">
-    					<span>Help</span>
-					    <img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
-					</button>
-				</div>
-				<div class="textTool">
-					<label>Text edit</label>
-					<div class="textEditDiv"><label>Size</label><button type="" onclick="" class="texteditbutton"><span>Choose..</span><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
-					<div class="textEditDiv"><label>Weight</label><button type="" onclick="" class="texteditbutton"><span>Choose..</span><img class="settingsicon" src="img/icons/chevron-down.svg" alt="settings-icon"></button></div>
-				</div>
-			</div>
-			<!--CODE EDITOR-->
-			<div id="codeEditorTab" class="hidden">
-				<div class="codeEditorOverDiv">
-					<div class="codeEditorButtons">
-						<button type="button" onclick="" class="showReport">
-						    <span>Show report</span>
-						    <img class="settingsmenuicon" src="img/icons/eye.svg" alt="showicon">
-						</button>
-						<button type="button" onclick="" class="showReport">
-						    <span>Download</span>
-						    <img class="settingsmenuicon" src="img/icons/download.svg" alt="showicon">
-						</button>
-						<button type="button" onclick="" class="showReport">
-						    <span>Upload</span>
-						    <img class="settingsmenuicon" src="img/icons/upload.svg" alt="showicon">
-						</button>
-						<button type="button" onclick="" class="helpbutton">
-    						<span>Help</span>
-						    <img class="settingsicon" src="img/icons/questionmark.svg" alt="settings-icon">
+					<h3 class="clear-both">Images</h3>
+				</article>
+				<!--TEXT EDITOR-->
+				<article id="text-tab-content" class="hidden editor-tab-content">
+					<div class="editor-aside-tab-content-top">
+						<button type="button" class="button-n rounded-corners help" title="Click on a T and choose where to insert on page, or drag'n drop it onto the page. When text is highligted, you can edit text settings in text tab.">
+							<span>Help<b>?</b></span>
 						</button>
 					</div>
-				<div class="codeEditor" contenteditable="true">
-					<code><p>Code place holder</p></code>
-				</div>
-				</div>
+					<h3>Text tool</h3>
+					<div class="textTool">
+						<button type="button" class="buttongr"><img class="Ticon" src="img/icons/type.svg" alt="text-icon"></button>
+					</div>
+					<h3 class="clear-both">Text options</h3>
+					<div class="textTool">
+						<label class="text-input editor-tab-content-input" title="Choose size for text">
+							<span>Size</span>
+							<input type="text" name="editor-text-size" class="round-corners button-w" placeholder="Input size in pt">
+						</label>
+						<label class="select-label editor-tab-content-input" title="Select text weight">
+							<span class="select-span">Weight</span>
+							<div class="select-wrapper">
+								<select name="editor-text-weight" class="sort-by-select select">
+									<option value="normal" selected="">Normal</option>
+									<option value="bold">Bold</option>
+									<option value="thin">thin</option>
+								</select>
+							</div>
+						</label>
+					</div>
+				</article>
+				<!--CODE EDITOR-->
+				<article id="code-tab-content" class="editor-tab-content hidden">
+					<div class="editor-aside-tab-content-top">
+						<button type="button" class="button-n rounded-corners help" title="Edit report code in the textfield. You can download the report with save, edit it, then upload with Upload.">
+							<span>Help<b>?</b></span>
+						</button>
+						<a href="show.html" class="group-view-button button-w rounded-corners disabled" title="Go to report preview">
+							<span>Preview</span>
+							<img src="img/icons/eye.svg" alt="Eye icon">
+						</a>
+						<a href="test-report.html" class="group-view-button button-w rounded-corners" title="Download report file" download="">
+							<span>Save</span>
+							<img src="img/icons/save.svg" alt="Save icon">
+						</a>
+						<label class="upload-button rounded-corners button-w" title="Upload template">
+							<span>Upload</span>
+							<img class="settings-menu-icon" src="img/icons/image.svg" alt="arrowright-icon">
+							<input type="file" class="rounded-corners button-w hidden" name="upload-template">
+						</label>
+					</div>
+					<div class="codeEditorOverDiv">
+						<textarea class="editor-tab-code-editor"><div class="report-preview single-page-display">
+<div class="page-wrapper">
+	<div class="page">
+		<header contenteditable="true">hea</header>
+		<div class="report-page-section box-number-1" contenteditable="true"></div>
+		<div class="report-page-section box-number-2" contenteditable="true"></div>
+		<div class="report-page-section box-number-3" contenteditable="true"></div>
+		<div class="report-page-section box-number-4" contenteditable="true"></div>
+		<div class="report-page-section box-number-5" contenteditable="true"></div>
+		<div class="report-page-section box-number-6" contenteditable="true"></div>
+		<div class="report-page-section box-number-7" contenteditable="true"></div>
+		<div class="report-page-section box-number-8" contenteditable="true"></div>
+		<footer contenteditable="true">foo</footer>
+	</div>
+</div>
+</div></textarea>
+					</div>
+				</article>
 			</div>
+		</aside>
+	</main>
+	<!-- OVERLAY -->
+	<div id="overlay" class="hidden"></div>
+	<!-- POP UPS -->
+	<form action="" method="get" id="delete-report-pop-up" class="pop-up menu hidden">
+		<div class="pop-up-title-area">
+			<img class="pop-up-title-image font-height" src="img/icons/trash-2.svg" alt="Delete icon">
+			<span class="pop-up-title">Delete report</span>
+		</div>
+		<div class="pop-up-content-area">
+			<p>Are you sure you want to delete "<b>Report Name</b>" <b>#ID</b>?</p>
+		</div>
+		<div class="pop-up-buttons">
+			<button type="button" class="button-w rounded-corners close" title="Close">Cancel</button>
+			<button type="submit" class="button-r rounded-corners disabled right" title="Delete report" value="reportID">Delete</button>
+		</div>
+	</form>
+	<form action="" method="get" id="save-pop-up" class="pop-up menu hidden">
+		<input type="hidden" name="target" value="reportID">
+		<div class="pop-up-title-area">
+			<button type="button" class="close-menu close" title="Close"><img class="close-menu-icon" src="img/icons/x.svg" alt="xicon"></button>
+			<img class="pop-up-title-image font-height" src="img/icons/savegreen.svg" alt="Save icon">
+			<span class="pop-up-title">Save as...</span>
+			<span class="pop-up-idenfification">Report name; #id</span>
+		</div>
+		<div class="pop-up-content-area">
+			<!-- SHARE AS SELECT -->
+			<div class="pop-up-content-area-molecule">
+			<label class="select-label full-width">
+				<span class="select-span">Save as...</span>
+				<div class="select-wrapper">
+					<select name="save-report-as" class="select full-width disabled">
+						<option value="pdf" selected="">Webpage</option>
+						<option value="pdf">PDF</option>
+						<option value="qr">QR-code</option>
+						<option value="link">Link</option>
+					</select>
+				</div>
+			</label>
 			</div>
 		</div>
-	</main>
-	<script src="js/editor-tabs.js"></script>
+		<div class="pop-up-buttons">
+			<button type="button" class="button-w rounded-corners close" title="Close">Cancel</button>
+			<a href="test-report.html" class="button-g rounded-corners right" title="Save report" download="">Save</a>
+		</div>
+	</form>
+	<form action="" method="get" id="close-without-saving-pop-up" class="pop-up menu hidden">
+		<div class="pop-up-title-area">
+			<img class="pop-up-title-image font-height" src="img/icons/questionmark.svg" alt="?">
+			<span class="pop-up-title">Quit without saving?</span>
+		</div>
+		<div class="pop-up-content-area">
+			<div class="pop-up-content-area-molecule">
+				<p>Are you shure you want to quit Editor mode, without saving?</p>
+			</div>
+		</div>
+		<div class="pop-up-buttons">
+			<button type="button" class="button-w rounded-corners close" title="Close">Cancel</button>
+			<a href="overview.html" class="button-r rounded-corners close" title="Close editor">Close</a>
+			<button type="submit" class="button-g rounded-corners disabled right" title="Create new report">Save & close</button>
+		</div>
+	</form>
+	<!-- SCRIPTS -->
+	<script src="js/editor.js"></script>
 	<script src="js/editor-highcharts.js" defer></script>
 </body>
 </html>

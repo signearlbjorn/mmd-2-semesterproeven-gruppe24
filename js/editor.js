@@ -1,7 +1,7 @@
 // ----- STYLEGUIDE JAVASCRIPT -----
 
 // --- STYLEGUIDE SPECIFIC CODE ---
-console.log('overview.js loaded.');
+console.log('editor.js loaded.');
 
 // --- GENERIC FUNCTIONS ---
 function showElement(element) {
@@ -146,7 +146,6 @@ function expandOrCompress(element) {
 	}
 }
 
-
 /* --- COOKIES --- */
 /*Code based on https://www.w3schools.com/js/js_cookies.asp*/
 function getTableExplainerCookie() {
@@ -174,6 +173,7 @@ function saveCookieTableExplainer() {
     document.cookie = "tableExplainer" + "=" + 1 + ";" + cookieExpire + ";path=/";
     console.log('Cookie - tableExplainer - is saved.')
 }
+
 
 // --- BUTTON LINKS AND INPUT ---
 // -- HELP BUTTON --
