@@ -502,7 +502,7 @@ textarea{
 	padding-right: 28px;
 	border-radius: 19px;
 	font-size: 16px;
-	color: #7C7C7C;
+	color: #000;
 	font-style: italic;
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -1886,7 +1886,7 @@ textarea{
 }
 
 .report-id {
-    color: #6F6F6F;
+    color: #cccccc;
 	font-size: 100%;
 	font-style: italic;
 }
@@ -1923,7 +1923,7 @@ textarea{
 }
 
 .report-preview-meta-red {
-	color: #E4342B;
+	color: #f3a9a5;
 }
 
 .preview-inbox{
